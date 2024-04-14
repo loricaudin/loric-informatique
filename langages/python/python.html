@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+	<head>
+		<title>Loric Informatique - Python</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="icon" href="../../images/icone.png">
+		<link rel="stylesheet" href ="../../styles/style.css">
+	</head>
+	<body>
+		<header>
+			<script src="../../scripts/header.js"></script>
+		</header>
+		<main class="pageLangage">
+			<section class="presentation">
+				<div class="alignementVertical">
+					<div>
+						<h1>Python</h1>
+                        <p class="version">Version 1.2 (créé le 10/10/2022, modifié le 14/01/2024)</p>
+                        <p>
+                            Python est un langage de programmation de haut niveau qui vous permet de travailler plus rapidement et d'intégrer plus efficacement vos systèmes.
+                            Python est puissant... et rapide, fonctionne partout, est convivial et facile à apprendre.
+                        </p>
+                        <button onclick="window.location.href = ''" class="imprimer">Télécharger</button>
+						<button onclick="alert('Pour imprimer votre document, nous vous conseillons de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button>
+					</div>
+					<img src="icone_python.png" class="logoLangage">
+				</div>
+			</section>
+            <section class="outils">
+                <h2>Outils nécessaires :</h2>
+                <ul>
+                    <li>Python ou Miniconda</li>
+                    <li>IDE Pyzo</li>
+                    <li>En complément : Visual Studio Code (facultatif, mais utile pour coder plus facilement)</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Table des matières :</h2>
+                <div class="tableDesMatieres">
+                    <!-- Table des matières remplie par le JavaScript -->
+                </div>
+            </section>
+            <article>
+                <h2 class="soustitre" id="I.">I. Bases</h2>
+                <div class="contenu">
+                    <h3 class="soustitre" id="I.1.">I.1. Syntaxe</h3>
+                    <div class="contenu">
+                        <span class="script">
+                            <span class="perso">instruction1</span><br/>
+                            <span class="perso">instruction2</span><br/>
+                            <span class="perso">instruction3</span><br/>
+                        </span>
+                    </div>
+                    <h3 class="soustitre" id="I.2.">I.2. Types de variables</h3>
+                    <div class="contenu">
+                        <p>Fonction pour connaître le type : <span class="script">type(<span class="perso">variable</span>)</span></p>
+                        <h4 class="soustitre" id="I.2.1.">I.2.1. Types de base</h4>
+                        <div class="contenu">
+                            <table>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                    <th>Fonction pour le convertir</th>
+                                </tr>
+                                <tr>
+                                    <td class="script">int</td>
+                                    <td>Nombre entier</td>
+                                    <td class="script">int()</td>
+                                </tr>
+                                <tr>
+                                    <td class="script">float</td>
+                                    <td>Nombre décimal (ex : 0.1)</td>
+                                    <td class="script">float()</td>
+                                </tr>
+                                <tr>
+                                    <td class="script">str</td>
+                                    <td>Chaîne de caractère entre '' ou ""</td>
+                                    <td class="script">str()</td>
+                                </tr>
+                                <!--
+                                <tr>
+                                    <td class="script"></td>
+                                    <td></td>
+                                    <td class="script"></td>
+                                </tr>
+                                -->
+                            </table>
+                        </div>
+                        <h4 class="soustitre" id="I.2.2.">I.2.2. Autres types</h4>
+                        <div class="contenu">
+                            <table>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                                <tr>
+                                    <td class="script">bool</td>
+                                    <td>Valeur pouvant être True ou False</td>
+                                </tr>
+                                <tr>
+                                    <td class="script">list</td>
+                                    <td>Liste de valeurs sous forme de [<span class="perso">val1</span>, <span class="perso">val2</span>]</td>
+                                </tr>
+                                <tr>
+                                    <td class="script">dict</td>
+                                    <td>Dictionnaire sous forme de {<span class="perso">cle1</span>: <span class="perso">val1</span>, <span class="perso">cle2</span>: <span class="perso">val2</span>}</td>
+                                </tr>
+                                <tr>
+                                    <td class="script">NoneType</td>
+                                    <td>Variable qui a pour valeur None (qui est vide)</td>
+                                </tr>
+                                <tr>
+                                    <td class="script">tuple</td>
+                                    <td>Tuplet sous forme de (<span class="perso">val1</span>, <span class="perso">val2</span>)</td>
+                                </tr>
+                                <tr>
+                                    <td class="script">set</td>
+                                    <td>Tuplet sous forme de {<span class="perso">val1</span>, <span class="perso">val2</span>} sans ordre d’importance</td>
+                                </tr>
+                                <!--
+                                <tr>
+                                    <td class="script"></td>
+                                    <td></td>
+                                </tr>
+                                -->
+                            </table>
+                        </div>
+                    </div>
+                    <h3 class="soustitre" id="I.3.">I.3. Commentaires</h3>
+                    <div class="contenu">
+                        <p class="script commentaire">
+                            #Commentaire tenant sur une ligne
+                        </p>
+                        <p class="script commentaire">
+                            ##Commentaire souligné selon le logiciel tenant sur une ligne
+                        </p>
+                        <p class="script commentaire">
+                            """<br/>
+                            Commentaire pouvant être sur une ou plusieurs lignes<br/>
+                            """
+                        </p>
+                    </div>
+                    <h3 class="soustitre" id="I.4.">I.4. Opérations</h3>
+                    <div class="contenu">
+                        <table>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td class="script">1 + 2</td>
+                                <td>Renvoie 3</td>
+                            </tr>
+                            <tr>
+                                <td class="script">3 - 1</td>
+                                <td>Renvoie 2</td>
+                            </tr>
+                            <tr>
+                                <td class="script">6 * 4</td>
+                                <td>Renvoie 24</td>
+                            </tr>
+                            <tr>
+                                <td class="script">5 / 2</td>
+                                <td>Renoie 2.5</td>
+                            </tr>
+                            <tr>
+                                <td class="script">5 // 2</td>
+                                <td>Renvoie 2 (le quotient sans décimal)</td>
+                            </tr>
+                            <tr>
+                                <td class="script">5 % 2</td>
+                                <td>Renvoie 1 (le reste de la division)</td>
+                            </tr>
+                            <tr>
+                                <td class="script">5 ** 2</td>
+                                <td>Renvoie 25 (5 à la puissance 2)</td>
+                            </tr>
+                            <!--
+                            <tr>
+                                <td class="script"></td>
+                                <td></td>
+                            </tr>
+                            -->
+                        </table>
+                    </div>
+                    <h3 class="soustitre" id="I.5.">I.5. Les variables</h3>
+                    <div class="contenu">
+                        <table>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">a</span> = 5</td>
+                                <td>Affecte 5 à une variable</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">a</span>, <span class="perso">b</span> = 0.5, 60</td>
+                                <td>Affecte des valeurs à de multiples variables</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">variable</span> += 1</td>
+                                <td>Ajoute 1</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">variable</span> -= 1</td>
+                                <td>Enlève 1</td>
+                            </tr>
+                            <!--
+                            <tr>
+                                <td class="script"></td>
+                                <td></td>
+                            </tr>
+                            -->
+                        </table>
+                    </div>
+                    <h3 class="soustitre" id="I.6.">I.6. Les listes</h3>
+                    <div class="contenu">
+                        <table>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">liste</span> = []</td>
+                                <td>Crée une liste vide</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">liste</span> = ["Loric", "Informatique", 69]</td>
+                                <td>Crée une liste avec des valeurs</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">liste</span>[<span class="perso">i</span>]</td>
+                                <td>Renvoie la valeur à la position <span class="perso">i</span> (l'indice de la première valeur est 0)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">liste</span>[<span class="perso">a</span>:<span class="perso">b</span>]</td>
+                                <td>Renvoie les valeurs de la position <span class="perso">a</span> comprise jusqu’à la position <span class="perso">b</span> non comprise</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">liste</span>[<span class="perso">a</span>:]</td>
+                                <td>Renvoie les valeurs de la position <span class="perso">a</span> comprise jusqu’à la fin</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">liste</span>[:<span class="perso">b</span>]</td>
+                                <td>Renvoie les valeurs du début jusqu’à la position <span class="perso">b</span> non comprise</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">liste</span>.append(<span class="perso">valeur</span>)</td>
+                                <td>Ajoute une valeur dans la liste</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">liste</span>.pop(<span class="perso">i</span>)</td>
+                                <td>Enlève et renvoie la valeur de la liste à la position <span class="perso">i</span></td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">liste</span>.pop()</td>
+                                <td>Enlève et renvoie la dernière valeur de la liste</td>
+                            </tr>
+                            <tr>
+                                <td class="script">len(<span class="perso">liste</span>)</td>
+                                <td>Renvoie la longueur de la liste</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">liste</span> = [<span class="perso">i</span> for <span class="perso">i</span> in range(<span class="perso">n</span>)]</td>
+                                <td>Crée une liste de 0 à <span class="perso">n</span>-1</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">nouvelle_liste</span> = <span class="perso">liste</span>.copy()</td>
+                                <td>Crée une copie de la liste</td>
+                            </tr>
+                            <!--
+                            <tr>
+                                <td class="script"></td>
+                                <td></td>
+                            </tr>
+                            -->
+                        </table>
+                    </div>
+                    <h3 class="soustitre" id="I.7.">I.7. Les dictionnaires</h3>
+                    <div class="contenu">
+                        <table>
+                            <!--
+                            <tr>
+                                <td class="script"></td>
+                                <td></td>
+                            </tr>
+                            -->
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">dict</span>={}</td>
+                                <td>Crée un dictionnaire vide</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">dict</span>={"a":"Loric", "b":2004}</td>
+                                <td>Crée un dictionnaire avec des valeurs</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">dict</span>["a"]</td>
+                                <td>Récupère la valeur contenue dans une clé</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">dict</span>["c"] = 3</td>
+                                <td>Ajoute 3 au dictionnaire</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h3 class="soustitre" id="I.8.">I.8. Conditions</h3>
+                    <div class="contenu">
+                        <p>Les conditions renvoient True si elle est respectée et False sinon</p>
+                        <h4 class="soustitre" id="I.8.1.">I.8.1. Opérateurs de comparaison</h4>
+                        <div class="contenu">
+                            <table>
+                                <!--
+                                <tr>
+                                    <td class="script"></td>
+                                    <td></td>
+                                </tr>
+                                -->
+                                <tr>
+                                    <th>Condition</th>
+                                    <th>Description de ce que vérifie la condition</th>
+                                </tr>
+                                <tr>
+                                    <td class="script"><span class="perso">a</span> == <span class="perso">b</span></td>
+                                    <td><span class="perso">a</span> égal à <span class="perso">b</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="script"><span class="perso">a</span> &lsaquo; <span class="perso">b</span></td>
+                                    <td><span class="perso">a</span> strictement inférieur à <span class="perso">b</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="script"><span class="perso">a</span> &rsaquo; <span class="perso">b</span></td>
+                                    <td><span class="perso">a</span> strictement supérieur à <span class="perso">b</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="script"><span class="perso">a</span> &lsaquo;= <span class="perso">b</span></td>
+                                    <td><span class="perso">a</span> inférieur ou égal à <span class="perso">b</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="script"><span class="perso">a</span> &rsaquo;= <span class="perso">b</span></td>
+                                    <td><span class="perso">a</span> supérieur ou égal à <span class="perso">b</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="script"><span class="perso">a</span> != <span class="perso">b</span></td>
+                                    <td><span class="perso">a</span> n’est pas égal à <span class="perso">b</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="script"><span class="perso">a</span> in <span class="perso">b</span></td>
+                                    <td><span class="perso">a</span> est présent dans <span class="perso">b</span> (qui peut être une liste)</td>
+                                </tr>
+                                <tr>
+                                    <td class="script">or</td>
+                                    <td>À mettre entre deux conditions, permet d’avoir une des deux condtions qui doit être vraie</td>
+                                </tr>
+                                <tr>
+                                    <td class="script">and</td>
+                                    <td>À mettre entre deux conditions, permet d’avoir deux conditions qui doivent être vraie</td>
+                                </tr>
+                                <tr>
+                                    <td class="script">not <span class="perso">condition</span></td>
+                                    <td>La condition doit être fausse</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="script"><span class="perso">a</span> is None</span><br/>ou<br/><span class="script"><span class="perso">a</span> is not None</span></td>
+                                    <td>Autre manière de tester si une variable est nulle ou non (<span class="perso">a</span> == None fonctionne également)</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h4 class="soustitre" id="I.8.2.">I.8.2. Tests de conditions</h4>
+                        <div class="contenu">
+                            <table>
+                                <!--
+                                <tr>
+                                    <td class="script"></td>
+                                    <td></td>
+                                </tr>
+                                <a class="tab">
+                                -->
+                                <tr>
+                                    <th>Instruction</th>
+                                    <th>Description</th>
+                                </tr>
+                                <tr>
+                                    <td class="script">
+                                    if <span class="perso">condition1</span>:<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>
+                                    </td>
+                                    <td>Si <span class="perso">condition1</span> est vraie, alors on exécute <span class="perso">instruction1</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="script">
+                                    if <span class="perso">condition1</span>:<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span><br/>
+                                    else:<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>
+                                    </td>
+                                    <td>Si <span class="perso">condition1</span> est vraie, alors on exécute <span class="perso">instruction1</span>, sinon, on exécute <span class="perso">instruction2</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="script">
+                                    if <span class="perso">condition1</span>:<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span><br/>
+                                    elif <span class="perso">condition2</span>:<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span><br/>
+                                    else:<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction3</span>
+                                    </td>
+                                    <td>Si <span class="perso">condition1</span> est vraie, alors on exécute <span class="perso">instruction1</span>, sinon, si <span class="perso">condition2</span> est vraie, on exécute <span class="perso">instruction2</span>, sinon, on exécute <span class="perso">instruction3</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="script">
+                                    try:<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span><br/>
+                                    except:<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>
+                                    </td>
+                                    <td>Si <span class="perso">instruction1</span> provoque une erreur, on exécute <span class="perso">instruction2</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <h3 class="soustitre" id="I.9.">I.9. Boucles</h3>
+                    <div class="contenu">
+                        <table>
+                            <!--
+                            <tr>
+                                <td class="script"></td>
+                                <td></td>
+                            </tr>
+                            <a class="tab">
+                            -->
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td class="script">
+                                for <span class="perso">i</span> in range(<span class="perso">n</span>):<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>
+                                </td>
+                                <td>On répète <span class="perso">n</span> fois <span class="perso">instruction1</span> pour <span class="perso">i</span> allant de 0 à <span class="perso">n</span> non compris</td>
+                            </tr>
+                            <tr>
+                                <td class="script">
+                                for <span class="perso">i</span> in range(<span class="perso">d</span>, <span class="perso">f</span>):<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>
+                                </td>
+                                <td>On répète <span class="perso">f</span>-<span class="perso">d</span> fois <span class="perso">instruction1</span> pour <span class="perso">i</span> allant de <span class="perso">d</span> compris à <span class="perso">f</span> non compris</td>
+                            </tr>
+                            <tr>
+                                <td class="script">
+                                for <span class="perso">i</span> in range(<span class="perso">d</span>, <span class="perso">f</span>, <span class="perso">p</span>):<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>
+                                </td>
+                                <td>On répète (<span class="perso">f</span>-<span class="perso">d</span>)//<span class="perso">n</span> fois <span class="perso">instruction1</span> pour <span class="perso">i</span> allant de <span class="perso">d</span> compris à <span class="perso">f</span> non compris avec pour pas égal à <span class="perso">p</span></td>
+                            </tr>
+                            <tr>
+                                <td class="script">
+                                for <span class="perso">elt</span> in <span class="perso">liste</span>:<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>
+                                </td>
+                                <td>On parcours la liste (ou une chaine de caractère) pour <span class="perso">elt</span> prenant toutes les valeurs de <span class="perso">liste</span></td>
+                            </tr>
+                            <tr>
+                                <td class="script">
+                                while <span class="perso">condition</span>:<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>
+                                </td>
+                                <td>On répète jusqu’à ce que <span class="perso">condition</span> soit fausse</td>
+                            </tr>
+                            <tr>
+                                <td class="script">break</td>
+                                <td>Permet de sortir d’une boucle sans la terminer (fortement déconseillé)</td>
+                            </tr>
+                            <tr>
+                                <td class="script">pass</td>
+                                <td>Passer un bloc s'il est vide, pour éviter des erreurs</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <h2 class="soustitre" id="II.">II. Les fonctions et les classes</h2>
+                <div class="contenu">
+                    <h3 class="soustitre" id="II.1.">II.1. Les fonctions</h3>
+                    <div class="contenu">
+                        <h4 class="soustitre" id="II.1.1.">II.1.1. Créer une fonction</h4>
+                        <div class="contenu">
+                            <p class="script">
+                            def <span class="perso">maFonction</span>(<span class="perso">variable1</span>, <span class="perso">variable2</span>…):<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>
+                            </p>
+                        </div>
+                        <h4 class="soustitre" id="II.1.2.">II.1.2. Retourner une valeur de la fonction (non obligatoire)</h4>
+                        <div class="contenu">
+                            <p class="script">return <span class="perso">variable</span></p>
+                            <p>ou</p>
+                            <p class="script">return <span class="perso">variable1</span>, <span class="perso">variable2</span>…</p>
+                        </div>
+                        <h4 class="soustitre" id="II.1.3.">II.1.3. Faire un appel à la fonction</h4>
+                        <div class="contenu">
+                            <p class="script"><span class="perso">variable</span> = <span class="perso">maFonction</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…)</p>
+                            <p>ou</p>
+                            <p class="script"><span class="perso">variable1</span>, <span class="perso"></span>variable2</span>… = <span class="perso">maFonction</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…)</p>
+                            <p>ou (s'il n'y a pas de variable de retour)</p>
+                            <p class="script"><span class="perso">maFonction</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…)</p>
+                        </div>
+                        <div class="note">Remarque : Il est possible d'affecter une valeur par défaut si aucune valeur n'est fournie aux paramètres de la fonction sous la forme : <span class="script"><span class="perso">variable</span> = <span class="perso">valeurParDefaut</span></span></div>
+                    </div>
+                    <h3 class="soustitre" id="II.2.">II.2. Les classes</h3>
+                    <div class="contenu">
+                        <h4 class="soustitre" id="II.2.1.">II.2.1. Créer une classe</h4>
+                        <div class="contenu">
+                            <p class="script">
+                            class <span class="perso">MaClasse</span>:<br/><br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">variables_statiques</span> = <span class="perso">valeurs</span><br/><br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, <span class="perso">variable1</span>, <span class="perso">variable2</span>…):<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.<span class="perso">variable1</span> = <span class="perso">variable1</span><br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.<span class="perso">variable2</span> = <span class="perso">variable2</span>
+                            </p>
+                        </div>
+                        <h4 class="soustitre" id="II.2.2.">II.2.2. Définir la classe dans un objet</h4>
+                        <div class="contenu">
+                            <p class="script"><span class="perso">monObjet</span> = <span class="perso">MaClasse</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…)</p>
+                        </div>
+                        <h4 class="soustitre" id="II.2.3.">II.2.3. Ajouter un affichage d’un message de la part de la classe (lors de l’exécution de print(<span class="perso">monObjet</span>))</h4>
+                        <div class="contenu">
+                            <p class="script">
+                            def __str__(self):<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;return "<span class="perso">message</span>"
+                            </p>
+                        </div>
+                        <h4 class="soustitre" id="II.2.4.">II.2.4. Créer une méthode (dans une classe)</h4>
+                        <div class="contenu">
+                            <p class="script">
+                            def <span class="perso">maMethode</span>(self, <span class="perso">variable1</span>, <span class="perso">variable2</span>…):<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>
+                            </p>
+                        </div>
+                        <h4 class="soustitre" id="II.2.5.">II.2.5. Faire un appel d’une méthode autre que __init__ et __str__ ou d’une variable dans une classe</h4>
+                        <div class="contenu">
+                            <p class="script">self.<span class="perso">maMethode</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…)</p>
+                            <p class="script">self.<span class="perso">variable1</span> = <span class="perso">valeur1</span></p>
+                        </div>
+                        <h4 class="soustitre" id="II.2.6.">II.2.6. Faire un appel d’une méthode autre que __init__ et __str__ ou d’une variable en dehors d'une classe</h4>
+                        <div class="contenu">
+                            <p class="script"><span class="perso">monObjet</span>.<span class="perso">maMethode</span>(<span class="perso">variables</span>)</p>
+                            <p class="script"><span class="perso">monObjet</span>.<span class="perso">variable1</span> = <span class="perso">valeur1</span></p>
+                        </div>
+                        <div class="todo">
+                            À venir : Classes d'héritage, variables privées, publiques, protégées.
+                        </div>
+                    </div>
+                </div>
+                <h2 class="soustitre" id="III.">III. Les instructions</h2>
+                <div class="contenu">
+                    <h3 class="soustitre" id="III.1.">III.1. Instructions de bases</h3>
+                    <div class="contenu">
+                        <table>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td class="script">print(<span class="perso">valeur</span>)</td>
+                                <td>Affiche un texte et/ou une variable avec un retour à la ligne</td>
+                            </tr>
+                            <tr>
+                                <td class="script">print("Valeur : ", <span class="perso">valeur</span>, end = " ")</td>
+                                <td>Affiche un texte et/ou une variable sans retour à la ligne</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">variable</span> = input("Entrer une valeur : ")</td>
+                                <td>Demande une valeur, renvoyée dans la variable</td>
+                            </tr>
+                            <tr>
+                                <td class="script">type(<span class="perso">variable</span>)</td>
+                                <td>Récupérer le type d'une variable</td>
+                            </tr>
+                            <tr>
+                                <td class="script">len(<span class="perso">variable</span>)</td>
+                                <td>Obtenir la longueur d’une chaîne de caractères ou d’une liste</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">liste</span> = <span class="perso">variable</span>.split(<span class="perso">valeur</span>)</td>
+                                <td>Couper une chaîne de caractères en précisant le séparateur (valeur) et renvoie une liste</td>
+                            </tr>
+                            <tr>
+                                <td class="script">assert <span class="perso">condition</span>, <span class="perso">message</span></td>
+                                <td>Vérifie que condition est vraie, sinon retourne un message d'erreur</td>
+                            </tr>
+                            <tr>
+                                <td class="script">del <span class="perso">variable</span></td>
+                                <td>Supprimer variable de la mémoire (non obligatoire)</td>
+                            </tr>
+                            <tr>
+                                <td class="script">round(<span class="perso">n</span>, <span class="perso">m</span>)</td>
+                                <td>Arrondit <span class="perso">n</span> de <span class="perso">m</span> chiffres après la virgule (m facultatif)</td>
+                            </tr>
+                            <tr>
+                                <td class="script">global <span class="perso">variable</span></td>
+                                <td>Permet de rappeler une variable du programme principale dans la fonction concernée (à éviter si possible)</td>
+                            </tr>
+                            <tr>
+                                <td class="script">help(<span class="perso">fonction</span>)</td>
+                                <td>Obtenir les informations écrites dans les """commentaires""" d’une fonction (fonctionne aussi avec des classes)</td>
+                            </tr>
+                            <tr>
+                                <td class="script">exit(<span class="perso">code</span>)</td>
+                                <td>Fermer immédiatement le programme (facultatif) avec un code d’erreur facultatif</td>
+                            </tr>
+                            <!--
+                            <tr>
+                                <td class="script"></td>
+                                <td></td>
+                            </tr>
+                            -->
+                        </table>
+                    </div>
+                    <h3 class="soustitre" id="III.2.">III.2. Les fichiers</h3>
+                    <div class="contenu">
+                        <table>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Description</th>
+                            </tr>
+                            <!--
+                            <tr>
+                                <td class="script"></td>
+                                <td></td>
+                            </tr>
+                            <a class="tab">
+                            -->
+                            <tr>
+                                <td class="script"><span class="perso">fichier</span> = open("<span class="perso">nom_du_fichier</span>", "<span class="perso">mode</span>", encoding = "utf-8")</td>
+                                <td>Ouvre un fichier selon le mode choisi (r : Ouvre en lecture; w : Crée un nouveau fichier et l'ouvre en mode écriture (écrase l'ancien fichier du même nom))</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">variable</span> = <span class="perso">fichier</span>.read()</td>
+                                <td>Utilisable 1 fois, permet de lire en entier le fichier et de le stocker dans une variable</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">variable</span> = <span class="perso">fichier</span>.readline()</td>
+                                <td>Lit une ligne dans le fichier, puis la suivante si l'instruction est réemployée</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">fichier</span>.write(<span class="perso">variable</span>)</td>
+                                <td>Écrit le contenu de la variable dans le fichier (à la suite)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">fichier</span>.close()</td>
+                                <td>Ferme et enregistre le fichier</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <h2 class="soustitre" id="IV.">IV. Les bibliothèques</h2>
+                <div class="contenu">
+                    <h3 class="soustitre" id="IV.0.">IV.0. Importer une bibliothèque (ou un fichier python)</h3>
+                    <div class="contenu">
+                        <p class="script">from <span class="perso">bibliotheque</span> import *</p>
+                        ou
+                        <p class="script">from <span class="perso">bibliotheque</span> import <span class="perso">fonctions</span></p>
+                        
+                        <p>(ou <span class="script">import <span class="perso">bibliotheque</span></span> mais nécessite d’ajouter <span class="perso">bibliotheque</span>. devant chaques fonctions ou variables... importées).</p>
+                        <div class="note">Si la bibliothèque est introuvable, faire <span class="console">pip install <span class="perso">bibliotheque</span></span> dans le shell pyzo ou dans le cmd</div>
+                    </div>
+                    <h3 class="soustitre" id="IV.1.">IV.1. random (<span class="script">from random import *</span>)</h3>
+                    <div class="contenu">
+                        <p>ramdom permet de générer des nombres aléatoires facilement.</p>
+                        <table>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Utilité</th>
+                            </tr>
+                            <tr>
+                                <td class="script">random()</td>
+                                <td>Créer un nombre aléatoire entre 0 compris et 1 exclu</td>
+                            </tr>
+                            <tr>
+                                <td class="script">randint(<span class="perso">a</span>, <span class="perso">b</span>)</td>
+                                <td>Créer un nombre entier aléatoire entre <span class="perso">a</span> et <span class="perso">b</span> compris</td>
+                            </tr>
+                            <tr>
+                                <td class="script">seed(<span class="perso">nombre</span>)</td>
+                                <td>Initialiser le générateur pseudo-aléatoire pour reproduire des suites de nombres aléatoires identiques (avec un nombre quelconque pour repérer la suite de nombres aléatoires)</td>
+                            </tr>
+                            <!--
+                            <tr>
+                                <td class="script"></td>
+                                <td></td>
+                            </tr>
+                            -->
+                        </table>
+                    </div>
+                    <h3 class="soustitre" id="IV.2.">IV.2. turtle (<span class="script">from turtle import *</span>)</h3>
+                    <div class="contenu">
+                        <p>turtle permet de créer des formes avec des tortues et de les faire déplacer dans une fenêtre graphique.</p>
+                        <table>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Utilité</th>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span> = Turtle()</td>
+                                <td>Créer une tortue</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.forward(<span class="perso">n</span>)</td>
+                                <td>Avancer de <span class="perso">n</span> pixels</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.backward(<span class="perso">n</span>)</td>
+                                <td>Reculer de <span class="perso">n</span> pixels</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.right(<span class="perso">a</span>)</td>
+                                <td>Tourner de <span class="perso">a</span> degrés dans le sens horaire</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.left(<span class="perso">a</span>)</td>
+                                <td>Tourner de <span class="perso">a</span> degrés dans le sens anti-horaire</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.goto(<span class="perso">x</span>, <span class="perso">y</span>)</td>
+                                <td>Aller vers les coordonnées <span class="perso">x</span> et <span class="perso">y</span></td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.setx(<span class="perso">x</span>)</td>
+                                <td>Aller vers les coordonnées <span class="perso">x</span> et <span class="perso">y</span> non changé</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.sety(<span class="perso">y</span>)</td>
+                                <td>Aller vers les coordonnées <span class="perso">x</span> non changé et <span class="perso">y</span></td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.setheading(<span class="perso">a</span>)</td>
+                                <td>Régler l'orientation à <span class="perso">a</span> degrés</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.home()</td>
+                                <td>Réinitialiser les coordonnées à (0;0)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.circle(<span class="perso">r</span>)</td>
+                                <td>Dessiner un cercle de rayon <span class="perso">r</span> pixels</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.speed(<span class="perso">v</span>)</td>
+                                <td>Régler la vitesse de la tortue à <span class="perso">v</span>, compris entre 0 et 10 inclus (0 : aucune animation ; 1 : lent ; 10 : rapide)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.pos()</td>
+                                <td>Renvoyer la position de la tortue sous la forme (x,y)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.xcor()</td>
+                                <td>Renvoyer la coordonnée x de la tortue</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.ycor()</td>
+                                <td>Renvoyer la coordonnée y de la tortue</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.heading()</td>
+                                <td>Renvoyer le degré d’inclinaison de la tortue</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.up()</td>
+                                <td>Lever la pointe du stylo — pas de dessin quand il se déplace.</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.down()</td>
+                                <td>Baisser la pointe du stylo — dessine quand il se déplace.</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.width(<span class="perso">n</span>)</td>
+                                <td>Régler l'épaisseur du stylo à <span class="perso">n</span> pixels</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.pencolor(<span class="perso">couleur</span>)</td>
+                                <td>Régler la couleur du stylo</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.fillcolor(<span class="perso">couleur</span>)</td>
+                                <td>Régler la couleur de remplissage</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.color(<span class="perso">couleur</span>)</td>
+                                <td>Régler la couleur de la tortue</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.begin_fill()</td>
+                                <td>À appeler juste avant de dessiner une forme à remplir</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.end_fill()</td>
+                                <td>Remplir la forme dessinée après le dernier appel à begin_fill()</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.clear()</td>
+                                <td>Supprimer les dessins de la tortue de l'écran</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.reset()</td>
+                                <td>Supprimer les dessins de la tortue de l'écran, recentrer la tortue et assigner les variables aux valeurs par défaut.</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.write(txt, align='left', font = ('Arial', 8, 'normal'))</td>
+                                <td>Écrire le texte txt sur l’écran avec des paramètres facultatifs</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">stamp_id</span> = <span class="perso">t</span>.stamp()</td>
+                                <td>Créer un clone d’une tortue et l’enregistrer dans <span class="perso">stamp_id</span></td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.clearstamp(<span class="perso">stamp_id</span>)</td>
+                                <td>Supprimer le clone <span class="perso">stamp_id</span> de la tortue</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.clearstamp()</td>
+                                <td>Supprimer tous les clones de la tortue</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">tbis</span> = <span class="perso">t</span>.clone()</td>
+                                <td>Créer une copie de la tortue</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.undo()</td>
+                                <td>Annuler la ou les dernières (si répété) actions de la tortue</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.showturtle()</td>
+                                <td>Afficher la tortue</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.hideturtle()</td>
+                                <td>Cacher la tortue</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.shape(<span class="perso">forme</span>)</td>
+                                <td>Changer la forme de la tortue (qui peut être "arrow", "turtle", "circle", "square", "triangle" ou "classic")</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.shape(<span class="perso">fichier</span>)</td>
+                                <td>Remplacer la tortue par une image</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.onclick(<span class="perso">fonction</span>)</td>
+                                <td>Exécuter une fonction au clic de la tortue</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.onscreenclick(<span class="perso">fonction</span>)</td>
+                                <td>Exécuter une fonction au clic de la souris dans la fenêtre</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.onkey(<span class="perso">fonction</span>,'<span class="perso">touche</span>')</td>
+                                <td>Exécuter une fonction à l’appui sur une touche du clavier (valeur possible : ‘Left’, ‘Right’, ‘Top’, ‘Bottom’, ‘space’…)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.onrelease(<span class="perso">fonction</span>)</td>
+                                <td>Exécuter une fonction au relâchement du clic de la tortue</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.textinput(<span class="perso">soustitre</span>, <span class="perso">message</span>)</td>
+                                <td>Créer une fenêtre demandant l’entrée d’un texte</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.numinput(<span class="perso">soustitre</span>, <span class="perso">message</span>)</td>
+                                <td>Créer une fenêtre demandant l’entrée d’un nombre</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">t</span>.mainloop()</td>
+                                <td>À mettre à la fin du programme, permet le maintien de la fenêtre turtle</td>
+                            </tr>
+                            <tr>
+                                <td class="script">exitonclick()</td>
+                                <td>À mettre à la fin, permet le maintien de la fenêtre et la sortie au clic dans la fenêtre</td>
+                            </tr>
+                            <tr>
+                                <td class="script">bye()</td>
+                                <td>Fermer la fenêtre turtle</td>
+                            </tr>
+                            <!--
+                            <tr>
+                                <td class="script"></td>
+                                <td></td>
+                            </tr>
+                            -->
+                        </table>
+                    </div>
+                    <h3 class="soustitre" id="IV.3.">IV.3. numpy (<span class="script">from numpy import *</span>)</h3>
+                    <div class="contenu">
+                        <p>numpy permet de créer des tableaux de valeurs d’une taille définie et de pouvoir les afficher de façon lisible son contenu dans une console (fonctionne de la même manière qu’une liste, mais avec des fonctionnalités supprimées).</p>
+                        <p>Installation : <span class="console">pip install numpy</span></p>
+                        <table>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Utilité</th>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">tableau</span> = array([<span class="perso">val1</span>, <span class="perso">val2</span>, <span class="perso">val3</span>])</td>
+                                <td>Créer un tableau d'éléments</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">tableau</span> = zeros(<span class="perso">n</span>, <span class="perso">type</span>)</td>
+                                <td>Créer un tableau de <span class="perso">n</span> éléments rempli de 0 avec pour type int ou float</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">tableau</span> = empty(<span class="perso">n</span>, <span class="perso">type</span>)</td>
+                                <td>Créer un tableau non initialisé de <span class="perso">n</span> éléments (avec des valeurs aléatoires) (fortement déconseillé)</td>
+                            </tr>
+                            <tr>
+                                <td class="script">pi</td>
+                                <td>Obtenir la valeur de π</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">tableau</span> = arange(<span class="perso">d</span>, <span class="perso">f</span>, <span class="perso">p</span>)</td>
+                                <td>Créer une liste avec des valeurs de <span class="perso">d</span> à <span class="perso">f</span> non compris avec pour pas <span class="perso">p</span></td>
+                            </tr>
+                            <!--
+                            <tr>
+                                <td class="script"></td>
+                                <td></td>
+                            </tr>
+                            -->
+                        </table>
+                    </div>
+                    <h3 class="soustitre" id="IV.4.">IV.4. math (<span class="script">from math import *</span>)</h3>
+                    <div class="contenu">
+                        <p>math permet d’utiliser les fonctions de base de mathématiques.</p>
+                        <table>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Utilité</th>
+                            </tr>
+                            <tr>
+                                <td class="script">pi</td>
+                                <td>Obtenir la valeur de π</td>
+                            </tr>
+                            <tr>
+                                <td class="script">sqrt(<span class="perso">nombre</span>)</td>
+                                <td>Utiliser la racine carrée</td>
+                            </tr>
+                            <tr>
+                                <td class="script">log(<span class="perso">nombre</span>) ou log(<span class="perso">nombre</span>, <span class="perso">base</span>)</td>
+                                <td>Utiliser la fonction logarithme</td>
+                            </tr>
+                            <tr>
+                                <td class="script">exp(<span class="perso">nombre</span>)</td>
+                                <td>Utiliser la fonction exponentielle</td>
+                            </tr>
+                            <tr>
+                                <td class="script">degrees(<span class="perso">nombre</span>)</td>
+                                <td>Convertir des radians en degrés</td>
+                            </tr>
+                            <tr>
+                                <td class="script">radians(<span class="perso">nombre</span>)</td>
+                                <td>Convertir des degrés en radians</td>
+                            </tr>
+                            <tr>
+                                <td class="script">cos(<span class="perso">radians</span>)</td>
+                                <td>Utiliser la fonction cosinus</td>
+                            </tr>
+                            <tr>
+                                <td class="script">sin(<span class="perso">radians</span>)</td>
+                                <td>Utiliser la fonction sinus</td>
+                            </tr>
+                            <tr>
+                                <td class="script">tan(<span class="perso">radians</span>)</td>
+                                <td>Utiliser la fonction tangente</td>
+                            </tr>
+                            <tr>
+                                <td class="script">acos(<span class="perso">nombre</span>)</td>
+                                <td>Utiliser la fonction cosinus<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td class="script">asin(<span class="perso">nombre</span>)</td>
+                                <td>Utiliser la fonction sinus<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td class="script">atan(<span class="perso">nombre</span>)</td>
+                                <td>Utiliser la fonction tangente<sup>-1</sup></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="todo">
+                        À venir : IV.5. matplotlib
+                    </div>
+                    <!--
+                    <h3 class="soustitre" id="IV.5.">IV.5. matplotlib (<span class="script">from matplotlib.pyplot import *</span>) (non fini)</h3>
+                    <div class="contenu">
+                        <p>matplotlib permet de tracer des courbes dans un graphique pour une utilisation principalement scientifique. (<span class="script">from matplotlib.pyplot import *</span> peut être remplacé par <span class="script">import matplotlib.pyplot as plt</span>, mais nécessite l’ajout de <span class="script">plt.<span class="perso">fonction</span></span> à chaque fonction)</p>
+                        <p>Installation : <span class="console">pip install matplotlib</span></p>
+                        <table>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Utilité</th>
+                            </tr>
+                            <tr>
+                                <td class="script"></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    -->
+                    <h3 class="soustitre" id="IV.6.">IV.6. time (<span class="script">from time import *</span>)</h3>
+                    <div class="contenu">
+                        <p>time permet de manipuler le temps.</p>
+                        <table>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Utilité</th>
+                            </tr>
+                            <tr>
+                                <td class="script">time()</td>
+                                <td>Retourner l’heure du système en secondes (la différence entre l’exécution de la fonction au début et à la fin peut donner le temps d’exécution du programme)</td>
+                            </tr>
+                            <tr>
+                                <td class="script">time_ns()</td>
+                                <td>Retourner l’heure du système en nanosecondes (pour Python 3.7 ou supérieur)</td>
+                            </tr>
+                            <tr>
+                                <td class="script">ctime()</td>
+                                <td>Retourner la date et l’heure sous la forme 'Tue Dec 10 16:07:12 2024'</td>
+                            </tr>
+                            <tr>
+                                <td class="script">process_time()</td>
+                                <td>Retourner le temps CPU d’exécution du programme en secondes (sans prendre en compte les autres programmes)</td>
+                            </tr>
+                            <tr>
+                                <td class="script">process_time_ns()</td>
+                                <td>Retourner le temps CPU d’exécution du programme en nanosecondes (pour Python 3.7 ou supérieur)</td>
+                            </tr>
+                            <tr>
+                                <td class="script">sleep(<span class="perso">secondes</span>)</td>
+                                <td>Mettre en pause le programme temporairement</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="todo">
+                        À venir : 3 nouvelles bibliothèques
+                    </div>
+                    <!--
+                    <h3 class="soustitre" id="IV.7.">IV.7. os (<span class="script">from os import *</span>)</h3>
+                    <div class="contenu">
+                        <p>incomplet</p>
+                        <table>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Utilité</th>
+                            </tr>
+                            
+                            <tr>
+                                <td class="script"></td>
+                                <td></td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                    <h3 class="soustitre" id="IV.8.">IV.8. rien (<span class="script">from rien import *</span>)</h3>
+                    <div class="contenu">
+                        <p>incomplet</p>
+                        <table>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Utilité</th>
+                            </tr>
+                            
+                            <tr>
+                                <td class="script"></td>
+                                <td></td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                    <h3 class="soustitre" id="IV.9.">IV.9. pillow (<span class="script">from PIL import *</span>)</h3>
+                    <div class="contenu">
+                        <p>pillow permet l’ouverture et le traitement des images. Il peut également être utile pour insérer une image dans une fenêtre tkinter (bibliothèque suivante).</p>
+                        <p>Installation : <span class="script">pip install pillow</span></p>
+                        <table>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Utilité</th>
+                            </tr>
+                            
+                            <tr>
+                                <td class="script"></td>
+                                <td></td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                    -->
+                    <h3 class="soustitre" id="IV.10.">IV.10. tkinter (<span class="script">from tkinter import Tk, Canvas</span>)</h3>
+                    <div class="contenu">
+                        <p>tkinter permet d’interagir avec une interface graphique.</p>
+                        <table>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Utilité</th>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">fenetre</span> = Tk()</td>
+                                <td>Créer une fenêtre tkinter</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">fenetre</span>.title("<span class="perso">nom de la fenêtre</span>")</td>
+                                <td>Changer le nom de la fenêtre (en haut à gauche)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">fenetre</span>.iconbitmap("<span class="perso">icone</span>.ico")</td>
+                                <td>Changer l’icône de l’application (en haut à gauche)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">fenetre</span>.after(<span class="perso">n</span>, <span class="perso">fonction</span>)</td>
+                                <td>Exécuter une fonction après <span class="perso">n</span> ms (utile pour faire des animations sans bloquer la fenêtre) (<span class="perso">fonction</span> peut être remplacé par lambda:<span class="perso">fonction</span>() afin d’ajouter des arguments dans la fonction)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">fenetre</span>.geometry('500x500+200+100')</td>
+                                <td>Redimensionner la fenêtre en 500x500 et placer la fenêtre à x = 200 et y = 100</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">x</span> = <span class="perso">fenetre</span>.winfo_rootx()</td>
+                                <td>Renvoie la position du bord haut de la fenêtre (sans prendre en compte le bandeau avec le soustitre et les boutons)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">y</span> = <span class="perso">fenetre</span>.winfo_rooty()</td>
+                                <td>Renvoie la position du bord gauche de la fenêtre</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">fenetre_bis</span> = Toplevel(<span class="perso">fenetre</span>)</td>
+                                <td>Créer une fenêtre secondaire Tkinter (ne nécessite pas de mainloop pour maintenir cette fenêtre)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">menu</span> = Menu(<span class="perso">fenetre</span>)</td>
+                                <td>Créer une barre de menus (situé en haut de la fenêtre)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">menu_A</span> = Menu(<span class="perso">fenetre</span>)</td>
+                                <td>Créer un menu, qui sera placé dans la barre de menus</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">menu_A</span>.add_command(label = "<span class="perso">Nom de la commande</span>", command = <span class="perso">fonction</span>)</td>
+                                <td>Ajouter une commande dans un menu</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">menu</span>.add_cascade(label = "<span class="perso">nom_menu</span>", menu = <span class="perso">menu_A</span>)</td>
+                                <td>Ajouter le menu dans la barre de menus</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">menu</span>.add_cascade(label = "<span class="perso">nom_menu</span>", command = <span class="perso">fonction</span>)</td>
+                                <td>Ajouter une commande dans la barre de menus</td>
+                            </tr>
+                            <tr>
+                                <td class="script">fenetre["menu"] = <span class="perso">menu</span></td>
+                                <td>Appliquer le menu dans la fenêtre tkinter</td>
+                            </tr>
+                            <tr>
+                                <td class="script">
+                                    <span class="perso">zg</span> = Canvas(<span class="perso">fenetre</span>, bg = <span class="perso">couleur</span>, width = <span class="perso">longueur</span>, height = <span class="perso">hauteur</span>, <span class="perso">parametres</span>)<br/>
+                                    <br/>
+                                    <span class="perso">zg</span>.grid(row = 0, column = 0, rowspan = <span class="perso">nblignes</span>, colomnspan = <span class="perso">nbcolonnes</span>)
+                                </td>
+                                <td>Créer une zone graphique dans la fenêtre tkinter et le positionner avec un nombre de ligne ou de colonnes ou les deux (rowspan et colomnspan sont facultatifs). Les différents paramètres sont : bg = <span class="perso">couleur</span>, width = <span class="perso">longueur</span>, height = <span class="perso">hauteur</span>, anchor = <span class="perso">ancre</span> (avec <span class="perso">ancre</span> = NW, N, NE, E, SE, S, SW, W ou center), outline = <span class="perso">couleur_bordure</span>)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">widget1</span> = Label(<span class="perso">fenetre</span>, text = "<span class="perso">message</span>", <span class="perso">parametres</span>)</td>
+                                <td>Créer une zone de texte (paramètres : bg, fg, outline, width, height)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">widget2</span> = Entry(<span class="perso">fenetre</span>, textvariable = StringVar(), <span class="perso">parametres</span>)</td>
+                                <td>Créer une zone de saisie (paramètres : bg, fg, outline, width, height)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">texte_saisi</span> = <span class="perso">widget2</span>.get()</td>
+                                <td>Récupérer le texte écrit dans la zone de saisie</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">widget3</span> = Button(<span class="perso">fenetre</span>, text = '<span class="perso">Texte</span>', <span class="perso">parametres</span>, command = <span class="perso">fonction</span>)</td>
+                                <td>Créer un bouton (paramètres : bg, fg, outline, width, height)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">widget</span>.grid(row = <span class="perso">numligne</span>, column = <span class="perso">numcolonne</span>)</td>
+                                <td>Placer un widget avec la méthode de positionnement dans une case (dépend de rowspan ou colomnspan ou les deux)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">widget</span>.place(x = <span class="perso">abscisse</span>, y = <span class="perso">ordonnee</span>)</td>
+                                <td>Placer un widget avec la méthode de positionnement avec les coordonnées (à partir du bord de la zone graphique en haut à gauche)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">widget</span>.configure(<span class="perso">parametres</span>)</td>
+                                <td>Modifier les paramètres d’un widget</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">widget</span>.destroy()</td>
+                                <td>Supprimer un widget</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">item1</span> = <span class="perso">zg</span>.create_line(<span class="perso">x_deb</span>, <span class="perso">y_deb</span>, <span class="perso">x_fin</span>, <span class="perso">y_fin</span>, width = <span class="perso">epaisseur</span>, fill = <span class="perso">couleur</span>)</td>
+                                <td>Créer une ligne (paramètres : width, fill)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">item2</span> = <span class="perso">zg</span>.create_rectangle(<span class="perso">x_deb</span>, <span class="perso">y_deb</span>, <span class="perso">x_fin</span>, <span class="perso">y_fin</span>, width = <span class="perso">epaisseur</span>, fill = <span class="perso">couleur</span>)</td>
+                                <td>Créer un rectangle (paramètres : width, fill, outline)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">item3</span> = <span class="perso">zg</span>.create_oval(<span class="perso">x_deb</span>, <span class="perso">y_deb</span>, <span class="perso">x_fin</span>, <span class="perso">y_fin</span>, width = <span class="perso">epaisseur</span>, fill = <span class="perso">couleur</span>)</td>
+                                <td>Créer une ellipse (paramètres : width, fill, outline)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">item4</span> = <span class="perso">zg</span>.create_text(<span class="perso">x</span>, <span class="perso">y</span>, text = "<span class="perso">message</span>", font = '<span class="perso">Police taille</span>')</td>
+                                <td>Créer un texte avec un fond transparent (paramètres : fill, font, anchor)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">fichier</span> = ImageTk.Image.open("<span class="perso">nom_du_fichier</span>")</td>
+                                <td>Ouvrir une image en format png ou jpg dans Python (étape 1 de l’insertion d’une image dans la fenêtre) (nécessite pillow)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">fichier</span>.resize((<span class="perso">x</span>, <span class="perso">y</span>), ImageTk.Image.ANTIALIAS)</td>
+                                <td>Redimensionner la taille de l’image</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">image_tk</span> = ImageTk.PhotoImage(image = <span class="perso">fichier</span>)</td>
+                                <td>Ouvrir une image dans tkinter (étape 2 de l’insertion d’une image dans la fenêtre) (nécessite pillow)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">item5</span> = <span class="perso">zg</span>.create_image(<span class="perso">x</span>, <span class="perso">y</span>, image = <span class="perso">image_tk</span>)</td>
+                                <td>Insérer une image (dernière étape de l’insertion d’une image dans la fenêtre)</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">variable</span> = <span class="perso">zg</span>.itemcget(<span class="perso">item</span>, '<span class="perso">parametre</span>')</td>
+                                <td>Récupérer la valeur d’un paramètre pour un item déjà créé</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">zg</span>.itemconfigure(<span class="perso">item</span>, <span class="perso">parametres</span>)</td>
+                                <td>Modifier un ou plusieurs paramètres d’un item déjà créé</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">zg</span>.delete(<span class="perso">item</span>)</td>
+                                <td>Supprimer un item</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">zg</span>.delete('all')</td>
+                                <td>Supprimer tous les items</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">x</span>, <span class="perso">y</span> = <span class="perso">zg</span>.coords(<span class="perso">item</span>)</td>
+                                <td>Récupérer les coordonnées d’un item ayant en argument 2 coordonnées</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">x_deb</span>, <span class="perso">y_deb</span>, <span class="perso">x_fin</span>, <span class="perso">y_fin</span> = <span class="perso">zg</span>.coords(<span class="perso">item</span>)</td>
+                                <td>Récupérer les coordonnées d’un item ayant en argument 4 coordonnées</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">zg</span>.coords(<span class="perso">item</span>, <span class="perso">x</span>, <span class="perso">y</span>)</td>
+                                <td>Modifier les coordonnées d’un item ayant en argument 2 coordonnées</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">zg</span>.coords(<span class="perso">item</span>, <span class="perso">x_deb</span>, <span class="perso">y_deb</span>, <span class="perso">x_fin</span>, <span class="perso">y_fin</span>)</td>
+                                <td>Modifier les coordonnées d’un item ayant en argument 4 coordonnées</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">zg</span>.bind('&lsaquo;<span class="perso">evenement</span>&rsaquo;', <span class="perso">fonction</span>)</td>
+                                <td>Créer un événement lié à une action sur la souris (la fonction doit obligatoirement contenir en paramètre event, et les coordonnées de la souris peuvent être récupérée avec event.x et event.y) (événements possibles : &lsaquo;ButtonPress-1&rsaquo; (Appui sur le bouton gauche), &lsaquo;ButtonRelease-2&rsaquo; (Relâchement du bouton gauche), &lsaquo;Double-Button-1&rsaquo; (Double clic sur le bouton gauche), &lsaquo;Motion&rsaquo; (Déplacement de la souris), &lsaquo;B1-Motion&rsaquo; (Déplacement avec bouton gauche appuyé), &lsaquo;Enter&rsaquo; (Entrée dans le widget de la souris), &lsaquo;Leave&rsaquo; (Sortie du widget de la souris))</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">fenetre</span>.bind('&lsaquo;<span class="perso">evenement</span>&rsaquo;', <span class="perso">fonction</span>)</td>
+                                <td>Créer un événement lié à une action sur la souris (la fonction doit obligatoirement contenir en paramètre event) (événements possibles : &lsaquo;KeyPress&rsaquo; (Appui sur une touche quelconque), &lsaquo;KeyRelease&rsaquo; (Relâchement d’une touche quelconque), &lsaquo;a&rsaquo;, &lsaquo;A&rsaquo;, &lsaquo;1&rsaquo;, &lsaquo;2&rsaquo;… , &lsaquo;Right&rsaquo;, &lsaquo;Down&rsaquo;, &lsaquo;Up&rsaquo;, &lsaquo;Left&rsaquo;, &lsaquo;Alt&rsaquo;, &lsaquo;Shift&rsaquo;, &lsaquo;Control&rsaquo;… (les touches peuvent être combinées sous la forme : &lsaquo;Control-Up&rsaquo;))</td>
+                            </tr>
+                            <tr>
+                                <td class="script"><span class="perso">fenetre</span>.mainloop()</td>
+                                <td>À mettre à la fin du programme, permet le maintien de la fenêtre tkinter</td>
+                            </tr>
+                        </table>
+                        <div class="todo">
+                            À venir : réorganisation totale de la partie interface graphique
+                        </div>
+                    </div>
+                    <!--
+                    <h3 class="soustitre" id="IV.">IV. (<span class="script">from  import *</span>)</h3>
+                    <div class="contenu">
+                        <p></p>
+                        <table>
+                            <tr>
+                                <th>Instruction</th>
+                                <th>Utilité</th>
+                            </tr>
+                            
+                            <tr>
+                                <td class="script"></td>
+                                <td></td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                    -->
+                </div>
+            </article>
+		</main>
+		<footer>
+			<script src="../../scripts/footer.js"></script>
+		</footer>
+	</body>
+	<script src="../../scripts/script.js"></script>
+    <script src="../../scripts/tableDesMatieres.js"></script>
+</html>

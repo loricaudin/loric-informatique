@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+	<head>
+		<title>Loric Informatique - HTML</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="icon" href="../../images/icone.png">
+		<link rel="stylesheet" href ="../../styles/style.css">
+	</head>
+	<body>
+		<header>
+			<script src="../../scripts/header.js"></script>
+		</header>
+		<main class="pageLangage">
+			<section class="presentation">
+				<div class="alignementVertical">
+					<div>
+						<h1>HTML</h1>
+						<p class="version">Version 0.0 (créé le XX/XX/XXXX, modifié le XX/XX/XXXX)</p>
+                        <p></p>
+						<button onclick="window.location.href = ''" class="imprimer">Télécharger</button>
+						<button onclick="alert('Pour imprimer votre document, nous vous conseillons de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button>
+					</div>
+					<img src="icone_html.png" class="logoLangage">
+				</div>
+				<div class="todo">Attention ! Le mémento est en cours d'écriture. Il manque encore beaucoup d'informations.</div>
+			</section>
+            <section class="outils">
+                <h2>Outils nécessaires :</h2>
+                <ul>
+                    <li>Navigateur Internet à jour (ex : Firefox ou Chrome)</li>
+					<li>Un logiciel de codage (Visual Studio Code (recommandé) ou Notepad++)</li>
+                </ul>
+            </section>
+            <section>
+				<h2>Table des matières :</h2>
+                <div class="tableDesMatieres">
+                    <!-- Table des matières remplie par le JavaScript -->
+                </div>
+            </section>
+            <article>
+				<h2 class="soustitre" id="I.">I. Bases</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="I.1.">I.1. Syntaxe</h3>
+					<div class="contenu">
+						<p class="script"> <!-- &lsaquo; &nbsp; &rsaquo; -->
+							&lsaquo;!DOCTYPE html&rsaquo;<br/>
+							&lsaquo;html lang="fr-FR"&rsaquo;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;head&rsaquo;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;title&rsaquo;<span class="perso">Titre</span>&lsaquo;/title&rsaquo;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;meta charset="utf-8"/&rsaquo;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;meta name="viewport" content="width=device-width, initial-scale=1.0"/&rsaquo;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;link rel="icon" href="<span class="perso">image/icone.png</span>"/&rsaquo;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;/head&rsaquo;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;body&rsaquo;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;<span class="perso">balise1</span>&rsaquo;<span class="perso">contenu1</span>&lsaquo;/<span class="perso">balise1</span>&rsaquo;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;<span class="perso">balise2</span>&rsaquo;<span class="perso">contenu2</span>&lsaquo;/<span class="perso">balise2</span>&rsaquo;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;<span class="perso">balise3</span>&rsaquo;<span class="perso">contenu3</span>&lsaquo;/<span class="perso">balise3</span>&rsaquo;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;/body&rsaquo;<br/>
+							&lsaquo;/html&rsaquo;<br/>
+						</p>
+					</div>
+					<h3 class="soustitre" id="I.2.">I.2. Où écrire le code HTML ?</h3>
+					<div class="contenu">
+						<p>Dans un fichier .html ou dans un fichier .php pour les serveurs compatibles, entre les balises &lsaquo;body&rsaquo;&lsaquo;/body&rsaquo;</p>
+					</div>
+					<h3 class="soustitre" id="I.3.">I.3. Commentaires</h3>
+					<div class="contenu">
+						<p class="script commentaire">
+							&lsaquo;!--<br/>
+							Commentaire pouvant être sur une ou plusieurs lignes<br/>
+							--&rsaquo;
+						</p>
+					</div>
+				</div>
+                <!--
+				<h2 class="soustitre" id=""></h2>
+				<div class="contenu">
+
+				</div>
+				
+				&nbsp; : 1 espace obligatoire
+				-->
+			</article>
+		</main>
+		<footer>
+			<script src="../../scripts/footer.js"></script>
+		</footer>
+	</body>
+	<script src="../../scripts/script.js"></script>
+	<script src="../../scripts/tableDesMatieres.js"></script>
+</html>

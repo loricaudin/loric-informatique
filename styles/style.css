@@ -1,0 +1,494 @@
+/* ---------- Mode clair ---------- */
+/* Commun à toutes les pages */
+html {
+	scroll-behavior: smooth;
+}
+
+i, b{
+	color: red;
+	text-decoration: line-through;
+}
+
+body{
+	font-family: 'Segoe UI', 'Calibri', sans-serif;
+	font-size: 15px;
+	margin: 0px;
+	padding: 0px;
+	background: rgb(250, 250, 250);
+}
+
+h1{
+	font-size: 25px;
+}
+
+h2{
+	font-size: 18px;
+}
+
+h3{
+	font-size: 17px;
+}
+
+h4{
+	font-size: 16px;
+}
+
+h5{
+	font-size: 15px;
+}
+
+h6{
+	font-size: 15px;
+	margin: 0;
+}
+
+html{
+	scroll-behavior:smooth;
+}
+
+.alignementVertical{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+}
+
+img{
+	max-width: 100%;
+}
+
+.important{
+	font-weight: bold;
+}
+
+/* Header */
+header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.03);
+}
+
+header h1{
+	font-size: 30px;
+}
+
+header, header .titre, header nav, header nav ul, header nav ul li{
+	height: 100px;
+	margin: 0;
+}
+
+header .titre{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 20px;
+}
+
+#icon{
+	height: 70px;
+	padding-left: 10px;
+}
+
+nav ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+nav ul li{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	list-style: none;
+	font-size: 20px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+	padding: 20px;
+	/*border-radius: 10px;*/
+	transition: all 0.2s;
+}
+
+nav ul li a:hover{
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+nav ul li a:focus{
+	/* background-color: rgba(104, 33, 122, 0.3); */
+	background-color: rgba(58, 58, 255, 0.5);
+}
+
+/* Footer */
+footer{
+	height: 120px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	background-color: rgba(0, 0, 0, .04);
+}
+
+/* Main */
+main{
+	display: block;
+	min-height: calc(100vh - 240px);
+	margin: 0px;
+	padding: 10px;
+}
+
+.tableDesMatieres a{
+	font-weight: bold;
+	/*color: black;*/
+}
+
+.tableDesMatieres p{
+	margin: 5px;
+}
+
+.todo{
+	padding: 10px;
+	background-color: rgba(100, 100, 100, 0.1);
+	font-weight: bold;
+	color : red;
+}
+
+.note{
+	padding: 10px;
+	background-color: rgba(100, 100, 100, 0.1);
+}
+
+.attention{
+	padding: 10px;
+	background-color: rgba(100, 100, 100, 0.1);
+	font-weight: bold;
+}
+
+/* Page d'accueil */
+.mainIndex{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px;
+}
+
+.mainIndex h1{
+	margin: 0;
+}
+
+.mainIndex aside img{
+	width: 500px;
+}
+
+/* Astuces */
+.recherche{
+	display: flex;
+	flex-direction: column;
+}
+
+.astuce{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	min-height: 50px;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: rgba(0, 0, 0, 0.01);
+	color: black;
+	transition: all 0.5s;
+}
+
+.astuce:hover{
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.astuce:focus{
+	background-color: rgba(58, 58, 255, 0.5);
+}
+
+.astuce img{
+	height: 50px;
+}
+
+/* Page d'un language */
+.pageLangage .logoLangage{
+	max-width: 200px;
+	max-height: 200px;
+}
+
+.script{
+	font-family: Consolas, monospace;
+}
+
+.console{
+	font-family: Courier New, monospace;
+}
+
+.perso{
+	color: black;
+	font-style: italic;
+}
+
+.version{
+	font-weight: bold;
+}
+
+.contenu{
+	margin-left: 8px;
+}
+
+table{
+	table-layout: fixed; /* Toutes les cases de même longueur */
+	border-collapse: collapse;
+	width: 90%;
+	height: 50%;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+td, tr, th{
+	border : 1px solid black;
+	width: auto;
+	padding : 10px;
+}
+
+td{
+	text-align: left;
+}
+
+/* Langages */
+.langages{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	padding: 20px;
+
+	/* border-radius: 20px; */
+}
+
+.langages .langage{
+	color: black;
+	padding: 0;
+	max-width: 160px;
+	height: 210px;
+	transition: all 0.5s;
+	text-align: center;
+
+	/* border-radius: 20px; */
+}
+
+.langages .langage a{
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	text-decoration: none;
+	color: black;
+	padding: 30px;
+	max-width: 100px;
+	height: 150px;
+	transition: all 0.5s;
+	text-align: center;
+
+	/* border-radius: 20px; */
+}
+
+.langages .langage a div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+}
+
+.langages img{
+	max-width: 100px;
+	max-height: 100px;
+}
+
+.langages .langage:hover{
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- Mode sombre ---------- */
+.modeSombre{
+	background: rgb(30, 30, 30);
+	color: white;
+}
+
+.modeSombre a{
+	color: rgb(120, 180, 248);
+}
+
+.modeSombre span{
+	color: white;
+}
+
+/* Header */
+.modeSombre header{
+	background: rgba(255, 255, 255, 0.03);
+}
+
+.modeSombre header h1{
+	color: white;
+}
+
+.modeSombre nav ul li a{
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+
+.modeSombre nav ul li a:hover{
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+.modeSombre nav ul li a:focus{
+	/* background-color: rgba(104, 33, 122, .5); */
+	background-color: rgba(58, 58, 255, 0.5);
+}
+
+/* Footer */
+.modeSombre footer{
+	background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Main */
+.modeSombre td, .modeSombre tr, .modeSombre th{
+	border : 1px solid white;
+}
+
+/* Langages */
+.modeSombre .langages{
+	background-color: rgba(200, 200, 200, 0.1);
+}
+.modeSombre .langages a{
+	color: white;
+}
+
+.modeSombre .langages .langage:hover{
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Astuces et Aides */
+.outils{
+	margin-bottom: 50px;
+}
+
+/* ---------- Affichage mobile ---------- */
+@media screen and (max-width: 1200px){
+	/* Commun à toutes les pages */
+	body{
+		font-size:12px;
+	}
+
+	/* Header */
+	header{
+		align-items:start;
+	}
+
+	header h1{
+		font-size:20px;
+	}
+	
+	#icon{
+		height:50px;
+	}
+
+	#img_nav{
+		margin-top:10px;
+		margin-right:10px;
+		margin-bottom:16px;
+		width: 32px;
+	}
+}
+
+/* ---------- Affichage PDF ---------- */
+@media print {
+	/* Commun à toutes les pages */
+	@page {
+		size: auto;
+		/*margin: 0;*/
+	}
+
+	body {
+		font-size: 10pt;
+		background: white;
+		/*margin: 1cm;*/
+		/*-webkit-print-color-adjust: exact;*/ /* Fonctionne sur Chrome */
+    	/*print-color-adjust: exact;*/ /* Fonctionne sur Firefox */
+	}
+
+	.modeSombre{
+		background: white;
+		color: black;
+	}
+
+	.modeSombre td, .modeSombre tr, .modeSombre th{
+		border : 1px solid black;
+	}
+
+	/* Header */
+	header{
+		background-color: transparent;
+	}
+
+	.modeSombre header h1, .modeSombre span{
+		color: black;
+	}
+
+	header nav{
+		display: none;
+	}
+
+	/* Main */
+	button{
+		display: none;
+	}
+
+	.tableDesMatieres a{
+		text-decoration: none;
+		font-weight: bold;
+		color: black;
+	}
+
+	.tableDesMatieres p{
+		margin: 0px;
+	}
+
+	.todo{
+		display: none;
+	}
+
+	.note{
+		padding: 10px;
+		background-color: rgb(100, 100, 100, 0.1);
+	}
+	
+	.attention{
+		padding: 10px;
+		background-color: rgb(100, 100, 100, 0.1);
+	}
+
+	/* Page d'un language */
+	.pageLangage .logoLangage{
+		max-width: 100px;
+		max-height: 100px;
+	}
+
+	/* Footer */
+	footer{
+		display: none;
+	}
+  }

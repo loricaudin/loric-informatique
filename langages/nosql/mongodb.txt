@@ -1,0 +1,11 @@
+$lookup :
+db.collection1.aggregate([{$lookup: {from: "collection2", localField: "champcollection1", foreignField: "champCollection2", as: "nouveauChamp"}}])
+
+db.collection1.aggregate([{$lookup: {from: "collection2", localField: "champcollection1", foreignField: "champCollection2", let: {condition} as: "nouveauChamp"}}])
+
+Les vues :
+Créer une vue :
+db.createView("maVue", "collection", [pipeline])
+
+Afficher une vue :
+db.maVue.find(...)

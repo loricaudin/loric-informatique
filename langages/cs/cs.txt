@@ -1,0 +1,64 @@
+Créer un projet : dotnet new console -o nomProjet
+
+Compiler : dans le dossier du projet : dotnet build
+
+Exécuter: dans le dossier du projet : dotnet run
+
+
+// Cours 1 : Introduction :
+Console.WriteLine("Hello World!"); Affiche dans la console avec retour à la ligne
+
+// Cours 2 : Affichage du texte :
+using : utiliser une bibliothèque
+System : espace de nom
+Sans using System, il faut faire : System.Console.WriteLine("Hello World!");
+
+Console.Write("Hello World!"); Affiche dans la console sans retour à la ligne
+
+Console.Clear(); Effacer toute la console
+
+Console.Beep(); Faire bipper la console avec du son
+
+
+Changer le nom de la fenêtre : Console.Title = "nomFenetre";
+
+Console.Read(); Mettre en pause le programme
+
+\n : retour à la logne
+\t : tabulation
+
+Plus de méthodes dans la documentation de Console
+
+Commentaires : comme en C++ et en C
+
+// Cours 3 et 4 : Types de données et variable
+int n = 1_000 ou 1000;
+int n = 0b_1101_1110
+int n = 0x_C6A5FF
+(affichage final en décimal)
+
+// Cours 5 : Opérations
+string nom = "Loric";
+nom = nom + " Audin";
++ - * / % += -= *= /= %= ++ -- == ! < > <= >= && ||
+Conditions (bool) : true, false
+Console.WriteLine("Bonjour " + nom);
+Console.WriteLine($"Bonjour {nom}");
+
+// Cours 6 : Conditions
+Est possible : (a == b) ? val1 : val2;
+Reste identique
+
+// Cours 7 : Boucles
+while, for
+foreach(char letter in chaine)
+
+// Cours 8 : Lecture au clavier
+int c = Console.Read(); // Renvoie le code asci d'un caractère (obligé d'avoir un int en retour)
+string c = Console.ReadLine(); // Lit le texte écrit à l'écran
+
+ConsoleKeyInfo cki = Console.ReadKey(); // Ecouter une touche de clavier
+
+Console.WriteLine(cki.Key); // Renvoie la touche en unicode
+Console.WriteLine(cki.KeyChar); // Renvoie la touche en char (ne fonctionne que pour les lettres et les chiffres)
+

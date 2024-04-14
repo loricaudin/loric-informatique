@@ -1,0 +1,2766 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+	<head>
+		<title>Loric Informatique - Java</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="icon" href="../../images/icone.png">
+		<link rel="stylesheet" href ="../../styles/style.css">
+	</head>
+	<body>
+		<header>
+			<script src="../../scripts/header.js"></script>
+		</header>
+		<main class="pageLangage">
+			<section class="presentation">
+				<div class="alignementVertical">
+					<div>
+						<h1>Java</h1>
+						<p class="version">Version 0.4 (créé le 14/01/2024, modifié le 04/02/2024)</p>
+                        <p>Java est un langage de programmation de haut niveau orienté objet qui reprend en grande partie la syntaxe du langage C++. Néanmoins, Java est épuré des concepts les plus subtils du C++ et à la fois les plus déroutants, tels que les pointeurs et références, ou l’héritage multiple contourné par l’implémentation des interfaces.</p>
+						<button onclick="window.location.href = ''" class="imprimer">Télécharger</button>
+						<button onclick="alert('Pour imprimer votre document, nous vous conseillons de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button>
+					</div>
+					<img src="icone_java.png" class="logoLangage">
+				</div>
+			</section>
+            <section class="outils">
+                <h2>Outils nécessaires :</h2>
+				<ul>
+					<li>Un logiciel de codage (Visual Studio Code ou Notepad++)</li>
+					<li>Java JDK</li>
+					<li>Ou un logiciel tout en un (NetBeans (fortement recommandé))</li>
+				</ul>
+            </section>
+            <section>
+				<h2>Table des matières :</h2>
+                <div class="tableDesMatieres">
+                    <!-- Table des matières remplie par le JavaScript -->
+                </div>
+            </section>
+            <article>
+				<h2 class="soustitre" id="I.">I. Bases</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="I.1.">I.1. Syntaxe</h3>
+					<div class="contenu">
+						<p class="script">
+							public class <span class="perso">NomDuProgramme</span>{<br/>
+							<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args){<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction3</span>;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+							}
+						</p>
+					</div>
+					<h3 class="soustitre" id="I.2.">I.2. Enregistrer et exécuter un programme <span class="perso">NomDuProgramme.java</span></h3>
+					<div class="contenu">
+						<p>Dans la console, tapez la commande suivante :</p>
+						<p class="console">javac *.java</p>
+						<p>puis pour exécuter le programme la commande :</p>
+						<p class="console">java <span class="perso">NomDuProgramme</span></p>
+						<div class="note">Remarque : Dans le cas où vous avez plusieurs fichiers .java, <span class="perso">NomDuProgramme</span> est le nom de la classe principale où se situe le main.</div>
+					</div>
+					<h3 class="soustitre" id="I.3.">I.3. Types de variables</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="I.3.1.">I.3.1. Numériques</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Type</th>
+									<th>Type objet</th>
+									<th>Minimum</th>
+									<th>Maximum</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td><span class="script">int</span> (4o)</td>
+									<td><span class="script">Integer</span></td>
+									<td>-2 147 483 648</td>
+									<td>2 147 483 647</td>
+									<td>Nombre entier</td>
+								</tr>
+								<tr>
+									<td><span class="script">short</span> (2o)</td>
+									<td><span class="script">Short</span></td>
+									<td>-32 768</td>
+									<td>32 767</td>
+									<td>Nombre entier</td>
+								</tr>
+								<tr>
+									<td><span class="script">long</span> (8o)</td>
+									<td><span class="script">Long</span></td>
+									<td>−9 223 372 036 854 775 808</td>
+									<td>9 223 372 036 854 775 807</td>
+									<td>Nombre entier</td>
+								</tr>
+								<tr>
+									<td><span class="script">float</span> (4o)</td>
+									<td><span class="script">Float</span></td>
+									<td>-3.4<sub>x10</sub><sup>38</sup>f</td>
+									<td>3.4<sub>x10</sub><sup>38</sup>f</td>
+									<!--<td rowspan="3">Nombre décimal</td>-->
+									<td>Nombre décimal</td>
+								</tr>
+								<tr>
+									<td><span class="script">double</span> (8o) (2 fois plus précis que float)</td>
+									<td><span class="script">Double</span></td>
+									<td>-1.7<sub>x10</sub><sup>308</sup></td>
+									<td>1.1<sub>x10</sub><sup>308</sup></td>
+									<td>Nombre décimal</td>
+								</tr>
+								<!--
+								<tr>
+									<td><span class="script"></span></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								-->
+							</table>
+						</div>
+						<h4 class="soustitre" id="I.3.2.">I.3.2. Caractères</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Type</th>
+									<th>Type objet</th>
+									<th>Valeurs possibles</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td><span class="script">char</span> (1o)</td>
+									<td><span class="script">Char</span></td>
+									<td>Unicode (65 536 caractères possibles)</td>
+									<td>Nombre entier ou caractère (1 seul) entre ''</td>
+								</tr>
+								<tr>
+									<td><span class="script">String</span> (texte)</td>
+									<td>String</td>
+									<td>Infinité de caractères</td>
+									<td>Chaîne de caractères entre ""</td>
+								</tr>
+								<!--
+								<tr>
+									<td><span class="script"></span></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								-->
+							</table>
+						</div>
+						<h4 class="soustitre" id="I.3.3.">I.3.3. Autres types</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Type</th>
+									<th>Type objet</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td><span class="script">Object</span></td>
+									<td><span class="script">Object</span></td>
+									<td>Type indéfini (tous les autres types héritent de Object)</td>
+								</tr>
+								<tr>
+									<td><span class="script">boolean</span></td>
+									<td><span class="script">Boolean</span></td>
+									<td>Valeur pouvant être true ou false</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<h3 class="soustitre" id="I.4.">I.4. Commentaires</h3>
+					<div class="contenu">
+						<p class="script commentaire">
+							//Commentaire tenant sur une ligne
+						</p>
+						<p class="script commentaire">
+							/*<br/>
+							Commentaire pouvant être sur une ou plusieurs lignes<br/>
+							*/
+						</p>
+					</div>
+					<h3 class="soustitre" id="I.5.">I.5. Opérations</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th>Instruction</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">1 + 2</td>
+								<td>Renvoie 3</td>
+							</tr>
+							<tr>
+								<td class="script">3 - 1</td>
+								<td>Renvoie 2</td>
+							</tr>
+							<tr>
+								<td class="script">6 * 4</td>
+								<td>Renvoie 24</td>
+							</tr>
+							<tr>
+								<td class="script">5.0 / 2.0</td>
+								<td>Renoie 2.5</td>
+							</tr>
+							<tr>
+								<td class="script">5 / 2</td>
+								<td>Renvoie 2 (le quotient sans décimal)</td>
+							</tr>
+							<tr>
+								<td class="script">5 % 2</td>
+								<td>Renvoie 1 (le reste de la division)</td>
+							</tr>
+							<!--
+							<tr>
+								<td class="script"></td>
+								<td></td>
+							</tr>
+							-->
+						</table>
+					</div>
+					<h3 class="soustitre" id="I.6.">I.6. Les variables</h3>
+					<div class="contenu">
+						<table>
+							<!--
+							<tr>
+								<td class="script"></td>
+								<td></td>
+							</tr>
+							-->
+							<tr>
+								<th>Instruction</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">type variable</span> = <span class="perso">valeur</span>;</td>
+								<td>Déclare une nouvelle variable (à mettre au début d’une fonction en -ainsi)</td>
+							</tr>
+							<tr>
+								<td class="script">int <span class="perso">a</span>;</td>
+								<td>Déclare la variable <span class="perso">a</span> comme int</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">a</span> = 5;</td>
+								<td>Affecte 5 à une variable</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">b</span> = <span class="perso">a</span>++;</td>
+								<td>Équivalent à <span class="perso">b</span> = <span class="perso">a</span>; <span class="perso">a</span> = <span class="perso">a</span> + 1;</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">b</span> = ++<span class="perso">a</span>;</td>
+								<td>Équivalent à <span class="perso">a</span> = <span class="perso">a</span> + 1; <span class="perso">b</span> = <span class="perso">a</span>;</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">b</span> = <span class="perso">a</span>--;</td>
+								<td>Équivalent à <span class="perso">b</span> = <span class="perso">a</span>; <span class="perso">a</span> = <span class="perso">a</span> - 1;</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">b</span> = --<span class="perso">a</span>;</td>
+								<td>Équivalent à <span class="perso">a</span> = <span class="perso">a</span> - 1; <span class="perso">b</span> = <span class="perso">a</span>;</td>
+							</tr>
+							<tr>
+								<td class="script">int <span class="perso">a</span> = (int)<span class="perso">b</span>;</td>
+								<td>Convertit le nombre décimal <span class="perso">b</span> en nombre entier <span class="perso">a</span></td>
+							</tr>
+							<tr>
+								<td class="script">final float <span class="perso">pi</span> = 3.14;</td>
+								<td>Crée une variable constante (non modifiable)</td>
+							</tr>
+							<tr>
+								<td class="script">static <span class="perso">type variable</span> = <span class="perso">valeur</span>;</td>
+								<td>Déclare une nouvelle variable qui n’est jamais détruite (si déjà exécuté, cette instruction est ignorée)</td>
+							</tr>
+							<tr>
+								<td class="script">char <span class="perso">caractere</span> = '<span class="perso">c</span>';</td>
+								<td>Déclare une variable contenant un caractère</td>
+							</tr>
+							<tr>
+								<td class="script">String <span class="perso">texte</span> = <span class="perso">valeur</span>;</td>
+								<td>Déclare une variable contenant une chaîne de caractère</td>
+							</tr>
+						</table>
+					</div>
+					<h3 class="soustitre" id="I.7.">I.7. Les tableaux</h3>
+					<div class="contenu">
+						<table>
+							<!--
+							<tr>
+								<td class="script"></td>
+								<td></td>
+							</tr>
+							-->
+							<tr>
+								<th>Instruction</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">type tableau</span>[] = new <span class="perso">type</span>[<span class="perso">i</span>];</td>
+								<td>Crée un tableau vide de <span class="perso">i</span> éléments</td>
+							</tr>
+							<tr>
+								<td>
+									<p class="script"><span class="perso">tableau</span>[<span class="perso">i</span>]</p>
+								</td>
+								<td>Renvoie la valeur du tableau à la position <span class="perso">i</span> (l'indice de la première valeur est 0)</td>
+							</tr>
+							<tr>
+								<td>
+									<p class="script"><span class="perso">type</span> <span class="perso">tableau</span>[] = {<span class="perso">val1</span>, <span class="perso">val2</span>…};</p>
+									<p>ou</p>
+									<p class="script"><span class="perso">type</span> <span class="perso">tableau</span>[] = new <span class="perso">type</span>{<span class="perso">val1</span>, <span class="perso">val2</span>…};</p>
+								</td>
+								<td>Crée un tableau de i éléments avec des valeurs personnalisées (<span class="perso">i</span> doit être une variable globale en norme -ainsi, définie avec #define)</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">tableau</span>.length</td>
+								<td>Renvoie la longueur du tableau</td>
+							</tr>
+							
+						</table>
+						<div class="note">Remarque : Une chaîne de caractère n’est pas un tableau.</div>
+					</div>
+					<h3 class="soustitre" id="I.8.">I.8. Conditions</h3>
+					<div class="contenu">
+						<p>Les conditions renvoient true si elle est respectée et false sinon</p>
+						<h4 class="soustitre">I.8.1. Opérateurs de comparaison</h4>
+						<div class="contenu">
+							<table>
+								<!--
+								<tr>
+									<td class="script"></td>
+									<td></td>
+								</tr>
+								-->
+								<tr>
+									<th>Condition</th>
+									<th>Description de ce que vérifie la condition</th>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">a</span> == <span class="perso">b</span></td>
+									<td><span class="perso">a</span> égal à <span class="perso">b</span> (seulement en contenu : 1="1")</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">a</span> === <span class="perso">b</span></td>
+									<td><span class="perso">a</span> égal à <span class="perso">b</span> (en type et en contenu : 1≠"1")</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">a</span> &lsaquo; <span class="perso">b</span></td>
+									<td><span class="perso">a</span> strictement inférieur à <span class="perso">b</span></td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">a</span> &rsaquo; <span class="perso">b</span></td>
+									<td><span class="perso">a</span> strictement supérieur à <span class="perso">b</span></td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">a</span> &lsaquo;= <span class="perso">b</span></td>
+									<td><span class="perso">a</span> inférieur ou égal à <span class="perso">b</span></td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">a</span> &rsaquo;= <span class="perso">b</span></td>
+									<td><span class="perso">a</span> supérieur ou égal à <span class="perso">b</span></td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">a</span> != <span class="perso">b</span></td>
+									<td><span class="perso">a</span> n’est pas égal à <span class="perso">b</span> (seulement en contenu : 1="1")</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">a</span> !== <span class="perso">b</span></td>
+									<td><span class="perso">a</span> n’est pas égal à <span class="perso">b</span> (en type et en contenu : 1≠"1")</td>
+								</tr>
+								<tr>
+									<td class="script">||</td>
+									<td>À mettre entre deux conditions, permet d’avoir une des deux conditions qui doit être vraie</td>
+								</tr>
+								<tr>
+									<td class="script">&&</td>
+									<td>À mettre entre deux conditions, permet d’avoir deux conditions qui doivent être vraie</td>
+								</tr>
+								<tr>
+									<td class="script">!<span class="perso">condition</span></td>
+									<td>La condition doit être fausse</td>
+								</tr>
+							</table>
+						</div>
+						<h4 class="soustitre" id="I.8.2.">I.8.2. Tests de conditions</h4>
+						<div class="contenu">
+							<table>
+								<!--
+								<tr>
+									<td class="script"></td>
+									<td></td>
+								</tr>
+								<a class="script_tabulation">
+								-->
+								<tr>
+									<th>Instruction</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td class="script">
+									if(<span class="perso">condition1</span>){<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
+									}
+									</td>
+									<td>Si <span class="perso">condition1</span> est vraie, alors on exécute <span class="perso">instruction1</span></td>
+								</tr>
+								<tr>
+									<td class="script">
+									if(<span class="perso">condition1</span>){<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
+									}<br/>
+									else{<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
+									}
+									</td>
+									<td>Si <span class="perso">condition1</span> est vraie, alors on exécute <span class="perso">instruction1</span>, sinon, on exécute <span class="perso">instruction2</span></td>
+								</tr>
+								<tr>
+									<td class="script">
+									if(<span class="perso">condition1</span>){<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
+									}<br/>
+									else if(<span class="perso">condition2</span>){<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
+									}<br/>
+									else{<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction3</span>;<br/>
+									}
+									</td>
+									<td>Si <span class="perso">condition1</span> est vraie, alors on exécute <span class="perso">instruction1</span>, sinon, si <span class="perso">condition2</span> est vraie, on exécute <span class="perso">instruction2</span>, sinon, on exécute <span class="perso">instruction3</span></td>
+								</tr>
+								<tr>
+									<td class="script">
+									switch(<span class="perso">nombre</span>){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;case <span class="perso">a</span>:<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;case <span class="perso">b</span>:<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;case <span class="perso">c</span>:<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;default:<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction3</span>;<br/>
+									}
+									</td>
+									<td>Si <span class="perso">nombre</span> == <span class="perso">a</span>, alors on exécute <span class="perso">instruction1</span>, sinon, si <span class="perso">nombre</span> == <span class="perso">b</span> ou <span class="perso">c</span>, on exécute <span class="perso">instruction2</span>, sinon, on exécute <span class="perso">instruction3</span></td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">a</span> = (<span class="perso">condition1</span>) ? 1 : 0;</td>
+									<td>Si <span class="perso">condition1</span> est vraie, <span class="perso">a</span> prend la valeur 1, sinon 0.</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<h3 class="soustitre" id="I.9.">I.9. Boucles</h3>
+					<div class="contenu">
+						<table>
+							<!--
+							<tr>
+								<td class="script"></td>
+								<td></td>
+							</tr>
+							<a class="script_tabulation">
+							-->
+							<tr>
+								<th>Instruction</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">
+								for(int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lsaquo; <span class="perso">f</span>; <span class="perso">i</span>++){<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
+								}
+								</td>
+								<td>On répète <span class="perso">f</span>-<span class="perso">d</span> fois <span class="perso">instruction1</span> pour <span class="perso">i</span> allant de <span class="perso">d</span> compris à <span class="perso">f</span> non compris</td>
+							</tr>
+							<tr>
+								<td class="script">
+								for(int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lsaquo; <span class="perso">f</span>; <span class="perso">i</span>+=<span class="perso">p</span>){<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
+								}
+								</td>
+								<td>On répète (<span class="perso">f</span>-<span class="perso">d</span>)/<span class="perso">p</span> fois <span class="perso">instruction1</span> pour i allant de <span class="perso">d</span> compris à <span class="perso">f</span> non compris avec pour pas égal à <span class="perso">p</span></td>
+							</tr>
+							<tr>
+								<td class="script">
+								for(<span class="perso">type elt</span>: <span class="perso">tableau</span>){<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
+								}
+								</td>
+								<td>On parcours la liste (ou une chaine de caractère) pour <span class="perso">elt</span> prenant toutes les valeurs du tableau</td>
+							</tr>
+							<tr>
+								<td class="script">
+								while(<span class="perso">condition</span>){<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
+								}
+								</td>
+								<td>On répète jusqu’à ce que <span class="perso">condition</span> soit fausse (peut ne pas être répété)</td>
+							</tr>
+							<tr>
+								<td class="script">
+								do{<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
+								}<br/>
+								while(<span class="perso">condition</span>);
+								</td>
+								<td>On répète jusqu’à ce que <span class="perso">condition</span> soit fausse (est forcément répété une fois)</td>
+							</tr>
+							<tr>
+								<td class="script">break;</td>
+								<td>Permet de sortir d’une boucle sans la terminer (fortement déconseillé)</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<h2 class="soustitre" id="II.">II. Les méthodes et les classes</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="II.1.">II.1. Les fonctions (ou les méthodes de la classe principale)</h3>
+					<div class="contenu">
+						<p>Les fonctions doivent être écrites juste après la méthode main.</p>
+						<h4 class="soustitre" id="II.1.1.">II.1.1. Créer une fonction retournant une valeur du type « <span class="perso">type0</span> »</h4>
+						<div class="contenu">
+							<p class="script">
+							public static <span class="perso">type0</span> <span class="perso">maFonction</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…){<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
+							}<br/>
+							</p>
+						</div>
+						<h4 class="soustitre" id="II.1.2.">II.1.2. Retourner une valeur de la fonction</h4>
+						<div class="contenu">
+							<p class="script">return <span class="perso">variable</span>;</p>
+						</div>
+						<h4 class="soustitre" id="II.1.3.">II.1.3. Créer une fonction retournant aucune valeur</h4>
+						<div class="contenu">
+							<p class="script">
+							public static void <span class="perso">maFonction</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…){<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
+							}<br/>
+							</p>
+						</div>
+						<h4 class="soustitre" id="II.1.4.">II.1.4. Faire un appel à la fonction</h4>
+						<div class="contenu">
+							<p class="script"><span class="perso">variable</span> = <span class="perso">maFonction</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);</p>
+							<p>ou (s'il n'y a pas de variable de retour)</p>
+							<p class="script"><span class="perso">maFonction</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);</p>
+						</div>
+						<div class="note">Remarque : il est possible de faire une surcharge de fonctions, c'est-à-dire qu’il est possible de créer deux fonctions identiques avec des paramètres de types différents, ce qui permet à l'interpréteur de choisir la fonction correspondant au type de variables saisies. Idem pour les constructeurs des classes.</div>
+					</div>
+					<h3 class="soustitre" id="II.2.">II.2. Les énumérations</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="II.2.1.">II.2.1. Créer une énumération</h4>
+						<div class="contenu">
+							<p>Exemple :</p>
+							<p class="script">
+								public enum JoursSemaine{<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;LUNDI,<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;MARDI,<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;MERCREDI,<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;JEUDI,<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;VENDREDI,<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;SAMEDI,<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;DIMANCHE<br/>
+								}
+							</p>
+						</div>
+						<h4 class="soustitre" id="II.2.2.">II.2.2. Affecter une valeur de l'énumération</h4>
+						<div class="contenu">
+							<p>Exemple :</p>
+							<p class="script">
+								JoursSemaine jour = JoursSemaine.MERCREDI;
+							</p>
+						</div>
+					</div>
+					<h3 class="soustitre" id="II.3.">II.3. Les classes</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="II.3.1.">II.3.1. Visibilités</h4>
+						<div class="contenu">
+							<ul>
+								<li><span class="script">public</span> : Peut être appelé en dehors de la classe</li>
+								<li><span class="script">private</span> : Ne peut être appelé qu'au sein de la classe (pour des valeurs, il est préférable de créer des getter et des setter pour accéder à la valeur depuis l'extérieur)</li>
+								<li><span class="script">protected</span> : Ne peut être appelé qu'au sein de la classe et dans les classes héritées</li>
+							</ul>
+						</div>
+						<h4 class="soustitre" id="II.3.2.">II.3.2. Les classes de base</h4>
+						<div class="contenu">
+							<h5 class="soustitre" id="II.3.2.1.">II.3.2.1. Créer une classe</h5>
+							<div class="contenu">
+								<p class="script">
+									public class <span class="perso">MaClasse</span>{<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type2</span> <span class="perso">variable2</span>;<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;public static <span class="perso">type3</span> <span class="perso">variableStatique3</span> = <span class="perso">valeur</span>;<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable1</span> = <span class="perso">mVariable1</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable2</span> = <span class="perso">mVariable2</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+									}
+								</p>
+								<div class="note">
+									Note : Il est possible de surcharger le constructeur <span class="perso">MaClasse</span> et de créer une variable statique qui reste la même valeur pour tous les objets.
+								</div>
+							</div>
+							<h5 class="soustitre" id="II.3.2.2.">II.3.2.2. Définir la classe dans un objet</h5>
+							<div class="contenu">
+								<p class="script"><span class="perso">MaClasse monObjet</span> = new <span class="perso">MaClasse</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);</p>
+							</div>
+							<h5 class="soustitre" id="II.3.2.3.">II.3.2.3. Ajouter un affichage d’un message de la part de la classe (lors de l’exécution de System.out.println(<span class="perso">monObjet</span>)):</h5>
+							<div class="contenu">
+								<p class="script">
+									public String toString(){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;return "<span class="perso">message</span>";<br/>
+									}
+								</p>
+							</div>
+							<h5 class="soustitre" id="II.3.2.4.">II.3.2.4. Créer une méthode (dans une classe)</h5>
+							<div class="contenu">
+								<p class="script">
+									<span class="perso">visibilite type0 maMethode</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
+									}
+								</p>
+							</div>
+							<h5 class="soustitre" id="II.3.2.5.">II.3.2.5. Faire un appel d’une méthode autre que le constructeur et toString ou d’une variable dans une classe</h5>
+							<div class="contenu">
+								<p class="script">this.<span class="perso">maMethode</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…)</p>
+								<p class="script">this.<span class="perso">variable1</span> = <span class="perso">valeur1</span></span>;</p>
+							</div>
+							<h5 class="soustitre" id="II.3.2.6.">II.3.2.6. Faire un appel d’une méthode autre que le constructeur et toString ou d’une variable en dehors d'une classe</h5>
+							<div class="contenu">
+								<p class="script"><span class="perso">monObjet</span>.<span class="perso">maMethode</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…)</p>
+								<p class="script"><span class="perso">monObjet</span>.<span class="perso">variable1</span> = <span class="perso">valeur1</span></span>;</p>
+								<div class="attention">Il est préférable d'utiliser des méthodes (appelées getter et setter) pour modifier les variables non statiques</div>
+							</div>
+							<h5 class="soustitre" id="II.3.2.6.">II.3.2.6. Faire un appel d’une méthode ou d’une variable statique en dehors d'une classe</h5>
+							<div class="contenu">
+								<p class="script"><span class="perso">MaClasse</span>.<span class="perso">maMethode</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…)</p>
+								<p class="script"><span class="perso">MaClasse</span>.<span class="perso">variable1</span> = <span class="perso">valeur1</span></span>;</p>
+							</div>
+						</div>
+						<h4 class="soustitre" id="II.3.3.">II.3.3. Les classes internes</h4>
+						<div class="contenu">
+							<p>Les classes internes sont des classes présentes dans une autre classe.</p>
+							<p class="script">
+								public class <span class="perso">MaClasse</span>{<br/>
+								<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;private class <span class="perso">MaClasseInterne</span>{<br/>
+								<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+								}
+							</p>
+							<div class="note">Il est préférable de mettre la classe interne interne en privée ou en protégée. Si la classe interne est publique, elle est accessible avec <span class="script"><span class="perso">MaClasse</span>.<span class="perso">MaClasseInterne</span>, mais dans ce cas, il est déconseillé d'utiliser une classe interne.</div>
+						</div>
+						<h4 class="soustitre" id="II.3.4.">II.3.4. L'héritage</h4>
+						<div class="contenu">
+							<p>L'héritage permet à des classes filles de reprendre les mêmes caractéristiques que leur classe mère, et d’ajouter des nouveaux attributs et/ou méthodes qui leur sont propres. Il est possible de faire un outrepassement d’une méthode de la classe mère, c'est-à-dire de créer une méthode du même nom qu’une méthode de la classe mère pour la remplacer. L’outrepassement peut être interdit avec le mot-clé « final ».</p>
+							<h5 class="soustitre" id="II.3.4.1.">II.3.4.1. Créer une classe héritée d'une autre classe</h5>
+							<div class="contenu">
+								<p class="script">
+									public class <span class="perso">MaClasseHeritee</span> extends <span class="perso">MaClasse</span>{<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type4</span> <span class="perso">variable4</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type5</span> <span class="perso">variable5</span>;<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;public static <span class="perso">type6</span> <span class="perso">variableStatique6</span> = <span class="perso">valeur</span>;<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasseHeritee</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…, <span class="perso">type4</span> <span class="perso">mVariable4</span>, <span class="perso">type5</span> <span class="perso">mVariable5</span>…){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super(<span class="perso">mVariable1</span>, <span class="perso">mVariable2</span>…);<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable4</span> = <span class="perso">mVariable4</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable5</span> = <span class="perso">mVariable5</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+									}
+								</p>
+								<div class="note">
+									La méthode <span class="script">super()</span> permet d’appeler le construteur de la classe initiale.
+								</div>
+							</div>
+							<h5 class="soustitre" id="II.3.2.2.">II.3.2.2. Définir la classe dans un objet</h5>
+							<div class="contenu">
+								<p class="script"><span class="perso">MaClasse monObjet</span> = new <span class="perso">MaClasseHeritee</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…, <span class="perso">valeur4</span>, <span class="perso">valeur5</span>…);</p>
+							</div>
+							<h5 class="soustitre" id="II.3.2.3.">II.3.2.3. Ajouter un affichage d’un message de la part de la classe (lors de l’exécution de System.out.println(<span class="perso">monObjet</span>)):</h5>
+							<div class="contenu">
+								<p class="script">
+									public String toString(){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;return (super.toString() + "<span class="perso">message</span>");<br/>
+									}
+								</p>
+							</div>
+							<h5 class="soustitre" id="II.3.2.4.">II.3.2.4. Récupérer le nom de la classe héritée</h5>
+							<div class="contenu">
+								<p class="script">String <span class="perso">nomType</span> = <span class="perso">monObjet</span>.getClass().getName();</p>
+							</div>
+						</div>
+						<h4 class="soustitre" id="II.3.5.">II.3.5. Les exceptions</h4>
+						<div class="contenu">
+							<p>Les classes d'exceptions permettent de gérer les erreurs possibles dans les programmes. Il est possible d'utiliser des exceptions prédéfinies ou d'en créer soi-même.</p>
+							<h5 class="soustitre" id="II.3.5.1.">II.3.5.1. Exceptions prédéfinies</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Exception</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script">ClassCastException</td>
+										<td>Problème de cast</td>
+									</tr>
+									<tr>
+										<td class="script">IllegalArgumentException</td>
+										<td>Problème d’argument</td>
+									</tr>
+									<tr>
+										<td class="script">IndexOutOfBoundsException</td>
+										<td>Sortie du tableau</td>
+									</tr>
+									<tr>
+										<td class="script">InputMismatchException</td>
+										<td>Saisie invalide à l’écran</td>
+									</tr>
+									<tr>
+										<td class="script">NullPointerException</td>
+										<td>Variable nulle</td>
+									</tr>
+									<!--
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+									-->
+								</table>
+							</div>
+							<h5 class="soustitre" id="II.3.5.2.">II.3.5.2. Créer une classe d'exception</h5>
+							<div class="contenu">
+								<p class="script">
+									public class <span class="perso">MaClasseException</span> extends Exception{<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;public <span class="perso">MaClasseException</span>(String <span class="perso">message</span>){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super("Erreur : " + <span class="perso">message</span>);<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+									}
+								</p>
+							</div>
+							<h5 class="soustitre" id="II.3.5.3.">II.3.5.3. Définir une méthode ou une fonction pouvant renvoyer une exception (en dehors de la classe d’exception)</h5>
+							<div class="contenu">
+								<p class="script">
+									<span class="perso">visibilite type0 maMethode</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…) throws <span class="perso">MaClasseException</span>{<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
+									}
+								</p>
+							</div>
+							<h5 class="soustitre" id="II.3.5.4.">II.3.5.4. Provoquer une erreur dans une méthode</h5>
+							<div class="contenu">
+								<p class="script">throw new <span class="perso">MaClasseException</span>(<span class="perso">message</span>);</p>
+							</div>
+							<h5 class="soustitre" id="II.3.5.5.">II.3.5.5. Traiter l'erreur</h5>
+							<div class="contenu">
+								<p class="script">
+									try{<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
+									}<br/>
+									catch(<span class="perso">MaClasseException e</span>){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
+									}<br/>
+									finally{<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction3</span>;<br/>
+									}
+								</p>
+								<div class="note">
+									Note : finally est facultatif. Il ne sert qu’à présenter clairement ce que fait l’algorithme après avoir passé le try et le catch.
+									La variable <span class="perso">e</span> affiche le message d’erreur (qui est entré dans super()).
+									Il est également possible de mettre plusieurs catch pour différencier les différentes exceptions, ou être générale avec Exception.
+									Pour des catch situés dans des méthodes, il est possible de faire throw <span class="perso">e</span>; afin de traiter l’erreur plus tard.
+								</div>
+							</div>
+						</div>
+						<h4 class="soustitre" id="II.3.6.">II.3.6. Les classes abstraites</h4>
+						<div class="contenu">
+							<p>Les classes abstraites sont des classes qui ne peuvent pas être instanciées et qui sont utilisées pour définir une structure de classe de base pour les classes dérivées. Les classes abstraites sont déclarées avec le mot-clé <span class="script">abstract</span>. Elles peuvent contenir des méthodes abstraites, qui sont des méthodes déclarées sans corps. Les méthodes abstraites sont utilisées pour définir une interface pour les classes dérivées. Les classes dérivées doivent implémenter toutes les méthodes abstraites de la classe abstraite parente.</p>
+							<h5 class="soustitre" id="II.3.6.1.">II.3.6.1. Créer une classe abstraite</h5>
+							<div class="contenu">
+								<p class="script">
+									public abstract class <span class="perso">MaClasseAbstraite</span>{<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type2</span> <span class="perso">variable2</span>;<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;public static <span class="perso">type3</span> <span class="perso">variableStatique3</span> = <span class="perso">valeur</span>;<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable1</span> = <span class="perso">mVariable1</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable2</span> = <span class="perso">mVariable2</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+									}
+								</p>
+							</div>
+							<h5 class="soustitre" id="II.3.6.2.">II.3.6.2. Créer une méthode abstraite</h5>
+							<div class="contenu">
+								<p class="script"><span class="perso">visibilite</span> abstract <span class="perso">type0</span> <span class="perso">maMethodeAbstraite</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…);</p>
+								<div class="note">Toutes les méthodes qui ne possèdent pas de mot-clé <span class="script">abstract</span> ne doivent pas être obligatoirement implémentées par les classes filles.</div>
+							</div>
+							<h5 class="soustitre" id="II.3.6.3.">II.3.6.3. Créer une classe héritant d'une classe abstraite</h5>
+							<div class="contenu">
+								<p class="script">
+									public class <span class="perso">MaClasseHeritee</span> extends <span class="perso">MaClasseAbstraite</span>{<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type4</span> <span class="perso">variable4</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type5</span> <span class="perso">variable5</span>;<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;public static <span class="perso">type6</span> <span class="perso">variableStatique6</span> = <span class="perso">valeur</span>;<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasseHeritee</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…, <span class="perso">type4</span> <span class="perso">mVariable4</span>, <span class="perso">type5</span> <span class="perso">mVariable5</span>…){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super(<span class="perso">mVariable1</span>, <span class="perso">mVariable2</span>…);<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable4</span> = <span class="perso">mVariable4</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable5</span> = <span class="perso">mVariable5</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+									}
+								</p>
+							</div>
+							<h5 class="soustitre" id="II.3.6.4.">II.3.6.4. Implémenter une méthode abstraite (dans la classe fille)</h5>
+							<div class="contenu">
+								<p class="script">
+									@Override<br/>
+									<span class="perso">visibilite</span> abstract <span class="perso">type0</span> <span class="perso">maMethodeAbstraite</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
+									}</p>
+								<div class="note">Le mot-clé <span class="script">@Override</span> permet d'indiquer à l'interpréteur qu'il s'agit d'une méthode abstraite implémentée, et à détecter des erreurs éventuelles.</div>
+							</div>
+							<h5 class="soustitre" id="II.3.6.5.">II.3.6.5. Définir la classe dans un objet</h5>
+							<div class="contenu">
+								<p class="script"><span class="perso">MaClasseAbstraite</span> <span class="perso">monObjet</span> = new <span class="perso">MaClasseHeritee</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);</p>
+								<p>ou</p>
+								<p class="script"><span class="perso">MaClasseHeritee</span> <span class="perso">monObjet</span> = new <span class="perso">MaClasseHeritee</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);</p>
+								<div class="note">
+									Il est possible de définir directement la classe abstraite dans un objet, sans faire héritage. Voir les classes anonymes.
+								</div>
+							</div>
+						</div>
+						<h4 class="soustitre" id="II.3.7.">II.3.7. Les interfaces</h4>
+						<div class="contenu">
+							<p>Les interfaces sont des classes abstraites qui permettent de définir un ensemble de méthodes sans les implémenter. Elles sont très utiles pour réduire la dépendance entre classes. Les classes peuvent implémenter plusieurs interfaces et doivent fournir une implémentation pour chacune des méthodes annoncées.</p>
+							<h5 class="soustitre" id="II.3.7.1.">II.3.7.1. Créer une interface</h5>
+							<div class="contenu">
+								<p class="script">
+									public interface <span class="perso">MonInterface</span>{<br/>
+									<br/>
+									}
+								</p>
+							</div>
+							<h5 class="soustitre" id="II.3.7.2.">II.3.7.2. Créer une méthode abstraite</h5>
+							<div class="contenu">
+								<p class="script"><span class="perso">visibilite</span> <span class="perso">type0</span> <span class="perso">maMethodeAbstraite</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…);</p>
+								<div class="note">Toutes les méthodes n'ont pas besoin de mot-clé <span class="script">abstract</span> car toutes les méthodes d'une interface doivent être obligatoirement implémentées par les classes filles.</div>
+							</div>
+							<h5 class="soustitre" id="II.3.7.3.">II.3.7.3. Créer une classe implémentant une ou plusieurs interfaces</h5>
+							<div class="contenu">
+								<p class="script">
+									public class <span class="perso">MaClasseHeritee</span> extends <span class="perso">MaClasseAbstraite</span> implements <span class="perso">MonInterface1</span>, <span class="perso">MonInterface2</span>…{<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type4</span> <span class="perso">variable4</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type5</span> <span class="perso">variable5</span>;<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;public static <span class="perso">type6</span> <span class="perso">variableStatique6</span> = <span class="perso">valeur</span>;<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasseHeritee</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…, <span class="perso">type4</span> <span class="perso">mVariable4</span>, <span class="perso">type5</span> <span class="perso">mVariable5</span>…){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super(<span class="perso">mVariable1</span>, <span class="perso">mVariable2</span>…);<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable4</span> = <span class="perso">mVariable4</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable5</span> = <span class="perso">mVariable5</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+									}
+								</p>
+							</div>
+							<h5 class="soustitre" id="II.3.7.4.">II.3.7.4. Implémenter une méthode abstraite (dans la classe fille)</h5>
+							<div class="contenu">
+								<p class="script">
+									@Override<br/>
+									<span class="perso">visibilite</span> abstract <span class="perso">type0</span> <span class="perso">maMethodeAbstraite</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
+									}</p>
+								<div class="note">Le mot-clé <span class="script">@Override</span> permet d'indiquer à l'interpréteur qu'il s'agit d'une méthode abstraite implémentée, et à détecter des erreurs éventuelles.</div>
+							</div>
+							<h5 class="soustitre" id="II.3.7.5.">II.3.7.5. Définir la classe dans un objet</h5>
+							<div class="contenu">
+								<p class="script"><span class="perso">MonInterface</span> <span class="perso">monObjet</span> = new <span class="perso">MaClasseAbstraite</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);</p>
+								<p>ou</p>
+								<p class="script"><span class="perso">MaClasseAbstraite</span> <span class="perso">monObjet</span> = new <span class="perso">MaClasseAbstraite</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);</p>
+								<p>ou</p>
+								<p class="script"><span class="perso">MaClasse</span> <span class="perso">monObjet</span> = new <span class="perso">MaClasseAbstraite</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);</p>
+								<div class="note">
+									Il est possible de définir directement l'interface dans un objet, sans faire d'implémentation (uniquement s'il n'y a qu'une seule interface). Voir les classes anonymes.
+								</div>
+							</div>
+						</div>
+						<h4 class="soustitre" id="II.3.8.">II.3.8. Les classes anonymes</h4>
+						<div class="contenu">
+							<p>Les classes anonymes sont généralement des classes abstraites ou des interfaces définies directement dans un objet sans avoir à passer par une classe héritant d'une classe abstraite (ça peut également être une classe simple, mais c'est déconseillé). Chaque classe anonyme doit implémenter obligatoirement toutes les méthodes abstraites entre {}. Elle peut également contenir des méthodes non obligatoires à implémenter. Cela peut être utile si le code ne peut être exécuté que par un seul objet.</p>
+							<h5 class="soustitre" id="II.3.8.1.">II.3.8.1. Manière simple</h5>
+							<div class="contenu">
+								<p class="script">
+									<span class="perso">MaClasseAbstraite</span> <span class="perso">monObjet</span> = new <span class="perso">MaClasseAbstraite</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…){<br/>
+									<br/>
+									};
+								</p>
+							</div>
+							<h5 class="soustitre" id="II.3.8.2.">II.3.8.2. Expression lambda (ne fonctionne que si nous avons 1 seule méthode abstraite)</h5>
+							<div class="contenu">
+								<p class="script">
+									<span class="perso">MaClasseAbstraite</span> <span class="perso">monObjet</span> = (<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…) -> {<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
+									};
+								</p>
+								<div class="note">Pas besoin d'entrer le nom de la méthode abstraite. Seules les paramètres sont renseignées.</div>
+							</div>
+						</div>
+						<h4 class="soustitre" id="II.3.9.">II.3.9. Les collections</h4>
+						<div class="contenu">
+							<p>Les collections sont des classes qui peuvent avoir un ou plusieurs type de données personnalisables.</p>
+							<h5 class="soustitre" id="II.3.9.1.">II.3.9.1. Créer une collection</h5>
+							<div class="contenu">
+								<p class="script">
+									public class <span class="perso">MaCollection</span>&lsaquo;<span class="perso">T1</span>, <span class="perso">T2</span>…&rsaquo;{<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type2</span> <span class="perso">variable2</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">T1</span> <span class="perso">variable3</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">T2</span> <span class="perso">variable4</span>;<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;public static <span class="perso">type3</span> <span class="perso">variableStatique3</span> = <span class="perso">valeur</span>;<br/>
+									<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…, <span class="perso">T1</span> <span class="perso">mVariable3</span>, <span class="perso">T2</span> <span class="perso">mVariable4</span>…){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable1</span> = <span class="perso">mVariable1</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable2</span> = <span class="perso">mVariable2</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable3</span> = <span class="perso">mVariable3</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable4</span> = <span class="perso">mVariable4</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+									}
+								</p>
+								<div class="note">
+									Il est possible d’utiliser <span class="script">&lsaquo;<span class="perso">T1</span> extend Comparable&lsaquo;<span class="perso">T1</span>&rsaquo;&rsaquo;</span> afin d’utiliser la méthode <span class="script">compareTo()</span> entre 2 objets qui renvoie un int.
+								</div>
+							</div>
+							<h5 class="soustitre" id="II.3.9.2.">II.3.9.2. Définir la collection dans un objet</h5>
+							<div class="contenu">
+								<p class="script"><span class="perso">MaCollection</span>&lsaquo;<span class="perso">TypeObjet1</span>, <span class="perso">TypeObjet2</span>…&rsaquo; <span class="perso">monObjet</span> = new <span class="perso">maCollection</span>&lsaquo;&rsaquo;(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…, <span class="perso">valeur4</span>, <span class="perso">valeur5</span>…);</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h2 class="soustitre" id="III.">III. Les instructions</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="III.1.">III.1. Instructions de bases</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th>Instruction</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">System.out.print("<span class="perso">texte</span>");</td>
+								<td>Affiche un texte dans la console</td>
+							</tr>
+							<tr>
+								<td class="script">System.out.println("<span class="perso">texte</span>");</td>
+								<td>Affiche un texte dans la console avec un retour à la ligne (peut être remplacé par \n, placé directement dans la chaîne) (pour une tabulation, entrez \t; \b : retour en arriere ; \f : nouvelle page)</td>
+							</tr>
+							<tr>
+								<td class="script">System.out.println(<span class="perso">variable</span>);<br/>System.out.println("Valeur : " + <span class="perso">variable</span>);</td>
+								<td>Affiche une variable (ici <span class="perso">variable</span>) dans la console</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">variable</span>.getClass().getName();</td>
+								<td>Renvoie le nom de la classe de la variable</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">chaine1</span>.equals(<span class="perso">chaine2</span>);</td>
+								<td>Vérifie que la première chaîne est égale à la deuxième (fonctionne également avec les objets)</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">chaine1</span>.concat(<span class="perso">chaine2</span>);</td>
+								<td>Concatène une chaîne avec une autre</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">chaine</span>.toUpperCase();</td>
+								<td>Renvoie la chaîne de caractères en majuscule</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">chaine</span>.toLowerCase();</td>
+								<td>Renvoie la chaîne de caractères en minuscule</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">chaine</span>.length();</td>
+								<td>Renvoie la longueur de la chaîne</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">chaine</span>.trim();</td>
+								<td>Supprime tous les espaces avant et après la chaîne</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">chaine</span>.replace(<span class="perso">ancien</span>, <span class="perso">nouveau</span>);</td>
+								<td>Remplace tous les caractères par le nouveau</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">chaine</span>.charAt(<span class="perso">i</span>);</td>
+								<td></td>
+							</tr>
+							
+							<!--
+							<tr>
+								<td class="script"></td>
+								<td></td>
+							</tr>
+							-->
+						</table>
+					</div>
+					<div class="todo">
+						À venir : La gestion des fichiers
+					</div>
+					<!-- <h3 class="soustitre" id="III.2.">III.2. Les fichiers</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th>Instruction</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<span class="script">
+										std::fstream <span class="perso">fichier</span>;<br/>
+										<span class="perso">fichier</span>.open(<span class="perso">nom_du_fichier</span>, std::ios::in);
+									</span>
+									<p>ou</p>
+									<span class="script">
+										ifstream <span class="perso">fichier</span>(<span class="perso">nom_du_fichier</span>);
+									</span>
+								</td>
+								<td>Ouvre un fichier en mode lecture seule</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="script">
+										std::fstream <span class="perso">fichier</span>;<br/>
+										<span class="perso">fichier</span>.open(<span class="perso">nom_du_fichier</span>, std::ios::out);
+									</span>
+									<p>ou</p>
+									<span class="script">
+										ofstream <span class="perso">fichier</span>(<span class="perso">nom_du_fichier</span>);
+									</span>
+								</td>
+								<td>Crée un nouveau fichier et l'ouvre en mode écriture (écrase l'ancien fichier du même nom)</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="script">
+										std::fstream <span class="perso">fichier</span>;<br/>
+										<span class="perso">fichier</span>.open(<span class="perso">nom_du_fichier</span>, std::ios::app);
+									</span>								
+								</td>
+								<td>Ouvre un fichier en mode écriture (en écrivant à la fin du fichier)</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">fichier</span> &lsaquo;&lsaquo; <span class="perso">variable</span>;</td>
+								<td>Ecrit le contenu d’une variable (ici <span class="perso">variable</span>) dans le fichier (en mode écriture)</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">fichier</span> &rsaquo;&rsaquo; <span class="perso">variable</span>;</td>
+								<td>Lit une valeur du fichier avec le retour dans <span class="perso">variable</span> (en mode lecture)</td>
+							</tr>
+							<tr>
+								<td class="script">std::getline(<span class="perso">fichier</span>, <span class="perso">ligne</span>);</td>
+								<td>Lit une ligne du fichier avec le retour dans <span class="perso">variable</span> (en mode lecture), en prenant en compte les espaces</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">fichier</span>.eof();</td>
+								<td>Détermine quand on atteindra la fin du fichier</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">fichier</span>.get(<span class="perso">variable</span>);</td>
+								<td>Lit un caractère</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">fichier</span>.close();</td>
+								<td>Important pour fermer un fichier</td>
+							</tr>
+							
+							<tr>
+								<td class="script"></td>
+								<td></td>
+							</tr>
+							
+						</table>
+					</div> -->
+				</div>
+				<h2 class="soustitre" id="IV.">IV. Les packages</h2>
+				<div class="contenu">
+					<div class="todo">En cours de travail</div>
+				</div>
+				<h2 class="soustitre" id="V.">V. Les bibliothèques</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="V.0.">V.0. Importer une bibliothèque</h3>
+					<div class="contenu">
+						<p class="script">
+							import <span class="perso">bibliotheque</span>;
+						</p>
+					</div>
+					<h3 class="soustitre" id="V.1.">V.1. java.util (<span class="script">import java.util.*;</span>)</h3>
+					<div class="contenu">
+						<p></p>
+						<h4 class="soustitre" id="V.1.1.">V.1.1. Scanner (<span class="script">import java.util.Scanner;</span>)</h4>
+						<div class="contenu">
+							<p>Scanner permet de lire des données entrées dans la console.</p>
+							<p>Dans la classe où vous souhaitez l’utiliser, ajoutez avant le constructeur :</p>
+							<p class="script">private static Scanner <span class="perso">entree</span> = new Scanner(System.in);</p>
+							<table>
+								<tr>
+									<th>Instruction</th>
+									<th>Utilité</th>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">variable</span> = <span class="perso">entree</span>.nextLine();</td>
+									<td>Demande une valeur de type String avec le retour dans <span class="perso">variable</span></td>
+								</tr>
+								<tr>
+									<td class="script">
+										<span class="perso">variable</span> = <span class="perso">entree</span>.nextInt();<br/>
+										<span class="perso">entree</span>.nextLine();
+									</td>
+									<td>Demande une valeur de type int de manière sécurisée avec le retour dans <span class="perso">variable</span></td>
+								</tr>
+								<!--
+								<tr>
+									<td class="script"></td>
+									<td></td>
+								</tr>
+								-->
+							</table>
+						</div>
+						<h4 class="soustitre" id="V.1.2.">V.1.2. List (<span class="script">import java.util.List;</span>)</h4>
+						<div class="contenu">
+							<p>List permet de créer des tableaux de valeurs d’une taille variable (c'est-à-dire des listes) et de pouvoir faire diverses manipulations facilement.</p>
+							<h5>Les différentes listes possibles :</h5>
+							<ul>
+								<li>ArrayList (<span class="script">import java.util.ArrayList;</span>) : Plus rapide pour les opérations de recherche (il reprend le principe d'une liste chaînée)</li>
+								<li>LinkedList (<span class="script">import java.util.LinkedList;</span>) : Plus rapide pour les opérations d'ajout et de suppression (il reprend le principe d'un tableau)</li>
+							</ul>
+							<table>
+								<tr>
+									<th>Instruction</th>
+									<th>Utilité</th>
+								</tr>
+								<tr>
+									<td class="script">List&lsaquo;<span class="perso">typeObjet</span>&rsaquo; <span class="perso">liste</span> = new <span class="perso">XXX</span>List&lsaquo;&rsaquo;();</td>
+									<td>Crée une liste vide</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">liste</span>.get(<span class="perso">i</span>);</td>
+									<td>Renvoie la valeur à la position <span class="perso">i</span></td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">liste</span>.add(<span class="perso">valeur</span>);</td>
+									<td>Ajoute une valeur dans la liste</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">liste</span>.remove(<span class="perso">i</span>);</td>
+									<td>Enlève la valeur de la liste à la position <span class="perso">i</span></td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">liste</span>.remove(<span class="perso">valeur</span>);</td>
+									<td>Enlève la valeur de la liste qui contient l’objet recherché</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">liste</span>.size();</td>
+									<td>Renvoie la longueur de la liste</td>
+								</tr>
+								<tr>
+									<td class="script">List&lsaquo;<span class="perso">typeObjet</span>&rsaquo; <span class="perso">nouvelleListe</span> = <span class="perso">liste</span>.clone();</td>
+									<td>Crée une copie de la liste</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">liste</span>.isEmpty();</td>
+									<td>Vérifie si la liste est vide</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">liste</span>.indexOf(<span class="perso">valeur</span>);</td>
+									<td>Renvoie la position de la valeur recherchée ou -1 si elle n’est pas trouvée</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">liste</span>.contains(<span class="perso">valeur</span>);</td>
+									<td>Vérifie si la liste contient la valeur recherchée</td>
+								</tr>
+								<!--
+								<tr>
+									<td class="script"></td>
+									<td></td>
+								</tr>
+								-->
+							</table>
+						</div>
+						<h4 class="soustitre" id="V.1.3.">V.1.3. Set (<span class="script">import java.util.Set;</span>)</h4>
+						<div class="contenu">
+							<p>Set permet de créer des listes chaînées de valeurs obligatoirement différentes d’une taille variable (c'est-à-dire des listes) et de pouvoir faire diverses manipulations facilement.</p>
+							<h5>Les différentes listes possibles :</h5>
+							<ul>
+								<li>HashSet (<span class="script">import java.util.HashSet;</span>) : Plus rapide pour l'accès et la manipulation des éléments (il reprend le principe du hachage)</li>
+								<li>TreeSet (<span class="script">import java.util.TreeSet;</span>) : Plus rapide pour trier les éléments (il reprend le principe d'un arbre)</li>
+							</ul>
+							<table>
+								<tr>
+									<th>Instruction</th>
+									<th>Utilité</th>
+								</tr>
+								<tr>
+									<td class="script">Set&lsaquo;<span class="perso">typeObjet</span>&rsaquo; <span class="perso">liste</span> = new <span class="perso">XXX</span>Set&lsaquo;&rsaquo;();</td>
+									<td>Crée une collection vide</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">liste</span>.add(<span class="perso">valeur</span>);</td>
+									<td>Ajoute une valeur dans la collection</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">liste</span>.remove(<span class="perso">valeur</span>);</td>
+									<td>Enlève la valeur de la collection (renvoie false si elle n'a pas été trouvée)</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">liste</span>.size();</td>
+									<td>Renvoie la longueur de la collection</td>
+								</tr>
+								<tr>
+									<td class="script">
+										Iterator <span class="perso">iterateur</span> = <span class="perso">liste</span>.iterator();<br/>
+										while(<span class="perso">iterateur</span>.hasNext()){<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">typeObjet element</span> = (<span class="perso">typeObjet</span>)<span class="perso">iterateur</span>.next();<br/>
+										}
+									</td>
+									<td>Permet de parcourir la collection</td>
+								</tr>
+								<!--
+								<tr>
+									<td class="script"></td>
+									<td></td>
+								</tr>
+								-->
+							</table>
+						</div>
+						<h4 class="soustitre" id="V.1.3.">V.1.3. Map (<span class="script">import java.util.List;</span>)</h4>
+						<div class="contenu">
+							<p>Map permet de créer des dictionnaires de valeurs d’une taille variable avec des valeurs associées à des clés.</p>
+							<h5>Les différents dictionnaires possibles :</h5>
+							<ul>
+								<li>HashMap (<span class="script">import java.util.HashMap;</span>) : Plus rapide pour les opérations de recherche (il reprend le principe du hachage)</li>
+								<li>TreeMap (<span class="script">import java.util.TreeMap;</span>) : Éléments triés (il reprend le principe d'un arbre)</li>
+							</ul>
+							<table>
+								<tr>
+									<th>Instruction</th>
+									<th>Utilité</th>
+								</tr>
+								<tr>
+									<td class="script">Map&lsaquo;<span class="perso">typeObjet1</span>, <span class="perso">typeObjet2</span>&rsaquo; <span class="perso">dictionnaire</span> = new <span class="perso">XXX</span>Map&lsaquo;&rsaquo;();</td>
+									<td>Crée un dictionnaire vide</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">dictionnaire</span>.get(<span class="perso">cle</span>);</td>
+									<td>Renvoie la valeur associée à la clé</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">dictionnaire</span>.put(<span class="perso">cle</span>, <span class="perso">valeur</span>);</td>
+									<td>Ajoute une valeur dans le dictionnaire</td>
+								</tr>
+								<!--
+								<tr>
+									<td class="script"></td>
+									<td></td>
+								</tr>
+								-->
+							</table>
+						</div>
+					</div>
+					<div class="todo">À venir : nouvelles bibliothèques</div>
+					<!--
+					<h3 class="soustitre" id=""> (<span class="script">import xxx;</span>)</h3>
+					<div class="contenu">
+						<p></p>
+						<h4 class="soustitre" id=""> (<span class="script">import xxx;</span>)</h4>
+						<div class="contenu">
+							<p></p>
+							<table>
+								<tr>
+									<th>Instruction</th>
+									<th>Utilité</th>
+								</tr>
+								<tr>
+									<td class="script"></td>
+									<td></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<h3 class="soustitre" id=""> (<span class="script">import xxx;</span>)</h3>
+					<div class="contenu">
+						<p></p>
+						<table>
+							<tr>
+								<th>Instruction</th>
+								<th>Utilité</th>
+							</tr>
+							<tr>
+								<td class="script"></td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+					-->
+				</div>
+				<h2 class="soustitre" id="VI.">VI. L'interface graphique (<span class="script">import javax.swing.*;</span> et <span class="script">import java.awt.*;</span>)</h2>
+				<div class="contenu">
+					<p>Chaque fenêtre a son fichier java. La fenêtre principale n’est pas le programme principal. Elle sert à initialiser et ouvrir la fenêtre principale.</p>
+					<h3 class="soustitre" id="VI.1.">VI.1. Syntaxe</h3>
+					<div class="contenu">
+						<p class="script">
+							import javax.swing.*;<br/>
+							import java.awt.*;<br/>
+							<br/>
+							public class <span class="perso">MaFenetre</span> extends JFrame{<br/>
+							<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;public <span class="perso">MaFenetre</span>(){<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentaire">/* Instructions pour paramétrer la fenêtre */</span><br/><br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.setJMenuBar(this.<span class="perso">creerBarreDeMenu</span>());<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.setContentPane(this.<span class="perso">creerPanel</span>());<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+							<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;JMenuBar <span class="perso">maBarreDeMenu</span>;<br/>
+							<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;private JMenuBar <span class="perso">creerBarreDeMenu</span>(){<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">maBarreDeMenu</span> = new JMenuBar();<br/><br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentaire">/* Instructions pour créer des menus */</span><br/><br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return <span class="perso">maBarreDeMenu</span>;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+							<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;JPanel <span class="perso">monPanel</span>;<br/>
+							<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;private JPanel <span class="perso">creerPanel</span>(){<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">monPanel</span> = (JPanel)getContentPane();<br/><br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentaire">/* Instructions pour créer des widgets */</span><br/><br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return <span class="perso">monPanel</span>;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+							}
+						</p>
+					</div>
+					<h3 class="soustitre" id="VI.2.">VI.2. Gestion de la fenêtre (construteur <span class="perso">MaFenetre</span>())</h3>
+					<div class="contenu">
+						<!-- <h4>Les différents paramètres de la fenêtre</h4> -->
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Instruction</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td class="script">UIManager.setLookAndFeel(<br/>&nbsp;&nbsp;UIManager.getSystemLookAndFeelClassName()<br/>);</td>
+									<td>Mettre le style du système d’exploitation au lieu du style de java par défaut (peut provoquer une erreur si le style est inexistant)</td>
+								</tr>
+								<tr>
+									<td class="script">this.setTitle("<span class="perso">nom de la fenêtre</span>");</td>
+									<td>Changer le nom de la fenêtre (en haut à gauche)</td>
+								</tr>
+								<tr>
+									<td class="script">this.setIconImage(new ImageIcon("<span class="perso">src/icone.png</span>").getImage());</td>
+									<td>Changer l’icône de l’application (en haut à gauche)</td>
+								</tr>
+								<tr>
+									<td class="script">this.setSize(<span class="perso">longueur</span>, <span class="perso">hauteur</span>);</td>
+									<td>Redimensionner la fenêtre</td>
+								</tr>
+								<tr>
+									<td class="script">this.setResizable(false);</td>
+									<td>Interdire le redimensionnement de la fenêtre</td>
+								</tr>
+								<tr>
+									<td class="script">this.setExtendedState(JFrame.MAXIMIZED_BOTH);</td>
+									<td>Mettre la fenêtre en plein écran</td>
+								</tr>
+								<tr>
+									<td class="script">this.setLocationRelativeTo(null);</td>
+									<td>Placer la fenêtre au centre de l'écran</td>
+								</tr>
+								<tr>
+									<td class="script">this.setDefaultCloseOperation(<span class="perso">actionFermeture</span>);</td>
+									<td>Changer l'action au clic sur la croix :
+										<ul>
+											<li><span class="script">JFrame.EXIT_ON_CLOSE</span> : Fermer l'application</li>
+											<li><span class="script">JFrame.HIDE_ON_CLOSE</span> : Fermer la fenêtre sans quitter l'application</li>
+											<li><span class="script">JFrame.DISPOSE_ON_CLOSE</span> : Fermer la fenêtre actuelle et rend la main à la fenêtre parent</li>
+											<li><span class="script">JFrame.DO_NOTHING_ON_CLOSE</span> : Bloquer la fermeture de la fenêtre</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">this.pack();</td>
+									<td>Adapter la taille de la fenêtre à ses composants</td>
+								</tr>
+								<tr>
+									<td class="script">this.setVisible(true);</td>
+									<td>Afficher la fenêtre (ouvre la fenêtre au moment où elle est appelée)</td>
+								</tr>
+								<!--
+								<tr>
+									<td class="script"></td>
+									<td></td>
+								</tr>
+								-->
+							</table>
+						</div>
+					</div>
+					<h3 class="soustitre" id="VI.3.">VI.3. Gestion de la barre de menu (<span class="perso">creerBarreDeMenu</span>())</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th>Instruction</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">
+									JMenu <span class="perso">menu1</span> = new JMenu("<span class="perso">mon menu</span>");<br/>
+									<span class="perso">maBarreDeMenu</span>.add(<span class="perso">menu1</span>);
+								</td>
+								<td>Créer un menu</td>
+							</tr>
+							<tr>
+								<td class="script">
+									JMenuItem <span class="perso">option1</span> = new JMenuItem("<span class="perso">mon option</span>");<br/>
+									<span class="perso">menu1</span>.add(<span class="perso">option1</span>);
+								</td>
+								<td>Créer un item d’un menu</td>
+							</tr>
+							<tr>
+								<td class="script">
+									JMenuItem <span class="perso">option1</span> = new JMenuItem("<span class="perso">mon option</span>", new ImageIcon("<span class="perso">src/icone.png</span>"));<br/>
+									<span class="perso">menu1</span>.add(<span class="perso">option1</span>);
+								</td>
+								<td>Créer un item d’un menu avec une icône</td>
+							</tr>
+							<tr>
+								<td class="script">
+									JCheckBoxMenuItem <span class="perso">option2</span> = new JCheckBoxMenuItem("<span class="perso">mon option</span>");<br/>
+									<span class="perso">menu1</span>.add(<span class="perso">option2</span>);
+								</td>
+								<td>Créer un item à cocher d’un menu</td>
+							</tr>
+							<tr>
+								<td class="script">
+									JRadioButtonMenuItem <span class="perso">option3</span> = new JRadioButtonMenuItem("<span class="perso">mon option</span>");<br/>
+									<span class="perso">menu1</span>.add(<span class="perso">option3</span>);
+								</td>
+								<td>Créer un item radio d’un menu</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">menu1</span>.addSeparator();</td>
+								<td>Ajouter un trait de séparation</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">menu1</span>.setIcon(new ImageIcon("<span class="perso">src/icone.png</span>").getImage());</td>
+								<td>Ajouter une icône</td>
+							</tr>
+							<!--
+							<tr>
+								<td class="script"></td>
+								<td></td>
+							</tr>
+							-->
+						</table>
+						<div class="attention">
+							Pour que chaque items puissent effectuer une action, il faut leur ajouter un écouteur. Voir les événements.
+						</div>
+					</div>
+					<h3 class="soustitre" id="VI.4.">VI.4. Gestion du panel (<span class="perso">creerPanel</span>())</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="VI.4.1.">VI.4.1. Les différents layouts</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Instruction</th>
+									<th>Insertion de widgets</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td class="script">
+										<span class="perso">monPanel</span>.setLayout(new FlowLayout());<br/>
+										<br/>
+										<span class="perso">monPanel</span>.setLayout(new FlowLayout(FlowLayout.LEFT));<br/>
+										<br/>
+										<span class="perso">monPanel</span>.setLayout(new FlowLayout(FlowLayout.RIGHT));<br/>
+										<br/>
+										<span class="perso">monPanel</span>.setLayout(new FlowLayout(FlowLayout.CENTER, <span class="perso">espacementH</span>, <span class="perso">espacementV</span>));
+									</td>
+									<td class="script"><span class="perso">monPanel</span>.add(<span class="perso">widget</span>);</td>
+									<td>Place les composants les uns à la suite des autres de gauche à droite et de façon centrée par défaut, en passant à la ligne suivante si nécessaire (avec un espacement horizontal et un espacement vertical si les paramètres sont spécifiés)</td>
+								</tr>
+								<tr>
+									<td class="script">
+										<span class="perso">monPanel</span>.setLayout(new GridLayout(<span class="perso">nbLignes</span>, <span class="perso">nbColonnes</span>));<br/>
+										<br/>
+										<span class="perso">monPanel</span>.setLayout(new GridLayout(<span class="perso">nbLignes</span>, <span class="perso">nbColonnes</span>, <span class="perso">espacementH</span>, <span class="perso">espacementV</span>));
+									</td>
+									<td class="script"><span class="perso">monPanel</span>.add(<span class="perso">widget</span>, <span class="perso">ligne</span>, <span class="perso">colonne</span>);</td>
+									<td>Place les composants dans une grille, soit dans une case spécifiée, soit dans la prochaine case vide si rien n'est renseigné (avec un espacement horizontal et un espacement vertical si les paramètres sont spécifiées)</td>
+								</tr>
+								<tr>
+									<td class="script">
+										<span class="perso">monPanel</span>.setLayout(new BorderLayout());<br/>
+										<br/>
+										<span class="perso">monPanel</span>.setLayout(new BorderLayout(<span class="perso">espacementH</span>, <span class="perso">espacementV</span>));
+									</td>
+									<td class="script">
+										<span class="perso">monPanel</span>.add(<span class="perso">widget</span>, BorderLayout.CENTER);<br/>
+										<br/>
+										<span class="perso">monPanel</span>.add(<span class="perso">widget</span>, BorderLayout.NORTH);<br/>
+										<br/>
+										<span class="perso">monPanel</span>.add(<span class="perso">widget</span>, BorderLayout.SOUTH);<br/>
+										<br/>
+										<span class="perso">monPanel</span>.add(<span class="perso">widget</span>, BorderLayout.WEST);<br/>
+										<br/>										
+										<span class="perso">monPanel</span>.add(<span class="perso">widget</span>, BorderLayout.EAST);
+									</td>
+									<td>Découpe l'écran en 5 régions (avec un espacement horizontal et un espacement vertical si les paramètres sont spécifiées)</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">monPanel</span>.setLayout(null);</td>
+									<td class="script"><span class="perso">widget</span>.setBounds(<span class="perso">x</span>, <span class="perso">y</span>, <span class="perso">largeur</span>, <span class="perso">hauteur</span>);</td>
+									<td>Place les widgets de manière absolue grâce à des valeurs personnalisées (fortement déconseillé)</td>
+								</tr>
+								<!--
+								<tr>
+									<td class="script"></td>
+									<td><span class="script"></span></td>
+									<td></td>
+								</tr>
+								-->
+							</table>
+						</div>
+						<div class="todo">À venir : Paramètres des panels</div>
+					</div>
+					<h3 class="soustitre" id="VI.5.">VI.5. Gestion des widgets</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="VI.5.1.">VI.5.1. Instructions en commun pour tous les widgets</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Instruction</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">widget</span>.setLocation(<span class="perso">x</span>, <span class="perso">y</span>);</td>
+									<td>Changer les coordonnées du widget à partir du bord en haut à gauche</td>
+								</tr>
+								<tr>
+									<td class="script">
+										<span class="perso">widget</span>.setWidth(<span class="perso">largeur</span>);
+										<br/>
+										<span class="perso">widget</span>.setHeigth(<span class="perso">hauteur</span>);
+									</td>
+									<td>Changer la taille du widget</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">widget</span>.setBackground(new Color (<span class="perso">r</span>, <span class="perso">g</span>, <span class="perso">b</span>));</td>
+									<td>Changer la couleur du fond</td>
+								</tr>
+								<tr>
+									<td class="script">
+										<span class="perso">widget</span>.setBorder(<br/>
+										&nbsp;&nbsp;BorderFactory.createLineBorder(<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;new Color(<span class="perso">r</span>, <span class="perso">g</span>, <span class="perso">b</span>)<br/>
+										&nbsp;&nbsp;),<br/>
+										&nbsp;&nbsp;<span class="perso">epaisseur</span><br/>
+										);
+									</td>
+									<td>Changer la bordure</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">widget</span>.setForeground(new Color (<span class="perso">r</span>, <span class="perso">g</span>, <span class="perso">b</span>));</td>
+									<td>Changer la couleur du texte</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">widget</span>.setOpaque(<span class="perso">booleen</span>);</td>
+									<td>Rendre visible ou invisible l’arrière-plan</td>
+								</tr>
+								<tr>
+									<td class="script"><span class="perso">widget</span>.setVisible(<span class="perso">booleen</span>);</td>
+									<td>Rendre visible ou invisible le widget</td>
+								</tr>
+								<!--
+								<tr>
+									<td class="script"></td>
+									<td></td>
+								</tr>
+								-->
+								<tr>
+									<td class="script">
+										int <span class="perso">x</span> = <span class="perso">widget</span>.getX();
+										<br/>
+										int <span class="perso">y</span> = <span class="perso">widget</span>.getY();
+									</td>
+									<td>Récupérer les coordonnées du widget à partir du bord en haut à gauche</td>
+								</tr>
+								<tr>
+									<td class="script">
+										int <span class="perso">largeur</span> = <span class="perso">widget</span>.getWidth();
+										<br/>
+										int <span class="perso">hauteur</span> = <span class="perso">widget</span>.getHeigth();
+									</td>
+									<td>Récupérer la taille du widget</td>
+								</tr>
+								<!--
+								<tr>
+									<td class="script"></td>
+									<td></td>
+								</tr>
+								-->
+							</table>
+						</div>
+						<h4 class="soustitre" id="VI.5.2.">VI.5.2. Les différents widgets</h4>
+						<div class="contenu">
+							<h5 class="soustitre" id="VI.5.2.1.">VI.5.2.1. JLabel (Ajouter du texte)</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Instruction</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script">
+											<span class="perso">label0</span> = new JLabel("<span class="perso">Mon texte</span>");<br/>
+											<br/>
+											<span class="perso">label0</span> = new JLabel("<span class="perso">Mon texte</span>", SwingConstants.CENTER);
+											</td>
+										<td>Créer le widget (doit être initialisé dans la classe)</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">label0</span>.setFont(new Font("Calibri", Font.PLAIN, <span class="perso">taille</span>));</td>
+										<td>
+											Changer le style et la taille du texte (Normal : Font.PLAIN ; Italique : Font.ITALIC ; Gras : Font.BOLD)
+										</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">label0</span>.setText("<span class="perso">message</span>");</td>
+										<td>Changer le texte</td>
+									</tr>
+									<tr>
+										<td class="script">String <span class="perso">monTexte</span> = <span class="perso">label0</span>.getText();</td>
+										<td>Récupérer le texte</td>
+									</tr>
+									<!--
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+									-->
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.5.2.2.">VI.5.2.2. Image (Ajouter une image avec ImageIcon et Image)</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Instruction</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script">ImageIcon <span class="perso">image0</span> = new ImageIcon("<span class="perso">src/image.png</span>");</td>
+										<td>Ouvrir une image</td>
+									</tr>
+									<tr>
+										<td class="script">Image <span class="perso">image0AModifier</span> = <span class="perso">image0</span>.getImage();</td>
+										<td>Permettre de faire les modifications de l’image grâce aux instructions ci-dessous</td>
+									</tr>
+									<tr>
+										<td class="script">
+											<span class="perso">image0AModifier</span> = <span class="perso">image0AModifier</span>.getScaledInstance(<br/>
+											&nbsp;&nbsp;<span class="perso">largeur</span>,<br/>
+											&nbsp;&nbsp;<span class="perso">hauteur</span>,<br/>
+											&nbsp;&nbsp;Image.SCALE_SMOOTH<br/>
+											);</td>
+										<td>Changer la taille de l’image</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">image0</span> = new ImageIcon(<span class="perso">image0AModifier</span>);</td>
+										<td>Appliquer les modifications sur l’image ouverte (sans écraser le fichier)</td>
+									</tr>
+									<tr>
+										<td class="script">label1 = new JLabel(<span class="perso">image0</span>);</td>
+										<td>Créer le widget contenant l’image (doit être initialisé dans la classe)</td>
+									</tr>
+									<!--
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+									-->
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.5.2.3.">VI.5.2.3. JButton (Ajouter un bouton simple)</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Instruction</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">bouton0</span> = new JButton("<span class="perso">Mon bouton</span>");</td>
+										<td>Créer le widget (doit être initialisé dans la classe)</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">bouton0</span>.setEnabled(<span class="perso">booleen</span>);</td>
+										<td>Débloquer ou bloquer le bouton</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">bouton0</span>.setFont(new Font("Calibri", Font.PLAIN, <span class="perso">taille</span>));</td>
+										<td>Changer le style et la taille du texte (Normal : Font.PLAIN ; Italique : Font.ITALIC ; Gras : Font.BOLD)</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">bouton0</span>.setText("<span class="perso">message</span>");</td>
+										<td>Changer le texte</td>
+									</tr>
+									<tr>
+										<td class="script">String <span class="perso">monTexte</span> = <span class="perso">bouton0</span>.getText();</td>
+										<td>Récupérer le texte</td>
+									</tr>
+									<!--
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+									-->
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.5.2.4.">VI.5.2.4. JToggleButton (Ajouter un bouton ON/OFF)</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Instruction</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">bouton1</span> = new JToggleButton("<span class="perso">Mon interrupteur</span>", <span class="perso">booleen</span>);</td>
+										<td>Créer le widget (doit être initialisé dans la classe)</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">bouton1</span>.setEnabled(<span class="perso">booleen</span>);</td>
+										<td>Débloquer ou bloquer le bouton</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">bouton1</span>.setFont(new Font("Calibri", Font.PLAIN, <span class="perso">taille</span>));</td>
+										<td>Changer le style et la taille du texte (Normal : Font.PLAIN ; Italique : Font.ITALIC ; Gras : Font.BOLD)</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">bouton1</span>.setSelected(<span class="perso">booleen</span>);</td>
+										<td>Activer ou désactiver le bouton</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">bouton1</span>.setText("<span class="perso">message</span>");</td>
+										<td>Changer le texte</td>
+									</tr>
+									<tr>
+										<td class="script">String <span class="perso">monTexte</span> = <span class="perso">bouton1</span>.getText();</td>
+										<td>Récupérer le texte</td>
+									</tr>
+									<tr>
+										<td class="script">ButtonGroup <span class="perso">groupeBoutons0</span> = new ButtonGroup();</td>
+										<td>Créer un groupe de boutons (pour avoir une sélection unique)</td>
+									</tr>
+									<tr>
+										<td class="script">
+											<span class="perso">groupeBoutons0</span>.add(<span class="perso">bouton1</span>);<br/>
+											<span class="perso">groupeBoutons0</span>.add(<span class="perso">bouton2</span>);
+										</td>
+										<td>Ajouter un bouton dans un groupe</td>
+									</tr>
+									<!--
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+									-->
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.5.2.5.">VI.5.2.5. JCheckbox (Ajouter une case à cocher)</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Instruction</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script">
+											<span class="perso">box1</span> = new JCheckBox("<span class="perso">Cocher ici</span>");<br/>
+											<span class="perso">box2</span> = new JCheckBox("<span class="perso">Cocher également ici</span>");
+										</td>
+										<td>Créer le widget (doit être initialisé dans la classe)</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">box1</span>.setFont(new Font("Calibri", Font.PLAIN, <span class="perso">taille</span>));</td>
+										<td>Changer le style et la taille du texte (Normal : Font.PLAIN ; Italique : Font.ITALIC ; Gras : Font.BOLD)</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">box1</span>.setText("<span class="perso">message</span>");</td>
+										<td>Changer le texte</td>
+									</tr>
+									<tr>
+										<td class="script">String <span class="perso">monTexte</span> = <span class="perso">box1</span>.getText();</td>
+										<td>Récupérer le texte</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">box1</span>.isSelected();</td>
+										<td>Vérifier si la case est sélectionnée</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">box1</span>.setSelected(<span class="perso">booleen</span>);</td>
+										<td>Sélectionner ou désélectionner la case</td>
+									</tr>
+									<!--
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+									-->
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.5.2.6.">VI.5.2.6. JRadioButton (Ajouter un bouton radio (sélection unique))</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Instruction</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script">
+											radio1 = new JRadioButton("Cocher ici");<br/>
+											radio2 = new JRadioButton ("Cocher plutôt ici");
+										</td>
+										<td>Créer le widget (doit être initialisé dans la classe)</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">radio1</span>.setFont(new Font("Calibri", Font.PLAIN, <span class="perso">taille</span>));</td>
+										<td>Changer le style et la taille du texte (Normal : Font.PLAIN ; Italique : Font.ITALIC ; Gras : Font.BOLD)</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">radio1</span>.setText("<span class="perso">message</span>");</td>
+										<td>Changer le texte</td>
+									</tr>
+									<tr>
+										<td class="script">String <span class="perso">monTexte</span> = <span class="perso">radio1</span>.getText();</td>
+										<td>Récupérer le texte</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">radio1</span>.isSelected();</td>
+										<td>Vérifier si le bouton radio est sélectionné</td>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">radio1</span>.setSelected(<span class="perso">booleen</span>);</td>
+										<td>Sélectionner ou désélectionner le bouton radio</td>
+									</tr>
+									<tr>
+										<td class="script">ButtonGroup <span class="perso">groupeRadios0</span> = new ButtonGroup();</td>
+										<td>Créer un groupe de boutons radios (pour avoir une sélection unique)</td>
+									</tr>
+									<tr>
+										<td class="script">
+											<span class="perso">groupeRadios0</span>.add(<span class="perso">radio1</span>);<br/>
+											<span class="perso">groupeRadios0</span>.add(<span class="perso">radio2</span>);
+										</td>
+										<td>Ajouter une radio dans un groupe</td>
+									</tr>
+									<!--
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+									-->
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.5.2.7.">VI.5.2.7. JComboBox (Ajouter une liste d’options)</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Instruction</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.5.2.8.">VI.5.2.8. JList (Ajouter une liste de données)</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Instruction</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.5.2.9.">VI.5.2.9. JTextField (Ajouter une zone de saisie simple)</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Instruction</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.5.2.10.">VI.5.2.10. JTextArea (Ajouter une zone de saisie longue)</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Instruction</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+							<!--
+							<h5 class="soustitre" id="VI.5.2.11.">VI.5.2.11. JScrollBar (Créer une barre de défilement)</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Instruction</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+							-->
+							<div class="todo">
+								À venir : remplissage des instructions possibles pour les derniers widgets
+							</div>
+							<!--
+							<h5 class="soustitre" id="VI.5.2.X.">VI.5.2.X.</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Instruction</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+							-->
+						</div>
+						<h4 class="soustitre" id="VI.5.3.">VI.5.3. Les différents conteneurs</h4>
+						<div class="contenu">
+							<p>Les conteneurs sont des widgets qui peuvent regrouper plusieurs autres widgets.</p>
+							<h5 class="soustitre" id="VI.5.3.1.">VI.5.3.1. JPanel (widget de regroupement simple)</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Instruction</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script"><span class="perso">panel1</span> = new JPanel();</td>
+										<td>Créer le widget (doit être initialisé dans la classe)</td>
+									</tr>
+									<tr>
+										<td class="script">
+											<span class="perso">panel1</span>.setBorder(<br/>
+											&nbsp;&nbsp;BorderFactory.createLineBorder(<br/>
+											&nbsp;&nbsp;&nbsp;&nbsp;new Color (<span class="perso">r</span>, <span class="perso">g</span>, <span class="perso">b</span>)<br/>
+											&nbsp;&nbsp;),<br/>
+											&nbsp;&nbsp;<span class="perso">epaisseur</span><br/>
+											);
+										</td>
+										<td>Ajouter une bordure simple au panneau</td>
+									</tr>
+									<tr>
+										<td class="script">
+											<span class="perso">panel1</span>.setBorder(<br/>
+											&nbsp;&nbsp;BorderFactory.createTitleBorder("<span class="perso">titre</span>")<br/>
+											);
+										</td>
+										<td>Ajouter une bordure titrée au panneau</td>
+									</tr>
+									<!--
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+									-->
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.5.3.2.">VI.5.3.2. JTabbedPane</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Instruction</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.5.3.3.">VI.5.3.3. JScrollPane</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Instruction</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+							<div class="todo">
+								À venir : remplissage des instructions possibles pour les derniers widgets
+							</div>
+							<!--
+							<h5 class="soustitre" id="VI.5.3.X.">VI.5.3.X.</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Instruction</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+							-->
+						</div>
+					</div>
+					<h3 class="soustitre" id="VI.6.">VI.6. Gestion du menu déroulant apparaissant au clic droit (JPopupMenu)</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th>Instruction</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">
+									JPopupMenu <span class="perso">pop</span> = new JMenu("<span class="perso">mon menu</span>");<br/>
+									<span class="perso">widget</span>.setComponentPopupMenu(<span class="perso">pop</span>);
+								</td>
+								<td>Créer un menu</td>
+							</tr>
+							<tr>
+								<td class="script">
+									JMenuItem <span class="perso">option1</span> = new JMenuItem("<span class="perso">mon option</span>");<br/>
+									<span class="perso">pop</span>.add(<span class="perso">option1</span>);
+								</td>
+								<td>Créer un item d’un menu</td>
+							</tr>
+							<tr>
+								<td class="script">
+									JMenuItem <span class="perso">option1</span> = new JMenuItem("<span class="perso">mon option</span>", new ImageIcon("<span class="perso">src/icone.png</span>"));<br/>
+									<span class="perso">pop</span>.add(<span class="perso">option1</span>);
+								</td>
+								<td>Créer un item d’un menu avec une icône</td>
+							</tr>
+							<tr>
+								<td class="script">
+									JCheckBoxMenuItem <span class="perso">option2</span> = new JCheckBoxMenuItem("<span class="perso">mon option</span>");<br/>
+									<span class="perso">pop</span>.add(<span class="perso">option2</span>);
+								</td>
+								<td>Créer un item à cocher d’un menu</td>
+							</tr>
+							<tr>
+								<td class="script">
+									JRadioButtonMenuItem <span class="perso">option3</span> = new JRadioButtonMenuItem("<span class="perso">mon option</span>");<br/>
+									<span class="perso">pop</span>.add(<span class="perso">option3</span>);
+								</td>
+								<td>Créer un item radio d’un menu</td>
+							</tr>
+							<tr>
+								<td class="script"><span class="perso">pop</span>.addSeparator();</td>
+								<td>Ajouter un trait de séparation</td>
+							</tr>
+							<!--
+							<tr>
+								<td class="script"></td>
+								<td></td>
+							</tr>
+							-->
+						</table>
+						<div class="attention">
+							Pour que chaque items puissent effectuer une action, il faut leur ajouter un écouteur (pas besoin de l'ajouter sur le menu déroulant). Voir les événements.
+						</div>
+					</div>
+					<h3 class="soustitre" id="VI.7.">VI.7. Les événements (<span class="script">import java.awt.event.*;</span> ou <span class="script">java.awt.AWTEvent.*;</span>)</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="VI.7.1.">VI.7.1. Les différents écouteurs d’événements</h4>
+						<div class="contenu">
+							<h5 class="soustitre" id="VI.7.1.1.">VI.7.1.1. Écouteurs simples (la classe utilisée est son propre écouteur)</h5>
+							<div class="contenu">
+								<p class="script"><span class="perso">widget</span>.add<span class="perso">XXX</span>Listener(this);</p>
+								<div class="note">Note : l’implémentation des méthodes doit se faire dans la classe dans lequel est placé l’écouteur. Il faut également ajouter implements <span class="perso">XXX</span>Listener à la classe utilisée.</div>
+							</div>
+							<h5 class="soustitre" id="VI.7.1.2.">VI.7.1.2. Écouteurs en classe interne</h5>
+							<div class="contenu">
+								<p class="script"><span class="perso">widget</span>.add<span class="perso">XXX</span>Listener(new <span class="perso">MonEcouteurXXX</span>());</p>
+								<div class="note">Note : Il faudra créer une classe appelée <span class="perso">MonEcouteurXXX</span> et y ajouter implements <span class="perso">XXX</span>Listener.</div>
+							</div>
+							<h5 class="soustitre" id="VI.7.1.3.">VI.7.1.3. Écouteurs en classe anonyme</h5>
+							<div class="contenu">
+								<p class="script">
+									<span class="perso">widget</span>.add<span class="perso">XXX</span>Listener(new <span class="perso">XXX</span>Listener(){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">/* implémentationDesMéthodes */</span><br/>
+									});
+								</p>
+							</div>
+						</div>
+						<h4 class="soustitre" id="VI.7.2.">VI.7.2. La gestion des événements</h4>
+						<div class="contenu">
+							<p>Chaque événement utilise une méthode d’enregistrement, qui nécessite d’implémenter des méthodes qui exécute des instructions selon l’événement.</p>
+							<p>Chacune de ces méthode doit être précédée du mot-clé : <span class="script">@Override</span>, qui indique à l'interpréteur que l’on surcharge ou implémente une méthode correctement.</p>
+							<p>Pour récupérer le composant source, il est possible d’utiliser <span class="script">e.getSource()</span></p>
+							<h5 class="soustitre" id="VI.7.2.1.">VI.7.2.1. ActionListener</h5>
+							<div class="contenu">
+								<p>ActionListener est l’écouteur le plus utilisé pour des événements simples comme des clics sur des boutons, touche Entrée dans une zone de saisie, etc.</p>
+								<p>Composants concernés :</p>
+								<ul>
+									<li>JButton</li>
+									<li>JRadioButton</li>
+									<li>JCheckBox</li>
+									<li>JComboBox</li>
+									<li>JTextField</li>
+								</ul>
+								<p>Méthode d'enregistrement : <span class="script">addActionListener()</span></p>
+								<table>
+									<tr>
+										<th>Méthodes à implémenter</th>
+										<th>Exécution</th>
+									</tr>
+									<tr>
+										<td class="script">actionPerformed(ActionEvent e)</td>
+										<td>Après un clic, la touche Entrée…</td>
+									</tr>
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.7.2.2.">VI.7.2.2. ChangeListener</h5>
+							<div class="contenu">
+								<p>ChangeListener est l’écouteur le plus souvent utilisé détecter des changements.</p>
+								<p>Composants concernés :</p>
+								<ul>
+									<li>JRadioButton</li>
+									<li>JCheckBox</li>
+									<li>JComboBox</li>
+								</ul>
+								<p>Méthode d'enregistrement : <span class="script">addChangeListener()</span></p>
+								<table>
+									<tr>
+										<th>Méthodes à implémenter</th>
+										<th>Exécution</th>
+									</tr>
+									<tr>
+										<td class="script">stateChanged(ChangeEvent e)</td>
+										<td>Dès le changement d'état du composant</td>
+									</tr>
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.7.2.3.">VI.7.2.3. AdjustementListener</h5>
+							<div class="contenu">
+								<p>AdjustementListener détecte les ajustements d’une barre de défilement.</p>
+								<p>Composants concernés :</p>
+								<ul>
+									<li>JScrollBar</li>
+								</ul>
+								<p>Méthode d'enregistrement : <span class="script">addAdjustmentListener()</span></p>
+								<table>
+									<tr>
+										<th>Méthodes à implémenter</th>
+										<th>Exécution</th>
+									</tr>
+									<tr>
+										<td class="script">adjustmentValueChanged(AdjustmentEvent e)</td>
+										<td>Dès le changement du niveau de la barre de défilement</td>
+									</tr>
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.7.2.4.">VI.7.2.4. ComponentListener</h5>
+							<div class="contenu">
+								<p>ComponentListener détecte les déplacements, l’affichage, le masquage ou la modification de la taille d’un composant (par exemple une fenêtre).</p>
+								<p>Composants concernés :</p>
+								<ul>
+									<li>Component (tous)</li>
+								</ul>
+								<p>Méthode d'enregistrement : <span class="script">addComponentListener()</span></p>
+								<table>
+									<tr>
+										<th>Méthodes à implémenter</th>
+										<th>Exécution</th>
+									</tr>
+									<tr>
+										<td class="script">componentHidden(ComponentEvent e)</td>
+										<td>Dès que le composant a été caché</td>
+									</tr>
+									<tr>
+										<td class="script">componentMoved(ComponentEvent e)</td>
+										<td>Dès que le composant a été déplacé</td>
+									</tr>
+									<tr>
+										<td class="script">componentResized(ComponentEvent e)</td>
+										<td>Dès que le composant a été redimensionné</td>
+									</tr>
+									<tr>
+										<td class="script">componentShown(ComponentEvent e)</td>
+										<td>Dès que le component a été affiché</td>
+									</tr>
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.7.2.5.">VI.7.2.5. ContainerListener</h5>
+							<div class="contenu">
+								<p>ContainerListener détecte des ajouts ou des suppressions des composants dans un conteneur.</p>
+								<p>Composants concernés :</p>
+								<ul>
+									<li>Component (tous les conteneurs)</li>
+								</ul>
+								<p>Méthode d'enregistrement : <span class="script">addContainerListener()</span></p>
+								<table>
+									<tr>
+										<th>Méthodes à implémenter</th>
+										<th>Exécution</th>
+									</tr>
+									<tr>
+										<td class="script">componentAdded(ContainerEvent e)</td>
+										<td>Dès l’ajout d’un composant dans le conteneur</td>
+									</tr>
+									<tr>
+										<td class="script">componentRemoved(ContainerEvent e)</td>
+										<td>Dès la suppression d’un composant dans le conteneur</td>
+									</tr>
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.7.2.6.">VI.7.2.6. FocusListener</h5>
+							<div class="contenu">
+								<p>FocusListener détecte des survols de la souris sur des composants.</p>
+								<p>Composants concernés :</p>
+								<ul>
+									<li>Component (tous)</li>
+								</ul>
+								<p>Méthode d'enregistrement : <span class="script">addFocusListener()</span></p>
+								<table>
+									<tr>
+										<th>Méthodes à implémenter</th>
+										<th>Exécution</th>
+									</tr>
+									<tr>
+										<td class="script">focusGained(FocusEvent e)</td>
+										<td>Dès le survol de la souris</td>
+									</tr>
+									<tr>
+										<td class="script">focusLost(FocusEvent e)</td>
+										<td>Dès la fin du survol de la souris</td>
+									</tr>
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.7.2.7.">VI.7.2.7. ItemListener</h5>
+							<div class="contenu">
+								<p>ItemListener détecte les éléments sélectionnés dans une liste de possibilités.</p>
+								<p>Composants concernés :</p>
+								<ul>
+									<li>JCheckBox</li>
+									<li>JComboBox</li>
+									<li>List (Attention : Pas JList)</li>
+									<li>JRadioButton</li>
+								</ul>
+								<p>Méthode d'enregistrement : <span class="script">addItemListener()</span></p>
+								<table>
+									<tr>
+										<th>Méthodes à implémenter</th>
+										<th>Exécution</th>
+									</tr>
+									<tr>
+										<td class="script">itemStateChanged(ItemEvent e)</td>
+										<td>Dès la sélection ou la désélection d'un élément</td>
+									</tr>
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.7.2.8.">VI.7.2.8. KeyListener</h5>
+							<div class="contenu">
+								<p>KeyListener détecte les actions sur les touches du clavier.</p>
+								<p>Composants concernés :</p>
+								<ul>
+									<li>Component (tous)</li>
+								</ul>
+								<p>Méthode d'enregistrement : <span class="script">addKeyListener()</span></p>
+								<p>Récupérer la touche sélectionnée (renvoie un int) : <span class="script">e.getKeyCode()</span></p>
+								<table>
+									<tr>
+										<th>Méthodes à implémenter</th>
+										<th>Exécution</th>
+									</tr>
+									<tr>
+										<td class="script">keyTyped(keyEvent e)</td>
+										<td>Dès l'appui sur une touche</td>
+									</tr>
+									<tr>
+										<td class="script">keyPressed(KeyEvent e)</td>
+										<td>Dès le maintien sur une touche</td>
+									</tr>
+									<tr>
+										<td class="script">keyReleased(KeyEvent e)</td>
+										<td>Dès le relâchement d'une touche</td>
+									</tr>
+								</table>
+								<div class="note">Note : Au lieu d’implémenter KeyListener, il est possible d’hériter de KeyAdapter afin de ne pas être obligé d’implémenter toutes les méthodes.</div>
+							</div>
+							<h5 class="soustitre" id="VI.7.2.9.">VI.7.2.9. DocumentListener</h5>
+							<div class="contenu">
+								<p>DocumentListener détecte les modifications d’un document</p>
+								<p>Composants concernés :</p>
+								<ul>
+									<li>Document</li>
+								</ul>
+								<p>Méthode d'enregistrement : <span class="script">addDocumentListener()</span></p>
+								<table>
+									<tr>
+										<th>Méthodes à implémenter</th>
+										<th>Exécution</th>
+									</tr>
+									<tr>
+										<td class="script">changedUpdate(DocumentEvent e)</td>
+										<td>Dès qu'un attribut ou un ensemble d'attributs a été modifié</td>
+									</tr>
+									<tr>
+										<td class="script">insertUpdate(DocumentEvent e)</td>
+										<td>Dès qu'il y a eu une insertion dans le document</td>
+									</tr>
+									<tr>
+										<td class="script">removeUpdate(DocumentEvent e)</td>
+										<td>Dès qu'une partie du document a été supprimée</td>
+									</tr>
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.7.2.10.">VI.7.2.10. ListSelectionListener</h5>
+							<div class="contenu">
+								<p>ListSelectionListener détecte le changement de la sélection d’une liste.</p>
+								<p>Composants concernés :</p>
+								<ul>
+									<li>JList</li>
+									<li>JTable</li>
+								</ul>
+								<p>Méthode d'enregistrement : <span class="script">addListSelectionListener()</span></p>
+								<table>
+									<tr>
+										<th>Méthodes à implémenter</th>
+										<th>Exécution</th>
+									</tr>
+									<tr>
+										<td class="script">valueChanged(ListSelectionEvent e)</td>
+										<td>Dès qu'une valeur a été changée</td>
+									</tr>
+								</table>
+							</div>
+							<h5 class="soustitre" id="VI.7.2.11.">VI.7.2.11. MouseListener</h5>
+							<div class="contenu">
+								<p>MouseListener détecte les actions sur la souris.</p>
+								<p>Composants concernés :</p>
+								<ul>
+									<li>Component (tous)</li>
+								</ul>
+								<p>Méthode d'enregistrement : <span class="script">addMouseListener()</span></p>
+								<table>
+									<tr>
+										<th>Méthodes à implémenter</th>
+										<th>Exécution</th>
+									</tr>
+									<tr>
+										<td class="script">mouseClicked(MouseEvent e)</td>
+										<td>Dès que le bouton de la souris a été cliqué (enfoncé et relâché) sur un composant</td>
+									</tr>
+									<tr>
+										<td class="script">mouseEntered(MouseEvent e)</td>
+										<td>Dès que la souris entre dans un composant</td>
+									</tr>
+									<tr>
+										<td class="script">mouseExited(MouseEvent e)</td>
+										<td>Dès que la souris quitte un composant</td>
+									</tr>
+									<tr>
+										<td class="script">mousePressed(MouseEvent e)</td>
+										<td>Dès qu'un bouton de la souris a été enfoncé sur un composant</td>
+									</tr>
+									<tr>
+										<td class="script">mouseReleased(MouseEvent e)</td>
+										<td>Dès qu'un bouton de la souris a été relâché sur un composant</td>
+									</tr>
+								</table>
+								<div class="note">Note : Au lieu d’implémenter MouseListener, il est possible d’hériter de MouseAdapter afin de ne pas être obligé d’implémenter toutes les méthodes.</div>
+							</div>
+							<h5 class="soustitre" id="VI.7.2.12.">VI.7.2.12. MouseMotionListener</h5>
+							<div class="contenu">
+								<p>MouseMotionListener détecte les actions de la souris sur un composant.</p>
+								<p>Composants concernés :</p>
+								<ul>
+									<li>Component (tous)</li>
+								</ul>
+								<p>Méthode d'enregistrement : <span class="script">addMouseMotionListener()</span></p>
+								<table>
+									<tr>
+										<th>Méthodes à implémenter</th>
+										<th>Exécution</th>
+									</tr>
+									<tr>
+										<td class="script">mouseDragged(MouseEvent e)</td>
+										<td>Dès qu'un bouton de la souris est enfoncé sur un composant puis déplacé</td>
+									</tr>
+									<tr>
+										<td class="script">mouseMoved(MouseEvent e)</td>
+										<td>Dès que le curseur de la souris a été déplacé sur un composant mais qu'aucun bouton n'a été enfoncé</td>
+									</tr>
+								</table>
+								<div class="note">Note : Au lieu d’implémenter MouseMotionListener, il est possible d’hériter de MouseMotionAdapter afin de ne pas être obligé d’implémenter toutes les méthodes.</div>
+							</div>
+							<h5 class="soustitre" id="VI.7.2.13.">VI.7.2.13. WindowListener</h5>
+							<div class="contenu">
+								<p>WindowListener détece les actions de la fenêtre.</p>
+								<p>Composants concernés :</p>
+								<ul>
+									<li>Window</li>
+								</ul>
+								<p>Méthode d'enregistrement : <span class="script">addWindowListener()</span></p>
+								<table>
+									<tr>
+										<th>Méthodes à implémenter</th>
+										<th>Exécution</th>
+									</tr>
+									<tr>
+										<td class="script">windowActivated(WindowEvent e)</td>
+										<td>Dès que la fenêtre est définie comme étant la fenêtre active</td>
+									</tr>
+									<tr>
+										<td class="script">windowClosed(WindowEvent e)</td>
+										<td>Dès qu'une fenêtre a été fermée</td>
+									</tr>
+									<tr>
+										<td class="script">windowClosing(WindowEvent e)</td>
+										<td>Dès que l'utilisateur tente de fermer la fenêtre à partir du menu système de la fenêtre</td>
+									</tr>
+									<tr>
+										<td class="script">windowDeactivated(WindowEvent e)</td>
+										<td>Dès qu'une fenêtre n'est plus la fenêtre active</td>
+									</tr>
+									<tr>
+										<td class="script">windowDeiconified(WindowEvent e)</td>
+										<td>Dès qu'une fenêtre passe d'un état réduit à un état normal</td>
+									</tr>
+									<tr>
+										<td class="script">windowIconified(WindowEvent e)</td>
+										<td>Dès qu'une fenêtre passe d'un état normal à un état réduit</td>
+									</tr>
+									<tr>
+										<td class="script">windowOpened(WindowEvent e)</td>
+										<td>Dès la première ouverture</td>
+									</tr>
+								</table>
+								<div class="note">Note : Au lieu d’implémenter WindowListener, il est possible d’hériter de WindowAdapter afin de ne pas être obligé d’implémenter toutes les méthodes.</div>
+							</div>
+							<h5 class="soustitre" id="VI.7.2.14.">VI.7.2.14. TextListener</h5>
+							<div class="contenu">
+								<p>TextListener détecte les actions sur une zone de texte.</p>
+								<p>Composants concernés :</p>
+								<ul>
+									<li>JTextField</li>
+								</ul>
+								<p>Méthode d'enregistrement : <span class="script">addTextListener()</span></p>
+								<table>
+									<tr>
+										<th>Méthodes à implémenter</th>
+										<th>Exécution</th>
+									</tr>
+									<tr>
+										<td class="script">textValueChanged(TextEvent e)</td>
+										<td>Dès que la valeur a changée</td>
+									</tr>
+								</table>
+							</div>
+							<!--
+							<h5 class="soustitre" id="VI.7.2.X.">VI.7.2.X. </h5>
+							<div class="contenu">
+								<p></p>
+								<p>Composants concernés :</p>
+								<ul>
+									<li></li>
+								</ul>
+								<p>Méthode d'enregistrement : <span class="script"></span></p>
+								<table>
+									<tr>
+										<th>Méthodes à implémenter</th>
+										<th>Exécution</th>
+									</tr>
+									<tr>
+										<td class="script"></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+							-->
+						</div>
+					</div>
+					<h3 class="soustitre" id="VI.8.">VI.8. Les boîtes de dialogue</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="VI.8.1.">VI.8.1. MessageDialog (pour afficher des messages avec un bouton OK)</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Instruction</th>
+									<th>Résultat</th>
+								</tr>
+								<tr>
+									<td class="script">JOptionPane.showMessageDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.INFORMATION_MESSAGE);</td>
+									<td><img src="images/img_java_0001.png"></td>
+								</tr>
+								<tr>
+									<td class="script">JOptionPane.showMessageDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.WARNING_MESSAGE);</td>
+									<td><img src="images/img_java_0002.png"></td>
+								</tr>
+								<tr>
+									<td class="script">JOptionPane.showMessageDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.ERROR_MESSAGE);</td>
+									<td><img src="images/img_java_0003.png"></td>
+								</tr>
+								<tr>
+									<td class="script">JOptionPane.showMessageDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.QUESTION_MESSAGE);</td>
+									<td><img src="images/img_java_0004.png"></td>
+								</tr>
+								<tr>
+									<td class="script">JOptionPane.showMessageDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.PLAIN_MESSAGE);</td>
+									<td><img src="images/img_java_0005.png"></td>
+								</tr>
+							</table>
+						</div>
+						<h4 class="soustitre" id="VI.8.2.">VI.8.2. ConfirmDialog (pour demander une réponse de l’utilisateur parmis des possibilités)</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Instruction</th>
+									<th>Résultat</th>
+								</tr>
+								<tr>
+									<td class="script">int <span class="perso">reponse</span> = JOptionPane.showConfirmDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.YES_NO_CANCEL_OPTION);</td>
+									<td><img src="images/img_java_0006.png"></td>
+								</tr>
+								<tr>
+									<td class="script">int <span class="perso">reponse</span> = JOptionPane.showConfirmDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.YES_NO_OPTION);</td>
+									<td><img src="images/img_java_0007.png"></td>
+								</tr>
+								<tr>
+									<td class="script">int <span class="perso">reponse</span> = JOptionPane.showConfirmDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.OK_CANCEL_OPTION);</td>
+									<td><img src="images/img_java_0008.png"></td>
+								</tr>
+								<tr>
+									<td class="script">int <span class="perso">reponse</span> = JOptionPane.showConfirmDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.DEFAULT_OPTION);</td>
+									<td><img src="images/img_java_0009.png"></td>
+								</tr>
+							</table>
+							<div class="note">
+								OK renvoie JOptionPane.OK_OPTION qui vaut 0.<br/>
+								Oui renvoie JOptionPane.YES_OPTION qui vaut 0.<br/>
+								Non renvoie JOptionPane.NO_OPTION qui vaut 1.<br/>
+								Annuler renvoie JOptionPane.CANCEL_OPTION qui vaut 2.<br/>
+								Fermer la fenêtre renvoie JOptionPane.CLOSED_OPTION qui vaut -1.<br/>
+							</div>
+						</div>
+						<h4 class="soustitre" id="VI.8.3.">VI.8.3. InputDialog (pour demander une saisie de l’utilisateur)</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Instruction</th>
+									<th>Résultat</th>
+								</tr>
+								<tr>
+									<td class="script">String <span class="perso">reponse</span> = JOptionPane.showInputDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.INFORMATION_MESSAGE);</td>
+									<td><img src="images/img_java_0010.png"></td>
+								</tr>
+								<tr>
+									<td class="script">String <span class="perso">reponse</span> = JOptionPane.showInputDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.WARNING_MESSAGE);</td>
+									<td><img src="images/img_java_0011.png"></td>
+								</tr>
+								<tr>
+									<td class="script">String <span class="perso">reponse</span> = JOptionPane.showInputDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.ERROR_MESSAGE);</td>
+									<td><img src="images/img_java_0012.png"></td>
+								</tr>
+								<tr>
+									<td class="script">String <span class="perso">reponse</span> = JOptionPane.showInputDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.QUESTION_MESSAGE);</td>
+									<td><img src="images/img_java_0013.png"></td>
+								</tr>
+								<tr>
+									<td class="script">String <span class="perso">reponse</span> = JOptionPane.showInputDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.PLAIN_MESSAGE);</td>
+									<td><img src="images/img_java_0014.png"></td>
+								</tr>
+								<tr>
+									<td class="script">
+										String[] <span class="perso">choix</span> = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S"};<br/>
+										String <span class="perso">reponse</span> = (String) JOptionPane.showInputDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.QUESTION_MESSAGE, null, <span class="perso">choix</span>, <span class="perso">choix</span>[<span class="perso">0</span>]);
+									</td>
+									<td><img src="images/img_java_0015.png"></td>
+								</tr>
+								<tr>
+									<td class="script">
+										String[] <span class="perso">choix</span> = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T"};<br/>
+										String <span class="perso">reponse</span> = (String) JOptionPane.showInputDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.QUESTION_MESSAGE, null, <span class="perso">choix</span>, <span class="perso">choix</span>[<span class="perso">0</span>]);
+									</td>
+									<td><img src="images/img_java_0016.png"></td>
+								</tr>
+							</table>
+						</div>
+						<h4 class="soustitre" id="VI.8.4.">VI.8.4. OptionDialog (pour choisir ses propres options de réponses)</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Instruction</th>
+									<th>Résultat</th>
+								</tr>
+								<tr>
+									<td class="script">
+										String[] <span class="perso">choix</span> = {"<span class="perso">Réponse A</span>", "<span class="perso">Réponse B</span>", "<span class="perso">Réponse C</span>", "<span class="perso">Réponse D</span>"};<br/>
+										int <span class="perso">reponse</span> = JOptionPane.showOptionDialog(<span class="perso">fenetre</span>, "<span class="perso">message</span>", "<span class="perso">titre</span>", JOptionPane.QUESTION_MESSAGE, null, <span class="perso">choix</span>, <span class="perso">choix</span>[<span class="perso">0</span>]);
+									</td>
+									<td><img src="images/img_java_0017.png"></td>
+								</tr>
+							</table>
+						</div>
+						<h4 class="soustitre" id="VI.8.5.">VI.8.5. FileDialog (pour choisir un fichier)</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Instruction</th>
+									<th>Résultat</th>
+								</tr>
+								<tr>
+									<td class="script">
+										FileDialog <span class="perso">fd</span> = new FileDialog(<span class="perso">fenetre</span>, "<span class="perso">titre</span>", FileDialog.LOAD);<br/>
+										<span class="perso">fd</span>.setVisible(true);
+									</td>
+									<td><img src="images/img_java_0018.png"></td>
+								</tr>
+								<tr>
+									<td class="script">
+										FileDialog <span class="perso">fd</span> = new FileDialog(<span class="perso">fenetre</span>, "<span class="perso">titre</span>", FileDialog.SAVE);<br/>
+										<span class="perso">fd</span>.setVisible(true);
+									</td>
+									<td><img src="images/img_java_0019.png"></td>
+								</tr>
+							</table>
+						</div>
+						<h4 class="soustitre" id="VI.8.6.">VI.8.6. JFileChooser (nouvelle méthode pour choisir un fichier)</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Instruction</th>
+									<th>Résultat</th>
+								</tr>
+								<tr>
+									<td class="script">
+										JFileChooser <span class="perso">fc</span> = new JFileChooser();<br/>
+										int <span class="perso">reponse</span> = <span class="perso">fc</span>.showOpenDialog(<span class="perso">fenetre</span>);
+									</td>
+									<td><img src="images/img_java_0020.png"></td>
+								</tr>
+								<tr>
+									<td class="script">
+										JFileChooser <span class="perso">fc</span> = new JFileChooser();<br/>
+										int <span class="perso">reponse</span> = <span class="perso">fc</span>.showSaveDialog(<span class="perso">fenetre</span>);
+									</td>
+									<td><img src="images/img_java_0021.png"></td>
+								</tr>
+								<tr>
+									<td class="script">
+										JFileChooser <span class="perso">fc</span> = new JFileChooser();<br/>
+										fc.setFileSelectionMode(<br/>
+										&nbsp;&nbsp;JFileChooser.DIRECTORIES_ONLY<br/>
+										);<br/>
+										int <span class="perso">reponse</span> = <span class="perso">fc</span>.showDialog(<span class="perso">fenetre</span>, "Sélectionner le dossier");
+									</td>
+									<td><img src="images/img_java_0022.png"></td>
+								</tr>
+							</table>
+						</div>
+						<h4 class="soustitre" id="VI.8.7.">VI.8.7. JColorChooser (pour choisir une couleur)</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Instruction</th>
+									<th>Résultat</th>
+								</tr>
+								<tr>
+									<td class="script">
+										
+									</td>
+									<td><img src="images/img_java_0000.png"></td>
+								</tr>
+							</table>
+						</div>
+						<!--
+						<h4 class="soustitre" id="VI.8.X.">VI.8.X. </h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Instruction</th>
+									<th>Résultat</th>
+								</tr>
+								<tr>
+									<td class="script">
+										
+									</td>
+									<td><img src="images/img_java_0000.png"></td>
+								</tr>
+							</table>
+						</div>
+						-->
+					</div>
+					<h3 class="soustitre" id="VI.9.">VI.9. Les fenêtres modales</h3>
+					<div class="todo">Bientôt disponible</div>
+					<!--
+						Les fenêtres modales sont des fenêtres JDialog
+						ayant le même fonctionnement qu’une Jframe,
+						sauf qu’une JDialog doit avoir en paramètre
+						une JFrame. De plus, dans le constructeur,
+						il est nécessaire d’appeler :
+						super(fenetre, titre, true);
+						pour la définir comme modale
+					-->
+				</div>
+                <!--
+				<h2 class="soustitre" id=""></h2>
+				<div class="contenu">
+
+				</div>
+				-->
+			</article>
+		</main>
+		<footer>
+			<script src="../../scripts/footer.js"></script>
+		</footer>
+	</body>
+	<script src="../../scripts/script.js"></script>
+	<script src="../../scripts/tableDesMatieres.js"></script>
+</html>
