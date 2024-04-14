@@ -23,18 +23,28 @@ for(let j = 1; j < niveau; j++){
     emplacementRacine += '../';
 }
 let header = document.querySelector("header");
-header.innerHTML = ''
-+ '	<div class="titre">'
-+ '		<img id="icon" src="' + emplacementRacine + 'images/icone.png"/>'
-+ '		<h1>Loric Informatique</h1>'
-+ '	</div>'
-+ '	<nav>'
-+ '		<ul>'
-+ '		    <li><a href="' + emplacementRacine + 'index.html">Accueil</a></li>'
-+ '         <li><a href="' + emplacementRacine + 'aides/aides.html">Aides</a></li>'
-+ '		    <li><a href="' + emplacementRacine + 'astuces/astuces.html">Astuces</a></li>'
-+ '		    <li><a href="' + emplacementRacine + 'langages/langages.html">Langages</a></li>'
-+ '		    <li><a href="' + emplacementRacine + 'apropos.html">À propos de nous</a></li>'
-//+ '		    <li><a href="' + emplacementRacine + '"></a></li>'
-+ '		</ul>'
-+ '	</nav>';
+header.innerHTML = /*html*/
+`
+	<div class="titre">
+		<img id="icon" src="${emplacementRacine + 'images/icone.png'}"/>
+		<h1>Loric Informatique</h1>
+	</div>
+    <button id="bouton-menu-nav">
+        <div>
+            <div id="bar-nav-1"></div>
+            <div id="bar-nav-2"></div>
+            <div id="bar-nav-3"></div>
+        </div>
+    </button>
+	<nav>
+		<ul>
+		    <li><a href="${emplacementRacine + 'index.html'}">Accueil</a></li>
+            <li><a href="${emplacementRacine + 'aides/aides.html'}">Aides</a></li>
+		    <li><a href="${emplacementRacine + 'astuces/astuces.html'}">Astuces</a></li>
+		    <li><a href="${emplacementRacine + 'langages/langages.html'}">Langages</a></li>
+		    <li><a href="${emplacementRacine + 'apropos.html'}">À propos de nous</a></li>
+		    
+		</ul>
+	</nav>
+`;
+//<li><a href="${emplacementRacine + ''}"></a></li>

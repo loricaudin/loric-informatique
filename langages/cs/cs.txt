@@ -59,6 +59,6 @@ string c = Console.ReadLine(); // Lit le texte écrit à l'écran
 
 ConsoleKeyInfo cki = Console.ReadKey(); // Ecouter une touche de clavier
 
-Console.WriteLine(cki.Key); // Renvoie la touche en unicode
+Console.WriteLine(cki.Key); // Renvoie la touche en unicode (fonctionne pour toutes les touches
 Console.WriteLine(cki.KeyChar); // Renvoie la touche en char (ne fonctionne que pour les lettres et les chiffres)
 

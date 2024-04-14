@@ -25,8 +25,8 @@ function ajouterLangage(nouveaulangage){
 
 let listeLangages = [
     ["Python", "python", "python", "rgba(255, 212, 65, .5)", ""],
-    ["HTML", "html", "html", "rgba(229, 76, 33, .5)", ""],
-    ["CSS", "css", "css", "rgba(26, 77, 228, .5)", ""],
+    //["HTML", "html", "html", "rgba(229, 76, 33, .5)", ""],
+    //["CSS", "css", "css", "rgba(26, 77, 228, .5)", ""],
     //["JavaScript", "js", "js", "rgba(247, 223, 30, .5)", ""],
     //["PHP", "php", "php", "", ""],
     ["MySQL", "sql", "mysql", "rgba(228, 142, 0, .5)", ""],
@@ -35,10 +35,10 @@ let listeLangages = [
     ["MongoDB (NoSQL)", "nosql", "mongodb", "rgba(100, 200, 100)", ""],
     ["C", "c", "c", "rgba(0, 89, 157, .5)", ""],
     ["C++", "cpp", "cpp", "rgba(0, 68, 130, .5)", ""],
-    ["C#", "cs", "cs", "", ""],
+    //["C#", "cs", "cs", "", ""],
     ["Java", "java", "java", "rgba(240, 145, 17, .5)", ""],
-    //["Android", "java", "android", "", ""],
-    ["ReactJS", "js", "reactjs", "", ""]
+    //["Android", "android", "android", "", ""],
+    //["ReactJS", "js", "reactjs", "", ""]
 ];
 
 for(let i = 0; i < listeLangages.length; i++){
