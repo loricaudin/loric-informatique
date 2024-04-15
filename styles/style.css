@@ -56,6 +56,23 @@ img{
 	font-weight: bold;
 }
 
+.telecharger, .imprimer{
+	color: white;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: rgba(58, 58, 255, 0.7);
+	transition: all 0.2s;
+}
+
+.telecharger:hover, .imprimer:hover{
+	background-color: rgba(58, 58, 255, 0.9);
+}
+
+.telecharger:focus, .imprimer:focus{
+	background-color: rgba(58, 58, 255, 1);
+}
+
 /* Header */
 header{
 	display: flex;
@@ -391,6 +408,16 @@ td{
 	/* Commun à toutes les pages */
 	body{
 		font-size:12px;
+	}
+
+	.alignementVertical{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.imprimer{
+		display: none;
 	}
 
 	/* Header */
