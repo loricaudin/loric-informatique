@@ -420,6 +420,20 @@ td{
 		display: none;
 	}
 
+	table tr{
+		display:flex;
+		flex-direction:column;
+		width:100%;
+		padding:10px;
+	}
+	
+	table tr td, table tr th{
+		width:100%;
+		border:none;
+		padding:5px;
+		text-align:left;
+	}
+
 	/* Header */
 	header{
 		align-items: start;
