@@ -1,1 +1,5 @@
 (ON DUPLICATE KEY UPDATE : p45 sh, mais pas obligatoire de le mettre)
+
+À venir : Nouveaux moteurs autres que InnoDB
+
+Les index

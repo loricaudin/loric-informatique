@@ -1,0 +1,11 @@
+Classes d'héritage, variables privées, publiques, protégées.
+
+IV.5. matplotlib
+
+Nouvelle méthode d'ouverture de fichiers (with)
+
+os
+
+Pillow
+
+À venir : réorganisation totale de la partie interface graphique

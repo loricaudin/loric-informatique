@@ -17,7 +17,7 @@
 				<div class="alignementVertical">
 					<div>
 						<h1>Java</h1>
-						<p class="version">Version 0.4 (créé le 14/01/2024, modifié le 04/02/2024)</p>
+						<p class="version">Version 0.5 (créé le 14/01/2024, modifié le 20/04/2024)</p>
                         <p>Java est un langage de programmation de haut niveau orienté objet qui reprend en grande partie la syntaxe du langage C++. Néanmoins, Java est épuré des concepts les plus subtils du C++ et à la fois les plus déroutants, tels que les pointeurs et références, ou l’héritage multiple contourné par l’implémentation des interfaces.</p>
 						<a href="Loric Informatique - Java.pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
 						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
@@ -45,9 +45,9 @@
 					<h3 class="soustitre" id="I.1.">I.1. Syntaxe</h3>
 					<div class="contenu">
 						<p class="script">
-							public class <span class="perso">NomDuProgramme</span>{<br/>
+							public class <span class="perso">NomDuProgramme</span> {<br/>
 							<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args){<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction3</span>;<br/>
@@ -265,7 +265,7 @@
 								<td>Équivalent à <span class="perso">a</span> = <span class="perso">a</span> - 1; <span class="perso">b</span> = <span class="perso">a</span>;</td>
 							</tr>
 							<tr>
-								<td class="script">int <span class="perso">a</span> = (int)<span class="perso">b</span>;</td>
+								<td class="script">int <span class="perso">a</span> = (int) <span class="perso">b</span>;</td>
 								<td>Convertit le nombre décimal <span class="perso">b</span> en nombre entier <span class="perso">a</span></td>
 							</tr>
 							<tr>
@@ -403,7 +403,7 @@
 								</tr>
 								<tr>
 									<td class="script">
-									if(<span class="perso">condition1</span>){<br/>
+									if (<span class="perso">condition1</span>) {<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 									}
 									</td>
@@ -411,10 +411,9 @@
 								</tr>
 								<tr>
 									<td class="script">
-									if(<span class="perso">condition1</span>){<br/>
+									if (<span class="perso">condition1</span>) {<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-									}<br/>
-									else{<br/>
+									} else {<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
 									}
 									</td>
@@ -422,13 +421,11 @@
 								</tr>
 								<tr>
 									<td class="script">
-									if(<span class="perso">condition1</span>){<br/>
+									if (<span class="perso">condition1</span>) {<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-									}<br/>
-									else if(<span class="perso">condition2</span>){<br/>
+									} else if(<span class="perso">condition2</span>) {<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
-									}<br/>
-									else{<br/>
+									} else {<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction3</span>;<br/>
 									}
 									</td>
@@ -436,7 +433,7 @@
 								</tr>
 								<tr>
 									<td class="script">
-									switch(<span class="perso">nombre</span>){<br/>
+									switch (<span class="perso">nombre</span>) {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;case <span class="perso">a</span>:<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br/>
@@ -473,7 +470,7 @@
 							</tr>
 							<tr>
 								<td class="script">
-								for(int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lsaquo; <span class="perso">f</span>; <span class="perso">i</span>++){<br/>
+								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lsaquo; <span class="perso">f</span>; <span class="perso">i</span>++) {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 								}
 								</td>
@@ -481,7 +478,7 @@
 							</tr>
 							<tr>
 								<td class="script">
-								for(int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lsaquo; <span class="perso">f</span>; <span class="perso">i</span>+=<span class="perso">p</span>){<br/>
+								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lsaquo; <span class="perso">f</span>; <span class="perso">i</span>+=<span class="perso">p</span>) {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 								}
 								</td>
@@ -489,7 +486,7 @@
 							</tr>
 							<tr>
 								<td class="script">
-								for(<span class="perso">type elt</span>: <span class="perso">tableau</span>){<br/>
+								for (<span class="perso">type elt</span>: <span class="perso">tableau</span>) {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 								}
 								</td>
@@ -497,7 +494,7 @@
 							</tr>
 							<tr>
 								<td class="script">
-								while(<span class="perso">condition</span>){<br/>
+								while (<span class="perso">condition</span>) {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 								}
 								</td>
@@ -505,10 +502,9 @@
 							</tr>
 							<tr>
 								<td class="script">
-								do{<br/>
+								do {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								}<br/>
-								while(<span class="perso">condition</span>);
+								} while(<span class="perso">condition</span>);
 								</td>
 								<td>On répète jusqu’à ce que <span class="perso">condition</span> soit fausse (est forcément répété une fois)</td>
 							</tr>
@@ -527,7 +523,7 @@
 						<h4 class="soustitre" id="II.1.1.">II.1.1. Créer une fonction retournant une valeur du type « <span class="perso">type0</span> »</h4>
 						<div class="contenu">
 							<p class="script">
-							public static <span class="perso">type0</span> <span class="perso">maFonction</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…){<br/>
+							public static <span class="perso">type0</span> <span class="perso">maFonction</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…) {<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
 							}<br/>
 							</p>
@@ -539,7 +535,7 @@
 						<h4 class="soustitre" id="II.1.3.">II.1.3. Créer une fonction retournant aucune valeur</h4>
 						<div class="contenu">
 							<p class="script">
-							public static void <span class="perso">maFonction</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…){<br/>
+							public static void <span class="perso">maFonction</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…) {<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
 							}<br/>
 							</p>
@@ -558,7 +554,7 @@
 						<div class="contenu">
 							<p>Exemple :</p>
 							<p class="script">
-								public enum JoursSemaine{<br/>
+								public enum JoursSemaine {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;LUNDI,<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;MARDI,<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;MERCREDI,<br/>
@@ -592,14 +588,14 @@
 							<h5 class="soustitre" id="II.3.2.1.">II.3.2.1. Créer une classe</h5>
 							<div class="contenu">
 								<p class="script">
-									public class <span class="perso">MaClasse</span>{<br/>
+									public class <span class="perso">MaClasse</span> {<br/>
 									<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type2</span> <span class="perso">variable2</span>;<br/>
 									<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;public static <span class="perso">type3</span> <span class="perso">variableStatique3</span> = <span class="perso">valeur</span>;<br/>
 									<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…) {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable1</span> = <span class="perso">mVariable1</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable2</span> = <span class="perso">mVariable2</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
@@ -616,7 +612,7 @@
 							<h5 class="soustitre" id="II.3.2.3.">II.3.2.3. Ajouter un affichage d’un message de la part de la classe (lors de l’exécution de System.out.println(<span class="perso">monObjet</span>)):</h5>
 							<div class="contenu">
 								<p class="script">
-									public String toString(){<br/>
+									public String toString() {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;return "<span class="perso">message</span>";<br/>
 									}
 								</p>
@@ -624,7 +620,7 @@
 							<h5 class="soustitre" id="II.3.2.4.">II.3.2.4. Créer une méthode (dans une classe)</h5>
 							<div class="contenu">
 								<p class="script">
-									<span class="perso">visibilite type0 maMethode</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…){<br/>
+									<span class="perso">visibilite type0 maMethode</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…) {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
 									}
 								</p>
@@ -640,7 +636,7 @@
 								<p class="script"><span class="perso">monObjet</span>.<span class="perso">variable1</span> = <span class="perso">valeur1</span></span>;</p>
 								<div class="attention">Il est préférable d'utiliser des méthodes (appelées getter et setter) pour modifier les variables non statiques</div>
 							</div>
-							<h5 class="soustitre" id="II.3.2.6.">II.3.2.6. Faire un appel d’une méthode ou d’une variable statique en dehors d'une classe</h5>
+							<h5 class="soustitre" id="II.3.2.7.">II.3.2.7. Faire un appel d’une méthode ou d’une variable statique en dehors d'une classe</h5>
 							<div class="contenu">
 								<p class="script"><span class="perso">MaClasse</span>.<span class="perso">maMethode</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…)</p>
 								<p class="script"><span class="perso">MaClasse</span>.<span class="perso">variable1</span> = <span class="perso">valeur1</span></span>;</p>
@@ -650,9 +646,9 @@
 						<div class="contenu">
 							<p>Les classes internes sont des classes présentes dans une autre classe.</p>
 							<p class="script">
-								public class <span class="perso">MaClasse</span>{<br/>
+								public class <span class="perso">MaClasse</span> {<br/>
 								<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;private class <span class="perso">MaClasseInterne</span>{<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;private class <span class="perso">MaClasseInterne</span> {<br/>
 								<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
 								}
@@ -661,18 +657,18 @@
 						</div>
 						<h4 class="soustitre" id="II.3.4.">II.3.4. L'héritage</h4>
 						<div class="contenu">
-							<p>L'héritage permet à des classes filles de reprendre les mêmes caractéristiques que leur classe mère, et d’ajouter des nouveaux attributs et/ou méthodes qui leur sont propres. Il est possible de faire un outrepassement d’une méthode de la classe mère, c'est-à-dire de créer une méthode du même nom qu’une méthode de la classe mère pour la remplacer. L’outrepassement peut être interdit avec le mot-clé « final ».</p>
+							<p>L'héritage permet à des classes filles de reprendre les mêmes caractéristiques que leur classe mère, et d’ajouter des nouveaux attributs et/ou méthodes qui leur sont propres. Il est possible de faire un outrepassement d’une méthode de la classe mère, c'est-à-dire de créer une méthode du même nom qu’une méthode de la classe mère pour la remplacer. L’outrepassement peut être interdit avec le mot-clé « final ». Une classe ne peut hériter que d'une seule classe.</p>
 							<h5 class="soustitre" id="II.3.4.1.">II.3.4.1. Créer une classe héritée d'une autre classe</h5>
 							<div class="contenu">
 								<p class="script">
-									public class <span class="perso">MaClasseHeritee</span> extends <span class="perso">MaClasse</span>{<br/>
+									public class <span class="perso">MaClasseHeritee</span> extends <span class="perso">MaClasse</span> {<br/>
 									<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type4</span> <span class="perso">variable4</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type5</span> <span class="perso">variable5</span>;<br/>
 									<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;public static <span class="perso">type6</span> <span class="perso">variableStatique6</span> = <span class="perso">valeur</span>;<br/>
 									<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasseHeritee</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…, <span class="perso">type4</span> <span class="perso">mVariable4</span>, <span class="perso">type5</span> <span class="perso">mVariable5</span>…){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasseHeritee</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…, <span class="perso">type4</span> <span class="perso">mVariable4</span>, <span class="perso">type5</span> <span class="perso">mVariable5</span>…) {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super(<span class="perso">mVariable1</span>, <span class="perso">mVariable2</span>…);<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable4</span> = <span class="perso">mVariable4</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable5</span> = <span class="perso">mVariable5</span>;<br/>
@@ -680,17 +676,19 @@
 									}
 								</p>
 								<div class="note">
-									La méthode <span class="script">super()</span> permet d’appeler le construteur de la classe initiale.
+									La méthode <span class="script">super()</span> permet d’appeler le constructeur de la classe initiale.
 								</div>
 							</div>
 							<h5 class="soustitre" id="II.3.2.2.">II.3.2.2. Définir la classe dans un objet</h5>
 							<div class="contenu">
 								<p class="script"><span class="perso">MaClasse monObjet</span> = new <span class="perso">MaClasseHeritee</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…, <span class="perso">valeur4</span>, <span class="perso">valeur5</span>…);</p>
+								<p>ou</p>
+								<p class="script"><span class="perso">MaClasseHeritee monObjet</span> = new <span class="perso">MaClasseHeritee</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…, <span class="perso">valeur4</span>, <span class="perso">valeur5</span>…);</p>
 							</div>
 							<h5 class="soustitre" id="II.3.2.3.">II.3.2.3. Ajouter un affichage d’un message de la part de la classe (lors de l’exécution de System.out.println(<span class="perso">monObjet</span>)):</h5>
 							<div class="contenu">
 								<p class="script">
-									public String toString(){<br/>
+									public String toString() {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;return (super.toString() + "<span class="perso">message</span>");<br/>
 									}
 								</p>
@@ -741,9 +739,9 @@
 							<h5 class="soustitre" id="II.3.5.2.">II.3.5.2. Créer une classe d'exception</h5>
 							<div class="contenu">
 								<p class="script">
-									public class <span class="perso">MaClasseException</span> extends Exception{<br/>
+									public class <span class="perso">MaClasseException</span> extends Exception {<br/>
 									<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;public <span class="perso">MaClasseException</span>(String <span class="perso">message</span>){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;public <span class="perso">MaClasseException</span>(String <span class="perso">message</span>) {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super("Erreur : " + <span class="perso">message</span>);<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
 									}
@@ -752,7 +750,7 @@
 							<h5 class="soustitre" id="II.3.5.3.">II.3.5.3. Définir une méthode ou une fonction pouvant renvoyer une exception (en dehors de la classe d’exception)</h5>
 							<div class="contenu">
 								<p class="script">
-									<span class="perso">visibilite type0 maMethode</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…) throws <span class="perso">MaClasseException</span>{<br/>
+									<span class="perso">visibilite type0 maMethode</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…) throws <span class="perso">MaClasseException</span> {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
 									}
 								</p>
@@ -764,13 +762,11 @@
 							<h5 class="soustitre" id="II.3.5.5.">II.3.5.5. Traiter l'erreur</h5>
 							<div class="contenu">
 								<p class="script">
-									try{<br/>
+									try {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-									}<br/>
-									catch(<span class="perso">MaClasseException e</span>){<br/>
+									} catch (<span class="perso">MaClasseException e</span>) {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
-									}<br/>
-									finally{<br/>
+									} finally {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction3</span>;<br/>
 									}
 								</p>
@@ -788,14 +784,14 @@
 							<h5 class="soustitre" id="II.3.6.1.">II.3.6.1. Créer une classe abstraite</h5>
 							<div class="contenu">
 								<p class="script">
-									public abstract class <span class="perso">MaClasseAbstraite</span>{<br/>
+									public abstract class <span class="perso">MaClasseAbstraite</span> {<br/>
 									<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type2</span> <span class="perso">variable2</span>;<br/>
 									<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;public static <span class="perso">type3</span> <span class="perso">variableStatique3</span> = <span class="perso">valeur</span>;<br/>
 									<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…) {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable1</span> = <span class="perso">mVariable1</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable2</span> = <span class="perso">mVariable2</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
@@ -810,14 +806,14 @@
 							<h5 class="soustitre" id="II.3.6.3.">II.3.6.3. Créer une classe héritant d'une classe abstraite</h5>
 							<div class="contenu">
 								<p class="script">
-									public class <span class="perso">MaClasseHeritee</span> extends <span class="perso">MaClasseAbstraite</span>{<br/>
+									public class <span class="perso">MaClasseHeritee</span> extends <span class="perso">MaClasseAbstraite</span> {<br/>
 									<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type4</span> <span class="perso">variable4</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type5</span> <span class="perso">variable5</span>;<br/>
 									<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;public static <span class="perso">type6</span> <span class="perso">variableStatique6</span> = <span class="perso">valeur</span>;<br/>
 									<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasseHeritee</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…, <span class="perso">type4</span> <span class="perso">mVariable4</span>, <span class="perso">type5</span> <span class="perso">mVariable5</span>…){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasseHeritee</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…, <span class="perso">type4</span> <span class="perso">mVariable4</span>, <span class="perso">type5</span> <span class="perso">mVariable5</span>…) {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super(<span class="perso">mVariable1</span>, <span class="perso">mVariable2</span>…);<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable4</span> = <span class="perso">mVariable4</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable5</span> = <span class="perso">mVariable5</span>;<br/>
@@ -829,7 +825,7 @@
 							<div class="contenu">
 								<p class="script">
 									@Override<br/>
-									<span class="perso">visibilite</span> abstract <span class="perso">type0</span> <span class="perso">maMethodeAbstraite</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…){<br/>
+									<span class="perso">visibilite</span> <span class="perso">type0</span> <span class="perso">maMethodeAbstraite</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…) {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
 									}</p>
 								<div class="note">Le mot-clé <span class="script">@Override</span> permet d'indiquer à l'interpréteur qu'il s'agit d'une méthode abstraite implémentée, et à détecter des erreurs éventuelles.</div>
@@ -850,7 +846,7 @@
 							<h5 class="soustitre" id="II.3.7.1.">II.3.7.1. Créer une interface</h5>
 							<div class="contenu">
 								<p class="script">
-									public interface <span class="perso">MonInterface</span>{<br/>
+									public interface <span class="perso">MonInterface</span> {<br/>
 									<br/>
 									}
 								</p>
@@ -863,14 +859,14 @@
 							<h5 class="soustitre" id="II.3.7.3.">II.3.7.3. Créer une classe implémentant une ou plusieurs interfaces</h5>
 							<div class="contenu">
 								<p class="script">
-									public class <span class="perso">MaClasseHeritee</span> extends <span class="perso">MaClasseAbstraite</span> implements <span class="perso">MonInterface1</span>, <span class="perso">MonInterface2</span>…{<br/>
+									public class <span class="perso">MaClasseHeritee</span> extends <span class="perso">MaClasseAbstraite</span> implements <span class="perso">MonInterface1</span>, <span class="perso">MonInterface2</span>… {<br/>
 									<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type4</span> <span class="perso">variable4</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type5</span> <span class="perso">variable5</span>;<br/>
 									<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;public static <span class="perso">type6</span> <span class="perso">variableStatique6</span> = <span class="perso">valeur</span>;<br/>
 									<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasseHeritee</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…, <span class="perso">type4</span> <span class="perso">mVariable4</span>, <span class="perso">type5</span> <span class="perso">mVariable5</span>…){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasseHeritee</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…, <span class="perso">type4</span> <span class="perso">mVariable4</span>, <span class="perso">type5</span> <span class="perso">mVariable5</span>…) {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super(<span class="perso">mVariable1</span>, <span class="perso">mVariable2</span>…);<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable4</span> = <span class="perso">mVariable4</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable5</span> = <span class="perso">mVariable5</span>;<br/>
@@ -882,7 +878,7 @@
 							<div class="contenu">
 								<p class="script">
 									@Override<br/>
-									<span class="perso">visibilite</span> abstract <span class="perso">type0</span> <span class="perso">maMethodeAbstraite</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…){<br/>
+									<span class="perso">visibilite</span> <span class="perso">type0</span> <span class="perso">maMethodeAbstraite</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…) {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
 									}</p>
 								<div class="note">Le mot-clé <span class="script">@Override</span> permet d'indiquer à l'interpréteur qu'il s'agit d'une méthode abstraite implémentée, et à détecter des erreurs éventuelles.</div>
@@ -905,7 +901,7 @@
 							<h5 class="soustitre" id="II.3.8.1.">II.3.8.1. Manière simple</h5>
 							<div class="contenu">
 								<p class="script">
-									<span class="perso">MaClasseAbstraite</span> <span class="perso">monObjet</span> = new <span class="perso">MaClasseAbstraite</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…){<br/>
+									<span class="perso">MaClasseAbstraite</span> <span class="perso">monObjet</span> = new <span class="perso">MaClasseAbstraite</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…) {<br/>
 									<br/>
 									};
 								</p>
@@ -926,7 +922,7 @@
 							<h5 class="soustitre" id="II.3.9.1.">II.3.9.1. Créer une collection</h5>
 							<div class="contenu">
 								<p class="script">
-									public class <span class="perso">MaCollection</span>&lsaquo;<span class="perso">T1</span>, <span class="perso">T2</span>…&rsaquo;{<br/>
+									public class <span class="perso">MaCollection</span>&lsaquo;<span class="perso">T1</span>, <span class="perso">T2</span>…&rsaquo; {<br/>
 									<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type2</span> <span class="perso">variable2</span>;<br/>
@@ -935,7 +931,7 @@
 									<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;public static <span class="perso">type3</span> <span class="perso">variableStatique3</span> = <span class="perso">valeur</span>;<br/>
 									<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…, <span class="perso">T1</span> <span class="perso">mVariable3</span>, <span class="perso">T2</span> <span class="perso">mVariable4</span>…){<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">visibilite MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…, <span class="perso">T1</span> <span class="perso">mVariable3</span>, <span class="perso">T2</span> <span class="perso">mVariable4</span>…) {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable1</span> = <span class="perso">mVariable1</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable2</span> = <span class="perso">mVariable2</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable3</span> = <span class="perso">mVariable3</span>;<br/>
@@ -1235,7 +1231,7 @@
 								<tr>
 									<td class="script">
 										Iterator <span class="perso">iterateur</span> = <span class="perso">liste</span>.iterator();<br/>
-										while(<span class="perso">iterateur</span>.hasNext()){<br/>
+										while (<span class="perso">iterateur</span>.hasNext()) {<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">typeObjet element</span> = (<span class="perso">typeObjet</span>)<span class="perso">iterateur</span>.next();<br/>
 										}
 									</td>
@@ -1328,9 +1324,9 @@
 							import javax.swing.*;<br/>
 							import java.awt.*;<br/>
 							<br/>
-							public class <span class="perso">MaFenetre</span> extends JFrame{<br/>
+							public class <span class="perso">MaFenetre</span> extends JFrame {<br/>
 							<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;public <span class="perso">MaFenetre</span>(){<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;public <span class="perso">MaFenetre</span>() {<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentaire">/* Instructions pour paramétrer la fenêtre */</span><br/><br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.setJMenuBar(this.<span class="perso">creerBarreDeMenu</span>());<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.setContentPane(this.<span class="perso">creerPanel</span>());<br/>
@@ -1338,7 +1334,7 @@
 							<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;JMenuBar <span class="perso">maBarreDeMenu</span>;<br/>
 							<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;private JMenuBar <span class="perso">creerBarreDeMenu</span>(){<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;private JMenuBar <span class="perso">creerBarreDeMenu</span>() {<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">maBarreDeMenu</span> = new JMenuBar();<br/><br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentaire">/* Instructions pour créer des menus */</span><br/><br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return <span class="perso">maBarreDeMenu</span>;<br/>
@@ -1346,7 +1342,7 @@
 							<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;JPanel <span class="perso">monPanel</span>;<br/>
 							<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;private JPanel <span class="perso">creerPanel</span>(){<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;private JPanel <span class="perso">creerPanel</span>() {<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">monPanel</span> = (JPanel)getContentPane();<br/><br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentaire">/* Instructions pour créer des widgets */</span><br/><br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return <span class="perso">monPanel</span>;<br/>
@@ -1841,7 +1837,7 @@
 									<tr>
 										<td class="script">
 											radio1 = new JRadioButton("Cocher ici");<br/>
-											radio2 = new JRadioButton ("Cocher plutôt ici");
+											radio2 = new JRadioButton("Cocher plutôt ici");
 										</td>
 										<td>Créer le widget (doit être initialisé dans la classe)</td>
 									</tr>
@@ -2131,7 +2127,7 @@
 							<h5 class="soustitre" id="VI.7.1.3.">VI.7.1.3. Écouteurs en classe anonyme</h5>
 							<div class="contenu">
 								<p class="script">
-									<span class="perso">widget</span>.add<span class="perso">XXX</span>Listener(new <span class="perso">XXX</span>Listener(){<br/>
+									<span class="perso">widget</span>.add<span class="perso">XXX</span>Listener(new <span class="perso">XXX</span>Listener() {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">/* implémentationDesMéthodes */</span><br/>
 									});
 								</p>

@@ -9,3 +9,7 @@ db.createView("maVue", "collection", [pipeline])
 
 Afficher une vue :
 db.maVue.find(...)
+
+exportation des données
+
+autres opérateurs

@@ -17,7 +17,7 @@
 				<div class="alignementVertical">
 					<div>
 						<h1>C++</h1>
-						<p class="version">Version 1.1 (créé le 14/01/2023, modifié le 14/01/2024)</p>
+						<p class="version">Version 1.2 (créé le 14/01/2023, modifié le 20/04/2024)</p>
                         <p>
 							C++ est un langage de programmation compilé permettant la programmation sous de multiples paradigmes, dont la programmation procédurale, la programmation orientée objet et la programmation générique. Ses bonnes performances, et sa compatibilité avec le langage C en font un des langages de programmation les plus utilisés dans les applications où la performance est critique.
 						</p>
@@ -49,7 +49,7 @@
 						<p class="script">
 							#include &lsaquo;iostream&rsaquo;<br/>
 							<br/>
-							int main(void){<br/>
+							int main(void) {<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction3</span>;<br/>
@@ -313,7 +313,7 @@
 								<td>Équivalent à <span class="perso">a</span> = <span class="perso">a</span> - 1; <span class="perso">b</span> = <span class="perso">a</span>;</td>
 							</tr>
 							<tr>
-								<td class="script">int <span class="perso">a</span> = (int)<span class="perso">b</span>;</td>
+								<td class="script">int <span class="perso">a</span> = (int) <span class="perso">b</span>;</td>
 								<td>Convertit le nombre décimal <span class="perso">b</span> en nombre entier <span class="perso">a</span></td>
 							</tr>
 							<tr>
@@ -473,7 +473,7 @@
 								</tr>
 								<tr>
 									<td class="script">
-									if(<span class="perso">condition1</span>){<br/>
+									if (<span class="perso">condition1</span>) {<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 									}
 									</td>
@@ -481,10 +481,9 @@
 								</tr>
 								<tr>
 									<td class="script">
-									if(<span class="perso">condition1</span>){<br/>
+									if (<span class="perso">condition1</span>) {<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-									}<br/>
-									else{<br/>
+									} else {<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
 									}
 									</td>
@@ -492,13 +491,11 @@
 								</tr>
 								<tr>
 									<td class="script">
-									if(<span class="perso">condition1</span>){<br/>
+									if (<span class="perso">condition1</span>) {<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-									}<br/>
-									else if(<span class="perso">condition2</span>){<br/>
+									} else if (<span class="perso">condition2</span>) {<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
-									}<br/>
-									else{<br/>
+									} else {<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction3</span>;<br/>
 									}
 									</td>
@@ -506,7 +503,7 @@
 								</tr>
 								<tr>
 									<td class="script">
-									switch(<span class="perso">nombre</span>){<br/>
+									switch (<span class="perso">nombre</span>) {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;case <span class="perso">a</span>:<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br/>
@@ -543,7 +540,7 @@
 							</tr>
 							<tr>
 								<td class="script">
-								for(int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lsaquo; <span class="perso">f</span>; <span class="perso">i</span>++){<br/>
+								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lsaquo; <span class="perso">f</span>; <span class="perso">i</span>++) {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 								}
 								</td>
@@ -551,7 +548,7 @@
 							</tr>
 							<tr>
 								<td class="script">
-								for(int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lsaquo; <span class="perso">f</span>; <span class="perso">i</span>+=<span class="perso">p</span>){<br/>
+								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lsaquo; <span class="perso">f</span>; <span class="perso">i</span>+=<span class="perso">p</span>) {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 								}
 								</td>
@@ -559,7 +556,7 @@
 							</tr>
 							<tr>
 								<td class="script">
-								while(<span class="perso">condition</span>){<br/>
+								while (<span class="perso">condition</span>) {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 								}
 								</td>
@@ -567,10 +564,9 @@
 							</tr>
 							<tr>
 								<td class="script">
-								do{<br/>
+								do {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								}<br/>
-								while(<span class="perso">condition</span>);
+								} while(<span class="perso">condition</span>);
 								</td>
 								<td>On répète jusqu’à ce que <span class="perso">condition</span> soit fausse (est forcément répété une fois)</td>
 							</tr>
@@ -672,7 +668,7 @@
 						<h4 class="soustitre" id="II.1.1.">II.1.1. Créer une fonction retournant une valeur du type « <span class="perso">type0</span> »</h4>
 						<div class="contenu">
 							<p class="script">
-							<span class="perso">type0</span> <span class="perso">maFonction</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…){<br/>
+							<span class="perso">type0</span> <span class="perso">maFonction</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…) {<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
 							}<br/>
 							</p>
@@ -684,7 +680,7 @@
 						<h4 class="soustitre" id="II.1.3.">II.1.3. Créer une fonction retournant aucune valeur</h4>
 						<div class="contenu">
 							<p class="script">
-							void <span class="perso">maFonction</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…){<br/>
+							void <span class="perso">maFonction</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…) {<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
 							}<br/>
 							</p>
@@ -698,7 +694,7 @@
 						<h4 class="soustitre" id="II.1.5.">II.1.5. Modifier directement des variables extérieurs grâce à des adresses (pointeurs)</h4>
 						<div class="contenu">
 							<p class="script">
-							void <span class="perso">maFonction</span>(<span class="perso">type</span> *<span class="perso">variable</span>){<br/>
+							void <span class="perso">maFonction</span>(<span class="perso">type</span> *<span class="perso">variable</span>) {<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;*<span class="perso">variable</span> = <span class="perso">valeur</span>;<br/>
 							}<br/>
 							</p>
@@ -756,7 +752,7 @@
 						<h4 class="soustitre" id="II.3.1.">II.3.1. Manière simple</h4>
 						<div class="contenu">
 							<p class="script">
-							struct <span class="perso">MaStructure</span>{<br/>
+							struct <span class="perso">MaStructure</span> {<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type2</span> <span class="perso">variable2</span>;<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type3</span> <span class="perso">variable3</span>;<br/>
@@ -769,7 +765,7 @@
 						<h4 class="soustitre" id="II.3.2.">II.3.2. Manière rapide</h4>
 						<div class="contenu">
 							<p class="script">
-							typedef struct <span class="perso">_MaStructure</span>{<br/>
+							typedef struct <span class="perso">_MaStructure</span> {<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type2</span> <span class="perso">variable2</span>;<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type3</span> <span class="perso">variable3</span>;<br/>
@@ -777,7 +773,7 @@
 							</p>
 							<p>ou</p>
 							<p class="script">
-							struct <span class="perso">_MaStructure</span>{<br/>
+							struct <span class="perso">_MaStructure</span> {<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type2</span> <span class="perso">variable2</span>;<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type3</span> <span class="perso">variable3</span>;<br/>
@@ -798,7 +794,7 @@
 						<div class="contenu">
 							<p>Exemple :</p>
 							<p class="script">
-								typedef enum JoursSemaine{<br/>
+								typedef enum JoursSemaine {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;LUNDI,<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;MARDI,<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;MERCREDI,<br/>
@@ -834,7 +830,7 @@
 								<h6 class="soustitre" id="II.5.2.1.1.">II.5.2.1.1. Manière simple (directement dans le même fichier)</h6>
 								<div class="contenu">
 									<p class="script">
-										class <span class="perso">MaClasse</span>{<br/>
+										class <span class="perso">MaClasse</span> {<br/>
 										<br/>
 										private:<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
@@ -843,7 +839,7 @@
 										public:<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;static <span class="perso">type3</span> <span class="perso">variableStatique3</span>;<br/>
 										<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…){<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…) {<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-><span class="perso">variable1</span> = <span class="perso">mVariable1</span>;<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-><span class="perso">variable2</span> = <span class="perso">mVariable2</span>;<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
@@ -854,7 +850,7 @@
 								<div class="contenu">
 									<p>Dans le fichier .hpp, écrivez uniquement vos déclaration comme ci-dessous :</p>
 									<p class="script">
-										class <span class="perso">MaClasse</span>{<br/>
+										class <span class="perso">MaClasse</span> {<br/>
 										<br/>
 										private:<br/>
 										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
@@ -868,7 +864,7 @@
 									</p>
 									<p>Dans le fichier .cpp, écrivez simplement :</p>
 									<p class="script">
-										<span class="perso">MaClasse</span>::<span class="perso">MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…){<br/>
+										<span class="perso">MaClasse</span>::<span class="perso">MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…) {<br/>
 											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-><span class="perso">variable1</span> = <span class="perso">mVariable1</span>;<br/>
 											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-><span class="perso">variable2</span> = <span class="perso">mVariable2</span>;<br/>
 										}
@@ -890,7 +886,7 @@
 							<h5 class="soustitre" id="II.5.2.3.">II.5.2.3. Créer une méthode (dans une classe)</h5>
 							<div class="contenu">
 								<p class="script">
-									<span class="perso">type</span> <span class="perso">maMethode</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…){<br/>
+									<span class="perso">type</span> <span class="perso">maMethode</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…) {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
 									}
 								</p>
@@ -901,7 +897,7 @@
 								</p>
 								<p>Et dans le fichier .cpp, écrivez simplement :</p>
 								<p class="script">
-									<span class="perso">type</span> <span class="perso">MaClasse</span>::<span class="perso">maMethode</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…) noexcept{<br/>
+									<span class="perso">type</span> <span class="perso">MaClasse</span>::<span class="perso">maMethode</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…) noexcept {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
 									}
 								</p>
@@ -927,7 +923,7 @@
 									<span class="perso">MaClasse</span>.<span class="perso">variableStatique3 </span> = <span class="perso">valeur3</span>;
 								</p>
 							</div>
-						<div class="todo">À venir : Classes d'héritage</div>
+							<div class="todo">À venir : Classes d'héritage</div>
 						<!--
 						<h4 class="soustitre" id="II.3.3.">II.3.3. Les classes internes</h4>
 						<div class="contenu"></div>
@@ -950,6 +946,7 @@
 							</p>
 						</div>
 						-->
+						</div>
 					</div>
 				</div>
 				<h2 class="soustitre" id="III.">III. Les instructions</h2>
@@ -1121,7 +1118,7 @@
 						<p class="script"><span class="perso">type</span> <span class="perso">myfonction</span>(<span class="perso">type</span> <span class="perso">variables</span>);</p>
 						<p>Et toutes les classes sous forme :</p>
 						<p class="script">
-							class <span class="perso">MaClasse</span>{<br/>
+							class <span class="perso">MaClasse</span> {<br/>
 							<br/>
 							private:<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type</span> <span class="perso">variables</span>;<br/>

@@ -427,11 +427,11 @@ td{
 		padding:10px;
 	}
 	
-	table tr td, table tr th{
-		width:100%;
-		border:none;
-		padding:5px;
-		text-align:left;
+	table tr td, table tr th, .modeSombre table tr th, .modeSombre table tr td{
+		width: 100%;
+		border: none;
+		padding: 5px;
+		text-align: left;
 	}
 
 	/* Header */
