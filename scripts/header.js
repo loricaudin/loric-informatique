@@ -42,7 +42,7 @@ header.innerHTML = /*html*/
             <li><a href="${emplacementRacine + 'aides/aides.html'}">Aides</a></li>
 		    <li><a href="${emplacementRacine + 'astuces/astuces.html'}">Astuces</a></li>
 		    <li><a href="${emplacementRacine + 'langages/langages.html'}">Langages</a></li>
-		    <li><a href="${emplacementRacine + 'apropos.html'}">À propos de nous</a></li>
+		    <li><a href="${emplacementRacine + 'apropos.html'}">À propos</a></li>
 		    
 		</ul>
 	</nav>

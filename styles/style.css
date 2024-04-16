@@ -2,11 +2,7 @@
 /* Commun à toutes les pages */
 html {
 	scroll-behavior: smooth;
-}
-
-i, b{
-	color: red;
-	text-decoration: line-through;
+	--couleur-principale: rgb(58, 58, 255);
 }
 
 body{
@@ -39,6 +35,10 @@ h5{
 
 h6{
 	font-size: 15px;
+	margin: 0;
+}
+
+tr > td > ul{
 	margin: 0;
 }
 

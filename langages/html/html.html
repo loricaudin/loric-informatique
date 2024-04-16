@@ -17,7 +17,7 @@
 				<div class="alignementVertical">
 					<div>
 						<h1>HTML</h1>
-						<p class="version">Version 0.0 (créé le XX/XX/XXXX, modifié le XX/XX/XXXX)</p>
+						<p class="version">Version 0.1 (créé le 20/04/2024, modifié le 20/04/2024)</p>
                         <p></p>
 						<a href="Loric Informatique - HTML.pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
 						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
@@ -31,6 +31,7 @@
                 <ul>
                     <li>Navigateur Internet à jour (ex : Firefox ou Chrome)</li>
 					<li>Un logiciel de codage (Visual Studio Code (recommandé) ou Notepad++)</li>
+					<li>Validateur HTML : <a href="https://validator.w3.org/" target="_blank">https://validator.w3.org/</a></li>
                 </ul>
             </section>
             <section>
@@ -74,10 +75,290 @@
 						</p>
 					</div>
 				</div>
+				<h2 class="soustitre" id="II.">II. Le head</h2>
+				<div class="contenu">
+					<!--
+					<h3 class="soustitre" id=""></h3>
+					<div class="contenu">
+
+					</div>
+					-->
+				</div>
+				<h2 class="soustitre" id="III.">III. Le body</h2>
+				<div class="contenu">
+					<p>Le body est tout le contenu qui sera affiché dans la page web.</p>
+					<h3 class="soustitre" id="III.1.">III.1. Les balises de base</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th>Balise</th>
+								<th>Résultat</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;p&rsaquo;Mon paragraphe&lsaquo;/p&rsaquo;</td>
+								<td><p>Mon paragraphe</p></td>
+								<td>Afficher un paragraphe avec un espace avant et après</td>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;h1&rsaquo;Mon titre&lsaquo;/h1&rsaquo;</td>
+								<td><h1>Mon titre</h1></td>
+								<td>Afficher un titre de niveau 1 (niveaux possibles : de 1 à 6)</td>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;i&rsaquo;Mon texte en italique&lsaquo;/i&rsaquo;</td>
+								<td><i>Mon texte en italique</i></td>
+								<td>Afficher un texte en italique (à éviter)</td>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;em&rsaquo;Mon texte en italique&lsaquo;/em&rsaquo;</td>
+								<td><em>Mon texte en italique</em></td>
+								<td>Afficher un texte en italique</td>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;b&rsaquo;Mon texte en gras&lsaquo;/b&rsaquo;</td>
+								<td><b>Mon texte en gras</b></td>
+								<td>Afficher un texte en gras (à éviter)</td>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;strong&rsaquo;Mon texte en gras&lsaquo;/strong&rsaquo;</td>
+								<td><strong>Mon texte en gras</strong></td>
+								<td>Afficher un texte en gras</td>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;u&rsaquo;Mon texte souligné&lsaquo;/u&rsaquo;</td>
+								<td><u>Mon texte souligné</u></td>
+								<td>Afficher un texte souligné (à éviter)</td>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;br/&rsaquo;</td>
+								<td><br/></td>
+								<td>Afficher retour à la ligne (à éviter)</td>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;dfn&rsaquo;Définition&lsaquo;/dfn&rsaquo;</td>
+								<td><dfn>Définition</dfn></td>
+								<td>Afficher une définition en italique</td>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;cite&rsaquo;Titre d'ouvrage&lsaquo;/cite&rsaquo;</td>
+								<td><cite>Titre d'ouvrage</cite></td>
+								<td>Afficher un titre d'ouvrage en italique</td>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;q&rsaquo;Citation&lsaquo;/q&rsaquo;</td>
+								<td><q>Citation</q></td>
+								<td>Afficher une citation entre guillemet</td>
+							</tr>
+							<!--
+							<tr>
+								<td class="script">&lsaquo;balise&rsaquo;Contenu&lsaquo;/balise&rsaquo;</td>
+								<td></td>
+								<td></td>
+							</tr>
+							-->
+						</table>
+					</div>
+					<h3 class="soustitre" id="III.2.">III.2. Les sections</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th>Balise</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;section&rsaquo;Contenu&lsaquo;/section&rsaquo;</td>
+								<td>Créer une section simple</td>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;header&rsaquo;Contenu&lsaquo;/header&rsaquo;</td>
+								<td>Créer un en-tête</td>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;nav&rsaquo;Contenu&lsaquo;/nav&rsaquo;</td>
+								<td>Créer une section contenant des liens de navigation</td>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;article&rsaquo;Contenu&lsaquo;/article&rsaquo;</td>
+								<td>Créer un contenu auto-suffisant</td>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;aside&rsaquo;Contenu&lsaquo;/aside&rsaquo;</td>
+								<td>Créer un encart</td>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;footer&rsaquo;Contenu&lsaquo;/footer&rsaquo;</td>
+								<td>Créer un pied de page</td>
+							</tr>
+							<!--
+							<tr>
+								<td class="script">&lsaquo;balise&rsaquo;Contenu&lsaquo;/balise&rsaquo;</td>
+								<td></td>
+							</tr>
+							-->
+						</table>
+					</div>
+					<h3 class="soustitre" id="III.3.">III.3. Les liens</h3>
+					<div class="contenu">
+						<p>Syntaxe : <span class="script">&lsaquo;a&rsaquo;Cliquez ici&lsaquo;/a&rsaquo;</span></p>
+						<table>
+							
+						</table>
+					</div>
+					<h3 class="soustitre" id="III.4.">III.4. Les images</h3>
+					<div class="contenu">
+						<p>Syntaxe : <span class="script">&lsaquo;img/&rsaquo;</span></p>
+						<table>
+
+						</table>
+					</div>
+					<h3 class="soustitre" id="III.5.">III.5. Les listes</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th>Balise</th>
+								<th>Résultat</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">
+									&lsaquo;ul&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;li&rsaquo;Élément 1&lsaquo;/li&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;li&rsaquo;Élément 2&lsaquo;/li&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;li&rsaquo;Élément 3&lsaquo;/li&rsaquo;<br/>
+									&lsaquo;/ul&rsaquo;
+								</td>
+								<td>
+									<ul>
+										<li>Élément 1</li>
+										<li>Élément 2</li>
+										<li>Élément 3</li>
+									</ul>
+								</td>
+								<td>Afficher une liste avec des points</td>
+							</tr>
+							<tr>
+								<td class="script">
+									&lsaquo;ol&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;li&rsaquo;Élément 1&lsaquo;/li&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;li&rsaquo;Élément 2&lsaquo;/li&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;li&rsaquo;Élément 3&lsaquo;/li&rsaquo;<br/>
+									&lsaquo;/ol&rsaquo;
+								</td>
+								<td>
+									<ol>
+										<li>Élément 1</li>
+										<li>Élément 2</li>
+										<li>Élément 3</li>
+									</ol>
+								</td>
+								<td>Afficher une liste avec des numéros</td>
+							</tr>
+						</table>
+					</div>
+					<h3 class="soustitre" id="III.6.">III.6. Les tableaux</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th>Balise</th>
+								<th>Résultat</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">
+									&lsaquo;table&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;tr&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;td&rsaquo;case1&lsaquo;/td&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;td&rsaquo;case2&lsaquo;/td&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;/tr&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;tr&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;td&rsaquo;case3&lsaquo;/td&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;td&rsaquo;case4&lsaquo;/td&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;/tr&rsaquo;<br/>
+									&lsaquo;/table&rsaquo;
+								</td>
+								<td>
+									<table>
+										<tr>
+											<td>case1</td>
+											<td>case2</td>
+										</tr>
+										<tr>
+											<td>case3</td>
+											<td>case4</td>
+										</tr>
+									</table>
+								</td>
+								<td>Créer un tableau simple</td>
+							</tr>
+							<!--
+							<tr>
+								<td class="script">
+									&lsaquo;table&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;tr&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;td&rsaquo;case1&lsaquo;/td&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;td&rsaquo;case2&lsaquo;/td&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;/tr&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;tr&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;td&rsaquo;case3&lsaquo;/td&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;td&rsaquo;case4&lsaquo;/td&rsaquo;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;/tr&rsaquo;<br/>
+									&lsaquo;/table&rsaquo;
+								</td>
+								<td>
+									<table>
+										<tr>
+											<td>case1</td>
+											<td>case2</td>
+										</tr>
+										<tr>
+											<td>case3</td>
+											<td>case4</td>
+										</tr>
+									</table>
+								</td>
+								<td>Créer un tableau simple</td>
+							</tr>
+							-->
+						</table>
+					</div>
+					<!--
+					<h3 class="soustitre" id="III.5.">III.5. Les formulaires</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th>Balise</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;balise&rsaquo;Contenu&lsaquo;/balise&rsaquo;</td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+					-->
+					<!--
+					<h3 class="soustitre" id=""></h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th>Balise</th>
+								<th>Résultat</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">&lsaquo;balise&rsaquo;Contenu&lsaquo;/balise&rsaquo;</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+					-->
+				</div>
                 <!--
 				<h2 class="soustitre" id=""></h2>
 				<div class="contenu">
-
+					
 				</div>
 				
 				&nbsp; : 1 espace obligatoire
