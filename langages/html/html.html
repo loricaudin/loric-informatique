@@ -17,7 +17,7 @@
 				<div class="alignementVertical">
 					<div>
 						<h1>HTML</h1>
-						<p class="version">Version 0.1 (créé le 20/04/2024, modifié le 20/04/2024)</p>
+						<p class="version">Version 0.2 (créé le 20/04/2024, modifié le 20/04/2024)</p>
                         <p></p>
 						<a href="Loric Informatique - HTML.pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
 						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
@@ -45,33 +45,33 @@
 				<div class="contenu">
 					<h3 class="soustitre" id="I.1.">I.1. Syntaxe</h3>
 					<div class="contenu">
-						<p class="script"> <!-- &lsaquo; &nbsp; &rsaquo; -->
-							&lsaquo;!DOCTYPE html&rsaquo;<br/>
-							&lsaquo;html lang="fr-FR"&rsaquo;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;head&rsaquo;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;title&rsaquo;<span class="perso">Titre</span>&lsaquo;/title&rsaquo;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;meta charset="utf-8"/&rsaquo;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;meta name="viewport" content="width=device-width, initial-scale=1.0"/&rsaquo;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;link rel="icon" href="<span class="perso">image/icone.png</span>"/&rsaquo;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;/head&rsaquo;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;body&rsaquo;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;<span class="perso">balise1</span>&rsaquo;<span class="perso">contenu1</span>&lsaquo;/<span class="perso">balise1</span>&rsaquo;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;<span class="perso">balise2</span>&rsaquo;<span class="perso">contenu2</span>&lsaquo;/<span class="perso">balise2</span>&rsaquo;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;<span class="perso">balise3</span>&rsaquo;<span class="perso">contenu3</span>&lsaquo;/<span class="perso">balise3</span>&rsaquo;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;/body&rsaquo;<br/>
-							&lsaquo;/html&rsaquo;<br/>
+						<p class="script"> <!-- &lt; &nbsp; &gt; -->
+							&lt;!DOCTYPE html&gt;<br/>
+							&lt;html lang="fr-FR"&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;<span class="perso">Titre</span>&lt;/title&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"/&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="icon" href="<span class="perso">image/icone.png</span>"/&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="perso">balise1</span>&gt;<span class="perso">contenu1</span>&lt;/<span class="perso">balise1</span>&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="perso">balise2</span>&gt;<span class="perso">contenu2</span>&lt;/<span class="perso">balise2</span>&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="perso">balise3</span>&gt;<span class="perso">contenu3</span>&lt;/<span class="perso">balise3</span>&gt;<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br/>
+							&lt;/html&gt;<br/>
 						</p>
 					</div>
 					<h3 class="soustitre" id="I.2.">I.2. Où écrire le code HTML ?</h3>
 					<div class="contenu">
-						<p>Dans un fichier .html ou dans un fichier .php pour les serveurs compatibles, entre les balises &lsaquo;body&rsaquo;&lsaquo;/body&rsaquo;</p>
+						<p>Dans un fichier .html ou dans un fichier .php pour les serveurs compatibles, entre les balises &lt;body&gt;&lt;/body&gt;</p>
 					</div>
 					<h3 class="soustitre" id="I.3.">I.3. Commentaires</h3>
 					<div class="contenu">
 						<p class="script commentaire">
-							&lsaquo;!--<br/>
+							&lt;!--<br/>
 							Commentaire pouvant être sur une ou plusieurs lignes<br/>
-							--&rsaquo;
+							--&gt;
 						</p>
 					</div>
 				</div>
@@ -96,63 +96,63 @@
 								<th>Description</th>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;p&rsaquo;Mon paragraphe&lsaquo;/p&rsaquo;</td>
+								<td class="script">&lt;p&gt;Mon paragraphe&lt;/p&gt;</td>
 								<td><p>Mon paragraphe</p></td>
 								<td>Afficher un paragraphe avec un espace avant et après</td>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;h1&rsaquo;Mon titre&lsaquo;/h1&rsaquo;</td>
+								<td class="script">&lt;h1&gt;Mon titre&lt;/h1&gt;</td>
 								<td><h1>Mon titre</h1></td>
 								<td>Afficher un titre de niveau 1 (niveaux possibles : de 1 à 6)</td>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;i&rsaquo;Mon texte en italique&lsaquo;/i&rsaquo;</td>
+								<td class="script">&lt;i&gt;Mon texte en italique&lt;/i&gt;</td>
 								<td><i>Mon texte en italique</i></td>
 								<td>Afficher un texte en italique (à éviter)</td>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;em&rsaquo;Mon texte en italique&lsaquo;/em&rsaquo;</td>
+								<td class="script">&lt;em&gt;Mon texte en italique&lt;/em&gt;</td>
 								<td><em>Mon texte en italique</em></td>
 								<td>Afficher un texte en italique</td>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;b&rsaquo;Mon texte en gras&lsaquo;/b&rsaquo;</td>
+								<td class="script">&lt;b&gt;Mon texte en gras&lt;/b&gt;</td>
 								<td><b>Mon texte en gras</b></td>
 								<td>Afficher un texte en gras (à éviter)</td>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;strong&rsaquo;Mon texte en gras&lsaquo;/strong&rsaquo;</td>
+								<td class="script">&lt;strong&gt;Mon texte en gras&lt;/strong&gt;</td>
 								<td><strong>Mon texte en gras</strong></td>
 								<td>Afficher un texte en gras</td>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;u&rsaquo;Mon texte souligné&lsaquo;/u&rsaquo;</td>
+								<td class="script">&lt;u&gt;Mon texte souligné&lt;/u&gt;</td>
 								<td><u>Mon texte souligné</u></td>
 								<td>Afficher un texte souligné (à éviter)</td>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;br/&rsaquo;</td>
+								<td class="script">&lt;br/&gt;</td>
 								<td><br/></td>
 								<td>Afficher retour à la ligne (à éviter)</td>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;dfn&rsaquo;Définition&lsaquo;/dfn&rsaquo;</td>
+								<td class="script">&lt;dfn&gt;Définition&lt;/dfn&gt;</td>
 								<td><dfn>Définition</dfn></td>
 								<td>Afficher une définition en italique</td>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;cite&rsaquo;Titre d'ouvrage&lsaquo;/cite&rsaquo;</td>
+								<td class="script">&lt;cite&gt;Titre d'ouvrage&lt;/cite&gt;</td>
 								<td><cite>Titre d'ouvrage</cite></td>
 								<td>Afficher un titre d'ouvrage en italique</td>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;q&rsaquo;Citation&lsaquo;/q&rsaquo;</td>
+								<td class="script">&lt;q&gt;Citation&lt;/q&gt;</td>
 								<td><q>Citation</q></td>
 								<td>Afficher une citation entre guillemet</td>
 							</tr>
 							<!--
 							<tr>
-								<td class="script">&lsaquo;balise&rsaquo;Contenu&lsaquo;/balise&rsaquo;</td>
+								<td class="script">&lt;balise&gt;Contenu&lt;/balise&gt;</td>
 								<td></td>
 								<td></td>
 							</tr>
@@ -167,32 +167,32 @@
 								<th>Description</th>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;section&rsaquo;Contenu&lsaquo;/section&rsaquo;</td>
+								<td class="script">&lt;section&gt;Contenu&lt;/section&gt;</td>
 								<td>Créer une section simple</td>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;header&rsaquo;Contenu&lsaquo;/header&rsaquo;</td>
+								<td class="script">&lt;header&gt;Contenu&lt;/header&gt;</td>
 								<td>Créer un en-tête</td>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;nav&rsaquo;Contenu&lsaquo;/nav&rsaquo;</td>
+								<td class="script">&lt;nav&gt;Contenu&lt;/nav&gt;</td>
 								<td>Créer une section contenant des liens de navigation</td>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;article&rsaquo;Contenu&lsaquo;/article&rsaquo;</td>
+								<td class="script">&lt;article&gt;Contenu&lt;/article&gt;</td>
 								<td>Créer un contenu auto-suffisant</td>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;aside&rsaquo;Contenu&lsaquo;/aside&rsaquo;</td>
+								<td class="script">&lt;aside&gt;Contenu&lt;/aside&gt;</td>
 								<td>Créer un encart</td>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;footer&rsaquo;Contenu&lsaquo;/footer&rsaquo;</td>
+								<td class="script">&lt;footer&gt;Contenu&lt;/footer&gt;</td>
 								<td>Créer un pied de page</td>
 							</tr>
 							<!--
 							<tr>
-								<td class="script">&lsaquo;balise&rsaquo;Contenu&lsaquo;/balise&rsaquo;</td>
+								<td class="script">&lt;balise&gt;Contenu&lt;/balise&gt;</td>
 								<td></td>
 							</tr>
 							-->
@@ -200,16 +200,54 @@
 					</div>
 					<h3 class="soustitre" id="III.3.">III.3. Les liens</h3>
 					<div class="contenu">
-						<p>Syntaxe : <span class="script">&lsaquo;a&rsaquo;Cliquez ici&lsaquo;/a&rsaquo;</span></p>
+						<p>Syntaxe : <span class="script">&lt;a href="<span class="perso">lien</span>"&gt;Cliquez ici&lt;/a&gt;</span></p>
 						<table>
-							
+							<tr>
+								<th>Attribut</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">href="<span class="perso">lien</span>"</td>
+								<td>Rediriger la page vers une autre page au clic sur le lien (chemin absolu ou relatif)</td>
+							</tr>
+							<tr>
+								<td class="script">href="#<span class="perso">id</span>"</td>
+								<td>Rediriger la page vers une zone de la page HTML</td>
+							</tr>
+							<tr>
+								<td class="script">target="_self"</td>
+								<td>Ouvrir la page dans le même onglet (option par défaut)</td>
+							</tr>
+							<tr>
+								<td class="script">target="_blank"</td>
+								<td>Ouvrir la page dans un nouvel onglet</td>
+							</tr>
+							<tr>
+								<td class="script">target="_parent"</td>
+								<td>Ouvrir la page dans la fenêtre principale</td>
+							</tr>
+							<tr>
+								<td class="script">target="_top"</td>
+								<td><a target="_top">Ouvrir la page dans une fenêtre séparée</a></td>
+							</tr>
 						</table>
 					</div>
 					<h3 class="soustitre" id="III.4.">III.4. Les images</h3>
 					<div class="contenu">
-						<p>Syntaxe : <span class="script">&lsaquo;img/&rsaquo;</span></p>
+						<p>Syntaxe : <span class="script">&lt;img src="<span class="perso">lien</span>" alt="<span class="perso">texte-de-remplacement</span>"/&gt;</span></p>
 						<table>
-
+							<tr>
+								<th>Attribut</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">src="<span class="perso">lien</span>"</td>
+								<td>Récupérer la source de l'image (chemin absolu ou relatif)</td>
+							</tr>
+							<tr>
+								<td class="script">alt="<span class="perso">texte-de-remplacement</span>"</td>
+								<td>Remplacer l'image par du texte si le chargement a échoué</td>
+							</tr>
 						</table>
 					</div>
 					<h3 class="soustitre" id="III.5.">III.5. Les listes</h3>
@@ -222,11 +260,11 @@
 							</tr>
 							<tr>
 								<td class="script">
-									&lsaquo;ul&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;li&rsaquo;Élément 1&lsaquo;/li&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;li&rsaquo;Élément 2&lsaquo;/li&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;li&rsaquo;Élément 3&lsaquo;/li&rsaquo;<br/>
-									&lsaquo;/ul&rsaquo;
+									&lt;ul&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Élément 1&lt;/li&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Élément 2&lt;/li&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Élément 3&lt;/li&gt;<br/>
+									&lt;/ul&gt;
 								</td>
 								<td>
 									<ul>
@@ -239,11 +277,11 @@
 							</tr>
 							<tr>
 								<td class="script">
-									&lsaquo;ol&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;li&rsaquo;Élément 1&lsaquo;/li&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;li&rsaquo;Élément 2&lsaquo;/li&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;li&rsaquo;Élément 3&lsaquo;/li&rsaquo;<br/>
-									&lsaquo;/ol&rsaquo;
+									&lt;ol&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Élément 1&lt;/li&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Élément 2&lt;/li&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Élément 3&lt;/li&gt;<br/>
+									&lt;/ol&gt;
 								</td>
 								<td>
 									<ol>
@@ -265,32 +303,76 @@
 							</tr>
 							<tr>
 								<td class="script">
-									&lsaquo;table&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;tr&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;td&rsaquo;case1&lsaquo;/td&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;td&rsaquo;case2&lsaquo;/td&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;/tr&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;tr&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;td&rsaquo;case3&lsaquo;/td&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;td&rsaquo;case4&lsaquo;/td&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;/tr&rsaquo;<br/>
-									&lsaquo;/table&rsaquo;
+									&lt;table&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case1&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case2&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case3&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case4&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+									&lt;/table&gt;
 								</td>
 								<td>Créer un tableau simple</td>
+							</tr>
+							<tr>
+								<td class="script">
+									&lt;table&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;caption&gt;<span class="perso">legende</span>&lt;/caption&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case1&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case2&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case3&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case4&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+									&lt;/table&gt;
+								</td>
+								<td>Créer un tableau simple avec une légende</td>
+							</tr>
+							<tr>
+								<td class="script">
+									&lt;table&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case1&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td rowspan="2"&gt;case2&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case3&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+									&lt;/table&gt;
+								</td>
+								<td>Créer un tableau avec une case fusionnée avec une autre vers le bas</td>
+							</tr>
+							<tr>
+								<td class="script">
+									&lt;table&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case1&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case2&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td colspan="2"&gt;case3&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+									&lt;/table&gt;
+								</td>
+								<td>Créer un tableau avec une case fusionnée avec une autre vers la droite</td>
 							</tr>
 							<!--
 							<tr>
 								<td class="script">
-									&lsaquo;table&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;tr&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;td&rsaquo;case1&lsaquo;/td&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;td&rsaquo;case2&lsaquo;/td&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;/tr&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;tr&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;td&rsaquo;case3&lsaquo;/td&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;td&rsaquo;case4&lsaquo;/td&rsaquo;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lsaquo;/tr&rsaquo;<br/>
-									&lsaquo;/table&rsaquo;
+									&lt;table&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case1&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case2&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case3&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case4&lt;/td&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
+									&lt;/table&gt;
 								</td>
 								<td>
 									<table>
@@ -318,7 +400,7 @@
 								<th>Description</th>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;balise&rsaquo;Contenu&lsaquo;/balise&rsaquo;</td>
+								<td class="script">&lt;balise&gt;Contenu&lt;/balise&gt;</td>
 								<td></td>
 							</tr>
 						</table>
@@ -334,7 +416,7 @@
 								<th>Description</th>
 							</tr>
 							<tr>
-								<td class="script">&lsaquo;balise&rsaquo;Contenu&lsaquo;/balise&rsaquo;</td>
+								<td class="script">&lt;balise&gt;Contenu&lt;/balise&gt;</td>
 								<td></td>
 								<td></td>
 							</tr>

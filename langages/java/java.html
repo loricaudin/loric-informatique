@@ -350,19 +350,19 @@
 									<td><span class="perso">a</span> égal à <span class="perso">b</span> (en type et en contenu : 1≠"1")</td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> &lsaquo; <span class="perso">b</span></td>
+									<td class="script"><span class="perso">a</span> &lt; <span class="perso">b</span></td>
 									<td><span class="perso">a</span> strictement inférieur à <span class="perso">b</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> &rsaquo; <span class="perso">b</span></td>
+									<td class="script"><span class="perso">a</span> &gt; <span class="perso">b</span></td>
 									<td><span class="perso">a</span> strictement supérieur à <span class="perso">b</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> &lsaquo;= <span class="perso">b</span></td>
+									<td class="script"><span class="perso">a</span> &lt;= <span class="perso">b</span></td>
 									<td><span class="perso">a</span> inférieur ou égal à <span class="perso">b</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> &rsaquo;= <span class="perso">b</span></td>
+									<td class="script"><span class="perso">a</span> &gt;= <span class="perso">b</span></td>
 									<td><span class="perso">a</span> supérieur ou égal à <span class="perso">b</span></td>
 								</tr>
 								<tr>
@@ -470,7 +470,7 @@
 							</tr>
 							<tr>
 								<td class="script">
-								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lsaquo; <span class="perso">f</span>; <span class="perso">i</span>++) {<br/>
+								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lt; <span class="perso">f</span>; <span class="perso">i</span>++) {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 								}
 								</td>
@@ -478,7 +478,7 @@
 							</tr>
 							<tr>
 								<td class="script">
-								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lsaquo; <span class="perso">f</span>; <span class="perso">i</span>+=<span class="perso">p</span>) {<br/>
+								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lt; <span class="perso">f</span>; <span class="perso">i</span>+=<span class="perso">p</span>) {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 								}
 								</td>
@@ -922,7 +922,7 @@
 							<h5 class="soustitre" id="II.3.9.1.">II.3.9.1. Créer une collection</h5>
 							<div class="contenu">
 								<p class="script">
-									public class <span class="perso">MaCollection</span>&lsaquo;<span class="perso">T1</span>, <span class="perso">T2</span>…&rsaquo; {<br/>
+									public class <span class="perso">MaCollection</span>&lt;<span class="perso">T1</span>, <span class="perso">T2</span>…&gt; {<br/>
 									<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;private <span class="perso">type2</span> <span class="perso">variable2</span>;<br/>
@@ -940,12 +940,12 @@
 									}
 								</p>
 								<div class="note">
-									Il est possible d’utiliser <span class="script">&lsaquo;<span class="perso">T1</span> extend Comparable&lsaquo;<span class="perso">T1</span>&rsaquo;&rsaquo;</span> afin d’utiliser la méthode <span class="script">compareTo()</span> entre 2 objets qui renvoie un int.
+									Il est possible d’utiliser <span class="script">&lt;<span class="perso">T1</span> extend Comparable&lt;<span class="perso">T1</span>&gt;&gt;</span> afin d’utiliser la méthode <span class="script">compareTo()</span> entre 2 objets qui renvoie un int.
 								</div>
 							</div>
 							<h5 class="soustitre" id="II.3.9.2.">II.3.9.2. Définir la collection dans un objet</h5>
 							<div class="contenu">
-								<p class="script"><span class="perso">MaCollection</span>&lsaquo;<span class="perso">TypeObjet1</span>, <span class="perso">TypeObjet2</span>…&rsaquo; <span class="perso">monObjet</span> = new <span class="perso">maCollection</span>&lsaquo;&rsaquo;(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…, <span class="perso">valeur4</span>, <span class="perso">valeur5</span>…);</p>
+								<p class="script"><span class="perso">MaCollection</span>&lt;<span class="perso">TypeObjet1</span>, <span class="perso">TypeObjet2</span>…&gt; <span class="perso">monObjet</span> = new <span class="perso">maCollection</span>&lt;&gt;(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…, <span class="perso">valeur4</span>, <span class="perso">valeur5</span>…);</p>
 							</div>
 						</div>
 					</div>
@@ -1062,11 +1062,11 @@
 								<td>Ouvre un fichier en mode écriture (en écrivant à la fin du fichier)</td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">fichier</span> &lsaquo;&lsaquo; <span class="perso">variable</span>;</td>
+								<td class="script"><span class="perso">fichier</span> &lt;&lt; <span class="perso">variable</span>;</td>
 								<td>Ecrit le contenu d’une variable (ici <span class="perso">variable</span>) dans le fichier (en mode écriture)</td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">fichier</span> &rsaquo;&rsaquo; <span class="perso">variable</span>;</td>
+								<td class="script"><span class="perso">fichier</span> &gt;&gt; <span class="perso">variable</span>;</td>
 								<td>Lit une valeur du fichier avec le retour dans <span class="perso">variable</span> (en mode lecture)</td>
 							</tr>
 							<tr>
@@ -1152,7 +1152,7 @@
 									<th>Utilité</th>
 								</tr>
 								<tr>
-									<td class="script">List&lsaquo;<span class="perso">typeObjet</span>&rsaquo; <span class="perso">liste</span> = new <span class="perso">XXX</span>List&lsaquo;&rsaquo;();</td>
+									<td class="script">List&lt;<span class="perso">typeObjet</span>&gt; <span class="perso">liste</span> = new <span class="perso">XXX</span>List&lt;&gt;();</td>
 									<td>Crée une liste vide</td>
 								</tr>
 								<tr>
@@ -1176,7 +1176,7 @@
 									<td>Renvoie la longueur de la liste</td>
 								</tr>
 								<tr>
-									<td class="script">List&lsaquo;<span class="perso">typeObjet</span>&rsaquo; <span class="perso">nouvelleListe</span> = <span class="perso">liste</span>.clone();</td>
+									<td class="script">List&lt;<span class="perso">typeObjet</span>&gt; <span class="perso">nouvelleListe</span> = <span class="perso">liste</span>.clone();</td>
 									<td>Crée une copie de la liste</td>
 								</tr>
 								<tr>
@@ -1213,7 +1213,7 @@
 									<th>Utilité</th>
 								</tr>
 								<tr>
-									<td class="script">Set&lsaquo;<span class="perso">typeObjet</span>&rsaquo; <span class="perso">liste</span> = new <span class="perso">XXX</span>Set&lsaquo;&rsaquo;();</td>
+									<td class="script">Set&lt;<span class="perso">typeObjet</span>&gt; <span class="perso">liste</span> = new <span class="perso">XXX</span>Set&lt;&gt;();</td>
 									<td>Crée une collection vide</td>
 								</tr>
 								<tr>
@@ -1259,7 +1259,7 @@
 									<th>Utilité</th>
 								</tr>
 								<tr>
-									<td class="script">Map&lsaquo;<span class="perso">typeObjet1</span>, <span class="perso">typeObjet2</span>&rsaquo; <span class="perso">dictionnaire</span> = new <span class="perso">XXX</span>Map&lsaquo;&rsaquo;();</td>
+									<td class="script">Map&lt;<span class="perso">typeObjet1</span>, <span class="perso">typeObjet2</span>&gt; <span class="perso">dictionnaire</span> = new <span class="perso">XXX</span>Map&lt;&gt;();</td>
 									<td>Crée un dictionnaire vide</td>
 								</tr>
 								<tr>

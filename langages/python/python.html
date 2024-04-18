@@ -330,19 +330,19 @@
                                     <td><span class="perso">a</span> égal à <span class="perso">b</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="script"><span class="perso">a</span> &lsaquo; <span class="perso">b</span></td>
+                                    <td class="script"><span class="perso">a</span> &lt; <span class="perso">b</span></td>
                                     <td><span class="perso">a</span> strictement inférieur à <span class="perso">b</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="script"><span class="perso">a</span> &rsaquo; <span class="perso">b</span></td>
+                                    <td class="script"><span class="perso">a</span> &gt; <span class="perso">b</span></td>
                                     <td><span class="perso">a</span> strictement supérieur à <span class="perso">b</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="script"><span class="perso">a</span> &lsaquo;= <span class="perso">b</span></td>
+                                    <td class="script"><span class="perso">a</span> &lt;= <span class="perso">b</span></td>
                                     <td><span class="perso">a</span> inférieur ou égal à <span class="perso">b</span></td>
                                 </tr>
                                 <tr>
-                                    <td class="script"><span class="perso">a</span> &rsaquo;= <span class="perso">b</span></td>
+                                    <td class="script"><span class="perso">a</span> &gt;= <span class="perso">b</span></td>
                                     <td><span class="perso">a</span> supérieur ou égal à <span class="perso">b</span></td>
                                 </tr>
                                 <tr>
@@ -1265,12 +1265,12 @@
                                 <td>Modifier les coordonnées d’un item ayant en argument 4 coordonnées</td>
                             </tr>
                             <tr>
-                                <td class="script"><span class="perso">zg</span>.bind('&lsaquo;<span class="perso">evenement</span>&rsaquo;', <span class="perso">fonction</span>)</td>
-                                <td>Créer un événement lié à une action sur la souris (la fonction doit obligatoirement contenir en paramètre event, et les coordonnées de la souris peuvent être récupérée avec event.x et event.y) (événements possibles : &lsaquo;ButtonPress-1&rsaquo; (Appui sur le bouton gauche), &lsaquo;ButtonRelease-2&rsaquo; (Relâchement du bouton gauche), &lsaquo;Double-Button-1&rsaquo; (Double clic sur le bouton gauche), &lsaquo;Motion&rsaquo; (Déplacement de la souris), &lsaquo;B1-Motion&rsaquo; (Déplacement avec bouton gauche appuyé), &lsaquo;Enter&rsaquo; (Entrée dans le widget de la souris), &lsaquo;Leave&rsaquo; (Sortie du widget de la souris))</td>
+                                <td class="script"><span class="perso">zg</span>.bind('&lt;<span class="perso">evenement</span>&gt;', <span class="perso">fonction</span>)</td>
+                                <td>Créer un événement lié à une action sur la souris (la fonction doit obligatoirement contenir en paramètre event, et les coordonnées de la souris peuvent être récupérée avec event.x et event.y) (événements possibles : &lt;ButtonPress-1&gt; (Appui sur le bouton gauche), &lt;ButtonRelease-2&gt; (Relâchement du bouton gauche), &lt;Double-Button-1&gt; (Double clic sur le bouton gauche), &lt;Motion&gt; (Déplacement de la souris), &lt;B1-Motion&gt; (Déplacement avec bouton gauche appuyé), &lt;Enter&gt; (Entrée dans le widget de la souris), &lt;Leave&gt; (Sortie du widget de la souris))</td>
                             </tr>
                             <tr>
-                                <td class="script"><span class="perso">fenetre</span>.bind('&lsaquo;<span class="perso">evenement</span>&rsaquo;', <span class="perso">fonction</span>)</td>
-                                <td>Créer un événement lié à une action sur la souris (la fonction doit obligatoirement contenir en paramètre event) (événements possibles : &lsaquo;KeyPress&rsaquo; (Appui sur une touche quelconque), &lsaquo;KeyRelease&rsaquo; (Relâchement d’une touche quelconque), &lsaquo;a&rsaquo;, &lsaquo;A&rsaquo;, &lsaquo;1&rsaquo;, &lsaquo;2&rsaquo;… , &lsaquo;Right&rsaquo;, &lsaquo;Down&rsaquo;, &lsaquo;Up&rsaquo;, &lsaquo;Left&rsaquo;, &lsaquo;Alt&rsaquo;, &lsaquo;Shift&rsaquo;, &lsaquo;Control&rsaquo;… (les touches peuvent être combinées sous la forme : &lsaquo;Control-Up&rsaquo;))</td>
+                                <td class="script"><span class="perso">fenetre</span>.bind('&lt;<span class="perso">evenement</span>&gt;', <span class="perso">fonction</span>)</td>
+                                <td>Créer un événement lié à une action sur la souris (la fonction doit obligatoirement contenir en paramètre event) (événements possibles : &lt;KeyPress&gt; (Appui sur une touche quelconque), &lt;KeyRelease&gt; (Relâchement d’une touche quelconque), &lt;a&gt;, &lt;A&gt;, &lt;1&gt;, &lt;2&gt;… , &lt;Right&gt;, &lt;Down&gt;, &lt;Up&gt;, &lt;Left&gt;, &lt;Alt&gt;, &lt;Shift&gt;, &lt;Control&gt;… (les touches peuvent être combinées sous la forme : &lt;Control-Up&gt;))</td>
                             </tr>
                             <tr>
                                 <td class="script"><span class="perso">fenetre</span>.mainloop()</td>

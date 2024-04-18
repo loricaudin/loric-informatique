@@ -47,7 +47,7 @@
 					<h3 class="soustitre" id="I.1.">I.1. Syntaxe</h3>
 					<div class="contenu">
 						<p class="script">
-							#include &lsaquo;iostream&rsaquo;<br/>
+							#include &lt;iostream&gt;<br/>
 							<br/>
 							int main(void) {<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
@@ -424,19 +424,19 @@
 									<td><span class="perso">a</span> égal à <span class="perso">b</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> &lsaquo; <span class="perso">b</span></td>
+									<td class="script"><span class="perso">a</span> &lt; <span class="perso">b</span></td>
 									<td><span class="perso">a</span> strictement inférieur à <span class="perso">b</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> &rsaquo; <span class="perso">b</span></td>
+									<td class="script"><span class="perso">a</span> &gt; <span class="perso">b</span></td>
 									<td><span class="perso">a</span> strictement supérieur à <span class="perso">b</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> &lsaquo;= <span class="perso">b</span></td>
+									<td class="script"><span class="perso">a</span> &lt;= <span class="perso">b</span></td>
 									<td><span class="perso">a</span> inférieur ou égal à <span class="perso">b</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> &rsaquo;= <span class="perso">b</span></td>
+									<td class="script"><span class="perso">a</span> &gt;= <span class="perso">b</span></td>
 									<td><span class="perso">a</span> supérieur ou égal à <span class="perso">b</span></td>
 								</tr>
 								<tr>
@@ -540,7 +540,7 @@
 							</tr>
 							<tr>
 								<td class="script">
-								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lsaquo; <span class="perso">f</span>; <span class="perso">i</span>++) {<br/>
+								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lt; <span class="perso">f</span>; <span class="perso">i</span>++) {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 								}
 								</td>
@@ -548,7 +548,7 @@
 							</tr>
 							<tr>
 								<td class="script">
-								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lsaquo; <span class="perso">f</span>; <span class="perso">i</span>+=<span class="perso">p</span>) {<br/>
+								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lt; <span class="perso">f</span>; <span class="perso">i</span>+=<span class="perso">p</span>) {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 								}
 								</td>
@@ -664,7 +664,7 @@
 				<div class="contenu">
 					<h3 class="soustitre" id="II.1.">II.1. Les fonctions</h3>
 					<div class="contenu">
-						<p>Les fonctions doivent être écrites juste après <span class="script">#include &lsaquo;iostream&rsaquo;</span> ou dans un autre fichier .cpp accompagné de son fichier .hpp (voir "Les bibliothèques")</p>
+						<p>Les fonctions doivent être écrites juste après <span class="script">#include &lt;iostream&gt;</span> ou dans un autre fichier .cpp accompagné de son fichier .hpp (voir "Les bibliothèques")</p>
 						<h4 class="soustitre" id="II.1.1.">II.1.1. Créer une fonction retournant une valeur du type « <span class="perso">type0</span> »</h4>
 						<div class="contenu">
 							<p class="script">
@@ -748,7 +748,7 @@
 					</div>
 					<h3 class="soustitre" id="II.3.">II.3. Les structures</h3>
 					<div class="contenu">
-						<p>Deux manières d’écrire des structures, les deux doivent être écrite après #include &lsaquo;stdio.h&rsaquo; ou dans un autre fichier .c accompagné de son fichier .h (voir "Les bibliothèques")</p>
+						<p>Deux manières d’écrire des structures, les deux doivent être écrite après #include &lt;stdio.h&gt; ou dans un autre fichier .c accompagné de son fichier .h (voir "Les bibliothèques")</p>
 						<h4 class="soustitre" id="II.3.1.">II.3.1. Manière simple</h4>
 						<div class="contenu">
 							<p class="script">
@@ -959,15 +959,15 @@
 								<th>Description</th>
 							</tr>
 							<tr>
-								<td class="script">std::cout &lsaquo;&lsaquo; "<span class="perso">texte</span>";</td>
+								<td class="script">std::cout &lt;&lt; "<span class="perso">texte</span>";</td>
 								<td>Affiche un texte dans la console</td>
 							</tr>
 							<tr>
-								<td class="script">std::cout &lsaquo;&lsaquo; "<span class="perso">texte</span>" &lsaquo;&lsaquo; std::endl;</td>
+								<td class="script">std::cout &lt;&lt; "<span class="perso">texte</span>" &lt;&lt; std::endl;</td>
 								<td>Affiche un texte dans la console avec un retour à la ligne (peut être remplacé par \n, placé directement dans la chaîne) (pour une tabulation, entrez \t)</td>
 							</tr>
 							<tr>
-								<td class="script">std::cout &lsaquo;&lsaquo; <span class="perso">variable</span>;<br/>std::cout &lsaquo;&lsaquo; "Valeur : " &lsaquo;&lsaquo; <span class="perso">variable</span>;</td>
+								<td class="script">std::cout &lt;&lt; <span class="perso">variable</span>;<br/>std::cout &lt;&lt; "Valeur : " &lt;&lt; <span class="perso">variable</span>;</td>
 								<td>Affiche une variable (ici <span class="perso">variable</span>) dans la console</td>
 							</tr>
 							<tr>
@@ -976,7 +976,7 @@
 							</tr>
 							<tr>
 								<td class="script">
-									std::cin &rsaquo;&rsaquo; <span class="perso">variable</span>;<br/>
+									std::cin &gt;&gt; <span class="perso">variable</span>;<br/>
 									std::cin.ignore();
 								</td>
 								<td>Demande une valeur avec le retour dans <span class="perso">variable</span> (non sécurisé) (std::cin.ignore() permet d’afficher la valeur en exécutant directement l’exécutable)</td>
@@ -1058,11 +1058,11 @@
 								<td>Ouvre un fichier en mode écriture (en écrivant à la fin du fichier)</td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">fichier</span> &lsaquo;&lsaquo; <span class="perso">variable</span>;</td>
+								<td class="script"><span class="perso">fichier</span> &lt;&lt; <span class="perso">variable</span>;</td>
 								<td>Ecrit le contenu d’une variable (ici <span class="perso">variable</span>) dans le fichier (en mode écriture)</td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">fichier</span> &rsaquo;&rsaquo; <span class="perso">variable</span>;</td>
+								<td class="script"><span class="perso">fichier</span> &gt;&gt; <span class="perso">variable</span>;</td>
 								<td>Lit une valeur du fichier avec le retour dans <span class="perso">variable</span> (en mode lecture)</td>
 							</tr>
 							<tr>
@@ -1134,13 +1134,13 @@
 						<br/>
 						<p>(ou écrivez simplement <span class="script">#pragma one</span> dans le fichier .hpp pour laisser faire le compilateur et écrivez à la suite les fonctions et les classes)</p>
 						<br/>
-						<p>Dans le même dossier, créer un fichier .cpp du même nom que le fichier .hpp, ajouter au début : <span class="script">#include "<span class="perso">fichier</span>.hpp"</span> (avec <span class="script">#include &lsaquo;iostream&rsaquo;</span> et les autres bibliothèques)</p> et entrez vos fonctions et vos classes à l'intérieur de ce fichier.
+						<p>Dans le même dossier, créer un fichier .cpp du même nom que le fichier .hpp, ajouter au début : <span class="script">#include "<span class="perso">fichier</span>.hpp"</span> (avec <span class="script">#include &lt;iostream&gt;</span> et les autres bibliothèques)</p> et entrez vos fonctions et vos classes à l'intérieur de ce fichier.
 						<br/>
-						<p>Enfin, entrez : #include "<span class="perso">fichier</span>.hpp"</span> dans le fichier principal juste après <span class="script">#include &lsaquo;iostream&rsaquo;</span></p>
+						<p>Enfin, entrez : #include "<span class="perso">fichier</span>.hpp"</span> dans le fichier principal juste après <span class="script">#include &lt;iostream&gt;</span></p>
 					</div>
 					<div class="todo">À venir : nouvelles bibliothèques</div>
 					<!--
-					<h3 class="soustitre" id=""> (<span class="script">#include &lsaquo;xxx.h&rsaquo;</span>)</h3>
+					<h3 class="soustitre" id=""> (<span class="script">#include &lt;xxx.h&gt;</span>)</h3>
 					<div class="contenu">
 						<p></p>
 						<table>
@@ -1158,7 +1158,7 @@
 				</div>
 				<h2 class="soustitre" id="V.">V. Les bibliothèques héritées du C</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="V.1.">V.1. stdio (<span class="script">#include &lsaquo;cstdio&rsaquo;</span>)</h3>
+					<h3 class="soustitre" id="V.1.">V.1. stdio (<span class="script">#include &lt;cstdio&gt;</span>)</h3>
 					<div class="contenu">
 						<p>stdio est la bibliothèque de base pour programmer en C.</p>
 						<h3 class="soustitre" id="V.1.1.">V.1.1. Instructions de bases</h3>
@@ -1262,7 +1262,7 @@
 							</table>
 						</div>
 					</div>
-					<h3 class="soustitre" id="V.2.">V.2. stdlib (<span class="script">#include &lsaquo;cstdlib&rsaquo;</span>)</h3>
+					<h3 class="soustitre" id="V.2.">V.2. stdlib (<span class="script">#include &lt;cstdlib&gt;</span>)</h3>
 					<div class="contenu">
 						<p>stdlib permet d’avoir d’autres fonctionnalités utiles pour le langage C. Il est souvent ajouté au début du programme avec stdio.h car il s’agit d’une des bibliothèques qui est la plus utilisée en C.</p>
 						<table>
@@ -1280,7 +1280,7 @@
 							</tr>
 							<tr>
 								<td class="script">srand(time(NULL));</td>
-								<td>Réinitialiser les valeurs aléatoires (à utiliser 1 fois dans le programme avant rand(), nécessite également la bibliothèque &lsaquo;time.h&rsaquo;)</td>
+								<td>Réinitialiser les valeurs aléatoires (à utiliser 1 fois dans le programme avant rand(), nécessite également la bibliothèque &lt;time.h&gt;)</td>
 							</tr>
 							<tr>
 								<td>
@@ -1319,7 +1319,7 @@
 							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="V.3.">V.3. string (<span class="script">#include &lsaquo;cstring&rsaquo;</span>)</h3>
+					<h3 class="soustitre" id="V.3.">V.3. string (<span class="script">#include &lt;cstring&gt;</span>)</h3>
 					<div class="contenu">
 						<p>string permet de faire diverses manipulations avec des chaînes de caractères facilement, sans avoir à créer des fonctions de manipulation. Il peut ne pas être utilisé afin de faire par nous-même les fonctionnalités de la bibliothèque string.</p>
 						<table>
@@ -1460,7 +1460,7 @@
 							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="V.4.">V.4. assert (<span class="script">#include &lsaquo;cassert&rsaquo;</span>)</h3>
+					<h3 class="soustitre" id="V.4.">V.4. assert (<span class="script">#include &lt;cassert&gt;</span>)</h3>
 					<div class="contenu">
 						<p>assert permet de vérifier le fonctionnement d’un algorithme en faisant des tests de conditions.</p>
 						<table>
@@ -1481,7 +1481,7 @@
 							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="V.5.">V.5. math (<span class="script">#include &lsaquo;cmath&rsaquo;</span>)</h3>
+					<h3 class="soustitre" id="V.5.">V.5. math (<span class="script">#include &lt;cmath&gt;</span>)</h3>
 					<div class="contenu">
 						<p>math permet d’utiliser les fonctions de base de mathématiques.</p>
 						<table>
@@ -1532,7 +1532,7 @@
 						</table>
 					</div>
 					<!--
-					<h3 class="soustitre" id=""> (<span class="script">#include &lsaquo;xxx.h&rsaquo;</span>)</h3>
+					<h3 class="soustitre" id=""> (<span class="script">#include &lt;xxx.h&gt;</span>)</h3>
 					<div class="contenu">
 						<p></p>
 						<table>

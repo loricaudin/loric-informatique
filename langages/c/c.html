@@ -48,7 +48,7 @@
 					<h3 class="soustitre" id="I.1.">I.1. Syntaxe</h3>
 					<div class="contenu">
 						<p class="script">
-							#include &lsaquo;stdio.h&rsaquo;<br/>
+							#include &lt;stdio.h&gt;<br/>
 							<br/>
 							int main(void) {<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
@@ -402,19 +402,19 @@
 									<td><span class="perso">a</span> égal à <span class="perso">b</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> &lsaquo; <span class="perso">b</span></td>
+									<td class="script"><span class="perso">a</span> &lt; <span class="perso">b</span></td>
 									<td><span class="perso">a</span> strictement inférieur à <span class="perso">b</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> &rsaquo; <span class="perso">b</span></td>
+									<td class="script"><span class="perso">a</span> &gt; <span class="perso">b</span></td>
 									<td><span class="perso">a</span> strictement supérieur à <span class="perso">b</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> &lsaquo;= <span class="perso">b</span></td>
+									<td class="script"><span class="perso">a</span> &lt;= <span class="perso">b</span></td>
 									<td><span class="perso">a</span> inférieur ou égal à <span class="perso">b</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> &rsaquo;= <span class="perso">b</span></td>
+									<td class="script"><span class="perso">a</span> &gt;= <span class="perso">b</span></td>
 									<td><span class="perso">a</span> supérieur ou égal à <span class="perso">b</span></td>
 								</tr>
 								<tr>
@@ -518,7 +518,7 @@
 							</tr>
 							<tr>
 								<td class="script">
-								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lsaquo; <span class="perso">f</span>; <span class="perso">i</span>++) {<br/>
+								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lt; <span class="perso">f</span>; <span class="perso">i</span>++) {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 								}
 								</td>
@@ -526,7 +526,7 @@
 							</tr>
 							<tr>
 								<td class="script">
-								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lsaquo; <span class="perso">f</span>; <span class="perso">i</span>+=<span class="perso">p</span>) {<br/>
+								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lt; <span class="perso">f</span>; <span class="perso">i</span>+=<span class="perso">p</span>) {<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
 								}
 								</td>
@@ -642,7 +642,7 @@
 				<div class="contenu">
 					<h3 class="soustitre" id="II.1.">II.1. Les fonctions</h3>
 					<div class="contenu">
-						<p>Les fonctions doivent être écrites juste après <span class="script">#include &lsaquo;stdio.h&rsaquo;</span> ou dans un autre fichier .c accompagné de son fichier .h (voir "Les bibliothèques")</p>
+						<p>Les fonctions doivent être écrites juste après <span class="script">#include &lt;stdio.h&gt;</span> ou dans un autre fichier .c accompagné de son fichier .h (voir "Les bibliothèques")</p>
 						<h4 class="soustitre" id="II.1.1.">II.1.1. Créer une fonction retournant une valeur du type « <span class="perso">type0</span> »</h4>
 						<div class="contenu">
 							<p class="script">
@@ -726,7 +726,7 @@
 					</div>
 					<h3 class="soustitre" id="II.3.">II.3. Les structures</h3>
 					<div class="contenu">
-						<p>Deux manières d’écrire des structures, les deux doivent être écrite après #include &lsaquo;stdio.h&rsaquo; ou dans un autre fichier .c accompagné de son fichier .h (voir "Les bibliothèques")</p>
+						<p>Deux manières d’écrire des structures, les deux doivent être écrite après #include &lt;stdio.h&gt; ou dans un autre fichier .c accompagné de son fichier .h (voir "Les bibliothèques")</p>
 						<h4 class="soustitre" id="II.3.1.">II.3.1. Manière simple</h4>
 						<div class="contenu">
 							<p class="script">
@@ -912,11 +912,11 @@
 						<br/>
 						<p>(ou écrivez simplement <span class="script">#pragma one</span> dans le fichier .h pour laisser faire le compilateur et écrivez à la suite les fonctions)</p>
 						<br/>
-						<p>Dans le même dossier, créer un fichier .c du même nom que le fichier .h, ajouter au début : <span class="script">#include "<span class="perso">fichier</span>.h"</span> (avec <span class="script">#include &lsaquo;stdio.h&rsaquo;</span> et les autres bibliothèques)</p> et entrez vos fonctions à l'intérieur de ce fichier.
+						<p>Dans le même dossier, créer un fichier .c du même nom que le fichier .h, ajouter au début : <span class="script">#include "<span class="perso">fichier</span>.h"</span> (avec <span class="script">#include &lt;stdio.h&gt;</span> et les autres bibliothèques)</p> et entrez vos fonctions à l'intérieur de ce fichier.
 						<br/>
-						<p>Enfin, entrez : #include "<span class="perso">fichier</span>.h"</span> dans le fichier principal juste après <span class="script">#include &lsaquo;stdio.h&rsaquo;</span></p>
+						<p>Enfin, entrez : #include "<span class="perso">fichier</span>.h"</span> dans le fichier principal juste après <span class="script">#include &lt;stdio.h&gt;</span></p>
 					</div>
-					<h3 class="soustitre" id="IV.1.">IV.1. stdlib (<span class="script">#include &lsaquo;stdlib.h&rsaquo;</span>)</h3>
+					<h3 class="soustitre" id="IV.1.">IV.1. stdlib (<span class="script">#include &lt;stdlib.h&gt;</span>)</h3>
 					<div class="contenu">
 						<p>stdlib permet d’avoir d’autres fonctionnalités utiles pour le langage C. Il est souvent ajouté au début du programme avec stdio.h car il s’agit d’une des bibliothèques qui est la plus utilisée en C.</p>
 						<table>
@@ -934,7 +934,7 @@
 							</tr>
 							<tr>
 								<td class="script">srand(time(NULL));</td>
-								<td>Réinitialiser les valeurs aléatoires (à utiliser 1 fois dans le programme avant rand(), nécessite également la bibliothèque &lsaquo;time.h&rsaquo;)</td>
+								<td>Réinitialiser les valeurs aléatoires (à utiliser 1 fois dans le programme avant rand(), nécessite également la bibliothèque &lt;time.h&gt;)</td>
 							</tr>
 							<tr>
 								<td>
@@ -973,7 +973,7 @@
 							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="IV.2.">IV.2. string (<span class="script">#include &lsaquo;string.h&rsaquo;</span>)</h3>
+					<h3 class="soustitre" id="IV.2.">IV.2. string (<span class="script">#include &lt;string.h&gt;</span>)</h3>
 					<div class="contenu">
 						<p>string permet de faire diverses manipulations avec des chaînes de caractères facilement, sans avoir à créer des fonctions de manipulation. Il peut ne pas être utilisé afin de faire par nous-même les fonctionnalités de la bibliothèque string.</p>
 						<table>
@@ -1114,7 +1114,7 @@
 							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="IV.3.">IV.3. assert (<span class="script">#include &lsaquo;assert.h&rsaquo;</span>)</h3>
+					<h3 class="soustitre" id="IV.3.">IV.3. assert (<span class="script">#include &lt;assert.h&gt;</span>)</h3>
 					<div class="contenu">
 						<p>assert permet de vérifier le fonctionnement d’un algorithme en faisant des tests de conditions.</p>
 						<table>
@@ -1135,7 +1135,7 @@
 							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="IV.4.">IV.4. math (<span class="script">#include &lsaquo;math.h&rsaquo;</span>)</h3>
+					<h3 class="soustitre" id="IV.4.">IV.4. math (<span class="script">#include &lt;math.h&gt;</span>)</h3>
 					<div class="contenu">
 						<p>math permet d’utiliser les fonctions de base de mathématiques.</p>
 						<table>
@@ -1185,7 +1185,7 @@
 							</tr>
 						</table>
 					</div>
-					<h3 class="soustitre" id="IV.5.">IV.5. pthread (<span class="script">#include &lsaquo;pthread.h&rsaquo;</span>)</h3>
+					<h3 class="soustitre" id="IV.5.">IV.5. pthread (<span class="script">#include &lt;pthread.h&gt;</span>)</h3>
 					<div class="contenu">
 						<p>pthread permet de créer des threads pouvant s'exécuter en parallèle avec le programme principal, tout en ayant une mémoire partagée.</p>
 						<div class="note">
@@ -1194,8 +1194,8 @@
 						<h4 class="soustitre" id="IV.5.1.">IV.5.1. Syntaxe de base</h4>
 						<div class="contenu">
 							<p class="script">
-								#include &lsaquo;stdio.h&rsaquo;<br/>
-								#include &lsaquo;pthread.h&rsaquo;<br/>
+								#include &lt;stdio.h&gt;<br/>
+								#include &lt;pthread.h&gt;<br/>
 								<br/>
 								pthread_t <span class="perso">tableauDeThreads</span>[<span class="perso">nbThreads</span>];<br/>
 								<br/>
@@ -1209,13 +1209,13 @@
 								<br/>
 								int main(){<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;int <span class="perso">parametres</span>[<span class="perso">nbThreads</span>];<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lsaquo; <span class="perso">nbThreads</span>; i++){<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; <span class="perso">nbThreads</span>; i++){<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">parametres</span>[i] = i;<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lsaquo; <span class="perso">nbThreads</span>; i++){<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; <span class="perso">nbThreads</span>; i++){<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pthread_create(&<span class="perso">tableauDeThreads</span>[i], NULL, &<span class="perso">maFonction</span>, &<span class="perso">parametres</span>[i]);<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lsaquo; <span class="perso">nbThreads</span>; i++){<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; <span class="perso">nbThreads</span>; i++){<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pthread_join(<span class="perso">tableauDeThreads</span>[i], NULL);<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
@@ -1274,7 +1274,7 @@
 							</table>
 						</div>
 					</div>
-					<h3 class="soustitre" id="IV.6.">IV.6. unistd (<span class="script">#include &lsaquo;unistd.h&rsaquo;</span>)</h3>
+					<h3 class="soustitre" id="IV.6.">IV.6. unistd (<span class="script">#include &lt;unistd.h&gt;</span>)</h3>
 					<div class="contenu">
 						<p>unistd permet de créer des processus pouvant s'exécuter en parallèle avec le programme principal, sans avoir de mémoire partagée (chaque processus créés est le fils du processus appelant la fonction fork, il n'a donc pas accès aux autres variables et doit sauvegarder les variables dans un fichier afin d'être accessible par le processus père).</p>
 						<div class="note">
@@ -1283,15 +1283,15 @@
 						<h4 class="soustitre" id="IV.6.1.">IV.6.1. Syntaxe de base</h4>
 						<div class="contenu">
 							<p class="script">
-								#include &lsaquo;stdio.h&rsaquo;<br/>
-								#include &lsaquo;unistd.h&rsaquo;<br/>
+								#include &lt;stdio.h&gt;<br/>
+								#include &lt;unistd.h&gt;<br/>
 								<br/>
 								int main(){<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;int <span class="perso">tableauDePids</span>[<span class="perso">nbProcessus</span>];<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;int id = -1;<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;int pid;<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;int i = 0;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;while(id == -1 && i &lsaquo; <span class="perso">nbProcessus</span>){<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;while(id == -1 && i &lt; <span class="perso">nbProcessus</span>){<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">pid</span> = fork();<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(<span class="perso">pid</span> != 0){<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">tableauDePids</span>[i] = pid;<br/>
@@ -1303,7 +1303,7 @@
 								&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;if(id == -1){<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructionsDuPere</span>;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lsaquo; <span class="perso">nbProcessus</span>; i++){<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; <span class="perso">nbProcessus</span>; i++){<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waitpid(-1, NULL, 0);<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
@@ -1349,7 +1349,7 @@
 							</table>
 						</div>
 					</div>
-					<h3 class="soustitre" id="I.7.">I.7. Sémaphores (<span class="script">#include &lsaquo;semaphore.h&rsaquo;</span>)</h3>
+					<h3 class="soustitre" id="I.7.">I.7. Sémaphores (<span class="script">#include &lt;semaphore.h&gt;</span>)</h3>
 					<div class="contenu">
 						<p>semaphore permet de créer un sac avec des jetons et de faire des synchronisations faciles (nécessite de créer plusieurs processus ou plusieurs threads).</p>
 						<table>
@@ -1375,7 +1375,7 @@
 						</table>
 					</div>
 					<!--
-					<h3 class="soustitre" id=""> (<span class="script">#include &lsaquo;xxx.h&rsaquo;</span>)</h3>
+					<h3 class="soustitre" id=""> (<span class="script">#include &lt;xxx.h&gt;</span>)</h3>
 					<div class="contenu">
 						<p></p>
 						<table>
