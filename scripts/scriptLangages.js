@@ -27,7 +27,7 @@ let listeLangages = [
     ["Python", "python", "python", "rgba(255, 212, 65, .5)", ""],
     ["HTML", "html", "html", "rgba(229, 76, 33, .5)", ""],
     ["CSS", "css", "css", "rgba(26, 77, 228, .5)", ""],
-    //["JavaScript", "js", "js", "rgba(247, 223, 30, .5)", ""],
+    ["JavaScript", "js", "js", "rgba(247, 223, 30, .5)", ""],
     //["PHP", "php", "php", "", ""],
     ["MySQL", "sql", "mysql", "rgba(228, 142, 0, .5)", ""],
     ["Oracle Database (SQL)", "sql", "oracledatabase", "rgba(250, 100, 100, .5)", ""],

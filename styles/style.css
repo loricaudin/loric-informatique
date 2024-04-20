@@ -59,6 +59,7 @@ img{
 .telecharger, .imprimer{
 	color: white;
 	border: none;
+	cursor: pointer;
 	padding: 10px;
 	border-radius: 5px;
 	background-color: rgba(58, 58, 255, 0.7);
@@ -71,6 +72,28 @@ img{
 
 .telecharger:focus, .imprimer:focus{
 	background-color: rgba(58, 58, 255, 1);
+}
+
+.bouton-simple{
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	border: none;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: rgb(58, 58, 255);
+	transition: all 0.2s;
+}
+
+.bouton-simple:hover{
+	background-color: rgb(88, 88, 255);
+}
+
+.bouton-simple:focus{
+	background-color: rgba(118, 118, 255);
 }
 
 /* Header */

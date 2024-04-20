@@ -17,14 +17,13 @@
 				<div class="alignementVertical">
 					<div>
 						<h1>CSS</h1>
-						<p class="version">Version 0.2 (créé le 20/04/2024, modifié le 20/04/2024)</p>
-                        <p></p>
+						<p class="version">Version 0.3 (créé le 20/04/2024, modifié le 20/04/2024)</p>
+                        <p>CSS (Cascading Style Sheets) est un langage utilisé pour mettre en forme une page web.</p>
 						<a href="Loric Informatique - CSS.pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
 						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
 					</div>
 					<img src="icone_css.png" class="logoLangage">
 				</div>
-				<div class="todo">Attention ! Le mémento est en cours d'écriture. Il manque encore beaucoup d'informations.</div>
 			</section>
             <section class="outils">
                 <h2>Outils nécessaires :</h2>
@@ -46,7 +45,7 @@
 				<div class="contenu">
 					<h3 class="soustitre" id="I.1.">I.1. Syntaxe</h3>
 					<div class="contenu">
-						<p class="script"> <!-- &lsaquo; &nbsp; &gt; -->
+						<p class="script"> <!-- &lt; &nbsp; &gt; -->
 							<span class="perso">selecteur1</span>{<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur1</span>;<br/>
 							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut3</span>: <span class="perso">valeur2</span>;<br/>
@@ -58,8 +57,8 @@
 					</div>
 					<h3 class="soustitre" id="I.2.">I.2. Où écrire le code CSS ?</h3>
 					<div class="contenu">
-						<p>Soit dans un fichier (ex : style.css), mais entre les balises <span class="script">&lsaquo;head&gt;&lsaquo;/head&gt;</span>, il faut rajouter : <span class="script">&lsaquo;link rel="stylesheet" href="<span class="perso">style.css</span>"/&gt;</span></p>
-						<p>Soit entre les balises <span class="script">&lsaquo;style&gt;&lsaquo;/style&gt;</span>, placées dans <span class="script">&lsaquo;body&gt;&lsaquo;/body&gt;</span> (à éviter)</p>
+						<p>Soit dans un fichier (ex : style.css), mais entre les balises <span class="script">&lt;head&gt;&lt;/head&gt;</span>, il faut rajouter : <span class="script">&lt;link rel="stylesheet" href="<span class="perso">style.css</span>"/&gt;</span></p>
+						<p>Soit entre les balises <span class="script">&lt;style&gt;&lt;/style&gt;</span>, placées dans <span class="script">&lt;body&gt;&lt;/body&gt;</span> (à éviter)</p>
 					</div>
 					<h3 class="soustitre" id="I.3.">I.3. Commentaires</h3>
 					<div class="contenu">
@@ -488,6 +487,56 @@
 							</tr>
 							-->
 						</table>
+					</div>
+					<h3 class="soustitre" id="III.6.">III.6. Propriétés sur l'affichage (display)</h3>
+					<div class="contenu">
+						<p>Syntaxe : <span class="script">display: <span class="perso">methode</span>;</span></p>
+						<h3 class="soustitre" id="III.6.1.">III.6.1. block</h3>
+						<div class="contenu">
+							<p>Il s'agit de la valeur par défaut. Elle permet d'afficher un élément (utile si le display était en none).</p>
+							<table>
+								<tr>
+									<th>Propriété</th>
+									<th>Valeurs possibles</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td class="script"></td>
+									<td class="script">
+										<ul>
+											<li></li>
+										</ul>
+									</td>
+									<td></td>
+								</tr>
+							</table>
+						</div>
+						<h3 class="soustitre" id="III.6.2.">III.6.2. none</h3>
+						<div class="contenu">
+							<p>Avec cette valeur, l'élément n'apparaît pas à l'écran.</p>
+						</div>
+						<!--
+						<h3 class="soustitre" id="III.6.X.">III.6.X.</h3>
+						<div class="contenu">
+							<p></p>
+							<table>
+								<tr>
+									<th>Propriété</th>
+									<th>Valeurs possibles</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td class="script"></td>
+									<td class="script">
+										<ul>
+											<li style=""></li>
+										</ul>
+									</td>
+									<td></td>
+								</tr>
+							</table>
+						</div>
+						-->
 					</div>
 				</div>
                 <!--
