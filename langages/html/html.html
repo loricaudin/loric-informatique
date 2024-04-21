@@ -91,63 +91,83 @@
 						<table>
 							<tr>
 								<th>Balise</th>
-								<th>Résultat</th>
 								<th>Description</th>
+								<th>Résultat</th>
 							</tr>
 							<tr>
 								<td class="script">&lt;p&gt;Mon paragraphe&lt;/p&gt;</td>
-								<td><p>Mon paragraphe</p></td>
 								<td>Afficher un paragraphe avec un espace avant et après</td>
+								<td><p>Mon paragraphe</p></td>
 							</tr>
 							<tr>
 								<td class="script">&lt;h1&gt;Mon titre&lt;/h1&gt;</td>
-								<td><h1>Mon titre</h1></td>
 								<td>Afficher un titre de niveau 1 (niveaux possibles : de 1 à 6)</td>
+								<td><h1>Mon titre</h1></td>
 							</tr>
 							<tr>
 								<td class="script">&lt;i&gt;Mon texte en italique&lt;/i&gt;</td>
-								<td><i>Mon texte en italique</i></td>
 								<td>Afficher un texte en italique (à éviter)</td>
+								<td><i>Mon texte en italique</i></td>
 							</tr>
 							<tr>
 								<td class="script">&lt;em&gt;Mon texte en italique&lt;/em&gt;</td>
-								<td><em>Mon texte en italique</em></td>
 								<td>Afficher un texte en italique</td>
+								<td><em>Mon texte en italique</em></td>
 							</tr>
 							<tr>
 								<td class="script">&lt;b&gt;Mon texte en gras&lt;/b&gt;</td>
-								<td><b>Mon texte en gras</b></td>
 								<td>Afficher un texte en gras (à éviter)</td>
+								<td><b>Mon texte en gras</b></td>
 							</tr>
 							<tr>
 								<td class="script">&lt;strong&gt;Mon texte en gras&lt;/strong&gt;</td>
-								<td><strong>Mon texte en gras</strong></td>
 								<td>Afficher un texte en gras</td>
+								<td><strong>Mon texte en gras</strong></td>
 							</tr>
 							<tr>
 								<td class="script">&lt;u&gt;Mon texte souligné&lt;/u&gt;</td>
-								<td><u>Mon texte souligné</u></td>
 								<td>Afficher un texte souligné (à éviter)</td>
+								<td><u>Mon texte souligné</u></td>
 							</tr>
 							<tr>
 								<td class="script">&lt;br/&gt;</td>
-								<td><br/></td>
 								<td>Afficher retour à la ligne (à éviter)</td>
+								<td><br/></td>
 							</tr>
 							<tr>
 								<td class="script">&lt;dfn&gt;Définition&lt;/dfn&gt;</td>
-								<td><dfn>Définition</dfn></td>
 								<td>Afficher une définition en italique</td>
+								<td><dfn>Définition</dfn></td>
 							</tr>
 							<tr>
 								<td class="script">&lt;cite&gt;Titre d'ouvrage&lt;/cite&gt;</td>
-								<td><cite>Titre d'ouvrage</cite></td>
 								<td>Afficher un titre d'ouvrage en italique</td>
+								<td><cite>Titre d'ouvrage</cite></td>
 							</tr>
 							<tr>
 								<td class="script">&lt;q&gt;Citation&lt;/q&gt;</td>
-								<td><q>Citation</q></td>
 								<td>Afficher une citation entre guillemet</td>
+								<td><q>Citation</q></td>
+							</tr>
+							<tr>
+								<td class="script">&lt;fieldset&gt;Mon contenu&lt;/fieldset&gt;</td>
+								<td>Afficher un cadre</td>
+								<td><fieldset>Mon contenu</fieldset></td>
+							</tr>
+							<tr>
+								<td class="script">
+									&lt;fieldset&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Ma légende&lt;/legend&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;Mon contenu&lt;<br/>
+									&lt;/fieldset&gt;
+								</td>
+								<td>Afficher un cadre titré</td>
+								<td>
+									<fieldset>
+										<legend>Ma légende</legend>
+										Mon contenu
+									</fieldset>
+								</td>
 							</tr>
 							<!--
 							<tr>
@@ -254,8 +274,8 @@
 						<table>
 							<tr>
 								<th>Balise</th>
-								<th>Résultat</th>
 								<th>Description</th>
+								<th>Résultat</th>
 							</tr>
 							<tr>
 								<td class="script">
@@ -265,6 +285,7 @@
 									&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Élément 3&lt;/li&gt;<br/>
 									&lt;/ul&gt;
 								</td>
+								<td>Afficher une liste avec des points</td>
 								<td>
 									<ul>
 										<li>Élément 1</li>
@@ -272,7 +293,6 @@
 										<li>Élément 3</li>
 									</ul>
 								</td>
-								<td>Afficher une liste avec des points</td>
 							</tr>
 							<tr>
 								<td class="script">
@@ -282,6 +302,7 @@
 									&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Élément 3&lt;/li&gt;<br/>
 									&lt;/ol&gt;
 								</td>
+								<td>Afficher une liste avec des numéros</td>
 								<td>
 									<ol>
 										<li>Élément 1</li>
@@ -289,7 +310,6 @@
 										<li>Élément 3</li>
 									</ol>
 								</td>
-								<td>Afficher une liste avec des numéros</td>
 							</tr>
 						</table>
 					</div>
@@ -390,21 +410,296 @@
 							-->
 						</table>
 					</div>
-					<!--
-					<h3 class="soustitre" id="III.5.">III.5. Les formulaires</h3>
+					<h3 class="soustitre" id="III.7.">III.7. Les formulaires</h3>
 					<div class="contenu">
-						<table>
-							<tr>
-								<th>Balise</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td class="script">&lt;balise&gt;Contenu&lt;/balise&gt;</td>
-								<td></td>
-							</tr>
-						</table>
+						<p>Un formulaire permet l'envoi de données vers un serveur, avec pour action le lien vers une page PHP (ne fonctionne pas avec pour action un fichier .html).</p>
+						<h4 class="soustitre" id="III.7.1.">III.7.1. Créer un formulaire</h4>
+						<div class="contenu">
+							<p>Syntaxe : <span class="script">&lt;form method="<span class="perso">methode</span>" action="<span class="perso">lien</span>"&gt;<span class="perso">champs</span>&lt;/form&gt;</span></p>
+							<table>
+								<tr>
+									<th>Méthode</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td class="script">GET</td>
+									<td>Écrire les données saisies dans l'URL</td>
+								</tr>
+								<tr>
+									<td class="script">POST</td>
+									<td>Envoyer les données dans une requête HTTP (sans écrire dans l'URL)</td>
+								</tr>
+							</table>
+						</div>
+						<h4 class="soustitre" id="III.7.2.">III.7.2. Types de champs</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Champ</th>
+									<th>Description</th>
+									<th>Résultat</th>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;label for="id_input_text"&gt;Zone de texte&lt;/label&gt;<br/>
+										&lt;input type="text" name="mon_input_text" id="id_input_text" placeholder="Entrer du texte"/&gt;
+									</td>
+									<td>Créer une zone de texte sur une ligne</td>
+									<td>
+										<label for="id_input_text">Zone de texte</label>
+										<input type="text" name="mon_input_text" id="id_input_text" placeholder="Entrer du texte"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;label for="id_textarea1"&gt;Zone de texte longue&lt;/label&gt;<br/>
+										&lt;textarea type="text" name="mon_textarea1" id="id_textarea1" placeholder="Entrer un texte long"&gt;&lt;/textarea&gt;
+									</td>
+									<td>Créer une zone de texte sur plusieurs lignes</td>
+									<td>
+										<label for="id_textarea1">Zone de texte longue</label>
+										<textarea type="text" name="mon_textarea1" id="id_textarea1" placeholder="Entrer un texte long"></textarea>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;label for="id_textarea2"&gt;Zone de texte longue&lt;/label&gt;<br/>
+										&lt;textarea type="text" name="mon_textarea2" id="id_textarea2" placeholder="Entrer un texte long" cols="20" rows="2" style="resize: none;"&gt;&lt;/textarea&gt;
+									</td>
+									<td>Créer une zone de texte sur plusieurs lignes non redimensionnable (il n'est pas obligatoire de renseigner le nombre de lignes et de colonnes) (c'est avec du CSS qu'on bloque le redimensionnement)</td>
+									<td>
+										<label for="id_textarea2">Zone de texte longue</label>
+										<textarea type="text" name="mon_textarea2" id="id_textarea2" placeholder="Entrer un texte long" cols="20" rows="2" style="resize: none;"></textarea>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;label for="id_input_number"&gt;Valeur numérique&lt;/label&gt;<br/>
+										&lt;input type="number" name="mon_input_number" id="id_input_number" placeholder="Entrer un nombre" min="0" max="99"/&gt;
+									</td>
+									<td>Créer une zone de saisie d'un nombre</td>
+									<td>
+										<label for="id_input_number">Valeur numérique</label>
+										<input type="number" name="mon_input_number" id="id_input_number" placeholder="Entrer un nombre" min="0" max="99"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;label for="id_input_email"&gt;Email&lt;/label&gt;<br/>
+										&lt;input type="email" name="mon_input_email" id="id_input_email" placeholder="Entrer un email"/&gt;
+									</td>
+									<td>Créer un champ pour une adresse mail</td>
+									<td>
+										<label for="id_input_email">Email</label>
+										<input type="email" name="mon_input_email" id="id_input_email" placeholder="Entrer un email"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;label for="id_input_password"&gt;Mot de passe&lt;/label&gt;<br/>
+										&lt;input type="password" name="mon_input_password" id="id_input_password" placeholder="Entrer un mot de passe"/&gt;
+									</td>
+									<td>Créer un champ pour un mot de passe</td>
+									<td>
+										<label for="id_input_password">Mot de passe</label>
+										<input type="password" name="mon_input_password" id="id_input_password" placeholder="Entrer un mot de passe"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;input type="checkbox" name="mon_input_checkbox1" id="id_input_checkbox1" checked/&gt;<br/>
+										&lt;label for="id_input_checkbox1"&gt;Cocher ici&lt;/label&gt;<br/><br/>
+										&lt;input type="checkbox" name="mon_input_checkbox2" id="id_input_checkbox2"/&gt;<br/>
+										&lt;label for="id_input_checkbox2"&gt;Cocher plutôt ici&lt;/label&gt;
+									</td>
+									<td>Créer des cases à cocher (<span class="script">checked</span> permet de pré-cocher la case)</td>
+									<td>
+										<input type="checkbox" name="mon_input_checkbox1" id="id_input_checkbox1" checked/>
+										<label for="id_input_checkbox1">Cocher ici</label>
+										<input type="checkbox" name="mon_input_checkbox2" id="id_input_checkbox2"/>
+										<label for="id_input_checkbox2">Cocher plutôt ici</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;input type="checkbox" name="mon_input_checkbox" value="checkbox1" id="id_input_checkbox3" checked/&gt;<br/>
+										&lt;label for="id_input_checkbox3"&gt;Cocher ici&lt;/label&gt;<br/>
+										<br/>
+										&lt;input type="checkbox" name="mon_input_checkbox" value="checkbox2" id="id_input_checkbox4"/&gt;<br/>
+										&lt;label for="id_input_checkbox4"&gt;Cocher plutôt ici&lt;/label&gt;
+									</td>
+									<td>Créer des cases à cocher (autre méthode) (<span class="script">checked</span> permet de pré-cocher la case)</td>
+									<td>
+										<input type="checkbox" name="mon_input_checkbox" value="checkbox1" id="id_input_checkbox3" checked/>
+										<label for="id_input_checkbox3">Cocher ici</label>
+										<input type="checkbox" name="mon_input_checkbox" value="checkbox2" id="id_input_checkbox4"/>
+										<label for="id_input_checkbox4">Cocher plutôt ici</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;input type="radio" name="mon_input_radio" value="radio1" id="id_input_radio1" checked/&gt;<br/>
+										&lt;label for="id_input_radio1"&gt;Cocher ici&lt;/label&gt;<br/>
+										<br/>
+										&lt;input type="radio" name="mon_input_radio" value="radio2" id="id_input_radio2"/&gt;<br/>
+										&lt;label for="id_input_radio2"&gt;Cocher plutôt ici&lt;/label&gt;
+									</td>
+									<td>Créer des radios à cocher (<span class="script">checked</span> permet de pré-cocher la case)</td>
+									<td>
+										<input type="radio" name="mon_input_radio" value="radio1" id="id_input_radio1" checked/>
+										<label for="id_input_radio1">Cocher ici</label>
+										<input type="radio" name="mon_input_radio" value="radio2" id="id_input_radio2"/>
+										<label for="id_input_radio2">Cocher plutôt ici</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;label for="id_select_options1"&gt;Choix d'un item&lt;/label&gt;<br/>
+										&lt;select name="mon_select_options1" id="id_select_options1"&gt;<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="option1_1">Valeur 1&lt;/option&gt;<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="option1_2">Valeur 2&lt;/option&gt;<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="option1_3">Valeur 3&lt;/option&gt;<br/>
+										&lt;/select&gt;
+									</td>
+									<td>Créer liste déroulante</td>
+									<td>
+										<label for="id_select_options1">Choix d'un item</label>
+										<select name="mon_select_options1" id="id_select_options1">
+											<option value="option1_1">Valeur 1</option>
+											<option value="option1_1">Valeur 2</option>
+											<option value="option1_1">Valeur 3</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;label for="id_select_options2"&gt;Choix des items&lt;/label&gt;<br/>
+										&lt;select name="mon_select_options2" id="id_select_options2" multiple&gt;<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="option2_1">Valeur 1&lt;/option&gt;<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="option2_2">Valeur 2&lt;/option&gt;<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="option2_3">Valeur 3&lt;/option&gt;<br/>
+										&lt;/select&gt;
+									</td>
+									<td>Créer une liste à sélection multiple</td>
+									<td>
+										<label for="id_select_options2">Choix d'un item</label>
+										<select name="mon_select_options2" id="id_select_options2" multiple>
+											<option value="option2_1">Valeur 1</option>
+											<option value="option2_1">Valeur 2</option>
+											<option value="option2_1">Valeur 3</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;label for="id_input_file1"&gt;Déposer un fichier&lt;/label&gt;<br/>
+										&lt;br/&gt;<br/>
+										&lt;input type="file" name="mon_input_file1" id="id_input_file1" enctype="multipart/form-data"/&gt;
+									</td>
+									<td>Créer une zone de dépôt de fichiers (1 seul fichier) (<span class="script">enctype="multipart/form-data"</span> permet d'envoyer le contenu du fichier au serveur et non le nom du fichier)</td>
+									<td>
+										<label for="id_input_file1">Déposer un fichier</label>
+										<br/>
+										<input type="file" name="mon_input_file1" id="id_input_file1" enctype="multipart/form-data"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;label for="id_input_file2"&gt;Déposer un fichier&lt;/label&gt;<br/>
+										&lt;br/&gt;<br/>
+										&lt;input type="file" name="mon_input_file2" id="id_input_file2" enctype="multipart/form-data" multiple/&gt;
+									</td>
+									<td>Créer une zone de dépôt de fichiers (plusieurs fichiers) (<span class="script">enctype="multipart/form-data"</span> permet d'envoyer le contenu du fichier au serveur et non le nom du fichier)</td>
+									<td>
+										<label for="id_input_file2">Déposer un fichier</label>
+										<br/>
+										<input type="file" name="mon_input_file2" id="id_input_file2" enctype="multipart/form-data" multiple/>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;label for="id_input_color"&gt;Choix d'une couleur&lt;/label&gt;<br/>
+										&lt;input type="color" name="mon_input_color" id="id_input_color"/&gt;
+									</td>
+									<td>Créer un bouton de choix d'une couleur</td>
+									<td>
+										<label for="id_input_color">Choix d'une couleur</label>
+										<input type="color" name="mon_input_color" id="id_input_color"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;label for="id_input_date"&gt;Choix d'une date&lt;/label&gt;<br/>
+										&lt;input type="date" name="mon_input_date" id="id_input_date/"&gt;
+									</td>
+									<td>Créer un bouton de choix d'une date</td>
+									<td>
+										<label for="id_input_date">Choix d'une date</label>
+										<input type="date" name="mon_input_date" id="id_input_date"/>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;button type="submit"&gt;Valider&lt;/button&gt;<br/>
+									</td>
+									<td>Créer un bouton de validation du formulaire</td>
+									<td>
+										<button type="submit">Valider</button>
+									</td>
+								</tr>
+								<!--
+								<tr>
+									<td class="script">
+										&lt;label for=""&gt;&lt;/label&gt;<br/>
+										
+									</td>
+									<td></td>
+									<td>
+										<label for=""></label>
+									</td>
+								</tr>
+								-->
+							</table>
+							<div class="attention">Chaque champ doit être précédé ou suivi par <span class="script">&lt;label for="id_champ"&gt;Mon champ&lt;/label&gt;</span> pour une meilleure accessibilité. Il est également possible de placer le champ dans le label, dans ce cas l'attribut for n'est pas nécessaire.</div>
+						</div>
+						<h4 class="soustitre" id="III.7.3.">III.7.3. Autres attributs pour les champs</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Attribut</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td class="script">required</td>
+									<td>Forcer l'entrée d'une valeur dans le champ pour la validation du formulaire</td>
+								</tr>
+								<tr>
+									<td class="script">value="<span class="perso">valeur</span>"</td>
+									<td>Entrer une valeur par défaut (utile dans les input de saisie de valeurs)</td>
+								</tr>
+								<tr>
+									<td class="script">minlength="<span class="perso">valeur</span>"</td>
+									<td>Forcer une longueur minimale</td>
+								</tr>
+								<tr>
+									<td class="script">maxlength="<span class="perso">valeur</span>"</td>
+									<td>Forcer une longueur maximale</td>
+								</tr>
+								<!--
+								<tr>
+									<td class="script">pattern=<span class="perso">regex</span></td>
+									<td>Forcer le respect d'une expression régulière</td>
+								</tr>
+								-->
+								<!--
+								<tr>
+									<td class="script"></td>
+									<td></td>
+								</tr>
+								-->
+							</table>
+						</div>
 					</div>
-					-->
 					<!--
 					<h3 class="soustitre" id=""></h3>
 					<div class="contenu">

@@ -170,6 +170,111 @@
 							-->
 						</table>
 					</div>
+					<h3 class="soustitre" id="II.2.">II.2. Les pseudo-classes</h3>
+					<div class="contenu">
+						<p>Les pseudo-classes sont similaires aux classes HTML, mais elles sont attachées automatiquement aux éléments qui correspondent à leur déﬁnition.</p>
+						<p>Syntaxe : <span class="script"><span class="perso">selecteur</span>:<span class="perso">pseudo-classe</span></span></p>
+						<table>
+							<tr>
+								<th>Pseudo-classe</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">:link</td>
+								<td>Lien pas encore visité</td>
+							</tr>
+							<tr>
+								<td class="script">:visited</td>
+								<td>Lien déjà visité</td>
+							</tr>
+							<tr>
+								<td class="script">:active</td>
+								<td>Élément en train d'être cliqué</td>
+							</tr>
+							<tr>
+								<td class="script">:focus</td>
+								<td>Élément ayant le focus clavier (pour un élément dans lequel on peut taper du texte) ou ayant été cliqué</td>
+							</tr>
+							<tr>
+								<td class="script">:hover</td>
+								<td>Élément survolé par la souris</td>
+							</tr>
+							<tr>
+								<td class="script">:target</td>
+								<td>Élément ciblé par l’URL courante (pour les ancres)</td>
+							</tr>
+							<tr>
+								<td class="script">:first-child</td>
+								<td>Premier élément du parent</td>
+							</tr>
+							<tr>
+								<td class="script">:last-child</td>
+								<td>Dernier élément du parent</td>
+							</tr>
+							<tr>
+								<td class="script">:nth-child(3)</td>
+								<td>3ème élément du parent</td>
+							</tr>
+							<tr>
+								<td class="script">:nth-child(2n)</td>
+								<td>Élément du parent de rang pair</td>
+							</tr>
+							<tr>
+								<td class="script">:nth-child(2n+1)</td>
+								<td>Élément du parent de rang impair</td>
+							</tr>
+							<tr>
+								<td class="script">:only-child</td>
+								<td>Élément unique dans le parent</td>
+							</tr>
+							<tr>
+								<td class="script">:empty</td>
+								<td>Élément sans enfant</td>
+							</tr>
+							<!--
+							<tr>
+								<td class="script">:</td>
+								<td></td>
+							</tr>
+							-->
+						</table>
+					</div>
+					<h3 class="soustitre" id="II.3.">II.3. Les pseudo-éléments</h3>
+					<div class="contenu">
+						<p>Les pseudo-éléments sont des éléments virtuels contenant un sous-ensemble d’un élément existant.</p>
+						<p>Syntaxe : <span class="script"><span class="perso">selecteur</span>::<span class="perso">pseudo-element</span></span></p>
+						<table>
+							<tr>
+								<th>Pseudo-élément</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">::first-line</td>
+								<td>Première ligne de l'élément (souvent un paragraphe)</td>
+							</tr>
+							<tr>
+								<td class="script">::first-letter</td>
+								<td>Première lettre de l'élément (souvent un paragraphe)</td>
+							</tr>
+							<tr>
+								<td class="script">::before</td>
+								<td>Emplacement avant l'élément (vide par défaut)</td>
+							</tr>
+							<tr>
+								<td class="script">::after</td>
+								<td>Emplacement après l'élément (vide pas défaut)</td>
+							</tr>
+							<!--
+							<tr>
+								<td class="script">::</td>
+								<td></td>
+							</tr>
+							-->
+						</table>
+						<div class="note">
+							Pour remplir un élément vide, on peut ajouter la propriété : <span class="script">content: <span class="script">contenu</span></span>; avec pour contenu un texte entre guillemets ou une image dans la fonction url().
+						</div>
+					</div>
 				</div>
 				<h2 class="soustitre" id="III.">III. Les différentes propriétés</h2>
 				<div class="contenu">
@@ -228,18 +333,18 @@
 						<table>
 							<tr>
 								<th>Propriété</th>
-								<th>Résultat</th>
 								<th>Description</th>
+								<th>Résultat</th>
 							</tr>
 							<tr>
 								<td class="script">background-color: <span class="perso">couleur</span>;</td>
-								<td class="script"><span style="background-color: var(--couleur-principale);">Mon texte</span></td>
 								<td>Appliquer un arrière-plan uni</td>
+								<td class="script"><span style="background-color: var(--couleur-principale);">Mon texte</span></td>
 							</tr>
 							<tr>
 								<td class="script">background-image: url(<span class="perso">lien</span>);</td>
-								<td>(Texte avec image en arrière-plan)</td>
 								<td>Appliquer une image en arrière-plan</td>
+								<td>(Texte avec image en arrière-plan)</td>
 							</tr>
 							<tr>
 								<td class="script">
@@ -247,8 +352,8 @@
 									<br/>
 									background-position: top;
 								</td>
-								<td>Aucun aperçu</td>
 								<td>Fixer un arrière-plan en haut ou à gauche (si l'image n'est pas répétée)</td>
+								<td>Aucun aperçu</td>
 							</tr>
 							<tr>
 								<td class="script">
@@ -256,8 +361,8 @@
 									<br/>
 									background-attachment: scroll;
 								</td>
-								<td>Aucun aperçu</td>
 								<td>Bloquer ou non le défilement de l'arrière-plan (scroll par défaut)</td>
+								<td>Aucun aperçu</td>
 							</tr>
 							<tr>
 								<td class="script">
@@ -269,14 +374,14 @@
 									<br/>
 									background-repeat: repeat;
 								</td>
-								<td>Aucun aperçu</td>
 								<td>Faire répéter l'arrière-plan (repeat par défaut)</td>
+								<td>Aucun aperçu</td>
 							</tr>
 							<!--
 							<tr>
 								<td class="script">: <span class="perso"></span>;</td>
-								<td class="script"><span style="color: var(--couleur-principale);">Mon texte</span></td>
 								<td></td>
+								<td class="script"><span style="color: var(--couleur-principale);">Mon texte</span></td>
 							</tr>
 							-->
 						</table>
@@ -286,26 +391,27 @@
 						<table>
 							<tr>
 								<th>Propriété</th>
-								<th>Valeurs possibles</th>
 								<th>Description</th>
+								<th>Valeurs possibles</th>
 							</tr>
 							<tr>
 								<td class="script">color: <span class="perso">couleur</span>;</td>
-								<td class="script">Exemple : <span style="color: var(--couleur-principale);">Bleu</span></td>
 								<td>Changer la couleur du texte</td>
+								<td class="script">Exemple : <span style="color: var(--couleur-principale);">Bleu</span></td>
 							</tr>
 							<tr>
 								<td class="script">text-decoration: <span class="perso">valeur</span>;</td>
+								<td>Changer la décoration du texte (à utiliser pour retirer la décoration d'un lien si besoin)</td>
 								<td class="script">
 									<ul>
 										<li style="text-decoration: none;">none</li>
 										<li style="text-decoration: underline;">underline</li>
 									</ul>
 								</td>
-								<td>Changer la décoration du texte (à utiliser pour retirer la décoration d'un lien si besoin)</td>
 							</tr>
 							<tr>
 								<td class="script">text-transform: <span class="perso">valeur</span>;</td>
+								<td>Transformer le texte</td>
 								<td class="script">
 									<ul>
 										<li style="text-transform: none;">none</li>
@@ -314,10 +420,10 @@
 										<li style="text-transform: lowercase;">lowercase</li>
 									</ul>
 								</td>
-								<td>Transformer le texte</td>
 							</tr>
 							<tr>
 								<td class="script">text-align: <span class="perso">valeur</span>;</td>
+								<td>Changer l'alignement du texte</td>
 								<td class="script">
 									<ul>
 										<li style="text-align: left;">left</li>
@@ -326,7 +432,6 @@
 										<li style="text-align: justify;">justify</li>
 									</ul>
 								</td>
-								<td>Changer l'alignement du texte</td>
 							</tr>
 							<!--
 							<tr>
@@ -346,11 +451,12 @@
 						<table>
 							<tr>
 								<th>Propriété</th>
-								<th>Valeurs possibles</th>
 								<th>Description</th>
+								<th>Valeurs possibles</th>
 							</tr>
 							<tr>
 								<td class="script">font-style: <span class="perso">valeur</span>;</td>
+								<td>Changer le style de la police</td>
 								<td class="script">
 									<ul>
 										<li style="font-style: normal;">normal</li>
@@ -358,10 +464,10 @@
 										<li style="font-style: oblique;">oblique</li>
 									</ul>
 								</td>
-								<td>Changer le style de la police</td>
 							</tr>
 							<tr>
 								<td class="script">font-weight: <span class="perso">valeur</span>;</td>
+								<td>Changer l'épaisseur de la police (pour mettre en gras)</td>
 								<td class="script">
 									<ul>
 										<li style="font-weight: normal;">normal</li>
@@ -369,20 +475,20 @@
 										<li style="font-weight: bolder;">bolder</li>
 									</ul>
 								</td>
-								<td>Changer l'épaisseur de la police (pour mettre en gras)</td>
 							</tr>
 							<tr>
 								<td class="script">font-variant: <span class="perso">valeur</span>;</td>
+								<td>Changer l'apparence de la police (small-caps met tout en capitale avec les lettres en majuscule plus grandes)</td>
 								<td class="script">
 									<ul>
 										<li style="font-variant: normal;">normal</li>
 										<li style="font-variant: small-caps;">small-caps</li>
 									</ul>
 								</td>
-								<td>Changer l'apparence de la police (small-caps met tout en capitale avec les lettres en majuscule plus grandes)</td>
 							</tr>
 							<tr>
 								<td class="script">font-family: <span class="perso">valeur1</span>, <span class="perso">valeur2</span>…;</td>
+								<td>Remplacer la police par la première disponible de la liste (si la première n'existe pas, c'est la deuxième qui est chargée…)</td>
 								<td class="script">
 									<ul>
 										<li style="font-family: Calibri;">Calibri</li>
@@ -392,10 +498,10 @@
 										…
 									</ul>
 								</td>
-								<td>Remplacer la police par la première disponible de la liste (si la première n'existe pas, c'est la deuxième qui est chargée…)</td>
 							</tr>
 							<tr>
 								<td class="script">font-size: <span class="perso">taille</span>;</td>
+								<td>Changer la taille du texte</td>
 								<td class="script">
 									<ul>
 										<li style="font-size: 20px;">20px</li>
@@ -406,17 +512,16 @@
 										<li style="font-size: 2pc;">2pc</li>
 									</ul>
 								</td>
-								<td>Changer la taille du texte</td>
 							</tr>
 							<!--
 							<tr>
 								<td class="script">: <span class="perso">valeur</span>;</td>
+								<td></td>
 								<td class="script">
 									<ul>
 										<li style=""></li>
 									</ul>
 								</td>
-								<td></td>
 							</tr>
 							-->
 						</table>
@@ -426,8 +531,8 @@
 						<table>
 							<tr>
 								<th>Propriété</th>
-								<th>Valeurs possibles</th>
 								<th>Description</th>
+								<th>Valeurs possibles</th>
 							</tr>
 							<tr>
 								<td class="script">
@@ -442,6 +547,7 @@
 									<br/>
 									border-right: <span class="perso">taille</span> <span class="perso">style</span> <span class="perso">couleur</span>;
 								</td>
+								<td>Changer la bordure (épaisseur, style et couleur)</td>
 								<td class="script">
 									Pour le style :
 									<ul>
@@ -456,7 +562,6 @@
 										<li style="border: 3px outset var(--couleur-principale);">outset</li>
 									</ul>
 								</td>
-								<td>Changer la bordure (épaisseur, style et couleur)</td>
 							</tr>
 							<tr>
 								<td class="script">
@@ -470,20 +575,20 @@
 									<br/>
 									border-bottom-right-radius: <span class="perso">valeur</span>;
 								</td>
+								<td>Changer l'arrondi des bords</td>
 								<td class="script">
 									<span class="perso">taille</span>
 								</td>
-								<td>Changer l'arrondi des bords</td>
 							</tr>
 							<!--
 							<tr>
 								<td class="script">: <span class="perso">valeur</span>;</td>
+								<td></td>
 								<td class="script">
 									<ul>
 										<li style=""></li>
 									</ul>
 								</td>
-								<td></td>
 							</tr>
 							-->
 						</table>
@@ -493,27 +598,258 @@
 						<p>Syntaxe : <span class="script">display: <span class="perso">methode</span>;</span></p>
 						<h3 class="soustitre" id="III.6.1.">III.6.1. block</h3>
 						<div class="contenu">
-							<p>Il s'agit de la valeur par défaut. Elle permet d'afficher un élément (utile si le display était en none).</p>
+							<p>Il s'agit de la valeur par défaut pour les balises  &lt;p&gt;, &lt;h1&gt;, &lt;section&gt;, &lt;nav&gt;, &lt;article&gt;… Elle permet d'afficher un élément (utile si le display était en none), impose un retour à la ligne après l'élément et permet de modifier sa taille (elle prend la longueur maximale et la hauteur minimale par défaut).</p>
+						</div>
+						<h3 class="soustitre" id="III.6.1.">III.6.1. inline</h3>
+						<div class="contenu">
+							<p>Il s'agit de la valeur par défaut pour les balises &lt;a&gt;, &lt;em&gt;, &lt;strong&gt;, &lt;span&gt;, &lt;i&gt;…. Elle permet d'afficher un élément (utile si le display était en none), n'impose pas de retour à la ligne après l'élément et prend la taille minimale nécessaire (non modifiable).</p>
+						</div>
+						<h3 class="soustitre" id="III.6.3.">III.6.3. inline-block</h3>
+						<div class="contenu">
+							<p>Il s'agit d'un mélange des méthodes block et inline, c'est-à-dire qu'il n'y a pas de retour à la ligne après l'élément, mais on peut modifier sa taille.</p>
+						</div>
+						<h3 class="soustitre" id="III.6.4.">III.6.4. none</h3>
+						<div class="contenu">
+							<p>Avec cette valeur, l'élément n'apparaît pas à l'écran.</p>
+						</div>
+						<h3 class="soustitre" id="III.6.5.">III.6.5. grid</h3>
+						<div class="contenu">
+							<p>Il s'agit d'un positionnement dans une grille.</p>
 							<table>
 								<tr>
 									<th>Propriété</th>
-									<th>Valeurs possibles</th>
 									<th>Description</th>
+									<th>Exemple</th>
 								</tr>
 								<tr>
-									<td class="script"></td>
 									<td class="script">
+										grid-template-rows: <span class="perso">valeur</span>;<br/>
+										grid-template-columns: <span class="perso">valeur</span>;
+									</td>
+									<td>
+										Définir la taille des lignes et des colonnes :
 										<ul>
-											<li></li>
+											<li>fr : Pour les fractions de taille de contenu encore à prendre</li>
+											<li>% : Pour des pourcentage</li>
+											<li>auto : Pour prendre toute la place restante</li>
+											<li>px : Pour des tailles fixes</li>
 										</ul>
 									</td>
+									<td>
+										Exemple : On souhaite une grille de 3 lignes et de 2 colonnes. On a donc :<br/>
+										<ul>
+											<li class="script">grid-template-rows: 1fr 2fr 1fr;</li>
+											<li class="script">grid-template-columns: 30% 70%;</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										grid-row-start: <span class="perso">valeur</span>;<br/>
+										grid-row-end: <span class="perso">valeur</span>;<br/>
+										grid-column-start: <span class="perso">valeur</span>;<br/>
+										grid-column-end: <span class="perso">valeur</span>;
+									</td>
+									<td>
+										Définir la position d'un élément dans la grille (par défaut dans la première case vide)
+									</td>
+									<td>
+										Exemple : Considérons une grille de 3 lignes et de 2 colonnes. Pour placer 1 élément dans la 2ème et 3ème ligne de la 1ère colonne, on a donc :
+										<ul>
+											<li class="script">grid-row-start: 2;</li>
+											<li class="script">grid-row-end: 4;</li>
+											<li class="script">grid-column-start: 1;</li>
+											<li class="script">grid-column-end: 2;</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										grid-template-areas:<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;"<span class="perso">valeur1</span> <span class="perso">valeur2</span>…"<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;"<span class="perso">valeur3</span> <span class="perso">valeur4</span>…"…;<br/>
+									</td>
+									<td>
+										Définir des noms aux zones pour faciliter le positionnement
+									</td>
+									<td>
+										Exemple : Considérons une grille de 3 lignes et de 2 colonnes. Pour placer 1 élément dans la 2ème et 3ème ligne de la 1ère colonne, on peut faire :
+										<br/>
+										<span class="script">
+											grid-template-areas:<br/>
+											&nbsp;&nbsp;&nbsp;&nbsp;"zone1 zone2"<br/>
+											&nbsp;&nbsp;&nbsp;&nbsp;"zone3 zone4"<br/>
+											&nbsp;&nbsp;&nbsp;&nbsp;"zone3 zone5";<br/>
+										</span>
+										Il restera plus qu'à positionner l'élément avec :
+										<span class="script">grid-area: zone3;</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										gap: <span class="perso">taille</span>;<br/>
+										row-gap: <span class="perso">taille</span>;<br/>
+										column-gap: <span class="perso">taille</span>;
+									</td>
+									<td>Changer l'espacement des éléments enfants</td>
+									<td>(Aucun exemple)</td>
+								</tr>
+								<!--
+								<tr>
+									<td class="script">
+
+									</td>
+									<td></td>
 									<td></td>
 								</tr>
+								-->
 							</table>
 						</div>
-						<h3 class="soustitre" id="III.6.2.">III.6.2. none</h3>
+						<h3 class="soustitre" id="III.6.6.">III.6.6. inline-grid</h3>
 						<div class="contenu">
-							<p>Avec cette valeur, l'élément n'apparaît pas à l'écran.</p>
+							<p>Il s'agit d'un mélange des méthodes grid et inline-block, c'est-à-dire qu'il n'y a pas de retour à la ligne après l'élément, mais on peut modifier sa taille.</p>
+						</div>
+						<h3 class="soustitre" id="III.6.7.">III.6.7. flex</h3>
+						<div class="contenu">
+							<p>Il s'agit d'un positionnement dans une boîte flexible.</p>
+							<table>
+								<tr>
+									<th>Propriété</th>
+									<th>Description</th>
+									<th>Valeurs possibles</th>
+								</tr>
+								<tr>
+									<td class="script">
+										flex-direction: <span class="perso">direction</span>;<br/>
+									</td>
+									<td>Définir la direction de l'axe principal pour positionner les éléments enfants</td>
+									<td>
+										<ul>
+											<li><span class="script">row</span> (par défaut) : de gauche à droite</li>
+											<li><span class="script">column</span> : de haut en bas</li>
+											<li><span class="script">row-reverse</span> : de droite à gauche</li>
+											<li><span class="script">column-reverse</span> : de bas en haut</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										flex-wrap: <span class="perso">valeur</span>;
+									</td>
+									<td>Définir si les éléments enfants peuvent changer de ligne (si la direction est row ou row-reverse)</td>
+									<td>
+										<ul>
+											<li><span class="script">nowrap</span> (par défaut) : Pas de retour à la ligne</li>
+											<li><span class="script">wrap</span> : Retour à la ligne s'il n'y a pas assez de place</li>
+											<li><span class="script">wrap-reverse</span> : Retour à la ligne s'il n'y a pas assez de place (remonté au dessus)</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										flex: <span class="perso">valeur</span>;
+									</td>
+									<td>Définir si un élément doit être flexible ou non (à mettre dans l'élément enfant)</td>
+									<td>
+										<ul>
+											<li><span class="script">1</span> : Flexible (prend la place disponible)</li>
+											<li><span class="script">0</span> (par défaut) : Non flexible (prend la place minimale)</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										justify-content: <span class="perso">valeur</span>;
+									</td>
+									<td>Répartir les éléments sur l'axe principal</td>
+									<td>
+										<ul>
+											<li><span class="script">flex-start</span> (par défaut) : Au début</li>
+											<li><span class="script">flex-end</span> : À la fin</li>
+											<li><span class="script">center</span> : Centré (avec uniquement de l'espace autour)</li>
+											<li><span class="script">space-around</span> : Avec de l'espace entre les éléments et autour</li>
+											<li><span class="script">space-between</span> : Avec de l'espace uniquement entre les éléments</li>
+											<li><span class="script">space-evenly</span> : Avec de l'espace entre les éléments et autour</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										align-content: <span class="perso">valeur</span>;
+									</td>
+									<td>Gérer la répartition des lignes (si le retour à la ligne est autorisé)</td>
+									<td>
+										<ul>
+											<li><span class="script">stretch</span> (par défaut) : Toute la place disponible</li>
+											<li><span class="script">flex-start</span> : Au début</li>
+											<li><span class="script">flex-end</span> : À la fin</li>
+											<li><span class="script">center</span> : Centré verticalement</li>
+											<li><span class="script">space-around</span> : Avec de l'espace entre les lignes et autour</li>
+											<li><span class="script">space-between</span> : Avec de l'espace uniquement entre les lignes</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										align-items: <span class="perso">valeur</span>;
+									</td>
+									<td>Gérer l'alignement des items sur l'axe secondaire (inverse de l'axe principale)</td>
+									<td>
+										<ul>
+											<li><span class="script">stretch</span> (par défaut) : Toute la place disponible</li>
+											<li><span class="script">flex-start</span> : Au début</li>
+											<li><span class="script">flex-end</span> : À la fin</li>
+											<li><span class="script">center</span> : Centré sur l'axe secondaire</li>
+											<!-- <li><span class="script">baseline</span> : ?</li> -->
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										align-self: <span class="perso">valeur</span>;
+									</td>
+									<td>Gérer l'alignement d'un seul item sur l'axe secondaire (inverse de l'axe principale)</td>
+									<td>
+										<ul>
+											<li><span class="script">stretch</span> (par défaut) : Toute la place disponible</li>
+											<li><span class="script">flex-start</span> : Au début</li>
+											<li><span class="script">flex-end</span> : À la fin</li>
+											<li><span class="script">center</span> : Centré sur l'axe secondaire</li>
+											<!-- <li><span class="script">baseline</span> : ?</li> -->
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td class="script">
+										order: <span class="perso">position</span>;
+									</td>
+									<td>Changer l'emplacement d'un élément</td>
+									<td>
+										<ul>
+											<li><span class="script">-1</span> : Décale d'une place vers le début</li>
+											<li><span class="script">1</span> : Décale d'une place vers la fin</li>
+										</ul>
+									</td>
+								</tr>
+								<!--
+								<tr>
+									<td class="script">
+
+									</td>
+									<td></td>
+									<td>
+										<ul>
+											<li><span class="script"></span> (par défaut) : </li>
+											<li><span class="script"></span> : </li>
+										</ul>
+									</td>
+								</tr>
+								-->
+							</table>
+						</div>
+						<h3 class="soustitre" id="III.6.8.">III.6.8. inline-flex</h3>
+						<div class="contenu">
+							<p>Il s'agit d'un mélange des méthodes flex et inline-block, c'est-à-dire qu'il n'y a pas de retour à la ligne après l'élément, mais on peut modifier sa taille.</p>
 						</div>
 						<!--
 						<h3 class="soustitre" id="III.6.X.">III.6.X.</h3>
@@ -522,17 +858,17 @@
 							<table>
 								<tr>
 									<th>Propriété</th>
-									<th>Valeurs possibles</th>
 									<th>Description</th>
+									<th>Valeurs possibles</th>
 								</tr>
 								<tr>
 									<td class="script"></td>
+									<td></td>
 									<td class="script">
 										<ul>
 											<li style=""></li>
 										</ul>
 									</td>
-									<td></td>
 								</tr>
 							</table>
 						</div>
