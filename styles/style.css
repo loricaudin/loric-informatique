@@ -2,7 +2,7 @@
 /* Commun à toutes les pages */
 html {
 	scroll-behavior: smooth;
-	--couleur-principale: rgb(58, 58, 255);
+	--couleur-principale: rgb(80, 58, 192);
 }
 
 body{
@@ -150,7 +150,7 @@ nav ul li a{
 	color: black;
 	cursor: pointer;
 	padding: 20px;
-	/*border-radius: 10px;*/
+	border-radius: 5px; /* Arrondi des bords */
 	transition: all 0.2s;
 }
 
@@ -246,6 +246,7 @@ main{
 	text-decoration: none;
 	background-color: rgba(0, 0, 0, 0.01);
 	color: black;
+	border-radius: 5px; /* Arrondi des bords */
 	transition: all 0.5s;
 }
 
@@ -315,7 +316,9 @@ td{
 
 	padding: 20px;
 
-	/* border-radius: 20px; */
+	background-color: rgba(200, 200, 200, 0.1);
+
+	border-radius: 20px; /* Arrondi des bords */
 }
 
 .langages .langage{
@@ -326,7 +329,7 @@ td{
 	transition: all 0.5s;
 	text-align: center;
 
-	/* border-radius: 20px; */
+	border-radius: 20px; /* Arrondi des bords */
 }
 
 .langages .langage a{
@@ -341,7 +344,7 @@ td{
 	transition: all 0.5s;
 	text-align: center;
 
-	/* border-radius: 20px; */
+	border-radius: 20px; /* Arrondi des bords */
 }
 
 .langages .langage a div{
@@ -426,6 +429,12 @@ td{
 	margin-bottom: 50px;
 }
 
+/* A propos */
+.mainAPropos section{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
 /* ---------- Affichage mobile ---------- */
 @media screen and (max-width: 1200px){
 	/* Commun à toutes les pages */
@@ -477,7 +486,7 @@ td{
 		background: transparent;
 		border: none;
 		padding: 10px;
-		/*border-radius: 5px;*/
+		border-radius: 5px; /* Arrondi des bords */
 		transition: all 0.2s;
 	}
 
