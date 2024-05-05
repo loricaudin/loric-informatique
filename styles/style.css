@@ -3,6 +3,8 @@
 html {
 	scroll-behavior: smooth;
 	--couleur-principale: rgb(80, 58, 192);
+	--couleur-principale-hover: rgb(110, 88, 222);
+	--couleur-principale-focus: rgb(130, 108, 242);
 }
 
 body{
@@ -62,16 +64,16 @@ img{
 	cursor: pointer;
 	padding: 10px;
 	border-radius: 5px;
-	background-color: rgba(58, 58, 255, 0.7);
+	background-color: var(--couleur-principale);
 	transition: all 0.2s;
 }
 
 .telecharger:hover, .imprimer:hover{
-	background-color: rgba(58, 58, 255, 0.9);
+	background-color: var(--couleur-principale-hover);
 }
 
 .telecharger:focus, .imprimer:focus{
-	background-color: rgba(58, 58, 255, 1);
+	background-color: var(--couleur-principale-focus);
 }
 
 .bouton-simple{
@@ -84,16 +86,16 @@ img{
 	margin-bottom: 30px;
 	padding: 10px;
 	border-radius: 5px;
-	background-color: rgb(58, 58, 255);
+	background-color: var(--couleur-principale);
 	transition: all 0.2s;
 }
 
 .bouton-simple:hover{
-	background-color: rgb(88, 88, 255);
+	background-color: var(--couleur-principale-hover);
 }
 
 .bouton-simple:focus{
-	background-color: rgba(118, 118, 255);
+	background-color: var(--couleur-principale-focus);
 }
 
 /* Header */

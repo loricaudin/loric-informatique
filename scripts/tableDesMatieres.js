@@ -14,7 +14,12 @@ function ajoutersoustitre(soustitre, id, nbIndentations){
     tableDesMatieres.append(p);
 }
 
+function ajouterNumero(soustitre){
+    soustitre.innerHTML = soustitre.id + " " + soustitre.innerHTML
+}
+
 let soustitres = document.querySelectorAll(".soustitre");
 for(let i = 0; i < soustitres.length; i++){
+    ajouterNumero(soustitres[i]);
     ajoutersoustitre(soustitres[i].textContent, soustitres[i].id, soustitres[i].tagName[1] - 1);
 }
