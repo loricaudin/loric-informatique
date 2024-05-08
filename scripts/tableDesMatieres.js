@@ -15,7 +15,7 @@ function ajoutersoustitre(soustitre, id, nbIndentations){
 }
 
 function ajouterNumero(soustitre){
-    soustitre.innerHTML = soustitre.id + " " + soustitre.innerHTML
+    soustitre.innerHTML = soustitre.id + ". " + soustitre.innerHTML
 }
 
 let soustitres = document.querySelectorAll(".soustitre");

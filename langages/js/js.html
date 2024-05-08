@@ -31,7 +31,7 @@
                     <li>Navigateur Internet à jour (ex : Firefox ou Chrome)</li>
 					<li>Un logiciel de codage (Visual Studio Code (recommandé) ou Notepad++)</li>
 					<li>Connaissances en HTML et CSS</li>
-					<li>Validateur JS : <a href="" target="_blank"></a></li>
+					<li>Validateur JS : <a href="" target="_blank">https://jshint.com/</a> (faire précéder son code par // jshint browser:true, eqeqeq:true, undef:true, devel:true, esversion: 6)</li>
                 </ul>
             </section>
             <section>
@@ -41,9 +41,9 @@
                 </div>
             </section>
             <article>
-				<h2 class="soustitre" id="I.">Bases</h2>
+				<h2 class="soustitre" id="I">Bases</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="I.1.">Syntaxe</h3>
+					<h3 class="soustitre" id="I.1">Syntaxe</h3>
 					<div class="contenu">
 						<p class="script">
 							<span class="perso">instruction1</span>;<br/>
@@ -51,15 +51,15 @@
 							<span class="perso">instruction3</span>;
 						</p>
 					</div>
-					<h3 class="soustitre" id="I.2.">Où écrire le code JS ?</h3>
+					<h3 class="soustitre" id="I.2">Où écrire le code JS ?</h3>
 					<div class="contenu">
 						<p>Soit dans un fichier (ex : script.js), mais entre les balises <span class="script">&lt;body&gt;&lt;/body&gt;, il faut rajouter : <span class="script">&lt;script src="<span class="perso">script.js</span>"&gt;&lt;/script&gt;</span> au moment où on souhaite appeler le script (ou bien entre les balises <span class="script">&lt;head&gt;&lt;/head&gt;</span>, il faut rajouter : <span class="script">&lt;script src="<span class="perso">script.js</span>" defer&gt;&lt;/script&gt;</span> pour l'appeler à la fin du chargement du site)</p>
 						<p>Soit entre les balises <span class="script">&lt;script&gt;&lt;/script&gt;</span>, placées dans <span class="script">&lt;body&gt;&lt;/body&gt; au moment où on souhaite appeler le script</span> (à éviter)</p>
 					</div>
-					<h3 class="soustitre" id="I.3.">Types de variables</h3>
+					<h3 class="soustitre" id="I.3">Types de variables</h3>
                     <div class="contenu">
                         <p>Fonction pour connaître le type : <span class="script">typeof(<span class="perso">variable</span>)</span></p>
-                        <h4 class="soustitre" id="I.3.1.">Types de base</h4>
+                        <h4 class="soustitre" id="I.3.1">Types de base</h4>
                         <div class="contenu">
                             <table>
                                 <tr>
@@ -91,7 +91,7 @@
                                 -->
                             </table>
                         </div>
-                        <h4 class="soustitre" id="I.3.2.">Autres types</h4>
+                        <h4 class="soustitre" id="I.3.2">Autres types</h4>
                         <div class="contenu">
                             <table>
                                 <tr>
@@ -115,7 +115,7 @@
                             </table>
                         </div>
                     </div>
-					<h3 class="soustitre" id="I.4.">Commentaires</h3>
+					<h3 class="soustitre" id="I.4">Commentaires</h3>
 					<div class="contenu">
 						<p class="script commentaire">
 							//Commentaire tenant sur une ligne
@@ -126,7 +126,7 @@
 							*/
 						</p>
 					</div>
-					<h3 class="soustitre" id="I.5.">Opérations</h3>
+					<h3 class="soustitre" id="I.5">Opérations</h3>
 					<div class="contenu">
 						<table>
 							<tr>
@@ -169,7 +169,7 @@
 							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="I.6.">Les variables</h3>
+					<h3 class="soustitre" id="I.6">Les variables</h3>
 					<div class="contenu">
 						<table>
 							<!--
@@ -228,7 +228,7 @@
 							</tr>
 						</table>
 					</div>
-					<h3 class="soustitre" id="I.7.">Les tableaux</h3>
+					<h3 class="soustitre" id="I.7">Les tableaux</h3>
 					<div class="contenu">
 						<table>
 							<!--
@@ -281,10 +281,10 @@
                             </tr>
 						</table>
 					</div>
-					<h3 class="soustitre" id="I.8.">Conditions</h3>
+					<h3 class="soustitre" id="I.8">Conditions</h3>
 					<div class="contenu">
 						<p>Les conditions renvoient true si elle est respectée et false sinon</p>
-						<h4 class="soustitre" id="I.8.1.">Opérateurs de comparaison</h4>
+						<h4 class="soustitre" id="I.8.1">Opérateurs de comparaison</h4>
 						<div class="contenu">
 							<table>
 								<!--
@@ -343,7 +343,7 @@
 								</tr>
 							</table>
 						</div>
-						<h4 class="soustitre" id="I.8.2.">Tests de conditions</h4>
+						<h4 class="soustitre" id="I.8.2">Tests de conditions</h4>
 						<div class="contenu">
 							<table>
 								<!--
@@ -420,7 +420,7 @@
 							</table>
 						</div>
 					</div>
-					<h3 class="soustitre" id="I.9.">Boucles</h3>
+					<h3 class="soustitre" id="I.9">Boucles</h3>
 					<div class="contenu">
 						<table>
 							<!--
@@ -473,11 +473,11 @@
 						</table>
 					</div>
 				</div>
-				<h2 class="soustitre" id="II.">Les fonctions et les classes</h2>
+				<h2 class="soustitre" id="II">Les fonctions et les classes</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="II.1.">Les fonctions</h3>
+					<h3 class="soustitre" id="II.1">Les fonctions</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="II.1.1.">Créer une fonction</h4>
+						<h4 class="soustitre" id="II.1.1">Créer une fonction</h4>
 						<div class="contenu">
 							<p class="script">
 							function <span class="perso">maFonction</span>(<span class="perso">variable1</span>, <span class="perso">variable2</span>…) {<br/>
@@ -485,11 +485,11 @@
 							}<br/>
 							</p>
 						</div>
-						<h4 class="soustitre" id="II.1.2.">Retourner une valeur de la fonction</h4>
+						<h4 class="soustitre" id="II.1.2">Retourner une valeur de la fonction</h4>
 						<div class="contenu">
 							<p class="script">return <span class="perso">variable</span>;</p>
 						</div>
-						<h4 class="soustitre" id="II.1.3.">Faire un appel à la fonction</h4>
+						<h4 class="soustitre" id="II.1.3">Faire un appel à la fonction</h4>
 						<div class="contenu">
 							<p class="script"><span class="perso">variable</span> = <span class="perso">maFonction</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);</p>
 							<p>ou (s'il n'y a pas de variable de retour)</p>
@@ -497,9 +497,9 @@
 						</div>
 						<!-- <div class="note">Remarque : il est possible de faire une surcharge de fonctions, c'est-à-dire qu’il est possible de créer deux fonctions identiques avec des paramètres de types différents, ce qui permet à l'interpréteur de choisir la fonction correspondant au type de variables saisies. Idem pour les constructeurs des classes.</div> -->
 					</div>
-					<h3 class="soustitre" id="II.2.">Les classes</h3>
+					<h3 class="soustitre" id="II.2">Les classes</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="II.2.1.">Créer une classe</h4>
+						<h4 class="soustitre" id="II.2.1">Créer une classe</h4>
 						<div class="contenu">
 							<p class="script">
 								class <span class="perso">MaClasse</span> {<br/>
@@ -518,11 +518,11 @@
 							</div>
 							-->
 						</div>
-						<h4 class="soustitre" id="II.2.2.">Définir la classe dans un objet</h4>
+						<h4 class="soustitre" id="II.2.2">Définir la classe dans un objet</h4>
 						<div class="contenu">
 							<p class="script">var <span class="perso">monObjet</span> = new <span class="perso">MaClasse</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);</p>
 						</div>
-						<h4 class="soustitre" id="II.2.3.">Créer une méthode (dans une classe)</h4>
+						<h4 class="soustitre" id="II.2.3">Créer une méthode (dans une classe)</h4>
 						<div class="contenu">
 							<p class="script">
 								get <span class="perso">maMethode</span>(<span class="perso">variable1</span>, <span class="perso">variable2</span>…) {<br/>
@@ -531,27 +531,27 @@
 							</p>
 							<div class="note">Vous pouvez également créer des méthodes statiques en remplaçant get par static.</div>
 						</div>
-						<h4 class="soustitre" id="II.2.5.">Faire un appel d’une méthode autre que le constructeur ou d’une variable dans une classe</h4>
+						<h4 class="soustitre" id="II.2.4">Faire un appel d’une méthode autre que le constructeur ou d’une variable dans une classe</h4>
 						<div class="contenu">
 							<p class="script">this.<span class="perso">maMethode</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…)</p>
 							<p class="script">this.<span class="perso">variable1</span> = <span class="perso">valeur1</span></span>;</p>
 						</div>
-						<h4 class="soustitre" id="II.2.6.">Faire un appel d’une méthode autre que le constructeur ou d’une variable en dehors d'une classe</h4>
+						<h4 class="soustitre" id="II.2.5">Faire un appel d’une méthode autre que le constructeur ou d’une variable en dehors d'une classe</h4>
 						<div class="contenu">
 							<p class="script"><span class="perso">monObjet</span>.<span class="perso">maMethode</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…)</p>
 							<p class="script"><span class="perso">monObjet</span>.<span class="perso">variable1</span> = <span class="perso">valeur1</span></span>;</p>
 							<div class="attention">Il est préférable d'utiliser des méthodes (appelées getter et setter) pour modifier les variables non statiques.</div>
 						</div>
-						<h4 class="soustitre" id="II.2.7.">Faire un appel d’une méthode ou d’une variable statique en dehors d'une classe</h4>
+						<h4 class="soustitre" id="II.2.6">Faire un appel d’une méthode ou d’une variable statique en dehors d'une classe</h4>
 						<div class="contenu">
 							<p class="script"><span class="perso">MaClasse</span>.<span class="perso">maMethode</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…)</p>
 							<p class="script"><span class="perso">MaClasse</span>.<span class="perso">variable1</span> = <span class="perso">valeur1</span></span>;</p>
 						</div>
 					</div>
 				</div>
-				<h2 class="soustitre" id="III.">Les instructions</h2>
+				<h2 class="soustitre" id="III">Les instructions</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="III.1.">Instructions de bases</h3>
+					<h3 class="soustitre" id="III.1">Instructions de bases</h3>
 					<div class="contenu">
 						<table>
 							<tr>
@@ -590,11 +590,11 @@
 							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.2.">Instructions sur les éléments HTML</h3>
+					<h3 class="soustitre" id="III.2">Instructions sur les éléments HTML</h3>
 					<div class="contenu">
 						<div class="todo">Non fini</div>
 					</div>
-					<h3 class="soustitre" id="III.3.">Math</h3>
+					<h3 class="soustitre" id="III.3">Math</h3>
 					<div class="contenu">
 						<table>
 							<tr>
@@ -621,7 +621,7 @@
 					</div>
 				</div>
 				<div class="todo">À venir : les importations et exportations</div>
-				<!-- <h2 class="soustitre" id="IV.">Les bibliothèques</h2>
+				<!-- <h2 class="soustitre" id="IV">Les bibliothèques</h2>
 				<div class="contenu"></div> -->
 			</article>
 		</main>

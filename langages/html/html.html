@@ -40,9 +40,9 @@
                 </div>
             </section>
             <article>
-				<h2 class="soustitre" id="I.">Bases</h2>
+				<h2 class="soustitre" id="I">Bases</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="I.1.">Syntaxe</h3>
+					<h3 class="soustitre" id="I.1">Syntaxe</h3>
 					<div class="contenu">
 						<p class="script"> <!-- &lt; &nbsp; &gt; -->
 							&lt;!DOCTYPE html&gt;<br/>
@@ -61,11 +61,11 @@
 							&lt;/html&gt;<br/>
 						</p>
 					</div>
-					<h3 class="soustitre" id="I.2.">Où écrire le code HTML ?</h3>
+					<h3 class="soustitre" id="I.2">Où écrire le code HTML ?</h3>
 					<div class="contenu">
 						<p>Dans un fichier .html ou dans un fichier .php pour les serveurs compatibles, entre les balises &lt;body&gt;&lt;/body&gt;</p>
 					</div>
-					<h3 class="soustitre" id="I.3.">Commentaires</h3>
+					<h3 class="soustitre" id="I.3">Commentaires</h3>
 					<div class="contenu">
 						<p class="script commentaire">
 							&lt;!--<br/>
@@ -74,37 +74,63 @@
 						</p>
 					</div>
 				</div>
-				<h2 class="soustitre" id="II.">Le head</h2>
+				<h2 class="soustitre" id="II">Le head</h2>
 				<div class="contenu">
 					<p>Le head permet la configuration de la page web.</p>
-					<h3 class="soustitre" id="II.1.">Les balises de base</h3>
-					<div class="contenu">
-						<tr>
-							<th>Balise</th>
-							<th>Description</th>
-						</tr>
-						<tr>
-							<td class="script">&lt;title&gt;Mon titre&lt;/title&gt;</td>
-							<td>Changer le titre au niveau de l'onglet</td>
-						</tr>
-						<!--
-						<tr>
-							<td class="script">&lt;&gt;Contenu&lt;/&gt;</td>
-							<td></td>
-						</tr>
-						-->
-					</div>
+					<!--
+					<h3 class="soustitre" id="II.1">Les balises de base</h3>
+					<div class="contenu">-->
+						<table>
+							<tr>
+								<th>Balise</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">&lt;title&gt;Mon titre&lt;/title&gt;</td>
+								<td>Changer le titre au niveau de l'onglet</td>
+							</tr>
+							<tr>
+								<td class="script">&lt;meta charset="utf-8"/&gt;</td>
+								<td>Changer l'encodage</td>
+							</tr>
+							<tr>
+								<td class="script">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</td>
+								<td>Adapter l'affichage pour les appareils mobiles</td>
+							</tr>
+							<tr>
+								<td class="script">&lt;meta name="robots" content="noindex, nofollow"/&gt;</td>
+								<td>Ne pas indexer cette page par les moteurs de recherches (si le site est disponible en ligne)</td>
+							</tr>
+							<tr>
+								<td class="script">&lt;link rel="icon" href="<span class="perso">icone.png</span>"/&gt;</td>
+								<td>Changer l'icône au niveau de l'onglet</td>
+							</tr>
+							<tr>
+								<td class="script">&lt;link rel="stylesheet" href ="<span class="perso">style.css</span>"/&gt;</td>
+								<td>Appliquer une feuille de style à la page HTML (un attribut media peut être renseigné)</td>
+							</tr>
+							<!--
+							<tr>
+								<td class="script">&lt;&gt;Contenu&lt;/&gt;</td>
+								<td></td>
+							</tr>
+							-->
+						</table>
+					<!-- </div> -->
 					<!--
 					<h3 class="soustitre" id=""></h3>
 					<div class="contenu">
 
 					</div>
 					-->
+					<div class="note">Certaines balises sont auto-fermantes comme &lt;link/&gt;. En HTML, le "/" n'est pas obligatoire, mais conseillé pour une meilleure lisibilité. Dans d'autres langages, il peut être obligatoire (notamment en XML et dans les frameworks JS)</div>
+					<br/>
+					<div class="note">Astuce : Sous certains outils de développement comme Visual Studio Code, vous pouvez utiliser Emet afin de générer automatiquement l'entête du fichier HTML. Il suffit d'entrer "!" et la structure de base se génère toute seule.</div>
 				</div>
-				<h2 class="soustitre" id="III.">Le body</h2>
+				<h2 class="soustitre" id="III">Le body</h2>
 				<div class="contenu">
 					<p>Le body est tout le contenu qui sera affiché dans la page web.</p>
-					<h3 class="soustitre" id="III.1.">Les balises de base</h3>
+					<h3 class="soustitre" id="III.1">Les balises de base</h3>
 					<div class="contenu">
 						<table>
 							<tr>
@@ -196,7 +222,7 @@
 							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.2.">Les sections</h3>
+					<h3 class="soustitre" id="III.2">Les sections</h3>
 					<div class="contenu">
 						<table>
 							<tr>
@@ -235,7 +261,7 @@
 							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.3.">Les liens</h3>
+					<h3 class="soustitre" id="III.3">Les liens</h3>
 					<div class="contenu">
 						<p>Syntaxe : <span class="script">&lt;a href="<span class="perso">lien</span>"&gt;Cliquez ici&lt;/a&gt;</span></p>
 						<table>
@@ -269,7 +295,7 @@
 							</tr>
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.4.">Les images</h3>
+					<h3 class="soustitre" id="III.4">Les images</h3>
 					<div class="contenu">
 						<p>Syntaxe : <span class="script">&lt;img src="<span class="perso">lien</span>" alt="<span class="perso">texte-de-remplacement</span>"/&gt;</span></p>
 						<table>
@@ -287,7 +313,7 @@
 							</tr>
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.5.">Les listes</h3>
+					<h3 class="soustitre" id="III.5">Les listes</h3>
 					<div class="contenu">
 						<table>
 							<tr>
@@ -331,7 +357,7 @@
 							</tr>
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.6.">Les tableaux</h3>
+					<h3 class="soustitre" id="III.6">Les tableaux</h3>
 					<div class="contenu">
 						<table>
 							<tr>
@@ -428,10 +454,10 @@
 							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.7.">Les formulaires</h3>
+					<h3 class="soustitre" id="III.7">Les formulaires</h3>
 					<div class="contenu">
 						<p>Un formulaire permet l'envoi de données vers un serveur, avec pour action le lien vers une page PHP (ne fonctionne pas avec pour action un fichier .html).</p>
-						<h4 class="soustitre" id="III.7.1.">Créer un formulaire</h4>
+						<h4 class="soustitre" id="III.7.1">Créer un formulaire</h4>
 						<div class="contenu">
 							<p>Syntaxe : <span class="script">&lt;form method="<span class="perso">methode</span>" action="<span class="perso">lien</span>"&gt;<span class="perso">champs</span>&lt;/form&gt;</span></p>
 							<table>
@@ -449,7 +475,7 @@
 								</tr>
 							</table>
 						</div>
-						<h4 class="soustitre" id="III.7.2.">Types de champs</h4>
+						<h4 class="soustitre" id="III.7.2">Types de champs</h4>
 						<div class="contenu">
 							<table>
 								<tr>
@@ -680,7 +706,7 @@
 							</table>
 							<div class="attention">Chaque champ doit être précédé ou suivi par <span class="script">&lt;label for="id_champ"&gt;Mon champ&lt;/label&gt;</span> pour une meilleure accessibilité. Il est également possible de placer le champ dans le label, dans ce cas l'attribut for n'est pas nécessaire.</div>
 						</div>
-						<h4 class="soustitre" id="III.7.3.">Autres attributs pour les champs</h4>
+						<h4 class="soustitre" id="III.7.3">Autres attributs pour les champs</h4>
 						<div class="contenu">
 							<table>
 								<tr>
