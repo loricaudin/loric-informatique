@@ -15,6 +15,10 @@ body{
 	background: rgb(250, 250, 250);
 }
 
+.affichagePrint{
+	display: none;
+}
+
 h1{
 	font-size: 25px;
 }
@@ -582,6 +586,18 @@ td{
 /* ---------- Affichage PDF ---------- */
 @media print {
 	/* Commun à toutes les pages */
+	html{
+		--hauteur-papier-A4: calc(29.7cm - 2in);
+	}
+
+	.affichagePrint{
+		display: block;
+	}
+
+	.decoration{
+		position: fixed;
+	}
+
 	@page {
 		size: auto;
 		/*margin: 0;*/
