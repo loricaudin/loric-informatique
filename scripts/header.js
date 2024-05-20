@@ -24,10 +24,10 @@ for(let j = 1; j < niveau; j++){
 let header = document.querySelector("header");
 header.innerHTML = /*html*/
 `
-	<div class="titre">
+	<a class="titre" href="${emplacementRacine + 'index.html'}">
 		<img id="icon" src="${emplacementRacine + 'images/icone.png'}"/>
 		<h1>Loric Informatique</h1>
-	</div>
+	</a>
     <button id="bouton-menu-nav">
         <div>
             <div id="bar-nav-1"></div>

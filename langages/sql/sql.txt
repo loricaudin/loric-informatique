@@ -1,3 +1,0 @@
-CASE ? page 31 sh
-EXISTS : p78 sh
-EXPLAIN : p85

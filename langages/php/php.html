@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
 	<head>
-		<title>Loric Informatique - JavaScript</title>
+		<title>Loric Informatique - PHP</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="robots" content="noindex, nofollow">
@@ -16,14 +16,15 @@
 			<section class="presentation">
 				<div class="alignementVertical">
 					<div>
-						<h1>JavaScript</h1>
-						<p class="version">Version 0.1 (créé le 20/04/2024, modifié le 20/04/2024)</p>
-                        <p>JS (JavaScript) est un langage de programmation côté client qui ajoute de l'interactivité au site web.</p>
-						<a href="Loric Informatique - JavaScript.pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
+						<h1>PHP</h1>
+						<p class="version">Version 0.1 (créé le XX/XX/XXXX, modifié le XX/XX/XXXX)</p>
+                        <p>PHP est un langage de programmation côté serveur qui donne un côté dynamique au site web avec une interaction à une base de données.</p>
+						<a href="Loric Informatique - PHP.pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
 						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
 					</div>
-					<img src="icone_js.png" class="logoLangage">
+					<img src="icone_php.png" class="logoLangage">
 				</div>
+				<div class="todo">Attention : Le mémento est en cours d'écriture. Il manque encore pas mal d'informations et des informations sont incorrectes car une copie du mémento JS a été effectuée.</div>
 			</section>
             <section class="outils">
                 <h2>Outils nécessaires :</h2>
@@ -31,7 +32,7 @@
                     <li>Navigateur Internet à jour (ex : Firefox ou Chrome)</li>
 					<li>Un logiciel de codage (Visual Studio Code (recommandé) ou Notepad++)</li>
 					<li>Connaissances en HTML et CSS</li>
-					<li>Validateur JS : <a href="" target="_blank">https://jshint.com/</a> (faire précéder son code par // jshint browser:true, eqeqeq:true, undef:true, devel:true, esversion: 6)</li>
+					<li></li>
                 </ul>
             </section>
             <section>
@@ -51,10 +52,9 @@
 							<span class="perso">instruction3</span>;
 						</p>
 					</div>
-					<h3 class="soustitre" id="I.2">Où écrire le code JS ?</h3>
+					<h3 class="soustitre" id="I.2">Où écrire le code PHP ?</h3>
 					<div class="contenu">
-						<p>Soit dans un fichier (ex : script.js), mais entre les balises <span class="script">&lt;body&gt;&lt;/body&gt;, il faut rajouter : <span class="script">&lt;script src="<span class="perso">script.js</span>"&gt;&lt;/script&gt;</span> au moment où on souhaite appeler le script (ou bien entre les balises <span class="script">&lt;head&gt;&lt;/head&gt;</span>, il faut rajouter : <span class="script">&lt;script src="<span class="perso">script.js</span>" defer&gt;&lt;/script&gt;</span> pour l'appeler à la fin du chargement du site)</p>
-						<p>Soit entre les balises <span class="script">&lt;script&gt;&lt;/script&gt;</span>, placées dans <span class="script">&lt;body&gt;&lt;/body&gt; au moment où on souhaite appeler le script</span> (à éviter)</p>
+						<p>Dans un fichier php, qui est un html compatible avec du php, mais obligatoirement entre les balises <span class="script">&lt;?php ?&gt;, placé à n'importe quel endroit dans le fichier.</p>
 					</div>
 					<h3 class="soustitre" id="I.3">Types de variables</h3>
                     <div class="contenu">

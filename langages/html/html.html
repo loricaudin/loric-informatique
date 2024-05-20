@@ -17,7 +17,7 @@
 				<div class="alignementVertical">
 					<div>
 						<h1>HTML</h1>
-						<p class="version">Version 0.3 (créé le 20/04/2024, modifié le 20/04/2024)</p>
+						<p class="version">Version 1.0 (créé le 20/04/2024, modifié le 27/05/2024)</p>
                         <p>HTML (HyperText Markup Language) est le langage utilisé pour structurer une page web et son contenu. On peut par exemple organiser le contenu en un ensemble de paragraphes, une liste d'éléments, utiliser des images ou des tableaux de données.</p>
 						<a href="Loric Informatique - HTML.pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
 						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de choisir le format A4, de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
@@ -213,6 +213,11 @@
 									</fieldset>
 								</td>
 							</tr>
+							<tr>
+								<td class="script">&lt;code&gt;Mon code&lt;/code&gt;</td>
+								<td><code>Mon code</code></td>
+								<td>Écrire du code</td>
+							</tr>
 							<!--
 							<tr>
 								<td class="script">&lt;balise&gt;Contenu&lt;/balise&gt;</td>
@@ -291,27 +296,64 @@
 							</tr>
 							<tr>
 								<td class="script">target="_top"</td>
-								<td><a target="_top">Ouvrir la page dans une fenêtre séparée</a></td>
+								<td>Ouvrir la page dans une fenêtre séparée</td>
 							</tr>
 						</table>
 					</div>
 					<h3 class="soustitre" id="III.4">Les images</h3>
 					<div class="contenu">
-						<p>Syntaxe : <span class="script">&lt;img src="<span class="perso">lien</span>" alt="<span class="perso">texte-de-remplacement</span>"/&gt;</span></p>
-						<table>
-							<tr>
-								<th>Attribut</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td class="script">src="<span class="perso">lien</span>"</td>
-								<td>Récupérer la source de l'image (chemin absolu ou relatif)</td>
-							</tr>
-							<tr>
-								<td class="script">alt="<span class="perso">texte-de-remplacement</span>"</td>
-								<td>Remplacer l'image par du texte si le chargement a échoué</td>
-							</tr>
-						</table>
+						<h4 class="soustitre" id="III.4.1">Les images simples</h4>
+						<div class="contenu">
+							<p>Syntaxe : <span class="script">&lt;img src="<span class="perso">lien</span>" alt="<span class="perso">texte-de-remplacement</span>"/&gt;</span></p>
+							<table>
+								<tr>
+									<th>Attribut</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td class="script">src="<span class="perso">lien</span>"</td>
+									<td>Récupérer la source de l'image (chemin absolu ou relatif)</td>
+								</tr>
+								<tr>
+									<td class="script">alt="<span class="perso">texte-de-remplacement</span>"</td>
+									<td>Remplacer l'image par du texte si le chargement a échoué</td>
+								</tr>
+							</table>
+						</div>
+						<h4 class="soustitre" id="III.4.2">Les images complexes</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Balise</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;picture&gt;<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&lt;source srcset="<span class="perso">image</span>.avif" type="image/avif"/&gt;<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&lt;source srcset="<span class="perso">image</span>.webp" type="image/webp"/&gt;<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="<span class="perso">image</span>.jpg" alt="<span class="perso">description</span>"/&gt;<br/>
+										&lt;/picture&gt;<br/>
+									</td>
+									<td>Ajouter une image qui récupère la première source compatible</td>
+								</tr>
+								<tr>
+									<td class="script">
+										&lt;figure&gt;<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&lt;picture&gt;<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source srcset="<span class="perso">image</span>.avif" type="image/avif"/&gt;<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source srcset="<span class="perso">image</span>.webp" type="image/webp"/&gt;<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="<span class="perso">image</span>.jpg" alt="<span class="perso">description</span>"/&gt;<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&lt;/picture&gt;<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&lt;figcaption&gt;<br/>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Source : &lt;a href="<span class="perso">lienVersImageDOrigine</span>.jpg"&gt;<span class="perso">Nom de la source</span>&lt;/a&gt;
+										&nbsp;&nbsp;&nbsp;&nbsp;&lt;/figcaption&gt;<br/>
+										&lt;/figure&gt;
+									</td>
+									<td>Ajouter une image associée à une légende</td>
+								</tr>
+							</table>
+						</div>
 					</div>
 					<h3 class="soustitre" id="III.5">Les listes</h3>
 					<div class="contenu">
@@ -744,8 +786,100 @@
 							</table>
 						</div>
 					</div>
+					<h3 class="soustitre" id="III.8">Les audios</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th>Balise</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">
+									&lt;audio controls&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">musique</span>.ogg" type="audio/ogg"/&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">musique</span>.mp3" type="audio/mpeg"/&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;Lecture impossible<br/>
+									&lt;/audio&gt;
+								</td>
+								<td>Ajouter un audio qui récupère la première source compatible (controls permet d'afficher les éléments de contrôle de l'audio)</td>
+							</tr>
+							<tr>
+								<td class="script">
+									&lt;audio autoplay controls&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">musique</span>.ogg" type="audio/ogg"/&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">musique</span>.mp3" type="audio/mpeg"/&gt;<br/>
+									&lt;/audio&gt;
+								</td>
+								<td>Ajouter un audio qui démarre automatiquement (peut être bloqué par certains navigateurs)</td>
+							</tr>
+							<tr>
+								<td class="script">
+									&lt;audio loop controls&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">musique</span>.ogg" type="audio/ogg"/&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">musique</span>.mp3" type="audio/mpeg"/&gt;<br/>
+									&lt;/audio&gt;
+								</td>
+								<td>Ajouter un audio répété en boucle</td>
+							</tr>
+							<tr>
+								<td class="script">
+									&lt;audio muted controls&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">musique</span>.ogg" type="audio/ogg"/&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">musique</span>.mp3" type="audio/mpeg"/&gt;<br/>
+									&lt;/audio&gt;
+								</td>
+								<td>Ajouter un audio avec un son coupé par défaut</td>
+							</tr>
+						</table>
+					</div>
+					<h3 class="soustitre" id="III.9">Les vidéos</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th>Balise</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">
+									&lt;video width="100px" height="100px" controls&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">video</span>.ogg" type="video/ogg"/&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">video</span>.mp4" type="video/mp4"/&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;Lecture impossible<br/>
+									&lt;/audio&gt;
+								</td>
+								<td>Ajouter une vidéo qui récupère la première source compatible (controls permet d'afficher les éléments de contrôle de la vidéo)</td>
+							</tr>
+							<tr>
+								<td class="script">
+									&lt;video autoplay controls&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">video</span>.ogg" type="video/ogg"/&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">video</span>.mp4" type="video/mp4"/&gt;<br/>
+									&lt;/video&gt;
+								</td>
+								<td>Ajouter une vidéo qui démarre automatiquement (peut être bloquée par certains navigateurs)</td>
+							</tr>
+							<tr>
+								<td class="script">
+									&lt;video loop controls&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">video</span>.ogg" type="video/ogg"/&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">video</span>.mp4" type="video/mp4"/&gt;<br/>
+									&lt;/video&gt;
+								</td>
+								<td>Ajouter une vidéo répétée en boucle</td>
+							</tr>
+							<tr>
+								<td class="script">
+									&lt;video muted controls&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">video</span>.ogg" type="video/ogg"/&gt;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">video</span>.mp4" type="video/mp4"/&gt;<br/>
+									&lt;/video&gt;
+								</td>
+								<td>Ajouter une vidéo avec un son coupé par défaut</td>
+							</tr>
+						</table>
+					</div>
 					<!--
-					<h3 class="soustitre" id=""></h3>
+					<h3 class="soustitre" id="III."></h3>
 					<div class="contenu">
 						<table>
 							<tr>
@@ -774,6 +908,7 @@
 		</main>
 		<footer>
 			<script src="../../scripts/footer.js"></script>
+			<a class="top" href="#"><img src="../../images/top.png"></a>
 		</footer>
 	</body>
 	<script src="../../scripts/script.js"></script>

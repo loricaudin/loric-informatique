@@ -102,6 +102,26 @@ img{
 	background-color: var(--couleur-principale-focus);
 }
 
+.top{
+	position:fixed;
+	bottom:30px;
+	right:30px;
+	border-radius: 5px; /* Arrondi des bords */
+	transition: all 0.2s;
+}
+
+.top img{
+	width:50px;
+}
+
+.top:hover{
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.modeSombre .top:hover{
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
 /* Header */
 header{
 	display: flex;
@@ -125,6 +145,8 @@ header, header .titre, header nav, header nav ul, header nav ul li{
 }
 
 header .titre{
+	text-decoration: none;
+	color: black;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -232,10 +254,14 @@ main{
 	width: 500px;
 }
 
-/* Astuces */
+/* Astuces et aides */
 .recherche{
 	display: flex;
 	flex-direction: column;
+}
+
+.outils{
+	margin-bottom: 50px;
 }
 
 .astuce{
@@ -268,9 +294,12 @@ main{
 	height: 50px;
 }
 
+.logoAstuce{
+	max-height: 200px;
+}
+
 /* Page d'un language */
 .pageLangage .logoLangage{
-	max-width: 200px;
 	max-height: 200px;
 }
 
@@ -384,9 +413,17 @@ td{
 	color: white;
 }
 
+.modeSombre .bouton-simple{
+	color: white;
+}
+
 /* Header */
 .modeSombre header{
 	background: rgba(255, 255, 255, 0.03);
+}
+
+.modeSombre header .titre{
+	color: white;
 }
 
 .modeSombre header h1{
@@ -431,8 +468,18 @@ td{
 }
 
 /* Astuces et Aides */
-.outils{
-	margin-bottom: 50px;
+.modeSombre .astuce{
+	color: white;
+	border-radius: 5px; /* Arrondi des bords */
+	transition: all 0.5s;
+}
+
+.modeSombre .astuce:hover{
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+.modeSombre .astuce:focus{
+	background-color: rgba(58, 58, 255, 0.5);
 }
 
 /* A propos */
@@ -609,6 +656,10 @@ td{
 		/*margin: 1cm;*/
 		/*-webkit-print-color-adjust: exact;*/ /* Fonctionne sur Chrome */
     	/*print-color-adjust: exact;*/ /* Fonctionne sur Firefox */
+	}
+
+	.top{
+		display: none;
 	}
 
 	.modeSombre{

@@ -1,2 +1,0 @@
-Les regex (expression régulière)
-Listes déroulantes outgroup

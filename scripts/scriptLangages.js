@@ -28,7 +28,7 @@ let listeLangages = [
     ["HTML", "html", "html", "rgba(229, 76, 33, .5)", ""],
     ["CSS", "css", "css", "rgba(26, 77, 228, .5)", ""],
     ["JavaScript", "js", "js", "rgba(247, 223, 30, .5)", ""],
-    //["PHP", "php", "php", "", ""],
+    ["PHP", "php", "php", "rgba(122, 134, 184, .5)", ""],
     ["MySQL", "sql", "mysql", "rgba(228, 142, 0, .5)", ""],
     ["Oracle Database (SQL)", "sql", "oracledatabase", "rgba(250, 100, 100, .5)", ""],
     //["SQLite", "sql", "sqlite", "", ""],
@@ -39,6 +39,7 @@ let listeLangages = [
     ["Java", "java", "java", "rgba(240, 145, 17, .5)", ""],
     //["Android", "android", "android", "", ""],
     //["ReactJS", "js", "reactjs", "", ""]
+    //["ReactJS", "js", "vuejs", "", ""]
 ];
 
 for(let i = 0; i < listeLangages.length; i++){
