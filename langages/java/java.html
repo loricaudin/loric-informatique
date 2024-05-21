@@ -17,7 +17,7 @@
 				<div class="alignementVertical">
 					<div>
 						<h1>Java</h1>
-						<p class="version">Version 0.6 (créé le 14/01/2024, modifié le 20/04/2024)</p>
+						<p class="version">Version 0.7 (créé le 14/01/2024, modifié le 21/05/2024)</p>
                         <p>Java est un langage de programmation de haut niveau orienté objet qui reprend en grande partie la syntaxe du langage C++. Néanmoins, Java est épuré des concepts les plus subtils du C++ et à la fois les plus déroutants, tels que les pointeurs et références, ou l’héritage multiple contourné par l’implémentation des interfaces.</p>
 						<a href="Loric Informatique - Java.pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
 						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de choisir le format A4, de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
@@ -687,13 +687,13 @@
 									La méthode <span class="script">super()</span> permet d’appeler le constructeur de la classe initiale.
 								</div>
 							</div>
-							<h5 class="soustitre" id="II.3.2.2">Définir la classe dans un objet</h5>
+							<h5 class="soustitre" id="II.3.4.2">Définir la classe dans un objet</h5>
 							<div class="contenu">
 								<p class="script"><span class="perso">MaClasse monObjet</span> = new <span class="perso">MaClasseHeritee</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…, <span class="perso">valeur4</span>, <span class="perso">valeur5</span>…);</p>
 								<p>ou</p>
 								<p class="script"><span class="perso">MaClasseHeritee monObjet</span> = new <span class="perso">MaClasseHeritee</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…, <span class="perso">valeur4</span>, <span class="perso">valeur5</span>…);</p>
 							</div>
-							<h5 class="soustitre" id="II.3.2.3">Ajouter un affichage d’un message de la part de la classe (lors de l’exécution de System.out.println(<span class="perso">monObjet</span>)):</h5>
+							<h5 class="soustitre" id="II.3.4.3">Ajouter un affichage d’un message de la part de la classe (lors de l’exécution de System.out.println(<span class="perso">monObjet</span>)):</h5>
 							<div class="contenu">
 								<p class="script">
 									public String toString() {<br/>
@@ -701,7 +701,7 @@
 									}
 								</p>
 							</div>
-							<h5 class="soustitre" id="II.3.2.4">Récupérer le nom de la classe héritée</h5>
+							<h5 class="soustitre" id="II.3.4.4">Récupérer le nom de la classe héritée</h5>
 							<div class="contenu">
 								<p class="script">String <span class="perso">nomType</span> = <span class="perso">monObjet</span>.getClass().getName();</p>
 							</div>
