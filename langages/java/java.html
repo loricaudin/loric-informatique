@@ -1358,70 +1358,67 @@
 							}
 						</p>
 					</div>
-					<h3 class="soustitre" id="VI.2">Gestion de la fenêtre (construteur <span class="perso">MaFenetre</span>())</h3>
+					<h3 class="soustitre" id="VI.2">Les différents paramètres de la fenêtre (construteur <span class="perso">MaFenetre</span>())</h3>
 					<div class="contenu">
-						<!-- <h4>Les différents paramètres de la fenêtre</h4> -->
-						<div class="contenu">
-							<table>
-								<tr>
-									<th>Instruction</th>
-									<th>Description</th>
-								</tr>
-								<tr>
-									<td class="script">UIManager.setLookAndFeel(<br/>&nbsp;&nbsp;UIManager.getSystemLookAndFeelClassName()<br/>);</td>
-									<td>Mettre le style du système d’exploitation au lieu du style de java par défaut (peut provoquer une erreur si le style est inexistant)</td>
-								</tr>
-								<tr>
-									<td class="script">this.setTitle("<span class="perso">nom de la fenêtre</span>");</td>
-									<td>Changer le nom de la fenêtre (en haut à gauche)</td>
-								</tr>
-								<tr>
-									<td class="script">this.setIconImage(new ImageIcon("<span class="perso">src/icone.png</span>").getImage());</td>
-									<td>Changer l’icône de l’application (en haut à gauche)</td>
-								</tr>
-								<tr>
-									<td class="script">this.setSize(<span class="perso">longueur</span>, <span class="perso">hauteur</span>);</td>
-									<td>Redimensionner la fenêtre</td>
-								</tr>
-								<tr>
-									<td class="script">this.setResizable(false);</td>
-									<td>Interdire le redimensionnement de la fenêtre</td>
-								</tr>
-								<tr>
-									<td class="script">this.setExtendedState(JFrame.MAXIMIZED_BOTH);</td>
-									<td>Mettre la fenêtre en plein écran</td>
-								</tr>
-								<tr>
-									<td class="script">this.setLocationRelativeTo(null);</td>
-									<td>Placer la fenêtre au centre de l'écran</td>
-								</tr>
-								<tr>
-									<td class="script">this.setDefaultCloseOperation(<span class="perso">actionFermeture</span>);</td>
-									<td>Changer l'action au clic sur la croix :
-										<ul>
-											<li><span class="script">JFrame.EXIT_ON_CLOSE</span> : Fermer l'application</li>
-											<li><span class="script">JFrame.HIDE_ON_CLOSE</span> : Fermer la fenêtre sans quitter l'application</li>
-											<li><span class="script">JFrame.DISPOSE_ON_CLOSE</span> : Fermer la fenêtre actuelle et rend la main à la fenêtre parent</li>
-											<li><span class="script">JFrame.DO_NOTHING_ON_CLOSE</span> : Bloquer la fermeture de la fenêtre</li>
-										</ul>
-									</td>
-								</tr>
-								<tr>
-									<td class="script">this.pack();</td>
-									<td>Adapter la taille de la fenêtre à ses composants</td>
-								</tr>
-								<tr>
-									<td class="script">this.setVisible(true);</td>
-									<td>Afficher la fenêtre (ouvre la fenêtre au moment où elle est appelée)</td>
-								</tr>
-								<!--
-								<tr>
-									<td class="script"></td>
-									<td></td>
-								</tr>
-								-->
-							</table>
-						</div>
+						<table>
+							<tr>
+								<th>Instruction</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td class="script">UIManager.setLookAndFeel(<br/>&nbsp;&nbsp;UIManager.getSystemLookAndFeelClassName()<br/>);</td>
+								<td>Mettre le style du système d’exploitation au lieu du style de java par défaut (peut provoquer une erreur si le style est inexistant)</td>
+							</tr>
+							<tr>
+								<td class="script">this.setTitle("<span class="perso">nom de la fenêtre</span>");</td>
+								<td>Changer le nom de la fenêtre (en haut à gauche)</td>
+							</tr>
+							<tr>
+								<td class="script">this.setIconImage(new ImageIcon("<span class="perso">src/icone.png</span>").getImage());</td>
+								<td>Changer l’icône de l’application (en haut à gauche)</td>
+							</tr>
+							<tr>
+								<td class="script">this.setSize(<span class="perso">longueur</span>, <span class="perso">hauteur</span>);</td>
+								<td>Redimensionner la fenêtre</td>
+							</tr>
+							<tr>
+								<td class="script">this.setResizable(false);</td>
+								<td>Interdire le redimensionnement de la fenêtre</td>
+							</tr>
+							<tr>
+								<td class="script">this.setExtendedState(JFrame.MAXIMIZED_BOTH);</td>
+								<td>Mettre la fenêtre en plein écran</td>
+							</tr>
+							<tr>
+								<td class="script">this.setLocationRelativeTo(null);</td>
+								<td>Placer la fenêtre au centre de l'écran</td>
+							</tr>
+							<tr>
+								<td class="script">this.setDefaultCloseOperation(<span class="perso">actionFermeture</span>);</td>
+								<td>Changer l'action au clic sur la croix :
+									<ul>
+										<li><span class="script">JFrame.EXIT_ON_CLOSE</span> : Fermer l'application</li>
+										<li><span class="script">JFrame.HIDE_ON_CLOSE</span> : Fermer la fenêtre sans quitter l'application</li>
+										<li><span class="script">JFrame.DISPOSE_ON_CLOSE</span> : Fermer la fenêtre actuelle et rend la main à la fenêtre parent</li>
+										<li><span class="script">JFrame.DO_NOTHING_ON_CLOSE</span> : Bloquer la fermeture de la fenêtre</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td class="script">this.pack();</td>
+								<td>Adapter la taille de la fenêtre à ses composants</td>
+							</tr>
+							<tr>
+								<td class="script">this.setVisible(true);</td>
+								<td>Afficher la fenêtre (ouvre la fenêtre au moment où elle est appelée)</td>
+							</tr>
+							<!--
+							<tr>
+								<td class="script"></td>
+								<td></td>
+							</tr>
+							-->
+						</table>
 					</div>
 					<h3 class="soustitre" id="VI.3">Gestion de la barre de menu (<span class="perso">creerBarreDeMenu</span>())</h3>
 					<div class="contenu">
