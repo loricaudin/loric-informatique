@@ -1,11 +1,11 @@
 // Importation du header (cette méthode permet au serveurs incompatibles avec le PHP de changer facilement de header)
 let cheminPage = window.location.pathname.split("/");
 
-// Si le site est en version local, alors on recherche le dossier loric_informatique (ne sert donc à rien si le site est sur un serveur)
+// Si le site est en version local, alors on recherche le dossier loric-informatique (ne sert donc à rien si le site est sur un serveur)
 let estTrouve = false;
 let i = 0;
 while(i < cheminPage.length && !estTrouve){
-    if(cheminPage[i] == "loric_informatique"){
+    if(cheminPage[i] == "loric-informatique"){
         estTrouve = true;
     }
     i++;
