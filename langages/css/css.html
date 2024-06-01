@@ -74,7 +74,7 @@
 						<div class="contenu">
 							<p>Les variables sont à déclarer dans le sélecteur html et peuvent prendre n'importe quel type de valeurs.</p>
 							<p class="script">
-								html{<br/>
+								html {<br/>
 									&nbsp;&nbsp;&nbsp;&nbsp;--<span class="perso">ma-variable</span>: <span class="perso">valeur</span>;<br/>
 								}
 							</p>
@@ -1080,15 +1080,275 @@
 					</div>
 					<h3 class="soustitre" id="III.8">Propriétés sur les transformations</h3>
 					<div class="contenu">
-						
+						<p>Syntaxe : <span class="script">transform: <span class="perso">transformation1</span> <span class="perso">transformation2</span>…</span>;</p>
+						<h4 class="soustitre" id="III.8.1">Les différentes transformations</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Transformation</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td class="script">rotate(90deg)</td>
+									<td>Tourner de 90 degrés vers la droite</td>
+								</tr>
+								<tr>
+									<td class="script">skewX(10deg)</td>
+									<td>Appliquer une distorsion de 10 degrés (avec le haut vers la gauche et le bas vers la droite)</td>
+								</tr>
+								<tr>
+									<td class="script">skewY(20deg)</td>
+									<td>Appliquer une distorsion de 20 degrés (avec la gauche vers le haut et la droite vers le bas)</td>
+								</tr>
+								<tr>
+									<td class="script">skew(10deg, 20deg)</td>
+									<td>Appliquer une distorsion sur les 2 axes en même temps</td>
+								</tr>
+								<tr>
+									<td class="script">translateX(100px)</td>
+									<td>Déplacer une image de 100 pixels vers la droite</td>
+								</tr>
+								<tr>
+									<td class="script">translateY(200px)</td>
+									<td>Déplacer une image de 200 pixels vers le bas</td>
+								</tr>
+								<tr>
+									<td class="script">translate(100px, 200px)</td>
+									<td>Déplacer une image selon les 2 axes</td>
+								</tr>
+								<!--
+								<tr>
+									<td class="script"></td>
+									<td></td>
+								</tr>
+								-->
+							</table>
+						</div>
+						<h4 class="soustitre" id="III.8.2">Déplacements par rapport à l'origine.</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Commande</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td class="script">transform-origin: center</td>
+									<td>Transformer par rapport au centre de l'élément</td>
+								</tr>
+								<tr>
+									<td class="script">
+										transform-origin: top left<br/>
+										transform-origin: bottom right
+									</td>
+									<td>Transformer par rapport au coin de l'élément</td>
+								</tr>
+								<tr>
+									<td class="script">
+										transform-origin: 10px 20px<br/>
+										transform-origin: bottom right
+									</td>
+									<td>Transformer par rapport au coin supérieur gauche de l'élément avec un décalage de 10 pixels à droite et de 20 pixels en bas</td>
+								</tr>
+							</table>
+						</div>
 					</div>
 					<h3 class="soustitre" id="III.9">Propriétés sur les transitions</h3>
 					<div class="contenu">
-						<div class="todo">Bientôt disponible</div>
+						<p>Les transitions permettent d'animer les éléments qui ont des pseudo-classes (par exemple lors du survol de la souris).</p>
+						<h3 class="soustitre" id="III.9.1">Manière simple et propre</h3>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Propriété</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td class="script">transition-property: <span class="perso">attribut1</span>, <span class="perso">attribut2</span>…;</td>
+									<td>Sélectionner les propriétés à animer (Pour animer toutes les propriétés, il est possible de remplacer la propriété par <span class="script">all</span>)</td>
+								</tr>
+								<tr>
+									<td class="script">transition-duration: <span class="perso">duree1</span>, <span class="perso">duree2</span>…;</td>
+									<td>Appliquer la durée de la transition à la propriété positionnée au même emplacement (avec la durée sous la forme : <span class="script">1s</span> par exemple pour 1 seconde)</td>
+								</tr>
+								<tr>
+									<td class="script">transition-timing-function: <span class="perso">timing-function1</span>, <span class="perso">timing-function2</span>…;</td>
+									<td>Attribuer une fonction temporelle à la propriété positionnée au même emplacement (voir les fonctions temporelles)</td>
+								</tr>
+								<tr>
+									<td class="script">transition-delay: <span class="perso">delai1</span>, <span class="perso">delai2</span>…;</td>
+									<td>Appliquer un délai à la propriété positionnée au même emplacement (avec le délai sous la forme : <span class="script">1s</span> par exemple pour 1 seconde)</td>
+								</tr>
+							</table>
+						</div>
+						<h3 class="soustitre" id="III.9.2">Manière rapide</h3>
+						<div class="contenu">
+							<p>Syntaxe : <span class="script">transition: <span class="perso">attribut1</span> <span class="perso">duree1</span> <span class="perso">timing-function1</span> <span class="perso">delai1</span>, <span class="perso">attribut2</span> <span class="perso">duree2</span> <span class="perso">timing-function2</span> <span class="perso">delai2</span>…</span>;</p>
+							<div class="note">Note : Le délai et la fonction ne sont pas à renseigner obligatoirement.</div>
+						</div>
+						<h3 class="soustitre" id="III.9.3">Les fonctions temporelles</h3>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th>Fonction temporelle</th>
+									<th>Description du mouvement</th>
+								</tr>
+								<tr>
+									<td class="script">linear</td>
+									<td>Même vitesse du début jusqu'à la fin</td>
+								</tr>
+								<tr>
+									<td class="script">ease</td>
+									<td>Ralentissement à la fin (valeur par défaut)</td>
+								</tr>
+								<tr>
+									<td class="script">ease-in</td>
+									<td>Ralentissement au début et accélération à la fin</td>
+								</tr>
+								<tr>
+									<td class="script">ease-out</td>
+									<td>Accélération au début et ralentissement à la fin</td>
+								</tr>
+								<tr>
+									<td class="script">ease-in-out</td>
+									<td>Accélération au début et à la fin uniquement</td>
+								</tr>
+								<tr>
+									<td class="script">cubic-bezier(<span class="perso">c1</span>, <span class="perso">c2</span>, <span class="perso">c3</span>, <span class="perso">c4</span>)</td>
+									<td>Courbe de Bézier paramétrable à l'aide de quatre coefficients compris entre 0 et 1</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="script">steps(<span class="perso">n</span>, jump-start)</span>
+										<br/>ou<br/>
+										<span class="script">steps(<span class="perso">n</span>, start)</span>
+										<br/>ou<br/>
+										<span class="script">step-start</span> (si <span class="perso">n</span> vaut 1)
+									</td>
+									<td>Nombre d'étapes à partir du début</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="script">steps(<span class="perso">n</span>, jump-start)</span>
+										<br/>ou<br/>
+										<span class="script">steps(<span class="perso">n</span>, start)</span>
+										<br/>ou<br/>
+										<span class="script">step-start</span> (si <span class="perso">n</span> vaut 1)
+									</td>
+									<td>Nombre d'étapes à partir de la fin</td>
+								</tr>
+								<tr>
+									<td class="script">steps(<span class="perso">n</span>, jump-none)</td>
+									<td>Nombre d'étapes entre le début et la fin compris</td>
+								</tr>
+								<tr>
+									<td class="script">steps(<span class="perso">n</span>, jump-both)</td>
+									<td>Nombre d'étapes entre le début et la fin non compris</td>
+								</tr>
+								<!--
+								<tr>
+									<td class="script"></td>
+									<td></td>
+								</tr>
+								-->
+							</table>
+						</div>
 					</div>
 					<h3 class="soustitre" id="III.10">Propriétés sur les animations</h3>
 					<div class="contenu">
-						<div class="todo">Bientôt disponible</div>
+						<h4 class="soustitre" id="III.10.1">Créer une animation</h4>
+						<div class="contenu">
+							<h5 class="soustitre" id="III.10.1.1">Animation simple avec un début et une fin</h5>
+							<div class="contenu">
+								<p class="script">
+									@keyframe <span class="script">mon-animation</span> {<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;from {<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur1</span>;<br/>
+    								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut2</span>: <span class="perso">valeur2</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;to {<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur3</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut2</span>: <span class="perso">valeur4</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+									}
+								</p>
+							</div>
+							<h5 class="soustitre" id="III.10.1.1">Animation complexe avec des pourcentages</h5>
+							<div class="contenu">
+								<p class="script">
+									@keyframe <span class="script">mon-animation</span> {<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;0% {<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur1</span>;<br/>
+    								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut2</span>: <span class="perso">valeur2</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;25% {<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur3</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut2</span>: <span class="perso">valeur4</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;50% {<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur5</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut2</span>: <span class="perso">valeur6</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;75% {<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur7</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut2</span>: <span class="perso">valeur8</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;100% {<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur9</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut2</span>: <span class="perso">valeur10</span>;<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+									}
+								</p>
+							</div>
+						</div>
+						<h4 class="soustitre" id="III.10.2">Utiliser les animations</h4>
+						<div class="contenu">
+							<h3 class="soustitre" id="III.10.2.1">Manière simple et propre</h3>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Propriété</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td class="script">animation-name: <span class="perso">mon-animation1</span>, <span class="perso">mon-animation2</span>…;</td>
+										<td>Appliquer des animations</td>
+									</tr>
+									<tr>
+										<td class="script">animation-duration: <span class="perso">duree1</span>, <span class="perso">duree2</span>…;</td>
+										<td>Appliquer la durée à l'animation positionnée au même emplacement (avec la durée sous la forme : <span class="script">1s</span> par exemple pour 1 seconde)</td>
+									</tr>
+									<tr>
+										<td class="script">animation-timing-function: <span class="perso">timing-function1</span>, <span class="perso">timing-function2</span>…;</td>
+										<td>Attribuer une fonction temporelle à l'animation au même emplacement (voir les fonctions temporelles (dans les transitions))</td>
+									</tr>
+									<tr>
+										<td class="script">animation-delay: <span class="perso">delai1</span>, <span class="perso">delai2</span>…;</td>
+										<td>Appliquer un délai à l'animation positionnée au même emplacement (avec le délai sous la forme : <span class="script">1s</span> par exemple pour 1 seconde)</td>
+									</tr>
+									<tr>
+										<td class="script">animation-direction: <span class="perso">direction1</span>, <span class="perso">direction2</span>…;</td>
+										<td>Appliquer une direction à l'animation positionnée au même emplacement (<span class="script">normal</span>, <span class="script">reverse</span>, <span class="script">alternate</span> (dans les 2 sens), <span class="script">alternate-reverse</span>)</td>
+									</tr>
+									<tr>
+										<td class="script">animation-play-state: <span class="perso">etat1</span>, <span class="perso">etat2</span>…;</td>
+										<td>Choisir l'état de l'animation positionnée au même emplacement entre <span class="script">running</span> et <span class="script">paused</span></td>
+									</tr>
+									<tr>
+										<td class="script">animation-iteration-count: <span class="perso">iteration1</span>, <span class="perso">iteration2</span>…;</td>
+										<td>Appliquer un nombre d'itération de l'animation positionnée au même emplacement (les nombres décimaux sont autorisés et <span class="script">infinite</span>permet une boucle infinie)</td>
+									</tr>
+									<tr>
+										<td class="script">animation-fill-mode: <span class="perso">fill-mode1</span>, <span class="perso">fill-mode2</span>…;</td>
+										<td>Choisir un style que doit prendre avant et après l'animation positionnée au même emplacement (<span class="script">none</span> (aucun style avant et après l'animation), <span class="script">forwards</span> (garder le style de l'animation après son exécution), <span class="script">backwards</span> (récupérer le style de l'animation avant son exécution), <span class="script">both</span> (prendre le style de l'animation avant et après son exécution))</td>
+									</tr>
+								</table>
+							</div>
+							<h3 class="soustitre" id="III.10.2.2">Manière rapide</h3>
+							<div class="contenu">
+								<p>Syntaxe : <span class="script">animation: <span class="perso">duree1</span> <span class="perso">timing-function1</span> <span class="perso">delai1</span> <span class="perso">iteration1</span> <span class="perso">direction1</span> <span class="perso">fill-mode1</span> <span class="perso">etat1</span> <span class="perso">mon-animation1</span>, <span class="perso">duree2</span> <span class="perso">timing-function2</span> <span class="perso">delai2</span> <span class="perso">iteration2</span> <span class="perso">direction2</span> <span class="perso">fill-mode2</span> <span class="perso">etat2</span> <span class="perso">mon-animation2</span>…;</p>
+								<div class="note">Note : La durée et le nom de l'animation sont à renseigner obligatoirement.</div>
+							</div>
+						</div>
 					</div>
 					<!--
 					<h3 class="soustitre" id="III.X">Propriétés sur </h3>
