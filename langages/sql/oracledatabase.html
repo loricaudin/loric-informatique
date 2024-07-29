@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr-FR">
+<!DOCTYPE html> <!-- Loric Informatique V1.0 -->
+<html>
 	<head>
 		<title>Loric Informatique - Oracle Database (SQL)</title>
-		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="robots" content="noindex, nofollow">
 		<link rel="icon" href="../../images/icone.png">
@@ -16,280 +15,323 @@
 			<section class="presentation">
 				<div class="alignementVertical">
 					<div>
-						<h1>Oracle Database (SQL)</h1>
-						<p class="version">Version 1.0 (créé le 10/08/2023, modifié le 28/01/2024)</p>
-                        <p>SQL (Structured Query Language) est un langage servant à exploiter des bases de données relationnelles.</p>
-						<p>Oracle Database est souvent utilisé pour les bases de données de sites web qui utilisent le langage PHP, et très souvent utilisé pour les bases de données des applications utilisant le langage Java.</p>
-						<p>Toutes les options facultatives seront représentées par des [].</p>
+						<h1>Mémento Oracle Database (SQL)</h1>
+						<p class="version">Version 2.0 (créé le 10/08/2023, modifié le 10/08/2024) </p>
+						<p>SQL (Structured Query Language) est un langage servant à exploiter des bases de données relationnelles.<br/><br/>Oracle Database est souvent utilisé pour les bases de données de sites web qui utilisent le langage PHP, et très souvent utilisé pour les bases de données des applications utilisant le langage Java.<br/><br/>Toutes les options facultatives sont représentées par des [ ].</p>
 						<a href="Loric Informatique - Oracle Database (SQL).pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
 						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de choisir le format A4, de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
 					</div>
-					<img src="icone_oracledatabase.png" class="logoLangage">
+					<img src="icone_oracledatabase.png" class="logoLangage"/>
 				</div>
 			</section>
-            <section class="outils">
-                <h2>Outils nécessaires :</h2>
-                <ul>
-					<li>SQL Developer (contenant Oracle si vous avez un serveur simple hébergé)</li>
-				</ul>
-            </section>
-            <section>
+			<section class="sommaire">
 				<h2>Table des matières :</h2>
-                <div class="tableDesMatieres">
-                    <!-- Table des matières remplie par le JavaScript -->
-                </div>
-            </section>
-            <article>
-				<h2 class="soustitre" id="I">Bases</h2>
+				<div class="tableDesMatieres">
+					<!-- Table des matières remplie par le JavaScript -->
+				</div>
+			</section>
+			<article>
+				<h2 class="soustitre" id="1">Prise en main</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="I.1">Syntaxe</h3>
+					<h3 class="soustitre" id="1.1">Outils nécessaires</h3>
 					<div class="contenu">
-						<p class="script">
-							<span class="perso">requête1</span>;<br/>
-							<span class="perso">requête2</span>;<br/>
-							<span class="perso">requête3</span>;<br/>
-						</p>
+						<ul>
+							<li>SQL Developer (contenant Oracle si vous avez un serveur simple hébergé)</li>
+						</ul>
 					</div>
-					<h3 class="soustitre" id="I.2">Types de variables</h3>
+
+				</div>
+				<h2 class="soustitre" id="2">Bases</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="2.1">Syntaxe</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="I.2.1">Chaînes de caractères</h4>
-						<div class="contenu">
-							<table>
-								<tr>
-									<th>Type</th>
-									<th>Description</th>
-								</tr>
-								<tr>
-									<td class="script">CHAR(X)</td>
-									<td>Longueur fixée à X caractères (maximum : 255)</td>
-								</tr>
-								<tr>
-									<td class="script">VARCHAR2(X)</td>
-									<td>Longueur inférieure ou égale à X caractères (maximum : 255)</td>
-								</tr>
-								<!--
-								<tr>
-									<td class="script"></td>
-									<td></td>
-								</tr>
-								-->
-							</table>
-						</div>
-						<h4 class="soustitre" id="I.2.2">Numériques</h4>
-						<div class="contenu">
-							<table>
-								<tr>
-									<th>Type</th>
-									<th>Description</th>
-								</tr>
-								<tr>
-									<td class="script">NUMBER(X)</td>
-									<td>Longueur inférieure ou égale à X caractères</td>
-								</tr>
-								<tr>
-									<td class="script">NUMBER(X, Y)</td>
-									<td>Longueur inférieure ou égale à X chiffres dans la partie entière et inférieure ou égale à Y chiffres après la virgule</td>
-								</tr>
-								<!--
-								<tr>
-									<td class="script"></td>
-									<td></td>
-								</tr>
-								-->
-							</table>
-						</div>
-						<h4 class="soustitre" id="I.2.3">Autres types de variables</h4>
-						<div class="contenu">
-							<table>
-								<tr>
-									<th>Type</th>
-									<th>Description</th>
-								</tr>
-								<tr>
-									<td class="script">BOOLEAN</td>
-									<td>0 = FALSE, 1 = TRUE</td>
-								</tr>
-								<tr>
-									<td class="script">DATE</td>
-									<td>Format : 'DD/MM/YYYY' (utiliser TO_DATE() pour une meilleure compatibilité. Voir les fonctions pour les dates)</td>
-								</tr>
-								<!--
-								<tr>
-									<td class="script"></td>
-									<td></td>
-								</tr>
-								-->
-							</table>
-						</div>
+						<p><span class="script perso ">requête1</span><span class="script perso ">;</span><span class="script perso "><br/></span><span class="script perso ">requête</span><span class="script perso ">2;</span><span class="script perso "><br/></span><span class="script perso ">requête</span><span class="script perso ">3;</span></p>
 					</div>
-					<h3 class="soustitre" id="I.3">Conditions</h3>
+
+					<h3 class="soustitre" id="2.2">Les variables</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="2.2.1">Types de variables</h4>
+						<div class="contenu">
+							<h5 class="soustitre" id="2.2.1.1">Numériques</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Type</th>
+										<th>Limites</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td><span class="script ">NUMBER</span><span class="script ">(</span><span class="script perso ">X</span><span class="script ">)</span></td>
+										<td>Longueur inférieure ou égale à <span class="perso ">X</span> chiffres (maximum : 255)</td>
+										<td>Nombre entier</td>
+									</tr>
+									<tr>
+										<td><span class="script ">NUMBER</span><span class="script ">(</span><span class="script perso ">X</span><span class="script ">,</span><span class="script perso "> Y</span><span class="script ">)</span></td>
+										<td>Longueur inférieure ou égale à <span class="perso ">X</span> chiffres dans la partie entière et inférieure ou égale à <span class="perso ">Y</span> chiffres après la virgule (maximum : 255)</td>
+										<td>Nombre décimal</td>
+									</tr>
+								</table>
+							</div>
+
+							<h5 class="soustitre" id="2.2.1.2">Caractères</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Type</th>
+										<th>Limites</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td><span class="script ">CHAR(</span><span class="script perso ">X</span><span class="script ">)</span></td>
+										<td>Longueur fixée à <span class="perso ">X</span> caractères (maximum : 255)</td>
+										<td>Chaîne de caractères entre ' '</td>
+									</tr>
+									<tr>
+										<td><span class="script ">VARCHAR</span><span class="script ">2</span><span class="script ">(</span><span class="script perso ">X</span><span class="script ">)</span></td>
+										<td>Longueur inférieure ou égale à <span class="perso ">X</span> caractères (maximum : 255)</td>
+										<td>Chaîne de caractères entre ' '</td>
+									</tr>
+								</table>
+							</div>
+
+							<h5 class="soustitre" id="2.2.1.3">Dates et heures</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Type</th>
+										<th>Format</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td><span class="script ">DATE</span></td>
+										<td><span class="script ">DD/MM/YYYY</span></td>
+										<td>Date entre ' '</td>
+									</tr>
+								</table>
+							</div>
+
+							<h5 class="soustitre" id="2.2.1.4">Autres types</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th>Type</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td><span class="script ">BOOL</span><span class="script ">EAN</span></td>
+										<td>Valeur pouvant être TRUE ou FALSE</td>
+									</tr>
+								</table>
+							</div>
+
+						</div>
+
+					</div>
+
+					<h3 class="soustitre" id="2.3">Commentaires</h3>
+					<div class="contenu">
+						<p><span class="script ">--</span><span class="script ">Commentaire tenant sur une ligne</span></p>
+						<p><span class="script ">/*</span><span class="script "><br/>Commentaire pouvant être sur une ou plusieurs lignes</span><span class="script "><br/>*/</span></p>
+					</div>
+
+					<h3 class="soustitre" id="2.4">Opérations mathématiques</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<td>Opérateurs de comparaisons</td>
-								<td class="script">= != (ou &lt;&gt;) &lt; &lt;= &gt; &gt;=</td>
+								<th>Instruction</th>
+								<th>Description</th>
 							</tr>
 							<tr>
-								<td>Connecteurs logiques</td>
-								<td class="script">OR, AND</td>
+								<td><span class="script ">1 + 2</span></td>
+								<td>Renvoie 3</td>
 							</tr>
 							<tr>
-								<td>Opérateur de négation</td>
-								<td class="script">NOT</td>
+								<td><span class="script ">3 - 1</span></td>
+								<td>Renvoie 2</td>
 							</tr>
 							<tr>
-								<td>Opérateurs mathématiques</td>
-								<td class="script">+ - * /</td>
+								<td><span class="script ">6 * 4</span></td>
+								<td>Renvoie 24</td>
 							</tr>
 							<tr>
-								<td>Comparaison logique</td>
-								<td class="script">IS [NOT] {TRUE|FALSE|UNKNOWN}</td>
+								<td><span class="script ">5.0 / 2.0</span></td>
+								<td>Renvoie 2.5</td>
 							</tr>
 							<tr>
-								<td>Comparaison avec valeur</td>
-								<td class="script">IS [NOT] NULL</td>
+								<td><span class="script ">5 / 2</span></td>
+								<td>Renvoie 2 (le quotient sans décimal)</td>
 							</tr>
 							<tr>
-								<td>Intervalle</td>
-								<td class="script"><span class="perso">valeur</span> BETWEEN <span class="perso">borne_basse</span> AND <span class="perso">borne_haute</span></td>
+								<td><span class="script ">'2' || '7'</span></td>
+								<td>Renvoie '27'</td>
 							</tr>
-							<tr>
-								<td>Comparaison à une liste de valeurs</td>
-								<td class="script"><span class="perso">valeur</span> [NOT] IN (<span class="perso">liste</span>)</td>
-							</tr>
-							<tr>
-								<td>Comparaison à toutes les valeurs de la liste</td>
-								<td class="script">ALL (<span class="perso">liste</span>)</td>
-							</tr>
-							<tr>
-								<td>Comparaison à une valeur contenue dans la liste</td>
-								<td class="script">ANY (<span class="perso">liste</span>)</td>
-							</tr>
-							<tr>
-								<td>Comparaison avec une chaîne de caractère en MAJUSCULE</td>
-								<td class="script">UPPER(<span class="perso">valeur</span>) = '<span class="perso">CHAINE</span>'</td>
-							</tr>
-							<tr>
-								<td>Comparaison avec une chaîne de caractère en minuscule</td>
-								<td class="script">LOWER(<span class="perso">valeur</span>) = '<span class="perso">chaine</span>'</td>
-							</tr>
-							<tr>
-								<td>Comparaison avec une chaîne de caractère avec une majuscule au début et le reste en minuscules</td>
-								<td class="script">INITCAP(<span class="perso">valeur</span>) = '<span class="perso">Chaine</span>'</td>
-							</tr>
-							<!--
-							<tr>
-								<td></td>
-								<td class="script"></td>
-							</tr>
-							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="I.4">Commentaires</h3>
+
+					<h3 class="soustitre" id="2.5">Opérateurs de conditions</h3>
 					<div class="contenu">
-						<p class="script commentaire">-- Commentaire tenant sur une ligne</p>
-						<p class="script commentaire">/* Commentaire pouvant être sur une ou plusieurs lignes */</p>
+						<table>
+							<tr>
+								<th>Condition</th>
+								<th>Description de ce que vérifie la condition</th>
+							</tr>
+							<tr>
+								<td><span class="script perso ">a</span><span class="script "> = </span><span class="script perso ">b</span></td>
+								<td><span class="perso ">a</span> égal à <span class="perso ">b</span> (seulement en contenu : 1='1')</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">a</span><span class="script "> &lt; </span><span class="script perso ">b</span></td>
+								<td><span class="perso ">a</span> strictement inférieur à <span class="perso ">b</span></td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">a</span><span class="script "> &gt; </span><span class="script perso ">b</span></td>
+								<td><span class="perso ">a</span> strictement supérieur à <span class="perso ">b</span></td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">a</span><span class="script "> &lt;= </span><span class="script perso ">b</span></td>
+								<td><span class="perso ">a</span> supérieur ou égal à <span class="perso ">b</span></td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">a</span><span class="script "> != </span><span class="script perso ">b</span></td>
+								<td><span class="perso ">a</span> n’est pas égal à <span class="perso ">b</span> (seulement en contenu : 1='1')</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">a</span><span class="script "> </span><span class="script ">&lt;&gt;</span><span class="script "> </span><span class="script perso ">b</span></td>
+								<td><span class="perso ">a</span> n’est pas égal à <span class="perso ">b</span> (seulement en contenu : 1='1')</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">a</span><span class="script "> </span><span class="script ">= ALL</span><span class="script "> </span><span class="script perso ">b</span></td>
+								<td><span class="perso ">a</span> est égale à toutes les valeurs dans <span class="perso ">b</span> (qui peut être une sous-requête ou une liste sous forme : <span class="script ">(</span><span class="script perso ">val1</span><span class="script ">, </span><span class="script perso ">val2</span><span class="script ">…)</span>)</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">a</span><span class="script "> </span><span class="script ">= ANY</span><span class="script "> </span><span class="script perso ">b</span></td>
+								<td><span class="perso ">a</span> est égale à au moins une valeur dans <span class="perso ">b</span> (qui peut être une sous-requête ou une liste sous forme : <span class="script ">(</span><span class="script perso ">val1</span><span class="script ">, </span><span class="script perso ">val2</span><span class="script ">…)</span>)</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">a</span><span class="script "> </span><span class="script ">IN</span><span class="script "> </span><span class="script perso ">b</span></td>
+								<td><span class="perso ">a</span> est présent dans <span class="perso ">b</span> (qui peut être une sous-requête ou une liste sous forme : <span class="script ">(</span><span class="script perso ">val1</span><span class="script ">, </span><span class="script perso ">val2</span><span class="script ">…)</span>)</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">a </span><span class="script ">BETWEEN </span><span class="script perso ">b</span><span class="script "> AND </span><span class="script perso ">c</span></td>
+								<td><span class="perso ">a </span>est compris entre <span class="perso ">b</span> et <span class="perso ">c</span></td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">a</span><span class="script "> LIKE '</span><span class="script perso ">SousChaine</span><span class="script ">'</span></td>
+								<td><span class="perso ">a </span>contient la sous-chaîne (avec _ correspondant à 1 caractère et % correspondant à 0 ou plusieurs caractères)</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">a</span><span class="script "> </span><span class="script ">IS [NOT]</span><span class="script "> </span><span class="script ">NULL</span></td>
+								<td>Tester si une variable est nulle</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">a</span><span class="script "> </span><span class="script ">IS [NOT]</span><span class="script "> </span><span class="script ">UNKNOWN</span></td>
+								<td>Tester si une variable est définie</td>
+							</tr>
+							<tr>
+								<td><span class="script ">OR</span></td>
+								<td>À mettre entre deux conditions, permet d’avoir une des deux conditions qui doit être vraie</td>
+							</tr>
+							<tr>
+								<td><span class="script ">AND</span></td>
+								<td>À mettre entre deux conditions, permet d’avoir deux conditions qui doivent être vraie</td>
+							</tr>
+							<tr>
+								<td><span class="script ">NOT </span><span class="script perso ">condition</span></td>
+								<td>Ne doit pas respecter la condition</td>
+							</tr>
+						</table>
 					</div>
+
 				</div>
-				<h2 class="soustitre" id="II">Les fonctions</h2>
+				<h2 class="soustitre" id="3">Les fonctions</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="II.1">Les fonctions arithmétiques</h3>
+					<h3 class="soustitre" id="3.1">Les fonctions arithmétiques</h3>
 					<div class="contenu">
 						<table>
 							<tr>
 								<th>Fonction</th>
-								<th>Utilité</th>
+								<th>Description</th>
 							</tr>
 							<tr>
-								<td class="script">ROUND(<span class="perso">n</span>, <span class="perso">d</span>)</td>
-								<td>Arrondit <span class="perso">n</span> au réel à <span class="perso">d</span> chiffres après la virgule ou à l’entier si <span class="perso">d</span> n’est pas renseigné</td>
+								<td><span class="script ">ROUND(</span><span class="script perso ">n</span><span class="script ">, </span><span class="script perso ">d</span><span class="script ">)</span></td>
+								<td>Arrondit <span class="perso ">n</span> au réel à <span class="perso ">d</span> chiffres après la virgule ou à l’entier si <span class="perso ">d</span> n’est pas renseigné</td>
 							</tr>
 							<tr>
-								<td class="script">TRUNC(<span class="perso">n</span>, <span class="perso">d</span>)</td>
-								<td>Tronque <span class="perso">n</span> à <span class="perso">d</span> chiffres après la virgule ou à 0 si <span class="perso">d</span> n’est pas renseigné</td>
+								<td><span class="script ">TRUNC(</span><span class="script perso ">n</span><span class="script ">, </span><span class="script perso ">d</span><span class="script ">)</span></td>
+								<td>Tronque <span class="perso ">n</span> à <span class="perso ">d</span> chiffres après la virgule ou à 0 si <span class="perso ">d</span> n’est pas renseigné</td>
 							</tr>
 							<tr>
-								<td class="script">POWER(<span class="perso">n</span>, <span class="perso">m</span>)</td>
-								<td>Renvoie <span class="perso">n</span> à la puissance <span class="perso">m</span> (si <span class="perso">n</span> est négatif, <span class="perso">m</span> doit être un entier)</td>
+								<td><span class="script ">POWER(</span><span class="script perso ">n</span><span class="script ">, </span><span class="script perso ">m</span><span class="script ">)</span></td>
+								<td>Renvoie <span class="perso ">n</span> à la puissance <span class="perso ">m</span> (si <span class="perso ">n</span> est négatif, <span class="perso ">m</span> doit être un entier)</td>
 							</tr>
 							<tr>
-								<td class="script">CEIL(<span class="perso">n</span>)</td>
-								<td>Renvoie un entier directement supérieur ou égal à <span class="perso">n</span></td>
+								<td><span class="script ">CEIL(</span><span class="script perso ">n</span><span class="script ">)</span></td>
+								<td>Renvoie un entier directement supérieur ou égal à <span class="perso ">n</span></td>
 							</tr>
 							<tr>
-								<td class="script">FLOOR(<span class="perso">n</span>)</td>
-								<td>Renvoie un entier directement supérieur ou égal à <span class="perso">n</span> (partie entière de <span class="perso">n</span>)</td>
+								<td><span class="script ">FLOOR(</span><span class="script perso ">n</span><span class="script ">)</span></td>
+								<td>Renvoie un entier directement supérieur ou égal à <span class="perso ">n</span> (partie entière de <span class="perso ">n</span>)</td>
 							</tr>
 							<tr>
-								<td class="script">ABS(<span class="perso">n</span>)</td>
-								<td>Renvoie la valeur absolue de <span class="perso">n</span></td>
+								<td><span class="script ">ABS(</span><span class="script perso ">n</span><span class="script ">)</span></td>
+								<td>Renvoie la valeur absolue de <span class="perso ">n</span></td>
 							</tr>
 							<tr>
-								<td class="script">MOD(<span class="perso">n</span>, <span class="perso">m</span>)</td>
-								<td>Renvoie le reste de la division de <span class="perso">n</span> par <span class="perso">m</span></td>
+								<td><span class="script ">MOD(</span><span class="script perso ">n</span><span class="script ">, </span><span class="script perso ">m</span><span class="script ">)</span></td>
+								<td>Renvoie le reste de la division de <span class="perso ">n</span> par <span class="perso ">m</span></td>
 							</tr>
 							<tr>
-								<td class="script">SQRT(<span class="perso">n</span>)</td>
+								<td><span class="script ">SQRT(</span><span class="script perso ">n</span><span class="script ">)</span></td>
 								<td>Renvoie la racine carrée</td>
 							</tr>
 							<tr>
-								<td class="script">SIGN(<span class="perso">n</span>)</td>
-								<td>Renvoie -1 si <span class="perso">n</span> est négatif, 1 si <span class="perso">n</span> est positif et 0 si <span class="perso">n</span> égal à 0</td>
+								<td><span class="script ">SIGN(</span><span class="script perso ">n</span><span class="script ">)</span></td>
+								<td>Renvoie -1 si <span class="perso ">n</span> est négatif, 1 si <span class="perso ">n</span> est positif et 0 si <span class="perso ">n</span> égal à 0</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="II.2">Les fonctions pour les chaînes de caractères</h3>
+
+					<h3 class="soustitre" id="3.2">Les fonctions pour les chaînes de caractères</h3>
 					<div class="contenu">
 						<table>
 							<tr>
 								<th>Fonction</th>
-								<th>Utilité</th>
+								<th>Description</th>
 							</tr>
 							<tr>
-								<td class="script">LENGTH(<span class="perso">chaine</span>)</td>
+								<td><span class="script ">LENGTH(</span><span class="script perso ">chaine</span><span class="script ">)</span></td>
 								<td>Renvoie la longueur de la chaine</td>
 							</tr>
 							<tr>
-								<td class="script">SUBSTR(<span class="perso">chaine</span>, <span class="perso">debut</span>[, <span class="perso">longueur</span>])</td>
+								<td><span class="script ">SUBSTR(</span><span class="script perso ">chaine</span><span class="script ">, </span><span class="script perso ">debut</span><span class="script ">[, </span><span class="script perso ">longueur</span><span class="script ">])</span></td>
 								<td>Renvoie la position (en commençant à une certaine position et allant jusqu'à la longueur fixée ou à la fin)</td>
 							</tr>
 							<tr>
-								<td class="script">UPPER(<span class="perso">chaine</span>)</td>
+								<td><span class="script ">UPPER(</span><span class="script perso ">chaine</span><span class="script ">)</span></td>
 								<td>Convertit en majuscule</td>
 							</tr>
 							<tr>
-								<td class="script">LOWER(<span class="perso">chaine</span>)</td>
+								<td><span class="script ">LOWER(</span><span class="script perso ">chaine</span><span class="script ">)</span></td>
 								<td>Convertit en minuscule</td>
 							</tr>
 							<tr>
-								<td class="script">INITCAP(<span class="perso">chaine</span>)</td>
+								<td><span class="script ">INITCAP(</span><span class="script perso ">chaine</span><span class="script ">)</span></td>
 								<td>Met en majuscule la première lettre et en minuscule les autres</td>
 							</tr>
 							<tr>
-								<td class="script">TRANSLATE(<span class="perso">chaine</span>, <span class="perso">c1</span>, <span class="perso">c2</span>)</td>
-								<td>Remplace chaque caractère <span class="perso">c1</span> par <span class="perso">c2</span> dans la chaîne</td>
+								<td><span class="script ">TRANSLATE(</span><span class="script perso ">chaine</span><span class="script ">, </span><span class="script perso ">c1</span><span class="script ">, </span><span class="script perso ">c2</span><span class="script ">)</span></td>
+								<td>Remplace chaque caractère <span class="perso ">c1</span> par <span class="perso ">c2</span> dans la chaîne</td>
 							</tr>
 							<tr>
-								<td class="script">REPLACE(<span class="perso">chaine</span>, <span class="perso">ch1</span>, <span class="perso">ch2</span>)</td>
-								<td>Remplace chaque chaine <span class="perso">ch1</span> par <span class="perso">ch2</span> dans la chaîne</td>
+								<td><span class="script ">REPLACE(</span><span class="script perso ">chaine</span><span class="script ">, </span><span class="script perso ">ch1</span><span class="script ">, </span><span class="script perso ">ch2</span><span class="script ">)</span></td>
+								<td>Remplace chaque chaine <span class="perso ">ch1</span> par <span class="perso ">ch2</span> dans la chaîne</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="II.3">Les fonctions pour les dates</h3>
+
+					<h3 class="soustitre" id="3.3">Les fonctions pour les dates</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="II.3.1">Les masques pour les dates</h4>
+						<h4 class="soustitre" id="3.3.1">Les masques pour les dates</h4>
 						<div class="contenu">
 							<table>
 								<tr>
@@ -297,600 +339,642 @@
 									<th>Description</th>
 								</tr>
 								<tr>
-									<td class="script">'CC'</td>
+									<td><span class="script ">'CC'</span></td>
 									<td>Siècle (ex : 21)</td>
 								</tr>
 								<tr>
-									<td class="script">'YYYY'</td>
+									<td><span class="script ">'YYYY'</span></td>
 									<td>Année (ex : 2024)</td>
 								</tr>
 								<tr>
-									<td class="script">'Q'</td>
+									<td><span class="script ">'Q'</span></td>
 									<td>Numéro du trimestre dans l’année (ex : 3)</td>
 								</tr>
 								<tr>
-									<td class="script">'WW'</td>
+									<td><span class="script ">'WW'</span></td>
 									<td>Numéro de la semaine dans l’année</td>
 								</tr>
 								<tr>
-									<td class="script">'MM'</td>
+									<td></td>
+									<td>Numéro du mois (ex : 5)</td>
+								</tr>
+								<tr>
+									<td><span class="script ">'MM'</span></td>
 									<td>Numéro du mois (ex : 05)</td>
 								</tr>
 								<tr>
-									<td class="script">'DDD'</td>
+									<td><span class="script ">'DDD'</span></td>
 									<td>Numéro du jour dans l’année (ex : 185)</td>
 								</tr>
 								<tr>
-									<td class="script">'DD'</td>
-									<td>Numéro du jour dans le mois (ex : 27)</td>
+									<td><span class="script ">'DD'</span></td>
+									<td>Numéro du jour dans le mois (ex : 08)</td>
 								</tr>
 								<tr>
-									<td class="script">'D'</td>
+									<td><span class="script ">'D'</span></td>
 									<td>Numéro du jour dans la semaine (ex : 5) avec dimanche égal à 0</td>
 								</tr>
 								<tr>
-									<td class="script">'HH' ou 'HH12'</td>
-									<td>Heure sur 12 heures (ex : 08)</td>
+									<td><span class="script ">'HH' </span>ou<span class="script "> 'HH12'</span></td>
+									<td>Heure sur 12 heures (ex : 09)</td>
 								</tr>
 								<tr>
-									<td class="script">'HH24'</td>
-									<td>Heure sur 24 heures (ex : 20)</td>
+									<td><span class="script ">'HH24'</span></td>
+									<td>Heure sur 24 heures (ex : 21)</td>
 								</tr>
 								<tr>
-									<td class="script">'MI'</td>
+									<td><span class="script ">'MI'</span></td>
 									<td>Minutes (ex : 05)</td>
 								</tr>
 								<tr>
-									<td class="script">'S'</td>
+									<td><span class="script ">'S'</span></td>
 									<td>Secondes (ex : 30)</td>
 								</tr>
 								<tr>
-									<td class="script">'YEAR'</td>
+									<td><span class="script ">'YEAR'</span></td>
 									<td>Année en lettres</td>
 								</tr>
 								<tr>
-									<td class="script">'MONTH'</td>
+									<td><span class="script ">'MONTH'</span></td>
 									<td>Mois en lettres</td>
 								</tr>
 								<tr>
-									<td class="script">'MON'</td>
-									<td>Mois abrégé</td>
+									<td><span class="script ">'MON'</span></td>
+									<td>Mois abrégé (3 lettres)</td>
 								</tr>
 								<tr>
-									<td class="script">'DAY'</td>
+									<td><span class="script ">'DAY'</span></td>
 									<td>Jour en lettres</td>
 								</tr>
 								<tr>
-									<td class="script">'DY'</td>
-									<td>Jour abrégé</td>
+									<td><span class="script ">'DY'</span></td>
+									<td>Jour abrégé (3 lettres)</td>
 								</tr>
-								<!--
-								<tr>
-									<td class="script"></td>
-									<td></td>
-								</tr>
-								-->
 							</table>
 						</div>
-						<h4 class="soustitre" id="II.3.2">Les fonctions de manipulation des dates</h4>
+
+						<h4 class="soustitre" id="3.3.2">Les fonctions de manipulation des dates</h4>
 						<div class="contenu">
 							<table>
 								<tr>
 									<th>Fonction</th>
-									<th>Utilité</th>
+									<th>Description</th>
 								</tr>
 								<tr>
-									<td class="script">SYSDATE</td>
+									<td><span class="script ">SYSDATE</span><span class="script "> </span>ou<span class="script "> </span><span class="script ">CURRENT_DATE</span></td>
 									<td>Renvoie la date actuelle</td>
 								</tr>
 								<tr>
-									<td class="script">ADD_MONTHS(<span class="perso">date</span>, <span class="perso">nombre</span>)</td>
+									<td><span class="script ">CURRENT_TIMESTAMP</span><span class="script "> </span>ou<span class="script "> </span><span class="script ">SYSTIMESTAMP</span></td>
+									<td>Renvoie la date et l'heure actuelle</td>
+								</tr>
+								<tr>
+									<td><span class="script ">ADD_MONTHS(</span><span class="script perso ">date</span><span class="script ">, </span><span class="script perso ">nombre</span><span class="script ">)</span></td>
 									<td>Ajoute ou soustrait un certain nombre de mois</td>
 								</tr>
 								<tr>
-									<td class="script">LAST_DAY(<span class="perso">date</span>)</td>
+									<td><span class="script ">LAST_DAY(</span><span class="script perso ">date</span><span class="script ">)</span></td>
 									<td>Expression de type date qui a pour valeur la date du dernier jour du mois contenant la date</td>
 								</tr>
 								<tr>
-									<td class="script">NEXT_DAY(<span class="perso">date</span>, <span class="perso">jour</span>)</td>
+									<td><span class="script ">NEXT_DAY(</span><span class="script perso ">date</span><span class="script ">, </span><span class="script perso ">jour</span><span class="script ">)</span></td>
 									<td>Expression de type date qui a pour valeur la date du prochain jour de la semaine spécifié dans le jour</td>
 								</tr>
 								<tr>
-									<td class="script">ROUND(<span class="perso">date</span>, <span class="perso">masque</span>)</td>
+									<td><span class="script ">ROUND(</span><span class="script perso ">date</span><span class="script ">, </span><span class="script perso ">masque</span><span class="script ">)</span></td>
 									<td>Arrondit la date à la précision spécifiée</td>
 								</tr>
 								<tr>
-									<td class="script">TRUNC(<span class="perso">date</span>, <span class="perso">masque</span>)</td>
+									<td><span class="script ">TRUNC(</span><span class="script perso ">date</span><span class="script ">, </span><span class="script perso ">masque</span><span class="script ">)</span></td>
 									<td>Tronque la date à la précision spécifiée</td>
 								</tr>
 								<tr>
-									<td class="script">EXTRACT(YEAR | MONTH | DAY FROM <span class="perso">date</span>)</td>
-									<td>Extrait le jour, le mois ou l’année à partir d’une date</td>
+									<td><span class="script ">EXTRACT(DAY FROM </span><span class="script perso ">date</span><span class="script ">)</span></td>
+									<td>Extrait le jour à partir d’une date</td>
 								</tr>
 								<tr>
-									<td class="script">TO_DATE(<span class="perso">chaine</span>, <span class="perso">masque</span>)</td>
-									<td>Convertit une chaîne de caractères en dates (ex : <span class="script">TO_DATE('10/12/2024', 'DD/MM/YYYY')</span></td>
+									<td><span class="script ">EXTRACT(MONTH FROM </span><span class="script perso ">date</span><span class="script ">)</span></td>
+									<td>Extrait le mois à partir d’une date</td>
 								</tr>
-								<!--
 								<tr>
-									<td class="script"></td>
-									<td></td>
+									<td><span class="script ">EXTRACT(YEAR FROM </span><span class="script perso ">date</span><span class="script ">)</span></td>
+									<td>Extrait l’année à partir d’une date</td>
 								</tr>
-								-->
+								<tr>
+									<td><span class="script ">TO_DATE(</span><span class="script perso ">chaine</span><span class="script ">, </span><span class="script perso ">masque</span><span class="script ">)</span></td>
+									<td>Convertit une chaîne de caractères en date (ex : <span class="script ">TO_DATE('10/12/2024', 'DD/MM/YYYY'</span><span class="script ">)</span>)</td>
+								</tr>
+								<tr>
+									<td><span class="script ">TO_</span><span class="script ">CHAR</span><span class="script ">(</span><span class="script perso ">date</span><span class="script ">, </span><span class="script perso ">masque</span><span class="script ">)</span></td>
+									<td>Convertit une date en chaîne de caractères (ex : <span class="script ">TO_CHAR</span><span class="script ">(</span><span class="script ">SYSDATE</span><span class="script ">, 'DD/MM/YYYY'</span><span class="script ">)</span>)</td>
+								</tr>
 							</table>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="II.4">Autres fonctions</h3>
+
+					<h3 class="soustitre" id="3.4">Autres fonctions</h3>
 					<div class="contenu">
 						<table>
 							<tr>
 								<th>Fonction</th>
-								<th>Utilité</th>
+								<th>Description</th>
 							</tr>
 							<tr>
-								<td class="script">CHR(<span class="perso">n</span>)</td>
+								<td><span class="script ">CHR(</span><span class="script perso ">n</span><span class="script ">)</span></td>
 								<td>Retourne le caractère dont le code (ASCII ou EBCDIC) est égal à l’expression numérique entré en paramètre</td>
 							</tr>
 							<tr>
-								<td class="script">GREATEST(<span class="perso">exp1</span>, <span class="perso">exp2</span>…)</td>
+								<td><span class="script ">GREATEST(</span><span class="script perso ">exp1</span><span class="script ">, </span><span class="script perso ">exp2</span><span class="script ">…)</span></td>
 								<td>Retourne la plus grande des valeurs des expressions arguments</td>
 							</tr>
 							<tr>
-								<td class="script">LEAST(<span class="perso">exp1</span>, <span class="perso">exp2</span>…)</td>
+								<td><span class="script ">LEAST(</span><span class="script perso ">exp1</span><span class="script ">, </span><span class="script perso ">exp2</span><span class="script ">…)</span></td>
 								<td>Retourne la plus petite des valeurs des expressions arguments</td>
 							</tr>
 							<tr>
-								<td class="script">COALESCE(<span class="perso">exp1</span>, <span class="perso">exp2</span>…)</td>
+								<td><span class="script ">COALESCE(</span><span class="script perso ">exp1</span><span class="script ">, </span><span class="script perso ">exp2</span><span class="script ">…)</span></td>
 								<td>Retourne la première valeur différente de NULL des expressions arguments, s’il y en a une, et la valeur NULL s’il n’y en a pas</td>
 							</tr>
 						</table>
 					</div>
-					<h3 class="soustitre" id="II.5">Fonctions d'agrégat (pour des sélections uniquement, ne concernent pas les conditions)</h3>
+
+					<h3 class="soustitre" id="3.5">Les fonctions d'agrégat (pour des sélections uniquement, ne concernent pas les conditions)</h3>
 					<div class="contenu">
 						<table>
 							<tr>
 								<th>Fonction</th>
-								<th>Utilité</th>
+								<th>Description</th>
 							</tr>
 							<tr>
-								<td class="script">AVG(<span class="perso">expression</span>)</td>
+								<td><span class="script ">AVG(</span><span class="script perso ">expression</span><span class="script ">)</span></td>
 								<td>Moyenne des valeurs d’une colonne</td>
 							</tr>
 							<tr>
-								<td class="script">SUM(<span class="perso">expression</span>)</td>
+								<td><span class="script ">SUM(</span><span class="script perso ">expression</span><span class="script ">)</span></td>
 								<td>Somme des valeurs d’une colonne</td>
 							</tr>
 							<tr>
-								<td class="script">MIN(<span class="perso">expression</span>)</td>
+								<td><span class="script ">MIN(</span><span class="script perso ">expression</span><span class="script ">)</span></td>
 								<td>La plus petite des valeurs d’une colonne</td>
 							</tr>
 							<tr>
-								<td class="script">VARIANCE(<span class="perso">expression</span>)</td>
+								<td><span class="script ">VARIANCE(</span><span class="script perso ">expression</span><span class="script ">)</span></td>
 								<td>La plus grande des valeurs d’une colonne</td>
 							</tr>
 							<tr>
-								<td class="script">STDDEV(<span class="perso">expression</span>)</td>
+								<td><span class="script ">STDDEV(</span><span class="script perso ">expression</span><span class="script ">)</span></td>
 								<td>Écart-type ou déviation standard</td>
 							</tr>
 							<tr>
-								<td class="script">COUNT(*)</td>
+								<td><span class="script ">COUNT(*)</span></td>
 								<td>Nombre de lignes</td>
 							</tr>
 							<tr>
-								<td class="script">COUNT(<span class="perso">expression</span>)</td>
-								<td>Nombre de lignes ayant pour valeur non nulle pour une expression</td>
+								<td><span class="script ">COUNT(</span><span class="script perso ">expression</span><span class="script ">)</span></td>
+								<td>Nombre de lignes ayant pour valeur non nulle</td>
 							</tr>
 							<tr>
-								<td class="script">COUNT(DISTINCT <span class="perso">expression</span>)</td>
-								<td>Nombre de lignes ayant des valeurs distinctes non nulles pour une expression</td>
+								<td><span class="script ">COUNT(DISTINCT </span><span class="script perso ">expression</span><span class="script ">)</span></td>
+								<td>Nombre de lignes ayant des valeurs distinctes non nulles</td>
 							</tr>
 						</table>
 					</div>
+
 				</div>
-				<h2 class="soustitre" id="III">Requêtes d'initialisation de la base de données</h2>
+				<h2 class="soustitre" id="4">Requêtes d’initialisation de la base de données</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="III.1">Créer une table (tableau de valeurs)</h3>
+					<h3 class="soustitre" id="4.1">Créer une table (tableau de valeurs)</h3>
 					<div class="contenu">
-						<p class="script">
-							CREATE TABLE [IF NOT EXISTS] <span class="perso">table1</span> (<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1 type1</span> [[CONSTRAINT <span class="perso">nomContrainte1</span>] <span class="perso">contrainte1</span>] [GENERATED AS IDENTITY],<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut2 type2</span> [[CONSTRAINT <span class="perso">nomContrainte2</span>] <span class="perso">contrainte2</span>],<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut3 type3</span> [[CONSTRAINT <span class="perso">nomContrainte3</span>] <span class="perso">contrainte3</span>],<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;[CONSTRAINT <span class="perso">nomContrainte4</span>] PRIMARY KEY (<span class="perso">attribut1</span>),<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;[[CONSTRAINT <span class="perso">nomContrainte5</span>] FOREIGN KEY (<span class="perso">attribut3</span>) REFERENCES <span class="perso">table2</span>(<span class="perso">attribut1</span>)]<br/>
-							);
-						</p>
+						<p><span class="script ">CREATE TABLE [IF NOT EXISTS] </span><span class="script perso ">table1</span><span class="script "> (</span><span class="script "><br/>    </span><span class="script perso ">attribut1</span><span class="script "> </span><span class="script perso ">type1</span><span class="script "> [[CONSTRAINT </span><span class="script perso ">nomContrainte1</span><span class="script ">] </span><span class="script perso ">contrainte1</span><span class="script ">] [GENERATED AS IDENTITY],</span><span class="script "><br/>    </span><span class="script perso ">attribut2</span><span class="script "> </span><span class="script perso ">type2</span><span class="script "> [[CONSTRAINT </span><span class="script perso ">nomContrainte2</span><span class="script ">] </span><span class="script perso ">contrainte2</span><span class="script ">],</span><span class="script "><br/>    </span><span class="script perso ">attribut3</span><span class="script "> </span><span class="script perso ">type3</span><span class="script "> [[CONSTRAINT </span><span class="script perso ">nomContrainte3</span><span class="script ">] </span><span class="script perso ">contrainte3</span><span class="script ">],</span><span class="script "><br/>    [CONSTRAINT </span><span class="script perso ">nomContrainte4</span><span class="script ">] PRIMARY KEY (</span><span class="script perso ">attribut1</span><span class="script ">),</span><span class="script "><br/>    [[CONSTRAINT </span><span class="script perso ">nomContrainte5</span><span class="script ">] FOREIGN KEY (</span><span class="script perso ">attribut3</span><span class="script ">) REFERENCES </span><span class="script perso ">table2</span><span class="script ">(</span><span class="script perso ">attribut1</span><span class="script ">)]</span><span class="script "><br/>); </span></p>
 						<p>ou</p>
-						<p class="script">
-							CREATE TABLE <span class="perso">table1</span> (<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1 type1</span> [CONSTRAINT <span class="perso">nomContrainte1</span>] PRIMARY KEY [GENERATED AS IDENTITY],<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut2 type2</span> [[CONSTRAINT <span class="perso">nomContrainte2</span>] <span class="perso">contrainte2</span>],<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut3 type3</span> [[CONSTRAINT <span class="perso">nomContrainte3</span>] REFERENCES <span class="perso">table2</span>(<span class="perso">attribut1</span>)]<br/>
-							);
-						</p>
-						<div class="note"><span class="script">GENERATED AS IDENTITY</span> permet de créer automatiquement les valeurs des clés primaires si le type est un nombre entier.</div>
+						<p><span class="script ">CREATE TABLE </span><span class="script perso ">table1</span><span class="script "> (</span><span class="script "><br/>    </span><span class="script perso ">attribut1</span><span class="script "> </span><span class="script perso ">type1</span><span class="script "> [CONSTRAINT </span><span class="script perso ">nomContrainte1</span><span class="script ">] PRIMARY KEY [GENERATED AS IDENTITY],</span><span class="script "><br/>    </span><span class="script perso ">attribut2</span><span class="script "> </span><span class="script perso ">type2</span><span class="script "> [[CONSTRAINT </span><span class="script perso ">nomContrainte2</span><span class="script ">] </span><span class="script perso ">contrainte2</span><span class="script ">],</span><span class="script "><br/>    </span><span class="script perso ">attribut3</span><span class="script "> </span><span class="script perso ">type3</span><span class="script "> [[CONSTRAINT </span><span class="script perso ">nomContrainte3</span><span class="script ">] REFERENCES </span><span class="script perso ">table2</span><span class="script ">(</span><span class="script perso ">attribut1</span><span class="script ">)]</span><span class="script "><br/>);</span></p>
+						<div class="note "><span class="script ">GENERATED AS IDENTITY</span> permet de créer automatiquement les valeurs des clés primaires si le type est un nombre entier.</div>
+						
 					</div>
-					<h3 class="soustitre" id="III.2">Les contraintes</h3>
+
+					<h3 class="soustitre" id="4.2">Les contraintes</h3>
 					<div class="contenu">
-						<table>
-							<tr>
-								<th>Contrainte</th>
-								<th>Initiales nom contrainte</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td class="script">NOT NULL</td>
-								<td class=perso>nn_nomContrainte</td>
-								<td>Permet de rendre obligatoire l’entrée d’une valeur dans un attribut</td>
-							</tr>
-							<tr>
-								<td class="script">CHECK(<span class="perso">condition</span>)</td>
-								<td class=perso>ck_nomContrainte</td>
-								<td>Permet de vérifier la condition avant d'insérer un enregistrement</td>
-							</tr>
-							<tr>
-								<td class="script">UNIQUE</td>
-								<td class=perso>uq_nomContrainte</td>
-								<td>Permet d'éviter l'insertion de plusieurs valeurs identiques</td>
-							</tr>
-							<tr>
-								<td class="script">DEFAULT <span class="perso">valeurParDefaut</span></td>
-								<td class=perso>df_nomContrainte</td>
-								<td>Permet de remplacer une valeur non renseignée par une autre</td>
-							</tr>
-							<tr>
-								<td class="script">PRIMARY KEY (<span class="perso">attribut1</span>)</td>
-								<td class=perso>pk_nomContrainte</td>
-								<td>Permet de créer une clé primaire. Il s'agit généralement d'un identifiant, et sa valeur est unique.</td>
-							</tr>
-							<tr>
-								<td class="script">FOREIGN KEY (<span class="perso">attribut3</span>) REFERENCES <span class="perso">table2</span>(<span class="perso">attribut7</span>)</td>
-								<td class=perso>fk_nomContrainte</td>
-								<td>Permet de créer une clé étrangère en relation avec une autre table (déjà existante)</td>
-							</tr>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
-						</table>
-						<h4 class="soustitre" id="III.2.1">Ajouter une contrainte (exemple avec une clé primaire)</h4>
+						<h4 class="soustitre" id="4.2.1">Liste des contraintes</h4>
 						<div class="contenu">
-							<p class="script">ALTER TABLE <span class="perso">table1</span><br/>ADD CONSTRAINT <span class="perso">pk_cle</span> PRIMARY KEY(<span class="perso">attribut1</span>);</p>
+							<table>
+								<tr>
+									<th>Contrainte</th>
+									<th>Initiales nom contrainte</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td><span class="script ">NOT NULL</span></td>
+									<td><span class="script perso ">nn_nomContrainte</span></td>
+									<td>Permet de rendre obligatoire l’entrée d’une valeur dans un attribut</td>
+								</tr>
+								<tr>
+									<td><span class="script ">CHECK(</span><span class="script perso ">condition</span><span class="script ">)</span></td>
+									<td><span class="script perso ">ck_nomContrainte</span></td>
+									<td>Permet de vérifier la condition avant d'insérer un enregistrement</td>
+								</tr>
+								<tr>
+									<td><span class="script ">UNIQUE</span></td>
+									<td><span class="script perso ">uq_nomContrainte</span></td>
+									<td>Permet d'éviter l'insertion de plusieurs valeurs identiques</td>
+								</tr>
+								<tr>
+									<td><span class="script ">DEFAULT </span><span class="script perso ">valeurParDefaut</span></td>
+									<td><span class="script perso ">df_nomContrainte</span></td>
+									<td>Permet de remplacer une valeur non renseignée par une autre</td>
+								</tr>
+								<tr>
+									<td><span class="script ">PRIMARY KEY (</span><span class="script perso ">attribut1</span><span class="script ">)</span></td>
+									<td><span class="script perso ">pk_nomContrainte</span></td>
+									<td>Permet de créer une clé primaire. Il s'agit généralement d'un identifiant, et sa valeur est unique</td>
+								</tr>
+								<tr>
+									<td><span class="script ">FOREIGN KEY (</span><span class="script perso ">attribut3</span><span class="script ">) REFERENCES </span><span class="script perso ">table2</span><span class="script ">(</span><span class="script perso ">attribut7</span><span class="script ">)</span></td>
+									<td><span class="script perso ">fk_nomContrainte</span></td>
+									<td>Permet de créer une clé étrangère en relation avec une autre table (déjà existante)</td>
+								</tr>
+							</table>
 						</div>
-						<h4 class="soustitre" id="III.2.2">Supprimer une contrainte (exemple avec une clé primaire)</h4>
+
+						<h4 class="soustitre" id="4.2.2">Ajouter une contrainte</h4>
 						<div class="contenu">
-							<p class="script">ALTER TABLE <span class="perso">table1</span><br/>DROP CONSTRAINT <span class="perso">pk_cle</span>;</p>
+							<p><span class="script ">ALTER TABLE </span><span class="script perso ">table1</span><span class="script "><br/>ADD CONSTRAINT</span><span class="script "> </span><span class="script perso ">nomContrainte1</span><span class="script "> </span><span class="script perso ">contrainte1</span><span class="script ">;</span></p>
+							<div class="note ">Il est fortement conseillé d'ajouter une contrainte en même temps que la création d'une table. Ces commandes peuvent être utile si une contrainte a été oubliée ou n'aurait pas dû être insérée.</div>
 						</div>
-						<h4 class="soustitre" id="III.2.3">Activer/Désactiver une contrainte d'intégrité (exemple avec une clé primaire)</h4>
+
+						<h4 class="soustitre" id="4.2.3">Supprimer une contrainte</h4>
 						<div class="contenu">
-							<p class="script">ALTER TABLE <span class="perso">table1</span><br/>ENABLE/DISABLE <span class="perso">pk_cle</span>;</p>
+							<p><span class="script ">ALTER TABLE </span><span class="script perso ">table1</span><span class="script "><br/>DROP CONSTRAINT</span><span class="script "> </span><span class="script perso ">nomContrainte1</span><span class="script ">;</span></p>
 						</div>
-						<div class="note">
-							Il est fortement conseillé d'ajouter une contrainte en même temps que la création d'une table. Ces commandes peuvent être utile si une contrainte a été oubliée ou n'aurait pas dû être insérée.
+
+						<h4 class="soustitre" id="4.2.4">Activer une contrainte d'intégrité</h4>
+						<div class="contenu">
+							<p><span class="script ">ALTER TABLE </span><span class="script perso ">table1</span><span class="script "><br/>ENABLE</span><span class="script "> </span><span class="script perso ">nomContrainte1</span><span class="script ">;</span></p>
 						</div>
+
+						<h4 class="soustitre" id="4.2.5">Désactiver une contrainte d'intégrité</h4>
+						<div class="contenu">
+							<p><span class="script ">ALTER TABLE </span><span class="script perso ">table1</span><span class="script "><br/>DISABLE</span><span class="script "> </span><span class="script perso ">nomContrainte1</span><span class="script ">;</span></p>
+						</div>
+
 					</div>
-					<h3 class="soustitre" id="III.3">Renommer une table</h3>
+
+					<h3 class="soustitre" id="4.3">Copier une table</h3>
 					<div class="contenu">
-						<p class="script">RENAME <span class="perso">ancienNom</span> TO <span class="perso">nouveauNom</span>;</p>
+						<p><span class="script ">CREATE TABLE </span><span class="script perso ">table2</span><span class="script "> AS (SELECT * FROM </span><span class="script perso ">table1</span><span class="script ">);</span></p>
 					</div>
-					<h3 class="soustitre" id="III.4">Supprimer une table</h3>
+
+					<h3 class="soustitre" id="4.4">Renommer une table</h3>
 					<div class="contenu">
-						<p class="script">DROP TABLE [IF EXISTS] <span class="perso">table1</span> [CASCADE CONSTRAINTS];</p>
+						<p><span class="script ">RENAME </span><span class="script perso ">ancienNom</span><span class="script "> TO </span><span class="script perso ">nouveauNom</span><span class="script ">;</span></p>
 					</div>
-					<h3 class="soustitre" id="III.5">Copier une table</h3>
+
+					<h3 class="soustitre" id="4.5">Supprimer une table</h3>
 					<div class="contenu">
-						<p class="script">
-							CREATE TABLE <span class="perso">table2</span> AS (SELECT * FROM <span class="perso">table1</span>);
-						</p>
+						<p><span class="script ">DROP TABLE [IF EXISTS] </span><span class="script perso ">table1</span><span class="script "> [CASCADE CONSTRAINTS];</span></p>
 					</div>
-					<!--
-					<h3 class="soustitre" id=""></h3>
-					<div class="contenu">
-						<p class="script"></p>
-					</div>
-					-->
+
 				</div>
-				<h2 class="soustitre" id="IV">Requêtes de mise à jour de la table</h2>
+				<h2 class="soustitre" id="5">Requêtes de mise à jour du contenu de la table</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="IV.1">Insérer un enregistrement (ligne)</h3>
+					<h3 class="soustitre" id="5.1">Insérer un ou plusieurs enregistrement (ligne)</h3>
 					<div class="contenu">
-						<p class="script">INSERT INTO <span class="perso">table1</span><br/>VALUES (<span class="perso">valeur1</span>, <span class="perso">valeur2…</span>);</p>
-						<p>ou</p>
-						<p class="script">INSERT INTO <span class="perso">table1</span> (<span class="perso">attribut1</span>, <span class="perso">attribut2…</span>)<br/>VALUES (<span class="perso">valeur1</span>, <span class="perso">valeur2…</span>);</p>
+						<p><span class="script ">INSERT INTO </span><span class="script perso ">table1</span><span class="script "> [(</span><span class="script perso ">attribut1</span><span class="script ">, </span><span class="script perso ">attribut2</span><span class="script ">…)] VALUES</span><span class="script "><br/></span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…);</span></p>
 					</div>
-					<h3 class="soustitre" id="IV.2">Mettre à jour un ou plusieurs enregistrement(s)</h3>
+
+					<h3 class="soustitre" id="5.2">Mettre à jour un ou plusieurs enregistrement(s) respectant la condition</h3>
 					<div class="contenu">
-						<p class="script">UPDATE <span class="perso">table1</span><br/>SET <span class="perso">attribut1</span> = <span class="perso">valeur1</span> [, <span class="perso">attribut2</span> = <span class="perso">valeur2</span>…]<br/>WHERE <span class="perso">condition</span>;</p>
+						<p><span class="script ">UPDATE </span><span class="script perso ">table1</span><span class="script "><br/>SET </span><span class="script perso ">attribut1</span><span class="script "> = </span><span class="script perso ">valeur1</span><span class="script "> [, </span><span class="script perso ">attribut2</span><span class="script "> = </span><span class="script perso ">valeur2</span><span class="script ">…]</span><span class="script "><br/>WHERE </span><span class="script perso ">condition</span><span class="script ">;</span></p>
 					</div>
-					<h3 class="soustitre" id="IV.3">Supprimer un ou plusieurs enregistrement(s)</h3>
+
+					<h3 class="soustitre" id="5.3">Supprimer un ou plusieurs enregistrement(s) respectant la condition</h3>
 					<div class="contenu">
-						<p class="script">DELETE FROM <span class="perso">table1</span><br/>WHERE <span class="perso">condition</span>;</p>
+						<p><span class="script ">DELETE FROM </span><span class="script perso ">table1</span><span class="script "><br/>WHERE </span><span class="script perso ">condition</span><span class="script ">;</span></p>
 					</div>
-					<h3 class="soustitre" id="IV.4">Modifier la structure de la table</h3>
-					<div class="contenu">
-						<h4 class="soustitre" id="IV.4.1">Ajouter une colonne</h4>
-						<div class="contenu">
-							<p class="script">ALTER TABLE <span class="perso">table1</span><br/>ADD <span class="perso">attribut type</span>;</p>
-						</div>
-						<h4 class="soustitre" id="IV.4.2">Supprimer une colonne</h4>
-						<div class="contenu">
-							<p class="script">ALTER TABLE <span class="perso">table1</span><br/>DROP [COLUMN] <span class="perso">attribut</span>;</p>
-						</div>
-						<h4 class="soustitre" id="IV.4.3">Modifier le type d'une colonne</h4>
-						<div class="contenu">
-							<p class="script">ALTER TABLE <span class="perso">table1</span><br/>MODIFY <span class="perso">attribut nouveauType</span>;</p>
-						</div>
-						<h4 class="soustitre" id="IV.4.4">Modifier le nom d'une colonne</h4>
-						<div class="contenu">
-							<p class="script">ALTER TABLE <span class="perso">table1</span><br/>RENAME <span class="perso">ancienNom</span> TO <span class="perso">nouveauNom</span>;</p>
-						</div>
-					</div>
-					<!--
-					<h3 class="soustitre" id=""></h3>
-					<div class="contenu">
-						<p class="script"></p>
-					</div>
-					-->
+
 				</div>
-				<h2 class="soustitre" id="V">Requêtes de sélection de données</h2>
+				<h2 class="soustitre" id="6">Requêtes de mise à jour de la structure de la table</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="V.1">Sélection de tous les enregistrements de la table</h3>
+					<h3 class="soustitre" id="6.1">Ajouter une colonne</h3>
 					<div class="contenu">
-						<p class="script">SELECT * FROM <span class="perso">table1</span>;</p>
+						<p><span class="script ">ALTER TABLE </span><span class="script perso ">table1</span><span class="script "><br/>ADD </span><span class="script perso ">attribut</span><span class="script "> </span><span class="script perso ">type</span><span class="script ">;</span></p>
 					</div>
-					<h3 class="soustitre" id="V.2">Sélection des enregistrements de la table respectant la condition</h3>
+
+					<h3 class="soustitre" id="6.2">Supprimer une colonne</h3>
 					<div class="contenu">
-						<p class="script">SELECT * FROM <span class="perso">table1</span><br/>WHERE <span class="perso">condition</span>;</p>
+						<p><span class="script ">ALTER TABLE </span><span class="script perso ">table1</span><span class="script "><br/>DROP [COLUMN] </span><span class="script perso ">attribut</span><span class="script ">;</span></p>
 					</div>
-					<h3 class="soustitre" id="V.3">Sélection des enregistrements de la table dans un ordre spécifique</h3>
+
+					<h3 class="soustitre" id="6.3">Modifier le type d'une colonne</h3>
 					<div class="contenu">
-						<p class="script">SELECT * FROM <span class="perso">table1</span><br/>[WHERE <span class="perso">condition</span>]<br/>ORDER BY <span class="perso">attribut1</span> [DESC], <span class="perso">attribut2</span> [DESC]…;</p>
+						<p><span class="script ">ALTER TABLE </span><span class="script perso ">table1</span><span class="script "><br/>MODIFY </span><span class="script ">attribut </span><span class="script perso ">nouveauType</span><span class="script ">;</span></p>
 					</div>
-					<h3 class="soustitre" id="V.4">Sélection des <span class="perso">n</span> premiers enregistrements de la table</h3>
+
+					<h3 class="soustitre" id="6.4">Modifier le nom d'une colonne</h3>
 					<div class="contenu">
-						<p class="script">SELECT * FROM <span class="perso">table1</span><br/>[WHERE <span class="perso">condition</span>]<br/>[ORDER BY <span class="perso">attribut1</span> [DESC], <span class="perso">attribut2</span> [DESC]…]<br/>FETCH FIRST <span class="perso">n</span> ROW[S] ONLY;</p>
+						<p><span class="script ">ALTER TABLE </span><span class="script perso ">table1</span><span class="script "><br/>RENAME </span><span class="script perso ">ancienNom</span><span class="script "> TO </span><span class="script perso ">nouveauNom</span><span class="script ">;</span></p>
 					</div>
-					<h3 class="soustitre" id="V.5">Sélection des attributs de la table avec des enregistrements respectant la condition</h3>
+
+				</div>
+				<h2 class="soustitre" id="7">Requêtes de sélection de données</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="7.1">Syntaxe de base</h3>
 					<div class="contenu">
-						<p class="script">SELECT <span class="perso">attribut1, attribut2</span> FROM <span class="perso">table1</span><br/>WHERE <span class="perso">condition</span>;</p>
+						<p><span class="script ">SELECT </span><span class="script perso ">attribut1</span><span class="script ">, </span><span class="script perso ">attribut2</span><span class="script ">… FROM </span><span class="script perso ">table1</span><span class="script "><br/></span><span class="script ">[</span><span class="script ">WHERE </span><span class="script perso ">condition1</span><span class="script ">]</span><span class="script "><br/>[</span><span class="script ">GROUP BY </span><span class="script perso ">attribut1</span><span class="script "> [, </span><span class="script perso ">attribut2</span><span class="script ">…]</span><span class="script "><br/></span><span class="script ">[HAVING </span><span class="script perso ">condition2</span><span class="script ">]</span><span class="script ">]</span><span class="script "><br/></span><span class="script ">[ORDER BY </span><span class="script perso ">attribut1</span><span class="script "> [DESC], </span><span class="script perso ">attribut2</span><span class="script "> [DESC]…];</span></p>
 					</div>
-					<h3 class="soustitre" id="V.6">Sélection d’un attribut de la table sans répétitions d'enregistrements respectant la condition</h3>
+
+					<h3 class="soustitre" id="7.2">La clause SELECT</h3>
 					<div class="contenu">
-						<p class="script">SELECT DISTINCT(<span class="perso">attribut1</span>) FROM <span class="perso">table1</span><br/>WHERE <span class="perso">condition</span>;</p>
-						<p>ou</p>
-						<p class="script">SELECT DISTINCT <span class="perso">attribut1</span> FROM <span class="perso">table1</span><br/>WHERE <span class="perso">condition</span>;</p>
-					</div>
-					<h3 class="soustitre" id="V.7">Les jointures (sélection des attributs de la table avec une ou plusieurs jointure(s) à une autre table)</h3>
-					<div class="contenu">
-						<h4 class="soustitre" id="V.7.1">Jointure interne simple</h4>
+						<h4 class="soustitre" id="7.2.1">Sélection de tous les enregistrements de la table</h4>
 						<div class="contenu">
-							<p class="script">
-								SELECT <span class="perso">table1.attribut2</span>, <span class="perso">table2.attribut3</span> FROM <span class="perso">table1</span><br/>
-								[INNER] JOIN <span class="perso">table2</span> ON <span class="perso">table1.attribut1</span> = <span class="perso">table2.attribut4</span><br/>
-								WHERE <span class="perso">condition</span>;
-							</p>
+							<p><span class="script ">SELECT * FROM </span><span class="script perso ">table1</span><span class="script ">;</span></p>
+						</div>
+
+						<h4 class="soustitre" id="7.2.2">Sélection de certains attributs de la table</h4>
+						<div class="contenu">
+							<p><span class="script ">SELECT </span><span class="script perso ">attribut1</span><span class="script ">, </span><span class="script perso ">attribut2</span><span class="script "> FROM </span><span class="script perso ">table1</span><span class="script ">;</span></p>
+						</div>
+
+						<h4 class="soustitre" id="7.2.3">Sélection d’un attribut de la table sans répétitions</h4>
+						<div class="contenu">
+							<p><span class="script ">SELECT</span><span class="script "> DISTINCT</span><span class="script "> </span><span class="script perso ">attribut1</span><span class="script "> FROM </span><span class="script perso ">table1</span><span class="script ">;</span></p>
+						</div>
+
+						<h4 class="soustitre" id="7.2.4">Utilisation d'une fonction d'agrégat (ne renvoie qu’une seule valeur sans regroupement)</h4>
+						<div class="contenu">
+							<p><span class="script ">SELECT </span><span class="script perso ">maFonction</span><span class="script ">(</span><span class="script perso ">attribut1</span><span class="script ">) FROM table1;</span></p>
+							
+						</div>
+
+						<h4 class="soustitre" id="7.2.5">Sélection des <span class="perso ">n</span> premiers enregistrements de la table</h4>
+						<div class="contenu">
+							<p><span class="script ">SELECT * FROM </span><span class="script perso ">table1</span><span class="script "><br/>[ORDER BY </span><span class="script perso ">attribut1</span><span class="script "> [DESC], </span><span class="script perso ">attribut2</span><span class="script "> [DESC]…]</span><span class="script "><br/>FETCH FIRST </span><span class="script perso ">n</span><span class="script "> ROW[S] ONLY;</span></p>
+						</div>
+
+					</div>
+
+					<h3 class="soustitre" id="7.3">Les jointures (clause JOIN)</h3>
+					<div class="contenu">
+						<p>Les jointures permettent de sélectionner des attributs de plusieurs tables différentes (les jointures peuvent s’accumuler).</p>
+						<h4 class="soustitre" id="7.3.1">Syntaxe de base</h4>
+						<div class="contenu">
+							<p><span class="script ">SELECT * FROM </span><span class="script perso ">table1</span><span class="script "><br/>JOIN </span><span class="script perso ">table2</span><span class="script "> ON </span><span class="script perso ">table1</span><span class="script ">.</span><span class="script perso ">attribut</span><span class="script "> = </span><span class="script perso ">table2</span><span class="script ">.</span><span class="script perso ">attribut</span><span class="script "><br/></span><span class="script ">[</span><span class="script ">JOIN </span><span class="script perso ">table3</span><span class="script "> ON </span><span class="script perso ">table2</span><span class="script ">.</span><span class="script perso ">attribut</span><span class="script "> = </span><span class="script perso ">table3</span><span class="script ">.</span><span class="script perso ">attribut</span><span class="script "><br/>…</span><span class="script ">]</span><span class="script "><br/></span><span class="script ">[</span><span class="script ">WHERE </span><span class="script perso ">condition</span><span class="script ">];</span></p>
+						</div>
+
+						<h4 class="soustitre" id="7.3.2">Jointure interne simple</h4>
+						<div class="contenu">
+							<p><span class="script ">SELECT </span><span class="script perso ">table1</span><span class="script ">.</span><span class="script perso ">attribut2</span><span class="script ">, </span><span class="script perso ">table2</span><span class="script ">.</span><span class="script perso ">attribut3</span><span class="script "> FROM </span><span class="script perso ">table1</span><span class="script "><br/></span><span class="script ">[INNER] JOIN </span><span class="script perso ">table2</span><span class="script "> ON </span><span class="script perso ">table1</span><span class="script ">.</span><span class="script perso ">attribut1</span><span class="script "> = </span><span class="script perso ">table2</span><span class="script ">.</span><span class="script perso ">attribut4</span><span class="script ">;</span></p>
 							<p>Autre solution (à utiliser uniquement pour deux attributs identiques de deux tables différentes) :</p>
-							<p class="script">
-								SELECT <span class="perso">table1.attribut2</span>, <span class="perso">table2.attribut3</span> FROM <span class="perso">table1</span><br/>
-								[INNER] JOIN <span class="perso">table2</span> USING(<span class="perso">attribut1</span>)<br/>
-								WHERE <span class="perso">condition</span>;
-							</p>
+							<p><span class="script ">SELECT </span><span class="script perso ">table1</span><span class="script ">.</span><span class="script perso ">attribut2</span><span class="script ">, </span><span class="script perso ">table2</span><span class="script ">.</span><span class="script perso ">attribut3</span><span class="script "> FROM </span><span class="script perso ">table1</span><span class="script "><br/></span><span class="script ">[INNER] JOIN </span><span class="script perso ">table2</span><span class="script "> USING(</span><span class="script perso ">attribut1</span><span class="script ">);</span></p>
 						</div>
-						<h4 class="soustitre" id="V.7.2">Jointure externe gauche (avec des enregistrements de la table de gauche non présents dans la table de droite)</h4>
+
+						<h4 class="soustitre" id="7.3.3">Jointure externe gauche (avec des enregistrements de la table de gauche non présents dans la table de droite)</h4>
 						<div class="contenu">
-							<p class="script">
-								SELECT <span class="perso">table1.attribut1</span>, <span class="perso">table2.attribut3</span> FROM <span class="perso">table1</span><br/>
-								LEFT [OUTER] JOIN <span class="perso">table2</span> ON <span class="perso">table1.attribut1</span> = <span class="perso">table2.attribut2</span><br/>
-								WHERE <span class="perso">condition</span>;
-							</p>
+							<p><span class="script ">SELECT </span><span class="script perso ">table1</span><span class="script ">.</span><span class="script perso ">attribut1</span><span class="script ">, </span><span class="script perso ">table2</span><span class="script ">.</span><span class="script perso ">attribut3</span><span class="script "> FROM </span><span class="script perso ">table1</span><span class="script "><br/></span><span class="script ">LEFT [OUTER] JOIN </span><span class="script perso ">table2</span><span class="script "> ON </span><span class="script perso ">table1</span><span class="script ">.</span><span class="script perso ">attribut1</span><span class="script "> = </span><span class="script perso ">table2</span><span class="script ">.</span><span class="script perso ">attribut2</span><span class="script ">;</span></p>
 						</div>
-						<h4 class="soustitre" id="V.7.3">Jointure externe droite (avec des enregistrements de la table de droite non présents dans la table de gauche)</h4>
+
+						<h4 class="soustitre" id="7.3.4">Jointure externe droite (avec des enregistrements de la table de droite non présents dans la table de gauche)</h4>
 						<div class="contenu">
-							<p class="script">
-								SELECT <span class="perso">table1.attribut1</span>, <span class="perso">table2.attribut3</span> FROM <span class="perso">table1</span><br/>
-								RIGHT [OUTER] JOIN <span class="perso">table2</span> ON <span class="perso">table1.attribut1</span> = <span class="perso">table2.attribut2</span><br/>
-								WHERE <span class="perso">condition</span>;
-							</p>
+							<p><span class="script ">SELECT </span><span class="script perso ">table1</span><span class="script ">.</span><span class="script perso ">attribut1</span><span class="script ">, </span><span class="script perso ">table2</span><span class="script ">.</span><span class="script perso ">attribut3</span><span class="script "> FROM </span><span class="script perso ">table1</span><span class="script "><br/></span><span class="script ">RIGHT [OUTER] JOIN </span><span class="script perso ">table2</span><span class="script "> ON </span><span class="script perso ">table1</span><span class="script ">.</span><span class="script perso ">attribut1</span><span class="script "> = </span><span class="script perso ">table2</span><span class="script ">.</span><span class="script perso ">attribut2</span><span class="script ">;</span></p>
 						</div>
-						<h4 class="soustitre" id="V.7.4">Jointure externe entière (avec des tous les enregistrements non présents dans une autre table)</h4>
+
+						<h4 class="soustitre" id="7.3.5">Jointure externe entière (avec des tous les enregistrements non présents dans une autre table)</h4>
 						<div class="contenu">
-							<p class="script">
-								SELECT <span class="perso">table1.attribut1</span>, <span class="perso">table2.attribut3</span> FROM <span class="perso">table1</span><br/>
-								FULL [OUTER] JOIN <span class="perso">table2</span> ON <span class="perso">table1.attribut1</span> = <span class="perso">table2.attribut2</span><br/>
-								WHERE <span class="perso">condition</span>;
-							</p>
+							<p><span class="script ">SELECT </span><span class="script perso ">table1</span><span class="script ">.</span><span class="script perso ">attribut1</span><span class="script ">, </span><span class="script perso ">table2</span><span class="script ">.</span><span class="script perso ">attribut3</span><span class="script "> FROM </span><span class="script perso ">table1</span><span class="script "><br/></span><span class="script ">FULL [OUTER] JOIN </span><span class="script perso ">table2</span><span class="script "> ON </span><span class="script perso ">table1</span><span class="script ">.</span><span class="script perso ">attribut1</span><span class="script "> = </span><span class="script perso ">table2</span><span class="script ">.</span><span class="script perso ">attribut2</span><span class="script ">;</span></p>
 						</div>
-						<h4 class="soustitre" id="V.7.5">Jointure naturelle (pour deux tables avec une colonne du même nom)</h4>
+
+						<h4 class="soustitre" id="7.3.6">Jointure naturelle (pour deux tables avec une colonne du même nom)</h4>
 						<div class="contenu">
-							<p class="script">
-								SELECT <span class="perso">table1.attribut1</span>, <span class="perso">table2.attribut3</span> FROM <span class="perso">table1</span><br/>
-								NATURAL JOIN <span class="perso">table2</span><br/>
-								WHERE <span class="perso">condition</span>;
-							</p>
+							<p><span class="script ">SELECT </span><span class="script perso ">table1</span><span class="script ">.</span><span class="script perso ">attribut1</span><span class="script ">, </span><span class="script perso ">table2</span><span class="script ">.</span><span class="script perso ">attribut3</span><span class="script "> FROM </span><span class="script perso ">table1</span><span class="script "><br/></span><span class="script ">NATURAL JOIN </span><span class="script perso ">table2</span><span class="script ">;</span></p>
 						</div>
-						<h4 class="soustitre" id="V.7.6">Produit cartésien (retourne chaque ligne d'une table avec chaque ligne d'une autre table)</h4>
+
+						<h4 class="soustitre" id="7.3.7">Produit cartésien (retourne chaque ligne d'une table avec chaque ligne d'une autre table)</h4>
 						<div class="contenu">
-							<p class="script">
-								SELECT <span class="perso">table1.attribut1</span>, <span class="perso">table2.attribut3</span> FROM <span class="perso">table1</span><br/>
-								CROSS JOIN <span class="perso">table2</span><br/>
-								WHERE <span class="perso">condition</span>;
-							</p>
+							<p><span class="script ">SELECT </span><span class="script perso ">table1</span><span class="script ">.</span><span class="script perso ">attribut1</span><span class="script ">, </span><span class="script perso ">table2</span><span class="script ">.</span><span class="script perso ">attribut3</span><span class="script "> FROM </span><span class="script perso ">table1</span><span class="script "><br/></span><span class="script ">CROSS JOIN </span><span class="script perso ">table2</span><span class="script ">;</span></p>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="V.8">Utilisation d'une fonction d'agrégat</h3>
+
+					<h3 class="soustitre" id="7.4">Les alias</h3>
 					<div class="contenu">
-						<p class="script">SELECT <span class="perso">maFonction</span>(<span class="perso">attribut1</span>, <span class="perso">attribut2</span>…) FROM <span class="perso">table1</span><br/>WHERE <span class="perso">condition</span>;</p>
-					</div>
-					<h3 class="soustitre" id="V.9">Les alias</h3>
-					<div class="contenu">
-						<h4 class="soustitre" id="V.9.1">Alias sur les tables (pour faciliter les jointures)</h4>
+						<h4 class="soustitre" id="7.4.1">Alias sur les tables (pour faciliter les jointures)</h4>
 						<div class="contenu">
-							<p class="script">
-								SELECT <span class="perso">t1.attribut2</span>, <span class="perso">t2.attribut3</span> FROM <span class="perso">table1</span> <span class="perso">t1</span><br/>
-								JOIN <span class="perso">table2</span> <span class="perso">t2</span> ON <span class="perso">table1.attribut1</span> = <span class="perso">table2.attribut4</span><br/>
-								WHERE <span class="perso">condition</span>;
-							</p>
+							<p><span class="script ">SELECT </span><span class="script perso ">t1</span><span class="script ">.</span><span class="script perso ">attribut2</span><span class="script ">, </span><span class="script perso ">t2</span><span class="script ">.</span><span class="script perso ">attribut3</span><span class="script "> FROM </span><span class="script perso ">table1</span><span class="script "> </span><span class="script perso ">t1</span><span class="script "><br/></span><span class="script ">JOIN </span><span class="script perso ">table2</span><span class="script "> </span><span class="script perso ">t2</span><span class="script "> ON </span><span class="script perso ">t1</span><span class="script ">.</span><span class="script perso ">attribut1</span><span class="script "> = </span><span class="script perso ">t2</span><span class="script ">.</span><span class="script perso ">attribut4</span><span class="script ">;</span></p>
 						</div>
-						<h4 class="soustitre" id="V.9.2">Alias sur une fonction d'agrégat (pour nommer une colonne sans nom)</h4>
+
+						<h4 class="soustitre" id="7.4.2">Alias sur une fonction d'agrégat (pour nommer une colonne sans nom ou renommer une colonne)</h4>
 						<div class="contenu">
-							<p class="script">SELECT COUNT(*) [AS] <span class="perso">nomColonne</span> FROM <span class="perso">table1</span><br/>WHERE <span class="perso">condition</span>;</p>
+							<p><span class="script ">SELECT </span><span class="script perso ">maFonction</span><span class="script ">(</span><span class="script perso ">attribut1</span><span class="script ">) [AS] </span><span class="script perso ">nomColonne</span><span class="script "> FROM </span><span class="script perso ">table1</span><span class="script ">;</span></p>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="V.10">Les groupes</h3>
+
+					<h3 class="soustitre" id="7.5">La clause WHERE</h3>
 					<div class="contenu">
-						<p>Exemple : Calculer le nombre d’enregistrements de la table pour chaque enregistrement d'attribut du même nom respectant la condition 1 avant le groupement et la condition 2 après le groupement</p>
-						<p class="script">SELECT <span class="perso">attribut1</span> [, <span class="perso">attribut2</span>…], COUNT(*) AS <span class="perso">variable</span> FROM <span class="perso">table1</span><br/>WHERE <span class="perso">condition1</span><br/>
-							GROUP BY <span class="perso">attribut1</span> [, <span class="perso">attribut2</span>…]<br/>
-							[HAVIING <span class="perso">condition2</span>]<br/>
-							[ORDER BY <span class="perso">attribut1</span> [DESC], <span class="perso">attribut2</span> [DESC]…];
-						</p>
+						<h4 class="soustitre" id="7.5.1">Sélection des enregistrements de la table respectant la condition</h4>
+						<div class="contenu">
+							<p><span class="script ">SELECT * FROM </span><span class="script perso ">table1</span><span class="script "><br/></span><span class="script ">WHERE </span><span class="script perso ">condition</span><span class="script ">;</span></p>
+						</div>
+
 					</div>
-					<h3 class="soustitre" id="V.11">Sélection des enregistrements d'un attribut présents dans la première table ou la deuxième ou les deux (union)</h3>
+
+					<h3 class="soustitre" id="7.6">Les clauses GROUP BY et HAVING</h3>
 					<div class="contenu">
-						<p class="script">SELECT <span class="perso">attribut1</span> FROM <span class="perso">table1</span> <br/>UNION<br/> SELECT <span class="perso">attribut1</span> FROM <span class="perso">table2</span>;</p>
+						<h4 class="soustitre" id="7.6.1">Utilisation d’une fonction d’agrégat sur chaque groupe d’enregistrements de même(s) attribut(s)</h4>
+						<div class="contenu">
+							<p><span class="script ">SELECT </span><span class="script perso ">maFonction</span><span class="script ">(</span><span class="script perso ">attribut1</span><span class="script ">), </span><span class="script perso ">attribut2</span><span class="script ">, </span><span class="script perso ">attribut3</span><span class="script ">… FROM </span><span class="script perso ">table1</span><span class="script "><br/></span><span class="script ">GROUP BY </span><span class="script perso ">attribut2</span><span class="script ">, </span><span class="script perso ">attribut3</span><span class="script ">…;</span></p>
+						</div>
+
+						<h4 class="soustitre" id="7.6.2">Utilisation d’une fonction d’agrégat sur chaque groupe d’enregistrements de même(s) attribut(s) avec une condition avant et après regroupement</h4>
+						<div class="contenu">
+							<p><span class="script ">SELECT </span><span class="script perso ">maFonction</span><span class="script ">(</span><span class="script perso ">attribut1</span><span class="script ">), </span><span class="script perso ">attribut2</span><span class="script ">, </span><span class="script perso ">attribut3</span><span class="script ">… FROM </span><span class="script perso ">table1</span><span class="script "><br/></span><span class="script ">WHERE </span><span class="script perso ">conditionAvantRegroupement</span><span class="script "><br/></span><span class="script ">GROUP BY </span><span class="script perso ">attribut2</span><span class="script ">, </span><span class="script perso ">attribut3</span><span class="script ">…</span><span class="script "><br/></span><span class="script ">HAVING </span><span class="script perso ">conditionApresRegroupement</span><span class="script ">;</span></p>
+						</div>
+
 					</div>
-					<h3 class="soustitre" id="V.12">Sélection des enregistrements d'un attribut présents dans la première table, mais pas la deuxième (différence)</h3>
+
+					<h3 class="soustitre" id="7.7">La clause ORDER BY</h3>
 					<div class="contenu">
-						<p class="script">SELECT <span class="perso">attribut1</span> FROM <span class="perso">table1</span> <br/>MINUS<br/> SELECT <span class="perso">attribut1</span> FROM <span class="perso">table2</span>;</p>
+						<h4 class="soustitre" id="7.7.1">Sélection des enregistrements de la table dans l’ordre croissant</h4>
+						<div class="contenu">
+							<p><span class="script ">SELECT * FROM </span><span class="script perso ">table1</span><span class="script "><br/></span><span class="script ">[WHERE </span><span class="script perso ">condition</span><span class="script ">]</span><span class="script "><br/></span><span class="script ">ORDER BY </span><span class="script perso ">attribut1</span><span class="script "> [</span><span class="script ">ASC</span><span class="script ">]</span><span class="script ">[</span><span class="script ">, </span><span class="script perso ">attribut2</span><span class="script "> [</span><span class="script ">ASC</span><span class="script ">]…</span><span class="script ">]</span><span class="script ">;</span></p>
+						</div>
+
+						<h4 class="soustitre" id="7.7.2">Sélection des enregistrements de la table dans l’ordre décroissant</h4>
+						<div class="contenu">
+							<p><span class="script ">SELECT * FROM </span><span class="script perso ">table1</span><span class="script "><br/></span><span class="script ">[WHERE </span><span class="script perso ">condition</span><span class="script ">]</span><span class="script "><br/></span><span class="script ">ORDER BY </span><span class="script perso ">attribut1</span><span class="script "> </span><span class="script ">DESC</span><span class="script ">[</span><span class="script ">, </span><span class="script perso ">attribut2</span><span class="script "> </span><span class="script ">DESC</span><span class="script ">…</span><span class="script ">]</span><span class="script ">;</span></p>
+						</div>
+
 					</div>
-					<h3 class="soustitre" id="V.13">Sélection des enregistrements d'un attribut présents dans la première table et la deuxième (intersection)</h3>
+
+					<h3 class="soustitre" id="7.8">Les requêtes multiples de sélection</h3>
 					<div class="contenu">
-						<p class="script">SELECT <span class="perso">attribut1</span> FROM <span class="perso">table1</span> <br/>INTERSECT<br/> SELECT <span class="perso">attribut1</span> FROM <span class="perso">table2</span>;</p>
+						<h4 class="soustitre" id="7.8.1">Les sous-requêtes</h4>
+						<div class="contenu">
+							<p>Les sous-requêtes sont des requêtes effectuées dans d’autres requêtes. Elles remplacent souvent les tables, mais peuvent également remplacer les attributs uniquement si elles ne renvoient qu’une seule valeur.</p>
+						</div>
+
+						<h4 class="soustitre" id="7.8.2">Sélection des enregistrements d'un attribut présents dans la première table ou la deuxième ou les deux (union)</h4>
+						<div class="contenu">
+							<p><span class="script ">SELECT </span><span class="script perso ">attribut1</span><span class="script "> FROM </span><span class="script perso ">table1</span><span class="script "><br/></span><span class="script ">UNION</span><span class="script "><br/></span><span class="script ">SELECT </span><span class="script perso ">attribut1</span><span class="script "> FROM </span><span class="script perso ">table2</span><span class="script ">;</span></p>
+						</div>
+
+						<h4 class="soustitre" id="7.8.3">Sélection des enregistrements d'un attribut présents dans la première table, mais pas la deuxième (différence)</h4>
+						<div class="contenu">
+							<p><span class="script ">SELECT </span><span class="script perso ">attribut1</span><span class="script "> FROM </span><span class="script perso ">table1</span><span class="script "><br/></span><span class="script ">MINUS</span><span class="script "><br/></span><span class="script ">SELECT </span><span class="script perso ">attribut1</span><span class="script "> FROM </span><span class="script perso ">table2</span><span class="script ">;</span></p>
+						</div>
+
+						<h4 class="soustitre" id="7.8.4">Sélection des enregistrements d'un attribut présents dans la première table et la deuxième (intersection)</h4>
+						<div class="contenu">
+							<p><span class="script ">SELECT </span><span class="script perso ">attribut1</span><span class="script "> FROM </span><span class="script perso ">table1</span><span class="script "><br/></span><span class="script ">INTERSECT</span><span class="script "><br/></span><span class="script ">SELECT </span><span class="script perso ">attribut1</span><span class="script "> FROM </span><span class="script perso ">table2</span><span class="script ">;</span></p>
+						</div>
+
 					</div>
-				</div>
-				<!--
-				<h2 class="soustitre" id="VI">Les index</h2>
-				<div class="contenu">
 
 				</div>
-				<h2 class="soustitre" id="VII">Les vues</h2>
+				<h2 class="soustitre" id="8">Les index</h2>
 				<div class="contenu">
+					<p>Les index permettent de gagner en temps d’exécution pour une sélection d’une colonne avec beaucoup de valeurs.</p>
+					<h3 class="soustitre" id="8.1">Créer un index</h3>
+					<div class="contenu">
+						<p><span class="script ">CREATE INDEX </span><span class="script perso ">monIndex</span><span class="script "> ON </span><span class="script perso ">table1</span><span class="script "> [(</span><span class="script perso ">attribut1</span><span class="script ">[, </span><span class="script perso ">attribut2</span><span class="script ">…])]</span><span class="script ">;</span></p>
+					</div>
+
+					<h3 class="soustitre" id="8.2">Supprimer un index</h3>
+					<div class="contenu">
+						<p><span class="script ">DROP</span><span class="script "> INDEX </span><span class="script perso ">monIndex</span><span class="script ">;</span></p>
+					</div>
 
 				</div>
-				-->
-				<div class="todo">À venir : Les index et les vues</div>
-
-				<h2 class="soustitre" id="VIII">Autres requêtes de données</h2>
+				<h2 class="soustitre" id="9">Les vues</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="VIII.1">Requête de description d’une table</h3>
+					<p>Les vues permettent de réaliser des requêtes de sélections plus facilement. Elles se comportent comme des tables pour les requêtes de sélection.</p>
+					<h3 class="soustitre" id="9.1">Créer une vue</h3>
 					<div class="contenu">
-						<p class="script">DESC <span class="perso">table1</span>;</p>
+						<p><span class="script ">CREATE VIEW </span><span class="script perso ">maVue</span><span class="script "> AS SELECT * FROM </span><span class="script perso ">table1</span><span class="script ">;</span></p>
+					</div>
+
+					<h3 class="soustitre" id="9.2">Utiliser la vue</h3>
+					<div class="contenu">
+						<p><span class="script ">SELECT </span><span class="script perso ">attribut1</span><span class="script ">, </span><span class="script perso ">attribut2</span><span class="script ">… FROM </span><span class="script perso ">maVue</span><span class="script ">;</span></p>
+					</div>
+
+					<h3 class="soustitre" id="9.3">Supprimer la vue</h3>
+					<div class="contenu">
+						<p><span class="script ">DROP VIEW [IF EXISTS] </span><span class="script perso ">maVue</span><span class="script ">;</span></p>
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="10">Les CTE (Common Table Expression)</h2>
+				<div class="contenu">
+					<p>Les CTE sont des vues provisoires, la syntaxe est la suivante :</p>
+					<p><span class="script ">WITH</span><span class="script "><br/></span><span class="script perso ">myCTE1</span><span class="script "> AS (</span><span class="script perso ">requete1</span><span class="script ">),</span><span class="script "><br/></span><span class="script perso ">myCTE2</span><span class="script "> AS (</span><span class="script perso ">requete2</span><span class="script ">)…</span><span class="script "><br/></span><span class="script perso ">requeteFinale</span><span class="script ">;</span></p>
+				</div>
+				<h2 class="soustitre" id="11">Autres requêtes de données</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="11.1">Requête de description d’une table</h3>
+					<div class="contenu">
+						<p><span class="script ">DESC </span><span class="script perso ">table1</span><span class="script ">;</span></p>
 						<p>ou</p>
-						<p class="script">DESCRIBE <span class="perso">table1</span>;</p>
+						<p><span class="script ">DESCRIBE </span><span class="script perso ">table1</span><span class="script ">;</span></p>
 					</div>
-					<h3 class="soustitre" id="VIII.2">Les transactions</h3>
+
+					<h3 class="soustitre" id="11.2">Les transactions</h3>
 					<div class="contenu">
-						<p>Valider une transaction : <span class="script">COMMIT;</span></p>
-						<p>Annuler une transaction : <span class="script">ROLLBACK;</span></p>
-					</div>
-				</div>
-					<!--
-					<h3 class="soustitre" id=""></h3>
-					<div class="contenu">
-						<table>
-							<tr>
-								<th>Fonction</th>
-								<th>Utilité</th>
-							</tr>
+						<h4 class="soustitre" id="11.2.1">Valider une transaction</h4>
+						<div class="contenu">
+							<p><span class="script ">COMMIT;</span></p>
+						</div>
+
+						<h4 class="soustitre" id="11.2.2">Annuler une transaction</h4>
+						<div class="contenu">
+							<p><span class="script ">ROLLBACK;</span></p>
 							
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							
-						</table>
+						</div>
+
 					</div>
-					-->
-				<div class="todo">
-					Attention : La partie PL/SQL n'est pas encore terminée
+
 				</div>
-				<h2 class="soustitre" id="IX">PL/SQL (sur Oracle uniquement)</h2>
+				<h2 class="soustitre" id="12">Programmation procédurale et structurée (PL/SQL)</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="IX.1">Structure</h3>
+					<h3 class="soustitre" id="12.1">Syntaxe du bloc principal</h3>
 					<div class="contenu">
-						<p class="script">
-							DECLARE<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">declarations</span>;<br/>
-							BEGIN<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
-							EXCEPTION<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">gestion_des_erreurs</span>;<br/>
-							END;
-						</p>
-						<p>Note : Le bloc DECLARE peut être retiré si aucune déclaration n’a été faite. Le bloc EXCEPTION permet de gérer les erreurs du programme, il n’est donc pas obligatoire. Il est possible de faire plusieurs blocs imbriqués.</p>
+						<p><span class="script ">[DECLARE</span><span class="script "><br/>    </span><span class="script perso ">declarations</span><span class="script ">;]</span><span class="script "><br/>BEGIN</span><span class="script "><br/>    </span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">[</span><span class="script ">EXCEPTION</span><span class="script "><br/>    </span><span class="script perso ">gestion_des_erreurs</span><span class="script ">;</span><span class="script ">]</span><span class="script "><br/>END;</span></p>
+						<div class="note ">Note : Le bloc DECLARE peut être retiré si aucune déclaration n’a été faite. Le bloc EXCEPTION permet de gérer les erreurs du programme, il n’est donc pas obligatoire. Il est possible de faire plusieurs blocs BEGIN imbriqués.</div>
 					</div>
-					<h3 class="soustitre" id="IX.2">Déclarations (dans le bloc DECLARE)</h3>
+
+					<h3 class="soustitre" id="12.2">Déclarations (dans le bloc DECLARE)</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="IX.2.1">Variables de types simples</h4>
+						<h4 class="soustitre" id="12.2.1">Variables de types simples</h4>
 						<div class="contenu">
-							<p class="script">
-								<span class="perso">v_variable1</span> <span class="perso">type1</span> := <span class="perso">valeur</span>;<br/>
-								<span class="perso">v_variable2</span> <span class="perso">type2</span>;<br/>
-								<span class="perso">v_variable3</span> <span class="perso">type3</span>;
-							</p>
+							<p><span class="script perso ">v_variable1</span><span class="script "> </span><span class="script perso ">type1</span><span class="script "> :</span><span class="script ">= </span><span class="script perso ">valeur</span><span class="script ">;</span><span class="script "><br/></span><span class="script perso ">v_variable2</span><span class="script "> </span><span class="script perso ">type2</span><span class="script ">;</span><span class="script "><br/></span><span class="script perso ">v_variable3</span><span class="script "> </span><span class="script perso ">type3</span><span class="script ">;</span></p>
 						</div>
-						<h4 class="soustitre" id="IX.2.2">Variables constantes</h4>
+
+						<h4 class="soustitre" id="12.2.2">Variables constantes</h4>
 						<div class="contenu">
-							<p class="script"><span class="perso">v_variable1</span> CONSTANT <span class="perso">type1</span> := <span class="perso">valeur</span>;<br/></p>
+							<p><span class="script perso ">v_variable1</span><span class="script "> CONSTANT </span><span class="script perso ">type1</span><span class="script "> :</span><span class="script ">= </span><span class="script perso ">valeur</span><span class="script ">;</span></p>
 						</div>
-						<h4 class="soustitre" id="IX.2.3">Variables de types d’une colonne</h4>
+
+						<h4 class="soustitre" id="12.2.3">Variables de types d’une colonne</h4>
 						<div class="contenu">
-							<p class="script"><span class="perso">v_variable1</span> <span class="perso">table1</span>.<span class="perso">attribut1</span>%TYPE;<br/></p>
+							<p><span class="script perso ">v_variable1</span><span class="script "> </span><span class="script perso ">table1</span><span class="script ">.</span><span class="script perso ">attribut1</span><span class="script ">%TYPE;</span></p>
 						</div>
-						<h4 class="soustitre" id="IX.2.4">Variables de types d’une ligne entière d’une table</h4>
+
+						<h4 class="soustitre" id="12.2.4">Variables de types d’une ligne entière d’une table</h4>
 						<div class="contenu">
-							<p class="script"><span class="perso">v_variable1</span> <span class="perso">table1</span>%ROWTYPE;<br/></p>
+							<p><span class="script perso ">v_variable1</span><span class="script "> </span><span class="script perso ">table1</span><span class="script ">%ROWTYPE;</span></p>
 						</div>
-						<h4 class="soustitre" id="IX.2.5">Curseurs explicites</h4>
+
+						<h4 class="soustitre" id="12.2.5">Curseurs explicites</h4>
 						<div class="contenu">
-							<h5 class="soustitre" id="IX.2.5.1">Curseur sans paramètres (<span class="perso">c_curseur</span>)</h5>
+							<h5 class="soustitre" id="12.2.5.1">Curseur sans paramètres</h5>
 							<div class="contenu">
-								<p class="script">CURSOR <span class="perso">c_curseur</span> IS (SELECT * FROM <span class="perso">table1</span> WHERE <span class="perso">condition</span> [ORDER BY <span class="perso">attribut1</span> [DESC]]);</p>
+								<p><span class="script ">CURSOR </span><span class="script perso ">c_curseur</span><span class="script "> IS (SELECT * FROM </span><span class="script perso ">table1</span><span class="script "> WHERE </span><span class="script perso ">condition</span><span class="script "> [ORDER BY </span><span class="script perso ">attribut1</span><span class="script "> [DESC]]);</span></p>
 							</div>
-							<h5 class="soustitre" id="IX.2.5.2">Curseur avec paramètres (<span class="perso">c_curseur</span>(<span class="perso">parametres</span>))</h5>
+
+							<h5 class="soustitre" id="12.2.5.2">Curseur avec paramètres</h5>
 							<div class="contenu">
-								<p class="script">CURSOR <span class="perso">c_curseur</span>(<span class="perso">v_attribut1</span> <span class="perso">typeSansParentheses</span>) IS (SELECT * FROM <span class="perso">table1</span> WHERE <span class="perso">attribut1</span> = <span class="perso">v_attribut1</span> [ORDER BY <span class="perso">attribut1</span> [DESC]]);</p>
+								<p><span class="script ">CURSOR </span><span class="script perso ">c_curseur</span><span class="script ">(</span><span class="script perso ">v_attribut1</span><span class="script "> </span><span class="script perso ">typeSansParentheses</span><span class="script ">) IS (SELECT * FROM </span><span class="script perso ">table1</span><span class="script "> WHERE </span><span class="script perso ">attribut1</span><span class="script "> = </span><span class="script perso ">v_attribut1</span><span class="script "> [ORDER BY </span><span class="script perso ">attribut1</span><span class="script "> [DESC]]);</span></p>
 							</div>
-							<h5 class="soustitre" id="IX.2.5.3">Curseurs avec verrouillage des données (pour une mise à jour de la table notamment)</h5>
+
+							<h5 class="soustitre" id="12.2.5.3">Curseurs avec verrouillage des données (pour une mise à jour de la table notamment)</h5>
 							<div class="contenu">
-								<p class="script">CURSOR <span class="perso">c_curseur</span> IS (SELECT * FROM <span class="perso">table1</span> WHERE <span class="perso">condition</span> [ORDER BY <span class="perso">attribut1</span> [DESC]]) FOR UPDATE;</p>
-								<p>Note : Pour désigner l’élément sélectionné par le curseur dans une condition, entrez : <span class="script">CURRENT OF <span class="perso">c_curseur</span></span></p>
+								<p><span class="script ">CURSOR </span><span class="script perso ">c_curseur</span><span class="script "> IS (SELECT * FROM </span><span class="script perso ">table1</span><span class="script "> WHERE </span><span class="script perso ">condition</span><span class="script "> [ORDER BY </span><span class="script perso ">attribut1</span><span class="script "> [DESC]]) FOR UPDATE;</span></p>
+								<div class="note ">Note : Pour désigner l’élément sélectionné par le curseur dans une condition, entrez : <span class="script ">CURRENT OF </span><span class="script perso ">c_curseur</span></div>
 							</div>
+
 						</div>
-						<h4 class="soustitre" id="IX.2.6">Exceptions</h4>
+
+						<h4 class="soustitre" id="12.2.6">Exceptions</h4>
 						<div class="contenu">
-							<h5 class="soustitre" id="IX.2.6.1">Exception simple</h5>
+							<h5 class="soustitre" id="12.2.6.1">Exception simple</h5>
 							<div class="contenu">
-								<p class="script"><span class="perso">NOM_EXCEPTION_PERSONNALISEE</span> EXCEPTION;</p>
+								<p><span class="script perso ">NOM_EXCEPTION_PERSONNALISEE</span><span class="script "> </span><span class="script ">EXCEPTION</span><span class="script ">;</span></p>
 							</div>
-							<h5 class="soustitre" id="IX.2.6.2">Exception créée à l’aide d’un numéro d’exception</h5>
+
+							<h5 class="soustitre" id="12.2.6.2">Exception créée à l’aide d’un numéro d’exception</h5>
 							<div class="contenu">
-								<p class ="script">
-									<span class="perso">NOM_EXCEPTION_PERSONNALISEE</span> EXCEPTION;<br/>
-									PRAGMA EXCEPTION_INIT(<span class="perso">NOM_EXCEPTION_PERSONNALISEE</span>, <span class="perso">numero_exception</span>);
-								</p>
-								<p>Exemple :</p>
-								<p class ="script">
-									VIOLATION_CONTRAINTE_CHECK EXCEPTION;<br/>
-									PRAGMA EXCEPTION_INIT(VIOLATION_CONTRAINTE_CHECK, -2290);
-								</p>
+								<p><span class="script perso ">NOM_EXCEPTION_PERSONNALISEE</span><span class="script "> </span><span class="script ">EXCEPTION</span><span class="script ">;</span><span class="script "><br/>PRAGMA EXCEPTION_INIT(</span><span class="script perso ">NOM_EXCEPTION_PERSONNALISEE</span><span class="script ">, </span><span class="script perso ">numero_exception</span><span class="script ">);</span></p>
 							</div>
+
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="IX.3">Opération d’affectation</h3>
+
+					<h3 class="soustitre" id="12.3">Opération d’affectation</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="IX.3.1">Affectation simple</h4>
+						<h4 class="soustitre" id="12.3.1">Affectation simple</h4>
 						<div class="contenu">
-							<p class="script"><span class="perso">v_variable</span> := <span class="perso">valeur</span>;</p>
+							<p><span class="script perso ">v_variable</span><span class="script "> :</span><span class="script ">= </span><span class="script perso ">valeur</span><span class="script ">;</span></p>
 						</div>
-						<h4 class="soustitre" id="IX.3.2">Affectation avec une requête de sélection (ne fonctionne que si la sélection ne renvoie qu’une seule valeur)</h4>
+
+						<h4 class="soustitre" id="12.3.2">Affectation avec une requête de sélection (ne fonctionne que si la sélection ne renvoie qu’une seule valeur)</h4>
 						<div class="contenu">
-							<p class="script">SELECT <span class="perso">attribut1</span> INTO <span class="perso">v_variable</span> FROM <span class="perso">table1</span> WHERE <span class="perso">condition</span>;</p>
+							<p><span class="script ">SELECT </span><span class="script perso ">attribut1</span><span class="script "> INTO </span><span class="script perso ">v_variable</span><span class="script "> FROM </span><span class="script perso ">table1</span><span class="script "> WHERE </span><span class="script perso ">condition</span><span class="script ">;</span></p>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="IX.4">Conditions</h3>
+
+					<h3 class="soustitre" id="12.4">Conditions</h3>
 					<div class="contenu">
 						<table>
 							<tr>
@@ -898,47 +982,21 @@
 								<th>Description</th>
 							</tr>
 							<tr>
-								<td class="script">
-								IF <span class="perso">condition1</span> THEN<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								END IF;
-								</td>
-								<td>Si <span class="perso">condition1</span> est vraie, alors on exécute <span class="perso">instruction1</span></td>
+								<td><span class="script ">IF </span><span class="script perso ">condition1</span><span class="script "> THEN</span><span class="script "><br/>    </span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/>END IF;</span></td>
+								<td>Si <span class="perso ">condition1</span> est vraie, alors on exécute <span class="perso ">instruction1</span></td>
 							</tr>
 							<tr>
-								<td class="script">
-								IF <span class="perso">condition1</span> THEN<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								ELSE<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
-								END IF;
-								</td>
-								<td>Si <span class="perso">condition1</span> est vraie, alors on exécute <span class="perso">instruction1</span>, sinon, on exécute <span class="perso">instruction2</span></td>
+								<td><span class="script ">IF </span><span class="script perso ">condition1</span><span class="script "> THEN</span><span class="script "><br/>    </span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/>ELSE</span><span class="script "><br/>    </span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/>END IF;</span></td>
+								<td>Si <span class="perso ">condition1</span> est vraie, alors on exécute <span class="perso ">instruction1</span>, sinon, on exécute <span class="perso ">instruction2</span></td>
 							</tr>
 							<tr>
-								<td class="script">
-								IF <span class="perso">condition1</span> THEN<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								}<br/>
-								ELSIF <span class="perso">condition2</span> THEN<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
-								ELSE<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction3</span>;<br/>
-								END IF;
-								</td>
-								<td>Si <span class="perso">condition1</span> est vraie, alors on exécute <span class="perso">instruction1</span>, sinon, si <span class="perso">condition2</span> est vraie, on exécute <span class="perso">instruction2</span>, sinon, on exécute <span class="perso">instruction3</span></td>
-							</tr>
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td class="script"></td>
-								<td></td>
+								<td><span class="script ">IF </span><span class="script perso ">condition1</span><span class="script "> THEN</span><span class="script "><br/>    </span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/>}</span><span class="script "><br/>ELSIF </span><span class="script perso ">condition2</span><span class="script "> THEN</span><span class="script "><br/>    </span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/>ELSE</span><span class="script "><br/>    </span><span class="script perso ">instruction3</span><span class="script ">;</span><span class="script "><br/>END IF;</span></td>
+								<td>Si <span class="perso ">condition1</span> est vraie, alors on exécute <span class="perso ">instruction1</span>, sinon, si <span class="perso ">condition2</span> est vraie, on exécute <span class="perso ">instruction2</span>, sinon, on exécute <span class="perso ">instruction3</span></td>
 							</tr>
 						</table>
 					</div>
-					<h3 class="soustitre" id="IX.5">Boucles</h3>
+
+					<h3 class="soustitre" id="12.5">Boucles</h3>
 					<div class="contenu">
 						<table>
 							<tr>
@@ -946,277 +1004,217 @@
 								<th>Description</th>
 							</tr>
 							<tr>
-								<td class="script">
-								FOR <span class="perso">i</span> IN 0..<span class="perso">n</span> LOOP<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								END LOOP;
-								</td>
-								<td>On répète <span class="perso">n</span> fois <span class="perso">instruction1</span> pour <span class="perso">i</span> allant de 0 à <span class="perso">n</span> compris (pas besoin de déclarer la variable, elle est déclarée implicitement et est détruite à la fin de la boucle)</td>
+								<td><span class="script ">FOR </span><span class="script perso ">i</span><span class="script "> IN 0..</span><span class="script perso ">n</span><span class="script "> LOOP</span><span class="script "><br/>    </span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/>END LOOP;</span></td>
+								<td>On répète <span class="perso ">n</span> fois <span class="perso ">instruction1</span> pour <span class="perso ">i</span> allant de 0 à <span class="perso ">n</span> compris (pas besoin de déclarer la variable, elle est déclarée implicitement et est détruite à la fin de la boucle)</td>
 							</tr>
 							<tr>
-								<td class="script">
-								FOR <span class="perso">elt</span> IN (SELECT * FROM <span class="perso">table1</span>) LOOP<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								END LOOP;
-								</td>
-								<td>On parcours la requête de sélection (ou une chaine de caractère) pour <span class="perso">elt</span> prenant tous les enregistrements de la requête (pas besoin de déclarer la variable, elle est déclarée implicitement et est détruite à la fin de la boucle)</td>
+								<td><span class="script ">FOR </span><span class="script perso ">elt</span><span class="script "> IN (SELECT * FROM </span><span class="script perso ">table1</span><span class="script ">) LOOP</span><span class="script "><br/>    </span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/>END LOOP;</span></td>
+								<td>On parcourt la requête de sélection (ou une chaine de caractère) pour <span class="perso ">elt</span> prenant tous les enregistrements de la requête (pas besoin de déclarer la variable, elle est déclarée implicitement et est détruite à la fin de la boucle)</td>
 							</tr>
 							<tr>
-								<td class="script">
-								WHILE <span class="perso">condition</span> LOOP<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								END LOOP;
-								</td>
-								<td>On répète jusqu’à ce que <span class="perso">condition</span> soit fausse (peut ne pas être répété)</td>
+								<td><span class="script ">WHILE </span><span class="script perso ">condition</span><span class="script "> LOOP</span><span class="script "><br/>    </span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/>END LOOP;</span></td>
+								<td>On répète jusqu’à ce que condition soit fausse (peut ne pas être répété)</td>
 							</tr>
 							<tr>
-								<td class="script">
-								LOOP<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;EXIT WHEN <span class="perso">condition</span>;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
-								END LOOP;
-								</td>
-								<td>On répète jusqu’à ce que <span class="perso">condition</span> soit fausse (<span class="perso">instruction1</span> est forcément répété une fois)</td>
+								<td><span class="script ">LOOP</span><span class="script "><br/>    </span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/>    EXIT WHEN </span><span class="script perso ">condition</span><span class="script ">;</span><span class="script "><br/>    </span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/>END LOOP;</span></td>
+								<td>On répète jusqu’à ce que condition soit fausse (<span class="perso ">instruction1</span> est forcément répété une fois)</td>
 							</tr>
 							<tr>
-								<td class="script">EXIT;</td>
+								<td><span class="script ">EXIT;</span></td>
 								<td>Permet de sortir d’une boucle sans la terminer</td>
 							</tr>
 						</table>
 					</div>
-					<h3 class="soustitre" id="IX.6">Les curseurs implicites et explicites</h3>
+
+					<h3 class="soustitre" id="12.6">Les curseurs implicites et explicites</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="IX.6.1">Les curseurs implicites</h4>
+						<h4 class="soustitre" id="12.6.1">Les curseurs implicites</h4>
 						<div class="contenu">
 							<table>
 								<tr>
 									<th>Curseur</th>
-									<th>Utilité</th>
+									<th>Description</th>
 								</tr>
 								<tr>
-									<td class="script">SQL%ROWCOUNT</td>
+									<td><span class="script ">SQL%ROWCOUNT</span></td>
 									<td>Nombre de lignes traitées par la requête précédentes de mise à jour de la table</td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">c_curseur</span>%NOTFOUND</td>
+									<td><span class="script ">c_curseur%NOTFOUND</span></td>
 									<td>Vérifier que le curseur est vide ou la dernière ligne est déjà atteinte</td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">c_curseur</span>%FOUND</td>
+									<td><span class="script ">c_curseur%FOUND</span></td>
 									<td>Vérifier que le curseur n’est pas vide ou la dernière ligne n’est pas encore atteinte</td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">c_curseur</span>%ISOPEN</td>
+									<td><span class="script ">c_curseur%ISOPEN</span></td>
 									<td>Vérifier que le curseur est ouvert</td>
 								</tr>
 							</table>
 						</div>
-						<h4 class="soustitre" id="IX.6.2">Les curseurs explicites</h4>
+
+						<h4 class="soustitre" id="12.6.2">Les curseurs explicites</h4>
 						<div class="contenu">
-							<p class="script">
-								OPEN <span class="perso">c_curseur</span>;<br/>
-								LOOP<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;FETCH <span class="perso">c_curseur</span> INTO <span class="perso">v_variable</span>;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;EXIT WHEN <span class="perso">c_curseur</span>%NOTFOUND;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
-								END LOOP;<br/>
-								CLOSE <span class="perso">c_curseur</span>;
-							</p>
+							<p><span class="script ">OPEN </span><span class="script perso ">c_curseur</span><span class="script ">[(</span><span class="script perso ">parametres</span><span class="script ">)</span><span class="script ">]</span><span class="script ">;</span><span class="script "><br/>LOOP</span><span class="script "><br/>    FETCH </span><span class="script perso ">c_curseur</span><span class="script "> INTO </span><span class="script perso ">v_variable</span><span class="script ">;</span><span class="script "><br/>    EXIT WHEN </span><span class="script perso ">c_curseur</span><span class="script ">%NOTFOUND;</span><span class="script "><br/>    </span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/>END LOOP;</span><span class="script "><br/>CLOSE </span><span class="script perso ">c_curseur</span><span class="script ">; </span></p>
 							<p>ou</p>
-							<p class="script">
-								FOR <span class="perso">v_variable</span> IN <span class="perso">c_curseur</span> LOOP<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
-								END LOOP;
-							</p>
+							<p><span class="script ">FOR </span><span class="script perso ">v_variable</span><span class="script "> IN </span><span class="script perso ">c_curseur</span><span class="script ">[(</span><span class="script perso ">parametres</span><span class="script ">)</span><span class="script ">]</span><span class="script "> LOOP</span><span class="script "><br/>    </span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/>END LOOP;</span></p>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="IX.7">Les procédures</h3>
+
+					<h3 class="soustitre" id="12.7">Les procédures</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="IX.7.1">Créer une procédure</h4>
+						<h4 class="soustitre" id="12.7.1">Créer une procédure</h4>
 						<div class="contenu">
-							<p class="script">
-								CREATE OR REPLACE PROCEDURE <span class="perso">myprocedure</span> [(<span class="perso">parametreEntree1</span> IN <span class="perso">type</span>…, <span class="perso">parametreSortie1</span> OUT <span class="perso">type</span>…)]<br/>
-								IS<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;[<span class="perso">déclarations</span>]<br/>
-								BEGIN<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
-								EXCEPTION<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">gestion_des_erreurs</span>;<br/>
-								END;
-							</p>
-							<p>Note : Les paramètres d’entrée et de sortie ne sont pas obligatoires. Une variable en paramètre peut être à la fois une entrée et une sortie (avec IN OUT). La gestion des exceptions n’est pas obligatoire.</p>
+							<p><span class="script ">CREATE OR REPLACE PROCEDURE </span><span class="script perso ">m</span><span class="script perso ">aP</span><span class="script perso ">rocedure</span><span class="script "> [(</span><span class="script perso ">parametreEntree1</span><span class="script "> IN </span><span class="script perso ">type</span><span class="script perso ">1</span><span class="script ">, </span><span class="script perso ">parametreSortie1</span><span class="script "> OUT </span><span class="script perso ">type2</span><span class="script ">…)]</span><span class="script "><br/>IS</span><span class="script "><br/>    [</span><span class="script perso ">déclarations</span><span class="script ">]</span><span class="script "><br/>BEGIN</span><span class="script "><br/>    </span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/>EXCEPTION</span><span class="script "><br/>    </span><span class="script perso ">gestion_des_erreurs</span><span class="script ">;</span><span class="script "><br/>END;</span></p>
+							<div class="note ">Note : Les paramètres d’entrée et de sortie ne sont pas obligatoires. Une variable en paramètre peut être à la fois une entrée et une sortie (avec IN OUT). La gestion des exceptions n’est pas obligatoire.</div>
 						</div>
-						<h4 class="soustitre" id="IX.7.2">Retourner une valeur de la procédure</h4>
+
+						<h4 class="soustitre" id="12.7.2">Retourner une valeur de la procédure</h4>
 						<div class="contenu">
-							<p class="script"><span class="perso">parametreSortie1</span> := <span class="perso">valeur</span>;</p>
+							<p><span class="script perso ">parametreSortie1</span><span class="script "> := </span><span class="script perso ">valeur</span><span class="script ">;</span></p>
 						</div>
-						<h4 class="soustitre" id="IX.7.3">Faire un appel à la procédure</h4>
+
+						<h4 class="soustitre" id="12.7.3">Faire un appel à la procédure</h4>
 						<div class="contenu">
-							<p class="script"><span class="perso">myprocedure</span>[(<span class="perso">variable1</span>, <span class="perso">variable2</span>)];</p>
+							<p><span class="script perso ">m</span><span class="script perso ">aP</span><span class="script perso ">rocedure</span><span class="script ">[(</span><span class="script perso ">variable1</span><span class="script ">, </span><span class="script perso ">variable2</span><span class="script ">)];</span></p>
 							<p>ou en dehors d'un bloc :</p>
-							<p class="script">EXECUTE <span class="perso">myprocedure</span>[(<span class="perso">variable1</span>, <span class="perso">variable2</span>)];</p>
+							<p><span class="script ">EXECUTE </span><span class="script perso ">m</span><span class="script perso ">aP</span><span class="script perso ">rocedure</span><span class="script ">[(</span><span class="script perso ">variable1</span><span class="script ">, </span><span class="script perso ">variable2</span><span class="script ">…)];</span></p>
 						</div>
-						<h4 class="soustitre" id="IX.7.4">Supprimer une procédure</h4>
+
+						<h4 class="soustitre" id="12.7.4">Supprimer une procédure</h4>
 						<div class="contenu">
-							<p class="script">DROP PROCEDURE <span class="perso">myprocedure</span>;</p>
+							<p><span class="script ">DROP PROCEDURE </span><span class="script perso ">m</span><span class="script perso ">aP</span><span class="script perso ">rocedure</span><span class="script ">;</span></p>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="IX.8">Les fonctions</h3>
+
+					<h3 class="soustitre" id="12.8">Les fonctions</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="IX.8.1">Créer une fonction</h4>
+						<h4 class="soustitre" id="12.8.1">Créer une fonction</h4>
 						<div class="contenu">
-							<p class="script">
-								CREATE OR REPLACE FUNCTION <span class="perso">myfontion</span> [(<span class="perso">parametre1</span> <span class="perso">type</span>…, <span class="perso">parametre2</span> <span class="perso">type</span>…)]<br/>
-								RETURN <span class="perso">type</span><br/>
-								IS<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;[<span class="perso">déclarations</span>]<br/>
-								BEGIN<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
-								EXCEPTION<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">gestion_des_erreurs</span>;<br/>
-								END;
-							</p>
-							<p></p>
+							<p><span class="script ">CREATE OR REPLACE FUNCTION </span><span class="script perso ">m</span><span class="script perso ">aF</span><span class="script perso ">ontion</span><span class="script "> [(</span><span class="script perso ">parametre1</span><span class="script "> </span><span class="script perso ">type1</span><span class="script ">, </span><span class="script perso ">parametre2</span><span class="script "> </span><span class="script perso ">type2</span><span class="script ">…)]</span><span class="script "><br/>RETURN </span><span class="script perso ">type3</span><span class="script "><br/>IS</span><span class="script "><br/>    [</span><span class="script perso ">déclarations</span><span class="script ">]</span><span class="script "><br/>BEGIN</span><span class="script "><br/>    </span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/>EXCEPTION</span><span class="script "><br/>    </span><span class="script perso ">gestion_des_erreurs</span><span class="script ">;</span><span class="script "><br/>END;</span></p>
 						</div>
-						<h4 class="soustitre" id="IX.8.2">Retourner une valeur de la fonction</h4>
+
+						<h4 class="soustitre" id="12.8.2">Retourner une valeur de la fonction</h4>
 						<div class="contenu">
-							<p class="script">RETURN <span class="perso">variable</span>;</p>
+							<p><span class="script ">RETURN </span><span class="script perso ">variable</span><span class="script ">;</span></p>
 						</div>
-						<h4 class="soustitre" id="IX.8.3">Faire un appel à la fonction</h4>
+
+						<h4 class="soustitre" id="12.8.3">Faire un appel à la fonction</h4>
 						<div class="contenu">
-							<p class="script"><span class="perso">variable</span> := <span class="perso">myfonction</span>[(<span class="perso">variable1</span>, <span class="perso">variable2</span>)];</p>
+							<p><span class="script perso ">variable</span><span class="script "> := </span><span class="script perso ">m</span><span class="script perso ">aF</span><span class="script perso ">ontion</span><span class="script ">[(</span><span class="script perso ">variable1</span><span class="script ">, variable2</span><span class="script ">…</span><span class="script ">)];</span></p>
 							<p>ou en dehors d'un bloc :</p>
-							<p class="script">SELECT <span class="perso">myfonction</span>[(<span class="perso">variable1</span>, <span class="perso">variable2</span>)] FROM dual;</p>
+							<p><span class="script ">SELECT </span><span class="script perso ">m</span><span class="script perso ">aF</span><span class="script perso ">ontion</span><span class="script ">[(</span><span class="script perso ">variable1</span><span class="script ">, </span><span class="script perso ">variable2</span><span class="script ">…</span><span class="script ">)] FROM dual;</span></p>
 						</div>
-						<h4 class="soustitre" id="IX.8.4">Supprimer une fonction</h4>
+
+						<h4 class="soustitre" id="12.8.4">Supprimer une fonction</h4>
 						<div class="contenu">
-							<p class="script">DROP FUNCTION <span class="perso">myfonction</span>;</p>
+							<p><span class="script ">DROP FUNCTION </span><span class="script perso ">m</span><span class="script perso ">aF</span><span class="script perso ">ontion</span><span class="script ">;</span></p>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="IX.9">Les vues</h3>
+
+					<h3 class="soustitre" id="12.9">Les exceptions (dans le bloc EXCEPTION)</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="IX.9.1">Créer une vue</h4>
-						<div class="contenu">
-							<p class="script">
-								CREATE OR REPLACE VIEW <span class="perso">myvue</span><br/>
-								AS <span class="perso">requete</span>;
-							</p>
-							<p>Note : Il est possible de modifier une vue avec des requêtes de mises à jour de la table.</p>
-						</div>
-						<h4 class="soustitre" id="IX.9.2">Faire un appel à la vue</h4>
-						<div class="contenu">
-							<p class="script">SELECT * FROM <span class="perso">myvue</span>;</p>
-						</div>
-						<h4 class="soustitre" id="IX.9.3">Supprimer une vue</h4>
-						<div class="contenu">
-							<p class="script">DROP VIEW <span class="perso">myvue</span>;</p>
-						</div>
-					</div>
-					<h3 class="soustitre" id="IX.10">Les CTE (Common Table Expression)</h3>
-					<div class="contenu">
-						<p>Les CTE sont des vues provisoires, la syntaxe est la suivante :</p>
-						<p class="script">
-							WITH<br/>
-							<span class="perso">myCTE1</span> AS (<span class="perso">requete1</span>),<br/>
-							<span class="perso">myCTE2</span> AS (<span class="perso">requete2</span>)…<br/>
-							<span class="perso">requete</span>;
-						</p>
-					</div>
-					<h3 class="soustitre" id="IX.11">Les exceptions (dans le bloc EXCEPTION)</h3>
-					<div class="contenu">
-						<h4 class="soustitre" id="IX.11.1">Exception prédéfinies</h4>
+						<h4 class="soustitre" id="12.9.1">Exceptions prédéfinies</h4>
 						<div class="contenu">
 							<table>
 								<tr>
 									<th>Nom exception</th>
 									<th>Erreur Oracle</th>
 									<th>Numéro exception</th>
+									<th>Description</th>
 								</tr>
 								<tr>
-									<td class="script">(Violation de contrainte unique)</td>
+									<td>(Sans nom)</td>
 									<td>ORA-00001</td>
 									<td>-803</td>
+									<td>Violation de contrainte unique</td>
 								</tr>
 								<tr>
-									<td class="script">(Violation de contrainte not null)</td>
+									<td>(Sans nom)</td>
 									<td>ORA-01400</td>
 									<td>-407</td>
+									<td>Violation de contrainte not null</td>
 								</tr>
 								<tr>
-									<td class="script">NO_DATA_FOUND</td>
+									<td><span class="script ">NO_DATA_FOUND</span></td>
 									<td>ORA-01403</td>
 									<td>100</td>
+									<td>Aucune donnée trouvée</td>
 								</tr>
 								<tr>
-									<td class="script">TOO_MANY_ROWS</td>
+									<td><span class="script ">TOO_MANY_ROWS</span></td>
 									<td>ORA-01422</td>
 									<td>-1422</td>
+									<td>Plus d’une ligne de renvoyées</td>
 								</tr>
 								<tr>
-									<td class="script">ZERO_DIVIDE</td>
+									<td><span class="script ">ZERO_DIVIDE</span></td>
 									<td>ORA-01476</td>
 									<td>-1476</td>
+									<td>Division par zéro</td>
 								</tr>
 								<tr>
-									<td class="script">(Violation de contrainte check)</td>
+									<td>(Sans nom)</td>
 									<td>ORA-02290</td>
 									<td>-2290</td>
+									<td>Violation de contrainte check</td>
 								</tr>
 								<tr>
-									<td class="script">STORAGE_ERROR</td>
+									<td><span class="script ">STORAGE_ERROR</span></td>
 									<td>ORA-06500</td>
 									<td>-6500</td>
+									<td>Erreur de stockage</td>
 								</tr>
 								<tr>
-									<td class="script">VALUE_ERROR</td>
+									<td><span class="script ">VALUE_ERROR</span></td>
 									<td>ORA-06502</td>
 									<td>-6502</td>
+									<td>Valeur incorrecte</td>
 								</tr>
 								<tr>
-									<td class="script">CURSOR_ALREADY_OPEN</td>
+									<td><span class="script ">CURSOR_ALREADY_OPEN</span></td>
 									<td>ORA-06511</td>
 									<td>-6511</td>
+									<td>Curseur déjà ouvert</td>
 								</tr>
 								<tr>
-									<td class="script">COLLECTION_IS_NULL</td>
+									<td><span class="script ">COLLECTION_IS_NULL</span></td>
 									<td>ORA-06531</td>
 									<td>-6531</td>
+									<td>Collection nulle</td>
 								</tr>
 								<tr>
-									<td class="script">(Type de donnée invalide)</td>
+									<td>(Sans nom)</td>
 									<td>ORA-00902</td>
 									<td>-104 ou -199</td>
+									<td>Type de donnée invalide</td>
 								</tr>
 								<tr>
-									<td class="script">OTHER (Autres erreurs)</td>
+									<td><span class="script ">OTHER</span></td>
 									<td>ORA-42612</td>
 									<td>-84</td>
+									<td>Autres erreurs</td>
 								</tr>
-								<!--
-								<tr>
-									<td class="script"></td>
-									<td></td>
-									<td></td>
-								</tr>
-								-->
 							</table>
 						</div>
-						<h4 class="soustitre" id="IX.11.2">Provoquer une erreur personnalisée</h4>
+
+						<h4 class="soustitre" id="12.9.2">Provoquer une erreur personnalisée</h4>
 						<div class="contenu">
-							<p class="script">RAISE <span class="perso">NOM_EXCEPTION_PERSONNALISEE</span>;</p>
+							<p><span class="script ">RAISE </span><span class="script perso ">NOM_EXCEPTION_PERSONNALISEE</span><span class="script ">;</span></p>
 						</div>
-						<h4 class="soustitre" id="IX.11.3">Gestion des erreurs (dans le bloc EXCEPTION)</h4>
+
+						<h4 class="soustitre" id="12.9.3">Gestion des erreurs (dans le bloc EXCEPTION)</h4>
 						<div class="contenu">
-							<p class="script">
-								WHEN <span class="perso">NOM_EXCEPTION1</span> THEN<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions1</span>;<br/>
-								WHEN <span class="perso">NOM_EXCEPTION2</span> THEN<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions2</span>;
-							</p>
+							<p><span class="script ">WHEN </span><span class="script perso ">NOM_EXCEPTION1</span><span class="script "> THEN</span><span class="script "><br/>    </span><span class="script perso ">instructions1</span><span class="script ">;</span><span class="script "><br/>WHEN </span><span class="script perso ">NOM_EXCEPTION2</span><span class="script "> THEN</span><span class="script "><br/>    </span><span class="script perso ">instructions2</span><span class="script ">; </span></p>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="IX.12">Les instructions de base</h3>
+
+					<h3 class="soustitre" id="12.10">Les instructions de base</h3>
 					<div class="contenu">
 						<table>
 							<tr>
@@ -1224,37 +1222,26 @@
 								<th>Description</th>
 							</tr>
 							<tr>
-								<td class="script">SET SERVEROUTPUT ON;</td>
-								<td>Activer les commandes d’affichage de messages dans la conole (à exécuter 1 fois par fichier au démarrage de SQL Developper)</td>
+								<td><span class="script ">SET SERVEROUTPUT ON;</span></td>
+								<td>Activer les commandes d’affichage de messages dans la console (à exécuter 1 fois par fichier au démarrage de SQL Developer)</td>
 							</tr>
 							<tr>
-								<td class="script">DBMS_OUTPUT.PUT_LINE('<span class="perso">texte</span>');</td>
+								<td><span class="script ">DBMS_OUTPUT.PUT_LINE('</span><span class="script perso ">texte</span><span class="script ">');</span></td>
 								<td>Affiche un texte dans la console avec un retour à la ligne</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
 						</table>
+						
+						
 					</div>
-				</div>
-                <!--
-				<h2 class="soustitre" id=""></h2>
-				<div class="contenu">
 
 				</div>
-				
-				&nbsp; : 1 espace obligatoire
-				-->
 			</article>
 		</main>
 		<footer>
 			<script src="../../scripts/footer.js"></script>
 			<a class="top" href="#"><img src="../../images/top.png"></a>
 		</footer>
+		<script src="../../scripts/script.js"></script>
+		<script src="../../scripts/tableDesMatieres.js"></script>
 	</body>
-	<script src="../../scripts/script.js"></script>
-	<script src="../../scripts/tableDesMatieres.js"></script>
 </html>
