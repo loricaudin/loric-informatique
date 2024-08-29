@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Loric Informatique (page générée automatiquement à partir d'un document Word XML) -->
 <html lang="fr-FR">
 	<head>
 		<title>Loric Informatique - C++</title>
@@ -16,1559 +16,1210 @@
 			<section class="presentation">
 				<div class="alignementVertical">
 					<div>
-						<h1>C++</h1>
-						<p class="version">Version 1.2 (créé le 14/01/2023, modifié le 20/04/2024)</p>
-                        <p>
-							C++ est un langage de programmation compilé permettant la programmation sous de multiples paradigmes, dont la programmation procédurale, la programmation orientée objet et la programmation générique. Ses bonnes performances, et sa compatibilité avec le langage C en font un des langages de programmation les plus utilisés dans les applications où la performance est critique.
-						</p>
+						<h1>Mémento C++</h1>
+						<p class="version">Version 2.0 (créé le 10/12/2022, modifié le 30/09/2024) </p>
+						<p>C++ est un langage de programmation compilé permettant la programmation sous de multiples paradigmes, dont la programmation procédurale, la programmation orientée objet et la programmation générique. Ses bonnes performances, et sa compatibilité avec le langage C en font un des langages de programmation les plus utilisés dans les applications où la performance est critique.</p>
 						<a href="Loric Informatique - C++.pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
 						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de choisir le format A4, de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
 					</div>
-					<img src="icone_cpp.png" class="logoLangage">
+					<img src="icone_cpp.png" class="logoLangage"/>
 				</div>
 			</section>
-            <section class="outils">
-                <h2>Outils nécessaires :</h2>
-				<ul>
-					<li>Un logiciel de codage (Visual Studio 2019 (recommandé) ou Visual Studio Code)</li>
-					<li>Un compilateur de programmes (GNU G++ Compiler ou MySys)</li>
-					<li>Ou un logiciel tout en un (CodeBlocks (fortement recommandé))</li>
-				</ul>
-            </section>
-            <section>
+			<section class="sommaire">
 				<h2>Table des matières :</h2>
-                <div class="tableDesMatieres">
-                    <!-- Table des matières remplie par le JavaScript -->
-                </div>
-            </section>
-            <article>
-				<h2 class="soustitre" id="I">Bases</h2>
+				<div class="tableDesMatieres">
+					<!-- Table des matières remplie par le JavaScript -->
+				</div>
+			</section>
+			<article>
+				<h2 class="soustitre" id="1">Prise en main</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="I.1">Syntaxe</h3>
+					<h3 class="soustitre" id="1.1">Outils nécessaires</h3>
 					<div class="contenu">
-						<p class="script">
-							#include &lt;iostream&gt;<br/>
-							<br/>
-							int main(void) {<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction3</span>;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br/>
-							}
-						</p>
+						<ul>
+							<li>Un logiciel de codage (Visual Studio 2019 (recommandé) ou Visual Studio Code)</li>
+							<li>Un compilateur de programmes (GNU G++ Compiler ou MySys)</li>
+							<li>Ou un logiciel tout en un (CodeBlocks (fortement recommandé))</li>
+						</ul>
 					</div>
-					<h3 class="soustitre" id="I.2">Enregistrer et exécuter un programme <span class="perso">fichier.c</span></h3>
+
+					<h3 class="soustitre" id="1.2">Compiler un programme C++ (fichier.cpp)</h3>
 					<div class="contenu">
 						<p>Dans la console, tapez la commande suivante :</p>
-						<p class="console">g++ <span class="perso">fichier</span>.c -o <span class="perso">fichier</span></p>
+						<p><span class="script ">g++</span><span class="script "> </span><span class="script perso ">fichier</span><span class="script ">.c</span><span class="script ">pp</span><span class="script "> -o </span><span class="script perso ">fichier</span></p>
 					</div>
-					<h3 class="soustitre" id="I.3">Types de variables</h3>
+
+					<h3 class="soustitre" id="1.3">Premier code « Hello World! »</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="I.3.1">Caractères</h4>
+						<p><span class="script ">#include &lt;</span><span class="script ">iostream</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script "><br/></span><span class="script ">int main(void) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">std::cout &lt;&lt; </span><span class="script ">"Hello World!";</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;return 0;</span><span class="script "><br/></span><span class="script ">}</span></p>
+						
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="2">Bases</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="2.1">Syntaxe</h3>
+					<div class="contenu">
+						<p><span class="script ">#include &lt;</span><span class="script ">iostream</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script "><br/></span><span class="script ">int main(void) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction3</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;return 0;</span><span class="script "><br/></span><span class="script ">}</span></p>
+					</div>
+
+					<h3 class="soustitre" id="2.2">Les variables</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="2.2.1">Types de variables</h4>
+						<div class="contenu">
+							<h5 class="soustitre" id="2.2.1.1">Numériques</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Type</span></th>
+										<th><span style="font-weight: bold; ">Minimum</span></th>
+										<th><span style="font-weight: bold; ">Maximum</span></th>
+										<th><span style="font-weight: bold; ">Description</span></th>
+									</tr>
+									<tr>
+										<td><span class="script ">int</span> (2o (32-bit))</td>
+										<td>-32 768</td>
+										<td>32 767</td>
+										<td>Nombre entier</td>
+									</tr>
+									<tr>
+										<td><span class="script ">int</span> (4o (64-bit))</td>
+										<td>-2 147 483 648</td>
+										<td>2 147 483 647</td>
+										<td>Nombre entier</td>
+									</tr>
+									<tr>
+										<td><span class="script ">unsigned </span><span class="script ">int</span> (2o (32-bit))</td>
+										<td>0</td>
+										<td>65 535</td>
+										<td>Nombre entier</td>
+									</tr>
+									<tr>
+										<td><span class="script ">unsigned </span><span class="script ">int</span> (4o (64-bit))</td>
+										<td>0</td>
+										<td>4 294 967 295</td>
+										<td>Nombre entier</td>
+									</tr>
+									<tr>
+										<td><span class="script ">short</span> (2o)</td>
+										<td>-32 768</td>
+										<td>32 767</td>
+										<td>Nombre entier</td>
+									</tr>
+									<tr>
+										<td><span class="script ">unsigned short</span> (2o)</td>
+										<td>0</td>
+										<td>65 535</td>
+										<td>Nombre entier</td>
+									</tr>
+									<tr>
+										<td><span class="script ">long</span> (4o)</td>
+										<td>-2 147 483 648</td>
+										<td>2 147 483 647</td>
+										<td>Nombre entier</td>
+									</tr>
+									<tr>
+										<td><span class="script ">unsigned long</span> (4o)</td>
+										<td>0</td>
+										<td>4 294 967 295</td>
+										<td>Nombre entier</td>
+									</tr>
+									<tr>
+										<td><span class="script ">long</span><span class="script "> </span><span class="script ">long</span> (8o)</td>
+										<td>−9 223 372 036 854 775 808</td>
+										<td>9 223 372 036 854 775 807</td>
+										<td>Nombre entier</td>
+									</tr>
+									<tr>
+										<td><span class="script ">unsigned </span><span class="script ">long </span><span class="script ">long</span> (8o)</td>
+										<td>0</td>
+										<td>18 446 744 073 709 551 615</td>
+										<td>Nombre entier</td>
+									</tr>
+									<tr>
+										<td><span class="script ">float</span> (4o)</td>
+										<td>-3.4<sub>x10</sub><sup>38</sup>f</td>
+										<td>3.4<sub>x10</sub><sup>38</sup>f</td>
+										<td>Nombre décimal</td>
+									</tr>
+									<tr>
+										<td><span class="script ">double</span> (8o)</td>
+										<td>-1.7<sub>x10</sub><sup>308</sup></td>
+										<td>1.7<sub>x10</sub><sup>308</sup></td>
+										<td>Nombre décimal</td>
+									</tr>
+									<tr>
+										<td><span class="script ">long double</span> (10o)</td>
+										<td>-1.1<sub>x10</sub><sup>4932</sup></td>
+										<td>1.1<sub>x10</sub><sup>4932</sup></td>
+										<td>Nombre décimal</td>
+									</tr>
+								</table>
+							</div>
+
+							<h5 class="soustitre" id="2.2.1.2">Caractères</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Type</span></th>
+										<th><span style="font-weight: bold; ">Valeurs possibles</span></th>
+										<th><span style="font-weight: bold; ">Description</span></th>
+									</tr>
+									<tr>
+										<td><span class="script ">signed </span><span class="script ">char</span> (1o)</td>
+										<td>1 caractère (signed facultatif)</td>
+										<td>Caractère entre ' ' (\n : retour à la ligne ; \t : tabulation ; \b : retour en arrière ; \f : nouvelle page)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">unsigned </span><span class="script ">char</span> (1o)</td>
+										<td>1 caractère</td>
+										<td>Caractère entre ' ' (\n : retour à la ligne ; \t : tabulation ; \b : retour en arrière ; \f : nouvelle page)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">signed char[</span><span class="script perso ">i</span><span class="script ">]</span> (2o (32-bit))</td>
+										<td><span class="perso ">i</span> caractères</td>
+										<td>Chaîne de caractères entre " "</td>
+									</tr>
+									<tr>
+										<td><span class="script ">std::string</span> (string)</td>
+										<td>Aucune limite</td>
+										<td>Chaîne de caractères modifiable entre " " autorisant des opérations entre elles</td>
+									</tr>
+								</table>
+							</div>
+
+							<h5 class="soustitre" id="2.2.1.3">Autres types</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Type</span></th>
+										<th><span style="font-weight: bold; ">Description</span></th>
+									</tr>
+									<tr>
+										<td><span class="script ">bool</span></td>
+										<td>Valeur pouvant être true ou false</td>
+									</tr>
+								</table>
+							</div>
+
+						</div>
+
+						<h4 class="soustitre" id="2.2.2">Opérations sur les variables</h4>
 						<div class="contenu">
 							<table>
 								<tr>
-									<th>Type</th>
-									<th>Minimum</th>
-									<th>Maximum</th>
-									<th>Description</th>
+									<th><span style="font-weight: bold; ">Instruction</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
 								</tr>
 								<tr>
-									<td><span class="script">signed char[<span class="perso">i</span>]</span> (texte)</td>
-									<td>0</td>
-									<td><span class="perso">i</span></td>
-									<td>Chaîne de caractères entre ""</td>
+									<td><span class="script ">1 + 2</span></td>
+									<td>Renvoie 3</td>
 								</tr>
 								<tr>
-									<td><span class="script">signed char</span> (1o)</td>
-									<td>-128</td>
-									<td>127</td>
-									<!-- <td rowspan="2">Nombre entier ou caractère (1 seul) entre ''</td> -->
-									<td>Nombre entier ou caractère (1 seul) entre ''</td>
+									<td><span class="script ">3 - 1</span></td>
+									<td>Renvoie 2</td>
 								</tr>
 								<tr>
-									<td><span class="script">unsigned char</span> (1o)</td>
-									<td>0</td>
-									<td>256</td>
-									<td>Nombre entier ou caractère (1 seul) entre ''</td>
+									<td><span class="script ">6 * 4</span></td>
+									<td>Renvoie 24</td>
 								</tr>
 								<tr>
-									<td><span class="script">std::string </span> (string)</td>
-									<td>0</td>
-									<td>Aucune limite</td>
-									<td>Chaîne de caractères modifiable entre "" autorisant des opérations entre elles</td>
-								</tr>
-								<!--
-								<tr>
-									<td><span class="script"></span></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								-->
-							</table>
-						</div>
-						<h4 class="soustitre" id="I.3.2">Numériques</h4>
-						<div class="contenu">
-							<table>
-								<tr>
-									<th>Type</th>
-									<th>Minimum</th>
-									<th>Maximum</th>
-									<th>Description</th>
+									<td><span class="script ">5.0 / 2.0</span></td>
+									<td>Renvoie 2.5</td>
 								</tr>
 								<tr>
-									<td><span class="script">int</span> (2o (32-bit))</td>
-									<td>-32 768</td>
-									<td>32 767</td>
-									<!--<td rowspan="10">Nombre entier</td>-->
-									<td>Nombre entier</td>
+									<td><span class="script ">5 / 2</span></td>
+									<td>Renvoie 2 (le quotient sans décimal)</td>
 								</tr>
 								<tr>
-									<td><span class="script">int</span> (4o (64-bit))</td>
-									<td>-2 147 483 648</td>
-									<td>2 147 483 647</td>
-									<td>Nombre entier</td>
+									<td><span class="script ">5 % 2</span></td>
+									<td>Renvoie 1 (le reste de la division)</td>
 								</tr>
 								<tr>
-									<td><span class="script">unsigned int</span> (2o (32-bit))</td>
-									<td>0</td>
-									<td>65 535</td>
-									<td>Nombre entier</td>
+									<td><span class="script perso ">type</span><span class="script "> </span><span class="script perso ">variable</span><span class="script ">;</span></td>
+									<td>Déclare une nouvelle variable</td>
 								</tr>
 								<tr>
-									<td><span class="script">unsigned int</span> (4o (64-bit))</td>
-									<td>0</td>
-									<td>4 294 967 295</td>
-									<td>Nombre entier</td>
+									<td><span class="script perso ">type</span><span class="script "> </span><span class="script perso ">variable</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
+									<td>Déclare une nouvelle variable avec une valeur affectée</td>
 								</tr>
 								<tr>
-									<td><span class="script">short</span> (2o)</td>
-									<td>-32 768</td>
-									<td>32 767</td>
-									<td>Nombre entier</td>
+									<td><span class="script ">int </span><span class="script perso ">a</span><span class="script ">;</span></td>
+									<td>Déclare la variable <span class="perso ">a</span> comme int</td>
 								</tr>
 								<tr>
-									<td><span class="script">unsigned short</span> (2o)</td>
-									<td>0</td>
-									<td>65 535</td>
-									<td>Nombre entier</td>
+									<td><span class="script perso ">a</span><span class="script "> = 5;</span></td>
+									<td>Affecte 5 à une variable</td>
 								</tr>
 								<tr>
-									<td><span class="script">long</span> (4o)</td>
-									<td>-2 147 483 648</td>
-									<td>2 147 483 647</td>
-									<td>Nombre entier</td>
+									<td><span class="script perso ">a</span><span class="script "> = </span><span class="script perso ">a</span><span class="script "> + </span><span class="script ">3</span><span class="script ">;</span></td>
+									<td>Ajoute 3 à une variable</td>
 								</tr>
 								<tr>
-									<td><span class="script">unsigned long</span> (4o)</td>
-									<td>0</td>
-									<td>4 294 967 295</td>
-									<td>Nombre entier</td>
+									<td><span class="script perso ">a</span><span class="script "> += </span><span class="script ">3</span><span class="script ">;</span></td>
+									<td>Ajoute 3 à une variable</td>
 								</tr>
 								<tr>
-									<td><span class="script">long long</span> (8o)</td>
-									<td>−9 223 372 036 854 775 808</td>
-									<td>9 223 372 036 854 775 807</td>
-									<td>Nombre entier</td>
+									<td><span class="script perso ">a</span><span class="script ">++;</span></td>
+									<td>Ajoute 1 à une variable</td>
 								</tr>
 								<tr>
-									<td><span class="script">unsigned long long</span> (8o)</td>
-									<td>0</td>
-									<td>18 446 744 073 709 551 615</td>
-									<td>Nombre entier</td>
+									<td><span class="script perso ">b</span><span class="script "> = </span><span class="script perso ">a</span><span class="script ">++;</span></td>
+									<td>Équivalent à : <span class="script perso ">b</span><span class="script "> = </span><span class="script perso ">a</span><span class="script ">; </span><span class="script perso ">a</span><span class="script "> = </span><span class="script perso ">a</span><span class="script "> + 1;</span></td>
 								</tr>
 								<tr>
-									<td><span class="script">float</span> (4o)</td>
-									<td>-3.4<sub>x10</sub><sup>38</sup>f</td>
-									<td>3.4<sub>x10</sub><sup>38</sup>f</td>
-									<!--<td rowspan="3">Nombre décimal</td>-->
-									<td>Nombre décimal</td>
+									<td><span class="script perso ">b</span><span class="script "> = ++</span><span class="script perso ">a</span><span class="script ">;</span></td>
+									<td>Équivalent à : <span class="script perso ">a</span><span class="script "> = </span><span class="script perso ">a</span><span class="script "> + 1; </span><span class="script perso ">b</span><span class="script "> = </span><span class="script perso ">a</span><span class="script ">;</span></td>
 								</tr>
 								<tr>
-									<td><span class="script">double</span> (8o) (2 fois plus précis que float)</td>
-									<td>-1.7<sub>x10</sub><sup>308</sup></td>
-									<td>1.1<sub>x10</sub><sup>308</sup></td>
-									<td>Nombre décimal</td>
+									<td><span class="script ">int </span><span class="script perso ">a</span><span class="script "> = (int) </span><span class="script perso ">b</span><span class="script ">;</span></td>
+									<td>Convertit le nombre décimal <span class="perso ">b</span> en nombre entier <span class="perso ">a</span> (cast)</td>
 								</tr>
 								<tr>
-									<td><span class="script">long double</span> (10o)</td>
-									<td>-1.1<sub>x10</sub><sup>4932</sup></td>
-									<td>1.1<sub>x10</sub><sup>4932</sup></td>
-									<td>Nombre décimal</td>
-								</tr>
-								<!--
-								<tr>
-									<td><span class="script"></span></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								-->
-							</table>
-						</div>
-						<h4 class="soustitre" id="I.3.3">Autres types</h4>
-						<div class="contenu">
-							<table>
-								<tr>
-									<th>Type</th>
-									<th>Description</th>
+									<td><span class="script ">const</span><span class="script "> float </span><span class="script ">PI</span><span class="script "> = 3.14;</span></td>
+									<td>Crée une variable constante (non modifiable)</td>
 								</tr>
 								<tr>
-									<td><span class="script">bool</span></td>
-									<td>Valeur pouvant être true ou false</td>
+									<td><span class="script ">#define </span><span class="script perso ">VARIABLE</span><span class="script "> </span><span class="script perso ">valeur</span></td>
+									<td>À mettre après les importations, permet de créer une variable globale et constante</td>
+								</tr>
+								<tr>
+									<td><span class="script ">static </span><span class="script perso ">type</span><span class="script "> </span><span class="script perso ">variable</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
+									<td>Déclare une nouvelle variable qui n’est jamais détruite (si déjà exécuté, cette instruction est ignorée)</td>
+								</tr>
+								<tr>
+									<td><span class="script ">char </span><span class="script perso ">caractere</span><span class="script "> = '</span><span class="script perso ">c</span><span class="script ">';</span></td>
+									<td>Déclare une variable contenant un caractère</td>
+								</tr>
+								<tr>
+									<td><span class="script ">std::</span><span class="script ">s</span><span class="script ">tring </span><span class="script perso ">texte</span><span class="script "> = </span><span class="script ">"</span><span class="script perso ">chaine</span><span class="script ">"</span><span class="script ">;</span></td>
+									<td>Déclare une variable contenant une chaîne de caractère (les chaînes peuvent s’additionner avec l’opérateur +)</td>
 								</tr>
 							</table>
+							
+							
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="I.4">Commentaires</h3>
+
+					<h3 class="soustitre" id="2.3">Commentaires</h3>
 					<div class="contenu">
-						<p class="script commentaire">
-							//Commentaire tenant sur une ligne (en -C++99)
-						</p>
-						<p class="script commentaire">
-							/*<br/>
-							Commentaire pouvant être sur une ou plusieurs lignes<br/>
-							*/
-						</p>
+						<p><span class="script ">//Commentaire tenant sur une ligne</span><span class="script "> (en </span><span class="script ">-c++99</span><span class="script "> ou +)</span></p>
+						<p><span class="script ">/*</span><span class="script "><br/>Commentaire pouvant être sur une ou plusieurs lignes</span><span class="script "><br/>*/</span></p>
 					</div>
-					<h3 class="soustitre" id="I.5">Opérations</h3>
+
+					<h3 class="soustitre" id="2.4">Les tableaux</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Instruction</th>
-								<th>Description</th>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">1 + 2</td>
-								<td>Renvoie 3</td>
+								<td><span class="script perso ">type</span><span class="script "> </span><span class="script perso ">tableau</span><span class="script ">[</span><span class="script perso ">i</span><span class="script ">];</span></td>
+								<td>Crée un tableau vide de <span class="perso ">i</span> éléments (<span class="perso ">i</span> doit être une variable globale en norme -ainsi, définie avec <span class="script ">#define</span>)</td>
 							</tr>
 							<tr>
-								<td class="script">3 - 1</td>
-								<td>Renvoie 2</td>
+								<td><span class="script ">int</span><span class="script "> </span><span class="script perso ">tableau</span><span class="script ">[</span><span class="script perso ">i</span><span class="script ">]</span><span class="script "> = {0}</span><span class="script ">;</span></td>
+								<td>Crée un tableau de <span class="perso ">i</span> éléments égaux à 0 (en -c++99 ou +)</td>
 							</tr>
 							<tr>
-								<td class="script">6 * 4</td>
-								<td>Renvoie 24</td>
+								<td><span class="script ">char </span><span class="script perso ">texte</span><span class="script ">[</span><span class="script perso ">i</span><span class="script ">] = "message";</span><span class="script "><br/></span>ou<span class="script "><br/></span><span class="script ">char </span><span class="script perso ">texte</span><span class="script ">[</span><span class="script perso ">i</span><span class="script ">] = {'m', 'e', 's', 's', 'a', 'g', 'e'};</span></td>
+								<td>Déclare une variable de longueur <span class="perso ">i</span> maximum (non obligatoire, mais conseillé) contenant une chaîne de caractère (ne peut pas être modifié selon les versions de C++) (Une chaîne de caractère est également un tableau de caractères)</td>
 							</tr>
 							<tr>
-								<td class="script">5.0 / 2.0</td>
-								<td>Renvoie 2.5</td>
+								<td><span class="script perso ">tableau</span><span class="script ">[</span><span class="script perso ">i</span><span class="script ">] = {[</span><span class="script perso ">j</span><span class="script ">] = 1};</span></td>
+								<td>Crée un tableau de i éléments avec la valeur 1 dans l’indice <span class="perso ">j </span>(<span class="perso ">i</span> et <span class="perso ">j</span> doivent être des variables globales en norme -ainsi, définies avec <span class="script ">#define</span>)</td>
 							</tr>
 							<tr>
-								<td class="script">5 / 2</td>
-								<td>Renvoie 2 (le quotient sans décimal)</td>
+								<td><span class="script perso ">tableau</span><span class="script ">[</span><span class="script perso ">i</span><span class="script ">]</span><br/>ou<br/><span class="script ">*(</span><span class="script perso ">tableau</span><span class="script "> + </span><span class="script perso ">i</span><span class="script ">)</span></td>
+								<td>Renvoie la valeur du tableau à la position <span class="perso ">i</span> (l'indice de la première valeur est 0), et permet aussi l’écriture d’une autre valeur</td>
 							</tr>
 							<tr>
-								<td class="script">5 % 2</td>
-								<td>Renvoie 1 (le reste de la division)</td>
-							</tr>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
-						</table>
-					</div>
-					<h3 class="soustitre" id="I.6">Les variables</h3>
-					<div class="contenu">
-						<table>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
-							<tr>
-								<th>Instruction</th>
-								<th>Description</th>
+								<td><span class="script ">int </span><span class="script perso ">tableau</span><span class="script ">[</span><span class="script ">3</span><span class="script ">] = {1, 2</span><span class="script ">, 3</span><span class="script ">};</span></td>
+								<td>Crée un tableau de 3 entiers avec des valeurs personnalisées</td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">type variable</span> = <span class="perso">valeur</span>;</td>
-								<td>Déclare une nouvelle variable (à mettre au début d’une fonction en -ainsi)</td>
-							</tr>
-							<tr>
-								<td class="script">int <span class="perso">a</span>;</td>
-								<td>Déclare la variable <span class="perso">a</span> comme int</td>
-							</tr>
-							<tr>
-								<td class="script"><span class="perso">a</span> = 5;</td>
-								<td>Affecte 5 à une variable</td>
-							</tr>
-							<tr>
-                                <td class="script"><span class="perso">a</span> += 1;</td>
-                                <td>Équivalent à <span class="perso">a</span> = <span class="perso">a</span> + 1;</td>
-                            </tr>
-                            <tr>
-                                <td class="script"><span class="perso">a</span> -= 1;</td>
-                                <td>Équivalent à <span class="perso">a</span> = <span class="perso">a</span> - 1;</td>
-                            </tr>
-							<tr>
-								<td class="script"><span class="perso">b</span> = <span class="perso">a</span>++;</td>
-								<td>Équivalent à <span class="perso">b</span> = <span class="perso">a</span>; <span class="perso">a</span> = <span class="perso">a</span> + 1;</td>
-							</tr>
-							<tr>
-								<td class="script"><span class="perso">b</span> = ++<span class="perso">a</span>;</td>
-								<td>Équivalent à <span class="perso">a</span> = <span class="perso">a</span> + 1; <span class="perso">b</span> = <span class="perso">a</span>;</td>
-							</tr>
-							<tr>
-								<td class="script"><span class="perso">b</span> = <span class="perso">a</span>--;</td>
-								<td>Équivalent à <span class="perso">b</span> = <span class="perso">a</span>; <span class="perso">a</span> = <span class="perso">a</span> - 1;</td>
-							</tr>
-							<tr>
-								<td class="script"><span class="perso">b</span> = --<span class="perso">a</span>;</td>
-								<td>Équivalent à <span class="perso">a</span> = <span class="perso">a</span> - 1; <span class="perso">b</span> = <span class="perso">a</span>;</td>
-							</tr>
-							<tr>
-								<td class="script">int <span class="perso">a</span> = (int) <span class="perso">b</span>;</td>
-								<td>Convertit le nombre décimal <span class="perso">b</span> en nombre entier <span class="perso">a</span></td>
-							</tr>
-							<tr>
-								<td class="script">const float <span class="perso">pi</span> = 3.14;</td>
-								<td>Crée une variable constante (non modifiable)</td>
-							</tr>
-							<tr>
-								<td class="script">register int <span class="perso">n</span> = 5;</td>
-								<td>Insère dans le registre</td>
-							</tr>
-							<tr>
-								<td class="script">volatile int <span class="perso">n</span> = 5;</td>
-								<td>Insère dans la mémoire RAM</td>
-							</tr>
-							<tr>
-								<td class="script">static <span class="perso">type variable</span> = <span class="perso">valeur</span>;</td>
-								<td>Déclare une nouvelle variable qui n’est jamais détruite (si déjà exécuté, cette instruction est ignorée)</td>
-							</tr>
-							<tr>
-								<td class="script">char <span class="perso">caractere</span> = '<span class="perso">c</span>';</td>
-								<td>Déclare une variable contenant un caractère</td>
-							</tr>
-							<tr>
-								<td class="script">#define <span class="perso">VARIABLE valeur</span></td>
-								<td>À mettre avant la fonction main(), permet de créer une variable globale et constante</td>
-							</tr>
-						</table>
-					</div>
-					<h3 class="soustitre" id="I.7">Les tableaux</h3>
-					<div class="contenu">
-						<table>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
-							<tr>
-								<th>Instruction</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td class="script"><span class="perso">type tableau</span>[<span class="perso">i</span>];</td>
-								<td>Crée un tableau vide de <span class="perso">i</span> éléments (<span class="perso">i</span> doit être une variable globale en norme -ainsi, définie avec #define)</td>
-							</tr>
-							<tr>
-								<td class="script">int <span class="perso">tableau</span>[<span class="perso">i</span>] = {0};</td>
-								<td>Crée un tableau de <span class="perso">i</span> éléments (<span class="perso">i</span> est facultatif) égal à 0 en -c++99 ou + (<span class="perso">i</span> doit être une variable globale en norme -ainsi, définie avec #define)</td>
-							</tr>
-							<tr>
-								<td>
-									<p class="script">char <span class="perso">texte</span>[<span class="perso">i</span>] = "<span class="perso">message</span>";</p>
-									<p>ou</p>
-									<p>char <span class="perso">texte</span>[<span class="perso">i</span>] = {'<span class="perso">m</span>', '<span class="perso">e</span>', '<span class="perso">s</span>', '<span class="perso">s</span>', '<span class="perso">a</span>', '<span class="perso">g</span>', '<span class="perso">e</span>'};</p>
-								</td>
-								<td>Déclare une variable de longueur <span class="perso">i</span> maximum (non obligatoire, mais conseillé) contenant une chaîne de caractère (ne peut pas être modifié selon les versions de C++) (Une chaîne de caractère est également un tableau de caractères)</td>
-							</tr>
-							<tr>
-								<td class="script">std::string <span class="perso">texte</span> = "<span class="perso">message</span>";</td>
-								<td>Déclare une variable modifiable contenant une chaîne de caractère (Une chaîne de caractère est également un tableau de caractères)</td>
-							</tr>
-							<tr>
-								<td>
-									<p class="script"><span class="perso">tableau</span>[<span class="perso">i</span>]</p>
-									<p>ou</p>
-									<p class="script">*(<span class="perso">tableau</span> + <span class="perso">i</span>)</p>
-								</td>
-								<td>Renvoie la valeur du tableau à la position <span class="perso">i</span> (l'indice de la première valeur est 0)</td>
-							</tr>
-							<tr>
-								<td class="script"><span class="perso">tableau</span>[<span class="perso">i</span>] = {[<span class="perso">j</span>] = 1};</td>
-								<td>Crée un tableau de <span class="perso">i</span> éléments avec la valeur 1 dans l’indice <span class="perso">j</span> (<span class="perso">i</span> et <span class="perso">j</span> doivent être des variables globales en norme -ainsi, définies avec #define)</td>
-							</tr>
-							<tr>
-								<td class="script">int <span class="perso">tableau</span>[<span class="perso">i</span>] = {<span class="perso">val1</span>, <span class="perso">val2</span>…};</td>
-								<td>Crée un tableau de i éléments avec des valeurs personnalisées (<span class="perso">i</span> doit être une variable globale en norme -ainsi, définie avec #define)</td>
-							</tr>
-							<tr>
-								<td class="script">*<span class="perso">tableau</span></td>
+								<td><span class="script ">*</span><span class="script perso ">tableau</span></td>
 								<td>Affiche la première valeur du tableau. Également obligatoire si le tableau est un argument d’une fonction</td>
 							</tr>
 							<tr>
-								<td class="script">sizeof(<span class="perso">tableau</span>)</td>
-								<td>Renvoie la taille du tableau en octet</td>
+								<td><span class="script ">sizeof(</span><span class="script perso ">tableau</span><span class="script ">)</span></td>
+								<td>Renvoie la taille du tableau en octets</td>
 							</tr>
-							
 						</table>
-						<div class="note">Remarque : Un tableau est marqué à la fin par le caractère '\0' dans la mémoire RAM pour indiquer la fin d'un tableau. Tout débordement du tableau pourrait donner accès à une variable aléatoire dans la RAM.</div>
+						
+						<div class="note ">Remarque : Un tableau est marqué à la fin par le caractère '\0' dans la mémoire RAM pour indiquer la fin d'un tableau. Tout débordement du tableau pourrait donner accès à une variable aléatoire dans la RAM.</div>
 					</div>
-					<h3 class="soustitre" id="I.8">Conditions</h3>
+
+					<h3 class="soustitre" id="2.5">Conditions</h3>
 					<div class="contenu">
-						<p>Les conditions renvoient true ou 1 si elle est respectée et false ou 0 sinon</p>
-						<h4 class="soustitre" id="I.8.1">Opérateurs de comparaison</h4>
+						<p>Une condition renvoie <span class="script ">true</span> si elle est respectée et <span class="script ">false</span> sinon</p>
+						<h4 class="soustitre" id="2.5.1">Opérateurs de comparaison</h4>
 						<div class="contenu">
 							<table>
-								<!--
 								<tr>
-									<td class="script"></td>
-									<td></td>
-								</tr>
-								-->
-								<tr>
-									<th>Condition</th>
-									<th>Description de ce que vérifie la condition</th>
+									<th><span style="font-weight: bold; ">Condition</span></th>
+									<th><span style="font-weight: bold; ">Description de ce que vérifie la condition</span></th>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> == <span class="perso">b</span></td>
-									<td><span class="perso">a</span> égal à <span class="perso">b</span></td>
+									<td><span class="script perso ">a</span><span class="script "> == </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> égal à <span class="perso ">b</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> &lt; <span class="perso">b</span></td>
-									<td><span class="perso">a</span> strictement inférieur à <span class="perso">b</span></td>
+									<td><span class="script perso ">a</span><span class="script "> &lt; </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> strictement inférieur à <span class="perso ">b</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> &gt; <span class="perso">b</span></td>
-									<td><span class="perso">a</span> strictement supérieur à <span class="perso">b</span></td>
+									<td><span class="script perso ">a</span><span class="script "> &gt; </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> strictement supérieur à <span class="perso ">b</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> &lt;= <span class="perso">b</span></td>
-									<td><span class="perso">a</span> inférieur ou égal à <span class="perso">b</span></td>
+									<td><span class="script perso ">a</span><span class="script "> &lt;= </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> supérieur ou égal à <span class="perso ">b</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> &gt;= <span class="perso">b</span></td>
-									<td><span class="perso">a</span> supérieur ou égal à <span class="perso">b</span></td>
+									<td><span class="script perso ">a</span><span class="script "> != </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> n’est pas égal à <span class="perso ">b</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> != <span class="perso">b</span></td>
-									<td><span class="perso">a</span> n’est pas égal à <span class="perso">b</span></td>
+									<td><span class="script perso ">a</span><span class="script "> in </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> est présent dans <span class="perso ">b</span> (qui peut être un tableau)</td>
 								</tr>
 								<tr>
-									<td class="script">||</td>
+									<td><span class="script perso ">a</span><span class="script "> is </span><span class="script ">NULL</span></td>
+									<td>Tester si une variable est nulle</td>
+								</tr>
+								<tr>
+									<td><span class="script ">||</span></td>
 									<td>À mettre entre deux conditions, permet d’avoir une des deux conditions qui doit être vraie</td>
 								</tr>
 								<tr>
-									<td class="script">&&</td>
+									<td><span class="script ">&&</span></td>
 									<td>À mettre entre deux conditions, permet d’avoir deux conditions qui doivent être vraie</td>
 								</tr>
 								<tr>
-									<td class="script">!<span class="perso">condition</span></td>
-									<td>La condition doit être fausse</td>
+									<td><span class="script ">!</span><span class="script perso ">condition</span></td>
+									<td>Ne doit pas respecter la condition</td>
 								</tr>
 							</table>
+							
 						</div>
-						<h4 class="soustitre" id="I.8.2">Tests de conditions</h4>
+
+						<h4 class="soustitre" id="2.5.2">Tests de conditions</h4>
 						<div class="contenu">
 							<table>
-								<!--
 								<tr>
-									<td class="script"></td>
-									<td></td>
-								</tr>
-								<a class="script_tabulation">
-								-->
-								<tr>
-									<th>Instruction</th>
-									<th>Description</th>
+									<th><span style="font-weight: bold; ">Instruction</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
 								</tr>
 								<tr>
-									<td class="script">
-									if (<span class="perso">condition1</span>) {<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-									}
-									</td>
-									<td>Si <span class="perso">condition1</span> est vraie, alors on exécute <span class="perso">instruction1</span></td>
+									<td><span class="script ">if (</span><span class="script perso ">condition1</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+									<td>Si <span class="perso ">condition1</span> est vraie, alors on exécute <span class="perso ">instruction1</span></td>
 								</tr>
 								<tr>
-									<td class="script">
-									if (<span class="perso">condition1</span>) {<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-									} else {<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
-									}
-									</td>
-									<td>Si <span class="perso">condition1</span> est vraie, alors on exécute <span class="perso">instruction1</span>, sinon, on exécute <span class="perso">instruction2</span></td>
+									<td><span class="script ">if (</span><span class="script perso ">condition1</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} else {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+									<td>Si <span class="perso ">condition1</span> est vraie, alors on exécute <span class="perso ">instruction1</span>, sinon, on exécute <span class="perso ">instruction2</span></td>
 								</tr>
 								<tr>
-									<td class="script">
-									if (<span class="perso">condition1</span>) {<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-									} else if (<span class="perso">condition2</span>) {<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
-									} else {<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction3</span>;<br/>
-									}
-									</td>
-									<td>Si <span class="perso">condition1</span> est vraie, alors on exécute <span class="perso">instruction1</span>, sinon, si <span class="perso">condition2</span> est vraie, on exécute <span class="perso">instruction2</span>, sinon, on exécute <span class="perso">instruction3</span></td>
+									<td><span class="script ">if (</span><span class="script perso ">condition1</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} else if</span><span class="script "> </span><span class="script ">(</span><span class="script perso ">condition2</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} else {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction3</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+									<td>Si <span class="perso ">condition1</span> est vraie, alors on exécute <span class="perso ">instruction1</span>, sinon, si <span class="perso ">condition2</span> est vraie, on exécute <span class="perso ">instruction2</span>, sinon, on exécute <span class="perso ">instruction3</span></td>
 								</tr>
 								<tr>
-									<td class="script">
-									switch (<span class="perso">nombre</span>) {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;case <span class="perso">a</span>:<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;case <span class="perso">b</span>:<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;case <span class="perso">c</span>:<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;default:<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction3</span>;<br/>
-									}
-									</td>
-									<td>Si <span class="perso">nombre</span> == <span class="perso">a</span>, alors on exécute <span class="perso">instruction1</span>, sinon, si <span class="perso">nombre</span> == <span class="perso">b</span> ou <span class="perso">c</span>, on exécute <span class="perso">instruction2</span>, sinon, on exécute <span class="perso">instruction3</span></td>
+									<td><span class="script ">switch (</span><span class="script perso ">nombre</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;case </span><span class="script perso ">a</span><span class="script ">:</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;case </span><span class="script perso ">b</span><span class="script ">:</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;case </span><span class="script perso ">c</span><span class="script ">:</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;default:</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction3</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+									<td>Si <span class="perso ">nombre</span> == <span class="perso ">a</span>, alors on exécute <span class="perso ">instruction1</span>, sinon, si <span class="perso ">nombre</span> == <span class="perso ">b</span> ou <span class="perso ">c</span>, on exécute <span class="perso ">instruction2</span>, sinon, on exécute <span class="perso ">instruction3</span></td>
 								</tr>
 								<tr>
-									<td class="script"><span class="perso">a</span> = (<span class="perso">condition1</span>) ? 1 : 0;</td>
-									<td>Si <span class="perso">condition1</span> est vraie, <span class="perso">a</span> prend la valeur 1, sinon 0.</td>
+									<td><span class="script perso ">a</span><span class="script "> = (</span><span class="script perso ">condition1</span><span class="script ">) ? 1 : 0;</span></td>
+									<td>Si <span class="perso ">condition1</span> est vraie, <span class="perso ">a</span> prend la valeur 1, sinon 0.</td>
 								</tr>
 							</table>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="I.9">Boucles</h3>
+
+					<h3 class="soustitre" id="2.6">Boucles</h3>
 					<div class="contenu">
 						<table>
-							<!--
 							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							<a class="script_tabulation">
-							-->
-							<tr>
-								<th>Instruction</th>
-								<th>Description</th>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">
-								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lt; <span class="perso">f</span>; <span class="perso">i</span>++) {<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								}
-								</td>
-								<td>On répète <span class="perso">f</span>-<span class="perso">d</span> fois <span class="perso">instruction1</span> pour <span class="perso">i</span> allant de <span class="perso">d</span> compris à <span class="perso">f</span> non compris (attention, la déclaration de <span class="perso">i</span> doit se faire au début pour la norme -ainsi)</td>
+								<td><span class="script ">for (int </span><span class="script perso ">i</span><span class="script "> = </span><span class="script perso ">d</span><span class="script ">; </span><span class="script perso ">i</span><span class="script "> &lt; </span><span class="script perso ">f</span><span class="script ">; </span><span class="script perso ">i</span><span class="script ">++) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+								<td>On répète <span class="perso ">f</span>-<span class="perso ">d</span> fois l’instruction pour <span class="perso ">i</span> allant de <span class="perso ">d</span> compris à <span class="perso ">f</span> non compris</td>
 							</tr>
 							<tr>
-								<td class="script">
-								for (int <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lt; <span class="perso">f</span>; <span class="perso">i</span>+=<span class="perso">p</span>) {<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								}
-								</td>
-								<td>On répète (<span class="perso">f</span>-<span class="perso">d</span>)/<span class="perso">p</span> fois <span class="perso">instruction1</span> pour i allant de <span class="perso">d</span> compris à <span class="perso">f</span> non compris avec pour pas égal à <span class="perso">p</span></td>
+								<td><span class="script ">for (</span><span class="script perso ">int</span><span class="script "> </span><span class="script perso ">i</span><span class="script "> = </span><span class="script perso ">d</span><span class="script ">; </span><span class="script perso ">i</span><span class="script "> &lt; </span><span class="script perso ">f</span><span class="script ">; </span><span class="script perso ">i</span><span class="script ">+=</span><span class="script perso ">p</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+								<td>On répète (<span class="perso ">f</span>-<span class="perso ">d</span>)/<span class="perso ">p</span> fois l’instruction pour i allant de <span class="perso ">d</span> compris à <span class="perso ">f</span> non compris avec pour pas égal à <span class="perso ">p</span></td>
 							</tr>
 							<tr>
-								<td class="script">
-								while (<span class="perso">condition</span>) {<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								}
-								</td>
-								<td>On répète jusqu’à ce que <span class="perso">condition</span> soit fausse (peut ne pas être répété)</td>
+								<td><span class="script ">for (type </span><span class="script perso ">elt</span><span class="script ">: </span><span class="script perso ">tableau</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+								<td>On parcourt le tableau (ou une chaîne de caractères) pour <span class="perso ">elt</span> prenant toutes les valeurs du tableau</td>
 							</tr>
 							<tr>
-								<td class="script">
-								do {<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								} while(<span class="perso">condition</span>);
-								</td>
-								<td>On répète jusqu’à ce que <span class="perso">condition</span> soit fausse (est forcément répété une fois)</td>
+								<td><span class="script ">while (</span><span class="script perso ">condition</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+								<td>On répète jusqu’à ce que la condition soit fausse (peut ne pas être répété)</td>
 							</tr>
 							<tr>
-								<td class="script">break;</td>
-								<td>Permet de sortir d’une boucle sans la terminer (fortement déconseillé)</td>
+								<td><span class="script ">do {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} while(</span><span class="script perso ">condition</span><span class="script ">);</span></td>
+								<td>On répète jusqu’à ce que la condition soit fausse (est forcément répété une fois)</td>
 							</tr>
 							<tr>
-								<td class="script">continue;</td>
+								<td><span class="script ">break;</span></td>
+								<td>Permet de sortir d’une boucle sans la terminer (à éviter si possible)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">continue;</span></td>
 								<td>Permet de revenir au début de la boucle</td>
 							</tr>
 						</table>
 					</div>
-					<h3 class="soustitre" id="I.10">Les différentes valeurs de contrôles (très peu utilisé en C++)</h3>
+
+					<h3 class="soustitre" id="2.7">Les différentes valeurs de contrôles (très peu utilisé en C++)</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Contrôles (<span class="script">%controle</span>)</th>
-								<th>Type renseigné</th>
+								<th><span style="font-weight: bold; ">Contrôles (</span><span class="script " style="font-weight: bold; ">%</span><span class="script perso " style="font-weight: bold; ">controle</span><span style="font-weight: bold; ">)</span></th>
+								<th><span style="font-weight: bold; ">Type renseigné</span></th>
 							</tr>
 							<tr>
-								<td class="script">%d ou %i</td>
+								<td><span class="script ">%d</span> ou <span class="script ">%i</span></td>
 								<td>int</td>
 							</tr>
 							<tr>
-								<td class="script">%<span class="perso">x</span>d</td>
-								<td>int avec <span class="perso">x</span> chiffres maximum</td>
+								<td><span class="script ">%</span><span class="script perso ">x</span><span class="script ">d</span></td>
+								<td>int avec <span class="perso ">x</span> chiffres maximum</td>
 							</tr>
 							<tr>
-								<td class="script">%u</td>
+								<td><span class="script ">%u</span></td>
 								<td>unsigned int</td>
 							</tr>
 							<tr>
-								<td class="script">%o</td>
+								<td><span class="script ">%o</span></td>
 								<td>unsigned int (octal)</td>
 							</tr>
 							<tr>
-								<td class="script">%f</td>
+								<td><span class="script ">%f</span></td>
 								<td>float (ou double)</td>
 							</tr>
 							<tr>
-								<td class="script">%<span class="perso">x</span>f</td>
-								<td>float avec <span class="perso">x</span> chiffres entiers maximum</td>
+								<td><span class="script ">%</span><span class="script perso ">x</span><span class="script ">f</span></td>
+								<td>float avec <span class="perso ">x</span> chiffres entiers maximum</td>
 							</tr>
 							<tr>
-								<td class="script">%.<span class="perso">y</span>f</td>
-								<td>float avec <span class="perso">y</span> chiffres après la virgule maximum</td>
+								<td><span class="script ">%.</span><span class="script perso ">y</span><span class="script ">f</span></td>
+								<td>float avec <span class="perso ">y</span> chiffres après la virgule maximum</td>
 							</tr>
 							<tr>
-								<td class="script">%<span class="perso">x</span>.<span class="perso">y</span>f</td>
-								<td>float avec <span class="perso">x</span> chiffres dans la partie entière et <span class="perso">y</span> chiffres après la virgule maximum</td>
+								<td><span class="script ">%</span><span class="script perso ">x</span><span class="script ">.</span><span class="script perso ">y</span><span class="script ">f</span></td>
+								<td>float avec <span class="perso ">x</span> chiffres dans la partie entière et <span class="perso ">y</span> chiffres après la virgule maximum</td>
 							</tr>
 							<tr>
-								<td class="script">%lf</td>
+								<td><span class="script ">%lf</span></td>
 								<td>double</td>
 							</tr>
 							<tr>
-								<td class="script">%c</td>
+								<td><span class="script ">%c</span></td>
 								<td>char</td>
 							</tr>
 							<tr>
-								<td class="script">%s</td>
-								<td>char[<span class="perso">i</span>] (string)</td>
+								<td><span class="script ">%s</span></td>
+								<td>char[<span class="perso ">i</span>] (string)</td>
 							</tr>
 							<tr>
-								<td class="script">%<span class="perso">x</span>s</td>
-								<td>char[<span class="perso">i</span>] (string de <span class="perso">x</span> caractères maximum)</td>
+								<td><span class="script ">%</span><span class="script perso ">x</span><span class="script ">s</span></td>
+								<td>char[<span class="perso ">i</span>] (string de <span class="perso ">x</span> caractères maximum)</td>
 							</tr>
 							<tr>
-								<td class="script">%p</td>
+								<td><span class="script ">%p</span></td>
 								<td>pointeur</td>
 							</tr>
 							<tr>
-								<td class="script">%b</td>
+								<td><span class="script ">%b</span></td>
 								<td>Affichage en binaire</td>
 							</tr>
 							<tr>
-								<td class="script">%x</td>
+								<td><span class="script ">%x</span></td>
 								<td>Affichage en hexadécimal (minuscule)</td>
 							</tr>
 							<tr>
-								<td class="script">%X</td>
+								<td><span class="script ">%X</span></td>
 								<td>Affichage en hexadécimal (majuscule)</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
 						</table>
+						
+						
 					</div>
+
 				</div>
-				<h2 class="soustitre" id="II">Les fonctions, les préprocesseurs, les classes et les structures</h2>
+				<h2 class="soustitre" id="3">Les fonctions</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="II.1">Les fonctions</h3>
+					<p>Les fonctions doivent être écrites juste après les importations ou dans un autre fichier .cpp accompagné de son fichier .hpp (voir "Les bibliothèques").</p>
+					<h3 class="soustitre" id="3.1">Créer une fonction retournant une valeur du type « type0 »</h3>
 					<div class="contenu">
-						<p>Les fonctions doivent être écrites juste après <span class="script">#include &lt;iostream&gt;</span> ou dans un autre fichier .cpp accompagné de son fichier .hpp (voir "Les bibliothèques")</p>
-						<h4 class="soustitre" id="II.1.1">Créer une fonction retournant une valeur du type « <span class="perso">type0</span> »</h4>
-						<div class="contenu">
-							<p class="script">
-							<span class="perso">type0</span> <span class="perso">maFonction</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…) {<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
-							}<br/>
-							</p>
-						</div>
-						<h4 class="soustitre" id="II.1.2">Retourner une valeur de la fonction</h4>
-						<div class="contenu">
-							<p class="script">return <span class="perso">variable</span>;</p>
-						</div>
-						<h4 class="soustitre" id="II.1.3">Créer une fonction retournant aucune valeur</h4>
-						<div class="contenu">
-							<p class="script">
-							void <span class="perso">maFonction</span>(<span class="perso">type1</span> <span class="perso">variable1</span>, <span class="perso">type2</span> <span class="perso">variable2</span>…) {<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
-							}<br/>
-							</p>
-						</div>
-						<h4 class="soustitre" id="II.1.4">Faire un appel à la fonction</h4>
-						<div class="contenu">
-							<p class="script"><span class="perso">variable</span> = <span class="perso">maFonction</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);</p>
-							<p>ou (s'il n'y a pas de variable de retour)</p>
-							<p class="script"><span class="perso">maFonction</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);</p>
-						</div>
-						<h4 class="soustitre" id="II.1.5">Modifier directement des variables extérieurs grâce à des adresses (pointeurs)</h4>
-						<div class="contenu">
-							<p class="script">
-							void <span class="perso">maFonction</span>(<span class="perso">type</span> *<span class="perso">variable</span>) {<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;*<span class="perso">variable</span> = <span class="perso">valeur</span>;<br/>
-							}<br/>
-							</p>
-							<p>Dans int main(void) :</p>
-							<p class="script">
-							<span class="perso">type</span> <span class="perso">variable</span>;<br/>
-							<span class="perso">maFonction</span>(&<span class="perso">variable</span>);
-							</p>
-						</div>
-						<div class="note">Remarque : il est possible de faire une surcharge de fonctions, c'est-à-dire qu’il est possible de créer deux fonctions identiques avec des paramètres de types différents, ce qui permet au compilateur de choisir la fonction correspondant au type de variables saisies.</div>
+						<p><span class="script perso ">type0</span><span class="script "> </span><span class="script perso ">maFonction</span><span class="script ">(</span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">variable1</span><span class="script ">, </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">variable2</span><span class="script ">…) {</span><span class="script "><br/>    </span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/>}</span></p>
 					</div>
-					<h3 class="soustitre" id="II.2">Les préprocesseurs (ou directives)</h3>
+
+					<h3 class="soustitre" id="3.2">Retourner une valeur de la fonction</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="II.2.1">Créer une constante</h4>
-						<div class="contenu">
-							<p class="script">#define <span class="perso">variable</span> <span class="perso">__valeur__</span></p>
-							<p>ou</p>
-							<p class="script">#define <span class="perso">VARIABLE</span> <span class="perso">valeur</span></p>
-						</div>
-						<h4 class="soustitre" id="II.2.2">Constantes prédéfinies</h4>
-						<div class="contenu">
-							<table>
-								<tr>
-									<th>Constante</th>
-									<th>Description</th>
-								</tr>
-								<tr>
-									<td class="script">__FILE__</td>
-									<td>Nom du fichier</td>
-								</tr>
-								<tr>
-									<td class="script">__LINE__</td>
-									<td>Ligne du fichier</td>
-								</tr>
-								<tr>
-									<td class="script">__DATE__</td>
-									<td>Date de compilation</td>
-								</tr>
-								<tr>
-									<td class="script">__TIME__</td>
-									<td>Heure de compilation</td>
-								</tr>
-								<!--
-								<tr>
-									<td class="script"></td>
-									<td></td>
-								</tr>
-								-->
-							</table>
-						</div>
+						<p><span class="script ">return </span><span class="script perso ">variable</span><span class="script ">;</span></p>
 					</div>
-					<h3 class="soustitre" id="II.3">Les structures</h3>
+
+					<h3 class="soustitre" id="3.3">Créer une fonction retournant aucune valeur</h3>
 					<div class="contenu">
-						<p>Deux manières d’écrire des structures, les deux doivent être écrite après #include &lt;stdio.h&gt; ou dans un autre fichier .c accompagné de son fichier .h (voir "Les bibliothèques")</p>
-						<h4 class="soustitre" id="II.3.1">Manière simple</h4>
-						<div class="contenu">
-							<p class="script">
-							struct <span class="perso">MaStructure</span> {<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type2</span> <span class="perso">variable2</span>;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type3</span> <span class="perso">variable3</span>;<br/>
-							}
-							</p>
-							<br/>
-							<p>Pour créer une structure :</p>
-							<p class="script">struct <span class="perso">MaStructure</span> <span class="perso">variable</span> = {<span class="perso">valeur1</span>, <span class="perso">valeur2</span>, <span class="perso">valeur3</span>};</p>
-						</div>
-						<h4 class="soustitre" id="II.3.2">Manière rapide</h4>
-						<div class="contenu">
-							<p class="script">
-							typedef struct <span class="perso">_MaStructure</span> {<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type2</span> <span class="perso">variable2</span>;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type3</span> <span class="perso">variable3</span>;<br/>
-							} <span class="perso">MaStructure</span>;
-							</p>
-							<p>ou</p>
-							<p class="script">
-							struct <span class="perso">_MaStructure</span> {<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type2</span> <span class="perso">variable2</span>;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type3</span> <span class="perso">variable3</span>;<br/>
-							}<br/>
-							typedef struct <span class="perso">_MaStructure</span> <span class="perso">MaStructure</span>;
-							</p>
-							<br/>
-							<p>Pour créer une structure :</p>
-							<p class="script"><span class="perso">MaStructure</span> <span class="perso">variable</span> = {<span class="perso">valeur1</span>, <span class="perso">valeur2</span>, <span class="perso">valeur3</span>};</p>
-							<br/>
-						</div>
-						<p>Afficher une valeur de variable : <span class="script"><span class="perso">variable</span>.<span class="perso">variable1</span></span></p>
-						<p>Dans une fonction : <span class="script">(*<span class="perso">variable</span>).<span class="perso">valeur1</span></span> ou <span class="script"><span class="perso">variable</span>-><span class="perso">valeur1</span></span></p>
+						<p><span class="script ">void </span><span class="script perso ">maFonction</span><span class="script ">(</span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">variable1</span><span class="script ">, </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">variable2</span><span class="script ">…) {</span><span class="script "><br/>    </span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/>}</span></p>
 					</div>
-					<h3 class="soustitre" id="II.4">Les énumérations</h3>
+
+					<h3 class="soustitre" id="3.4">Faire un appel à la fonction</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="II.4.1">Créer une énumération</h4>
-						<div class="contenu">
-							<p>Exemple :</p>
-							<p class="script">
-								typedef enum JoursSemaine {<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;LUNDI,<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;MARDI,<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;MERCREDI,<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;JEUDI,<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;VENDREDI,<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;SAMEDI,<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;DIMANCHE<br/>
-								} JourSemaine;										
-							</p>
-						</div>
-						<h4 class="soustitre" id="II.4.2">Affecter une valeur de l'énumération</h4>
-						<div class="contenu">
-							<p>Exemple :</p>
-							<p class="script">
-								JourSemaine jour = MERCREDI;
-							</p>
-						</div>
+						<p><span class="script perso ">variable</span><span class="script "> = </span><span class="script perso ">maFonction</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…);</span></p>
+						<p>ou (s'il n'y a pas de variable de retour)</p>
+						<p><span class="script perso ">maFonction</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…);</span></p>
 					</div>
-					<h3 class="soustitre" id="II.5">Les classes</h3>
+
+					<h3 class="soustitre" id="3.5">Modifier directement des variables extérieurs grâce à des adresses (pointeurs)</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="II.3.1">Visibilités</h4>
-						<div class="contenu">
-							<ul>
-								<li><span class="script">public</span> : Peut être appelé en dehors de la classe</li>
-								<li><span class="script">private</span> : Ne peut être appelé qu'au sein de la classe (pour des valeurs, il est préférable de créer des getter et des setter pour accéder à la valeur depuis l'extérieur)</li>
-								<li><span class="script">protected</span> : Ne peut être appelé qu'au sein de la classe et dans les classes héritées</li>
-							</ul>
-						</div>
-						<h4 class="soustitre" id="II.5.2">Les classes de base</h4>
-						<div class="contenu">
-							<h5 class="soustitre" id="II.5.2.1">Créer une classe</h5>
-							<div class="contenu">
-								<h6 class="soustitre" id="II.5.2.1.1">Manière simple (directement dans le même fichier)</h6>
-								<div class="contenu">
-									<p class="script">
-										class <span class="perso">MaClasse</span> {<br/>
-										<br/>
-										private:<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type2</span> <span class="perso">variable2</span>;<br/>
-										<br/>
-										public:<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;static <span class="perso">type3</span> <span class="perso">variableStatique3</span>;<br/>
-										<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…) {<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-><span class="perso">variable1</span> = <span class="perso">mVariable1</span>;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-><span class="perso">variable2</span> = <span class="perso">mVariable2</span>;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-										};
-									</p>
-								</div>
-								<h6 class="soustitre" id="II.5.2.1.2">Manière propre (une classe par fichier .cpp)</h6>
-								<div class="contenu">
-									<p>Dans le fichier .hpp, écrivez uniquement vos déclaration comme ci-dessous :</p>
-									<p class="script">
-										class <span class="perso">MaClasse</span> {<br/>
-										<br/>
-										private:<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type1</span> <span class="perso">variable1</span>;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type2</span> <span class="perso">variable2</span>;<br/>
-										<br/>
-										public:<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;static <span class="perso">type3</span> <span class="perso">variableStatique3</span>;<br/>
-										<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…);<br/>
-										};
-									</p>
-									<p>Dans le fichier .cpp, écrivez simplement :</p>
-									<p class="script">
-										<span class="perso">MaClasse</span>::<span class="perso">MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…) {<br/>
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-><span class="perso">variable1</span> = <span class="perso">mVariable1</span>;<br/>
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-><span class="perso">variable2</span> = <span class="perso">mVariable2</span>;<br/>
-										}
-									</p>
-									<p>Ou (plus rapide, mais déconseillé) :</p>
-									<p class="script">
-										<span class="perso">MaClasse</span>::<span class="perso">MaClasse</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…): <span class="perso">variable1</span>(<span class="perso">mVariable1</span>), <span class="perso">variable2</span>(<span class="perso">mVariable2</span>) {}
-									</p>
-								</div>
-								<div class="note">Note : Il est possible de surcharger le constructeur <span class="perso">MaClasse</span> et de créer une variable statique qui reste la même valeur pour tous les objets.</div>
-								<div class="attention">Attention : Toute variable statique doit être initialisée grâce à des méthodes statiques. Toutes variable ou fonction privée ou protégée est inaccessible en dehors de la classe. Il faut donc utiliser des méthodes dites Getter et Setter.</div>
-							</div>
-							<h5 class="soustitre" id="II.5.2.2">Définir la classe dans un objet</h5>
-							<div class="contenu">
-								<p class="script">
-									<span class="perso">MaClasse</span> <span class="perso">monObjet</span>{<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…};
-								</p>
-							</div>
-							<h5 class="soustitre" id="II.5.2.3">Créer une méthode (dans une classe)</h5>
-							<div class="contenu">
-								<p class="script">
-									<span class="perso">type</span> <span class="perso">maMethode</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…) {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
-									}
-								</p>
-								<div class="note">Note : Une méthode doit être publique ou privée (ou protégée). Cela dépend d'où vous écrivez la méthode.</div>
-								<p>Pour des classes situés dans un fichier .cpp à part, écrivez simplement dans le fichier .hpp :</p>
-								<p class="script">
-									<span class="perso">type</span> <span class="perso">maMethode</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…) noexcept;
-								</p>
-								<p>Et dans le fichier .cpp, écrivez simplement :</p>
-								<p class="script">
-									<span class="perso">type</span> <span class="perso">MaClasse</span>::<span class="perso">maMethode</span>(<span class="perso">type1</span> <span class="perso">mVariable1</span>, <span class="perso">type2</span> <span class="perso">mVariable2</span>…) noexcept {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
-									}
-								</p>
-								<div class="note">noexcept indique qu’il n’y a aucun risque d’erreur. Il n'est pas obligatoire de le mettre.</div>
-							</div>
-							<h5 class="soustitre" id="II.5.2.4">Faire un appel d’une méthode autre que MaClasse ou d’une variable dans une classe</h5>
-							<div class="contenu">
-								<p class="script">
-									this-><span class="perso">maMethode</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);<br/>
-									this-><span class="perso">variable1</span> = <span class="perso">valeur1</span>;
-								</p>
-							</div>
-							<h5 class="soustitre" id="II.5.2.5">Faire un appel d’une méthode autre que MaClasse ou d’une variable en dehors d’une classe</h5>
-							<div class="contenu">
-								<p class="script">
-									<span class="perso">monObjet</span>.<span class="perso">maMethode</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);<br/>
-									<span class="perso">monObjet</span>.<span class="perso">variable1</span> = <span class="perso">valeur1</span>;
-								</p>
-								<div class="note">Note : Les méthodes et les variables ne sont accessible en dehors de la classe uniquement si elles sont déclarées avec le mot-clé « public ». Pour empêcher l’accès et la modification, on utilise le mot-clé « private » et pour autoriser uiquement pour les classes héritées, on utilise le mot-clé « protected ».</div>
-								<p>Pour les méthodes et attributs statiques et publiques, l’accès se fait avec :</p>
-								<p class="script">
-									<span class="perso">MaClasse</span>.<span class="perso">maMethode</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);<br/>
-									<span class="perso">MaClasse</span>.<span class="perso">variableStatique3 </span> = <span class="perso">valeur3</span>;
-								</p>
-							</div>
-							<div class="todo">À venir : Classes d'héritage</div>
-						<!--
-						<h4 class="soustitre" id="II.3.3">Les classes internes</h4>
-						<div class="contenu"></div>
-						<h4 class="soustitre" id="II.3.4">L'héritage</h4>
-						<div class="contenu"></div>
-						<h4 class="soustitre" id="II.3.5">Les classes d'exception</h4>
-						<div class="contenu"></div>
-						<h4 class="soustitre" id="II.3.6">Les classes abstraites</h4>
-						<div class="contenu"></div>
-						<h4 class="soustitre" id="II.3.7">Les interfaces</h4>
-						<div class="contenu"></div>
-						<h4 class="soustitre" id="II.3.8">Les collections</h4>
-						<div class="contenu"></div>
-						-->
-						<!--
-						<h4></h4>
-						<div class="contenu">
-							<p class="script">
-								
-							</p>
-						</div>
-						-->
-						</div>
+						<p><span class="script ">void </span><span class="script perso ">maFonction</span><span class="script ">(</span><span class="script ">type</span><span class="script "> *</span><span class="script perso ">variable</span><span class="script ">) {</span><span class="script "><br/>    *</span><span class="script perso ">variable</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script ">;</span><span class="script "><br/>}</span></p>
+						<p>Au moment de l’appel de la fonction :</p>
+						<p><span class="script perso ">type</span><span class="script "> </span><span class="script perso ">variable</span><span class="script ">;</span><span class="script "><br/></span><span class="script perso ">maFonction</span><span class="script ">(&</span><span class="script perso ">variable</span><span class="script ">);</span></p>
+						<div class="note ">Remarque : il est possible de faire une surcharge de fonctions, c'est-à-dire qu’il est possible de créer deux fonctions identiques avec des paramètres de types différents, ce qui permet au compilateur de choisir la fonction correspondant au type de variables saisies.</div>
+						
 					</div>
+
 				</div>
-				<h2 class="soustitre" id="III">Les instructions</h2>
+				<h2 class="soustitre" id="4">Les classes</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="III.1">Instructions de bases</h3>
+					<h3 class="soustitre" id="4.1">Visibilités</h3>
+					<div class="contenu">
+						<ul>
+						</ul>
+						<p><span class="script ">public</span> : Peut être appelé en dehors de la classe</p>
+						<ul>
+						</ul>
+						<p><span class="script ">private</span> : Ne peut être appelé qu'au sein de la classe (pour des valeurs, il est préférable de créer des getter et des setter pour accéder à la valeur depuis l'extérieur)</p>
+						<ul>
+						</ul>
+						<p><span class="script ">protected</span> : Ne peut être appelé qu'au sein de la classe et dans les classes héritées</p>
+					</div>
+
+					<h3 class="soustitre" id="4.2">Les classes de base</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="4.2.1">Créer une classe</h4>
+						<div class="contenu">
+							<h5 class="soustitre" id="4.2.1.1">Manière simple (directement dans le même fichier)</h5>
+							<div class="contenu">
+								<p><span class="script ">class </span><span class="script perso ">MaClasse</span><span class="script "> {</span><span class="script "><br/></span><span class="script "><br/>private:</span><span class="script "><br/>    </span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">variable1</span><span class="script ">;</span><span class="script "><br/>    </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">variable2</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>public:</span><span class="script "><br/>    static </span><span class="script perso ">type3</span><span class="script "> </span><span class="script perso ">variableStatique3</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>    </span><span class="script perso ">MaClasse</span><span class="script ">(</span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">mVariable2</span><span class="script ">…) {</span><span class="script "><br/>        this-&gt;</span><span class="script perso ">variable1</span><span class="script "> = </span><span class="script perso ">mVariable1</span><span class="script ">;</span><span class="script "><br/>        this-&gt;</span><span class="script perso ">variable2</span><span class="script "> = </span><span class="script perso ">mVariable2</span><span class="script ">;</span><span class="script "><br/>    }</span><span class="script "><br/>};</span></p>
+							</div>
+
+							<h5 class="soustitre" id="4.2.1.2">Manière propre (une classe par fichier .cpp)</h5>
+							<div class="contenu">
+								<p>Dans le fichier .hpp, écrivez uniquement vos déclarations comme ci-dessous :</p>
+								<p><span class="script ">class </span><span class="script perso ">MaClasse</span><span class="script "> {</span><span class="script "><br/></span><span class="script "><br/>private:</span><span class="script "><br/>    </span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">variable1</span><span class="script ">;</span><span class="script "><br/>    </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">variable2</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>public:</span><span class="script "><br/>    static </span><span class="script perso ">type3</span><span class="script "> </span><span class="script perso ">variableStatique3</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>    </span><span class="script perso ">MaClasse</span><span class="script ">(</span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">mVariable2</span><span class="script ">…);</span><span class="script "><br/>};</span></p>
+								<p>Dans le fichier .cpp, écrivez simplement :</p>
+								<p><span class="script perso ">MaClasse</span><span class="script ">::</span><span class="script perso ">MaClasse</span><span class="script ">(</span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">mVariable2</span><span class="script ">…) {</span><span class="script "><br/>        this-&gt;</span><span class="script perso ">variable1</span><span class="script "> = </span><span class="script perso ">mVariable1</span><span class="script ">;</span><span class="script "><br/>        this-&gt;</span><span class="script perso ">variable2</span><span class="script "> = </span><span class="script perso ">mVariable2</span><span class="script ">;</span><span class="script "><br/>}</span></p>
+								<p>Ou (plus rapide, mais déconseillé) :</p>
+								<p><span class="script perso ">MaClasse</span><span class="script ">::</span><span class="script perso ">MaClasse</span><span class="script ">(</span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">mVariable2</span><span class="script ">…): </span><span class="script perso ">variable1</span><span class="script ">(</span><span class="script perso ">mVariable1</span><span class="script ">), </span><span class="script perso ">variable2</span><span class="script ">(</span><span class="script perso ">mVariable2</span><span class="script ">) {}</span></p>
+								<div class="note ">Note : Il est possible de surcharger le constructeur <span class="perso ">MaClasse</span> et de créer une variable statique qui reste la même valeur pour tous les objets.</div>
+								<div class="note ">Attention : Toute variable statique doit être initialisée grâce à des méthodes statiques. Toutes variable ou fonction privée ou protégée est inaccessible en dehors de la classe. Il faut donc utiliser des méthodes dites Getter et Setter.</div>
+							</div>
+
+						</div>
+
+						<h4 class="soustitre" id="4.2.2">Définir la classe dans un objet</h4>
+						<div class="contenu">
+							<p><span class="script perso ">MaClasse</span><span class="script "> </span><span class="script perso ">monObjet</span><span class="script ">{</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…};</span></p>
+						</div>
+
+						<h4 class="soustitre" id="4.2.3">Créer une méthode (dans une classe)</h4>
+						<div class="contenu">
+							<p><span class="script perso ">type</span><span class="script perso ">0</span><span class="script "> </span><span class="script perso ">maMethode</span><span class="script ">(</span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">mVariable2</span><span class="script ">…) {</span><span class="script "><br/>    </span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/>} </span></p>
+							<div class="note ">Note : Une méthode doit être publique ou privée (ou protégée). Cela dépend d'où vous écrivez la méthode.</div>
+							<p>Pour des classes situées dans un fichier .cpp à part, écrivez simplement dans le fichier .hpp :</p>
+							<p><span class="script perso ">type</span><span class="script perso ">0</span><span class="script "> </span><span class="script perso ">maMethode</span><span class="script ">(</span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">mVariable2</span><span class="script ">…) noexcept;</span></p>
+							<p>Et dans le fichier .cpp, écrivez simplement :</p>
+							<p><span class="script perso ">type</span><span class="script perso ">0</span><span class="script "> </span><span class="script perso ">MaClasse</span><span class="script ">::</span><span class="script perso ">maMethode</span><span class="script ">(</span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">mVariable2</span><span class="script ">…) noexcept {</span><span class="script "><br/>    </span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/>}</span></p>
+							<div class="note "><span class="script ">noexcept</span> indique qu’il n’y a aucun risque d’erreur. Il n'est pas obligatoire de le mettre.</div>
+						</div>
+
+						<h4 class="soustitre" id="4.2.4">Faire un appel d’une méthode autre que le constructeur ou d’une variable dans une classe</h4>
+						<div class="contenu">
+							<p><span class="script ">this-&gt;</span><span class="script perso ">maMethode</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…);</span><span class="script "><br/>this-&gt;</span><span class="script perso ">variable1</span><span class="script "> = </span><span class="script perso ">valeur1</span><span class="script ">; </span></p>
+						</div>
+
+						<h4 class="soustitre" id="4.2.5">Faire un appel d’une méthode autre que le constructeur ou d’une variable en dehors d’une classe</h4>
+						<div class="contenu">
+							<p><span class="script perso ">monObjet</span><span class="script ">.</span><span class="script perso ">maMethode</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…);</span><span class="script "><br/></span><span class="script perso ">monObjet</span><span class="script ">.</span><span class="script perso ">variable1</span><span class="script "> = </span><span class="script perso ">valeur1</span><span class="script ">;</span></p>
+							<p>Pour les méthodes et attributs statiques et publiques, l’accès se fait avec :</p>
+							<p><span class="script perso ">MaClasse</span><span class="script ">.</span><span class="script perso ">maMethode</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…);</span><span class="script "><br/></span><span class="script perso ">MaClasse</span><span class="script ">.</span><span class="script perso ">variableStatique3</span><span class="script "> </span><span class="script ">= </span><span class="script perso ">valeur3</span><span class="script ">; </span></p>
+							<div class="note "><span style="font-weight: bold; color: #FF0000; ">À venir : Classes d'héritage</span></div>
+						</div>
+
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="5">Les structures</h2>
+				<div class="contenu">
+					<p>Deux manières d’écrire des structures, les deux doivent être écrite après les importations ou dans un autre fichier .c accompagné de son fichier .h (voir "Les bibliothèques").</p>
+					<h3 class="soustitre" id="5.1">Manière simple</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="5.1.1">Créer une structure</h4>
+						<div class="contenu">
+							<p><span class="script ">struct </span><span class="script perso ">MaStructure</span><span class="script "> {</span><span class="script "><br/>    </span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">variable1</span><span class="script ">;</span><span class="script "><br/>    </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">variable2</span><span class="script ">;</span><span class="script "><br/>    </span><span class="script perso ">type3</span><span class="script "> </span><span class="script perso ">variable3</span><span class="script ">;</span><span class="script "><br/>}</span></p>
+						</div>
+
+						<h4 class="soustitre" id="5.1.2">Utiliser une structure</h4>
+						<div class="contenu">
+							<p><span class="script ">struct </span><span class="script perso ">MaStructure</span><span class="script "> </span><span class="script perso ">variable</span><span class="script "> = {</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">, </span><span class="script perso ">valeur3</span><span class="script ">};</span></p>
+						</div>
+
+					</div>
+
+					<h3 class="soustitre" id="5.2">Manière rapide</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="5.2.1">Créer une structure</h4>
+						<div class="contenu">
+							<p><span class="script ">typedef struct </span><span class="script ">_</span><span class="script perso ">MaStructure</span><span class="script "> {</span><span class="script "><br/>    </span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">variable1</span><span class="script ">;</span><span class="script "><br/>    </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">variable2</span><span class="script ">;</span><span class="script "><br/>    </span><span class="script perso ">type3</span><span class="script "> </span><span class="script perso ">variable3</span><span class="script ">;</span><span class="script "><br/>} </span><span class="script perso ">MaStructure</span><span class="script ">;</span></p>
+							<p>ou</p>
+							<p><span class="script ">struct </span><span class="script ">_</span><span class="script perso ">MaStructure</span><span class="script "> {</span><span class="script "><br/>    </span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">variable1</span><span class="script ">;</span><span class="script "><br/>    </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">variable2</span><span class="script ">;</span><span class="script "><br/>    </span><span class="script perso ">type3</span><span class="script "> </span><span class="script perso ">variable3</span><span class="script ">;</span><span class="script "><br/>}</span><span class="script "><br/>typedef struct </span><span class="script ">_</span><span class="script perso ">MaStructure</span><span class="script "> </span><span class="script perso ">MaStructure</span><span class="script ">;</span></p>
+						</div>
+
+						<h4 class="soustitre" id="5.2.2">Utiliser une structure</h4>
+						<div class="contenu">
+							<p><span class="script perso ">MaStructure</span><span class="script "> </span><span class="script perso ">variable</span><span class="script "> = {</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">, </span><span class="script perso ">valeur3</span><span class="script ">};</span></p>
+						</div>
+
+					</div>
+
+					<h3 class="soustitre" id="5.3">Afficher une valeur de variable</h3>
+					<div class="contenu">
+						<p><span class="script perso ">variable</span><span class="script ">.</span><span class="script perso ">variable1</span></p>
+						<p>Ou dans une fonction :</p>
+						<p><span class="script ">(*</span><span class="script perso ">variable</span><span class="script ">).</span><span class="script perso ">valeur1</span><span class="script "> ou </span><span class="script perso ">variable</span><span class="script ">-&gt;</span><span class="script perso ">valeur1</span></p>
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="6">Les énumérations</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="6.1">Créer une énumération</h3>
+					<div class="contenu">
+						<p>Exemple :</p>
+						<p><span class="script ">typedef enum JoursSemaine {</span><span class="script "><br/>    LUNDI,</span><span class="script "><br/>    MARDI,</span><span class="script "><br/>    MERCREDI,</span><span class="script "><br/>    JEUDI,</span><span class="script "><br/>    VENDREDI,</span><span class="script "><br/>    SAMEDI,</span><span class="script "><br/>    DIMANCHE</span><span class="script "><br/>} JourSemaine;</span></p>
+						
+					</div>
+
+					<h3 class="soustitre" id="6.2">Affecter une valeur de l'énumération</h3>
+					<div class="contenu">
+						<p>Exemple :</p>
+						<p><span class="script ">JourSemaine jour = MERCREDI;</span></p>
+						
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="7">Les instructions</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="7.1">Instructions de bases</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Instruction</th>
-								<th>Description</th>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">std::cout &lt;&lt; "<span class="perso">texte</span>";</td>
+								<td><span class="script ">std::cout &lt;&lt; "</span><span class="script perso ">texte</span><span class="script ">";</span></td>
 								<td>Affiche un texte dans la console</td>
 							</tr>
 							<tr>
-								<td class="script">std::cout &lt;&lt; "<span class="perso">texte</span>" &lt;&lt; std::endl;</td>
-								<td>Affiche un texte dans la console avec un retour à la ligne (peut être remplacé par \n, placé directement dans la chaîne) (pour une tabulation, entrez \t)</td>
+								<td><span class="script ">std::cout &lt;&lt; "</span><span class="script perso ">texte</span><span class="script ">" &lt;&lt; std::endl;</span></td>
+								<td>Affiche un texte dans la console avec un retour à la ligne</td>
 							</tr>
 							<tr>
-								<td class="script">std::cout &lt;&lt; <span class="perso">variable</span>;<br/>std::cout &lt;&lt; "Valeur : " &lt;&lt; <span class="perso">variable</span>;</td>
-								<td>Affiche une variable (ici <span class="perso">variable</span>) dans la console</td>
+								<td><span class="script ">std::cout &lt;&lt; </span><span class="script perso ">variable</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">std::cout &lt;&lt; "Valeur : " &lt;&lt; </span><span class="script perso ">variable</span><span class="script ">;</span></td>
+								<td>Affiche une variable dans la console</td>
 							</tr>
 							<tr>
-								<td class="script">std::cin.ignore();</td>
+								<td><span class="script ">std::cin.ignore();</span></td>
 								<td>Mettre en pause le programme pour lire certaines données dans la console</td>
 							</tr>
 							<tr>
-								<td class="script">
-									std::cin &gt;&gt; <span class="perso">variable</span>;<br/>
-									std::cin.ignore();
-								</td>
-								<td>Demande une valeur avec le retour dans <span class="perso">variable</span> (non sécurisé) (std::cin.ignore() permet d’afficher la valeur en exécutant directement l’exécutable)</td>
+								<td><span class="script ">std::cin &gt;&gt; </span><span class="script perso ">variable</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">std::cin.ignore();</span></td>
+								<td>Demande une valeur avec le retour dans une variable (<span class="script ">std::cin.ignore()</span> permet d’afficher la valeur en exécutant directement l’exécutable)</td>
 							</tr>
 							<tr>
-								<td class="script">
-									std::getline(std::cin, <span class="perso">variable</span>);
-								</td>
-								<td>Demande une valeur avec le retour dans <span class="perso">variable</span>, en prenant en compte les espaces</td>
+								<td><span class="script ">std::getline(std::cin, </span><span class="script perso ">variable</span><span class="script ">);</span></td>
+								<td>Demande une valeur avec le retour dans variable, en prenant en compte les espaces</td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">etiquette</span>:</td>
+								<td><span class="script perso ">etiquette</span><span class="script ">:</span></td>
 								<td>Indiquer un emplacement du programme</td>
 							</tr>
 							<tr>
-								<td class="script">goto <span class="perso">etiquette</span>;</td>
+								<td><span class="script ">goto </span><span class="script perso ">etiquette</span><span class="script ">;</span></td>
 								<td>Aller dans un emplacement du programme</td>
 							</tr>
 							<tr>
-								<td class="script">sizeof(<span class="perso">variable</span>);</td>
+								<td><span class="script ">sizeof(</span><span class="script perso ">variable</span><span class="script ">);</span></td>
 								<td>Renvoyer la taille en octets d’une variable (utile pour l’allocation dynamique avec malloc)</td>
 							</tr>
 							<tr>
-								<td class="script">rand();</td>
-								<td>Renvoyer un nombre aléatoire entre 0 et la constante RAND_MAX (la plus grande valeur que la fonction peut renvoyer sur un système donné)</td>
+								<td><span class="script ">rand();</span></td>
+								<td>Renvoyer un nombre aléatoire entre 0 et la constante <span class="script ">RAND_MAX</span> (la plus grande valeur que la fonction peut renvoyer sur un système donné)</td>
 							</tr>
 							<tr>
-								<td class="script">srand(time(NULL));</td>
-								<td>Réinitialiser les valeurs aléatoires (à utiliser 1 fois dans le programme avant rand(), nécessite également la bibliothèque ctime)</td>
+								<td><span class="script ">srand(time(NULL));</span></td>
+								<td>Réinitialiser les valeurs aléatoires (à utiliser 1 fois dans le programme avant <span class="script ">rand()</span>, nécessite également la bibliothèque <span class="script ">ctime</span>)</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.2">Les fichiers</h3>
+
+					<h3 class="soustitre" id="7.2">Les fichiers</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Instruction</th>
-								<th>Description</th>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td>
-									<span class="script">
-										std::fstream <span class="perso">fichier</span>;<br/>
-										<span class="perso">fichier</span>.open(<span class="perso">nom_du_fichier</span>, std::ios::in);
-									</span>
-									<p>ou</p>
-									<span class="script">
-										ifstream <span class="perso">fichier</span>(<span class="perso">nom_du_fichier</span>);
-									</span>
-								</td>
-								<td>Ouvre un fichier en mode lecture seule</td>
+								<td><span class="script ">std::fstream </span><span class="script perso ">fichier</span><span class="script ">;</span><span class="script "><br/></span><span class="script perso ">fichier</span><span class="script ">.open(</span><span class="script perso ">nomDuFichier</span><span class="script ">, std::ios::in);</span><span class="script "><br/></span>ou<br/><span class="script ">ifstream </span><span class="script perso ">fichier</span><span class="script ">(</span><span class="script perso ">nomDuFichier</span><span class="script ">);</span></td>
+								<td>Ouvre un fichier en lecture seule</td>
 							</tr>
 							<tr>
-								<td>
-									<span class="script">
-										std::fstream <span class="perso">fichier</span>;<br/>
-										<span class="perso">fichier</span>.open(<span class="perso">nom_du_fichier</span>, std::ios::out);
-									</span>
-									<p>ou</p>
-									<span class="script">
-										ofstream <span class="perso">fichier</span>(<span class="perso">nom_du_fichier</span>);
-									</span>
-								</td>
-								<td>Crée un nouveau fichier et l'ouvre en mode écriture (écrase l'ancien fichier du même nom)</td>
+								<td><span class="script ">std::fstream fichier;</span><span class="script "><br/></span><span class="script ">fichier.open(</span><span class="script perso ">nomDuFichier</span><span class="script ">, std::ios::out);</span><span class="script "><br/></span>ou<span class="script "><br/></span><span class="script ">ofstream fichier(</span><span class="script perso ">nomDuFichier</span><span class="script ">);</span></td>
+								<td>Crée et ouvre un nouveau fichier en écriture seule (écrase l’ancien fichier si existant)</td>
 							</tr>
 							<tr>
-								<td>
-									<span class="script">
-										std::fstream <span class="perso">fichier</span>;<br/>
-										<span class="perso">fichier</span>.open(<span class="perso">nom_du_fichier</span>, std::ios::app);
-									</span>								
-								</td>
-								<td>Ouvre un fichier en mode écriture (en écrivant à la fin du fichier)</td>
+								<td><span class="script ">std::fstream </span><span class="script perso ">fichier</span><span class="script ">;</span><span class="script "><br/></span><span class="script perso ">fichier</span><span class="script ">.open(</span><span class="script perso ">nomDuFichier</span><span class="script ">, std::ios::app);</span></td>
+								<td>Ouvre un fichier en écriture (en écrivant à la fin du fichier)</td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">fichier</span> &lt;&lt; <span class="perso">variable</span>;</td>
-								<td>Ecrit le contenu d’une variable (ici <span class="perso">variable</span>) dans le fichier (en mode écriture)</td>
+								<td><span class="script perso ">fichier</span><span class="script ">.close();</span></td>
+								<td>Ferme et enregistre le fichier (important pour ne pas bloquer le fichier)</td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">fichier</span> &gt;&gt; <span class="perso">variable</span>;</td>
-								<td>Lit une valeur du fichier avec le retour dans <span class="perso">variable</span> (en mode lecture)</td>
+								<td><span class="script perso ">fichier</span><span class="script "> &lt;&lt; </span><span class="script perso ">variable</span><span class="script ">;</span></td>
+								<td>Ecrit le contenu d’une variable dans le fichier (en mode écriture)</td>
 							</tr>
 							<tr>
-								<td class="script">std::getline(<span class="perso">fichier</span>, <span class="perso">ligne</span>);</td>
-								<td>Lit une ligne du fichier avec le retour dans <span class="perso">variable</span> (en mode lecture), en prenant en compte les espaces</td>
+								<td><span class="script perso ">fichier</span><span class="script "> &gt;&gt; </span><span class="script perso ">variable</span><span class="script ">;</span></td>
+								<td>Lit une valeur du fichier avec le retour dans une variable (en mode lecture)</td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">fichier</span>.eof();</td>
-								<td>Détermine quand on atteindra la fin du fichier</td>
+								<td><span class="script ">std::getline(</span><span class="script perso ">fichier</span><span class="script ">, </span><span class="script perso ">variable</span><span class="script ">);</span></td>
+								<td>Lit une ligne du fichier avec le retour dans une variable (en mode lecture)</td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">fichier</span>.get(<span class="perso">variable</span>);</td>
-								<td>Lit un caractère</td>
+								<td><span class="script perso ">fichier</span><span class="script ">.get(</span><span class="script perso ">variable</span><span class="script ">);</span></td>
+								<td>Lit un caractère (en mode lecture)</td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">fichier</span>.close();</td>
-								<td>Important pour fermer un fichier</td>
+								<td><span class="script perso ">fichier</span><span class="script ">.eof();</span></td>
+								<td>Détermine quand on atteindra la fin du fichier (en mode lecture)</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
 						</table>
+						
 					</div>
-					<h3 class="soustitre" id="III.3">Allocation dynamique</h3>
+
+					<h3 class="soustitre" id="7.3">L’allocation dynamique</h3>
 					<div class="contenu">
 						<p>L'allocation dynamique se fait avec le mot-clé "new". Une zone mémoire sera réservée à la variable automatiquement en fonction de la taille du type de variable, du tableau ou de la classe souhaitée. Pour libérer la mémoire, on utilise le mot-clé "delete".</p>
-						<div class="attention">Attention ! Tout oubli de libérer la mémoire entraine un blocage d'une zone de la RAM jusqu'au prochain redémarrage de l'appareil.</div>
-						<h4 class="soustitre" id="III.3.1">Allouer une zone mémoire</h4>
+						<div class="note ">Attention ! Tout oubli de libérer la mémoire entraine un blocage d'une zone de la RAM jusqu'au prochain redémarrage de l'appareil.</div>
+						<h4 class="soustitre" id="7.3.1">Allouer une zone mémoire</h4>
 						<div class="contenu">
-							<p>Pour un tableau : <span class="script">type *<span class="perso">pointeur</span> = new <span class="perso">type</span>[<span class="perso">taille</span>];</span></p>
-							<p>Pour une classe : <span class="script"><span class="perso">MaClasse</span> *<span class="perso">monObjet</span> = new <span class="perso">MaClasse</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);</span></p>
+							<p>Pour un tableau : <span class="script perso ">type</span><span class="script "> *</span><span class="script perso ">pointeur</span><span class="script "> = new </span><span class="script perso ">type</span><span class="script ">[</span><span class="script perso ">taille</span><span class="script ">];</span></p>
+							<p>Pour une classe : <span class="script perso ">MaClasse</span><span class="script "> *</span><span class="script perso ">monObjet</span><span class="script "> = new </span><span class="script perso ">MaClasse</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…);</span></p>
 						</div>
-						<h4 class="soustitre" id="III.3.2">Libérer une zone mémoire</h4>
+
+						<h4 class="soustitre" id="7.3.2">Libérer une zone mémoire</h4>
 						<div class="contenu">
-							<p class="script">delete <span class="perso">variable</span>;</p>
+							<p><span class="script ">delete </span><span class="script perso ">variable</span><span class="script ">;</span></p>
+							
+							
 						</div>
+
 					</div>
+
 				</div>
-				<h2 class="soustitre" id="IV">Les bibliothèques</h2>
+				<h2 class="soustitre" id="8">Les bibliothèques</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="IV.0">Importer une bibliothèque (fichier c + fichier h)</h3>
+					<h3 class="soustitre" id="8.1">Importer une bibliothèque (fichier cpp + fichier hpp)</h3>
 					<div class="contenu">
 						<p>Dans votre dossier, créer un fichier .hpp où vous mettrez d'abord :</p>
-						<p class="script">
-						#ifndef FICHIER_HPP<br/>
-						#define FICHIER_HPP
-						</p>
-						<p>avec FICHIER le nom de votre fichier <span class="perso">fichier.hpp</span> en majuscule.</p>
+						<p><span class="script ">#ifndef </span><span class="script perso ">FICHIER</span><span class="script ">_H</span><span class="script ">PP</span><span class="script "><br/>#define </span><span class="script perso ">FICHIER</span><span class="script ">_H</span><span class="script ">PP</span></p>
+						<p>avec <span class="perso ">FICHIER</span> le nom de votre fichier <span class="perso ">fichier</span>.hpp en majuscule.</p>
 						<p>Puis la liste des fonctions sous forme :</p>
-						<p class="script"><span class="perso">type</span> <span class="perso">myfonction</span>(<span class="perso">type</span> <span class="perso">variables</span>);</p>
+						<p><span class="script perso ">type</span><span class="script perso ">0</span><span class="script "> </span><span class="script perso ">m</span><span class="script perso ">aF</span><span class="script perso ">onction</span><span class="script ">(</span><span class="script perso ">type</span><span class="script perso ">1</span><span class="script "> </span><span class="script perso ">variable</span><span class="script perso ">1</span><span class="script ">, </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">variable2</span><span class="script ">…</span><span class="script ">);</span></p>
 						<p>Et toutes les classes sous forme :</p>
-						<p class="script">
-							class <span class="perso">MaClasse</span> {<br/>
-							<br/>
-							private:<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">type</span> <span class="perso">variables</span>;<br/>
-							<br/>
-							public:<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;static <span class="perso">type</span> <span class="perso">variables_statiques</span>;<br/>
-							<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">MaClasse</span>(<span class="perso">type</span> <span class="perso">mVariables</span>);<br/>
-							}
-						</p>
+						<p><span class="script ">class </span><span class="script perso ">MaClasse</span><span class="script "> {</span><span class="script "><br/></span><span class="script "><br/>private:</span><span class="script "><br/>    </span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">variable1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">    </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">variable2</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>public:</span><span class="script "><br/>    static </span><span class="script perso ">type</span><span class="script perso ">3</span><span class="script "> </span><span class="script perso ">variableStatique3</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>    </span><span class="script perso ">MaClasse</span><span class="script ">(</span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">mVariable2</span><span class="script ">…</span><span class="script ">);</span><span class="script "><br/>}</span></p>
 						<p>(il est également possible d'écrire ses structures directement à l'intérieur de ce fichier .hpp)</p>
-						<p>Enfin : <span class="script">#endif</span></p>
-						<br/>
-						<p>(ou écrivez simplement <span class="script">#pragma one</span> dans le fichier .hpp pour laisser faire le compilateur et écrivez à la suite les fonctions et les classes)</p>
-						<br/>
-						<p>Dans le même dossier, créer un fichier .cpp du même nom que le fichier .hpp, ajouter au début : <span class="script">#include "<span class="perso">fichier</span>.hpp"</span> (avec <span class="script">#include &lt;iostream&gt;</span> et les autres bibliothèques)</p> et entrez vos fonctions et vos classes à l'intérieur de ce fichier.
-						<br/>
-						<p>Enfin, entrez : #include "<span class="perso">fichier</span>.hpp"</span> dans le fichier principal juste après <span class="script">#include &lt;iostream&gt;</span></p>
+						<p>Enfin : <span class="script ">#endif</span></p>
+						<div class="note ">(Vous pouvez également écrire tout simplement #pragma one dans le fichier .hpp pour laisser faire le compilateur et écrivez à la suite les fonctions et les classes)</div>
+						<p>Dans le même dossier, créer un fichier .cpp du même nom que le fichier .hpp, ajouter au début : <span class="script ">#include "</span><span class="script perso ">fichier</span><span class="script ">.h</span><span class="script ">pp</span><span class="script ">"</span> (avec les autres bibliothèques nécessaires)</p>
+						<p>Et entrez vos fonctions et vos classes à l'intérieur de ce fichier. </p>
+						<p>Enfin, entrez : <span class="script ">#include "</span><span class="script perso ">fichier</span><span class="script ">.h</span><span class="script ">pp</span><span class="script ">"</span> dans le fichier principal juste après les bibliothèques</p>
+						<div class="note "><span style="font-weight: bold; color: #FF0000; ">À venir : nouvelles bibliothèques</span></div>
+						
 					</div>
-					<div class="todo">À venir : nouvelles bibliothèques</div>
-					<!--
-					<h3 class="soustitre" id=""> (<span class="script">#include &lt;xxx.h&gt;</span>)</h3>
+
+				</div>
+				<h2 class="soustitre" id="9">Les bibliothèques héritées du C</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="9.1">stdio</h3>
 					<div class="contenu">
-						<p></p>
+						<p>Stdio est la bibliothèque de base pour programmer en C.</p>
+						<p>Importation : #include &lt;cstdio&gt;</p>
+					</div>
+
+					<h3 class="soustitre" id="9.2">Instructions de bases</h3>
+					<div class="contenu">
 						<table>
 							<tr>
-								<th>Instruction</th>
-								<th>Utilité</th>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script"></td>
-								<td></td>
+								<td><span class="script ">printf("</span><span class="script perso ">texte</span><span class="script ">");</span></td>
+								<td>Affiche un texte dans la console</td>
+							</tr>
+							<tr>
+								<td><span class="script ">printf("</span><span class="script perso ">texte</span><span class="script ">\n");</span></td>
+								<td>Affiche un texte dans la console avec un retour à la ligne</td>
+							</tr>
+							<tr>
+								<td><span class="script ">printf(("Valeur : %</span><span class="script perso ">controle</span><span class="script ">", </span><span class="script perso ">variable</span><span class="script ">);</span></td>
+								<td>Affiche une variable dans la console</td>
+							</tr>
+							<tr>
+								<td><span class="script ">scanf("%</span><span class="script perso ">controle</span><span class="script ">", &</span><span class="script perso ">variable</span><span class="script ">);</span></td>
+								<td>Demande une valeur avec le retour dans une variable</td>
+							</tr>
+							<tr>
+								<td><span class="script ">sizeof(</span><span class="script perso ">variable</span><span class="script ">);</span></td>
+								<td>Renvoyer la taille en octets d’une variable (utile pour l’allocation dynamique avec malloc)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">sprintf(</span><span class="script perso ">chaine</span><span class="script ">, "Valeur : %</span><span class="script perso ">controle</span><span class="script ">", </span><span class="script perso ">variable</span><span class="script ">);</span></td>
+								<td>Écrit du texte dans une chaîne de caractères</td>
 							</tr>
 						</table>
 					</div>
-					-->
-				</div>
-				<h2 class="soustitre" id="V">Les bibliothèques héritées du C</h2>
-				<div class="contenu">
-					<h3 class="soustitre" id="V.1">stdio (<span class="script">#include &lt;cstdio&gt;</span>)</h3>
+
+					<h3 class="soustitre" id="9.3">Les fichiers</h3>
 					<div class="contenu">
-						<p>stdio est la bibliothèque de base pour programmer en C.</p>
-						<h3 class="soustitre" id="V.1.1">Instructions de bases</h3>
-						<div class="contenu">
-							<table>
-								<tr>
-									<th>Instruction</th>
-									<th>Description</th>
-								</tr>
-								<tr>
-									<td class="script">printf("<span class="perso">texte</span>");</td>
-									<td>Affiche un texte dans la console</td>
-								</tr>
-								<tr>
-									<td class="script">printf("<span class="perso">texte</span>\n");</td>
-									<td>Affiche un texte dans la console avec un retour à la ligne (pour une tabulation, entrez \t)</td>
-								</tr>
-								<tr>
-									<td class="script">printf("%<span class="perso">controle</span>", <span class="perso">variable</span>);<br/>printf(("Valeur : %<span class="perso">controle</span>", <span class="perso">variable</span>);</td>
-									<td>Affiche une variable (ici <span class="perso">variable</span>) dans la console</td>
-								</tr>
-								<tr>
-									<td class="script">scanf("%<span class="perso">controle</span>", &<span class="perso">variable</span>);</td>
-									<td>Demande une valeur avec le retour dans <span class="perso">variable</span> (non sécurisé)</td>
-								</tr>
-								<tr>
-									<td class="script"><span class="perso">etiquette</span>:</td>
-									<td>Indiquer un emplacement du programme</td>
-								</tr>
-								<tr>
-									<td class="script">goto <span class="perso">etiquette</span>;</td>
-									<td>Aller dans un emplacement du programme</td>
-								</tr>
-								<tr>
-									<td class="script">sizeof(<span class="perso">variable</span>);</td>
-									<td>Renvoyer la taille en octets d’une variable (utile pour l’allocation dynamique avec malloc)</td>
-								</tr>
-								<tr>
-									<td class="script">sprintf(<span class="perso">chaine</span>, "Valeur : %<span class="perso">controle</span>", <span class="perso">variable</span>);</td>
-									<td>Écrit du texte dans une chaîne de caractères</td>
-								</tr>
-								<!--
-								<tr>
-									<td class="script"></td>
-									<td></td>
-								</tr>
-								<a class="script_tabulation">
-								-->
-							</table>
-						</div>
-						<h3 class="soustitre" id="V.1.2">Les fichiers</h3>
-						<div class="contenu">
-							<table>
-								<tr>
-									<th>Instruction</th>
-									<th>Description</th>
-								</tr>
-								<!--
-								<tr>
-									<td class="script"></td>
-									<td></td>
-								</tr>
-								<a class="script_tabulation">
-								-->
-								<tr>
-									<td class="script">FILE *<span class="perso">fichier</span> = fopen(<span class="perso">nom_du_fichier</span>, "<span class="perso">mode</span>");</td>
-									<td>Ouvre un fichier selon le mode choisi (r : Ouvre en lecture; w : Crée un nouveau fichier et l'ouvre en mode écriture (écrase l'ancien fichier du même nom); a : Ouvre un fichier en mode écriture (en écrivant à la fin du fichier); rb ou wb : Ouvre en binaire)</td>
-								</tr>
-								<tr>
-									<td class="script">fprintf(<span class="perso">fichier</span>, "%<span class="perso">controle</span>", <span class="perso">variable</span>);</td>
-									<td>Ecrit le contenu d’une variable (ici <span class="perso">variable</span>) dans le fichier (en mode écriture)</td>
-								</tr>
-								<tr>
-									<td class="script">fscanf(<span class="perso">fichier</span>, "%<span class="perso">controle</span>", &<span class="perso">variable</span>);</td>
-									<td>Lit une ligne du fichier avec le retour dans <span class="perso">variable</span> (en mode lecture)</td>
-								</tr>
-								<tr>
-									<td class="script">feod(<span class="perso">fichier</span>);</td>
-									<td>Détermine quand on atteindra la fin du fichier</td>
-								</tr>
-								<tr>
-									<td class="script"><span class="perso">variable</span> = fgetc(<span class="perso">fichier</span>);</td>
-									<td>Lit un caractère</td>
-								</tr>
-								<tr>
-									<td class="script">fgets(<span class="perso">variable</span>, <span class="perso">longueur</span>, <span class="perso">fichier</span>);</td>
-									<td>Lit une ligne de longueur maximum <span class="perso">longueur</span></td>
-								</tr>
-								<tr>
-									<td class="script">fputc(<span class="perso">caractere</span>, <span class="perso">fichier</span>);</td>
-									<td>Écrit un caractère</td>
-								</tr>
-								<tr>
-									<td class="script">fputs(<span class="perso">texte</span>, <span class="perso">fichier</span>);</td>
-									<td>Écrit une chaîne de caractères</td>
-								</tr>
-								<tr>
-									<td class="script">fclose(<span class="perso">fichier</span>);</td>
-									<td>Important pour fermer un fichier</td>
-								</tr>
-							</table>
-						</div>
-					</div>
-					<h3 class="soustitre" id="V.2">stdlib (<span class="script">#include &lt;cstdlib&gt;</span>)</h3>
-					<div class="contenu">
-						<p>stdlib permet d’avoir d’autres fonctionnalités utiles pour le langage C. Il est souvent ajouté au début du programme avec stdio.h car il s’agit d’une des bibliothèques qui est la plus utilisée en C.</p>
 						<table>
 							<tr>
-								<th>Instruction</th>
-								<th>Utilité</th>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">system("PAUSE");</td>
+								<td><span class="script ">FILE *</span><span class="script perso ">fichier</span><span class="script "> = fopen(</span><span class="script perso ">nom</span><span class="script perso ">D</span><span class="script perso ">u</span><span class="script perso ">F</span><span class="script perso ">ichier</span><span class="script ">, "</span><span class="script ">r</span><span class="script ">");</span></td>
+								<td>Ouvre un fichier en lecture seule</td>
+							</tr>
+							<tr>
+								<td><span class="script ">FILE *</span><span class="script perso ">fichier</span><span class="script "> = fopen(</span><span class="script perso ">nom</span><span class="script perso ">D</span><span class="script perso ">u</span><span class="script perso ">F</span><span class="script perso ">ichier</span><span class="script ">, "</span><span class="script ">w</span><span class="script ">");</span></td>
+								<td>Crée et ouvre un nouveau fichier en écriture seule (écrase l’ancien fichier si existant)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">FILE *</span><span class="script perso ">fichier</span><span class="script "> = fopen(</span><span class="script perso ">nom</span><span class="script perso ">D</span><span class="script perso ">u</span><span class="script perso ">F</span><span class="script perso ">ichier</span><span class="script ">, "</span><span class="script ">a</span><span class="script ">");</span></td>
+								<td>Ouvre un fichier en écriture (en écrivant à la fin du fichier)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">FILE *</span><span class="script perso ">fichier</span><span class="script "> = fopen(</span><span class="script perso ">nom</span><span class="script perso ">D</span><span class="script perso ">u</span><span class="script perso ">F</span><span class="script perso ">ichier</span><span class="script ">, "</span><span class="script ">rb</span><span class="script ">");</span></td>
+								<td>Ouvre un fichier en lecture seule en binaire</td>
+							</tr>
+							<tr>
+								<td><span class="script ">FILE *</span><span class="script perso ">fichier</span><span class="script "> = fopen(</span><span class="script perso ">nom</span><span class="script perso ">D</span><span class="script perso ">u</span><span class="script perso ">F</span><span class="script perso ">ichier</span><span class="script ">, "</span><span class="script ">wb</span><span class="script ">");</span></td>
+								<td>Crée et ouvre un nouveau fichier en écriture seule en binaire (écrase l’ancien fichier si existant)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">fclose(</span><span class="script perso ">fichier</span><span class="script ">);</span></td>
+								<td>Ferme et enregistre le fichier (important pour ne pas bloquer le fichier)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">fprintf(</span><span class="script perso ">fichier</span><span class="script ">, "%</span><span class="script perso ">controle</span><span class="script ">", </span><span class="script perso ">variable</span><span class="script ">);</span></td>
+								<td>Ecrit le contenu d’une variable dans le fichier (en mode écriture)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">fscanf(</span><span class="script perso ">fichier</span><span class="script ">, "%</span><span class="script perso ">controle</span><span class="script ">", &</span><span class="script perso ">variable</span><span class="script ">);</span></td>
+								<td>Lit une valeur du fichier avec le retour dans une variable (en mode lecture)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">fgets(</span><span class="script perso ">variable</span><span class="script ">, </span><span class="script perso ">longueur</span><span class="script ">, </span><span class="script perso ">fichier</span><span class="script ">);</span></td>
+								<td>Lit une ligne d’une longueur maximale du fichier avec le retour dans une variable (en mode lecture)</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">variable</span><span class="script "> = fgetc(</span><span class="script perso ">fichier</span><span class="script ">);</span></td>
+								<td>Lit un caractère (en mode lecture)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">fputs(</span><span class="script perso ">texte</span><span class="script ">, </span><span class="script perso ">fichier</span><span class="script ">);</span></td>
+								<td>Écrit une chaîne de caractères (en mode écriture)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">fputc(</span><span class="script perso ">caractere</span><span class="script ">, </span><span class="script perso ">fichier</span><span class="script ">);</span></td>
+								<td>Écrit un caractère (en mode écriture)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">feod(</span><span class="script perso ">fichier</span><span class="script ">);</span></td>
+								<td>Détermine quand on atteindra la fin du fichier (en mode lecture)</td>
+							</tr>
+						</table>
+						
+					</div>
+
+					<h3 class="soustitre" id="9.4">stdlib</h3>
+					<div class="contenu">
+						<p>Stdlib permet d’avoir d’autres fonctionnalités utiles pour le langage C. Il est souvent ajouté au début du programme avec c<span class="script ">stdio</span> car il s’agit d’une des bibliothèques qui est la plus utilisée en C.</p>
+						<p>Importation : <span class="script ">#include &lt;</span><span class="script ">c</span><span class="script ">stdlib&gt;</span></p>
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Utilité</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">system("PAUSE");</span></td>
 								<td>Mettre en pause le programme pour lire certaines données dans la console</td>
 							</tr>
 							<tr>
-								<td class="script">rand();</td>
-								<td>Renvoyer un nombre aléatoire entre 0 et la constante RAND_MAX (la plus grande valeur que la fonction peut renvoyer sur un système donné)</td>
+								<td><span class="script ">rand();</span></td>
+								<td>Renvoyer un nombre aléatoire entre <span class="script ">0</span> et la constante <span class="script ">RAND_MAX</span> (la plus grande valeur que la fonction peut renvoyer sur un système donné)</td>
 							</tr>
 							<tr>
-								<td class="script">srand(time(NULL));</td>
-								<td>Réinitialiser les valeurs aléatoires (à utiliser 1 fois dans le programme avant rand(), nécessite également la bibliothèque &lt;time.h&gt;)</td>
+								<td><span class="script ">srand(time(NULL));</span></td>
+								<td>Réinitialiser les valeurs aléatoires (à utiliser 1 fois dans le programme avant <span class="script ">rand()</span>, nécessite également la bibliothèque <span class="script ">&lt;time.h&gt;</span>)</td>
 							</tr>
 							<tr>
-								<td>
-									<span class="script"><span class="perso">type</span> *<span class="perso">pointeur</span> = NULL;<br/>
-									<span class="perso">pointeur</span> = (<span class="perso">type</span> *)malloc(<span class="perso">taille_totale</span>);<br/></span>
-									ou<br/>
-									<span class="script"><span class="perso">type</span> *<span class="perso">pointeur</span> = (<span class="perso">type</span> *)malloc(<span class="perso">taille_totale</span>);</span>
-								</td>
-								<td>Allouer dynamiquement une zone mémoire en octets (taille pouvant être donnée avec sizeof) sur un pointeur (renvoie l'adresse de la zone allouée ou NULL si la fonction échoue)</td>
+								<td><span class="script perso ">type</span><span class="script "> *</span><span class="script perso ">pointeur</span><span class="script "> = NULL;</span><span class="script "><br/></span><span class="script perso ">pointeur</span><span class="script "> = (</span><span class="script perso ">type</span><span class="script "> *)</span><span class="script "> </span><span class="script ">malloc(</span><span class="script perso ">taille_totale</span><span class="script ">);</span><span class="script "><br/></span>ou<span class="script "><br/></span><span class="script perso ">type</span><span class="script "> *</span><span class="script perso ">pointeur</span><span class="script "> = (</span><span class="script perso ">type</span><span class="script "> *)</span><span class="script "> </span><span class="script ">malloc(</span><span class="script perso ">taille_totale</span><span class="script ">);</span></td>
+								<td>Allouer dynamiquement une zone mémoire en octets (taille pouvant être donnée avec <span class="script ">sizeof</span>) sur un pointeur (renvoie l'adresse de la zone allouée ou NULL si la fonction échoue)</td>
 							</tr>
 							<tr>
-								<td class="script">free(<span class="perso">pointeur</span>);</td>
+								<td><span class="script ">free(</span><span class="script perso ">pointeur</span><span class="script ">);</span></td>
 								<td>Important pour libérer la mémoire</td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">type</span> *<span class="perso">pointeur</span> = (<span class="perso">type</span> *)calloc(<span class="perso">nombre_cases</span>, <span class="perso">taille_case</span>);</td>
+								<td><span class="script perso ">type</span><span class="script "> *</span><span class="script perso ">pointeur</span><span class="script "> = (</span><span class="script perso ">type</span><span class="script "> *)</span><span class="script "> </span><span class="script ">calloc(</span><span class="script perso ">nombre_cases</span><span class="script ">, </span><span class="script perso ">taille_case</span><span class="script ">);</span></td>
 								<td>Allouer dynamiquement une zone mémoire en octets pour chaque case du pointeur et les initialise à 0 (renvoie l'adresse de la zone allouée ou NULL si la fonction échoue)</td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">pointeur</span> = realloc(<span class="perso">pointeur</span>, <span class="perso">taille_totale</span>);</td>
+								<td><span class="script perso ">pointeur</span><span class="script "> = realloc(</span><span class="script perso ">pointeur</span><span class="script ">, </span><span class="script perso ">taille_totale</span><span class="script ">);</span></td>
 								<td>Réallouer une zone mémoire (renvoie l'adresse de la zone allouée ou NULL si la fonction échoue)</td>
 							</tr>
 							<tr>
-								<td class="script">exit(EXIT_FAILURE);</td>
+								<td><span class="script ">exit(EXIT_FAILURE);</span></td>
 								<td>Terminer le programme en libérant les ressources utilisées par le programme et en signalant l'échec du déroulement du programme</td>
 							</tr>
 							<tr>
-								<td class="script">exit(EXIT_SUCCESS);</td>
+								<td><span class="script ">exit(EXIT_SUCCESS);</span></td>
 								<td>Terminer le programme en libérant les ressources utilisées par le programme (est souvent remplacé par return EXIT_SUCCESS;)</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="V.3">string (<span class="script">#include &lt;cstring&gt;</span>)</h3>
+
+					<h3 class="soustitre" id="9.5">string</h3>
 					<div class="contenu">
-						<p>string permet de faire diverses manipulations avec des chaînes de caractères facilement, sans avoir à créer des fonctions de manipulation. Il peut ne pas être utilisé afin de faire par nous-même les fonctionnalités de la bibliothèque string.</p>
+						<p>String permet de faire diverses manipulations avec des chaînes de caractères facilement, sans avoir à créer des fonctions de manipulation. Il peut ne pas être utilisé afin de faire par nous-même les fonctionnalités de la bibliothèque string.</p>
+						<p>Importation : <span class="script ">#include &lt;</span><span class="script ">c</span><span class="script ">string&gt;</span></p>
 						<table>
 							<tr>
-								<th>Instruction</th>
-								<th>Utilité</th>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Utilité</span></th>
 							</tr>
 							<tr>
-								<td class="script">memccpy(<span class="perso">destination</span>, <span class="perso">source</span>, <span class="perso">caractere</span>, <span class="perso">taille</span>);</td>
+								<td><span class="script ">memccpy(</span><span class="script perso ">destination</span><span class="script ">, </span><span class="script perso ">source</span><span class="script ">, </span><span class="script perso ">caractere</span><span class="script ">, </span><span class="script perso ">taille</span><span class="script ">);</span></td>
 								<td>Copier un bloc de mémoire dans un second bloc en s'arrêtant après la première occurrence d'un caractère ou à la longueur saisie</td>
 							</tr>
 							<tr>
-								<td class="script">memchr(<span class="perso">memoryBlock</span>, <span class="perso">caractere</span>, <span class="perso">taille</span>);</td>
+								<td><span class="script ">memchr(</span><span class="script perso ">memoryBlock</span><span class="script ">, </span><span class="script perso ">caractere</span><span class="script ">, </span><span class="script perso ">taille</span><span class="script ">);</span></td>
 								<td>Rechercher la première occurrence d'une valeur dans un bloc de mémoire et renvoie son pointeur</td>
 							</tr>
 							<tr>
-								<td class="script">memcmp(<span class="perso">pointeur1</span>, <span class="perso">pointeur2</span>, <span class="perso">taille</span>);</td>
+								<td><span class="script ">memcmp(</span><span class="script perso ">pointeur1</span><span class="script ">, </span><span class="script perso ">pointeur2</span><span class="script ">, </span><span class="script perso ">taille</span><span class="script ">);</span></td>
 								<td>Comparer le contenu de deux blocs de mémoire</td>
 							</tr>
 							<tr>
-								<td class="script">memcpy(<span class="perso">destination</span>, <span class="perso">source</span>, <span class="perso">taille</span>);</td>
+								<td><span class="script ">memcpy(</span><span class="script perso ">destination</span><span class="script ">, </span><span class="script perso ">source</span><span class="script ">, </span><span class="script perso ">taille</span><span class="script ">);</span></td>
 								<td>Copier un bloc de mémoire dans un second bloc (-ainsi)</td>
 							</tr>
 							<tr>
-								<td class="script">memcpy(restrict <span class="perso">destination</span>, restrict <span class="perso">source</span>, <span class="perso">taille</span>);</td>
-								<td>Copier un bloc de mémoire dans un second bloc (-c99)</td>
+								<td><span class="script ">memcpy(restrict </span><span class="script perso ">destination</span><span class="script ">, restrict </span><span class="script perso ">source</span><span class="script ">, </span><span class="script perso ">taille</span><span class="script ">);</span></td>
+								<td>Copier un bloc de mémoire dans un second bloc (-c++99)</td>
 							</tr>
 							<tr>
-								<td class="script">memmove(<span class="perso">destination</span>, <span class="perso">source</span>, <span class="perso">taille</span>);</td>
+								<td><span class="script ">memmove(</span><span class="script perso ">destination</span><span class="script ">, </span><span class="script perso ">source</span><span class="script ">, </span><span class="script perso ">taille</span><span class="script ">);</span></td>
 								<td>Copier un bloc de mémoire dans un second (fonctionne même si les deux blocs se chevauchent)</td>
 							</tr>
 							<tr>
-								<td class="script">memset(<span class="perso">pointeur</span>, <span class="perso">valeur</span>, <span class="perso">octets</span>);</td>
+								<td><span class="script ">memset(</span><span class="script perso ">pointeur</span><span class="script ">, </span><span class="script perso ">valeur</span><span class="script ">, </span><span class="script perso ">octets</span><span class="script ">);</span></td>
 								<td>Remplir une zone mémoire, identifiée par son adresse et sa taille, avec une valeur précise</td>
 							</tr>
 							<tr>
-								<td class="script">strcat(<span class="perso">mot1</span>, <span class="perso">mot2</span>);</td>
+								<td><span class="script ">strcat(</span><span class="script perso ">mot1</span><span class="script ">, </span><span class="script perso ">mot2</span><span class="script ">);</span></td>
 								<td>Ajouter une chaîne de caractères à la suite d'une autre chaîne</td>
 							</tr>
 							<tr>
-								<td class="script">strchr(<span class="perso">chaine</span>, <span class="perso">caractere</span>);</td>
+								<td><span class="script ">strchr(</span><span class="script perso ">chaine</span><span class="script ">, </span><span class="script perso ">caractere</span><span class="script ">);</span></td>
 								<td>Rechercher la première occurrence d'un caractère dans une chaîne de caractères.</td>
 							</tr>
 							<tr>
-								<td class="script">strcmp(<span class="perso">mot1</span>, <span class="perso">mot2</span>);</td>
+								<td><span class="script ">strcmp(</span><span class="script perso ">mot1</span><span class="script ">, </span><span class="script perso ">mot2</span><span class="script ">);</span></td>
 								<td>Comparer deux chaînes de caractères et de savoir si la première est inférieure, égale ou supérieure à la seconde</td>
 							</tr>
 							<tr>
-								<td class="script">strcoll(<span class="perso">mot1</span>, <span class="perso">mot2</span>);</td>
+								<td><span class="script ">strcoll(</span><span class="script perso ">mot1</span><span class="script ">, </span><span class="script perso ">mot2</span><span class="script ">);</span></td>
 								<td>Comparer deux chaînes en tenant compte de la localisation en cours</td>
 							</tr>
 							<tr>
-								<td class="script">
-								strcpy(<span class="perso">variable</span>, <span class="perso">chaine</span>);<br/>
-								strcpy(<span class="perso">destination</span>, <span class="perso">source</span>);
-								</td>
+								<td><span class="script ">strcpy(</span><span class="script perso ">variable</span><span class="script ">, </span><span class="script perso ">chaine</span><span class="script ">);</span><span class="script "><br/>strcpy(</span><span class="script perso ">destination</span><span class="script ">, </span><span class="script perso ">source</span><span class="script ">); </span></td>
 								<td>Copier une chaîne de caractères</td>
 							</tr>
 							<tr>
-								<td class="script">strcspn(<span class="perso">chaine</span>, <span class="perso">caractere</span>);</td>
+								<td><span class="script ">strcspn(</span><span class="script perso ">chaine</span><span class="script ">, </span><span class="script perso ">caractere</span><span class="script ">);</span></td>
 								<td>Renvoyer la longueur de la plus grande sous-chaîne (en partant du début de la chaîne initiale) ne contenant aucun des caractères spécifiés dans la liste des caractères en rejet</td>
 							</tr>
 							<tr>
-								<td class="script">strdup(<span class="perso">chaine</span>);</td>
+								<td><span class="script ">strdup(</span><span class="script perso ">chaine</span><span class="script ">);</span></td>
 								<td>Dupliquer la chaîne de caractères passée en paramètre</td>
 							</tr>
-							<!--
 							<tr>
-								<td class="script">strerror</td>
-								<td>Renvoyer la chaîne de caractères associée à un code d'erreur stocké dans la variable entière <span class="perso">errno</span></td>
-							</tr>
-							-->
-							<tr>
-								<td class="script">strlen(<span class="perso">chaine</span>);</td>
+								<td><span class="script ">strlen(</span><span class="script perso ">chaine</span><span class="script ">);</span></td>
 								<td>Calculer la longueur de la chaîne de caractères</td>
 							</tr>
 							<tr>
-								<td class="script">strncat(<span class="perso">destination</span>, <span class="perso">source</span>, <span class="perso">taille</span>);</td>
+								<td><span class="script ">strncat(</span><span class="script perso ">destination</span><span class="script ">, </span><span class="script perso ">source</span><span class="script ">, </span><span class="script perso ">taille</span><span class="script ">);</span></td>
 								<td>Ajouter une chaîne de caractères à la suite d'une autre chaîne en limitant le nombre maximum de caractères copiés (-ainsi)</td>
 							</tr>
 							<tr>
-								<td class="script">strncat(restrict <span class="perso">destination</span>, restrict <span class="perso">source</span>, <span class="perso">taille</span>);</td>
-								<td>Ajouter une chaîne de caractères à la suite d'une autre chaîne en limitant le nombre maximum de caractères copiés (-c99)</td>
+								<td><span class="script ">strncat(restrict </span><span class="script perso ">destination</span><span class="script ">, restrict </span><span class="script perso ">source</span><span class="script ">, </span><span class="script perso ">taille</span><span class="script ">);</span></td>
+								<td>Ajouter une chaîne de caractères à la suite d'une autre chaîne en limitant le nombre maximum de caractères copiés (-c++99)</td>
 							</tr>
 							<tr>
-								<td class="script">strncmp(<span class="perso">chaine1</span>, <span class="perso">chaine2</span>, <span class="perso">taille</span>);</td>
+								<td><span class="script ">strncmp(</span><span class="script perso ">chaine1</span><span class="script ">, </span><span class="script perso ">chaine2</span><span class="script ">, </span><span class="script perso ">taille</span><span class="script ">);</span></td>
 								<td>Comparer deux chaînes de caractères dans la limite de la taille spécifiée en paramètre</td>
 							</tr>
 							<tr>
-								<td class="script">strncpy(<span class="perso">destination</span>, <span class="perso">source</span>, <span class="perso">taille</span>);</td>
-								<td>Copier, au maximum, les <span class="perso">n</span> premiers caractères d'une chaîne de caractère dans une autre (-ainsi)</td>
+								<td><span class="script ">strncpy(</span><span class="script perso ">destination</span><span class="script ">, </span><span class="script perso ">source</span><span class="script ">, </span><span class="script perso ">taille</span><span class="script ">);</span></td>
+								<td>Copier, au maximum, les <span class="perso ">n</span> premiers caractères d'une chaîne de caractère dans une autre (-ainsi)</td>
 							</tr>
 							<tr>
-								<td class="script">strncpy(restrict <span class="perso">destination</span>, restrict <span class="perso">source</span>,<span class="perso">taille</span>);</td>
-								<td>Copier, au maximum, les <span class="perso">n</span> premiers caractères d'une chaîne de caractère dans une autre (-c99)</td>
+								<td><span class="script ">strncpy(restrict </span><span class="script perso ">destination</span><span class="script ">, restrict </span><span class="script perso ">source</span><span class="script ">,</span><span class="script "> </span><span class="script perso ">taille</span><span class="script ">);</span></td>
+								<td>Copier, au maximum, les <span class="perso ">n</span> premiers caractères d'une chaîne de caractère dans une autre (-c++99)</td>
 							</tr>
 							<tr>
-								<td class="script">strndup(<span class="perso">source</span>, <span class="perso">n</span>);</td>
-								<td>Dupliquer au maximum <span class="perso">n</span> caractères de la chaîne passée en paramètre</td>
+								<td><span class="script ">strndup(</span><span class="script perso ">source</span><span class="script ">, </span><span class="script perso ">n</span><span class="script ">);</span></td>
+								<td>Dupliquer au maximum <span class="perso ">n</span> caractères de la chaîne passée en paramètre</td>
 							</tr>
 							<tr>
-								<td class="script">strpbrk(<span class="perso">chaine</span>, <span class="perso">caractere</span>);</td>
+								<td><span class="script ">strpbrk(</span><span class="script perso ">chaine</span><span class="script ">, </span><span class="script perso ">caractere</span><span class="script ">);</span></td>
 								<td>Rechercher dans une chaîne de caractères la première occurrence d'un caractère parmi une liste de caractères autorisés</td>
 							</tr>
 							<tr>
-								<td class="script">strrchr(<span class="perso">source</span>, <span class="perso">caractere</span>);</td>
+								<td><span class="script ">strrchr(</span><span class="script ">source</span><span class="script ">, </span><span class="script ">caractere</span><span class="script ">);</span></td>
 								<td>Rechercher la dernière occurrence d'un caractère dans une chaîne de caractères</td>
 							</tr>
 							<tr>
-								<td class="script">strspn(<span class="perso">chaine</span>, <span class="perso">listecaracteres</span>);</td>
+								<td><span class="script ">strspn(</span><span class="script ">chaine</span><span class="script ">, </span><span class="script ">listecaracteres</span><span class="script ">);</span></td>
 								<td>Renvoyer la longueur de la plus grande sous-chaîne (en partant du début de la chaîne initiale) ne contenant que des caractères spécifiés dans la liste des caractères acceptés</td>
 							</tr>
 							<tr>
-								<td class="script">strstr(<span class="perso">source</span>, <span class="perso">mot</span>);</td>
+								<td><span class="script ">strstr(</span><span class="script ">source</span><span class="script ">, </span><span class="script ">mot</span><span class="script ">);</span></td>
 								<td>Rechercher la première occurrence d'une sous-chaîne dans une chaîne de caractères principale</td>
 							</tr>
 							<tr>
-								<td class="script">strtok(<span class="perso">chaine</span>, <span class="perso">separateur</span>);</td>
+								<td><span class="script ">strtok(</span><span class="script ">chaine</span><span class="script ">, </span><span class="script ">separateur</span><span class="script ">);</span></td>
 								<td>Extraire, un à un, tous les éléments syntaxiques (les tokens) d'une chaîne de caractères (-ainsi)</td>
 							</tr>
 							<tr>
-								<td class="script">strtok(restrict <span class="perso">chaine</span>, restrict <span class="perso">separateur</span>);</td>
-								<td>Extraire, un à un, tous les éléments syntaxiques (les tokens) d'une chaîne de caractères (-c99)</td>
+								<td><span class="script ">strtok(restrict </span><span class="script ">chaine</span><span class="script ">, restrict </span><span class="script ">separateur</span><span class="script ">);</span></td>
+								<td>Extraire, un à un, tous les éléments syntaxiques (les tokens) d'une chaîne de caractères (-c++99)</td>
 							</tr>
 							<tr>
-								<td class="script">strxfrm(<span class="perso">destination</span>, <span class="perso">source</span>, <span class="perso">taille</span>);</td>
-								<td>Transformer les <span class="perso">n</span> premiers caractères de la chaîne source en tenant compte de la localisation en cours et les place dans la chaîne de destination (-ainsi)</td>
+								<td><span class="script ">strxfrm(</span><span class="script ">destination</span><span class="script ">, </span><span class="script ">source</span><span class="script ">, </span><span class="script ">taille</span><span class="script ">);</span></td>
+								<td>Transformer les <span class="perso ">n</span> premiers caractères de la chaîne source en tenant compte de la localisation en cours et les place dans la chaîne de destination (-ainsi)</td>
 							</tr>
 							<tr>
-								<td class="script">strxfrm(restrict <span class="perso">destination</span>, restrict <span class="perso">source</span>, <span class="perso">taille</span>);</td>
-								<td>Transformer les <span class="perso">n</span> premiers caractères de la chaîne source en tenant compte de la localisation en cours et les place dans la chaîne de destination (-c99)</td>
+								<td><span class="script ">strxfrm(restrict </span><span class="script ">destination</span><span class="script ">, restrict </span><span class="script ">source</span><span class="script ">, </span><span class="script ">taille</span><span class="script ">);</span></td>
+								<td>Transformer les <span class="perso ">n</span> premiers caractères de la chaîne source en tenant compte de la localisation en cours et les place dans la chaîne de destination (-c++99)</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="V.4">assert (<span class="script">#include &lt;cassert&gt;</span>)</h3>
+
+					<h3 class="soustitre" id="9.6">assert</h3>
 					<div class="contenu">
-						<p>assert permet de vérifier le fonctionnement d’un algorithme en faisant des tests de conditions.</p>
+						<p>Assert permet de vérifier le fonctionnement d’un algorithme en faisant des tests de conditions.</p>
+						<p>Importations : <span class="script ">#include &lt;</span><span class="script ">c</span><span class="script ">assert&gt;</span></p>
 						<table>
 							<tr>
-								<th>Instruction</th>
-								<th>Utilité</th>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Utilité</span></th>
 							</tr>
-							
 							<tr>
-								<td class="script">assert(<span class="perso">condition</span>);</td>
-								<td>Vérifier que <span class="perso">condition</span> est vraie, sinon, retourne une erreur</td>
+								<td><span class="script ">assert(</span><span class="script perso ">condition</span><span class="script ">);</span></td>
+								<td>Vérifier que condition est vraie, sinon, retourne une erreur</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="V.5">math (<span class="script">#include &lt;cmath&gt;</span>)</h3>
+
+					<h3 class="soustitre" id="9.7">math</h3>
 					<div class="contenu">
-						<p>math permet d’utiliser les fonctions de base de mathématiques.</p>
+						<p>Math permet d’utiliser les fonctions de base de mathématiques.</p>
+						<p>Importation : <span class="script ">#include &lt;</span><span class="script ">c</span><span class="script ">math&gt;</span></p>
 						<table>
 							<tr>
-								<th>Instruction</th>
-								<th>Utilité</th>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Utilité</span></th>
 							</tr>
 							<tr>
-								<td class="script">pi</td>
+								<td><span class="script ">pi</span></td>
 								<td>Obtenir la valeur de π</td>
 							</tr>
 							<tr>
-								<td class="script">sqrt(<span class="perso">nombre</span>)</td>
+								<td><span class="script ">sqrt(</span><span class="script perso ">nombre</span><span class="script ">)</span></td>
 								<td>Utiliser la racine carrée</td>
 							</tr>
 							<tr>
-								<td class="script">log(<span class="perso">nombre</span>)</td>
+								<td><span class="script ">log(</span><span class="script perso ">nombre</span><span class="script ">)</span></td>
 								<td>Utiliser la fonction logarithme</td>
 							</tr>
 							<tr>
-								<td class="script">exp(<span class="perso">nombre</span>)</td>
+								<td><span class="script ">exp(</span><span class="script perso ">nombre</span><span class="script ">)</span></td>
 								<td>Utiliser la fonction exponentielle</td>
 							</tr>
 							<tr>
-								<td class="script">cos(<span class="perso">radians</span>)</td>
+								<td><span class="script ">cos(</span><span class="script perso ">radians</span><span class="script ">)</span></td>
 								<td>Utiliser la fonction cosinus</td>
 							</tr>
 							<tr>
-								<td class="script">sin(<span class="perso">radians</span>)</td>
+								<td><span class="script ">sin(</span><span class="script perso ">radians</span><span class="script ">)</span></td>
 								<td>Utiliser la fonction sinus</td>
 							</tr>
 							<tr>
-								<td class="script">tan(<span class="perso">radians</span>)</td>
+								<td><span class="script ">tan(</span><span class="script perso ">radians</span><span class="script ">)</span></td>
 								<td>Utiliser la fonction tangente</td>
 							</tr>
 							<tr>
-								<td class="script">acos(<span class="perso">nombre</span>)</td>
+								<td><span class="script ">acos(</span><span class="script perso ">nombre</span><span class="script ">)</span></td>
 								<td>Utiliser la fonction cosinus<sup>-1</sup></td>
 							</tr>
 							<tr>
-								<td class="script">asin(<span class="perso">nombre</span>)</td>
+								<td><span class="script ">asin(</span><span class="script perso ">nombre</span><span class="script ">)</span></td>
 								<td>Utiliser la fonction sinus<sup>-1</sup></td>
 							</tr>
 							<tr>
-								<td class="script">atan(<span class="perso">nombre</span>)</td>
+								<td><span class="script ">atan(</span><span class="script perso ">nombre</span><span class="script ">)</span></td>
 								<td>Utiliser la fonction tangente<sup>-1</sup></td>
 							</tr>
 						</table>
+						
+						
 					</div>
-					<!--
-					<h3 class="soustitre" id=""> (<span class="script">#include &lt;xxx.h&gt;</span>)</h3>
-					<div class="contenu">
-						<p></p>
-						<table>
-							<tr>
-								<th>Instruction</th>
-								<th>Utilité</th>
-							</tr>
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-						</table>
-					</div>
-					-->
-				</div>
-                <!--
-				<h2 class="soustitre" id=""></h2>
-				<div class="contenu">
 
 				</div>
-				-->
 			</article>
 		</main>
 		<footer>
 			<script src="../../scripts/footer.js"></script>
 			<a class="top" href="#"><img src="../../images/top.png"></a>
 		</footer>
+		<script src="../../scripts/script.js"></script>
+		<script src="../../scripts/tableDesMatieres.js"></script>
 	</body>
-	<script src="../../scripts/script.js"></script>
-	<script src="../../scripts/tableDesMatieres.js"></script>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Loric Informatique (page générée automatiquement à partir d'un document Word XML) -->
 <html lang="fr-FR">
 	<head>
 		<title>Loric Informatique - HTML</title>
@@ -16,901 +16,1666 @@
 			<section class="presentation">
 				<div class="alignementVertical">
 					<div>
-						<h1>HTML</h1>
-						<p class="version">Version 1.0 (créé le 20/04/2024, modifié le 27/05/2024)</p>
-                        <p>HTML (HyperText Markup Language) est le langage utilisé pour structurer une page web et son contenu. On peut par exemple organiser le contenu en un ensemble de paragraphes, une liste d'éléments, utiliser des images ou des tableaux de données.</p>
+						<h1>Mémento HTML</h1>
+						<p class="version">Version 2.0 (créé le 20/04/2024, modifié le 26/08/2024) </p>
+						<p>HTML (HyperText Markup Language) est le langage utilisé pour structurer une page web et son contenu. On peut par exemple organiser le contenu en un ensemble de paragraphes, une liste d'éléments, utiliser des images ou des tableaux de données.</p>
 						<a href="Loric Informatique - HTML.pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
 						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de choisir le format A4, de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
 					</div>
-					<img src="icone_html.png" class="logoLangage">
+					<img src="icone_html.png" class="logoLangage"/>
 				</div>
 			</section>
-            <section class="outils">
-                <h2>Outils nécessaires :</h2>
-                <ul>
-                    <li>Navigateur Internet à jour (ex : Firefox ou Chrome)</li>
-					<li>Un logiciel de codage (Visual Studio Code (recommandé) ou Notepad++)</li>
-					<li>Validateur HTML : <a href="https://validator.w3.org/" target="_blank">https://validator.w3.org/</a></li>
-                </ul>
-            </section>
-            <section>
+			<section class="sommaire">
 				<h2>Table des matières :</h2>
-                <div class="tableDesMatieres">
-                    <!-- Table des matières remplie par le JavaScript -->
-                </div>
-            </section>
-            <article>
-				<h2 class="soustitre" id="I">Bases</h2>
-				<div class="contenu">
-					<h3 class="soustitre" id="I.1">Syntaxe</h3>
-					<div class="contenu">
-						<p class="script"> <!-- &lt; &nbsp; &gt; -->
-							&lt;!DOCTYPE html&gt;<br/>
-							&lt;html lang="fr-FR"&gt;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;<span class="perso">Titre</span>&lt;/title&gt;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"/&gt;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="icon" href="<span class="perso">image/icone.png</span>"/&gt;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="perso">balise1</span>&gt;<span class="perso">contenu1</span>&lt;/<span class="perso">balise1</span>&gt;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="perso">balise2</span>&gt;<span class="perso">contenu2</span>&lt;/<span class="perso">balise2</span>&gt;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="perso">balise3</span>&gt;<span class="perso">contenu3</span>&lt;/<span class="perso">balise3</span>&gt;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br/>
-							&lt;/html&gt;<br/>
-						</p>
-					</div>
-					<h3 class="soustitre" id="I.2">Où écrire le code HTML ?</h3>
-					<div class="contenu">
-						<p>Dans un fichier .html ou dans un fichier .php pour les serveurs compatibles, entre les balises &lt;body&gt;&lt;/body&gt;</p>
-					</div>
-					<h3 class="soustitre" id="I.3">Commentaires</h3>
-					<div class="contenu">
-						<p class="script commentaire">
-							&lt;!--<br/>
-							Commentaire pouvant être sur une ou plusieurs lignes<br/>
-							--&gt;
-						</p>
-					</div>
+				<div class="tableDesMatieres">
+					<!-- Table des matières remplie par le JavaScript -->
 				</div>
-				<h2 class="soustitre" id="II">Le head</h2>
+			</section>
+			<article>
+				<h2 class="soustitre" id="1">Prise en main</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="1.1">Outils nécessaires</h3>
+					<div class="contenu">
+						<ul>
+							<li>Navigateur Internet à jour (ex : Firefox ou Chrome)</li>
+							<li>Un logiciel de codage (Visual Studio Code (recommandé) ou Notepad++)</li>
+							<li>Validateur HTML : <a href="https://validator.w3.org/" target="_blank">https://validator.w3.org/</a> </li>
+						</ul>
+					</div>
+
+					<h3 class="soustitre" id="1.2">Où écrire le code HTML ?</h3>
+					<div class="contenu">
+						<p>Dans un fichier .html ou dans un fichier .php pour les serveurs compatibles.</p>
+					</div>
+
+					<h3 class="soustitre" id="1.3">Première page « Hello World! »</h3>
+					<div class="contenu">
+						<p><span class="script ">&lt;!DOCTYPE html&gt;</span><span class="script "><br/></span><span class="script ">&lt;html lang="fr-FR"&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Titre&lt;/title&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"/&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script ">h1</span><span class="script ">&gt;</span><span class="script ">Hello World!</span><span class="script ">&lt;/</span><span class="script ">h1</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;</span><span class="script "><br/></span><span class="script ">&lt;/html&gt;</span></p>
+						
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="2">Bases</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="2.1">Syntaxe</h3>
+					<div class="contenu">
+						<p><span class="script ">&lt;!DOCTYPE html&gt;</span><span class="script "><br/></span><span class="script ">&lt;html lang="fr-FR"&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;</span><span class="script perso ">Titre</span><span class="script ">&lt;/title&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"/&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="icon" href="image</span><span class="script ">s</span><span class="script ">/</span><span class="script perso ">icone.png</span><span class="script ">"/&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script perso ">balise1</span><span class="script ">&gt;</span><span class="script perso ">contenu1</span><span class="script ">&lt;/</span><span class="script perso ">balise1</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script perso ">balise2</span><span class="script ">&gt;</span><span class="script perso ">contenu2</span><span class="script ">&lt;/</span><span class="script perso ">balise2</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script perso ">balise3</span><span class="script ">&gt;</span><span class="script perso ">contenu3</span><span class="script ">&lt;/</span><span class="script perso ">balise3</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;</span><span class="script "><br/></span><span class="script ">&lt;/html&gt;</span></p>
+						<div class="note ">Certaines balises sont auto-fermantes comme &lt;link/&gt;. En HTML, le "/" n'est pas obligatoire, mais conseillé pour une meilleure lisibilité. Dans d'autres langages, il peut être obligatoire (notamment en XML et dans les frameworks JS).</div>
+						<div class="note ">Astuce : Sous certains outils de développement comme Visual Studio Code, vous pouvez utiliser Emet afin de générer automatiquement l'entête du fichier HTML. Il suffit d'entrer "!" et la structure de base se génère toute seule.</div>
+					</div>
+
+					<h3 class="soustitre" id="2.2">Commentaires</h3>
+					<div class="contenu">
+						<p><span class="script ">&lt;!--</span><span class="script "><br/>Commentaire pouvant être sur une ou plusieurs lignes</span><span class="script "><br/>--&gt;</span></p>
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="3">Le head</h2>
 				<div class="contenu">
 					<p>Le head permet la configuration de la page web.</p>
-					<!--
-					<h3 class="soustitre" id="II.1">Les balises de base</h3>
-					<div class="contenu">-->
-						<table>
-							<tr>
-								<th>Balise</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td class="script">&lt;title&gt;Mon titre&lt;/title&gt;</td>
-								<td>Changer le titre au niveau de l'onglet</td>
-							</tr>
-							<tr>
-								<td class="script">&lt;meta charset="utf-8"/&gt;</td>
-								<td>Changer l'encodage</td>
-							</tr>
-							<tr>
-								<td class="script">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</td>
-								<td>Adapter l'affichage pour les appareils mobiles</td>
-							</tr>
-							<tr>
-								<td class="script">&lt;meta name="robots" content="noindex, nofollow"/&gt;</td>
-								<td>Ne pas indexer cette page par les moteurs de recherches (si le site est disponible en ligne)</td>
-							</tr>
-							<tr>
-								<td class="script">&lt;link rel="icon" href="<span class="perso">icone.png</span>"/&gt;</td>
-								<td>Changer l'icône au niveau de l'onglet</td>
-							</tr>
-							<tr>
-								<td class="script">&lt;link rel="stylesheet" href ="<span class="perso">style.css</span>"/&gt;</td>
-								<td>Appliquer une feuille de style à la page HTML (un attribut media peut être renseigné)</td>
-							</tr>
-							<!--
-							<tr>
-								<td class="script">&lt;&gt;Contenu&lt;/&gt;</td>
-								<td></td>
-							</tr>
-							-->
-						</table>
-					<!-- </div> -->
-					<!--
-					<h3 class="soustitre" id=""></h3>
-					<div class="contenu">
-
-					</div>
-					-->
-					<div class="note">Certaines balises sont auto-fermantes comme &lt;link/&gt;. En HTML, le "/" n'est pas obligatoire, mais conseillé pour une meilleure lisibilité. Dans d'autres langages, il peut être obligatoire (notamment en XML et dans les frameworks JS)</div>
-					<br/>
-					<div class="note">Astuce : Sous certains outils de développement comme Visual Studio Code, vous pouvez utiliser Emet afin de générer automatiquement l'entête du fichier HTML. Il suffit d'entrer "!" et la structure de base se génère toute seule.</div>
+					<table>
+						<tr>
+							<th><span style="font-weight: bold; ">Balise</span></th>
+							<th><span style="font-weight: bold; ">Description</span></th>
+						</tr>
+						<tr>
+							<td><span class="script ">&lt;title&gt;Mon titre&lt;/title&gt;</span></td>
+							<td>Changer le titre au niveau de l'onglet</td>
+						</tr>
+						<tr>
+							<td><span class="script ">&lt;meta charset="utf-8"/&gt;</span></td>
+							<td>Changer l'encodage</td>
+						</tr>
+						<tr>
+							<td><span class="script ">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</span></td>
+							<td>Adapter l'affichage pour les appareils mobiles</td>
+						</tr>
+						<tr>
+							<td><span class="script ">&lt;meta name="robots" content="noindex, nofollow"/&gt;</span></td>
+							<td>Ne pas indexer cette page par les moteurs de recherches (si le site est disponible en ligne)</td>
+						</tr>
+						<tr>
+							<td><span class="script ">&lt;link rel="icon" href="</span><span class="script perso ">icone.png</span><span class="script ">"/&gt;</span></td>
+							<td>Changer l'icône au niveau de l'onglet</td>
+						</tr>
+						<tr>
+							<td><span class="script ">&lt;link rel="stylesheet" href ="</span><span class="script perso ">style</span><span class="script ">.css"/&gt;</span></td>
+							<td>Appliquer une feuille de style à la page HTML (un attribut <span class="script ">media</span> peut être renseigné)</td>
+						</tr>
+					</table>
+					
 				</div>
-				<h2 class="soustitre" id="III">Le body</h2>
+				<h2 class="soustitre" id="4">Le body</h2>
 				<div class="contenu">
 					<p>Le body est tout le contenu qui sera affiché dans la page web.</p>
-					<h3 class="soustitre" id="III.1">Les balises de base</h3>
+					<h3 class="soustitre" id="4.1">Les balises de base</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Balise</th>
-								<th>Description</th>
-								<th>Résultat</th>
+								<th><span style="font-weight: bold; ">Balise</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+								<th><span style="font-weight: bold; ">Résultat</span></th>
 							</tr>
 							<tr>
-								<td class="script">&lt;p&gt;Mon paragraphe&lt;/p&gt;</td>
+								<td><span class="script ">&lt;p&gt;Mon paragraphe&lt;/p&gt;</span></td>
 								<td>Afficher un paragraphe avec un espace avant et après</td>
-								<td><p>Mon paragraphe</p></td>
+								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAJYAAAAjCAYAAAB2BvMkAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUoSURBVHhe7ZwxbuM6EEBnt/A9VBkxDFc6hSoD
+wgaGKx9ClQsbTuHKh1AlGDEMpPIpVAmGg1S6hxr9IUVFJEXKdH74kY+dBxBrUzPikBzOjJRkf1VV
+VQNBfDO/xb8E8a2QYxFeIMcivECORXiBHIvwAjkW4QVyLMIL5FiEF8ixCC+QY/1FFOsxjEZzyMR3
+nxgdqzFgBKPxGgrRZyeDOZMdjWF9X5j4SxiOWOUBNnfcu1jv4CI+E0TLgGMFEAQAl91Q1MpgcyhR
+DgUJQmIwYsVxhFHrDEeLZzXRKoLt9kn0aBRrGPM02bVxL182qZT3Z/M7sgbEGHMWWTX9Ee/U0GWw
+6WLZHPtZGSDZ/ynjoN9QwHqsy4k+SaGre9qSQpq3w/rJdRO3W5I128XQbbOVMZ1Nw3IG2K/N6C1P
+ghojVp3keZ0EUEOU9mSqqrvWyXfXmz6oo1TSyZMaY5t2v7RG960x6qn9acT1gySXZA1N3LOnbx0r
+qtPP7/Jcu740Qj28X6DJuuq3c4IgqXO9T7Op1Wf2q/dg66v1iTWR17TTN/W7yIp91Ofarqu0/qZ7
+2todx1I/K3J8khYZg1Gqnmxcu+D6JooJK5tjaK0DmeQMG9Fvzfiyrdyx7uq1zaavzwebwdnbzbp7
+gHjrH/Qhfd0Oq2xvnfrjDPf3293XDbP9FpNdCWclH2Io3WHJHm1hPxNdEsXxjBqYIk0Xl894BeD9
+qsXU6BmW4mPDDKYsw5Y3uDYdgwTxAjU0bGMpTGGCu13e9FEieFYNsqDrZ/CKSxMkL9p8kNkCYpTt
+E0C8MKxVD7Em71et7jXrL5/57EGdvkF2OsFeaZ2KI5xLtiX6DGawYBO4vPLUO8Rdx0Lz4AXdtDxs
+uptlGziUASQv5pW/3tCqYIJLbsK8kcGkLz1lgo48Te0b03MapU4KcS6iX8ZqPzKkX1xxKx/lCazm
+a3XWyvgIPqCPR1ydvkF2NsVeiesNtdB/Vt24bQuNi9XHwbFwXB61LrATlVvGj2QMTofsB/DptO0m
+rQAwPbAyAFsOeG7ceEB/yNHdEIVzeIY4b8eqANPbgwRgOLMOYOCQxlXbWz8aazg5FotaLKqW5yN/
+Umqy4L6fegQ80lhT2BWagPal2VoxpjsRPdpNzjYHKIMEcoeFMeGkL06/Of02c3ehfeJOqw9juaGi
+p7uG4spnPxDNLPDUqEe6x3B0LHStlwSC8gB//mD9hItryYKc2SJGw7oIp5C94hXXmsId7vTic0tT
+67UntoBmnafqgRD1xH1c9UWqN9jTzN0NcznR1G999BqYUcCRGTaU0m2IWnD4HeYwzo6F+RC2LGqV
+uFWmQlkGZU+8LgvVdykslWCRECQnh1P4IOj0oTwY1kGsHujGEoXvZSe9i8F0E2IUEt+GcdWfwf7U
+HELFHj73d/7S2YUm6ss/+WDvnlZWx9TXOpuz2g/T2cmeWezgHPhma3NA2HszrcuIu2MhzVOG5WlP
+Y7b/AHyMVQtA3ISntIKPb/cqtArvm8KqGwsdmPXJYy3fWD1UwiFsbdrBJHevsZz18WB95OhcF8me
+8Abb6gSxELkHWz9WT3XrF8Jta6uxWMpMAaS1Xl1c06iF5RtU+hywhed4MFu1/P//rpBFAuGwb18p
+nP5TWEG+gvck/7bDxSJIeHhCJ/pa3eiLhyIW8S/xVF/+RMixPMCiSO/nnD7ryx8IOZYH2FMxFmJK
+beKzvvyJ0P/dQHiBIhbhBXIswgvkWIQXyLEIL5BjEV4gxyI8APAP55N/d0Gu/LUAAAAASUVORK5C
+YII="/></td>
 							</tr>
 							<tr>
-								<td class="script">&lt;h1&gt;Mon titre&lt;/h1&gt;</td>
+								<td><span class="script ">&lt;h1&gt;Mon titre&lt;/h1&gt;</span></td>
 								<td>Afficher un titre de niveau 1 (niveaux possibles : de 1 à 6)</td>
-								<td><h1>Mon titre</h1></td>
+								<td><span style="font-weight: bold; "><img src="data:image/png;base64, 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"/></span></td>
 							</tr>
 							<tr>
-								<td class="script">&lt;i&gt;Mon texte en italique&lt;/i&gt;</td>
+								<td><span class="script ">&lt;i&gt;Mon texte en italique&lt;/i&gt;</span></td>
 								<td>Afficher un texte en italique (à éviter)</td>
-								<td><i>Mon texte en italique</i></td>
+								<td><img src="data:image/png;base64, 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"/></td>
 							</tr>
 							<tr>
-								<td class="script">&lt;em&gt;Mon texte en italique&lt;/em&gt;</td>
+								<td><span class="script ">&lt;em&gt;Mon texte en italique&lt;/em&gt;</span></td>
 								<td>Afficher un texte en italique</td>
-								<td><em>Mon texte en italique</em></td>
+								<td><img src="data:image/png;base64, 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"/></td>
 							</tr>
 							<tr>
-								<td class="script">&lt;b&gt;Mon texte en gras&lt;/b&gt;</td>
+								<td><span class="script ">&lt;b&gt;Mon texte en gras&lt;/b&gt;</span></td>
 								<td>Afficher un texte en gras (à éviter)</td>
-								<td><b>Mon texte en gras</b></td>
+								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAKQAAAAiCAYAAADRXHKEAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUqSURBVHhe7Vw9buM6EJ7dIvdQZWxguPIpWAkI
+Nghc+RCqXCTYFKl8CFVCkIcArnwKV4aRRSrdw43ekKbI4Z/s3ThZIpkPGKxM8Wdm+JEzpIL9tt/v
+O2AwMsF3/S+DkQWYkIyswIRkZAUmJCMrMCEZWYEJycgKTEhGVmBCMrICE5KRFZiQjKzAhGRkBUPI
+pryAiwsiowVs9TsXW1iM3LqjRbzmh6EplR5lo3+/M7aLEY43gn9t9mdEeodsn+Ex5vDmFpatfs4A
+ihzztf71/pALd5qTAz4ZQkIWBRTqoYXlbbjlNE8fN/mMLwj552dSagHyz9BQig45qZ9FV+v3B6k7
+ocqhE0LoOtAV1YbUkbLpKtNHL0VXbVJ1Du+sDrH6nmyqDhcOqW/F1SfUhb53xiyqbmPaWVuVLvfW
+Xl9E3bdBCfQ6Yocnrg9QRE3ev9FnRDZVQdpJn9SkbzvvtJ7yW6390Puq/+2IzxspMU54vkOJEFJ0
+FVHCaWAGxwGJIg4BBoiixDg4rqArMcO0nELIIV0SevT20olWZVHHk/fYxp9kKr7jQ6ELwBOzUN7o
+My0B6QNJEFII60+l04DOjh7per5fooSs6USSFWrqYFmwclQdd2A7WGzSPecap6f6iAvVw61L+7c7
+R7Q+tVfq4f82fVI/ebtRtA3VYZgowQKQ5cGiP4PPnIUVJ166nIgaG8f1/BPjRaxMCeri6xonZNSR
+1mjZSXQQaqwTamLvXOdSxZIGRITWdYwLJlOXE+LQckqIouj7DENgipCpcqtf2JeRxAbgEO1MPosS
+XwkldYqQAzb0ErHF6cMjsC+JU/YEHu5QPYU1PMmzTfOETxICrmfqIcB291s/oeqXY/2kMb7UhyXE
+7513pVSAX/2toLq0y6m9ppou8bimy192+glgtqrRsgPa9lCjqP6Dh4l6PIIt2OHwMDi1V2L2RN4C
+Gc7F7sXoBOu51fVirn2OOIvPqJ5++zFcmglKQNwF/jhcgVl7qX97TG6u7Ny3S5jqurFruvS1z+za
+TNAaGWlO1+IaEnw8HT/GSPn8QQnLCDcZScaTrsAmD/C6twu+x3oe3mGnCYm0uzaMnEN/1SdS2yNi
+Mv6hnyKTSXaBYPd8B1BdMITJ1CSUlbWlKclu1APtPu2yfQJ2uAIwrEXHI8O5oNFD1NG2+9eHMyxi
+qqe/Y+/g5QRuWWzh8Vk3KCrAMHzQc1NZWxzMYKXrYAjXZajF86Oz8w8QUm6SPqfT4VqB7Kqw/kW+
+ZDRQmsvrAq5u3md/lDu5AdGlXf70vqpsYVGSL1FNaRacci4mWj3Wv1JfrFp4Jl8OrK8wZP/02mwX
+UA591pncwFU/R5FF0JQlevA8GJO4TG2LLshBxAnc3IYhW+6k1CYnhPtAxqpk0ia7NqH1T2804U4m
+0c4pLhRblyboqYPAcIKuhCbRfpshXaIn1F4P9/BwzL7+cEAPDL78jR1W+jk5h8+8OY1K/FDj9ztk
+r5LYocYT92CVPNT0IGFbhqL7E7LH2QpJHuYLqj2GstfTTgmnQ+YnZEdzIHVJhBBxJ0Og/C5PdgaT
+tNNDnbfDYp/oYP3DxWzlhiMLAXfH7E7kWRJFdf/2vN1Ahs4NuGrKufHLjmO28trI6JIM2T4OfPDT
+GP6PAhgHYFox6k/IklhnyVn/HEd2SMbnA+bzF35OimXkuuYQPf4NmJBfEmuY07tDct+JeWL6NuAD
+wIT8ckhdgAvAg8z5c/w/BOeQjKzAOyQjKzAhGVmBCcnICkxIRkYA+B9mkdXBghARiAAAAABJRU5E
+rkJggg=="/></td>
 							</tr>
 							<tr>
-								<td class="script">&lt;strong&gt;Mon texte en gras&lt;/strong&gt;</td>
+								<td><span class="script ">&lt;strong&gt;Mon texte en gras&lt;/strong&gt;</span></td>
 								<td>Afficher un texte en gras</td>
-								<td><strong>Mon texte en gras</strong></td>
+								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAKQAAAAiCAYAAADRXHKEAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUqSURBVHhe7Vw9buM6EJ7dIvdQZWxguPIpWAkI
+Nghc+RCqXCTYFKl8CFVCkIcArnwKV4aRRSrdw43ekKbI4Z/s3ThZIpkPGKxM8Wdm+JEzpIL9tt/v
+O2AwMsF3/S+DkQWYkIyswIRkZAUmJCMrMCEZWYEJycgKTEhGVmBCMrICE5KRFZiQjKzAhGRkBUPI
+pryAiwsiowVs9TsXW1iM3LqjRbzmh6EplR5lo3+/M7aLEY43gn9t9mdEeodsn+Ex5vDmFpatfs4A
+ihzztf71/pALd5qTAz4ZQkIWBRTqoYXlbbjlNE8fN/mMLwj552dSagHyz9BQig45qZ9FV+v3B6k7
+ocqhE0LoOtAV1YbUkbLpKtNHL0VXbVJ1Du+sDrH6nmyqDhcOqW/F1SfUhb53xiyqbmPaWVuVLvfW
+Xl9E3bdBCfQ6Yocnrg9QRE3ev9FnRDZVQdpJn9SkbzvvtJ7yW6390Puq/+2IzxspMU54vkOJEFJ0
+FVHCaWAGxwGJIg4BBoiixDg4rqArMcO0nELIIV0SevT20olWZVHHk/fYxp9kKr7jQ6ELwBOzUN7o
+My0B6QNJEFII60+l04DOjh7per5fooSs6USSFWrqYFmwclQdd2A7WGzSPecap6f6iAvVw61L+7c7
+R7Q+tVfq4f82fVI/ebtRtA3VYZgowQKQ5cGiP4PPnIUVJ166nIgaG8f1/BPjRaxMCeri6xonZNSR
+1mjZSXQQaqwTamLvXOdSxZIGRITWdYwLJlOXE+LQckqIouj7DENgipCpcqtf2JeRxAbgEO1MPosS
+XwkldYqQAzb0ErHF6cMjsC+JU/YEHu5QPYU1PMmzTfOETxICrmfqIcB291s/oeqXY/2kMb7UhyXE
+7513pVSAX/2toLq0y6m9ppou8bimy192+glgtqrRsgPa9lCjqP6Dh4l6PIIt2OHwMDi1V2L2RN4C
+Gc7F7sXoBOu51fVirn2OOIvPqJ5++zFcmglKQNwF/jhcgVl7qX97TG6u7Ny3S5jqurFruvS1z+za
+TNAaGWlO1+IaEnw8HT/GSPn8QQnLCDcZScaTrsAmD/C6twu+x3oe3mGnCYm0uzaMnEN/1SdS2yNi
+Mv6hnyKTSXaBYPd8B1BdMITJ1CSUlbWlKclu1APtPu2yfQJ2uAIwrEXHI8O5oNFD1NG2+9eHMyxi
+qqe/Y+/g5QRuWWzh8Vk3KCrAMHzQc1NZWxzMYKXrYAjXZajF86Oz8w8QUm6SPqfT4VqB7Kqw/kW+
+ZDRQmsvrAq5u3md/lDu5AdGlXf70vqpsYVGSL1FNaRacci4mWj3Wv1JfrFp4Jl8OrK8wZP/02mwX
+UA591pncwFU/R5FF0JQlevA8GJO4TG2LLshBxAnc3IYhW+6k1CYnhPtAxqpk0ia7NqH1T2804U4m
+0c4pLhRblyboqYPAcIKuhCbRfpshXaIn1F4P9/BwzL7+cEAPDL78jR1W+jk5h8+8OY1K/FDj9ztk
+r5LYocYT92CVPNT0IGFbhqL7E7LH2QpJHuYLqj2GstfTTgmnQ+YnZEdzIHVJhBBxJ0Og/C5PdgaT
+tNNDnbfDYp/oYP3DxWzlhiMLAXfH7E7kWRJFdf/2vN1Ahs4NuGrKufHLjmO28trI6JIM2T4OfPDT
+GP6PAhgHYFox6k/IklhnyVn/HEd2SMbnA+bzF35OimXkuuYQPf4NmJBfEmuY07tDct+JeWL6NuAD
+wIT8ckhdgAvAg8z5c/w/BOeQjKzAOyQjKzAhGVmBCcnICkxIRkYA+B9mkdXBghARiAAAAABJRU5E
+rkJggg=="/></td>
 							</tr>
 							<tr>
-								<td class="script">&lt;u&gt;Mon texte souligné&lt;/u&gt;</td>
+								<td><span class="script ">&lt;u&gt;Mon texte souligné&lt;/u&gt;</span></td>
 								<td>Afficher un texte souligné (à éviter)</td>
-								<td><u>Mon texte souligné</u></td>
+								<td><img src="data:image/png;base64, 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"/></td>
 							</tr>
 							<tr>
-								<td class="script">&lt;br/&gt;</td>
+								<td><span class="script ">&lt;br/&gt;</span></td>
 								<td>Afficher retour à la ligne (à éviter)</td>
-								<td><br/></td>
+								<td></td>
 							</tr>
 							<tr>
-								<td class="script">&lt;dfn&gt;Définition&lt;/dfn&gt;</td>
+								<td><span class="script ">&lt;dfn&gt;Définition&lt;/dfn&gt;</span></td>
 								<td>Afficher une définition en italique</td>
-								<td><dfn>Définition</dfn></td>
+								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFoAAAAhCAYAAABZTbwAAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQbSURBVGhD7Vo7buMwEJ3dIvdwZdgQXPkUqgx4
+NwhS+RCqXCTYFK58CFVGsN4AqXIKVYLgIJXvoUY7JIcUP0PbWMQsNnrAwA45Eh8fZ0YjI9/atu1g
+wNXxnT4HXBmD0IkwCJ0Ig9CJMAidCIPQiTAInQiD0IkwCJ0Ig9CJMAidCNcVul7D+OYGbhY7GrCg
+56SNYf3nhO8F2C3oPjUNRLGDhVhnvIazrp+IE0LXsB5rITy7iCRuaL6FSdlC+3pPYxpq7piX0LY4
+337A5kcGE5r9F2TTEX3rIcUPuGbAuF4f4tc73souB+hGReWNV10xAvGLX5eX9rhtyic2XxUjvH7U
+FRU//zmm+ENeMnPpLR7RdQPv+DHJZupvgxlsPloocRdvq0iq4rXZvoUgkAnN4Yg6L+HOv/Vngvjn
+txESqcGpL63Mz0RdJOKrosPMlBEvbVR0Fc3h4fTjzjxlieWr76OygqKTLMgUyZX31aZ5Kg55V9rX
+W/cwZnMhk9fSuMrKuK9vUaGjhIyF4ujFeyGY9HUEdP2cQ9MHXYjPngfHS63rjvH8ibNXTpSvzYk5
+eHNtIT8NV9pPWGJdi5SOGhqVd3Bx4u0WMN8ekVtllYx7uEUF4b0xD6T6+QXQC6YZDQgwZaqWBI6w
+fZlC1b4aHvfqhtBYJUuVoik+5jRi/BtQrtbiyHv1hq740O55Y3l8xHWOW3gwTZC6Ft62cHhs4WND
+XGd3sESlj4dG/R1BRGiGUAyTDGlhh/IL2Y4K2GsCErRh6aPA1ufmEIgv/XCs2G/MtQLqAGyEa0T5
+Bwfa837yIyqb4uoiRuhE6Vo8Ee/ZQwdwBrzQu9+AyzsRFqB+hhe9Gf19eddvVvbJc9geUSyzC04U
+sZxcDfrldEQ+gnNuCHUAlq/NQ4PJEIEgmzjeHsw9KBj6vRBorXNByQqtosZLbw+a9FKEpiQhMm3e
+99q6hxY9stkFF2kkqpP6sYzSB2CVBFrbEZXJEIHgkLhrNWhOQ2liBwOB1pI6nAArNJveDnbwgPXY
+jzhR57DwGwvaOzbSSFQnG/iINL6WgkqAHOwuLswQAeaQTkDdo7+v0sQOBoXoAXhghN6B4ummdw/x
+xrjC0pJDqZX061kEFz8IpZ8rngRT0kIBuAwRYLIkxhvLnirdT3QoSpOwxNTwrOpWcAA+QqFP1Jx6
+PcayIOouimx1AjDbgHpI/3ReYIT/2BpgM8VLUYHT0WMfFInqYAYZ9y5P+3JgeD+glATxbBE/D9gP
+9jMZFg9KC7rPM+Y37o6d6qv7ftQY24f6r8Q0bvxjfnR//+XA4mv6YHsPln/Pj+u5ewt6Yt3T+y9v
+7DsBbwn/U0n8araCd+yzTQ/6hcC3d9fAJS3jf4xkQnPdwVfC8E+OiZCudHxxDEInwiB0EgD8BZXC
+8kg20UPHAAAAAElFTkSuQmCC"/></td>
 							</tr>
 							<tr>
-								<td class="script">&lt;cite&gt;Titre d'ouvrage&lt;/cite&gt;</td>
+								<td><span class="script ">&lt;cite&gt;Titre d'ouvrage&lt;/cite&gt;</span></td>
 								<td>Afficher un titre d'ouvrage en italique</td>
-								<td><cite>Titre d'ouvrage</cite></td>
+								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAIUAAAAiCAYAAABxwxpqAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATbSURBVHhe7Vq9bhs5EJ67wu+xlSBDcKWn2EpA
+kCBI5YfYSkUCp3Clh9hqYeQQwNU9haqFYMOV3kPN3pAcrsiZ4W6Uy51jYD5gYJDLn5nhR3KG8h+n
+02kAgyHBn/TXYBhhpDAIGCkMAkYKg4CRwiBgpDAIGCkMAkYKg8C/IkW/XcDV1RVsOqr4TRD0WsC2
+pwrDRZCk6LewwIV2i12WDTge3KyWoU8K6v+aRDk8HQGqd/DxxpU62BhBLoIkxc09vJxOcCJpa1dZ
+Q5vUnU6P8MlVf3r05UdfCOgfvsMRKrheUcX/jh4Oz/hnuQLPCcPFmLk+yMHVNfzoGue79BXQP8B3
+p8LrsfLNY4YUBwhr/FHuOromFnQux/ji9m8sHHewTq6Z9ErpNnQFLbZIuYgetot4NTm54LjvNkk/
+lPUOTyp3UEyzMuo7irjvSKdMz4DQl2zz82v6Rpt4u8TWbE53zVF9ItG/Z3BfkXD9eRig2FEEHv9D
+UfbNUAEMdat8a+sB6TI0+6SO2lfNXm1bVcpY1AfqdqzDKwvb1wNeWXnbTPZDg+PxdvN9Y79U93bA
+WzLTIdYJW2L/qhn2rlzykbf5XL9vKj9nVTGfjd/YGKx/WpfppPhcjqfZV5ZJUkRDuBHnb8z5GlFQ
+opLSwaRsdHCUwjip6IvPFkyRkk2ivrghOFk08shFCPoq42mLj1LSR/iQ99eIg+Lnn/BLKpOkmNp1
+2iQqUVBK40wvkD6vl5kFK++Iie+qcxViirmJiMmY0q4SWWXfKNy/pUXNfXX5PJpMxBQUZNYfQqaR
+oYNvLnZgEX4IMnlQSm3FOD08+IgwDUrDfbneYf7SfFXmDQgZTg0feIP+AEHlQs/uGwRVSiOfs6Yu
+GAgiNDk8sezqBvLMvIPPXv+/4D72jcEvj82oXurDM6jgQy22y3yuzeNjizXsjhU0X0t255ggBQWZ
+WhRPzs+/FVLB4kKF8c9BqRNUftn6NPdl9KiETj7nk+l0uA+plPo9fIsoZ10aWVbXeHY8H7AX9tze
+IfFq+JLqT0R6x1MyQTACz6DIhzJ4ZpvTj+dcuj4HmBh4L1v3jPByJukMyqSgXaVG8ZqRpVSwZHhE
+HUgwSvrooYIWTIBOHm13z4KfWkRY8dZBi8DI4h/xjk9wwF35Hk+JuqV3HEIgnNQrJ+IZgdyJ72mx
+BQonH15tmU9nXcpQJMX8rmJGkuKcRCWH4P4Ct8HiDvtx8OOa0H3GIxL/Krs7IrzAHuHpEMojqG/9
+5T6QQD0Jsdnm1i+CmqJjj7v3mA5XDfBTunSyqS/CdP1kvl9dY4kDr9o7r41o93y4zKMCyCQ12CgF
+NuM3HggWgr+pcdRI2Y1Tah9FCwqreqhngyklEKOx8n68XSjXTSHAJdsznUaZCvJ44OvKIXXP/avr
+49Jbvg5hbfIA2QWjImuZkAIppgxBSZxwnoz6ZM6ZywZQ4qKMokT8igTjSbyzwlzzxud6OpELiZLY
+OOrkddX0m7CTxinqldkfxlY3UqZP0Lm04TLfOFHaTIn9i/+bhXsBvYXnZj8ZlP8MjBRvFO6pfb1b
+Qht/nPyFmPntw/Dq8O8M9PtJRLfxbzk8y/lVsJPit4d70HOPT1T0cP/K8N8QwsFIYRCw68MgYKQw
+CBgpDAJGCoOAkcIgYKQwMAD8A81An9sn5FzsAAAAAElFTkSuQmCC"/></td>
 							</tr>
 							<tr>
-								<td class="script">&lt;q&gt;Citation&lt;/q&gt;</td>
+								<td><span class="script ">&lt;q&gt;Citation&lt;/q&gt;</span></td>
 								<td>Afficher une citation entre guillemet</td>
-								<td><q>Citation</q></td>
+								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFkAAAApCAYAAABeKYVuAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAObSURBVGhD7Zq/buowFMa/e4e8RyZEhTLxFJmQ
+UKuKKQ+RieFW7cDEQ2RCqBUSU54iU4RATHmPLLnHJw4krgMlJb6Vrn+SS+PY2Pl8/kXtrzzPC1h6
+5bf8tPSIFdkAVmQDWJENYEU2gBXZAFZkA1iRDWBFNoAV2QBWZANYkQ1gRTaAFdkAvYq8mjhwnAlW
+8ro/Vpg4tNak/5W68A2RU8wHQkS1DTBP5RAN6XwAZzCn2d347vx/QSeR+UGdMTbTBHmeN1rky0HE
+bCv6tpjJa8Fun8nfuqGfP8NWrL+tr/RzuFlkIfB4CYRJjuPCk71nZtsjNN3/N+LPT19uSVi4QOGG
+if6+0siqC7hhkYhrOZeWbDQ/qsYnRegq96u5V+dHBTmQfl+R3zLn3JLQpX6/iD7tQfQ1x3ZpN1ly
+ut4gg4+XLqbqLXCswokbgsTj8FJ5eDp/VMJPBD9bYlwlsyvzdXDiDQ7sdafvpS+IAweDT4njgNfB
+I/BRjU0QujGCOyRuRWSZpavEsppwMqs2xPHQfcCIr+6Ltzgq4WeGNzIrxO/dHpL2HsRki5ESvmZb
+kOUiWz4qCZqebfpRG+th8SJONMZ7tYF0joHQRx58mZscXCtqaiKLaiFA7EfIjwt4QmDaJbmWfPgU
+uwN9DEe0vBm80ZB+HrDrUEqs3klhsvg3jaV7z1OQzNjvZAfjYvqsPNnogXppB9UG2JvIw+KAhRaG
+UXrG5YpKiiwEHmM5JIGF/4kTkwJ/csfDrsfySSkLhSl24opBeCPw8TVOb4iROliOayIqmVJo9nDy
+jDwaYjluF7oUOV1jU6uMytir4oENK9ujYQB3onxxUcpCDsA/l2yzrhlchs1ar3IpMrsBBfrDZTeY
+PSkx6l6Q57xy/NSXhbcjDaLN69IdBSFh6F3WEnlLDatlcm3bey0mU6A/yngjEt/JDWqZmPqEccXB
+NzOu6g27PdmBiwclo3Jc1fEFb2KDoOrkj2ajVZX0dKEy0cKJTwpMcZQTH4fVK+8G5Jba2q69nWtJ
+td4s77kFnSpf04E0a13RuG49j+FW1cB+dOora1exjjJWN7+lTub1tfObez/XybVx3C7U3ze0miV/
+FWHx53rzlKS4UfLUvfXWYW/I2EPEHC5/RLgqXeT0XeP9iz4m6+a3IF7rkxCnsdyka1+qr++N/YdD
+A3SwZMutWJENYEU2gBXZAFZkA1iRDWBFNoAV2QBWZANYkQ1gRe4d4C+8TZ2r+HW2ygAAAABJRU5E
+rkJggg=="/></td>
 							</tr>
 							<tr>
-								<td class="script">&lt;fieldset&gt;Mon contenu&lt;/fieldset&gt;</td>
+								<td><span class="script ">&lt;fieldset&gt;Mon contenu&lt;/fieldset&gt;</span></td>
 								<td>Afficher un cadre</td>
-								<td><fieldset>Mon contenu</fieldset></td>
+								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAKkAAAA9CAYAAADWIkl6AAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAU/SURBVHhe7Z0/bupKFMbPewVFduGKgBBFxCqo
+LCEQomIRriiCSEHFIqgsRIRExSpQCoRCUnkfNO+dGY+xPdiOk5uLz735fpKVMB6YGc93/sxJlPxz
+Pp//IwAE86/5CoBYIFIgHogUiAciBeKBSIF4IFIgHogUiKdUndT3ffMdAOW5v7+nh4cH8+rrlBap
+67rmFQAf8/b2pkV6d3dnWr7Op0T6HQOCn8F3agY5KRAPRArEA5EC8UCkQDwQKRAPRArEA5EC8UCk
+QDwQKRAPRArEA5EC8UCkQDwQKRDPzUR6mNSpVqtRrT6hg2nLxydX9a3VafJx578L3+V1u/wEQMTt
+PWmwoMcPduAwmdHOfP/TOBxP5jsQcWOROuQ4RLtZkTf16XERcD/uCABzc0/a63XZm25olaPS0It2
+aTptmBaLw4TqOhWIr/pVThCmC7pdh8+ivgVkjOVaUcB30/ezQnWY6qj2A03qeX3DOXfYQNmMaWz6
+pOcbpUHRdZ0O6fnolMrqa6dZ+rlkpVPmffZCK+T24X74RJ4T0CIz5h9oteFN6g6olRH29GZ3FtRY
+nul8NtfeI1p0sh/qpk+19SDuu+xyttEpJdS8sZrmfrSZ45NH++g+X8uuEljW5p9oVu8TPUd99/wc
+VN9IqCPacvveUxGkS0vzee/ztr4bGsyYTt7+Mla49GvD4YVTv7amgel3Pi+py2lWp9R5QB63Fym1
+adjTMf96I/1HWgQOeU8j05CAN6mv0gDepG3ydntO7yw+2o2vNisIGrRMdh4pA1GOfFW8WWasLgvU
+HmtuXvvuWHv85fucVxQz2irxsRH2bUGw8fWeKdKceg7zKc+bP2WdZa8p2AP3FxR0l7Fomfb8Wa9n
+Z39AELBxbVn2ESN6CheeG8EkU4FI1cOd8vYGtEk9Md6IGR+XutPERsYcVht+B6cBWTdHA77Dvupo
+7QB75KTGlDBaKosIXukYNmQSjTVIvzmBT2uequM9WZ+vMEZ4NYZDvaE191aTWzPmbXNYURhg7NEi
+g18bbxxxPfd2uHB6LVq4UCoRaWTZweIxfrhFXpQ5vvIuOU1qmddpWtTUurBk0bzu3VIdCzEpR+5Y
+zOHIwZuo0cowGCYUxInS2mvQVfd2i1tLcHxVfpiDRSLHNFeYw1pkzd0YxJ9IRSLl/dHedEczE/N9
+7Zp6ZDubymi0UmG8etiA91GOaV/J0P73UZlIlTcd6IM+54ecA4aRPp3fJdEeMDdMHyl0tLm+7xOY
+lOB0zM9bjQfMC9NhrTPDc34V7QV/R6j+M8J/hSJlmT555PCps9/nHNDxKCfSa9rDHm9U7HlT+Gu+
+k5HzfZGRtp6iHzoYA0umKxfiCsXXvZuVKrSHFJ41v/F0npcPm1RGEpWKVJ2W1QE34NOo0xsWh1fu
++6zz2E76FK9KM2OWqJc8Of8ioy2FBQOrlOS7l7FH26VOV8ZWWcd3O5xb86k/VRYoT2iMtoczlQBV
+RrJKGKpUdl2CKkH07FOG5pPbWej8VxLVipTRXou3O/PUbtGev+taZ+oAYWqZydLMdzDaxnXIy1jj
+E8UZhapr7skjFk50n6+wbvoLOaIxxmiNl5ouG46q0zq7cTwfvjqbXmEEKiIsl8U/OKjVZtTcK+OT
+Bf7MDvgt4M/sgB8FRArEA5EC8UCkQDwQKRAPRArEA5EC8UCkQDwQKRAPRArEA5EC8UCkQDwQKRAP
+RArEA5EC8ZT+fVL1fyLV/4sEoCzf9fukpUT68vKiRQrAZ7mZSAGoEuSkQDwQKRAPRArEA5EC8UCk
+QDhE/wOQIzRpGNwDkwAAAABJRU5ErkJggg=="/></td>
 							</tr>
 							<tr>
-								<td class="script">
-									&lt;fieldset&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Ma légende&lt;/legend&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;Mon contenu&lt;<br/>
-									&lt;/fieldset&gt;
-								</td>
+								<td><span class="script ">&lt;fieldset&gt;</span><span class="script "><br/>    &lt;legend&gt;Ma légende&lt;/legend&gt;</span><span class="script "><br/>    Mon contenu&lt;</span><span class="script "><br/>&lt;/fieldset&gt; </span></td>
 								<td>Afficher un cadre titré</td>
-								<td>
-									<fieldset>
-										<legend>Ma légende</legend>
-										Mon contenu
-									</fieldset>
-								</td>
+								<td><img src="data:image/png;base64, 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
+ieiPZAAAAABJRU5ErkJggg=="/></td>
 							</tr>
 							<tr>
-								<td class="script">&lt;code&gt;Mon code&lt;/code&gt;</td>
-								<td><code>Mon code</code></td>
+								<td><span class="script ">&lt;code&gt;Mon code&lt;/code&gt;</span></td>
 								<td>Écrire du code</td>
+								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAAAeCAYAAAAxbADwAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM7SURBVGhD7VqxbuJAEH13hf/DFQpCrvgKV0jo
+LETFR1BRHEoKKj7ClRURRaLyV7iyrERU/g83vll7bNaLDdgQ3Rb7pFHsYdid2bf7dqLkV5ZlOQy0
+xG/+aaAhDDkaw5CjMQw5GsOQozEMORrDkKMxDDkaw5CjMQw5jyDeYGRZGG1idjwXvciJNyNYlIw1
+C9jDCGal35pB+cTgAQw7OeGhQUJwCPnJ4JnoRU7ylQKuCxchDjU7AQ6hTW6b3w2ehQEnx8Pb2qbD
+w+wEB4TuFkfvpXxvIMZmJOROMlUSWbeFu5bNwkZ4WMprua2sXXab83bHVbnWcdM9aLu2IMBMjiNT
+y74L4k8G95rvIofr51m0zums5D77XJ8+990csPN1xPFFDMdXY1Q+e51Hqk/xF3PxHPX3e1j5fc6t
+8ou55HyyKKd9psxT+aRayKK1feGrcrfX0YWvUXexNkrcHdaDHE66mLR8dn0/J5ErC1PIKRZHJqEy
+TrRetDbC2uL6WNuitZm6oWoTdUkL3DVei7+r7s71uGIDW2kHizlJ22pFkuZhyd4zxD1EZc8XFKlg
+6dGdBXwnTc1qjR2I+P2T5MbFdnd9xKKRsedYXCYJr0yShJmQfNF4NuaXgQq6656Micb0E+89pHog
+OUTPYk7pkiB4l9QgTvDNj11IvxJ+ej6KxuUmYiS3k4TIMr4ZyOC60/20cd8Im+7vyamJHuQkEDXb
+40n56uxwyjIcK24mYyIrRbHmzgRt7UEBLqAe57/BwaQ7yZI4e4xeWXLdJHPiumixE24c5gYGn5zr
+mKA8xe+lLMi4WyKGY1loktzut6Nbangjsjw5BYu88SQEf9Vu7UrdA/BD5DjYbWmB0j2mcg8pWtEV
+iTK13n12UG8s30ANC92JSjsu5pfycXZbuplS7Kdy6yzaf7pL5TurGu91Uy96MLOwohixDc7oqHsg
+nk5OfdEvj6BuBna4Omsv/V7w4tPxrrXwp0CLdMpA09PCS9r/B/hozL3EMYto4UOsqhhriv2LTxJ0
+lBodMZ4PVyw6x72OSbqOHn8uQdSdUaxcd2U9CTP/GqUxfkjWDJ4BQ47GMORoDEOOxjDkaAxDjrYA
+/gG+ZofiVwwiJwAAAABJRU5ErkJggg=="/></td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script">&lt;balise&gt;Contenu&lt;/balise&gt;</td>
-								<td></td>
-								<td></td>
-							</tr>
-							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.2">Les sections</h3>
+
+					<h3 class="soustitre" id="4.2">Les sections</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Balise</th>
-								<th>Description</th>
+								<th><span style="font-weight: bold; ">Balise</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">&lt;section&gt;Contenu&lt;/section&gt;</td>
+								<td><span class="script ">&lt;section&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/section&gt;</span></td>
 								<td>Créer une section simple</td>
 							</tr>
 							<tr>
-								<td class="script">&lt;header&gt;Contenu&lt;/header&gt;</td>
+								<td><span class="script ">&lt;header&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/header&gt;</span></td>
 								<td>Créer un en-tête</td>
 							</tr>
 							<tr>
-								<td class="script">&lt;nav&gt;Contenu&lt;/nav&gt;</td>
+								<td><span class="script ">&lt;nav&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/nav&gt;</span></td>
 								<td>Créer une section contenant des liens de navigation</td>
 							</tr>
 							<tr>
-								<td class="script">&lt;article&gt;Contenu&lt;/article&gt;</td>
+								<td><span class="script ">&lt;article&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/article&gt;</span></td>
 								<td>Créer un contenu auto-suffisant</td>
 							</tr>
 							<tr>
-								<td class="script">&lt;aside&gt;Contenu&lt;/aside&gt;</td>
+								<td><span class="script ">&lt;aside&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/aside&gt;</span></td>
 								<td>Créer un encart</td>
 							</tr>
 							<tr>
-								<td class="script">&lt;footer&gt;Contenu&lt;/footer&gt;</td>
+								<td><span class="script ">&lt;footer&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/footer&gt;</span></td>
 								<td>Créer un pied de page</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script">&lt;balise&gt;Contenu&lt;/balise&gt;</td>
-								<td></td>
-							</tr>
-							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.3">Les liens</h3>
+
+					<h3 class="soustitre" id="4.3">Les liens</h3>
 					<div class="contenu">
-						<p>Syntaxe : <span class="script">&lt;a href="<span class="perso">lien</span>"&gt;Cliquez ici&lt;/a&gt;</span></p>
+						<p>Syntaxe : <span class="script ">&lt;a href="</span><span class="script perso ">lien</span><span class="script ">"&gt;Cliquez ici&lt;/a&gt;</span></p>
 						<table>
 							<tr>
-								<th>Attribut</th>
-								<th>Description</th>
+								<th><span style="font-weight: bold; ">Attribut</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">href="<span class="perso">lien</span>"</td>
+								<td><span class="script ">href="</span><span class="script perso ">lien</span><span class="script ">"</span></td>
 								<td>Rediriger la page vers une autre page au clic sur le lien (chemin absolu ou relatif)</td>
 							</tr>
 							<tr>
-								<td class="script">href="#<span class="perso">id</span>"</td>
+								<td><span class="script ">href="#</span><span class="script perso ">id</span><span class="script ">"</span></td>
 								<td>Rediriger la page vers une zone de la page HTML</td>
 							</tr>
 							<tr>
-								<td class="script">target="_self"</td>
+								<td><span class="script ">target="_self"</span></td>
 								<td>Ouvrir la page dans le même onglet (option par défaut)</td>
 							</tr>
 							<tr>
-								<td class="script">target="_blank"</td>
+								<td><span class="script ">target="_blank"</span></td>
 								<td>Ouvrir la page dans un nouvel onglet</td>
 							</tr>
 							<tr>
-								<td class="script">target="_parent"</td>
+								<td><span class="script ">target="_parent"</span></td>
 								<td>Ouvrir la page dans la fenêtre principale</td>
 							</tr>
 							<tr>
-								<td class="script">target="_top"</td>
+								<td><span class="script ">target="_top"</span></td>
 								<td>Ouvrir la page dans une fenêtre séparée</td>
 							</tr>
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.4">Les images</h3>
+
+					<h3 class="soustitre" id="4.4">Les images</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="III.4.1">Les images simples</h4>
+						<h4 class="soustitre" id="4.4.1">Les images simples</h4>
 						<div class="contenu">
-							<p>Syntaxe : <span class="script">&lt;img src="<span class="perso">lien</span>" alt="<span class="perso">texte-de-remplacement</span>"/&gt;</span></p>
+							<p>Syntaxe : <span class="script ">&lt;img src="</span><span class="script perso ">lien</span><span class="script ">" alt="</span><span class="script perso ">texte-de-remplacement</span><span class="script ">"/&gt;</span></p>
 							<table>
 								<tr>
-									<th>Attribut</th>
-									<th>Description</th>
+									<th><span style="font-weight: bold; ">Attribut</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
 								</tr>
 								<tr>
-									<td class="script">src="<span class="perso">lien</span>"</td>
+									<td><span class="script ">src="</span><span class="script perso ">lien</span><span class="script ">"</span></td>
 									<td>Récupérer la source de l'image (chemin absolu ou relatif)</td>
 								</tr>
 								<tr>
-									<td class="script">alt="<span class="perso">texte-de-remplacement</span>"</td>
+									<td><span class="script ">alt="</span><span class="script perso ">texte-de-remplacement</span><span class="script ">"</span></td>
 									<td>Remplacer l'image par du texte si le chargement a échoué</td>
 								</tr>
 							</table>
 						</div>
-						<h4 class="soustitre" id="III.4.2">Les images complexes</h4>
+
+						<h4 class="soustitre" id="4.4.2">Les images complexes</h4>
 						<div class="contenu">
 							<table>
 								<tr>
-									<th>Balise</th>
-									<th>Description</th>
+									<th><span style="font-weight: bold; ">Balise</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;picture&gt;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&lt;source srcset="<span class="perso">image</span>.avif" type="image/avif"/&gt;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&lt;source srcset="<span class="perso">image</span>.webp" type="image/webp"/&gt;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="<span class="perso">image</span>.jpg" alt="<span class="perso">description</span>"/&gt;<br/>
-										&lt;/picture&gt;<br/>
-									</td>
+									<td><span class="script ">&lt;picture&gt;</span><span class="script "><br/>    &lt;source srcset="</span><span class="script perso ">image</span><span class="script ">.avif" type="image/avif"/&gt;</span><span class="script "><br/>    &lt;source srcset="</span><span class="script perso ">image</span><span class="script ">.webp" type="image/webp"/&gt;</span><span class="script "><br/>    &lt;img src="</span><span class="script perso ">image</span><span class="script ">.jpg" alt="</span><span class="script perso ">description</span><span class="script ">"/&gt;</span><span class="script "><br/>&lt;/picture&gt;</span></td>
 									<td>Ajouter une image qui récupère la première source compatible</td>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;figure&gt;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&lt;picture&gt;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source srcset="<span class="perso">image</span>.avif" type="image/avif"/&gt;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source srcset="<span class="perso">image</span>.webp" type="image/webp"/&gt;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="<span class="perso">image</span>.jpg" alt="<span class="perso">description</span>"/&gt;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&lt;/picture&gt;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&lt;figcaption&gt;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Source : &lt;a href="<span class="perso">lienVersImageDOrigine</span>.jpg"&gt;<span class="perso">Nom de la source</span>&lt;/a&gt;
-										&nbsp;&nbsp;&nbsp;&nbsp;&lt;/figcaption&gt;<br/>
-										&lt;/figure&gt;
-									</td>
+									<td><span class="script ">&lt;figure&gt;</span><span class="script "><br/>    &lt;picture&gt;</span><span class="script "><br/>        &lt;source srcset="</span><span class="script perso ">image</span><span class="script ">.avif" type="image/avif"/&gt;</span><span class="script "><br/>        &lt;source srcset="</span><span class="script perso ">image</span><span class="script ">.webp" type="image/webp"/&gt;</span><span class="script "><br/>        &lt;img src="</span><span class="script perso ">image</span><span class="script ">.jpg" alt="</span><span class="script ">description</span><span class="script ">"/&gt;</span><span class="script "><br/>    &lt;/picture&gt;</span><span class="script "><br/>    &lt;figcaption&gt;</span><span class="script "><br/>        Source : &lt;a href="</span><span class="script perso ">lienVersImageDOrigine</span><span class="script ">.jpg"&gt;</span><span class="script ">Nom de la source</span><span class="script ">&lt;/a&gt;</span><span class="script "><br/></span><span class="script ">    &lt;/figcaption&gt;</span><span class="script "><br/>&lt;/figure&gt; </span></td>
 									<td>Ajouter une image associée à une légende</td>
 								</tr>
 							</table>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="III.5">Les listes</h3>
+
+					<h3 class="soustitre" id="4.5">Les listes</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Balise</th>
-								<th>Description</th>
-								<th>Résultat</th>
+								<th><span style="font-weight: bold; ">Balise</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+								<th><span style="font-weight: bold; ">Résultat</span></th>
 							</tr>
 							<tr>
-								<td class="script">
-									&lt;ul&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Élément 1&lt;/li&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Élément 2&lt;/li&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Élément 3&lt;/li&gt;<br/>
-									&lt;/ul&gt;
-								</td>
+								<td><span class="script ">&lt;ul&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 1&lt;/li&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 2&lt;/li&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 3&lt;/li&gt;</span><span class="script "><br/>&lt;/ul&gt; </span></td>
 								<td>Afficher une liste avec des points</td>
-								<td>
-									<ul>
-										<li>Élément 1</li>
-										<li>Élément 2</li>
-										<li>Élément 3</li>
-									</ul>
-								</td>
+								<td><img src="data:image/png;base64, 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
+cDQAAAAASUVORK5CYII="/></td>
 							</tr>
 							<tr>
-								<td class="script">
-									&lt;ol&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Élément 1&lt;/li&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Élément 2&lt;/li&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Élément 3&lt;/li&gt;<br/>
-									&lt;/ol&gt;
-								</td>
+								<td><span class="script ">&lt;ol&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 1&lt;/li&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 2&lt;/li&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 3&lt;/li&gt;</span><span class="script "><br/>&lt;/ol&gt; </span></td>
 								<td>Afficher une liste avec des numéros</td>
-								<td>
-									<ol>
-										<li>Élément 1</li>
-										<li>Élément 2</li>
-										<li>Élément 3</li>
-									</ol>
-								</td>
+								<td><img src="data:image/png;base64, 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"/></td>
 							</tr>
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.6">Les tableaux</h3>
+
+					<h3 class="soustitre" id="4.6">Les tableaux</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Balise</th>
-								<th>Description</th>
+								<th><span style="font-weight: bold; ">Balise</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">
-									&lt;table&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case1&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case2&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case3&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case4&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
-									&lt;/table&gt;
-								</td>
+								<td><span class="script ">&lt;table&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case1&lt;/td&gt;</span><span class="script "><br/>        &lt;td&gt;case2&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case3&lt;/td&gt;</span><span class="script "><br/>        &lt;td&gt;case4&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>&lt;/table&gt; </span></td>
 								<td>Créer un tableau simple</td>
 							</tr>
 							<tr>
-								<td class="script">
-									&lt;table&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;caption&gt;<span class="perso">legende</span>&lt;/caption&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case1&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case2&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case3&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case4&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
-									&lt;/table&gt;
-								</td>
+								<td><span class="script ">&lt;table&gt;</span><span class="script "><br/>    &lt;caption&gt;</span><span class="script ">l</span><span class="script ">é</span><span class="script ">gende</span><span class="script ">&lt;/caption&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case1&lt;/td&gt;</span><span class="script "><br/>        &lt;td&gt;case2&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case3&lt;/td&gt;</span><span class="script "><br/>        &lt;td&gt;case4&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>&lt;/table&gt; </span></td>
 								<td>Créer un tableau simple avec une légende</td>
 							</tr>
 							<tr>
-								<td class="script">
-									&lt;table&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case1&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td rowspan="2"&gt;case2&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case3&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
-									&lt;/table&gt;
-								</td>
+								<td><span class="script ">&lt;table&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case1&lt;/td&gt;</span><span class="script "><br/>        &lt;td rowspan="2"&gt;case2&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case3&lt;/td&gt;</span><span class="script "><br/></span><span class="script ">    &lt;/tr&gt;</span><span class="script "><br/>&lt;/table&gt; </span></td>
 								<td>Créer un tableau avec une case fusionnée avec une autre vers le bas</td>
 							</tr>
 							<tr>
-								<td class="script">
-									&lt;table&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case1&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case2&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td colspan="2"&gt;case3&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
-									&lt;/table&gt;
-								</td>
+								<td><span class="script ">&lt;table&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case1&lt;/td&gt;</span><span class="script "><br/>        &lt;td&gt;case2&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td colspan="2"&gt;case3&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>&lt;/table&gt; </span></td>
 								<td>Créer un tableau avec une case fusionnée avec une autre vers la droite</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script">
-									&lt;table&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case1&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case2&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case3&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;case4&lt;/td&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
-									&lt;/table&gt;
-								</td>
-								<td>
-									<table>
-										<tr>
-											<td>case1</td>
-											<td>case2</td>
-										</tr>
-										<tr>
-											<td>case3</td>
-											<td>case4</td>
-										</tr>
-									</table>
-								</td>
-								<td>Créer un tableau simple</td>
-							</tr>
-							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.7">Les formulaires</h3>
+
+					<h3 class="soustitre" id="4.7">Les formulaires</h3>
 					<div class="contenu">
 						<p>Un formulaire permet l'envoi de données vers un serveur, avec pour action le lien vers une page PHP (ne fonctionne pas avec pour action un fichier .html).</p>
-						<h4 class="soustitre" id="III.7.1">Créer un formulaire</h4>
+						<h4 class="soustitre" id="4.7.1">Créer un formulaire</h4>
 						<div class="contenu">
-							<p>Syntaxe : <span class="script">&lt;form method="<span class="perso">methode</span>" action="<span class="perso">lien</span>"&gt;<span class="perso">champs</span>&lt;/form&gt;</span></p>
+							<p>Syntaxe : <span class="script ">&lt;form method="</span><span class="script perso ">methode</span><span class="script ">" action="</span><span class="script perso ">lien</span><span class="script ">"&gt;</span><span class="script perso ">champs</span><span class="script ">&lt;/form&gt;</span></p>
 							<table>
 								<tr>
-									<th>Méthode</th>
-									<th>Description</th>
+									<th><span style="font-weight: bold; ">Méthode</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
 								</tr>
 								<tr>
-									<td class="script">GET</td>
+									<td><span class="script ">GET</span></td>
 									<td>Écrire les données saisies dans l'URL</td>
 								</tr>
 								<tr>
-									<td class="script">POST</td>
+									<td><span class="script ">POST</span></td>
 									<td>Envoyer les données dans une requête HTTP (sans écrire dans l'URL)</td>
 								</tr>
 							</table>
 						</div>
-						<h4 class="soustitre" id="III.7.2">Types de champs</h4>
+
+						<h4 class="soustitre" id="4.7.2">Types de champs</h4>
 						<div class="contenu">
 							<table>
 								<tr>
-									<th>Champ</th>
-									<th>Description</th>
-									<th>Résultat</th>
+									<th><span style="font-weight: bold; ">Champ</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+									<th><span style="font-weight: bold; ">Résultat</span></th>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;label for="id_input_text"&gt;Zone de texte&lt;/label&gt;<br/>
-										&lt;input type="text" name="mon_input_text" id="id_input_text" placeholder="Entrer du texte"/&gt;
-									</td>
+									<td><span class="script ">&lt;label for="id_input_text"&gt;Zone de texte&lt;/label&gt;</span><span class="script "><br/>&lt;input type="text" name="mon_input_text" id="id_input_text" placeholder="Entrer du texte"/&gt; </span></td>
 									<td>Créer une zone de texte sur une ligne</td>
-									<td>
-										<label for="id_input_text">Zone de texte</label>
-										<input type="text" name="mon_input_text" id="id_input_text" placeholder="Entrer du texte"/>
-									</td>
+									<td><img src="data:image/png;base64, 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
+TkSuQmCC"/></td>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;label for="id_textarea1"&gt;Zone de texte longue&lt;/label&gt;<br/>
-										&lt;textarea type="text" name="mon_textarea1" id="id_textarea1" placeholder="Entrer un texte long"&gt;&lt;/textarea&gt;
-									</td>
+									<td><span class="script ">&lt;label for="id_textarea1"&gt;Zone de texte longue&lt;/label&gt;</span><span class="script "><br/>&lt;textarea type="text" name="mon_textarea1" id="id_textarea1" placeholder="Entrer un texte long"&gt;&lt;/textarea&gt; </span></td>
 									<td>Créer une zone de texte sur plusieurs lignes</td>
-									<td>
-										<label for="id_textarea1">Zone de texte longue</label>
-										<textarea type="text" name="mon_textarea1" id="id_textarea1" placeholder="Entrer un texte long"></textarea>
-									</td>
+									<td><img src="data:image/png;base64, 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"/></td>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;label for="id_textarea2"&gt;Zone de texte longue&lt;/label&gt;<br/>
-										&lt;textarea type="text" name="mon_textarea2" id="id_textarea2" placeholder="Entrer un texte long" cols="20" rows="2" style="resize: none;"&gt;&lt;/textarea&gt;
-									</td>
+									<td><span class="script ">&lt;label for="id_textarea2"&gt;Zone de texte longue&lt;/label&gt;</span><span class="script "><br/>&lt;textarea type="text" name="mon_textarea2" id="id_textarea2" placeholder="Entrer un texte long" cols="20" rows="2" style="resize: none;"&gt;&lt;/textarea&gt; </span></td>
 									<td>Créer une zone de texte sur plusieurs lignes non redimensionnable (il n'est pas obligatoire de renseigner le nombre de lignes et de colonnes) (c'est avec du CSS qu'on bloque le redimensionnement)</td>
-									<td>
-										<label for="id_textarea2">Zone de texte longue</label>
-										<textarea type="text" name="mon_textarea2" id="id_textarea2" placeholder="Entrer un texte long" cols="20" rows="2" style="resize: none;"></textarea>
-									</td>
+									<td><img src="data:image/png;base64, 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
+RK5CYII="/></td>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;label for="id_input_number"&gt;Valeur numérique&lt;/label&gt;<br/>
-										&lt;input type="number" name="mon_input_number" id="id_input_number" placeholder="Entrer un nombre" min="0" max="99"/&gt;
-									</td>
+									<td><span class="script ">&lt;label for="id_input_number"&gt;Valeur numérique&lt;/label&gt;</span><span class="script "><br/>&lt;input type="number" name="mon_input_number" id="id_input_number" placeholder="Entrer un nombre" min="0" max="99"/&gt; </span></td>
 									<td>Créer une zone de saisie d'un nombre</td>
-									<td>
-										<label for="id_input_number">Valeur numérique</label>
-										<input type="number" name="mon_input_number" id="id_input_number" placeholder="Entrer un nombre" min="0" max="99"/>
-									</td>
+									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAVYAAAAqCAYAAADoOHONAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAoKSURBVHhe7Z1NaFtXFsfPBMbQJjCpmdjW0Ayo
+pUgxtokbdWjA1JtSjFYCTzLCMEGZLrvxwmDwIsZZGARaaNNlxyYDQhOPwSsRAl24GFqmJg6KceRF
+KqYt49gMygyELjSQmXPuh3Tfh6Qn60q1nfODZ0v3vfv5fP7v3nOPrF9Uq9X/AcMwDGONc+o3wzAM
+YwkWVoZhGMuwsDIMw1iGhZVhGMYyLKwMwzCWYWFlGIaxDAsrwzCMZVhYGYZhLMPCyjAMYxn+5BXT
+E16+/Am2tr6FZ8++VykMc7o5f/4NGBq6BBMTH8CFC2+qVAkLK9MTHjzYhGj0XXjvvbBKYZjTzatX
+r3Ci8A8olZ7B1NSkSpWwsDI94fPP/wKzs39S7ximuxwdVdQr+wwM9KtXkmz2z/DZZ39U7yTsY2UY
+hrEMCyvDMIxlWFgZhnltqVb/C4eH/xK/bdJlYc1Boq8PIgtF9Z4JRhEWIn3Q15fAEQxGLtHe9Qzz
+ukNi+uWXW7XDprgawhrQmHMJvKYPEmzBXaO4cAMyMAfb1Q2YUWkM8/OxAyvz85AuHKj3px8tqi9e
+/AcGBn4tftsUV0NYxyA5TaEwBbjfRDRz9wv4Mw432eK7Q3EBbmQA5taW8Y4EZ2ajin8Up0yId1Zg
+Hg220dGOIR8U0pgnDWfI9pkuYYpqOHwZPv54Aj788H2r4upwBYwtL6JkorQ2VNYckK6G5+7yTKpr
+JGGtug/L7ajqKSeaTEM67T3m4yF1BcPY4+uvH9VE9fr1ayLtnXd+WxNXOt8pLh/rDNyUyurrDigu
+LOF8NgzTSWn10q9nHkF9fNrtUD/crgVRdmQBr3ThcUXU/bjFhYgqr0k7cEYYUfnr1/u1QbXRx+ch
+80Wg5jo2ynSOiW6Hq79+/SKob7EYxBpd51ePuqbVeDnqFmn+7Xei2u0pt/X9Y5iTyuXLIbh2bbQm
+qhoS148++p043ymezasZqaw+7oAi5NfLOF2dBqGraJwpWMVpMy1B6diGuXABUn7G7YCEMAaZK0be
+1TgUUh1ucq3fgNjeoiqz9ZL46VIEbsBarQ3bc2HRhk4EgvLfv6n6VF3F2T+NRwISkRjsLRrp5QzE
+XBUJsU49hbltfR2OJ+B1Pg8JavvS8La8br+xy0CWWYD4qi4T+zm9DjFMOz5dun8Nqfv35HJfuwrq
+y35Kz25SQHgFNrP6/Arm9MmbLoD2FjjLw2NlR51BhJuC6jiAQlqeb+SaaOSG2FmhfNQOQpVDdbhc
+IGa1vvi0RRxGXzSyTuNwFC7Hg9IcfdflHBQgrdNq7XbiHDOzz379q5fRdKx7DAloJPKueufk7bd/
+I853ikdYUVn93QHFPEhdTUpDntmA6oYpX2OwvIg5y+uQb2JfuUQKCuE52DbzYllom5g130KUG1Mu
+X4FVR3uaU4ZpWDPW263dIAGIr0K9CTOwITpVgAKKkJl+F0XcsSoQftUyZjddADiea3O4PvA+5Nxt
+90WVGZ7bNuqmfu6LsT4u3bp/rahsZuEe3Kq5CZJRElFpuKH4PMxO0qdh+mFyVrsSbsO4yOnKOx8H
+mo+QAGU3ByCpykunkxAt5V0GT3XcA7glr7HimqA6Hl9VdaZFu0t5ryh7cbZFtLeyCdlae6Ww5UvR
+Fn1CMC17+ImjnHv4el4UT2mzMNlfgrxLuGkc6/mc96CGo3/yHgQb67OFV1j9DB8p5tfRoOOw2Myg
+R4ZRCMqwt6vee1A+Wi3OBmKm3EKUmxK/2XKWauJtwwgM097d091ji0N4eES9UojxoKY5WzY2cgV/
+PoVdVZEeW8+G4FgSaD/RLfZ+4+em2f2Sq5Lj0J37V8obM5na4TTY/slZh7CNX43izyPASVxL3Hlp
+RpUvkW+3Lr5YItxOYpmlh4bIkVDPg1VXbzQJ6dv1WkPjo1hLBQ6fq4SGuNsyDnIIcDZOb3ceAE3a
+/fuUd86KHW0YgkF8JlVgFGbVQwdbBeOjlHgIZrNoHM22j09NYqtK8NB8Krj6F3yszxY+wkr2PC1m
+Skt1J5x0A/iIl8OnGMugMTehuItygvaXiTn8c+LoaHnqI2otuDLiloYxEHrXAd4yg7G7R6NWgJR7
+TGjJ7TOgQeqRZVqmS/fPf/PKNMRGBBEkLwcHR/gzClfdFQwNBhQ5+xwFeUL4ocRv5zGqV8M+NSs/
+BKEB9dJDiwdXKASUtdJkwE7iWPcCX2HVM6Xa0i53Rxi4OfPSGz8OP+s2LV1bY/r8nMfrtRvugJbX
+vmOCRxsuDgfhYZyH2+e037/nh+SPxaWue5ac3URTP2MEEL9uchLH+rvvvhf/kcqPH3/8pzjfKf7C
+irM3EdOqlnYidhUN/27NvnNwR/nv2jL6sREQi2C9Bm5FeQ8aehV6RQeugaCMkA/Ccl+blVncpXmn
+l5b3pd37d6IxfZHOw1zJnnpwyklzxv7BIfn+Z+FkjfUPPxzAo0dP4JtvnGFVJKhfffV3cb5TGggr
+2pDYzCnDen7B61dTS0L3klT69Zohw7nKmTsO/60fQhgMP6SmkSjYR7kGfMTJ9jLb63rpHOnHbRLd
+YaIEs+xxju+Cs6vB71+vCTVez3poxz8bhHbq7hayTyV47N4Pen4oZoYDOHO1jhLtqGedX8f2WNvg
++vX34eLFXwkh1eKqX1M6ne+UhsJaN6IMmmc9dlWgDLGwZIRW5RIQ83MIupi5K3e6PWFZmN8M19HC
+nrljmHDAOmyh22oKHrlAOnQHexlbBhFQkYm5wr0oXjRobLALtVNfSBnxqkguEYN1j8NGb1guGddS
+3SnsvZOg96/ntOOzG5+CyX7a0XbvxtPOepAdehfjV3FOVoEnOzqj3qFXb3uB6BPtU5mbfjuwIneO
+rMwMK5sPnGXTcr5/EqaalW17rC3Q1/dL8WkrLa70aSstqpRO5zulibCiEendYx27WmMGNsifSvGY
+evNiaRi2g/hYUUT2dSynzktHClw72KqOQqp+DdXRSaxQu1BbsT5zs4ZiZSnm1Tb0kVQdS1vrbx+K
+4PTxP+VGZa7G8eEUq5dJ8a/7i/RYdCLDsMxrKfaWYpPVBZrA9y84/lEBbX42PRSHWyJ0Sed3hQE5
+CEF8nkKdAA3erDMLT0ZvHSMKQO5yUziSLufwEwpHUqd7guxTMmr6M/NQcu/Sd0A/9uehu+xaJEEj
+bI+1HUxxpf9uZVNUCf4GgdcRnF3KDyP0brOJv0GA6SVBv0GA/i/Aixf/hrfeuhhYVPkbBBiGYZpA
+Yjo4eMnaTFXDwsowDGMZFlaGYRjLsI+V6Qmrq3+DTz/9A5w7x89y5uxAX4H9xRd/hVTq9ypFwn/l
+TE8YGrokvoOdYc4KJKr0N01/2254xsr0hJcvf4KtrW/xD7HzjwsyzEng/Pk3hKhOTHwAFy68qVIl
+LKwMwzCWYVcAwzCMZVhYGYZhLMPCyjAMYxkWVoZhGKsA/B8s57k+pE04RAAAAABJRU5ErkJggg==
+"/></td>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;label for="id_input_email"&gt;Email&lt;/label&gt;<br/>
-										&lt;input type="email" name="mon_input_email" id="id_input_email" placeholder="Entrer un email"/&gt;
-									</td>
+									<td><span class="script ">&lt;label for="id_input_email"&gt;Email&lt;/label&gt;</span><span class="script "><br/>&lt;input type="email" name="mon_input_email" id="id_input_email" placeholder="Entrer un email"/&gt; </span></td>
 									<td>Créer un champ pour une adresse mail</td>
-									<td>
-										<label for="id_input_email">Email</label>
-										<input type="email" name="mon_input_email" id="id_input_email" placeholder="Entrer un email"/>
-									</td>
+									<td><img src="data:image/png;base64, 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"/></td>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;label for="id_input_password"&gt;Mot de passe&lt;/label&gt;<br/>
-										&lt;input type="password" name="mon_input_password" id="id_input_password" placeholder="Entrer un mot de passe"/&gt;
-									</td>
+									<td><span class="script ">&lt;label for="id_input_password"&gt;Mot de passe&lt;/label&gt;</span><span class="script "><br/>&lt;input type="password" </span><span class="script ">name="mon_input_password" id="id_input_password" placeholder="Entrer un mot de passe"/&gt; </span></td>
 									<td>Créer un champ pour un mot de passe</td>
-									<td>
-										<label for="id_input_password">Mot de passe</label>
-										<input type="password" name="mon_input_password" id="id_input_password" placeholder="Entrer un mot de passe"/>
-									</td>
+									<td><img src="data:image/png;base64, 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"/></td>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;input type="checkbox" name="mon_input_checkbox1" id="id_input_checkbox1" checked/&gt;<br/>
-										&lt;label for="id_input_checkbox1"&gt;Cocher ici&lt;/label&gt;<br/><br/>
-										&lt;input type="checkbox" name="mon_input_checkbox2" id="id_input_checkbox2"/&gt;<br/>
-										&lt;label for="id_input_checkbox2"&gt;Cocher plutôt ici&lt;/label&gt;
-									</td>
-									<td>Créer des cases à cocher (<span class="script">checked</span> permet de pré-cocher la case)</td>
-									<td>
-										<input type="checkbox" name="mon_input_checkbox1" id="id_input_checkbox1" checked/>
-										<label for="id_input_checkbox1">Cocher ici</label>
-										<input type="checkbox" name="mon_input_checkbox2" id="id_input_checkbox2"/>
-										<label for="id_input_checkbox2">Cocher plutôt ici</label>
-									</td>
+									<td><span class="script ">&lt;input type="checkbox" name="mon_input_checkbox1" id="id_input_checkbox1" checked/&gt;</span><span class="script "><br/>&lt;label for="id_input_checkbox1"&gt;Cocher ici&lt;/label&gt;</span><span class="script "><br/></span><span class="script "><br/>&lt;input type="checkbox" name="mon_input_checkbox2" id="id_input_checkbox2"/&gt;</span><span class="script "><br/>&lt;label for="id_input_checkbox2"&gt;Cocher plutôt ici&lt;/label&gt; </span></td>
+									<td>Créer des cases à cocher (checked permet de pré-cocher la case)</td>
+									<td><img src="data:image/png;base64, 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"/></td>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;input type="checkbox" name="mon_input_checkbox" value="checkbox1" id="id_input_checkbox3" checked/&gt;<br/>
-										&lt;label for="id_input_checkbox3"&gt;Cocher ici&lt;/label&gt;<br/>
-										<br/>
-										&lt;input type="checkbox" name="mon_input_checkbox" value="checkbox2" id="id_input_checkbox4"/&gt;<br/>
-										&lt;label for="id_input_checkbox4"&gt;Cocher plutôt ici&lt;/label&gt;
-									</td>
-									<td>Créer des cases à cocher (autre méthode) (<span class="script">checked</span> permet de pré-cocher la case)</td>
-									<td>
-										<input type="checkbox" name="mon_input_checkbox" value="checkbox1" id="id_input_checkbox3" checked/>
-										<label for="id_input_checkbox3">Cocher ici</label>
-										<input type="checkbox" name="mon_input_checkbox" value="checkbox2" id="id_input_checkbox4"/>
-										<label for="id_input_checkbox4">Cocher plutôt ici</label>
-									</td>
+									<td><span class="script ">&lt;input type="checkbox" name="mon_input_checkbox" value="checkbox1" id="id_input_checkbox3" checked/&gt;</span><span class="script "><br/>&lt;label for="id_input_checkbox3"&gt;Cocher ici&lt;/label&gt;</span><span class="script "><br/></span><span class="script "><br/>&lt;input type="checkbox" name="mon_input_checkbox" value="checkbox2" id="id_input_checkbox4"/&gt;</span><span class="script "><br/>&lt;label for="id_input_checkbo</span><span class="script ">x4"&gt;Cocher plutôt ici&lt;/label&gt; </span></td>
+									<td>Créer des cases à cocher (autre méthode) (checked permet de pré-cocher la case)</td>
+									<td><img src="data:image/png;base64, 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"/></td>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;input type="radio" name="mon_input_radio" value="radio1" id="id_input_radio1" checked/&gt;<br/>
-										&lt;label for="id_input_radio1"&gt;Cocher ici&lt;/label&gt;<br/>
-										<br/>
-										&lt;input type="radio" name="mon_input_radio" value="radio2" id="id_input_radio2"/&gt;<br/>
-										&lt;label for="id_input_radio2"&gt;Cocher plutôt ici&lt;/label&gt;
-									</td>
-									<td>Créer des radios à cocher (<span class="script">checked</span> permet de pré-cocher la case)</td>
-									<td>
-										<input type="radio" name="mon_input_radio" value="radio1" id="id_input_radio1" checked/>
-										<label for="id_input_radio1">Cocher ici</label>
-										<input type="radio" name="mon_input_radio" value="radio2" id="id_input_radio2"/>
-										<label for="id_input_radio2">Cocher plutôt ici</label>
-									</td>
+									<td><span class="script ">&lt;input type="radio" name="mon_input_radio" value="radio1" id="id_input_radio1" checked/&gt;</span><span class="script "><br/>&lt;label for="id_input_radio1"&gt;Cocher ici&lt;/label&gt;</span><span class="script "><br/></span><span class="script "><br/>&lt;input type="radio" name="mon_input_radio" value="radio2" id="id_input_radio2"/&gt;</span><span class="script "><br/>&lt;label for="id_input_radio2"&gt;Cocher plutôt ici&lt;/label&gt; </span></td>
+									<td>Créer des radios à cocher (checked permet de pré-cocher la case)</td>
+									<td><img src="data:image/png;base64, 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"/></td>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;label for="id_select_options1"&gt;Choix d'un item&lt;/label&gt;<br/>
-										&lt;select name="mon_select_options1" id="id_select_options1"&gt;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="option1_1">Valeur 1&lt;/option&gt;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="option1_2">Valeur 2&lt;/option&gt;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="option1_3">Valeur 3&lt;/option&gt;<br/>
-										&lt;/select&gt;
-									</td>
+									<td><span class="script ">&lt;label for="id_select_options1"&gt;Choix d'un item&lt;/label&gt;</span><span class="script "><br/>&lt;select name="mon_select_options1" id="id_select_options1"&gt;</span><span class="script "><br/>    &lt;option value="option1_1"&gt;Valeur 1&lt;/option&gt;</span><span class="script "><br/>    &lt;option value="option1_2"&gt;Valeur 2&lt;/option&gt;</span><span class="script "><br/>    &lt;option value="option1_3"&gt;Valeur 3&lt;/option&gt;</span><span class="script "><br/>&lt;/select&gt; </span></td>
 									<td>Créer liste déroulante</td>
-									<td>
-										<label for="id_select_options1">Choix d'un item</label>
-										<select name="mon_select_options1" id="id_select_options1">
-											<option value="option1_1">Valeur 1</option>
-											<option value="option1_1">Valeur 2</option>
-											<option value="option1_1">Valeur 3</option>
-										</select>
-									</td>
+									<td><img src="data:image/png;base64, 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"/></td>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;label for="id_select_options2"&gt;Choix des items&lt;/label&gt;<br/>
-										&lt;select name="mon_select_options2" id="id_select_options2" multiple&gt;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="option2_1">Valeur 1&lt;/option&gt;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="option2_2">Valeur 2&lt;/option&gt;<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="option2_3">Valeur 3&lt;/option&gt;<br/>
-										&lt;/select&gt;
-									</td>
+									<td><span class="script ">&lt;label for="id_select_options2"&gt;Choix des items&lt;/label&gt;</span><span class="script "><br/>&lt;select name="mon_select_options2" id="id_select_options2" multiple&gt;</span><span class="script "><br/></span><span class="script ">    &lt;option value="option2_1"&gt;Valeur 1&lt;/option&gt;</span><span class="script "><br/>    &lt;option value="option2_2"&gt;Valeur 2&lt;/option&gt;</span><span class="script "><br/>    &lt;option value="option2_3"&gt;Valeur 3&lt;/option&gt;</span><span class="script "><br/>&lt;/select&gt; </span></td>
 									<td>Créer une liste à sélection multiple</td>
-									<td>
-										<label for="id_select_options2">Choix d'un item</label>
-										<select name="mon_select_options2" id="id_select_options2" multiple>
-											<option value="option2_1">Valeur 1</option>
-											<option value="option2_1">Valeur 2</option>
-											<option value="option2_1">Valeur 3</option>
-										</select>
-									</td>
+									<td><img src="data:image/png;base64, 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
+gpMjDouzFgAAAABJRU5ErkJggg=="/></td>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;label for="id_input_file1"&gt;Déposer un fichier&lt;/label&gt;<br/>
-										&lt;br/&gt;<br/>
-										&lt;input type="file" name="mon_input_file1" id="id_input_file1" enctype="multipart/form-data"/&gt;
-									</td>
-									<td>Créer une zone de dépôt de fichiers (1 seul fichier) (<span class="script">enctype="multipart/form-data"</span> permet d'envoyer le contenu du fichier au serveur et non le nom du fichier)</td>
-									<td>
-										<label for="id_input_file1">Déposer un fichier</label>
-										<br/>
-										<input type="file" name="mon_input_file1" id="id_input_file1" enctype="multipart/form-data"/>
-									</td>
+									<td><span class="script ">&lt;label for="id_input_file1"&gt;Déposer un fichier&lt;/label&gt;</span><span class="script "><br/>&lt;br/&gt;</span><span class="script "><br/>&lt;input type="file" name="mon_input_file1" id="id_input_file1" enctype="multipart/form-data"/&gt; </span></td>
+									<td>Créer une zone de dépôt de fichiers (1 seul fichier) (<span class="script ">enctype="multipart/form-data"</span> permet d'envoyer le contenu du fichier au serveur et non le nom du fichier)</td>
+									<td><img src="data:image/png;base64, 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"/></td>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;label for="id_input_file2"&gt;Déposer un fichier&lt;/label&gt;<br/>
-										&lt;br/&gt;<br/>
-										&lt;input type="file" name="mon_input_file2" id="id_input_file2" enctype="multipart/form-data" multiple/&gt;
-									</td>
-									<td>Créer une zone de dépôt de fichiers (plusieurs fichiers) (<span class="script">enctype="multipart/form-data"</span> permet d'envoyer le contenu du fichier au serveur et non le nom du fichier)</td>
-									<td>
-										<label for="id_input_file2">Déposer un fichier</label>
-										<br/>
-										<input type="file" name="mon_input_file2" id="id_input_file2" enctype="multipart/form-data" multiple/>
-									</td>
+									<td><span class="script ">&lt;label for="id_input_file2"&gt;Déposer un fichier&lt;/label&gt;</span><span class="script "><br/>&lt;br/&gt;</span><span class="script "><br/>&lt;input type="file" name="mon_input_file2" id="id_input_file2" enctype="multipart/form-data" multiple/&gt; </span></td>
+									<td>Créer une zone de dépôt de fichiers (plusieurs fichiers) (<span class="script ">enctype="multipart/form-data"</span> permet d'envoyer le contenu du fichier au serveur et non le nom du fichier)</td>
+									<td><img src="data:image/png;base64, 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"/></td>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;label for="id_input_color"&gt;Choix d'une couleur&lt;/label&gt;<br/>
-										&lt;input type="color" name="mon_input_color" id="id_input_color"/&gt;
-									</td>
+									<td><span class="script ">&lt;label for="id_input_color"&gt;Choix d'une couleur&lt;/label&gt;</span><span class="script "><br/>&lt;input type="color" name="mon_input_color" id="id_input_color"/&gt; </span></td>
 									<td>Créer un bouton de choix d'une couleur</td>
-									<td>
-										<label for="id_input_color">Choix d'une couleur</label>
-										<input type="color" name="mon_input_color" id="id_input_color"/>
-									</td>
+									<td><img src="data:image/png;base64, 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
+TkSuQmCC"/></td>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;label for="id_input_date"&gt;Choix d'une date&lt;/label&gt;<br/>
-										&lt;input type="date" name="mon_input_date" id="id_input_date/"&gt;
-									</td>
+									<td><span class="script ">&lt;label for="id_input_date"&gt;Choix d'une date&lt;/label&gt;</span><span class="script "><br/>&lt;input type="date" name="mon_input_date" id="id_input_date/"&gt; </span></td>
 									<td>Créer un bouton de choix d'une date</td>
-									<td>
-										<label for="id_input_date">Choix d'une date</label>
-										<input type="date" name="mon_input_date" id="id_input_date"/>
-									</td>
+									<td><img src="data:image/png;base64, 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"/></td>
 								</tr>
 								<tr>
-									<td class="script">
-										&lt;button type="submit"&gt;Valider&lt;/button&gt;<br/>
-									</td>
+									<td><span class="script ">&lt;button type="submit"&gt;Valider&lt;/button&gt;</span></td>
 									<td>Créer un bouton de validation du formulaire</td>
-									<td>
-										<button type="submit">Valider</button>
-									</td>
+									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFgAAAAtCAYAAAAqeqxGAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPFSURBVGhD7ZrPS6JBGMe/7r+wLHYI9NK6YZ0C
+D8ESCG83w0qCwj3sMZSOu3SQCFkW9xhJxw4bBWEmefMFIRY6BJ3Ufl4SOiRL/0CXdp7XefPVZHNe
+32k3nQ9M9s77OuPz9ZnvzPi+rvv7+wcopPGGvyokoQSWjBJYMkpgySiBJaMElowSWDJKYMnY2mhc
+XV2jVLrA7e1vPDz03j7F5XJhYOAdRkd9GBry8lp7CAt8dHSCm5sa6/yD8SF6FUqeUukcg4NujI+P
+8VpxhCyCMpfE1bSPPS0uQfFRnBQvxW0XIYHJFihz+wmKl+K2i5DANGx6PXNboXgpbrsICdyLE1on
+dBO3WqZJRgksmf9Q4F1E3W/hju7y406w856XwSGBnwuwjGSAnQ+sosJrOqWSHIObtR3N8IpXhkMC
+zyGssRd9H211qOwhXwU8oVn4eVW/4JhFRMKT7G8BuTYKV7IHqMKL0MwIr+kcf+IEtdodtiK84pXh
+nAdHpmEkca7VJsrI5tlOyDOFGT+3CrITa/mbd2bmn1pEZRUB6/sDKVzyUw2e9mVto24982zEcXtr
+Oe8UDk5ypk2kkLQa7RN78CJevDOysl42oOmLnU9QJG5wDYgfPrZRDIGNECsk2gTW3280+klPQo+1
+ilhAzL2PML9GxihxUGDTJq6Rz5brFYy6PUziS4LsYQSJ4xMkmoyYfzGXZx1MgCwrP6+h6lnCptFe
+HX/iqzF6TDLRReisz/TWHK9hRHaQZhfpP6wTLbumtgOZ7uOowKZNVPN7PAhuD9p0cxB82JslpvP6
+5+hosizjjPyitU/GsM/LPtw5zvjxS+CswCwbl+MUxAGypDAXRAubmcT9LlaAluZDlxXKLOc4xQX5
+BdmO5UukEly3/6uYXRwWmA3XmSl4uE2Y9hDmqVRJptjQZYIzcaWvCjSL/zYVuZbQiuMCwz+LkIds
+4hu+t7MHNsn5hvm/ophtX5zyinaIeLp8nBeYTWQzIbKJAvQme2jObpNMVMCDzbbZ8G+sBsh2aFJr
+EFlegqe6hmDrzpFWIDZ2k90gQWBTSKJhDwb+FRyz5VJ1feLRF3NhMQ+mjUeR+TwtueptpOArsqUe
+P29A/dQOEQcTmfdjlOABQpsrL7qbFLonl07/xMJCmB/1D9vbOcRin/iRGEIZTHdb+5Fu4hYSuNvb
+J6+Rbm+TCQlMzwnQrex+guKluO0iJDA9hEHPCej6r57PZIqP4qR4u3n4RD3Z04Z/+mSPQgwp62BF
+AyWwZJTAklECS0YJLBklsGSUwJJRAksF+ANLUo/xS1cJJwAAAABJRU5ErkJggg=="/></td>
 								</tr>
-								<!--
-								<tr>
-									<td class="script">
-										&lt;label for=""&gt;&lt;/label&gt;<br/>
-										
-									</td>
-									<td></td>
-									<td>
-										<label for=""></label>
-									</td>
-								</tr>
-								-->
 							</table>
-							<div class="attention">Chaque champ doit être précédé ou suivi par <span class="script">&lt;label for="id_champ"&gt;Mon champ&lt;/label&gt;</span> pour une meilleure accessibilité. Il est également possible de placer le champ dans le label, dans ce cas l'attribut for n'est pas nécessaire.</div>
+							
+							
+							
+							
+							<div class="note ">Chaque champ doit être précédé ou suivi par <span class="script ">&lt;label for="id_champ"&gt;</span><span class="script perso ">Mon champ</span><span class="script ">&lt;/label&gt;</span> pour une meilleure accessibilité. Il est également possible de placer le champ dans le label, dans ce cas l'attribut <span class="script ">for</span> n'est pas nécessaire.</div>
 						</div>
-						<h4 class="soustitre" id="III.7.3">Autres attributs pour les champs</h4>
+
+						<h4 class="soustitre" id="4.7.3">Autres attributs pour les champs</h4>
 						<div class="contenu">
 							<table>
 								<tr>
-									<th>Attribut</th>
-									<th>Description</th>
+									<th><span style="font-weight: bold; ">Attribut</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
 								</tr>
 								<tr>
-									<td class="script">required</td>
+									<td><span class="script ">required</span></td>
 									<td>Forcer l'entrée d'une valeur dans le champ pour la validation du formulaire</td>
 								</tr>
 								<tr>
-									<td class="script">value="<span class="perso">valeur</span>"</td>
-									<td>Entrer une valeur par défaut (utile dans les input de saisie de valeurs)</td>
+									<td><span class="script ">value="</span><span class="script perso ">valeur</span><span class="script ">"</span></td>
+									<td>Entrer une valeur par défaut (utile dans les inputs de saisie de valeurs)</td>
 								</tr>
 								<tr>
-									<td class="script">minlength="<span class="perso">valeur</span>"</td>
+									<td><span class="script ">minlength="</span><span class="script perso ">valeur</span><span class="script ">"</span></td>
 									<td>Forcer une longueur minimale</td>
 								</tr>
 								<tr>
-									<td class="script">maxlength="<span class="perso">valeur</span>"</td>
+									<td><span class="script ">maxlength="</span><span class="script perso ">valeur</span><span class="script ">"</span></td>
 									<td>Forcer une longueur maximale</td>
 								</tr>
-								<!--
-								<tr>
-									<td class="script">pattern=<span class="perso">regex</span></td>
-									<td>Forcer le respect d'une expression régulière</td>
-								</tr>
-								-->
-								<!--
-								<tr>
-									<td class="script"></td>
-									<td></td>
-								</tr>
-								-->
 							</table>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="III.8">Les audios</h3>
+
+					<h3 class="soustitre" id="4.8">Les audios</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Balise</th>
-								<th>Description</th>
+								<th><span style="font-weight: bold; ">Balise</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">
-									&lt;audio controls&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">musique</span>.ogg" type="audio/ogg"/&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">musique</span>.mp3" type="audio/mpeg"/&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;Lecture impossible<br/>
-									&lt;/audio&gt;
-								</td>
-								<td>Ajouter un audio qui récupère la première source compatible (controls permet d'afficher les éléments de contrôle de l'audio)</td>
+								<td><span class="script ">&lt;audio controls&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.ogg" type="audio/ogg"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.mp3" type="audio/mpeg"/&gt;</span><span class="script "><br/>    Lecture impossible</span><span class="script "><br/>&lt;/audio&gt; </span></td>
+								<td>Ajouter un audio qui récupère la première source compatible (<span class="script ">controls</span> permet d'afficher les éléments de contrôle de l'audio)</td>
 							</tr>
 							<tr>
-								<td class="script">
-									&lt;audio autoplay controls&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">musique</span>.ogg" type="audio/ogg"/&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">musique</span>.mp3" type="audio/mpeg"/&gt;<br/>
-									&lt;/audio&gt;
-								</td>
+								<td><span class="script ">&lt;audio autoplay controls&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.ogg" type="audio/ogg"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.mp3" type="audio/mpeg"/&gt;</span><span class="script "><br/>&lt;/audio&gt; </span></td>
 								<td>Ajouter un audio qui démarre automatiquement (peut être bloqué par certains navigateurs)</td>
 							</tr>
 							<tr>
-								<td class="script">
-									&lt;audio loop controls&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">musique</span>.ogg" type="audio/ogg"/&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">musique</span>.mp3" type="audio/mpeg"/&gt;<br/>
-									&lt;/audio&gt;
-								</td>
+								<td><span class="script ">&lt;audio loop controls&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.ogg" type="audio/ogg"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.mp3" type="audio/mpeg"/&gt;</span><span class="script "><br/>&lt;/audio&gt; </span></td>
 								<td>Ajouter un audio répété en boucle</td>
 							</tr>
 							<tr>
-								<td class="script">
-									&lt;audio muted controls&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">musique</span>.ogg" type="audio/ogg"/&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">musique</span>.mp3" type="audio/mpeg"/&gt;<br/>
-									&lt;/audio&gt;
-								</td>
+								<td><span class="script ">&lt;audio muted controls&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.ogg" type="audio/ogg"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.mp3" type="audio/mpeg"/&gt;</span><span class="script "><br/>&lt;/audio&gt; </span></td>
 								<td>Ajouter un audio avec un son coupé par défaut</td>
 							</tr>
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.9">Les vidéos</h3>
+
+					<h3 class="soustitre" id="4.9">Les vidéos</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Balise</th>
-								<th>Description</th>
+								<th><span style="font-weight: bold; ">Balise</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">
-									&lt;video width="100px" height="100px" controls&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">video</span>.ogg" type="video/ogg"/&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">video</span>.mp4" type="video/mp4"/&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;Lecture impossible<br/>
-									&lt;/audio&gt;
-								</td>
-								<td>Ajouter une vidéo qui récupère la première source compatible (controls permet d'afficher les éléments de contrôle de la vidéo)</td>
+								<td><span class="script ">&lt;video width="100px" height="100px" controls&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.ogg" type="video/ogg"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.mp4" type="video/mp4"/&gt;</span><span class="script "><br/>    Lecture impossible</span><span class="script "><br/>&lt;/audio&gt; </span></td>
+								<td>Ajouter une vidéo qui récupère la première source compatible (<span class="script ">controls</span> permet d'afficher les éléments de contrôle de la vidéo)</td>
 							</tr>
 							<tr>
-								<td class="script">
-									&lt;video autoplay controls&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">video</span>.ogg" type="video/ogg"/&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">video</span>.mp4" type="video/mp4"/&gt;<br/>
-									&lt;/video&gt;
-								</td>
+								<td><span class="script ">&lt;video autoplay controls&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.ogg" type="video/ogg"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.mp4" type="video/mp4"/&gt;</span><span class="script "><br/>&lt;/video&gt; </span></td>
 								<td>Ajouter une vidéo qui démarre automatiquement (peut être bloquée par certains navigateurs)</td>
 							</tr>
 							<tr>
-								<td class="script">
-									&lt;video loop controls&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">video</span>.ogg" type="video/ogg"/&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">video</span>.mp4" type="video/mp4"/&gt;<br/>
-									&lt;/video&gt;
-								</td>
+								<td><span class="script ">&lt;video loop controls&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.ogg" type="video/ogg"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.mp4" type="video/mp4"/&gt;</span><span class="script "><br/>&lt;/video&gt; </span></td>
 								<td>Ajouter une vidéo répétée en boucle</td>
 							</tr>
 							<tr>
-								<td class="script">
-									&lt;video muted controls&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">video</span>.ogg" type="video/ogg"/&gt;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="<span class="perso">video</span>.mp4" type="video/mp4"/&gt;<br/>
-									&lt;/video&gt;
-								</td>
+								<td><span class="script ">&lt;video muted controls&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.ogg" type="video/ogg"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.mp4" type="video/mp4"/&gt;</span><span class="script "><br/>&lt;/video&gt; </span></td>
 								<td>Ajouter une vidéo avec un son coupé par défaut</td>
 							</tr>
 						</table>
+						
+						
 					</div>
-					<!--
-					<h3 class="soustitre" id="III."></h3>
-					<div class="contenu">
-						<table>
-							<tr>
-								<th>Balise</th>
-								<th>Résultat</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td class="script">&lt;balise&gt;Contenu&lt;/balise&gt;</td>
-								<td></td>
-								<td></td>
-							</tr>
-						</table>
-					</div>
-					-->
+
 				</div>
-                <!--
-				<h2 class="soustitre" id=""></h2>
-				<div class="contenu">
-					
-				</div>
-				
-				&nbsp; : 1 espace obligatoire
-				-->
 			</article>
 		</main>
 		<footer>
 			<script src="../../scripts/footer.js"></script>
 			<a class="top" href="#"><img src="../../images/top.png"></a>
 		</footer>
+		<script src="../../scripts/script.js"></script>
+		<script src="../../scripts/tableDesMatieres.js"></script>
 	</body>
-	<script src="../../scripts/script.js"></script>
-	<script src="../../scripts/tableDesMatieres.js"></script>
 </html>

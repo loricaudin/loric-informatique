@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Loric Informatique (page générée automatiquement à partir d'un document Word XML) -->
 <html lang="fr-FR">
 	<head>
 		<title>Loric Informatique - MongoDB (NoSQL)</title>
@@ -16,423 +16,438 @@
 			<section class="presentation">
 				<div class="alignementVertical">
 					<div>
-						<h1>MongoDB (NoSQL)</h1>
-						<p class="version">Version 1.1 (créé le 14/03/2024, modifié le 04/04/2024)</p>
-                        <p>NoSQL (No Structured Query Language) est un langage servant à exploiter des bases de données non-relationnelles.</p>
-						<p>MongoDB est un système de gestion de base de données orienté documents qui permet de manipuler des objets structurés au format JSON.</p>
+						<h1>Mémento MongoDB (NoSQL)</h1>
+						<p class="version">Version 1.2 (créé le 14/03/2024, modifié le 26/08/2024) </p>
+						<p>NoSQL (No Structured Query Language) est un langage servant à exploiter des bases de données non-relationnelles.<br/><br/>MongoDB est un système de gestion de base de données orienté documents qui permet de manipuler des objets structurés au format JSON.</p>
 						<a href="Loric Informatique - MongoDB (NoSQL).pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
 						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de choisir le format A4, de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
 					</div>
-					<img src="icone_mongodb.png" class="logoLangage">
+					<img src="icone_mongodb.png" class="logoLangage"/>
 				</div>
 			</section>
-            <section class="outils">
-                <h2>Outils nécessaires :</h2>
-                <ul>
-                    <li>MongoDB (contenant mongod)</li>
-					<li>MongoSH (contenant mongosh)</li>
-					<li>MongoDB Command Line Database Tools</li>
-					<li>Compass (facultatif)</li>
-                </ul>
-            </section>
-            <section>
+			<section class="sommaire">
 				<h2>Table des matières :</h2>
-                <div class="tableDesMatieres">
-                    <!-- Table des matières remplie par le JavaScript -->
-                </div>
-            </section>
-            <article>
-				<h2 class="soustitre" id="I">Prise en main</h2>
+				<div class="tableDesMatieres">
+					<!-- Table des matières remplie par le JavaScript -->
+				</div>
+			</section>
+			<article>
+				<h2 class="soustitre" id="1">Prise en main</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="I.1">Installer MongoDB</h3>
+					<h3 class="soustitre" id="1.1">Outils nécessaires</h3>
+					<div class="contenu">
+						<ul>
+							<li>MongoDB (contenant mongod)</li>
+							<li>MongoSH (contenant mongosh)</li>
+							<li>MongoDB Command Line Database Tools</li>
+							<li>Compass (facultatif)</li>
+						</ul>
+					</div>
+
+					<h3 class="soustitre" id="1.2">Installer MongoDB</h3>
 					<div class="contenu">
 						<p>Télécharger MongoDB, et créer un dossier nommé data dans le répertoire C:\ et ajouter un dossier db dans ce dossier.</p>
 						<p>Copier le contenu des dossiers bin de MongoSH et MongoDB Command Line Database Tools dans le dossier bin de MongoDB.</p>
 					</div>
-					<h3 class="soustitre" id="I.2">Démarrer MongoDB</h3>
+
+					<h3 class="soustitre" id="1.3">Démarrer MongoDB</h3>
 					<div class="contenu">
 						<p>Ouvrir mongod.exe dans une console pour démarrer le serveur MongoDB.</p>
 						<p>Ouvrir ensuite mongosh.exe dans une autre console pour démarrer le client au serveur. Appuyer sur entrée pour utiliser le serveur local. C'est dans cette console que le code pourra être exécuté.</p>
 					</div>
-					<h3 class="soustitre" id="I.3">Arrêter proprement MongoDB</h3>
+
+					<h3 class="soustitre" id="1.4">Arrêter proprement MongoDB</h3>
 					<div class="contenu">
-						<p>Dans la console de mongosh.exe, tapez la commande : <span class="script">db.shutdownServer()</span></p>
+						<p>Dans la console de mongosh.exe, tapez la commande : <span class="script ">db.shutdownServer()</span></p>
 					</div>
+
 				</div>
-				<h2 class="soustitre" id="II">Bases</h2>
+				<h2 class="soustitre" id="2">Bases</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="II.1">Syntaxe dans le fichier json</h3>
+					<h3 class="soustitre" id="2.1">Syntaxe dans le fichier json</h3>
 					<div class="contenu">
-						<div class="todo">Bientôt disponible</div>
+						<div class="note "><span style="font-weight: bold; color: #FF0000; ">Bientôt disponible</span></div>
 					</div>
-					<h3 class="soustitre" id="II.2">Commentaires dans un fichier json</h3>
+
+					<h3 class="soustitre" id="2.2">Commentaires dans un fichier json</h3>
 					<div class="contenu">
-						<div class="todo">Bientôt disponible</div>
+						<div class="note "><span style="font-weight: bold; color: #FF0000; ">Bientôt disponible</span></div>
 					</div>
-					<h3 class="soustitre" id="II.3">Les conditions</h3>
+
+					<h3 class="soustitre" id="2.3">Les conditions</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Condition</th>
-								<th>Signe équivalent</th>
+								<th><span style="font-weight: bold; ">Condition</span></th>
+								<th><span style="font-weight: bold; ">Signe équivalent</span></th>
 							</tr>
 							<tr>
-								<td class="script">"<span class="perso">champ</span>" : <span class="perso">valeur</span></td>
+								<td><span class="script ">"</span><span class="script perso ">champ</span><span class="script ">" : </span><span class="script perso ">valeur</span></td>
 								<td>==</td>
 							</tr>
 							<tr>
-								<td class="script">"<span class="perso">champ</span>" : {$eq : <span class="perso">valeur</span>}</td>
+								<td><span class="script ">"</span><span class="script perso ">champ</span><span class="script ">" : {$eq : </span><span class="script perso ">valeur</span><span class="script ">}</span></td>
 								<td>==</td>
 							</tr>
 							<tr>
-								<td class="script">"<span class="perso">champ</span>" : {$lt : <span class="perso">valeur</span>}</td>
+								<td><span class="script ">"</span><span class="script perso ">champ</span><span class="script ">" : {$lt : </span><span class="script perso ">valeur</span><span class="script ">}</span></td>
 								<td>&lt;</td>
 							</tr>
 							<tr>
-								<td class="script">"<span class="perso">champ</span>" : {$lte : <span class="perso">valeur</span>}</td>
+								<td><span class="script ">"</span><span class="script perso ">champ</span><span class="script ">" : {$lte : </span><span class="script perso ">valeur</span><span class="script ">}</span></td>
 								<td>&lt;=</td>
 							</tr>
 							<tr>
-								<td class="script">"<span class="perso">champ</span>" : {$gt : <span class="perso">valeur</span>}</td>
+								<td><span class="script ">"</span><span class="script perso ">champ</span><span class="script ">" : {$gt : </span><span class="script perso ">valeur</span><span class="script ">}</span></td>
 								<td>&gt;</td>
 							</tr>
 							<tr>
-								<td class="script">"<span class="perso">champ</span>" : {$gte : <span class="perso">valeur</span>}</td>
+								<td><span class="script ">"</span><span class="script perso ">champ</span><span class="script ">" : {$gte : </span><span class="script perso ">valeur</span><span class="script ">}</span></td>
 								<td>&gt;=</td>
 							</tr>
 							<tr>
-								<td class="script">"<span class="perso">champ</span>" : {$ne : <span class="perso">valeur</span>}</td>
+								<td><span class="script ">"</span><span class="script perso ">champ</span><span class="script ">" : {$ne : </span><span class="script perso ">valeur</span><span class="script ">}</span></td>
 								<td>!=</td>
 							</tr>
 							<tr>
-								<td class="script">"<span class="perso">champ</span>" : {$in : [<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…]}</td>
+								<td><span class="script ">"</span><span class="script perso ">champ</span><span class="script ">" : {$in : [</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…]}</span></td>
 								<td>Contient une de ces valeurs</td>
 							</tr>
 							<tr>
-								<td class="script">"<span class="perso">champ</span>" : {$nin : [<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…]}</td>
+								<td><span class="script ">"</span><span class="script perso ">champ</span><span class="script ">" : {$nin : [</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…]}</span></td>
 								<td>Ne contient pas une de ces valeurs</td>
 							</tr>
 							<tr>
-								<td class="script">$and : [{<span class="perso">condition1</span>}, {<span class="perso">condition2</span>}…]</td>
-								<td><span class="perso">condition1</span> et <span class="perso">condition2</span></td>
+								<td><span class="script ">$and : [{</span><span class="script perso ">condition1</span><span class="script ">}, {</span><span class="script perso ">condition2</span><span class="script ">}…]</span></td>
+								<td><span class="perso ">condition1</span> et <span class="perso ">condition2</span></td>
 							</tr>
 							<tr>
-								<td class="script">$or : [{<span class="perso">condition1</span>}, {<span class="perso">condition2</span>}…]</td>
-								<td><span class="perso">condition1</span> ou <span class="perso">condition2</span></td>
+								<td><span class="script ">$or : [{</span><span class="script perso ">condition1</span><span class="script ">}, {</span><span class="script perso ">condition2</span><span class="script ">}…]</span></td>
+								<td><span class="perso ">condition1</span> ou <span class="perso ">condition2</span></td>
 							</tr>
 							<tr>
-								<td class="script">$not : {<span class="perso">condition</span>}</td>
-								<td>!<span class="perso">condition</span></td>
+								<td><span class="script ">$not : {</span><span class="script perso ">condition</span><span class="script ">}</span></td>
+								<td>!<span class="perso ">condition</span></td>
 							</tr>
 						</table>
 					</div>
+
 				</div>
-				<h2 class="soustitre" id="III">Requêtes d'initialisation de la base de données</h2>
+				<h2 class="soustitre" id="3">Requêtes d'initialisation de la base de données</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="III.1">Utiliser une base de données (ou la créer si elle n'existe pas) pour réaliser des requêtes</h3>
+					<h3 class="soustitre" id="3.1">Utiliser une base de données (ou la créer si elle n'existe pas) pour réaliser des requêtes</h3>
 					<div class="contenu">
-						<p class="script">use <span class="perso">maBaseDeDonnees</span></p>
+						<p><span class="script ">use </span><span class="script perso ">maBaseDeDonnees</span></p>
 					</div>
-					<h3 class="soustitre" id="III.2">Afficher les bases de données</h3>
+
+					<h3 class="soustitre" id="3.2">Afficher les bases de données</h3>
 					<div class="contenu">
-						<p class="script">show dbs</p>
+						<p><span class="script ">show dbs</span></p>
 					</div>
-					<h3 class="soustitre" id="III.3">Supprimer une base de données</h3>
+
+					<h3 class="soustitre" id="3.3">Supprimer une base de données</h3>
 					<div class="contenu">
-						<p class="script">
-							use <span class="perso">maBaseDeDonnees</span><br/>
-							db.dropDatabase()
-						</p>
+						<p><span class="script ">use </span><span class="script perso ">maBaseDeDonnees</span><span class="script "><br/></span><span class="script ">db.dropDatabase()</span></p>
 					</div>
-					<h3 class="soustitre" id="III.4">Afficher les collections d'une base de données</h3>
+
+					<h3 class="soustitre" id="3.4">Afficher les collections d'une base de données</h3>
 					<div class="contenu">
-						<p class="script">
-							use <span class="perso">maBaseDeDonnees</span><br/>
-							show collections
-						</p>
+						<p><span class="script ">use </span><span class="script perso ">maBaseDeDonnees</span><span class="script "><br/>show collections</span></p>
 					</div>
-					<h3 class="soustitre" id="III.5">Supprimer une collection d'une base de données</h3>
+
+					<h3 class="soustitre" id="3.5">Supprimer une collection d'une base de données</h3>
 					<div class="contenu">
-						<p class="script">
-							use <span class="perso">maBaseDeDonnees</span><br/>
-							db.<span class="perso">maCollection</span>.drop()
-						</p>
+						<p>use <span class="perso ">maBaseDeDonnees</span><br/><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.drop()</span></p>
 					</div>
-					<h3 class="soustitre" id="III.6">Importer une collection (avec mongoimport)</h3>
+
+					<h3 class="soustitre" id="3.6">Importer une collection (avec mongoimport)</h3>
 					<div class="contenu">
-						<p>Ouvrir la console dans le dossier bin du MongoDB, et tapez : <br/>
-							<span class="script">mongoimport <span class="perso">fichier</span>.json /db:<span class="perso">maBaseDeDonnees</span> --jsonArray --collection <span class="perso">maCollection</span></span>
-						</p>
+						<p>Ouvrir la console dans le dossier bin du MongoDB, et tapez : <br/><span class="script ">mongoimport </span><span class="script perso ">fichier</span><span class="script ">.json /db:</span><span class="script perso ">maBaseDeDonnees</span><span class="script "> --jsonArray -</span><span class="script ">-</span><span class="script ">collection </span><span class="script perso ">maCollection</span></p>
+						<div class="note "><span style="color: #FF0000; ">À venir : exportation des données</span></div>
 					</div>
-					<div class="todo">À venir : exportation des données</div>
+
 				</div>
-				<h2 class="soustitre" id="IV">Requêtes de mise à jour de la collection</h2>
+				<h2 class="soustitre" id="4">Requêtes de mise à jour de la collection</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="IV.1">Insérer un document</h3>
+					<h3 class="soustitre" id="4.1">Insérer un document</h3>
 					<div class="contenu">
-						<p class="script">db.<span class="perso">maCollection</span>.insertOne({"<span class="perso">champ1</span>" : <span class="perso">valeur1</span>, "<span class="perso">champ2</span>" : <span class="perso">valeur2</span>…})</p>
-						<div class="note">Si aucune valeur n'est renseignée pour le champ _id, la valeur est générée automatiquement (sous forme d'un Objet et non d'un entier)</div>
+						<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.insertOne({"</span><span class="script perso ">champ1</span><span class="script ">" : </span><span class="script perso ">valeur1</span><span class="script ">, "</span><span class="script perso ">champ2</span><span class="script ">" : </span><span class="script perso ">valeur2</span><span class="script ">…})</span></p>
+						<div class="note ">Si aucune valeur n'est renseignée pour le champ _id, la valeur est générée automatiquement (sous forme d'un Objet et non d'un entier)</div>
 					</div>
-					<h3 class="soustitre" id="IV.2">Insérer plusieurs documents</h3>
+
+					<h3 class="soustitre" id="4.2">Insérer plusieurs documents</h3>
 					<div class="contenu">
-						<p class="script">db.<span class="perso">maCollection</span>.insertMany([{"<span class="perso">champ1</span>" : <span class="perso">valeur1</span>, "<span class="perso">champ2</span>" : <span class="perso">valeur2</span>…}, {"<span class="perso">champ1</span>" : <span class="perso">valeur3</span>, "<span class="perso">champ2</span>" : <span class="perso">valeur4</span>…}])</p>
+						<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.insertMany([{"</span><span class="script perso ">champ1</span><span class="script ">" : </span><span class="script perso ">valeur1</span><span class="script ">, "</span><span class="script perso ">champ2</span><span class="script ">" : </span><span class="script perso ">valeur2</span><span class="script ">…}, {"</span><span class="script perso ">champ1</span><span class="script ">" : </span><span class="script perso ">valeur3</span><span class="script ">, "</span><span class="script perso ">champ2</span><span class="script ">" : </span><span class="script perso ">valeur4</span><span class="script ">…}])</span></p>
 					</div>
-					<h3 class="soustitre" id="IV.3">Mettre à jour un document</h3>
+
+					<h3 class="soustitre" id="4.3">Mettre à jour un document</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="IV.3.1">Mise à jour simple</h4>
+						<h4 class="soustitre" id="4.3.1">Mise à jour simple</h4>
 						<div class="contenu">
-							<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$set : {"<span class="perso">champ1</span>" : <span class="perso">valeur1</span>}})</p>
+							<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$set : {"</span><span class="script perso ">champ1</span><span class="script ">" : </span><span class="script perso ">valeur1</span><span class="script ">}})</span></p>
 						</div>
-						<h4 class="soustitre" id="IV.3.2">Faire incrémenter un document</h4>
+
+						<h4 class="soustitre" id="4.3.2">Faire incrémenter un document</h4>
 						<div class="contenu">
-							<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$inc : {"<span class="perso">champ1</span>" : <span class="perso">valeur1</span>}})</p>
+							<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$inc : {"</span><span class="script perso ">champ1</span><span class="script ">" : </span><span class="script perso ">valeur1</span><span class="script ">}})</span></p>
 						</div>
-						<h4 class="soustitre" id="IV.3.3">Mettre à jour un tableau</h4>
+
+						<h4 class="soustitre" id="4.3.3">Mettre à jour un tableau</h4>
 						<div class="contenu">
-							<h5 class="soustitre" id="IV.3.3.1">Pour un rang du tableau</h5>
+							<h5 class="soustitre" id="4.3.3.1">Pour un rang du tableau</h5>
 							<div class="contenu">
-								<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$set : {"<span class="perso">tableau</span>.<span class="perso">rang</span>" : <span class="perso">valeur1</span>}})</p>
+								<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$set : {"</span><span class="script perso ">tableau</span><span class="script ">.</span><span class="script perso ">rang</span><span class="script ">" : </span><span class="script perso ">valeur1</span><span class="script ">}})</span></p>
 							</div>
-							<h5 class="soustitre" id="IV.3.3.2">Pour ajouter une valeur dans le tableau sans redondance</h5>
+
+							<h5 class="soustitre" id="4.3.3.2">Pour ajouter une valeur dans le tableau sans redondance</h5>
 							<div class="contenu">
-								<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$addToSet : {"<span class="perso">tableau</span>" : <span class="perso">valeur1</span>}})</p>
+								<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$addToSet : {"</span><span class="script perso ">tableau</span><span class="script ">" : </span><span class="script perso ">valeur1</span><span class="script ">}})</span></p>
 							</div>
-							<h5 class="soustitre" id="IV.3.3.3">Pour ajouter une valeur dans le tableau avec redondance</h5>
+
+							<h5 class="soustitre" id="4.3.3.3">Pour ajouter une valeur dans le tableau avec redondance</h5>
 							<div class="contenu">
-								<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$push : {"<span class="perso">tableau</span>" : <span class="perso">valeur1</span>}})</p>
+								<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$push : {"</span><span class="script perso ">tableau</span><span class="script ">" : </span><span class="script perso ">valeur1</span><span class="script ">}})</span></p>
 							</div>
-							<h5 class="soustitre" id="IV.3.3.4">Pour ajouter plusieurs valeurs dans le tableau (avec ou sans redondance)</h5>
+
+							<h5 class="soustitre" id="4.3.3.4">Pour ajouter plusieurs valeurs dans le tableau (avec ou sans redondance)</h5>
 							<div class="contenu">
-								<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$addToSet : {"<span class="perso">tableau</span>" : {$each : [<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…]}}})</p>
+								<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$addToSet : {"</span><span class="script perso ">tableau</span><span class="script ">" : {$each : [</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…]}}})</span></p>
 							</div>
-							<h5 class="soustitre" id="IV.3.3.5">Pour supprimer une valeur dans le tableau sans redondance</h5>
+
+							<h5 class="soustitre" id="4.3.3.5">Pour supprimer une valeur dans le tableau sans redondance</h5>
 							<div class="contenu">
-								<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$pull : {"<span class="perso">tableau</span>" : <span class="perso">valeur1</span>}})</p>
+								<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$pull : {"</span><span class="script perso ">tableau</span><span class="script ">" : </span><span class="script perso ">valeur1</span><span class="script ">}})</span></p>
 							</div>
-							<h5 class="soustitre" id="IV.3.3.6">Pour mettre à jour une occurrence du tableau des valeurs (respectant les conditions)</h5>
+
+							<h5 class="soustitre" id="4.3.3.6">Pour mettre à jour une occurrence du tableau des valeurs (respectant les conditions)</h5>
 							<div class="contenu">
-								<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$inc : {"<span class="perso">tableau</span>.$" : <span class="perso">valeur1</span>}})</p>
+								<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$inc : {"</span><span class="script perso ">tableau</span><span class="script ">.$" : </span><span class="script perso ">valeur1</span><span class="script ">}})</span></p>
 							</div>
-							<h5 class="soustitre" id="IV.3.3.7">Pour mettre à jour toutes les occurrences du tableau des valeurs</h5>
+
+							<h5 class="soustitre" id="4.3.3.7">Pour mettre à jour toutes les occurrences du tableau des valeurs</h5>
 							<div class="contenu">
-								<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$inc : {"<span class="perso">tableau</span>.$[]" : <span class="perso">valeur1</span>}})</p>
+								<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$inc : {"</span><span class="script perso ">tableau</span><span class="script ">.$[]" : </span><span class="script perso ">valeur1</span><span class="script ">}})</span></p>
 							</div>
+
 						</div>
-						<h4 class="soustitre" id="IV.3.4">Supprimer un champ</h4>
+
+						<h4 class="soustitre" id="4.3.4">Supprimer un champ</h4>
 						<div class="contenu">
-							<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$unset : "<span class="perso">champ1</span>"})</p>
+							<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$unset : "</span><span class="script perso ">champ1</span><span class="script ">"})</span></p>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="IV.4">Mettre à jour plusieurs documents</h3>
+
+					<h3 class="soustitre" id="4.4">Mettre à jour plusieurs documents</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="IV.4.1">Mise à jour simple</h4>
+						<h4 class="soustitre" id="4.4.1">Mise à jour simple</h4>
 						<div class="contenu">
-							<p class="script">db.<span class="perso">maCollection</span>.updateMany({<span class="perso">condition</span>}, {$set : {"<span class="perso">champ1</span>" : <span class="perso">valeur1</span>}})</p>
+							<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateMany({</span><span class="script perso ">condition</span><span class="script ">}, {$set : {"</span><span class="script perso ">champ1</span><span class="script ">" : </span><span class="script perso ">valeur1</span><span class="script ">}})</span></p>
 						</div>
-						<h4 class="soustitre" id="IV.4.2">Faire incrémenter plusieurs documents</h4>
+
+						<h4 class="soustitre" id="4.4.2">Faire incrémenter plusieurs documents</h4>
 						<div class="contenu">
-							<p class="script">db.<span class="perso">maCollection</span>.updateMany({<span class="perso">condition</span>}, {$inc : {"<span class="perso">champ1</span>" : <span class="perso">valeur1</span>}})</p>
+							<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateMany({</span><span class="script perso ">condition</span><span class="script ">}, {$inc : {"</span><span class="script perso ">champ1</span><span class="script ">" : </span><span class="script perso ">valeur1</span><span class="script ">}})</span></p>
 						</div>
-						<h4 class="soustitre" id="IV.4.3">Mettre à jour un tableau</h4>
+
+						<h4 class="soustitre" id="4.4.3">Mettre à jour un tableau</h4>
 						<div class="contenu">
-							<h5 class="soustitre" id="IV.4.3.1">Pour un rang du tableau</h5>
+							<h5 class="soustitre" id="4.4.3.1">Pour un rang du tableau</h5>
 							<div class="contenu">
-								<p class="script">db.<span class="perso">maCollection</span>.updateMany({<span class="perso">condition</span>}, {$set : {"<span class="perso">tableau</span>.<span class="perso">rang</span>" : <span class="perso">valeur1</span>}})</p>
+								<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateMany({</span><span class="script perso ">condition</span><span class="script ">}, {$set : {"</span><span class="script perso ">tableau</span><span class="script ">.</span><span class="script perso ">rang</span><span class="script ">" : </span><span class="script perso ">valeur1</span><span class="script ">}})</span></p>
 							</div>
-							<h5 class="soustitre" id="IV.4.3.2">Pour ajouter une valeur dans le tableau sans redondance</h5>
+
+							<h5 class="soustitre" id="4.4.3.2">Pour ajouter une valeur dans le tableau sans redondance</h5>
 							<div class="contenu">
-								<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$addToSet : {"<span class="perso">tableau</span>" : <span class="perso">valeur1</span>}})</p>
+								<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$addToSet : {"</span><span class="script perso ">tableau</span><span class="script ">" : </span><span class="script perso ">valeur1</span><span class="script ">}})</span></p>
 							</div>
-							<h5 class="soustitre" id="IV.4.3.3">Pour ajouter une valeur dans le tableau avec redondance</h5>
+
+							<h5 class="soustitre" id="4.4.3.3">Pour ajouter une valeur dans le tableau avec redondance</h5>
 							<div class="contenu">
-								<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$push : {"<span class="perso">tableau</span>" : <span class="perso">valeur1</span>}})</p>
+								<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$push : {"</span><span class="script perso ">tableau</span><span class="script ">" : </span><span class="script perso ">valeur1</span><span class="script ">}})</span></p>
 							</div>
-							<h5 class="soustitre" id="IV.4.3.4">Pour ajouter plusieurs valeurs dans le tableau (avec ou sans redondance)</h5>
+
+							<h5 class="soustitre" id="4.4.3.4">Pour ajouter plusieurs valeurs dans le tableau (avec ou sans redondance)</h5>
 							<div class="contenu">
-								<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$addToSet : {"<span class="perso">tableau</span>" : {$each : [<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…]}}})</p>
+								<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$addToSet : {"</span><span class="script perso ">tableau</span><span class="script ">" : {$each : [</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…]}}})</span></p>
 							</div>
-							<h5 class="soustitre" id="IV.4.3.5">Pour supprimer une valeur dans le tableau sans redondance</h5>
+
+							<h5 class="soustitre" id="4.4.3.5">Pour supprimer une valeur dans le tableau sans redondance</h5>
 							<div class="contenu">
-								<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$pull : {"<span class="perso">tableau</span>" : <span class="perso">valeur1</span>}})</p>
+								<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$pull : {"</span><span class="script perso ">tableau</span><span class="script ">" : </span><span class="script perso ">valeur1</span><span class="script ">}})</span></p>
 							</div>
-							<h5 class="soustitre" id="IV.4.3.6">Pour mettre à jour une occurrence du tableau des valeurs (respectant les conditions)</h5>
+
+							<h5 class="soustitre" id="4.4.3.6">Pour mettre à jour une occurrence du tableau des valeurs (respectant les conditions)</h5>
 							<div class="contenu">
-								<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$inc : {"<span class="perso">tableau</span>.$" : <span class="perso">valeur1</span>}})</p>
+								<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$inc : {"</span><span class="script perso ">tableau</span><span class="script ">.$" : </span><span class="script perso ">valeur1</span><span class="script ">}})</span></p>
 							</div>
-							<h5 class="soustitre" id="IV.4.3.7">Pour mettre à jour toutes les occurrences du tableau des valeurs</h5>
+
+							<h5 class="soustitre" id="4.4.3.7">Pour mettre à jour toutes les occurrences du tableau des valeurs</h5>
 							<div class="contenu">
-								<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$inc : {"<span class="perso">tableau</span>.$[]" : <span class="perso">valeur1</span>}})</p>
+								<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$inc : {"</span><span class="script perso ">tableau</span><span class="script ">.$[]" : </span><span class="script perso ">valeur1</span><span class="script ">}})</span></p>
 							</div>
-							<h5 class="soustitre" id="IV.4.3.8">Pour mettre à jour toutes les occurrences du tableau des valeurs respectant la condition du tableau</h5>
+
+							<h5 class="soustitre" id="4.4.3.8">Pour mettre à jour toutes les occurrences du tableau des valeurs respectant la condition du tableau</h5>
 							<div class="contenu">
-								<p class="script">db.<span class="perso">maCollection</span>.updateOne({<span class="perso">condition</span>}, {$inc : {"<span class="perso">tableau</span>.$[elem].<span class="perso">champ1Tableau</span>" : <span class="perso">valeur1</span>}}, {arrayFilters: [{"elem.<span class="perso">champ2Tableau</span>" : <span class="perso">valeur2</span>}]})</p>
+								<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateOne({</span><span class="script perso ">condition</span><span class="script ">}, {$inc : {"</span><span class="script perso ">tableau</span><span class="script ">.$[</span><span class="script perso ">elem</span><span class="script ">].</span><span class="script perso ">champ1Tableau</span><span class="script ">" : </span><span class="script perso ">valeur1</span><span class="script ">}}, {</span><span class="script ">arrayFilters</span><span class="script perso "> </span><span class="script ">: [{"</span><span class="script perso ">elem</span><span class="script ">.</span><span class="script perso ">champ2Tableau</span><span class="script ">" : </span><span class="script perso ">valeur2</span><span class="script ">}]})</span></p>
 							</div>
+
 						</div>
-						<h4 class="soustitre" id="IV.4.4">Supprimer un champ</h4>
+
+						<h4 class="soustitre" id="4.4.4">Supprimer un champ</h4>
 						<div class="contenu">
-							<p class="script">db.<span class="perso">maCollection</span>.updateMany({<span class="perso">condition</span>}, {$unset : "<span class="perso">champ1</span>"})</p>
+							<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateMany({</span><span class="script perso ">condition</span><span class="script ">}, {$unset : "</span><span class="script perso ">champ1</span><span class="script ">"})</span></p>
 						</div>
-						<h4 class="soustitre" id="IV.4.5">Mises à jour multiples</h4>
+
+						<h4 class="soustitre" id="4.4.5">Mises à jour multiples</h4>
 						<div class="contenu">
-							<p class="script">db.<span class="perso">maCollection</span>.updateMany({<span class="perso">condition</span>}, [{$set : {"<span class="perso">champ1</span>" : <span class="perso">valeur1</span>}, {$set : {"<span class="perso">champ2</span>" : <span class="perso">valeur2</span>}}…])</p>
+							<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.updateMany({</span><span class="script perso ">condition</span><span class="script ">}, [{$set : {"</span><span class="script perso ">champ1</span><span class="script ">" : </span><span class="script perso ">valeur1</span><span class="script ">}, {$set : {"</span><span class="script perso ">champ2</span><span class="script ">" : </span><span class="script perso ">valeur2</span><span class="script ">}}…])</span></p>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="IV.5">Supprimer un document</h3>
+
+					<h3 class="soustitre" id="4.5">Supprimer un document</h3>
 					<div class="contenu">
-						<p class="script">db.<span class="perso">maCollection</span>.deleteOne({<span class="perso">condition</span>})</p>
+						<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.deleteOne({</span><span class="script perso ">condition</span><span class="script ">})</span></p>
 					</div>
-					<h3 class="soustitre" id="IV.6">Supprimer plusieurs document</h3>
+
+					<h3 class="soustitre" id="4.6">Supprimer plusieurs documents</h3>
 					<div class="contenu">
-						<p class="script">db.<span class="perso">maCollection</span>.deleteMany({<span class="perso">condition</span>})</p>
+						<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.deleteMany({</span><span class="script perso ">condition</span><span class="script ">})</span></p>
 					</div>
+
 				</div>
-				<h2 class="soustitre" id="V">Requêtes de sélection de données</h2>
+				<h2 class="soustitre" id="5">Requêtes de sélection de données</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="V.1">find</h3>
+					<h3 class="soustitre" id="5.1">find</h3>
 					<div class="contenu">
 						<p>La commande find permet d'interroger une base de données MongoDB et de renvoyer toutes les valeurs de la collection.</p>
-						<h4 class="soustitre" id="V.1.1">Afficher toute la collection</h4>
+						<h4 class="soustitre" id="5.1.1">Afficher toute la collection</h4>
 						<div class="contenu">
-							<p class="script">db.<span class="perso">maCollection</span>.find({})</p>
+							<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.find({})</span></p>
 						</div>
-						<h4 class="soustitre" id="V.1.2">Afficher certains champs</h4>
+
+						<h4 class="soustitre" id="5.1.2">Afficher certains champs</h4>
 						<div class="contenu">
-							<p class="script">db.<span class="perso">maCollection</span>.find({}, {"_id" : 0, "<span class="perso">champ1</span>" : 1, "<span class="perso">champ2</span>" : 1…})</p>
-							<div class="note">
-								Par défaut, le champ _id est toujours affiché, pour le masquer, définir la visibilité à 0. Pour afficher un champ, définir la visibilité à 1.
-							</div>
+							<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.find({}, {"_id" : 0, "</span><span class="script perso ">champ1</span><span class="script ">" : 1, "</span><span class="script perso ">champ2</span><span class="script ">" : 1…})</span></p>
+							<div class="note ">Par défaut, le champ _id est toujours affiché, pour le masquer, définir la visibilité à 0. Pour afficher un champ, définir la visibilité à 1.</div>
 						</div>
-						<h4 class="soustitre" id="V.1.3">Afficher certains champs d'une liste</h4>
+
+						<h4 class="soustitre" id="5.1.3">Afficher certains champs d'une liste</h4>
 						<div class="contenu">
-							<p class="script">db.<span class="perso">maCollection</span>.find({}, {"_id" : 0, "<span class="perso">liste1</span>.<span class="perso">champ1</span>" : 1, "<span class="perso">champ2</span>" : 1…})</p>
+							<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.find({}, {"_id" : 0, "</span><span class="script perso ">liste1</span><span class="script ">.</span><span class="script perso ">champ1</span><span class="script ">" : 1, "</span><span class="script perso ">champ2</span><span class="script ">" : 1…})</span></p>
 						</div>
-						<h4 class="soustitre" id="V.1.4">Afficher les documents respectant la condition</h4>
+
+						<h4 class="soustitre" id="5.1.4">Afficher les documents respectant la condition</h4>
 						<div class="contenu">
-							<p class="script">db.<span class="perso">maCollection</span>.find({<span class="perso">condition</span>}, {"_id" : 0, "<span class="perso">champ1</span>" : 1, "<span class="perso">champ2</span>" : 1…})</p>
+							<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.find({</span><span class="script perso ">condition</span><span class="script ">}, {"_id" : 0, "</span><span class="script perso ">champ1</span><span class="script ">" : 1, "</span><span class="script perso ">champ2</span><span class="script ">" : 1…})</span></p>
 						</div>
-						<h4 class="soustitre" id="V.1.5">Limiter le nombre de documents à afficher</h4>
+
+						<h4 class="soustitre" id="5.1.5">Limiter le nombre de documents à afficher</h4>
 						<div class="contenu">
-							<p class="script">db.<span class="perso">maCollection</span>.find({<span class="perso">condition</span>}, {"_id" : 0, "<span class="perso">champ1</span>" : 1, "<span class="perso">champ2</span>" : 1…}).limit(<span class="perso">n</span>)</p>
+							<p><span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.find({</span><span class="script perso ">condition</span><span class="script ">}, {"_id" : 0, "</span><span class="script perso ">champ1</span><span class="script ">" : 1, "</span><span class="script perso ">champ2</span><span class="script ">" : 1…}).limit(</span><span class="script perso ">n</span><span class="script ">)</span></p>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="V.2">distinct</h3>
+
+					<h3 class="soustitre" id="5.2">distinct</h3>
 					<div class="contenu">
-						<p>La commande distinct permet d'afficher facilement différentes valeur que peut prendre un champ</p>
-						<p>Commande : <span class="script">db.<span class="perso">maCollection</span>.distinct("<span class="perso">champ</span>")</span></p>
+						<p>La commande distinct permet d'afficher facilement différentes valeur que peut prendre un champ.</p>
+						<p>Commande : <span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.distinct("</span><span class="script perso ">champ</span><span class="script ">")</span></p>
 					</div>
-					<h3 class="soustitre" id="V.3">aggregate</h3>
+
+					<h3 class="soustitre" id="5.3">aggregate</h3>
 					<div class="contenu">
 						<p>la commande aggregate permet de faire des requêtes plus avancées, notamment des calculs sur les attributs.</p>
-						<p>Commande : <span class="script">db.<span class="perso">maCollection</span>.aggregate([{<span class="perso">operateur1</span>}, {<span class="perso">operateur2</span>}…])</span></p>
-						<h4 class="soustitre" id="V.3.1">L'opérateur group</h4>
+						<p>Commande : <span class="script ">db.</span><span class="script perso ">maCollection</span><span class="script ">.aggregate([{</span><span class="script perso ">operateur1</span><span class="script ">}, {</span><span class="script perso ">operateur2</span><span class="script ">}…])</span></p>
+						<h4 class="soustitre" id="5.3.1">L'opérateur group</h4>
 						<div class="contenu">
-							<h5 class="soustitre" id="V.3.1.1">Grouper sur un champ</h5>
+							<h5 class="soustitre" id="5.3.1.1">Grouper sur un champ</h5>
 							<div class="contenu">
-								<p class="script">$group : {_id : "$<span class="perso">champ</span>"}</p>
+								<p><span class="script ">$group : {_id : "$</span><span class="script perso ">champ</span><span class="script ">"}</span></p>
 							</div>
-							<h5 class="soustitre" id="V.3.1.2">Grouper sur un champ et faire des calculs</h5>
+
+							<h5 class="soustitre" id="5.3.1.2">Grouper sur un champ et faire des calculs</h5>
 							<div class="contenu">
-								<h6 class="soustitre" id="V.3.1.2.1">Commande pour grouper un champ et faire des calculs</h6>
+								<h6 class="soustitre" id="5.3.1.2.1">Commande pour grouper un champ et faire des calculs</h6>
 								<div class="contenu">
-									<p class="script">$group : {_id : "$<span class="perso">champ</span>", <span class="perso">nomChamp</span> : {<span class="perso">operateurCalcul</span>}}</p>
-									<div class="note">
-										Note : Pour faire des calculs sur tous les documents, il est possible de faire :<br/>
-										<span class="script">$group : {_id : null, <span class="perso">nomChamp</span> : {<span class="perso">operateurCalcul</span>}}</span>
-									</div>
-									<br/>
+									<p><span class="script ">$group : {_id : "$</span><span class="script perso ">champ</span><span class="script ">", </span><span class="script perso ">nomChamp</span><span class="script "> : {</span><span class="script perso ">operateurCalcul</span><span class="script ">}}</span></p>
+									<div class="note ">Note : Pour faire des calculs sur tous les documents, il est possible de faire :<br/><span class="script ">$group : {_id : null, </span><span class="script perso ">nomChamp</span><span class="script "> : {</span><span class="script perso ">operateurCalcul</span><span class="script ">}}</span></div>
 								</div>
-								<h6 class="soustitre" id="V.3.1.2.2">Les différents calculs possibles</h6>
+
+								<h6 class="soustitre" id="5.3.1.2.2">Les différents calculs possibles</h6>
 								<div class="contenu">
 									<table>
 										<tr>
-											<th>Opérateur de calcul</th>
-											<th>Utilité</th>
+											<th><span style="font-weight: bold; ">Opérateur de calcul</span></th>
+											<th><span style="font-weight: bold; ">Utilité</span></th>
 										</tr>
 										<tr>
-											<td class="script">$sum : "$<span class="perso">champ</span>"</td>
+											<td><span class="script ">$sum : "$</span><span class="script perso ">champ</span><span class="script ">"</span></td>
 											<td>Calculer la somme des valeurs</td>
 										</tr>
 										<tr>
-											<td class="script">$avg : "$<span class="perso">champ</span>"</td>
+											<td><span class="script ">$avg : "$</span><span class="script perso ">champ</span><span class="script ">"</span></td>
 											<td>Calculer la moyenne des valeurs</td>
 										</tr>
 										<tr>
-											<td class="script">$min : "$<span class="perso">champ</span>"</td>
+											<td><span class="script ">$min : "$</span><span class="script perso ">champ</span><span class="script ">"</span></td>
 											<td>Calculer la valeur minimale</td>
 										</tr>
 										<tr>
-											<td class="script">$max : "$<span class="perso">champ</span>"</td>
+											<td><span class="script ">$max : "$</span><span class="script perso ">champ</span><span class="script ">"</span></td>
 											<td>Calculer la valeur maximale</td>
 										</tr>
 										<tr>
-											<td class="script">$count : {}</td>
+											<td><span class="script ">$count : {}</span></td>
 											<td>Calculer le nombre d’documents (à partir de la version 5.0 de mongoDB)</td>
 										</tr>
 										<tr>
-											<td class="script">$sum : 1</td>
+											<td><span class="script ">$sum : 1</span></td>
 											<td>Calculer le nombre d’documents (pour toutes les versions)</td>
 										</tr>
 									</table>
 								</div>
+
 							</div>
+
 						</div>
-						<h4 class="soustitre" id="V.3.2">L'opérateur match</h4>
+
+						<h4 class="soustitre" id="5.3.2">L'opérateur match</h4>
 						<div class="contenu">
 							<p>Cet opérateur permet d'utiliser une condition (avant ou après un regroupement).</p>
-							<p>Commande : <span class="script">$match : {<span class="perso">condition</span>}</p>
+							<p>Commande : <span class="script ">$match : {</span><span class="script perso ">condition</span><span class="script ">}</span></p>
 						</div>
-						<h4 class="soustitre" id="V.3.3">L'opérateur unwind</h4>
+
+						<h4 class="soustitre" id="5.3.3">L'opérateur unwind</h4>
 						<div class="contenu">
 							<p>Cet opérateur permet de transformer chaque élément d’un tableau en un document séparé contenant tous les champs.</p>
-							<p>Commande : <span class="script">$unwind : "$<span class="perso">tableau</span>"</p>
+							<p>Commande : <span class="script ">$unwind : "$</span><span class="script perso ">tableau</span><span class="script ">"</span></p>
+							<h5 class="soustitre" id="5.3.3.1">L'opérateur sort</h5>
+							<div class="contenu">
+								<p>Cet opérateur permet de trier les résultats dans l'ordre croissant (1) ou dans l'ordre décroissant (-1).</p>
+								<p>Commande : <span class="script ">$sort : {"</span><span class="script perso ">champ1</span><span class="script ">" : </span><span class="script perso ">ordre1</span><span class="script ">, "</span><span class="script perso ">champ2</span><span class="script ">" : </span><span class="script perso ">ordre2</span><span class="script ">…}</span></p>
+							</div>
+
+							<h5 class="soustitre" id="5.3.3.2">L'opérateur project</h5>
+							<div class="contenu">
+								<p>Cet opérateur permet de n'afficher que certains champs. C'est l'équivalent de la commande find.</p>
+								<p>Commande : <span class="script ">$project : {"_id" : 0, "</span><span class="script perso ">champ1</span><span class="script ">" : 1, "</span><span class="script perso ">champ2</span><span class="script ">" : 1…}</span></p>
+								
+							</div>
+
 						</div>
-						<h4 class="soustitre" id="V.3.4">L'opérateur sort</h4>
-						<div class="contenu">
-							<p>Cet opérateur permet de trier les résultats dans l'ordre croissant (1) ou dans l'ordre décroissant (-1).</p>
-							<p>Commande : <span class="script">$sort : {"<span class="perso">champ1</span>" : <span class="perso">ordre1</span>, "<span class="perso">champ2</span>" : <span class="perso">ordre2</span>…}</p>
-						</div>
-						<h4 class="soustitre" id="V.3.5">L'opérateur project</h4>
-						<div class="contenu">
-							<p>Cet opérateur permet de n'afficher que certains champs. C'est l'équivalent de la commande find.</p>
-							<p>Commande : <span class="script">$project : {"_id" : 0, "<span class="perso">champ1</span>" : 1, "<span class="perso">champ2</span>" : 1…}</span></p>
-						</div>
-						<!--
-						<h4 class="soustitre" id="V.3.6">L'opérateur lookup</h4>
-						<div class="contenu">
-							<p>Cet opérateur permet de .</p>
-							<p>Commande : <span class="script">$sort : $<span class="perso">condition</span></p>
-						</div>
-						-->
-						<div class="todo">À venir : d'autres opérateurs</div>
+
 					</div>
-					<!--
-					<h3 class="soustitre" id=""></h3>
-					<div class="contenu">
-						<p></p>
-					</div>
-					-->
-				</div>
-				<!--
-				<h2 class="soustitre" id="VI">Autres requêtes de données</h2>
-				<div class="contenu">
 
 				</div>
-				-->
-                <!--
-				<h2 class="soustitre" id=""></h2>
-				<div class="contenu">
-
-				</div>
-				
-				&nbsp; : 1 espace obligatoire
-				-->
 			</article>
 		</main>
 		<footer>
 			<script src="../../scripts/footer.js"></script>
 			<a class="top" href="#"><img src="../../images/top.png"></a>
 		</footer>
+		<script src="../../scripts/script.js"></script>
+		<script src="../../scripts/tableDesMatieres.js"></script>
 	</body>
-	<script src="../../scripts/script.js"></script>
-	<script src="../../scripts/tableDesMatieres.js"></script>
 </html>

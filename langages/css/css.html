@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Loric Informatique (page générée automatiquement à partir d'un document Word XML) -->
 <html lang="fr-FR">
 	<head>
 		<title>Loric Informatique - CSS</title>
@@ -16,1362 +16,1133 @@
 			<section class="presentation">
 				<div class="alignementVertical">
 					<div>
-						<h1>CSS</h1>
-						<p class="version">Version 1.0 (créé le 20/04/2024, modifié le 27/05/2024)</p>
-                        <p>CSS (Cascading Style Sheets) est un langage utilisé pour mettre en forme une page web.</p>
+						<h1>Mémento CSS</h1>
+						<p class="version">Version 2.0 (créé le 20/04/2024, modifié le 26/08/2024) </p>
+						<p>CSS (Cascading Style Sheets) est un langage utilisé pour mettre en forme une page web.</p>
 						<a href="Loric Informatique - CSS.pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
 						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de choisir le format A4, de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
 					</div>
-					<img src="icone_css.png" class="logoLangage">
+					<img src="icone_css.png" class="logoLangage"/>
 				</div>
 			</section>
-            <section class="outils">
-                <h2>Outils nécessaires :</h2>
-                <ul>
-                    <li>Navigateur Internet à jour (ex : Firefox ou Chrome)</li>
-					<li>Un logiciel de codage (Visual Studio Code (recommandé) ou Notepad++)</li>
-					<li>Connaissances en HTML</li>
-					<li>Validateur CSS : <a href="https://jigsaw.w3.org/css-validator/" target="_blank">https://jigsaw.w3.org/css-validator/</a></li>
-                </ul>
-            </section>
-            <section>
+			<section class="sommaire">
 				<h2>Table des matières :</h2>
-                <div class="tableDesMatieres">
-                    <!-- Table des matières remplie par le JavaScript -->
-                </div>
-            </section>
-            <article>
-				<h2 class="soustitre" id="I">Bases</h2>
+				<div class="tableDesMatieres">
+					<!-- Table des matières remplie par le JavaScript -->
+				</div>
+			</section>
+			<article>
+				<h2 class="soustitre" id="1">Prise en main</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="I.1">Syntaxe</h3>
+					<h3 class="soustitre" id="1.1">Outils nécessaires</h3>
 					<div class="contenu">
-						<p class="script"> <!-- &lt; &nbsp; &gt; -->
-							<span class="perso">selecteur1</span> {<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur1</span>;<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut3</span>: <span class="perso">valeur2</span>;<br/>
-							}<br/>
-							<span class="perso">selecteur2</span> {<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut3</span>: <span class="perso">valeur3</span>;<br/>
-							}
-						</p>
+						<ul>
+							<li>Navigateur Internet à jour (ex : Firefox ou Chrome)</li>
+							<li>Un logiciel de codage (Visual Studio Code (recommandé) ou Notepad++)</li>
+							<li>Connaissances en HTML</li>
+							<li>Validateur CSS : <a href="https://jigsaw.w3.org/css-validator/" target="_blank">https://jigsaw.w3.org/css-validator/</a> </li>
+						</ul>
 					</div>
-					<h3 class="soustitre" id="I.2">Où écrire le code CSS ?</h3>
+
+					<h3 class="soustitre" id="1.2">Où écrire le code CSS ?</h3>
 					<div class="contenu">
-						<p>Soit dans un fichier (ex : style.css), mais entre les balises <span class="script">&lt;head&gt;&lt;/head&gt;</span>, il faut rajouter : <span class="script">&lt;link rel="stylesheet" href="<span class="perso">style.css</span>"/&gt;</span></p>
-						<p>Soit entre les balises <span class="script">&lt;style&gt;&lt;/style&gt;</span>, placées dans <span class="script">&lt;body&gt;&lt;/body&gt;</span> (à éviter)</p>
+						<p>Soit dans un fichier (ex : style.css), mais entre les balises <span class="script ">&lt;head&gt;&lt;/head&gt;</span>, il faut rajouter : <span class="script ">&lt;link rel="stylesheet" href="style.css"/&gt;</span></p>
+						<p>Soit entre les balises <span class="script ">&lt;style&gt;&lt;/style&gt;</span>, placées dans <span class="script ">&lt;body&gt;&lt;/body&gt;</span> dans le fichier HTML (à éviter).</p>
 					</div>
-					<h3 class="soustitre" id="I.3">Commentaires</h3>
+
+				</div>
+				<h2 class="soustitre" id="2">Bases</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="2.1">Syntaxe</h3>
 					<div class="contenu">
-						<p class="script commentaire">
-							/*<br/>
-							Commentaire pouvant être sur une ou plusieurs lignes<br/>
-							*/
-						</p>
+						<p><span class="script perso ">selecteur1</span><span class="script "> {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">attribut1</span><span class="script ">: </span><span class="script perso ">valeur1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">attribut3</span><span class="script ">: </span><span class="script perso ">valeur2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span><span class="script "><br/></span><span class="script perso ">selecteur2</span><span class="script "> {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">attribut3</span><span class="script ">: </span><span class="script perso ">valeur3</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></p>
 					</div>
-					<h3 class="soustitre" id="I.4">Les variables</h3>
+
+					<h3 class="soustitre" id="2.2">Commentaires</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="I.4.1">Déclarer une variable</h4>
+						<p><span class="script ">/*</span><span class="script "><br/></span><span class="script ">Commentaire pouvant être sur une ou plusieurs lignes</span><span class="script "><br/></span><span class="script ">*/</span></p>
+					</div>
+
+					<h3 class="soustitre" id="2.3">Les variables</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="2.3.1">Déclarer une variable</h4>
 						<div class="contenu">
 							<p>Les variables sont à déclarer dans le sélecteur html et peuvent prendre n'importe quel type de valeurs.</p>
-							<p class="script">
-								html {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;--<span class="perso">ma-variable</span>: <span class="perso">valeur</span>;<br/>
-								}
-							</p>
+							<p>Syntaxe :</p>
+							<p><span class="script ">html {</span><span class="script "><br/>    --</span><span class="script perso ">ma-variable</span><span class="script ">: </span><span class="script perso ">valeur</span><span class="script ">;</span><span class="script "><br/>}</span></p>
 						</div>
-						<h4 class="soustitre" id="I.4.2">Utiliser une variable</h4>
+
+						<h4 class="soustitre" id="2.3.2">Utiliser une variable</h4>
 						<div class="contenu">
-							<p class="script">
-								<span class="perso">attribut</span>: var(--<span class="perso">ma-variable</span>);
-							</p>
+							<p><span class="script perso ">attribut</span><span class="script ">: var(--</span><span class="script perso ">ma-variable</span><span class="script ">); </span></p>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="I.5">Les couleurs</h4>
+
+					<h3 class="soustitre" id="2.4">Les couleurs</h3>
 					<div class="contenu">
 						<table>
 							<tr>
+								<th><span style="font-weight: bold; ">Format des couleurs</span></th>
+								<th><span style="font-weight: bold; ">Exemples de valeurs possibles</span></th>
+							</tr>
+							<tr>
 								<td>Couleurs prédéfinies</td>
-								<td>
-									<span style="color: blue;">blue</span>
-									<span style="color: green;">green</span>
-									<span style="color: red;">red</span>
-									<span style="color: yellow;">yellow</span>
-								</td>
+								<td><span class="script " style="color: #0000FF; ">blue</span><span class="script "> </span><span class="script " style="color: #008000; ">green</span><span class="script "> </span><span class="script " style="color: #FF0000; ">red</span><span class="script "> </span></td>
 							</tr>
 							<tr>
 								<td>Code hexadécimal #rrggbb</td>
-								<td>
-									#3a3aff
-								</td>
+								<td><span class="script ">#3a3aff </span></td>
 							</tr>
 							<tr>
 								<td>Système RGB</td>
-								<td>
-									rgb(58, 58, 255);
-								</td>
+								<td><span class="script ">rgb(58, 58, 255); </span></td>
 							</tr>
 							<tr>
 								<td>Système RGBa (avec transparence (1 : opaque, 0 : transparent)</td>
-								<td>
-									rgb(58, 58, 255, 1);
-								</td>
+								<td><span class="script ">rgb(58, 58, 255, 1); </span></td>
 							</tr>
 						</table>
 					</div>
+
 				</div>
-				<h2 class="soustitre" id="II">Les différents sélecteurs</h2>
+				<h2 class="soustitre" id="3">Les différents sélecteurs</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="II.1">Sélecteurs simples</h3>
+					<h3 class="soustitre" id="3.1">Sélecteurs simples</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Sélecteur</th>
-								<th>Description</th>
+								<th><span style="font-weight: bold; ">Sélecteur</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">*</td>
+								<td><span class="script ">*</span></td>
 								<td>Sélectionner toutes les balises</td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">balise1</span></td>
-								<td>Sélectionner toutes les balises <span class="perso">balise1</span></td>
+								<td><span class="script perso ">balise1</span></td>
+								<td>Sélectionner toutes les balises <span class="perso ">balise1</span></td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">balise1</span>, <span class="perso">balise2</span></td>
-								<td>Sélectionner toutes les balises <span class="perso">balise1</span> et <span class="perso">balise2</span></td>
+								<td><span class="script perso ">balise1</span><span class="script ">, </span><span class="script perso ">balise2</span></td>
+								<td>Sélectionner toutes les balises <span class="perso ">balise1</span> et <span class="perso ">balise2</span></td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">balise1</span> &gt; <span class="perso">balise2</span></td>
-								<td>Sélectionner toutes les balises <span class="perso">balise2</span> fils directs de <span class="perso">balise1</span></td>
+								<td><span class="script perso ">balise1</span><span class="script "> &gt; </span><span class="script perso ">balise2</span></td>
+								<td>Sélectionner toutes les balises <span class="perso ">balise2</span> filles directes de <span class="perso ">balise1</span></td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">balise1</span> <span class="perso">balise2</span></td>
-								<td>Sélectionner toutes les balises <span class="perso">balise2</span> qui sont dans <span class="perso">balise1</span></td>
+								<td><span class="script perso ">balise1</span><span class="script "> </span><span class="script perso ">balise2</span></td>
+								<td>Sélectionner toutes les balises <span class="perso ">balise2</span> qui sont dans <span class="perso ">balise1</span></td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">balise1</span> + <span class="perso">balise2</span></td>
-								<td>Sélectionner la première balise <span class="perso">balise2</span> qui suit la balise <span class="perso">balise1</span></td>
+								<td><span class="script perso ">balise1</span><span class="script "> + </span><span class="script perso ">balise2</span></td>
+								<td>Sélectionner la première balise <span class="perso ">balise2</span> qui suit la balise <span class="perso ">balise1</span></td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">balise1</span> ~ <span class="perso">balise2</span></td>
-								<td>Sélectionner toutes les balises <span class="perso">balise2</span> qui sont après <span class="perso">balise1</span> et au même niveau</td>
+								<td><span class="script perso ">balise1</span><span class="script "> ~ </span><span class="script perso ">balise2</span></td>
+								<td>Sélectionner toutes les balises <span class="perso ">balise2</span> qui sont après <span class="perso ">balise1</span> et au même niveau</td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">balise1</span>[<span class="perso">attribut1</span>]</td>
-								<td>Sélectionner toutes les balises <span class="perso">balise1</span> qui ont un attribut <span class="perso">attribut1</span></td>
+								<td><span class="script perso ">balise1</span><span class="script ">[</span><span class="script perso ">attribut1</span><span class="script ">]</span></td>
+								<td>Sélectionner toutes les balises balise1 qui ont un attribut <span class="perso ">attribut1</span></td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">balise1</span>[<span class="perso">attribut1</span>="<span class="perso">valeur1</span>"]</td>
-								<td>Sélectionner toutes les balises <span class="perso">balise1</span> qui ont un attribut <span class="perso">attribut1</span> avec pour valeur <span class="perso">valeur1</span></td>
+								<td><span class="script perso ">balise1</span><span class="script ">[</span><span class="script perso ">attribut1</span><span class="script ">="</span><span class="script perso ">valeur1</span><span class="script ">"]</span></td>
+								<td>Sélectionner toutes les balises balise1 qui ont un attribut <span class="perso ">attribut1</span> avec pour valeur <span class="perso ">valeur1</span></td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">balise1</span>.<span class="perso">classe1</span></td>
-								<td>Sélectionner les balises <span class="perso">balise1</span> qui ont pour classe <span class="perso">classe1</span></td>
+								<td><span class="script perso ">balise1</span><span class="script ">.</span><span class="script perso ">classe1</span></td>
+								<td>Sélectionner les balises <span class="perso ">balise1</span> qui ont pour classe <span class="perso ">classe1</span></td>
 							</tr>
 							<tr>
-								<td class="script">.<span class="perso">classe1</span></td>
-								<td>Sélectionner toutes les balises qui ont pour classe <span class="perso">classe1</span></td>
+								<td><span class="script ">.</span><span class="script perso ">classe1</span></td>
+								<td>Sélectionner toutes les balises qui ont pour classe <span class="perso ">classe1</span></td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">balise1</span>#<span class="perso">id1</span></td>
-								<td>Sélectionner une balise <span class="perso">balise1</span> qui a pour identifiant <span class="perso">id1</span></td>
+								<td><span class="script perso ">balise1</span><span class="script ">#</span><span class="script perso ">id1</span></td>
+								<td>Sélectionner une balise <span class="perso ">balise1</span> qui a pour identifiant <span class="perso ">id1</span></td>
 							</tr>
 							<tr>
-								<td class="script">#<span class="perso">id1</span></td>
-								<td>Sélectionner une balise qui a pour identifiant <span class="perso">id1</span></td>
+								<td><span class="script ">#</span><span class="script perso ">id1</span></td>
+								<td>Sélectionner une balise qui a pour identifiant <span class="perso ">id1</span></td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="II.2">Les pseudo-classes</h3>
+
+					<h3 class="soustitre" id="3.2">Les pseudo-classes</h3>
 					<div class="contenu">
 						<p>Les pseudo-classes sont similaires aux classes HTML, mais elles sont attachées automatiquement aux éléments qui correspondent à leur déﬁnition.</p>
-						<p>Syntaxe : <span class="script"><span class="perso">selecteur</span>:<span class="perso">pseudo-classe</span></span></p>
+						<p>Syntaxe : <span class="script perso ">selecteur</span><span class="script ">:</span><span class="script perso ">pseudo-classe</span></p>
 						<table>
 							<tr>
-								<th>Pseudo-classe</th>
-								<th>Description</th>
+								<th><span style="font-weight: bold; ">Pseudo-classe</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">:link</td>
+								<td><span class="script ">:link</span></td>
 								<td>Lien pas encore visité</td>
 							</tr>
 							<tr>
-								<td class="script">:visited</td>
+								<td><span class="script ">:visited</span></td>
 								<td>Lien déjà visité</td>
 							</tr>
 							<tr>
-								<td class="script">:active</td>
+								<td><span class="script ">:active</span></td>
 								<td>Élément en train d'être cliqué</td>
 							</tr>
 							<tr>
-								<td class="script">:focus</td>
+								<td><span class="script ">:focus</span></td>
 								<td>Élément ayant le focus clavier (pour un élément dans lequel on peut taper du texte) ou ayant été cliqué</td>
 							</tr>
 							<tr>
-								<td class="script">:hover</td>
+								<td><span class="script ">:hover</span></td>
 								<td>Élément survolé par la souris</td>
 							</tr>
 							<tr>
-								<td class="script">:target</td>
+								<td><span class="script ">:target</span></td>
 								<td>Élément ciblé par l’URL courante (pour les ancres)</td>
 							</tr>
 							<tr>
-								<td class="script">:first-child</td>
+								<td><span class="script ">:first-child</span></td>
 								<td>Premier élément du parent</td>
 							</tr>
 							<tr>
-								<td class="script">:last-child</td>
+								<td><span class="script ">:last-child</span></td>
 								<td>Dernier élément du parent</td>
 							</tr>
 							<tr>
-								<td class="script">:nth-child(3)</td>
+								<td><span class="script ">:nth-child(3)</span></td>
 								<td>3ème élément du parent</td>
 							</tr>
 							<tr>
-								<td class="script">:nth-child(2n)</td>
+								<td><span class="script ">:nth-child(2n)</span></td>
 								<td>Élément du parent de rang pair</td>
 							</tr>
 							<tr>
-								<td class="script">:nth-child(2n+1)</td>
+								<td><span class="script ">:nth-child(2n+1)</span></td>
 								<td>Élément du parent de rang impair</td>
 							</tr>
 							<tr>
-								<td class="script">:only-child</td>
+								<td><span class="script ">:only-child</span></td>
 								<td>Élément unique dans le parent</td>
 							</tr>
 							<tr>
-								<td class="script">:empty</td>
+								<td><span class="script ">:empty</span></td>
 								<td>Élément sans enfant</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script">:</td>
-								<td></td>
-							</tr>
-							-->
 						</table>
+						
+						
 					</div>
-					<h3 class="soustitre" id="II.3">Les pseudo-éléments</h3>
+
+					<h3 class="soustitre" id="3.3">Les pseudo-éléments</h3>
 					<div class="contenu">
 						<p>Les pseudo-éléments sont des éléments virtuels contenant un sous-ensemble d’un élément existant.</p>
-						<p>Syntaxe : <span class="script"><span class="perso">selecteur</span>::<span class="perso">pseudo-element</span></span></p>
+						<p>Syntaxe : <span class="script perso ">selecteur</span><span class="script ">::</span><span class="script perso ">pseudo-element</span></p>
 						<table>
 							<tr>
-								<th>Pseudo-élément</th>
-								<th>Description</th>
+								<th><span style="font-weight: bold; ">Pseudo-élément</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">::first-line</td>
+								<td><span class="script ">::first-line</span></td>
 								<td>Première ligne de l'élément (souvent un paragraphe)</td>
 							</tr>
 							<tr>
-								<td class="script">::first-letter</td>
+								<td><span class="script ">::first-letter</span></td>
 								<td>Première lettre de l'élément (souvent un paragraphe)</td>
 							</tr>
 							<tr>
-								<td class="script">::before</td>
+								<td><span class="script ">::before</span></td>
 								<td>Emplacement avant l'élément (vide par défaut)</td>
 							</tr>
 							<tr>
-								<td class="script">::after</td>
+								<td><span class="script ">::after</span></td>
 								<td>Emplacement après l'élément (vide pas défaut)</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script">::</td>
-								<td></td>
-							</tr>
-							-->
 						</table>
-						<div class="note">
-							Pour remplir un élément vide, on peut ajouter la propriété : <span class="script">content: <span class="script">contenu</span></span>; avec pour contenu un texte entre guillemets ou une image dans la fonction url().
-						</div>
+						
+						<div class="note ">Pour remplir un élément vide, on peut ajouter la propriété : <span class="script ">content: </span><span class="script perso ">contenu</span><span class="script ">;</span> avec pour contenu un texte entre guillemets ou une image dans la fonction <span class="script ">url()</span>.</div>
+						
 					</div>
-					<h3 class="soustitre" id="II.4">Les media queries</h3>
+
+					<h3 class="soustitre" id="3.4">Les media queries</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Media query</th>
-								<th>Description</th>
+								<th><span style="font-weight: bold; ">Media query</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">
-									media screen and (max-width: <span class="peros">taille</span>) {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">selecteur1</span> {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur1</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut3</span>: <span class="perso">valeur2</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">selecteur2</span> {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut3</span>: <span class="perso">valeur3</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-									}
-								</td>
+								<td><span class="script ">media screen and (max-width: </span><span class="script perso ">taille</span><span class="script ">) {</span><span class="script "><br/>    </span><span class="script perso ">selecteur1</span><span class="script "> {</span><span class="script "><br/>        </span><span class="script perso ">attribut1</span><span class="script ">: </span><span class="script perso ">valeur1</span><span class="script ">;</span><span class="script "><br/>        </span><span class="script perso ">attribut</span><span class="script perso ">2</span><span class="script ">: </span><span class="script perso ">valeur2</span><span class="script ">;</span><span class="script "><br/>    }</span><span class="script "><br/>    </span><span class="script perso ">selecteur2</span><span class="script "> {</span><span class="script "><br/>        </span><span class="script perso ">attribut3</span><span class="script ">: </span><span class="script perso ">valeur3</span><span class="script ">;</span><span class="script "><br/>    }</span><span class="script "><br/></span><span class="script ">    </span><span class="script ">…</span><span class="script "><br/>}</span></td>
 								<td>Appliquer un style différent pour les petits écrans et les mobiles</td>
 							</tr>
 							<tr>
-								<td class="script">
-									media print {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">selecteur1</span> {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur1</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut3</span>: <span class="perso">valeur2</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">selecteur2</span> {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut3</span>: <span class="perso">valeur3</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-									}
-								</td>
+								<td><span class="script ">media print {</span><span class="script "><br/>    </span><span class="script perso ">selecteur1</span><span class="script "> {</span><span class="script "><br/>        </span><span class="script perso ">attribut1</span><span class="script ">: </span><span class="script perso ">valeur1</span><span class="script ">;</span><span class="script "><br/>        </span><span class="script perso ">attribut</span><span class="script perso ">2</span><span class="script ">: </span><span class="script perso ">valeur2</span><span class="script ">;</span><span class="script "><br/>    }</span><span class="script "><br/>    </span><span class="script perso ">selecteur2</span><span class="script "> {</span><span class="script "><br/>        </span><span class="script perso ">attribut3</span><span class="script ">: </span><span class="script perso ">valeur3</span><span class="script ">;</span><span class="script "><br/>    }</span><span class="script "><br/></span><span class="script ">    </span><span class="script ">…</span><span class="script "><br/>}</span></td>
 								<td>Appliquer un style différent pour les impressions</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script">
-									media {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">selecteur1</span> {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur1</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut3</span>: <span class="perso">valeur2</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">selecteur2</span> {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut3</span>: <span class="perso">valeur3</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-									}
-								</td>
-								<td></td>
-							</tr>
-							-->
 						</table>
 					</div>
+
 				</div>
-				<h2 class="soustitre" id="III">Les différentes propriétés</h2>
+				<h2 class="soustitre" id="4">Les différentes propriétés</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="III.1">Propriétés sur les espacements (margin et padding)</h3>
+					<h3 class="soustitre" id="4.1">Propriétés sur les espacements (margin et padding)</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Propriété</th>
-								<th>Description</th>
+								<th><span style="font-weight: bold; ">Propriété</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">
-									margin: <span class="perso">taille</span>;
-									<br/>
-									<br/>
-									margin-top: <span class="perso">taille</span>;
-									<br/>
-									margin-bottom: <span class="perso">taille</span>;
-									<br/>
-									margin-left: <span class="perso">taille</span>;
-									<br/>
-									margin-right: <span class="perso">taille</span>;
-								</td>
+								<td><span class="script ">margin: </span><span class="script perso ">taille</span><span class="script ">; </span><span class="script "><br/></span><span class="script "><br/>margin-top: </span><span class="script perso ">taille</span><span class="script ">; </span><span class="script "><br/>margin-bottom: </span><span class="script perso ">taille</span><span class="script ">; </span><span class="script "><br/>margin-left: </span><span class="script perso ">taille</span><span class="script ">; </span><span class="script "><br/>margin-right: </span><span class="script perso ">taille</span><span class="script ">;</span></td>
 								<td>Changer l'espacement entre l'élément actuel et l'élément parent (extérieur)</td>
 							</tr>
 							<tr>
-								<td class="script">
-									padding: <span class="perso">taille</span>;
-									<br/>
-									<br/>
-									padding-top: <span class="perso">taille</span>;
-									<br/>
-									padding-bottom: <span class="perso">taille</span>;
-									<br/>
-									padding-left: <span class="perso">taille</span>;
-									<br/>
-									padding-right: <span class="perso">taille</span>;
-								</td>
+								<td><span class="script ">padding: </span><span class="script perso ">taille</span><span class="script ">; </span><span class="script "><br/></span><span class="script "><br/>padding-top: </span><span class="script perso ">taille</span><span class="script ">; </span><span class="script "><br/>padding-bottom: </span><span class="script perso ">taille</span><span class="script ">; </span><span class="script "><br/>padding-left: </span><span class="script perso ">taille</span><span class="script ">; </span><span class="script "><br/>padding-right: </span><span class="script perso ">taille</span><span class="script ">;</span></td>
 								<td>Changer l'espacement entre l'élément actuel et les éléments enfants (intérieur)</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script">: <span class="perso">valeur</span>;</td>
-								<td class="script">
-									<ul>
-										<li style=""></li>
-									</ul>
-								</td>
-								<td></td>
-							</tr>
-							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.2">Propriétés sur l'arrière-plan</h3>
+
+					<h3 class="soustitre" id="4.2">Propriétés sur l'arrière-plan</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Propriété</th>
-								<th>Description</th>
-								<th>Résultat</th>
+								<th><span style="font-weight: bold; ">Propriété</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">background-color: <span class="perso">couleur</span>;</td>
+								<td><span class="script ">background-color: </span><span class="script perso ">couleur</span><span class="script ">;</span></td>
 								<td>Appliquer un arrière-plan uni</td>
-								<td class="script"><span style="background-color: var(--couleur-principale);">Mon texte</span></td>
 							</tr>
 							<tr>
-								<td class="script">background-image: linear-gradient(90deg, <span class="perso">couleur1</span>, <span class="perso">couleur2</span>…);</td>
-								<td>Appliquer une arrière-plan dégradé (des pourcentages peuvent être ajoutées à chaque couleur et les fonctions peuvent être ajoutée à la suite, séparées par des virgules)</td>
-								<td class="script"><span style="background-image: linear-gradient(90deg, var(--couleur-principale), rgb(0,0,0));">Mon texte</span></td>
+								<td><span class="script ">background-image: linear-gradient(90deg, </span><span class="script perso ">couleur1</span><span class="script ">, </span><span class="script perso ">couleur2</span><span class="script ">…);</span></td>
+								<td>Appliquer un arrière-plan dégradé (des pourcentages peuvent être ajoutées à chaque couleur et les fonctions peuvent être ajoutée à la suite, séparées par des virgules)</td>
 							</tr>
 							<tr>
-								<td class="script">background-image: url(<span class="perso">lien</span>);</td>
+								<td><span class="script ">background-image: url(</span><span class="script perso ">lien</span><span class="script ">);</span></td>
 								<td>Appliquer une image en arrière-plan</td>
-								<td>(Texte avec image en arrière-plan)</td>
 							</tr>
 							<tr>
-								<td class="script">
-									background-position: left;
-									<br/>
-									background-position: top;
-								</td>
+								<td><span class="script ">background-position: left; </span><span class="script "><br/>background-position: top; </span></td>
 								<td>Fixer un arrière-plan en haut ou à gauche (si l'image n'est pas répétée)</td>
-								<td>Aucun aperçu</td>
 							</tr>
 							<tr>
-								<td class="script">
-									background-attachment: fixed;
-									<br/>
-									background-attachment: scroll;
-								</td>
+								<td><span class="script ">background-attachment: fixed; </span><span class="script "><br/>background-attachment: scroll; </span></td>
 								<td>Bloquer ou non le défilement de l'arrière-plan (scroll par défaut)</td>
-								<td>Aucun aperçu</td>
 							</tr>
 							<tr>
-								<td class="script">
-									background-repeat: no-repeat;
-									<br/>
-									background-repeat: repeat-x;
-									<br/>
-									background-repeat: repeat-y;
-									<br/>
-									background-repeat: repeat;
-								</td>
+								<td><span class="script ">background-repeat: no-repeat; </span><span class="script "><br/>background-repeat: repeat-x; </span><span class="script "><br/>background-repeat: repeat-y; </span><span class="script "><br/>background-repeat: repeat; </span></td>
 								<td>Faire répéter l'arrière-plan (repeat par défaut)</td>
-								<td>Aucun aperçu</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script">: <span class="perso"></span>;</td>
-								<td></td>
-								<td class="script"><span style="color: var(--couleur-principale);">Mon texte</span></td>
-							</tr>
-							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.3">Propriétés sur le texte</h3>
+
+					<h3 class="soustitre" id="4.3">Propriétés sur le texte</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Propriété</th>
-								<th>Description</th>
-								<th>Valeurs possibles</th>
+								<th><span style="font-weight: bold; ">Propriété</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+								<th><span style="font-weight: bold; ">Valeurs possibles</span></th>
 							</tr>
 							<tr>
-								<td class="script">color: <span class="perso">couleur</span>;</td>
+								<td><span class="script ">color: </span><span class="script perso ">couleur</span><span class="script ">;</span></td>
 								<td>Changer la couleur du texte</td>
-								<td class="script">Exemple : <span style="color: var(--couleur-principale);">Bleu</span></td>
+								<td>Exemple : <span class="script ">blue</span></td>
 							</tr>
 							<tr>
-								<td class="script">text-decoration: <span class="perso">valeur</span>;</td>
+								<td><span class="script ">text-decoration: </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
 								<td>Changer la décoration du texte (à utiliser pour retirer la décoration d'un lien si besoin)</td>
-								<td class="script">
-									<ul>
-										<li style="text-decoration: none;">none</li>
-										<li style="text-decoration: underline;">underline</li>
-									</ul>
-								</td>
+								<td><span class="script ">n</span><span class="script ">one</span><span class="script "><br/></span><span class="script ">underline</span></td>
 							</tr>
 							<tr>
-								<td class="script">text-transform: <span class="perso">valeur</span>;</td>
+								<td><span class="script ">text-transform: </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
 								<td>Transformer le texte</td>
-								<td class="script">
-									<ul>
-										<li style="text-transform: none;">none</li>
-										<li style="text-transform: capitalize;">capitalize</li>
-										<li style="text-transform: uppercase;">uppercase</li>
-										<li style="text-transform: lowercase;">lowercase</li>
-									</ul>
-								</td>
+								<td><span class="script ">n</span><span class="script ">one</span><span class="script "><br/></span><span class="script ">capitalize</span><span class="script "><br/></span><span class="script ">uppercase</span><span class="script "><br/></span><span class="script ">lowercase</span></td>
 							</tr>
 							<tr>
-								<td class="script">text-align: <span class="perso">valeur</span>;</td>
+								<td><span class="script ">text-align: </span><span class="script ">valeur</span><span class="script ">;</span></td>
 								<td>Changer l'alignement du texte</td>
-								<td class="script">
-									<ul>
-										<li style="text-align: left;">left</li>
-										<li style="text-align: right;">right</li>
-										<li style="text-align: center;">center</li>
-										<li style="text-align: justify;">justify</li>
-									</ul>
-								</td>
+								<td><span class="script ">l</span><span class="script ">eft</span><span class="script "><br/></span><span class="script ">right</span><span class="script "><br/></span><span class="script ">center</span><span class="script "><br/></span><span class="script ">justify</span></td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script">: <span class="perso">valeur</span>;</td>
-								<td class="script">
-									<ul>
-										<li style=""></li>
-									</ul>
-								</td>
-								<td></td>
-							</tr>
-							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.4">Propriétés sur la police</h3>
+
+					<h3 class="soustitre" id="4.4">Propriétés sur la police</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="III.4.1">Propriétés prédéfinies</h4>
+						<h4 class="soustitre" id="4.4.1">Propriétés prédéfinies</h4>
 						<div class="contenu">
 							<table>
 								<tr>
-									<th>Propriété</th>
-									<th>Description</th>
-									<th>Valeurs possibles</th>
+									<th><span style="font-weight: bold; ">Propriété</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+									<th><span style="font-weight: bold; ">Valeurs possibles</span></th>
 								</tr>
 								<tr>
-									<td class="script">font-style: <span class="perso">valeur</span>;</td>
+									<td><span class="script ">font-style: </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
 									<td>Changer le style de la police</td>
-									<td class="script">
-										<ul>
-											<li style="font-style: normal;">normal</li>
-											<li style="font-style: italic;">italic</li>
-											<li style="font-style: oblique;">oblique</li>
-										</ul>
-									</td>
+									<td><span class="script ">normal</span><span class="script "><br/>italic</span><span class="script "><br/>oblique</span></td>
 								</tr>
 								<tr>
-									<td class="script">font-weight: <span class="perso">valeur</span>;</td>
+									<td><span class="script ">font-weight: </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
 									<td>Changer l'épaisseur de la police (pour mettre en gras)</td>
-									<td class="script">
-										<ul>
-											<li style="font-weight: normal;">normal</li>
-											<li style="font-weight: bold;">bold</li>
-											<li style="font-weight: bolder;">bolder</li>
-										</ul>
-									</td>
+									<td><span class="script ">normal</span><span class="script "><br/>bold</span><span class="script "><br/>bolder</span></td>
 								</tr>
 								<tr>
-									<td class="script">font-variant: <span class="perso">valeur</span>;</td>
+									<td><span class="script ">font-variant: </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
 									<td>Changer l'apparence de la police (small-caps met tout en capitale avec les lettres en majuscule plus grandes)</td>
-									<td class="script">
-										<ul>
-											<li style="font-variant: normal;">normal</li>
-											<li style="font-variant: small-caps;">small-caps</li>
-										</ul>
-									</td>
+									<td><span class="script ">normal</span><span class="script "><br/>small-caps</span></td>
 								</tr>
 								<tr>
-									<td class="script">font-family: <span class="perso">valeur1</span>, <span class="perso">valeur2</span>…;</td>
+									<td><span class="script ">font-family: </span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…;</span></td>
 									<td>Remplacer la police par la première disponible de la liste (si la première n'existe pas, c'est la deuxième qui est chargée…)</td>
-									<td class="script">
-										<ul>
-											<li style="font-family: Calibri;">Calibri</li>
-											<li style="font-family: Arial;">Arial</li>
-											<li style="font-family: serif;">serif</li>
-											<li style="font-family: sans-serif;">sans-serif</li>
-											…
-										</ul>
-									</td>
+									<td><img src="data:image/png;base64, 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
+3fjjMz4AAAAASUVORK5CYII="/></td>
 								</tr>
 								<tr>
-									<td class="script">font-size: <span class="perso">taille</span>;</td>
+									<td><span class="script ">font-size: </span><span class="script perso ">taille</span><span class="script ">;</span></td>
 									<td>Changer la taille du texte</td>
-									<td class="script">
-										<ul>
-											<li style="font-size: 20px;">20px</li>
-											<li style="font-size: 20pt;">20pt</li>
-											<li style="font-size: 0.2in;">0.2in</li>
-											<li style="font-size: 0.5cm;">0.5cm</li>
-											<li style="font-size: 5mm;">5mm</li>
-											<li style="font-size: 2pc;">2pc</li>
-										</ul>
-									</td>
+									<td><img src="data:image/png;base64, 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
+AAAASUVORK5CYII="/></td>
 								</tr>
-								<!--
-								<tr>
-									<td class="script">: <span class="perso">valeur</span>;</td>
-									<td></td>
-									<td class="script">
-										<ul>
-											<li style=""></li>
-										</ul>
-									</td>
-								</tr>
-								-->
 							</table>
 						</div>
-						<h4 class="soustitre" id="III.4.2">Importer une police personnalisée</h4>
+
+						<h4 class="soustitre" id="4.4.2">Importer une police personnalisée</h4>
 						<div class="contenu">
 							<p>Pour importer une police personnalisée, vous devez récupérer un fichier .ttf ou .eot. Pour l'importer, entrer les lignes suivantes :</p>
-							<p class="script">
-								@font-face {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;font-family: "<span class="perso">maPolice</span>";<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;src: url("<span class="perso">lienDeLaPolice</span>.ttf");<br/>
-								}
-							</p>
-							<p>La police pourra ensuite être utilisée avec : <span class="script">font-family: "<span class="perso">maPolice</span>";</span> dans les sélecteurs à appliquer.</p>
+							<p><span class="script ">@font-face {</span><span class="script "><br/>    font-family: "</span><span class="script perso ">maPolice</span><span class="script ">";</span><span class="script "><br/>    src: url("</span><span class="script perso ">lienDeLaPolice</span><span class="script ">.ttf");</span><span class="script "><br/>}</span></p>
+							<p>La police pourra ensuite être utilisée avec : <span class="script ">font-family: "</span><span class="script perso ">maPolice</span><span class="script ">";</span> dans les sélecteurs à appliquer.</p>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="III.5">Propriétés sur la bordure</h3>
+
+					<h3 class="soustitre" id="4.5">Propriétés sur la bordure</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Propriété</th>
-								<th>Description</th>
-								<th>Valeurs possibles</th>
+								<th><span style="font-weight: bold; ">Propriété</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+								<th><span style="font-weight: bold; ">Valeurs possibles</span></th>
 							</tr>
 							<tr>
-								<td class="script">
-									border: <span class="perso">taille</span> <span class="perso">style</span> <span class="perso">couleur</span>;
-									<br/>
-									<br/>
-									border-top: <span class="perso">taille</span> <span class="perso">style</span> <span class="perso">couleur</span>;
-									<br/>
-									border-bottom: <span class="perso">taille</span> <span class="perso">style</span> <span class="perso">couleur</span>;
-									<br/>
-									border-left: <span class="perso">taille</span> <span class="perso">style</span> <span class="perso">couleur</span>;
-									<br/>
-									border-right: <span class="perso">taille</span> <span class="perso">style</span> <span class="perso">couleur</span>;
-								</td>
+								<td><span class="script ">border: </span><span class="script perso ">taille</span><span class="script "> </span><span class="script perso ">style</span><span class="script "> </span><span class="script perso ">couleur</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>border-top: </span><span class="script perso ">taille</span><span class="script "> </span><span class="script perso ">style</span><span class="script "> </span><span class="script perso ">couleur</span><span class="script ">;</span><span class="script "><br/>border-bottom: </span><span class="script perso ">taille</span><span class="script "> </span><span class="script perso ">style</span><span class="script "> </span><span class="script perso ">couleur</span><span class="script ">;</span><span class="script "><br/>border-left: </span><span class="script perso ">taille</span><span class="script "> </span><span class="script perso ">style</span><span class="script "> </span><span class="script perso ">couleur</span><span class="script ">;</span><span class="script "><br/>border-right: </span><span class="script perso ">taille</span><span class="script "> </span><span class="script perso ">style</span><span class="script "> </span><span class="script perso ">couleur</span><span class="script ">;</span></td>
 								<td>Changer la bordure (épaisseur, style et couleur)</td>
-								<td class="script">
-									Pour le style :
-									<ul>
-										<li style="border: none;">none</li>
-										<li style="border: 3px solid var(--couleur-principale);">solid</li>
-										<li style="border: 3px dashed var(--couleur-principale);">dashed</li>
-										<li style="border: 3px dotted var(--couleur-principale);">dotted</li>
-										<li style="border: 3px double var(--couleur-principale);">double</li>
-										<li style="border: 3px groove var(--couleur-principale);">groove</li>
-										<li style="border: 3px ridge var(--couleur-principale);">ridge</li>
-										<li style="border: 3px inset var(--couleur-principale);">inset</li>
-										<li style="border: 3px outset var(--couleur-principale);">outset</li>
-									</ul>
-								</td>
+								<td>Pour le style :<br/><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAEgAAAEFCAYAAABAXKFBAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABCqSURBVHhe7V1NaGxJFT66CKjowp/BjTANYkiI
+jYvWxbhQcDF4V4HwwqNXvXCjbuPCIC/mIRGcLNzogCD0xvDII5BVy+zGhW8hvWpDnhG1B9zI+AeK
+CtnEOvVzb9Wpqlt1b/rvpc8Hh+6+XX3r9tdVp27X+erUB25vb++AEcUH9SMjAiYoASYoASYoASYo
+ASYoASYoASYoASYoAY+gs90N2Ng8hAmcwe6GeG5s90yXsDGBw02rTKjc5BA2xXE8PDnctMpuwuFE
+l3FA6hUWrHpRwL8atg0LwL8e0oqhPj4+uOuI152DcVVWH4Ni6B/rHNyN6TFyXNVT3A1NObusfc5h
+IT/r1L1AixJUkiNtfHfQCXxBmwhj+gtRcr2ytJyw2DmjdS3AIj6ogP2+fhrEGZyPADp7j6Grj5To
+74tPA7y8cvtPsKyD+Dl3tgXF0wt4FuyS80U7Jz25gpf6aQzT6yv9LBP6nNPTnuN/0HqnU1VmCWhH
+UHcHtvRTD/qLdrZ31Otc6HMKX4PdPmA3cFLfBOeClsP8DqhW/0yMYwRX1zCFDuw9bvptas65RLQk
+qAsnR8LTTE+hZ4/BOKQPhCMpjlr82pFzLhktCRLoX4IYoaAzGlT+oncKW0PRHS5rPXwceM7bIRT2
+OY0tiTSeck2gfQtaEzBBCTBBCTBBCThOev+rL/QzBuL83Te4BaXABCUQ7WLYvNYRlANuQQkwQQkw
+QQkwQQksnCAZNWn0L72KcjT5Q6/q2RWfvh8WTlD/0swQDuXc9arjFehifbjU065tp5nuA/ZBCWQQ
+lBvpzIiyNoGOyFbni0ViFahvw5nfWaCeIHmRAxgVQ+030MawfUycnyzXg9Mtq5yZjpVh7BbonsCN
+Ptf4oKMPhqB+wAHY13gLwxk5uHqCZIQCoHCiiF04ubkUnqHC2ZNTmHYOYGw7CfyCeJXTU3hy36Gk
+Bme74gcU7n44JwdVT9DONuBvNxrUDbHNo6yzwwSuMAhX7Ds/2CxRT5Bs5mo4RpJM/3bImkeUNRtX
+cD3noGuGk66GWXPvgmRtGo85jyjrCiGDIBtIliKpahXziLLmQtUt+rBbtxg0jhcxiqHgqWwpBmfn
+winajnseUdZcVHWXAwHW27uAraJu5GsA0XVKLczuG++WZo5JbQ7qe0rr3B2Mq8+UZgultLkaI7Th
+nfg6ThnbbJGUGNqDZZS5wiu3rHpPHSMCrQyjHPCMIgHPKDYEE5QAE5QAE5QAR1ZrwE46A0xQAlld
+7BOf2oC3n/f0Kx+/eud9+MkP/6Bf+fj2dz8LX3nzNf3KxzcfjeHvf73Vr1wss27uYhlgghLgvxoE
+/FejIZigBJwuxvDBLSgBJiiBFgTpCGrbgGAmZqXOSOJs14/UWOAWlAATlIBDEN4kGVtXUA4yWhBV
+bfQgvITUV4HE1B3u+nlhtf6M1B88p68s8cJVBtrnlJaQgdQTpFUbF3v2OtIx+GILJOcc9ssywlC4
+gOoO8oXQ+fZOAQ7GVtmja3gU+kKdl3As6r8+0uW0YsT98li3+NHgAMbmfKIc4OLgQN0bA4ChKYeW
+kIHUECR+lUdKtfE8GfnDiKur+MDVg7JuJ+qpxQadPXCCraLsTaiO6VSuYCyFG93HsEeiuJPDY6Xu
+uDmpxBPdE3iOv+LovBoFRcuRccwhuc4EaghSwoD0evcEptfiTAZd2MFAPkZhs24TUuv3J/DsQlxk
+QN3RlRWN4FwzNFEykMT5fMQJylBtOKB9W1ioe6OIUwqikCRTtvU9lVZ3hNa4ksqvWspAHILw772x
+JpBOV1wQXfMe697dk5uyTEVWm5tCLV5wFHCuNdVVUQ7iLUjLWjxtz9kTbxRTv04BRy1UCkiWJEm0
+1+Y6K91lbV8TgUxv4dUh/GxCBlLjg/rwVDq640o8id1IjAJFsGVU/V1WLIZdv4vhiENbivYj1HFn
+ov9UjGyi7kGim3ZPjsRPOIXTSgYirlGM0FuFVNFFIZqhp3CwzVF36Aws8piTjUVnhykVFkrZEVRY
+BFQgTjocbapeqs7ws9A4x+l5aTlSt1Sf6GO+EkUZzwclUNPFGAietCegHHALSoAJSoBDzxx6vh+Y
+oBTMDRHa2z/6nZS/4qM5dnP1z7tv7L6Qhs8f+nHKgdOC3rn8i/OIGL/4B/zt/Vtp+NzgoR6nHDgE
+vbn7aecR0Xvj4/DJ1zak4XODh3qccsB/NRJgJ50AE5QAE5SAQ9D09/+B58M/y8d1BeXAIeit772U
+b+JjHDpIN2fxwsJAxAuUg6V0MRVZrV8Hr6CjtZEI7SLgEPSdH2zBo8Fn5OO6gnLgENT53Efkm/i4
+rvA4MP9B4pY5IR4qF8p3X2Nm4twJFIQso+5oDnydKp5abNLeIQj/tP3iZ3+s/rzpL+VWFogsmC+f
+2gBAm4p2RNa+OqbXuAaiHpXpMqnrERaMlJDc+pQDhyD8Z4v/ZPExSIQ0/7gfBtIWSOyPNkuCgqGl
+0PHItdDjLgfRpP+IXPHCclNTLFS84HjwXPHCKqSmmKF4Yfaj2FJTU8xevEA5iHexbPHCMlNTzF+8
+gCyXDot6cM+ZSodW3BXUKWtHFxzFQg627j1iauSpceg1o6Vr1OGrwaZTFPLzLUYxdcy5J9EXERy1
+zIVa5o0YtjUo71wDmkeGfx8ULEfqlPXpY7FRzJlR/Nb+WM7R4jTkT8/jsaiHDMqBQxD+xccJbJyj
+beSoHxAoBzwnnUDNjSIDwQQl4BD08x//SQoY8NEA+yQ6LjQzDYl4qMcpBw5BHFnlyKo+Gj9eG1mN
+6YPWFagP8ghaV20iheEiSNC6tyTDQS1B+LiOoBzwfVACTFACTFACTFACLQhajHghP/OCv9p6lqH8
+B9CCrHzXQwwyzRbcxRJgghLIIEj7nLKPxzIv0HLCqDOQiQoCWRGIiMkFOe89HUyzrA8pgnIzL+hy
+M91XAxHJvNCWJD/rg/guUL/iuoYg8ctlZl6Y274aXuaFQEaFXIgfEWOExdDelr0LJ8/VouBqQbKL
+GoJWQbzgiw2UKKH5EvLJswuYhsQLOoI8ijAUJ2ilxQtTaHpKJV4YwcD2P9JwZ5c4Mpx0AgsWLygZ
+SweanlLF5gs384ttEZVDnKAFihfOsI9mQraEFkkIqF4oFzUtKDfzQoN9NQLpbXBk8TM0hIFDtDql
+lQonF/2ncvQdDXLkxxZE8yqD+xi0tx/RZi9eIHtroNqCCAikGcWIY77ULlzOmK8KUYqVeDnKAc8o
+EvCMYkMwQQkwQQkwQQlwXCwA20lzZDWCKEGMCh5BX/78iX7G+NiHXodf/qbvE4RvMAA++uHXwy0I
+CcI31xX//u978jFJ0Lo6a8oB3wclwAQlwAQlwAQlwAQlwAQlwAQlwAQlkCZICw7cYJuyUoSgy8ig
+BkndHtq+wRMQRGPjvjjKOZ+5tlCsPvJeU/GCE9X44ub37772hWEV1dARAzvzgolyOBEIJ6JRRR5M
+BKEqa5ZO2tEJc4xEIAJ1lxEMsu40FO3w1tsKU9duH/M/TzmoJUidkFSuyXAu3BAUCQWVZeUX9EMx
+sQW31evKwguNaYhJf96+nlBoKXCccjBTH+QJGFDhcXtb7pkhI6jBqGgf9pXKQTX3yTNQCRX8cHD3
+8R507Ni8Fkg44gPzeSvAOHvxgkBfXvUIjq1+L6UurdbC601H6mD24JAh63pUihETAa4kMSEy5iJe
+UEIBjCr3yhMORigAsDU2udBJAIIwO7Zsg9Qk7GyLnyACTd7WTnUBqlWZuLvK59E5eOrk85i9eEFX
+JPwAOVmzrV9syIucXsAzb9ggWqSaZh9MUqJj/rK8FFf4LXwO4gUNZ2+e+6HcuqFnD+uoQcRmbu/L
+YboN2ehI3EL0Tv3WIc6sBBSimx0igbZgwmAW4gVvmDejU8BCo5hzLGpmaLUsMFpJM8N6aaER0Fgl
+ivBGKstS4gXKQc2M4nviJk38sqg9tHdeEsCbLfVLjsO7Or3CyJ9RPDuX3j2kPVT9eT0QJ0iPJL5y
+TPgMmVJmnmlvVgdxguRN3hAKe5sraWY3uDZD/auHxChmLRSxjfikh4xo4PBf/1PxoXWE7aQ5shpB
+kKCvf+lMvsFQ8IZ5JqeCCUE7LQjlL+aNdQf64F//9jBM0Lo7aESSIHxzHUE5SNwHMZigBJigBJig
+BJigBGZMULWEOxRRjaJ2WfhywS0ogRkT1IWTGzUl8lCmYrkFJVBPkPQNKkxCVRGuv2iYooYoQGj+
++RI5yhIJkr7Ce789MloQxrE2oHexB2M9ozjEEJQTX8pPUSPzAg3AjXCGPoMkqjwSZTlTrBjaXRh/
+HDMNrM83PgBx0ffO84HI62IYXbWmWVXMvvnifvzSctXyMB2dVUvF3U3+1d7ybiaHyeGxDDoO7Wng
++6SwIMgiyFNZ9C/lL9V0x4G2e1vEkb+vRlss1Enn7m2ByFOW5O+r0RYLJagJ8pQls99Xg2KhBOXv
+bZGrLMnfV6MtFkpQqe4oEwrh8NyDi61COl8PGcoS5bhHMJhTVr7ZEGTf1+i+Pxro185WfeJ2wGSR
+ku+p7FI3T7f1+wY68ZEX1VXm3OPICLDJJEXKzoC0FZ1yxXub5ShLXo0p1xVSlqwmQSukLFlNglZI
+WbKaBEmshrIkGlld5zC07aQ59BxBkCBUd+AbDAVvmGdyKpgY/Qo76eXBKMwQTBCBTQ7C8UEowTNY
+7l+N5QEHKgNOTZEBJigBJigBJiiBTIKqwOAqCgzmiQfSgnRkdQ7TrpkEVf+s7xsleNXAPiiBeoI8
+8UB4vacSNuA6VCIiiDT5/PQQ9aKI6jx6rw9vgi1nb6B61BOkEwNg1xpjrLsWuCbd3oNDzwgSr+7v
+bSHs6BoeUebljzOAkR0bGxYyWmKiGt2TG/2e3usDJ/lNWWntV2gbzLSLuZEGnU3BCeqZ9fEk+0L/
+0otQBPfqEOVQ4RHMnz8nzJCgnIl0HQnFllU74sT36oivvZ8PFu6k+5e6u9r+gpKlt5uw4/LGMCa2
+SCycIETlO2yyLIeqMy9gl638iW1rFNVAstQAYIsaavbqWDAWTBAO23To1UoOx3FH9uqIoguP5YYd
+99hoKYJaguz7FdX3lV5RHWtzj4HihW041udUprfdovEuqWITtwohcVSANNMSK9EE2v3vg3hGkYBn
+FBuCCUqACUqACUog6KRpbGhdEXTSTI4LhyAmx4dDEJNTwciA2EkHYARUCCaIwCYH4SnMDNCDryPo
+3y1uQQkwQQkwQQkwQQkwQQkshSA1U9kwK++M0LRubkEJMEEJZBDkCwhoVoNYs5VJBMzEuSWE8AMA
+yvy5+HrxQgUimhDmXGOruhXqCZJLLQfw0g7gDQsV8cwKx1jwhBAdV8AgzNEehcQLt2PYPqaRCiQx
+kXmhad0WagjSi9fEBTrCgv6lqsTeh34e0Mn93aQGmF3GVWwsL/NCk70t5gG96hDjXPHGuszMC432
+tpgDzKpD8dQOBrpkLTPzQsO9LeYDe9VhRVblgJeZeaHp3hYelMZndkCyFEnTsm8vNfNC/t4Wxidd
+lKomHFlwr4wwTPkqA4MPvHWgtxNmubjtF5tmXsip24FohuWeE7iXhLHyeO7eFqQc7m0hRjvx3N/a
+Slpgzw66H4a4o3Dej9Yd2qsDje5WZaymbtxXwxi+5hlFAp5RbAgmKAEmKAEmKIGgk6axoXVF0Ekz
+OS4cgpgcH04XY/hgJ50AE1QLgP8DZ78plXkxKQoAAAAASUVORK5CYII="/></td>
 							</tr>
 							<tr>
-								<td class="script">
-									border-radius: <span class="perso">valeur</span>;
-									<br/>
-									border-top-left-radius: <span class="perso">valeur</span>;
-									<br/>
-									border-top-right-radius: <span class="perso">valeur</span>;
-									<br/>
-									border-bottom-left-radius: <span class="perso">valeur</span>;
-									<br/>
-									border-bottom-right-radius: <span class="perso">valeur</span>;
-								</td>
+								<td><span class="script ">border-radius: </span><span class="script perso ">valeur</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>border-top-left-radius: </span><span class="script perso ">valeur</span><span class="script ">;</span><span class="script "><br/>border-top-right-radius: </span><span class="script perso ">valeur</span><span class="script ">;</span><span class="script "><br/>border-bottom-left-radius: </span><span class="script perso ">valeur</span><span class="script ">;</span><span class="script "><br/>border-bottom-right-radius: </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
 								<td>Changer l'arrondi des bords</td>
-								<td class="script">
-									<span class="perso">taille</span>
-								</td>
+								<td><span class="script perso ">taille</span></td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script">: <span class="perso">valeur</span>;</td>
-								<td></td>
-								<td class="script">
-									<ul>
-										<li style=""></li>
-									</ul>
-								</td>
-							</tr>
-							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.6">Propriétés sur l'affichage (display)</h3>
+
+					<h3 class="soustitre" id="4.6">Propriétés sur l'affichage (display)</h3>
 					<div class="contenu">
-						<p>Syntaxe : <span class="script">display: <span class="perso">methode</span>;</span></p>
-						<h4 class="soustitre" id="III.6.1">block</h4>
+						<p>Syntaxe : <span class="script ">display: </span><span class="script perso ">methode</span><span class="script ">;</span></p>
+						<h4 class="soustitre" id="4.6.1">block</h4>
 						<div class="contenu">
-							<p>Il s'agit de la valeur par défaut pour les balises  &lt;p&gt;, &lt;h1&gt;, &lt;section&gt;, &lt;nav&gt;, &lt;article&gt;… Elle permet d'afficher un élément (utile si le display était en none), impose un retour à la ligne après l'élément et permet de modifier sa taille (elle prend la longueur maximale et la hauteur minimale par défaut).</p>
+							<p>Il s'agit de la valeur par défaut pour les balises <span class="script ">&lt;p&gt;</span>, <span class="script ">&lt;h1&gt;</span>, <span class="script ">&lt;section&gt;</span>, <span class="script ">&lt;nav&gt;</span>, <span class="script ">&lt;article&gt;</span>… Elle permet d'afficher un élément (utile si le display était en <span class="script ">none</span>), impose un retour à la ligne après l'élément et permet de modifier sa taille (elle prend la longueur maximale et la hauteur minimale par défaut).</p>
 						</div>
-						<h4 class="soustitre" id="III.6.2">inline</h4>
+
+						<h4 class="soustitre" id="4.6.2">inline</h4>
 						<div class="contenu">
-							<p>Il s'agit de la valeur par défaut pour les balises &lt;a&gt;, &lt;em&gt;, &lt;strong&gt;, &lt;span&gt;, &lt;i&gt;…. Elle permet d'afficher un élément (utile si le display était en none), n'impose pas de retour à la ligne après l'élément et prend la taille minimale nécessaire (non modifiable).</p>
+							<p>Il s'agit de la valeur par défaut pour les balises <span class="script ">&lt;a&gt;</span>, <span class="script ">&lt;em&gt;</span>, <span class="script ">&lt;strong&gt;</span>, <span class="script ">&lt;span&gt;</span>, <span class="script ">&lt;i&gt;</span>…. Elle permet d'afficher un élément (utile si le display était en <span class="script ">none</span>), n'impose pas de retour à la ligne après l'élément et prend la taille minimale nécessaire (non modifiable).</p>
 						</div>
-						<h4 class="soustitre" id="III.6.3">inline-block</h4>
+
+						<h4 class="soustitre" id="4.6.3">inline-block</h4>
 						<div class="contenu">
-							<p>Il s'agit d'un mélange des méthodes block et inline, c'est-à-dire qu'il n'y a pas de retour à la ligne après l'élément, mais on peut modifier sa taille.</p>
+							<p>Il s'agit d'un mélange des méthodes <span class="script ">block</span> et <span class="script ">inline</span>, c'est-à-dire qu'il n'y a pas de retour à la ligne après l'élément, mais on peut modifier sa taille.</p>
 						</div>
-						<h4 class="soustitre" id="III.6.4">none</h4>
+
+						<h4 class="soustitre" id="4.6.4">none</h4>
 						<div class="contenu">
 							<p>Avec cette valeur, l'élément n'apparaît pas à l'écran.</p>
+							
 						</div>
-						<h4 class="soustitre" id="III.6.5">grid</h4>
+
+						<h4 class="soustitre" id="4.6.5">grid</h4>
 						<div class="contenu">
 							<p>Il s'agit d'un positionnement dans une grille.</p>
 							<table>
 								<tr>
-									<th>Propriété</th>
-									<th>Description</th>
-									<th>Exemple</th>
+									<th><span style="font-weight: bold; ">Propriété</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+									<th><span style="font-weight: bold; ">Exemple</span></th>
 								</tr>
 								<tr>
-									<td class="script">
-										grid-template-rows: <span class="perso">valeur</span>;<br/>
-										grid-template-columns: <span class="perso">valeur</span>;
-									</td>
-									<td>
-										Définir la taille des lignes et des colonnes :
-										<ul>
-											<li>fr : Pour les fractions de taille de contenu encore à prendre</li>
-											<li>% : Pour des pourcentage</li>
-											<li>auto : Pour prendre toute la place restante</li>
-											<li>px : Pour des tailles fixes</li>
-										</ul>
-									</td>
-									<td>
-										Exemple : On souhaite une grille de 3 lignes et de 2 colonnes. On a donc :<br/>
-										<ul>
-											<li class="script">grid-template-rows: 1fr 2fr 1fr;</li>
-											<li class="script">grid-template-columns: 30% 70%;</li>
-										</ul>
-									</td>
+									<td><span class="script ">grid-template-rows: </span><span class="script perso ">valeur</span><span class="script ">;</span><span class="script "><br/>grid-template-columns: </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
+									<td>Définir la taille des lignes et des colonnes (unités possibles : fr (pour les fractions de taille de contenu encore à prendre), % (pour des pourcentages), auto (pour prendre toute la place restante), px (pour des tailles fixes))</td>
+									<td>Exemple : On souhaite une grille de 3 lignes et de 2 colonnes. On a donc :<br/><span class="script ">grid-template-rows: 1fr 2fr 1fr;</span><span class="script "><br/>grid-template-columns: 30% 70%;</span></td>
 								</tr>
 								<tr>
-									<td class="script">
-										grid-row-start: <span class="perso">valeur</span>;<br/>
-										grid-row-end: <span class="perso">valeur</span>;<br/>
-										grid-column-start: <span class="perso">valeur</span>;<br/>
-										grid-column-end: <span class="perso">valeur</span>;
-									</td>
-									<td>
-										Définir la position d'un élément dans la grille (par défaut dans la première case vide)
-									</td>
-									<td>
-										Exemple : Considérons une grille de 3 lignes et de 2 colonnes. Pour placer 1 élément dans la 2ème et 3ème ligne de la 1ère colonne, on a donc :
-										<ul>
-											<li class="script">grid-row-start: 2;</li>
-											<li class="script">grid-row-end: 4;</li>
-											<li class="script">grid-column-start: 1;</li>
-											<li class="script">grid-column-end: 2;</li>
-										</ul>
-									</td>
+									<td><span class="script ">grid-row-start: </span><span class="script perso ">valeur</span><span class="script ">;</span><span class="script "><br/>grid-row-end: </span><span class="script perso ">valeur</span><span class="script ">;</span><span class="script "><br/>grid-column-start: </span><span class="script perso ">valeur</span><span class="script ">;</span><span class="script "><br/>grid-column-end: </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
+									<td>Définir la position d'un élément dans la grille (par défaut dans la première case vide) </td>
+									<td>Exemple : Considérons une grille de 3 lignes et de 2 colonnes. Pour placer 1 élément dans la 2ème et 3ème ligne de la 1ère colonne, on a donc :<br/><span class="script ">grid-row-start: 2;</span><span class="script "><br/>grid-row-end: 4;</span><span class="script "><br/>grid-column-start: 1;</span><span class="script "><br/>grid-column-end: 2;</span></td>
 								</tr>
 								<tr>
-									<td class="script">
-										grid-template-areas:<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;"<span class="perso">valeur1</span> <span class="perso">valeur2</span>…"<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;"<span class="perso">valeur3</span> <span class="perso">valeur4</span>…"…;<br/>
-									</td>
-									<td>
-										Définir des noms aux zones pour faciliter le positionnement
-									</td>
-									<td>
-										Exemple : Considérons une grille de 3 lignes et de 2 colonnes. Pour placer 1 élément dans la 2ème et 3ème ligne de la 1ère colonne, on peut faire :
-										<br/>
-										<span class="script">
-											grid-template-areas:<br/>
-											&nbsp;&nbsp;&nbsp;&nbsp;"zone1 zone2"<br/>
-											&nbsp;&nbsp;&nbsp;&nbsp;"zone3 zone4"<br/>
-											&nbsp;&nbsp;&nbsp;&nbsp;"zone3 zone5";<br/>
-										</span>
-										Il restera plus qu'à positionner l'élément avec :
-										<span class="script">grid-area: zone3;</span>
-									</td>
+									<td><span class="script ">grid-template-areas:</span><span class="script "><br/>    "</span><span class="script perso ">valeur1</span><span class="script "> </span><span class="script perso ">valeur2</span><span class="script ">…"</span><span class="script "><br/>    "</span><span class="script perso ">valeur3</span><span class="script "> </span><span class="script perso ">valeur4</span><span class="script ">…"…;</span></td>
+									<td>Définir des noms aux zones pour faciliter le positionnement </td>
+									<td>Exemple : Considérons une grille de 3 lignes et de 2 colonnes. Pour placer 1 élément dans la 2ème et 3ème ligne de la 1ère colonne, on peut faire :<br/><span class="script ">grid-template-areas:</span><span class="script "><br/></span><span class="script ">    "zone1 zone2"</span><span class="script "><br/></span><span class="script ">    "zone3 zone4"</span><span class="script "><br/></span><span class="script ">    "zone3 zone5";</span><br/>Il restera plus qu'à positionner l'élément avec :<br/><span class="script ">grid-area: zone3;</span> </td>
 								</tr>
 								<tr>
-									<td class="script">
-										gap: <span class="perso">taille</span>;<br/>
-										row-gap: <span class="perso">taille</span>;<br/>
-										column-gap: <span class="perso">taille</span>;
-									</td>
+									<td><span class="script ">gap: </span><span class="script perso ">taille</span><span class="script ">;</span><span class="script "><br/>row-gap: </span><span class="script perso ">taille</span><span class="script ">;</span><span class="script "><br/>column-gap: </span><span class="script perso ">taille</span><span class="script ">; </span></td>
 									<td>Changer l'espacement des éléments enfants</td>
 									<td>(Aucun exemple)</td>
 								</tr>
-								<!--
-								<tr>
-									<td class="script">
-
-									</td>
-									<td></td>
-									<td></td>
-								</tr>
-								-->
 							</table>
 						</div>
-						<h4 class="soustitre" id="III.6.6">inline-grid</h4>
+
+						<h4 class="soustitre" id="4.6.6">inline-grid</h4>
 						<div class="contenu">
-							<p>Il s'agit d'un mélange des méthodes grid et inline-block, c'est-à-dire qu'il n'y a pas de retour à la ligne après l'élément, mais on peut modifier sa taille.</p>
+							<p>Il s'agit d'un mélange des méthodes <span class="script ">grid</span> et <span class="script ">inline-block</span>, c'est-à-dire qu'il n'y a pas de retour à la ligne après l'élément, mais on peut modifier sa taille.</p>
 						</div>
-						<h4 class="soustitre" id="III.6.7">flex</h4>
+
+						<h4 class="soustitre" id="4.6.7">flex</h4>
 						<div class="contenu">
 							<p>Il s'agit d'un positionnement dans une boîte flexible.</p>
 							<table>
 								<tr>
-									<th>Propriété</th>
-									<th>Description</th>
-									<th>Valeurs possibles</th>
+									<th><span style="font-weight: bold; ">Propriété</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+									<th><span style="font-weight: bold; ">Valeurs possibles</span></th>
 								</tr>
 								<tr>
-									<td class="script">
-										flex-direction: <span class="perso">direction</span>;<br/>
-									</td>
+									<td><span class="script ">flex-direction: </span><span class="script perso ">direction</span><span class="script ">;</span></td>
 									<td>Définir la direction de l'axe principal pour positionner les éléments enfants</td>
-									<td>
-										<ul>
-											<li><span class="script">row</span> (par défaut) : de gauche à droite</li>
-											<li><span class="script">column</span> : de haut en bas</li>
-											<li><span class="script">row-reverse</span> : de droite à gauche</li>
-											<li><span class="script">column-reverse</span> : de bas en haut</li>
-										</ul>
-									</td>
+									<td><span class="script ">row</span> (par défaut) : de gauche à droite<br/><span class="script ">column</span> : de haut en bas<br/><span class="script ">row-reverse</span> : de droite à gauche<br/><span class="script ">column-reverse</span> : de bas en haut</td>
 								</tr>
 								<tr>
-									<td class="script">
-										flex-wrap: <span class="perso">valeur</span>;
-									</td>
-									<td>Définir si les éléments enfants peuvent changer de ligne (si la direction est row ou row-reverse)</td>
-									<td>
-										<ul>
-											<li><span class="script">nowrap</span> (par défaut) : Pas de retour à la ligne</li>
-											<li><span class="script">wrap</span> : Retour à la ligne s'il n'y a pas assez de place</li>
-											<li><span class="script">wrap-reverse</span> : Retour à la ligne s'il n'y a pas assez de place (remonté au dessus)</li>
-										</ul>
-									</td>
+									<td><span class="script ">flex-wrap: </span><span class="script perso ">valeur</span><span class="script ">; </span></td>
+									<td>Définir si les éléments enfants peuvent changer de ligne (si la direction est <span class="script ">row</span> ou <span class="script ">row-reverse</span>)</td>
+									<td><span class="script ">nowrap</span> (par défaut) : pas de retour à la ligne<br/><span class="script ">wrap</span> : retour à la ligne s'il n'y a pas assez de place<br/><span class="script ">wrap-reverse</span> : retour à la ligne s'il n'y a pas assez de place (remonté au-dessus)</td>
 								</tr>
 								<tr>
-									<td class="script">
-										flex: <span class="perso">valeur</span>;
-									</td>
+									<td><span class="script ">flex: </span><span class="script perso ">valeur</span><span class="script ">; </span></td>
 									<td>Définir si un élément doit être flexible ou non (à mettre dans l'élément enfant)</td>
-									<td>
-										<ul>
-											<li><span class="script">1</span> : Flexible (prend la place disponible)</li>
-											<li><span class="script">0</span> (par défaut) : Non flexible (prend la place minimale)</li>
-										</ul>
-									</td>
+									<td><span class="script ">1</span> : flexible (prend la place disponible)<br/><span class="script ">0</span> (par défaut) : non flexible (prend la place minimale)</td>
 								</tr>
 								<tr>
-									<td class="script">
-										justify-content: <span class="perso">valeur</span>;
-									</td>
+									<td><span class="script ">justify-content: </span><span class="script perso ">valeur</span><span class="script ">; </span></td>
 									<td>Répartir les éléments sur l'axe principal</td>
-									<td>
-										<ul>
-											<li><span class="script">flex-start</span> (par défaut) : Au début</li>
-											<li><span class="script">flex-end</span> : À la fin</li>
-											<li><span class="script">center</span> : Centré (avec uniquement de l'espace autour)</li>
-											<li><span class="script">space-around</span> : Avec de l'espace entre les éléments et autour</li>
-											<li><span class="script">space-between</span> : Avec de l'espace uniquement entre les éléments</li>
-											<li><span class="script">space-evenly</span> : Avec de l'espace entre les éléments et autour</li>
-										</ul>
-									</td>
+									<td><span class="script ">flex-start</span> (par défaut) : au début<br/><span class="script ">flex-end</span> : à la fin<br/>center : Centré (avec uniquement de l'espace autour)<br/><span class="script ">space-around</span> : avec de l'espace entre les éléments et autour<br/><span class="script ">space-between</span> : avec de l'espace uniquement entre les éléments<br/><span class="script ">space-evenly</span> : avec de l'espace entre les éléments et autour</td>
 								</tr>
 								<tr>
-									<td class="script">
-										align-content: <span class="perso">valeur</span>;
-									</td>
+									<td><span class="script ">align-content: </span><span class="script perso ">valeur</span><span class="script ">; </span></td>
 									<td>Gérer la répartition des lignes (si le retour à la ligne est autorisé)</td>
-									<td>
-										<ul>
-											<li><span class="script">stretch</span> (par défaut) : Toute la place disponible</li>
-											<li><span class="script">flex-start</span> : Au début</li>
-											<li><span class="script">flex-end</span> : À la fin</li>
-											<li><span class="script">center</span> : Centré verticalement</li>
-											<li><span class="script">space-around</span> : Avec de l'espace entre les lignes et autour</li>
-											<li><span class="script">space-between</span> : Avec de l'espace uniquement entre les lignes</li>
-										</ul>
-									</td>
+									<td><span class="script ">stretch</span> (par défaut) : toute la place disponible<br/><span class="script ">flex-start</span> : au début<br/><span class="script ">flex-end</span> : à la fin<br/>center : centré verticalement<br/><span class="script ">space-around</span> : avec de l'espace entre les lignes et autour<br/><span class="script ">space-between</span> : avec de l'espace uniquement entre les lignes</td>
 								</tr>
 								<tr>
-									<td class="script">
-										align-items: <span class="perso">valeur</span>;
-									</td>
+									<td><span class="script ">align-items: </span><span class="script perso ">valeur</span><span class="script ">; </span></td>
 									<td>Gérer l'alignement des items sur l'axe secondaire (inverse de l'axe principale)</td>
-									<td>
-										<ul>
-											<li><span class="script">stretch</span> (par défaut) : Toute la place disponible</li>
-											<li><span class="script">flex-start</span> : Au début</li>
-											<li><span class="script">flex-end</span> : À la fin</li>
-											<li><span class="script">center</span> : Centré sur l'axe secondaire</li>
-											<!-- <li><span class="script">baseline</span> : ?</li> -->
-										</ul>
-									</td>
+									<td><span class="script ">stretch</span> (par défaut) : toute la place disponible<br/><span class="script ">flex-start</span> : au début<br/><span class="script ">flex-end</span> : à la fin<br/><span class="script ">center</span> : centré sur l'axe secondaire</td>
 								</tr>
 								<tr>
-									<td class="script">
-										align-self: <span class="perso">valeur</span>;
-									</td>
+									<td><span class="script ">align-self: </span><span class="script perso ">valeur</span><span class="script ">; </span></td>
 									<td>Gérer l'alignement d'un seul item sur l'axe secondaire (inverse de l'axe principale)</td>
-									<td>
-										<ul>
-											<li><span class="script">stretch</span> (par défaut) : Toute la place disponible</li>
-											<li><span class="script">flex-start</span> : Au début</li>
-											<li><span class="script">flex-end</span> : À la fin</li>
-											<li><span class="script">center</span> : Centré sur l'axe secondaire</li>
-											<!-- <li><span class="script">baseline</span> : ?</li> -->
-										</ul>
-									</td>
+									<td><span class="script ">stretch</span> (par défaut) : toute la place disponible<br/><span class="script ">flex-start</span> : au début<br/><span class="script ">flex-end</span> : à la fin<br/><span class="script ">center</span> : centré sur l'axe secondaire</td>
 								</tr>
 								<tr>
-									<td class="script">
-										order: <span class="perso">position</span>;
-									</td>
+									<td><span class="script ">order: </span><span class="script perso ">position</span><span class="script ">; </span></td>
 									<td>Changer l'emplacement d'un élément</td>
-									<td>
-										<ul>
-											<li><span class="script">-1</span> : Décale d'une place vers le début</li>
-											<li><span class="script">1</span> : Décale d'une place vers la fin</li>
-										</ul>
-									</td>
+									<td><span class="script ">-1</span> : décale d'une place vers le début<br/><span class="script ">1</span> : décale d'une place vers la fin</td>
 								</tr>
-								<!--
-								<tr>
-									<td class="script">
+							</table>
+						</div>
 
-									</td>
-									<td></td>
-									<td>
-										<ul>
-											<li><span class="script"></span> (par défaut) : </li>
-											<li><span class="script"></span> : </li>
-										</ul>
-									</td>
-								</tr>
-								-->
-							</table>
-						</div>
-						<h4 class="soustitre" id="III.6.8">inline-flex</h4>
+						<h4 class="soustitre" id="4.6.8">inline-flex</h4>
 						<div class="contenu">
-							<p>Il s'agit d'un mélange des méthodes flex et inline-block, c'est-à-dire qu'il n'y a pas de retour à la ligne après l'élément, mais on peut modifier sa taille.</p>
+							<p>Il s'agit d'un mélange des méthodes <span class="script ">flex</span> et <span class="script ">inline-block</span>, c'est-à-dire qu'il n'y a pas de retour à la ligne après l'élément, mais on peut modifier sa taille.</p>
+							
 						</div>
-						<!--
-						<h4 class="soustitre" id="III.6.X"></h4>
-						<div class="contenu">
-							<p></p>
-							<table>
-								<tr>
-									<th>Propriété</th>
-									<th>Description</th>
-									<th>Valeurs possibles</th>
-								</tr>
-								<tr>
-									<td class="script"></td>
-									<td></td>
-									<td class="script">
-										<ul>
-											<li style=""></li>
-										</ul>
-									</td>
-								</tr>
-							</table>
-						</div>
-						-->
+
 					</div>
-					<h3 class="soustitre" id="III.7">Propriétés sur le positionnement</h3>
+
+					<h3 class="soustitre" id="4.7">Propriétés sur le positionnement</h3>
 					<div class="contenu">
-						<p>Syntaxe : <span class="script">position: <span class="perso">methode</span>;</span></p>
-						<h4 class="soustitre" id="III.7.1">static</h4>
+						<p>Syntaxe : <span class="script ">position: </span><span class="script perso ">methode</span><span class="script ">;</span></p>
+						<h4 class="soustitre" id="4.7.1">static</h4>
 						<div class="contenu">
 							<p>Il s'agit du positionnement par défaut. L'élément est placé à sa position par défaut et ne peut pas être déplacé.</p>
 						</div>
-						<h4 class="soustitre" id="III.7.2">relative</h4>
+
+						<h4 class="soustitre" id="4.7.2">relative</h4>
 						<div class="contenu">
 							<p>Cette méthode décale l'élément par rapport à sa position par défaut.</p>
 							<table>
 								<tr>
-									<th>Propriété</th>
-									<th>Description</th>
+									<th><span style="font-weight: bold; ">Propriété</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
 								</tr>
 								<tr>
-									<td class="script">top: <span class="perso">longueur</span>;</td>
+									<td><span class="script ">top: </span><span class="script perso ">longueur</span><span class="script ">;</span></td>
 									<td>Déplace l'élément vers le bas</td>
 								</tr>
 								<tr>
-									<td class="script">bottom: <span class="perso">longueur</span>;</td>
+									<td><span class="script ">bottom: </span><span class="script perso ">longueur</span><span class="script ">;</span></td>
 									<td>Déplace l'élément vers le haut</td>
 								</tr>
 								<tr>
-									<td class="script">left: <span class="perso">longueur</span>;</td>
+									<td><span class="script ">left: </span><span class="script perso ">longueur</span><span class="script ">;</span></td>
 									<td>Déplace l'élément vers la droite</td>
 								</tr>
 								<tr>
-									<td class="script">right: <span class="perso">longueur</span>;</td>
+									<td><span class="script ">right: </span><span class="script perso ">longueur</span><span class="script ">;</span></td>
 									<td>Déplace l'élément vers la gauche</td>
 								</tr>
 							</table>
 						</div>
-						<h4 class="soustitre" id="III.7.3">absolute</h4>
+
+						<h4 class="soustitre" id="4.7.3">absolute</h4>
 						<div class="contenu">
 							<p>Cette méthode positionne l'élément par rapport à la page et non par rapport à sa position par défaut.</p>
 							<table>
 								<tr>
-									<th>Propriété</th>
-									<th>Description</th>
+									<th><span style="font-weight: bold; ">Propriété</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
 								</tr>
 								<tr>
-									<td class="script">top: <span class="perso">longueur</span>;</td>
+									<td><span class="script ">top: </span><span class="script perso ">longueur</span><span class="script ">;</span></td>
 									<td>Écart entre l'élément et le haut de la page</td>
 								</tr>
 								<tr>
-									<td class="script">bottom: <span class="perso">longueur</span>;</td>
+									<td><span class="script ">bottom: </span><span class="script perso ">longueur</span><span class="script ">;</span></td>
 									<td>Écart entre l'élément et le bas de la page</td>
 								</tr>
 								<tr>
-									<td class="script">left: <span class="perso">longueur</span>;</td>
+									<td><span class="script ">left: </span><span class="script perso ">longueur</span><span class="script ">;</span></td>
 									<td>Écart entre l'élément et le bord gauche de la page</td>
 								</tr>
 								<tr>
-									<td class="script">right: <span class="perso">longueur</span>;</td>
+									<td><span class="script ">right: </span><span class="script perso ">longueur</span><span class="script ">;</span></td>
 									<td>Écart entre l'élément et le bord droit de la page</td>
 								</tr>
 							</table>
 						</div>
-						<h4 class="soustitre" id="III.7.3">fixed</h4>
+
+						<h4 class="soustitre" id="4.7.4">fixed</h4>
 						<div class="contenu">
 							<p>Cette méthode positionne l'élément par rapport à l'écran et non par rapport à sa position par défaut. L'élément est insensible au défilement de la page (avec le media print, l'élément apparaît sur toutes les pages).</p>
 							<table>
 								<tr>
-									<th>Propriété</th>
-									<th>Description</th>
+									<th><span style="font-weight: bold; ">Propriété</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
 								</tr>
 								<tr>
-									<td class="script">top: <span class="perso">longueur</span>;</td>
+									<td><span class="script ">top: </span><span class="script perso ">longueur</span><span class="script ">;</span></td>
 									<td>Écart entre l'élément et le haut de l'écran</td>
 								</tr>
 								<tr>
-									<td class="script">bottom: <span class="perso">longueur</span>;</td>
+									<td><span class="script ">bottom: </span><span class="script perso ">longueur</span><span class="script ">;</span></td>
 									<td>Écart entre l'élément et le bas de l'écran</td>
 								</tr>
 								<tr>
-									<td class="script">left: <span class="perso">longueur</span>;</td>
+									<td><span class="script ">left: </span><span class="script perso ">longueur</span><span class="script ">;</span></td>
 									<td>Écart entre l'élément et le bord gauche de l'écran</td>
 								</tr>
 								<tr>
-									<td class="script">right: <span class="perso">longueur</span>;</td>
+									<td><span class="script ">right: </span><span class="script perso ">longueur</span><span class="script ">;</span></td>
 									<td>Écart entre l'élément et le bord droit de l'écran</td>
 								</tr>
 							</table>
 						</div>
-						<!--
-						<h4 class="soustitre" id="III.7.X"></h4>
-						<div class="contenu">
-							<p></p>
-							<table>
-								<tr>
-									<th>Propriété</th>
-									<th>Description</th>
-								</tr>
-								<tr>
-									<td class="script">top: <span class="perso">longueur</span>;</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td class="script">bottom: <span class="perso">longueur</span>;</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td class="script">left: <span class="perso">longueur</span>;</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td class="script">right: <span class="perso">longueur</span>;</td>
-									<td></td>
-								</tr>
-							</table>
-						</div>
-						-->
+
 					</div>
-					<h3 class="soustitre" id="III.8">Propriétés sur les transformations</h3>
+
+					<h3 class="soustitre" id="4.8">Propriétés sur les transformations</h3>
 					<div class="contenu">
-						<p>Syntaxe : <span class="script">transform: <span class="perso">transformation1</span> <span class="perso">transformation2</span>…</span>;</p>
-						<h4 class="soustitre" id="III.8.1">Les différentes transformations</h4>
+						<p>Syntaxe : <span class="script ">transform: </span><span class="script perso ">transformation1</span><span class="script "> </span><span class="script perso ">transformation2</span><span class="script ">…</span><span class="script ">;</span></p>
+						<h4 class="soustitre" id="4.8.1">Les différentes transformations</h4>
 						<div class="contenu">
 							<table>
 								<tr>
-									<th>Transformation</th>
-									<th>Description</th>
+									<th><span style="font-weight: bold; ">Transformation</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
 								</tr>
 								<tr>
-									<td class="script">rotate(90deg)</td>
+									<td><span class="script ">rotate(90deg)</span></td>
 									<td>Tourner de 90 degrés vers la droite</td>
 								</tr>
 								<tr>
-									<td class="script">skewX(10deg)</td>
+									<td><span class="script ">skewX(10deg)</span></td>
 									<td>Appliquer une distorsion de 10 degrés (avec le haut vers la gauche et le bas vers la droite)</td>
 								</tr>
 								<tr>
-									<td class="script">skewY(20deg)</td>
+									<td><span class="script ">skewY(20deg)</span></td>
 									<td>Appliquer une distorsion de 20 degrés (avec la gauche vers le haut et la droite vers le bas)</td>
 								</tr>
 								<tr>
-									<td class="script">skew(10deg, 20deg)</td>
+									<td><span class="script ">skew(10deg, 20deg)</span></td>
 									<td>Appliquer une distorsion sur les 2 axes en même temps</td>
 								</tr>
 								<tr>
-									<td class="script">translateX(100px)</td>
+									<td><span class="script ">translateX(100px)</span></td>
 									<td>Déplacer une image de 100 pixels vers la droite</td>
 								</tr>
 								<tr>
-									<td class="script">translateY(200px)</td>
+									<td><span class="script ">translateY(200px)</span></td>
 									<td>Déplacer une image de 200 pixels vers le bas</td>
 								</tr>
 								<tr>
-									<td class="script">translate(100px, 200px)</td>
+									<td><span class="script ">translate(100px, 200px)</span></td>
 									<td>Déplacer une image selon les 2 axes</td>
 								</tr>
-								<!--
-								<tr>
-									<td class="script"></td>
-									<td></td>
-								</tr>
-								-->
 							</table>
 						</div>
-						<h4 class="soustitre" id="III.8.2">Déplacements par rapport à l'origine.</h4>
+
+						<h4 class="soustitre" id="4.8.2">Déplacements par rapport à l'origine.</h4>
 						<div class="contenu">
 							<table>
 								<tr>
-									<th>Commande</th>
-									<th>Description</th>
+									<th><span style="font-weight: bold; ">Commande</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
 								</tr>
 								<tr>
-									<td class="script">transform-origin: center</td>
+									<td><span class="script ">transform-origin: center</span><span class="script ">;</span></td>
 									<td>Transformer par rapport au centre de l'élément</td>
 								</tr>
 								<tr>
-									<td class="script">
-										transform-origin: top left<br/>
-										transform-origin: bottom right
-									</td>
+									<td><span class="script ">transform-origin: top left</span><span class="script ">;</span><span class="script "><br/>transform-origin: bottom right</span><span class="script ">;</span></td>
 									<td>Transformer par rapport au coin de l'élément</td>
 								</tr>
 								<tr>
-									<td class="script">
-										transform-origin: 10px 20px<br/>
-										transform-origin: bottom right
-									</td>
+									<td><span class="script ">transform-origin: 10px 20px</span><span class="script ">;</span><span class="script "><br/>transform-origin: bottom right</span><span class="script ">;</span></td>
 									<td>Transformer par rapport au coin supérieur gauche de l'élément avec un décalage de 10 pixels à droite et de 20 pixels en bas</td>
 								</tr>
 							</table>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="III.9">Propriétés sur les transitions</h3>
+
+					<h3 class="soustitre" id="4.9">Propriétés sur les transitions</h3>
 					<div class="contenu">
 						<p>Les transitions permettent d'animer les éléments qui ont des pseudo-classes (par exemple lors du survol de la souris).</p>
-						<h4 class="soustitre" id="III.9.1">Manière simple et propre</h4>
+						<h4 class="soustitre" id="4.9.1">Manière simple et propre</h4>
 						<div class="contenu">
 							<table>
 								<tr>
-									<th>Propriété</th>
-									<th>Description</th>
+									<th><span style="font-weight: bold; ">Propriété</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
 								</tr>
 								<tr>
-									<td class="script">transition-property: <span class="perso">attribut1</span>, <span class="perso">attribut2</span>…;</td>
-									<td>Sélectionner les propriétés à animer (Pour animer toutes les propriétés, il est possible de remplacer la propriété par <span class="script">all</span>)</td>
+									<td><span class="script ">transition-property: </span><span class="script perso ">attribut1</span><span class="script ">, </span><span class="script perso ">attribut2</span><span class="script ">…;</span></td>
+									<td>Sélectionner les propriétés à animer (Pour animer toutes les propriétés, il est possible de remplacer la propriété par <span class="script ">all</span>)</td>
 								</tr>
 								<tr>
-									<td class="script">transition-duration: <span class="perso">duree1</span>, <span class="perso">duree2</span>…;</td>
-									<td>Appliquer la durée de la transition à la propriété positionnée au même emplacement (avec la durée sous la forme : <span class="script">1s</span> par exemple pour 1 seconde)</td>
+									<td><span class="script ">transition-duration: </span><span class="script perso ">duree1</span><span class="script ">, </span><span class="script perso ">duree2</span><span class="script ">…;</span></td>
+									<td>Appliquer la durée de la transition à la propriété positionnée au même emplacement (avec la durée sous la forme : <span class="script ">1s</span> par exemple pour 1 seconde)</td>
 								</tr>
 								<tr>
-									<td class="script">transition-timing-function: <span class="perso">timing-function1</span>, <span class="perso">timing-function2</span>…;</td>
+									<td><span class="script ">transition-timing-function: </span><span class="script perso ">fonction-temporelle</span><span class="script perso ">1</span><span class="script ">, </span><span class="script perso ">fonction-temporelle</span><span class="script perso ">2</span><span class="script ">…;</span></td>
 									<td>Attribuer une fonction temporelle à la propriété positionnée au même emplacement (voir les fonctions temporelles)</td>
 								</tr>
 								<tr>
-									<td class="script">transition-delay: <span class="perso">delai1</span>, <span class="perso">delai2</span>…;</td>
-									<td>Appliquer un délai à la propriété positionnée au même emplacement (avec le délai sous la forme : <span class="script">1s</span> par exemple pour 1 seconde)</td>
+									<td><span class="script ">transition-delay: </span><span class="script perso ">delai1</span><span class="script ">, </span><span class="script perso ">delai2</span><span class="script ">…;</span></td>
+									<td>Appliquer un délai à la propriété positionnée au même emplacement (avec le délai sous la forme : <span class="script ">1s</span> par exemple pour 1 seconde)</td>
 								</tr>
 							</table>
 						</div>
-						<h4 class="soustitre" id="III.9.2">Manière rapide</h4>
+
+						<h4 class="soustitre" id="4.9.2">Manière rapide</h4>
 						<div class="contenu">
-							<p>Syntaxe : <span class="script">transition: <span class="perso">attribut1</span> <span class="perso">duree1</span> <span class="perso">timing-function1</span> <span class="perso">delai1</span>, <span class="perso">attribut2</span> <span class="perso">duree2</span> <span class="perso">timing-function2</span> <span class="perso">delai2</span>…</span>;</p>
-							<div class="note">Note : Le délai et la fonction ne sont pas à renseigner obligatoirement.</div>
+							<p>Syntaxe : <span class="script ">transition: </span><span class="script perso ">attribut1</span><span class="script "> </span><span class="script perso ">duree1</span><span class="script "> </span><span class="script perso ">fonction-temporelle</span><span class="script perso ">1</span><span class="script "> </span><span class="script perso ">delai1</span><span class="script ">, </span><span class="script perso ">attribut2</span><span class="script "> </span><span class="script perso ">duree2</span><span class="script "> </span><span class="script perso ">fonction-temporelle</span><span class="script perso ">2</span><span class="script "> </span><span class="script perso ">delai2</span><span class="script ">…</span><span class="script ">;</span></p>
+							<div class="note ">Note : Le délai et la fonction ne sont pas à renseigner obligatoirement.</div>
 						</div>
-						<h4 class="soustitre" id="III.9.3">Les fonctions temporelles</h4>
+
+						<h4 class="soustitre" id="4.9.3">Les fonctions temporelles</h4>
 						<div class="contenu">
 							<table>
 								<tr>
-									<th>Fonction temporelle</th>
-									<th>Description du mouvement</th>
+									<th><span style="font-weight: bold; ">Fonction temporelle</span></th>
+									<th><span style="font-weight: bold; ">Description du mouvement</span></th>
 								</tr>
 								<tr>
-									<td class="script">linear</td>
+									<td><span class="script ">linear</span></td>
 									<td>Même vitesse du début jusqu'à la fin</td>
 								</tr>
 								<tr>
-									<td class="script">ease</td>
+									<td><span class="script ">ease</span></td>
 									<td>Ralentissement à la fin (valeur par défaut)</td>
 								</tr>
 								<tr>
-									<td class="script">ease-in</td>
+									<td><span class="script ">ease-in</span></td>
 									<td>Ralentissement au début et accélération à la fin</td>
 								</tr>
 								<tr>
-									<td class="script">ease-out</td>
+									<td><span class="script ">ease-out</span></td>
 									<td>Accélération au début et ralentissement à la fin</td>
 								</tr>
 								<tr>
-									<td class="script">ease-in-out</td>
+									<td><span class="script ">ease-in-out</span></td>
 									<td>Accélération au début et à la fin uniquement</td>
 								</tr>
 								<tr>
-									<td class="script">cubic-bezier(<span class="perso">c1</span>, <span class="perso">c2</span>, <span class="perso">c3</span>, <span class="perso">c4</span>)</td>
+									<td><span class="script ">cubic-bezier(</span><span class="script perso ">c1</span><span class="script ">, </span><span class="script perso ">c2</span><span class="script ">, </span><span class="script perso ">c3</span><span class="script ">, </span><span class="script perso ">c4</span><span class="script ">)</span></td>
 									<td>Courbe de Bézier paramétrable à l'aide de quatre coefficients compris entre 0 et 1</td>
 								</tr>
 								<tr>
-									<td>
-										<span class="script">steps(<span class="perso">n</span>, jump-start)</span>
-										<br/>ou<br/>
-										<span class="script">steps(<span class="perso">n</span>, start)</span>
-										<br/>ou<br/>
-										<span class="script">step-start</span> (si <span class="perso">n</span> vaut 1)
-									</td>
+									<td><span class="script ">steps(</span><span class="script perso ">n</span><span class="script ">, jump-start)</span><span class="script "><br/></span>ou<span class="script "><br/></span><span class="script ">steps(</span><span class="script perso ">n</span><span class="script ">, start)</span><span class="script "><br/></span>ou<span class="script "><br/></span><span class="script ">step-start</span> (si <span class="perso ">n</span> vaut 1)</td>
 									<td>Nombre d'étapes à partir du début</td>
 								</tr>
 								<tr>
-									<td>
-										<span class="script">steps(<span class="perso">n</span>, jump-start)</span>
-										<br/>ou<br/>
-										<span class="script">steps(<span class="perso">n</span>, start)</span>
-										<br/>ou<br/>
-										<span class="script">step-start</span> (si <span class="perso">n</span> vaut 1)
-									</td>
+									<td><span class="script ">steps(</span><span class="script perso ">n</span><span class="script ">, jump-start)</span><span class="script "><br/></span>ou<span class="script "><br/></span><span class="script ">steps(</span><span class="script perso ">n</span><span class="script ">, start)</span><span class="script "><br/></span>ou<span class="script "><br/></span><span class="script ">step-start</span> (si <span class="perso ">n</span> vaut 1)</td>
 									<td>Nombre d'étapes à partir de la fin</td>
 								</tr>
 								<tr>
-									<td class="script">steps(<span class="perso">n</span>, jump-none)</td>
+									<td><span class="script ">steps(</span><span class="script perso ">n</span><span class="script ">, jump-none)</span></td>
 									<td>Nombre d'étapes entre le début et la fin compris</td>
 								</tr>
 								<tr>
-									<td class="script">steps(<span class="perso">n</span>, jump-both)</td>
+									<td><span class="script ">steps(</span><span class="script perso ">n</span><span class="script ">, jump-both)</span></td>
 									<td>Nombre d'étapes entre le début et la fin non compris</td>
 								</tr>
-								<!--
-								<tr>
-									<td class="script"></td>
-									<td></td>
-								</tr>
-								-->
 							</table>
 						</div>
+
 					</div>
-					<h3 class="soustitre" id="III.10">Propriétés sur les animations</h3>
+
+					<h3 class="soustitre" id="4.10">Propriétés sur les animations</h3>
 					<div class="contenu">
-						<h4 class="soustitre" id="III.10.1">Créer une animation</h4>
+						<h4 class="soustitre" id="4.10.1">Créer une animation</h4>
 						<div class="contenu">
-							<h5 class="soustitre" id="III.10.1.1">Animation simple avec un début et une fin</h5>
+							<h5 class="soustitre" id="4.10.1.1">Animation simple avec un début et une fin</h5>
 							<div class="contenu">
-								<p class="script">
-									@keyframe <span class="script">mon-animation</span> {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;from {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur1</span>;<br/>
-    								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut2</span>: <span class="perso">valeur2</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;to {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur3</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut2</span>: <span class="perso">valeur4</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-									}
-								</p>
+								<p><span class="script ">@keyframe </span><span class="script perso ">mon-animation</span><span class="script "> {</span><span class="script "><br/>    from {</span><span class="script "><br/>        </span><span class="script perso ">attribut1</span><span class="script ">: </span><span class="script perso ">valeur1</span><span class="script ">;</span><span class="script "><br/>        </span><span class="script perso ">attribut2</span><span class="script ">: </span><span class="script perso ">valeur2</span><span class="script ">;</span><span class="script "><br/>    }</span><span class="script "><br/>    to {</span><span class="script "><br/>        </span><span class="script perso ">attribut1</span><span class="script ">: </span><span class="script perso ">valeur3</span><span class="script ">;</span><span class="script "><br/>        </span><span class="script perso ">attribut2</span><span class="script ">: </span><span class="script perso ">valeur4</span><span class="script ">;</span><span class="script "><br/>    }</span><span class="script "><br/>}</span></p>
 							</div>
-							<h5 class="soustitre" id="III.10.1.2">Animation complexe avec des pourcentages</h5>
+
+							<h5 class="soustitre" id="4.10.1.2">Animation complexe avec des pourcentages</h5>
 							<div class="contenu">
-								<p class="script">
-									@keyframe <span class="script">mon-animation</span> {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;0% {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur1</span>;<br/>
-    								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut2</span>: <span class="perso">valeur2</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;25% {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur3</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut2</span>: <span class="perso">valeur4</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;50% {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur5</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut2</span>: <span class="perso">valeur6</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;75% {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur7</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut2</span>: <span class="perso">valeur8</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;100% {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut1</span>: <span class="perso">valeur9</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">attribut2</span>: <span class="perso">valeur10</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-									}
-								</p>
+								<p><span class="script ">@keyframe </span><span class="script perso ">mon-animation</span><span class="script "> {</span><span class="script "><br/>    0% {</span><span class="script "><br/>        </span><span class="script perso ">attribut1</span><span class="script ">: </span><span class="script perso ">valeur1</span><span class="script ">;</span><span class="script "><br/>        </span><span class="script perso ">attribut2</span><span class="script ">: </span><span class="script perso ">valeur2</span><span class="script ">;</span><span class="script "><br/>    }</span><span class="script "><br/>    25% {</span><span class="script "><br/>        </span><span class="script perso ">attribut1</span><span class="script ">: </span><span class="script perso ">valeur3</span><span class="script ">;</span><span class="script "><br/>        </span><span class="script perso ">attribut2</span><span class="script ">: </span><span class="script perso ">valeur4</span><span class="script ">;</span><span class="script "><br/>    }</span><span class="script "><br/></span><span class="script ">    50% {</span><span class="script "><br/>        </span><span class="script perso ">attribut1</span><span class="script ">: </span><span class="script perso ">valeur5</span><span class="script ">;</span><span class="script "><br/>        </span><span class="script perso ">attribut2</span><span class="script ">: </span><span class="script perso ">valeur6</span><span class="script ">;</span><span class="script "><br/>    }</span><span class="script "><br/>    75% {</span><span class="script "><br/>        </span><span class="script perso ">attribut1</span><span class="script ">: </span><span class="script perso ">valeur7</span><span class="script ">;</span><span class="script "><br/>        </span><span class="script perso ">attribut2</span><span class="script ">: </span><span class="script perso ">valeur8</span><span class="script ">;</span><span class="script "><br/>    }</span><span class="script "><br/>    100% {</span><span class="script "><br/>        </span><span class="script perso ">attribut1</span><span class="script ">: </span><span class="script perso ">valeur9</span><span class="script ">;</span><span class="script "><br/>        </span><span class="script perso ">attribut2</span><span class="script ">: </span><span class="script perso ">valeur10</span><span class="script ">;</span><span class="script "><br/>    }</span><span class="script "><br/>}</span></p>
 							</div>
+
 						</div>
-						<h4 class="soustitre" id="III.10.2">Utiliser les animations</h4>
+
+						<h4 class="soustitre" id="4.10.2">Utiliser les animations</h4>
 						<div class="contenu">
-							<h5 class="soustitre" id="III.10.2.1">Manière simple et propre</h5>
+							<h5 class="soustitre" id="4.10.2.1">Manière simple et propre</h5>
 							<div class="contenu">
 								<table>
 									<tr>
-										<th>Propriété</th>
-										<th>Description</th>
+										<th><span style="font-weight: bold; ">Propriété</span></th>
+										<th><span style="font-weight: bold; ">Description</span></th>
 									</tr>
 									<tr>
-										<td class="script">animation-name: <span class="perso">mon-animation1</span>, <span class="perso">mon-animation2</span>…;</td>
+										<td><span class="script ">animation-name: </span><span class="script perso ">mon-animation1</span><span class="script ">, </span><span class="script perso ">mon-animation2</span><span class="script ">…;</span></td>
 										<td>Appliquer des animations</td>
 									</tr>
 									<tr>
-										<td class="script">animation-duration: <span class="perso">duree1</span>, <span class="perso">duree2</span>…;</td>
-										<td>Appliquer la durée à l'animation positionnée au même emplacement (avec la durée sous la forme : <span class="script">1s</span> par exemple pour 1 seconde)</td>
+										<td><span class="script ">animation-duration: </span><span class="script perso ">duree1</span><span class="script ">, </span><span class="script perso ">duree2</span><span class="script ">…;</span></td>
+										<td>Appliquer la durée à l'animation positionnée au même emplacement (avec la durée sous la forme : 1s par exemple pour 1 seconde)</td>
 									</tr>
 									<tr>
-										<td class="script">animation-timing-function: <span class="perso">timing-function1</span>, <span class="perso">timing-function2</span>…;</td>
+										<td><span class="script ">animation-timing-function: </span><span class="script perso ">fonction-temporelle</span><span class="script perso ">1</span><span class="script ">, </span><span class="script perso ">fonction-temporelle</span><span class="script perso ">2</span><span class="script ">…;</span></td>
 										<td>Attribuer une fonction temporelle à l'animation au même emplacement (voir les fonctions temporelles (dans les transitions))</td>
 									</tr>
 									<tr>
-										<td class="script">animation-delay: <span class="perso">delai1</span>, <span class="perso">delai2</span>…;</td>
-										<td>Appliquer un délai à l'animation positionnée au même emplacement (avec le délai sous la forme : <span class="script">1s</span> par exemple pour 1 seconde)</td>
+										<td><span class="script ">animation-delay: </span><span class="script perso ">delai1</span><span class="script ">, </span><span class="script perso ">delai2</span><span class="script ">…;</span></td>
+										<td>Appliquer un délai à l'animation positionnée au même emplacement (avec le délai sous la forme : 1s par exemple pour 1 seconde)</td>
 									</tr>
 									<tr>
-										<td class="script">animation-direction: <span class="perso">direction1</span>, <span class="perso">direction2</span>…;</td>
-										<td>Appliquer une direction à l'animation positionnée au même emplacement (<span class="script">normal</span>, <span class="script">reverse</span>, <span class="script">alternate</span> (dans les 2 sens), <span class="script">alternate-reverse</span>)</td>
+										<td><span class="script ">animation-direction: </span><span class="script perso ">direction1</span><span class="script ">, </span><span class="script perso ">direction2</span><span class="script ">…;</span></td>
+										<td>Appliquer une direction à l'animation positionnée au même emplacement (normal, reverse, alternate (dans les 2 sens), alternate-reverse)</td>
 									</tr>
 									<tr>
-										<td class="script">animation-play-state: <span class="perso">etat1</span>, <span class="perso">etat2</span>…;</td>
-										<td>Choisir l'état de l'animation positionnée au même emplacement entre <span class="script">running</span> et <span class="script">paused</span></td>
+										<td><span class="script ">animation-play-state: </span><span class="script perso ">etat1</span><span class="script ">, </span><span class="script perso ">etat2</span><span class="script ">…;</span></td>
+										<td>Choisir l'état de l'animation positionnée au même emplacement entre running et paused</td>
 									</tr>
 									<tr>
-										<td class="script">animation-iteration-count: <span class="perso">iteration1</span>, <span class="perso">iteration2</span>…;</td>
-										<td>Appliquer un nombre d'itération de l'animation positionnée au même emplacement (les nombres décimaux sont autorisés et <span class="script">infinite</span>permet une boucle infinie)</td>
+										<td><span class="script ">animation-iteration-count: </span><span class="script perso ">iteration1</span><span class="script ">, </span><span class="script perso ">iteration2</span><span class="script ">…;</span></td>
+										<td>Appliquer un nombre d'itération de l'animation positionnée au même emplacement (les nombres décimaux sont autorisés et infinite permet une boucle infinie)</td>
 									</tr>
 									<tr>
-										<td class="script">animation-fill-mode: <span class="perso">fill-mode1</span>, <span class="perso">fill-mode2</span>…;</td>
-										<td>Choisir un style que doit prendre avant et après l'animation positionnée au même emplacement (<span class="script">none</span> (aucun style avant et après l'animation), <span class="script">forwards</span> (garder le style de l'animation après son exécution), <span class="script">backwards</span> (récupérer le style de l'animation avant son exécution), <span class="script">both</span> (prendre le style de l'animation avant et après son exécution))</td>
+										<td><span class="script ">animation-fill-mode: </span><span class="script perso ">fill-mode1</span><span class="script ">, </span><span class="script perso ">fill-mode2</span><span class="script ">…;</span></td>
+										<td>Choisir un style que doit prendre avant et après l'animation positionnée au même emplacement (none (aucun style avant et après l'animation), forwards (garder le style de l'animation après son exécution), backwards (récupérer le style de l'animation avant son exécution), both (prendre le style de l'animation avant et après son exécution))</td>
 									</tr>
 								</table>
 							</div>
-							<h5 class="soustitre" id="III.10.2.2">Manière rapide</h5>
+
+							<h5 class="soustitre" id="4.10.2.2">Manière rapide</h5>
 							<div class="contenu">
-								<p>Syntaxe : <span class="script">animation: <span class="perso">duree1</span> <span class="perso">timing-function1</span> <span class="perso">delai1</span> <span class="perso">iteration1</span> <span class="perso">direction1</span> <span class="perso">fill-mode1</span> <span class="perso">etat1</span> <span class="perso">mon-animation1</span>, <span class="perso">duree2</span> <span class="perso">timing-function2</span> <span class="perso">delai2</span> <span class="perso">iteration2</span> <span class="perso">direction2</span> <span class="perso">fill-mode2</span> <span class="perso">etat2</span> <span class="perso">mon-animation2</span>…;</p>
-								<div class="note">Note : La durée et le nom de l'animation sont à renseigner obligatoirement.</div>
+								<p>Syntaxe : <span class="script ">animation: </span><span class="script perso ">duree1</span><span class="script "> </span><span class="script perso ">fonction-temporelle</span><span class="script perso ">1</span><span class="script "> </span><span class="script perso ">delai1</span><span class="script "> </span><span class="script perso ">iteration1</span><span class="script "> </span><span class="script perso ">direction1</span><span class="script "> </span><span class="script perso ">fill-mode1</span><span class="script "> </span><span class="script perso ">etat1</span><span class="script "> </span><span class="script perso ">mon-animation1</span><span class="script ">, </span><span class="script perso ">duree2</span><span class="script "> </span><span class="script perso ">fonction-temporelle</span><span class="script perso ">2</span><span class="script "> </span><span class="script perso ">delai2</span><span class="script "> </span><span class="script perso ">iteration2</span><span class="script "> </span><span class="script perso ">direction2</span><span class="script "> </span><span class="script perso ">fill-mode2</span><span class="script "> </span><span class="script perso ">etat2</span><span class="script "> </span><span class="script perso ">mon-animation2</span><span class="script ">…;</span></p>
+								<div class="note ">Note : La durée et le nom de l'animation sont à renseigner obligatoirement.</div>
+								
 							</div>
+
 						</div>
-					</div>
-					<!--
-					<h3 class="soustitre" id="III.X">Propriétés sur </h3>
-					<div class="contenu">
 
 					</div>
-					-->
-				</div>
-                <!--
-				<h2 class="soustitre" id=""></h2>
-				<div class="contenu">
 
 				</div>
-				
-				&nbsp; : 1 espace obligatoire
-				-->
 			</article>
 		</main>
 		<footer>
 			<script src="../../scripts/footer.js"></script>
 			<a class="top" href="#"><img src="../../images/top.png"></a>
 		</footer>
+		<script src="../../scripts/script.js"></script>
+		<script src="../../scripts/tableDesMatieres.js"></script>
 	</body>
-	<script src="../../scripts/script.js"></script>
-	<script src="../../scripts/tableDesMatieres.js"></script>
 </html>
