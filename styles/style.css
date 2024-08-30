@@ -231,6 +231,10 @@ main{
 	background-color: rgba(100, 100, 100, 0.1);
 }
 
+.note img{
+	max-height: 16px;
+}
+
 .attention{
 	padding: 10px;
 	background-color: rgba(100, 100, 100, 0.1);
