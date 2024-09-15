@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Loric Informatique (page générée automatiquement à partir d'un document Word XML) -->
 <html lang="fr-FR">
 	<head>
 		<title>Loric Informatique - JavaScript</title>
@@ -16,651 +16,1005 @@
 			<section class="presentation">
 				<div class="alignementVertical">
 					<div>
-						<h1>JavaScript</h1>
-						<p class="version">Version 0.1 (créé le 20/04/2024, modifié le 20/04/2024)</p>
-                        <p>JS (JavaScript) est un langage de programmation côté client qui ajoute de l'interactivité au site web.</p>
+						<h1>Mémento JavaScript</h1>
+						<p class="version">Version 1.0 (créé le 15/09/2024, modifié le 15/09/2024) </p>
+						<p>JS (JavaScript) est un langage de programmation côté client qui ajoute de l'interactivité au site web.</p>
 						<a href="Loric Informatique - JavaScript.pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
-						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
+						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de choisir le format A4, de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
 					</div>
-					<img src="icone_js.png" class="logoLangage">
+					<img src="icone_js.png" class="logoLangage"/>
 				</div>
 			</section>
-            <section class="outils">
-                <h2>Outils nécessaires :</h2>
-				<ul>
-                    <li>Navigateur Internet à jour (ex : Firefox ou Chrome)</li>
-					<li>Un logiciel de codage (Visual Studio Code (recommandé) ou Notepad++)</li>
-					<li>Connaissances en HTML et CSS</li>
-					<li>Validateur JS : <a href="" target="_blank">https://jshint.com/</a> (faire précéder son code par // jshint browser:true, eqeqeq:true, undef:true, devel:true, esversion: 6)</li>
-                </ul>
-            </section>
-            <section>
+			<section class="sommaire">
 				<h2>Table des matières :</h2>
-                <div class="tableDesMatieres">
-                    <!-- Table des matières remplie par le JavaScript -->
-                </div>
-            </section>
-            <article>
-				<h2 class="soustitre" id="I">Bases</h2>
+				<div class="tableDesMatieres">
+					<!-- Table des matières remplie par le JavaScript -->
+				</div>
+			</section>
+			<article>
+				<h2 class="soustitre" id="1">Prise en main</h2>
 				<div class="contenu">
-					<h3 class="soustitre" id="I.1">Syntaxe</h3>
+					<h3 class="soustitre" id="1.1">Outils nécessaires</h3>
 					<div class="contenu">
-						<p class="script">
-							<span class="perso">instruction1</span>;<br/>
-							<span class="perso">instruction2</span>;<br/>
-							<span class="perso">instruction3</span>;
-						</p>
+						<ul>
+							<li>Navigateur Internet à jour (ex : Firefox ou Chrome)</li>
+							<li>Un logiciel de codage (Visual Studio Code (recommandé) ou Notepad++)</li>
+							<li>Connaissances en HTML et CSS</li>
+							<li>Validateur JS : <a href="https://jshint.com/" target="_blank">https://jshint.com/</a> (faire précéder son code par <span class="script ">// jshint </span><span class="script ">browser:true</span><span class="script ">, eqeqeq:true, undef:true, devel:true, esversion: 6</span>)</li>
+						</ul>
+						<div class="note "><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAMAAADWg4HyAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAABFUExURQAAAOZGIOJLI+NMJeRLJONLIuVMJeNMJgAAAORNJuRcOuVmRuVnR+VqSuZR
+JupYJ+vr6+x2Tu5gKPFlKfN+S/n5+f///8Z+zzoAAAAIdFJOUwAoLG+WnLj+OoIEzAAAAAlwSFlz
+AAAh1QAAIdUBBJy0nQAAANdJREFUSEvN0AkOgjAQQFFcwX33/kd1OvOnJViqJDbxJ8S28yBgE+s6
+vbpQ2jAcFMdm+WE4iLHN2fzGpssXdsd77nTIYsxWaVMOZXE2FspqOczXoohTOt16DR77R/bsPZ7e
+NCvnGK+61UX/22SL8ZRMsdvv7FyN2P1OutxJ7QwTc6vFb1OLSFW1nn7bdHssvcPAyg6RCqSqDTjY
+QEv2oDj9Z3JLzq4U5+wS0UstGBveOvNYtxI2wI9W0v/BqmFtw7yfDSyxV5ZZK62ZphZM8oFCnJTL
+uqZ5AYC1NFUias7yAAAAAElFTkSuQmCC"/> Le mémento HTML est disponible en ligne sur le site : <a href="https://loricaudin.github.io/loric-informatique/langages/html/html.html" target="_blank">https://loricaudin.github.io/loric-informatique/langages/html/html.html</a> </div>
+						<div class="note "><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAMAAADWg4HyAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAACTUExURQAAABpN5hxH4yFG4iVK4wAAACNK3yNK4CNM4SJM4yRK4SVL4wAAACJg7yRL
+4iRL4yVL4yVM4yVM5CVN4yZM4yZN5CZc6yZj8Cde7Sdk7ydk8Chh7ihi7ihj8Chk8Cll8StR4z5g
+5EN170N38pCw97K859Le+93m++nq6urp6urq6uvr6/v8/v39/f39/v7+/v///zI2TLQAAAAMdFJO
+UwAKEj51d6bR2O38/CDhHf8AAAAJcEhZcwAAIdUAACHVAQSctJ0AAAETSURBVEhLxdTbUsIwFIXh
+KigIKiej4qEFURQV9P2fzrV3VkzKxEDGjv4XnZB8U5pmoKh1KtnrkQ4Tqdrb2mvzVoBeG7WN109H
+ZTPJRlS2EWfjnVDZWpxld1WQMUQuIvYXtozbN9fm01VV1xn2PMNinsaVbb+zewPdZNhHsRMaV/2Q
+1ZawN2J7NK5jIeM5e1igZ31cWBKf3o9b83v7B+vSvVl7n2GHqWfYsvhE4RPyK7tO2BfYVxwhbPkB
+u4xbPeQnuTFay/ejK7FDCl9X7IDWvV88iTGHFEFizaxmz9RyPUyttFL7LtvbadEtIdpp9Z1p032t
+/QFwPUznGewlh1GLOlz1tbkS74Jq+1/3hw4AOQwqii9WrGuh7yOHkgAAAABJRU5ErkJggg=="/> Le mémento CSS est disponible en ligne sur le site : <a href="https://loricaudin.github.io/loric-informatique/langages/css/css.html" target="_blank">https://loricaudin.github.io/loric-informatique/langages/css/css.html</a> </div>
 					</div>
-					<h3 class="soustitre" id="I.2">Où écrire le code JS ?</h3>
+
+					<h3 class="soustitre" id="1.2">Où écrire le code JS ?</h3>
 					<div class="contenu">
-						<p>Soit dans un fichier (ex : script.js), mais entre les balises <span class="script">&lt;body&gt;&lt;/body&gt;, il faut rajouter : <span class="script">&lt;script src="<span class="perso">script.js</span>"&gt;&lt;/script&gt;</span> au moment où on souhaite appeler le script (ou bien entre les balises <span class="script">&lt;head&gt;&lt;/head&gt;</span>, il faut rajouter : <span class="script">&lt;script src="<span class="perso">script.js</span>" defer&gt;&lt;/script&gt;</span> pour l'appeler à la fin du chargement du site)</p>
-						<p>Soit entre les balises <span class="script">&lt;script&gt;&lt;/script&gt;</span>, placées dans <span class="script">&lt;body&gt;&lt;/body&gt; au moment où on souhaite appeler le script</span> (à éviter)</p>
+						<p>Soit dans un fichier (ex : <span class="perso ">script</span>.js), mais entre les balises <span class="script ">&lt;body&gt;&lt;/body&gt;</span>, il faut rajouter : <span class="script ">&lt;script src="</span><span class="script perso ">script</span><span class="script ">.js"&gt;&lt;/script&gt;</span> au moment où on souhaite appeler le script (ou bien entre les balises <span class="script ">&lt;head&gt;&lt;/head&gt;</span>, il faut rajouter : <span class="script ">&lt;script src="</span><span class="script perso ">script</span><span class="script ">.js" defer&gt;&lt;/script&gt;</span> pour l'appeler à la fin du chargement du site).</p>
+						<p>Soit entre les balises <span class="script ">&lt;script&gt;&lt;/script&gt;</span>, placées dans <span class="script ">&lt;body&gt;&lt;/body&gt;</span> au moment où on souhaite appeler le script (à éviter).</p>
 					</div>
-					<h3 class="soustitre" id="I.3">Types de variables</h3>
-                    <div class="contenu">
-                        <p>Fonction pour connaître le type : <span class="script">typeof(<span class="perso">variable</span>)</span></p>
-                        <h4 class="soustitre" id="I.3.1">Types de base</h4>
-                        <div class="contenu">
-                            <table>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Description</th>
-                                    <th>Fonction pour le convertir</th>
-                                </tr>
-                                <tr>
-                                    <td><span class="script">int</span> ou <span class="script">number</span></td>
-                                    <td>Nombre entier</td>
-                                    <td><span class="script">parseInt(<span class="perso">variable</span>)</span> ou <span class="script">parseInt(<span class="perso">variable</span>, <span class="perso">base</span>)</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="script">float</span> ou <span class="script">number</span></td>
-                                    <td>Nombre décimal (ex : 0.1)</td>
-                                    <td class="script">parseFloat(<span class="perso">variable</span>)</td>
-                                </tr>
-                                <tr>
-                                    <td class="script">string</td>
-                                    <td>Chaîne de caractères entre '' ou ""</td>
-                                    <td class="script"><span class="perso">variable</span>.toString()</td>
-                                </tr>
-                                <!--
-                                <tr>
-                                    <td class="script"></td>
-                                    <td></td>
-                                    <td class="script"></td>
-                                </tr>
-                                -->
-                            </table>
-                        </div>
-                        <h4 class="soustitre" id="I.3.2">Autres types</h4>
-                        <div class="contenu">
-                            <table>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Description</th>
-                                </tr>
-                                <tr>
-                                    <td class="script">boolean</td>
-                                    <td>Valeur pouvant être true ou false</td>
-                                </tr>
-                                <tr>
-                                    <td class="script">object</td>
-                                    <td>Autres types (tableau (ou liste), null…)</td>
-                                </tr>
-                                <!--
-                                <tr>
-                                    <td class="script"></td>
-                                    <td></td>
-                                </tr>
-                                -->
-                            </table>
-                        </div>
-						<div class="attention">Il existe 2 types "nulle" : <span class="script">null</span> qui est une valeur vide, et <span class="script">undefined</span> qui est un élément inexistant.</div>
-                    </div>
-					<h3 class="soustitre" id="I.4">Commentaires</h3>
+
+					<h3 class="soustitre" id="1.3">Premier code « Hello World! »</h3>
 					<div class="contenu">
-						<p class="script commentaire">
-							//Commentaire tenant sur une ligne
-						</p>
-						<p class="script commentaire">
-							/*<br/>
-							Commentaire pouvant être sur une ou plusieurs lignes<br/>
-							*/
-						</p>
+						<p><span class="script ">alert(</span><span class="script ">"Hello World!");</span></p>
 					</div>
-					<h3 class="soustitre" id="I.5">Opérations</h3>
+
+				</div>
+				<h2 class="soustitre" id="2">Bases</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="2.1">Syntaxe</h3>
+					<div class="contenu">
+						<p><span class="script perso ">instruction</span><span class="script perso ">1</span><span class="script ">;</span><span class="script "><br/></span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script perso ">instruction3</span><span class="script ">;</span></p>
+					</div>
+
+					<h3 class="soustitre" id="2.2">Les variables</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="2.2.1">Types de variables</h4>
+						<div class="contenu">
+							<p>Fonction pour connaître le type : <span class="script ">typeof(</span><span class="script perso ">variable</span><span class="script ">)</span></p>
+							<h5 class="soustitre" id="2.2.1.1">Types de base</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Type</span></th>
+										<th><span style="font-weight: bold; ">Description</span></th>
+										<th><span style="font-weight: bold; ">Fonction pour le convertir</span></th>
+									</tr>
+									<tr>
+										<td><span class="script ">int</span><span class="script "> </span>ou<span class="script "> number</span></td>
+										<td>Nombre entier</td>
+										<td><span class="script ">parseInt</span><span class="script ">(</span><span class="script perso ">variable</span><span class="script ">) </span>ou<span class="script "> parseInt(</span><span class="script perso ">variable</span><span class="script ">, </span><span class="script perso ">base</span><span class="script ">)</span></td>
+									</tr>
+									<tr>
+										<td><span class="script ">float</span> ou<span class="script "> number</span></td>
+										<td>Nombre décimal (ex : 0.1)</td>
+										<td><span class="script ">parseFloat</span><span class="script ">(</span><span class="script perso ">variable</span><span class="script ">)</span></td>
+									</tr>
+									<tr>
+										<td><span class="script ">str</span><span class="script ">ing</span></td>
+										<td>Chaîne de caractères entre ' ' ou " " (caractère\n : retour à la ligne ; \t : tabulation ; \b : retour en arrière ; \f : nouvelle page)</td>
+										<td><span class="script perso ">variable</span><span class="script ">.toString</span><span class="script ">()</span></td>
+									</tr>
+								</table>
+								
+							</div>
+
+							<h5 class="soustitre" id="2.2.1.2">Autres types</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Type</span></th>
+										<th><span style="font-weight: bold; ">Description</span></th>
+									</tr>
+									<tr>
+										<td><span class="script ">bool</span><span class="script ">ean</span></td>
+										<td>Valeur pouvant être true ou false</td>
+									</tr>
+									<tr>
+										<td><span class="script ">object</span></td>
+										<td>Autres types (tableau (ou liste), null…)</td>
+									</tr>
+								</table>
+								
+								<div class="note ">Il existe 2 types "nulle" : <span class="script ">null</span> qui est une valeur vide, et <span class="script ">undefined</span> qui est un élément inexistant.</div>
+							</div>
+
+						</div>
+
+						<h4 class="soustitre" id="2.2.2">Opérations sur les variables</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th><span style="font-weight: bold; ">Instruction</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+								</tr>
+								<tr>
+									<td><span class="script ">1 + 2</span></td>
+									<td>Renvoie 3</td>
+								</tr>
+								<tr>
+									<td><span class="script ">3 - 1</span></td>
+									<td>Renvoie 2</td>
+								</tr>
+								<tr>
+									<td><span class="script ">6 * 4</span></td>
+									<td>Renvoie 24</td>
+								</tr>
+								<tr>
+									<td><span class="script ">5 / 2</span></td>
+									<td>Renvoie 2.5</td>
+								</tr>
+								<tr>
+									<td><span class="script ">Math.floor(</span><span class="script ">5 / 2</span><span class="script ">)</span></td>
+									<td>Renvoie 2 (le quotient sans décimal)</td>
+								</tr>
+								<tr>
+									<td><span class="script ">Math.trunc(5 / 2)</span></td>
+									<td>Renvoie 2 (le quotient sans décimal), utile si Math.floor() échoue (trop grand nombre)</td>
+								</tr>
+								<tr>
+									<td><span class="script ">5 % 2</span></td>
+									<td>Renvoie 1 (le reste de la division)</td>
+								</tr>
+								<tr>
+									<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">variable</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
+									<td>Déclare une nouvelle variable dont la portée est limitée à celle du bloc dans lequel elle est déclarée</td>
+								</tr>
+								<tr>
+									<td><span class="script ">var</span><span class="script "> </span><span class="script perso ">variable</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
+									<td>Déclare une nouvelle variable globale ou locale à une fonction (sans distinction des blocs utilisés dans la fonction)</td>
+								</tr>
+								<tr>
+									<td><span class="script ">var</span><span class="script "> </span><span class="script perso ">a</span><span class="script ">;</span></td>
+									<td>Déclare la variable <span class="perso ">a</span> sans affecter de valeur (contient null)</td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> = 5;</span></td>
+									<td>Affecte 5 à une variable</td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> = </span><span class="script perso ">a</span><span class="script "> + </span><span class="script ">3</span><span class="script ">;</span></td>
+									<td>Ajoute 3 à une variable</td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> += </span><span class="script ">3</span><span class="script ">;</span></td>
+									<td>Ajoute 3 à une variable</td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script ">++;</span></td>
+									<td>Ajoute 1 à une variable</td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">b</span><span class="script "> = </span><span class="script perso ">a</span><span class="script ">++;</span></td>
+									<td>Équivalent à : <span class="script perso ">b</span><span class="script "> = </span><span class="script perso ">a</span><span class="script ">;</span><span class="script "> </span><span class="script perso ">a</span><span class="script "> = </span><span class="script perso ">a</span><span class="script "> + 1;</span></td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">b</span><span class="script "> = ++</span><span class="script perso ">a</span><span class="script ">;</span></td>
+									<td>Équivalent à : <span class="script perso ">a</span><span class="script "> = </span><span class="script perso ">a</span><span class="script "> + </span><span class="script ">1;</span><span class="script "> </span><span class="script perso ">b</span><span class="script "> = </span><span class="script perso ">a</span><span class="script ">;</span></td>
+								</tr>
+								<tr>
+									<td><span class="script ">const</span><span class="script "> </span><span class="script ">PI</span><span class="script "> = 3.14;</span></td>
+									<td>Crée une variable constante (non modifiable)</td>
+								</tr>
+								<tr>
+									<td><span class="script ">static</span><span class="script "> </span><span class="script perso ">variable</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
+									<td>Déclare une nouvelle variable qui n’est jamais détruite (si déjà exécuté, cette instruction est ignorée)</td>
+								</tr>
+								<tr>
+									<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">texte</span><span class="script "> = </span><span class="script ">'</span><span class="script perso ">chaine</span><span class="script ">'</span><span class="script ">;</span></td>
+									<td>Affecte une chaine de caractères à une variable (les chaînes peuvent s’additionner avec l’opérateur +)</td>
+								</tr>
+								<tr>
+									<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">texte</span><span class="script "> = </span><span class="script ">"</span><span class="script perso ">chaine</span><span class="script ">"</span><span class="script ">;</span></td>
+									<td>Affecte une chaine de caractères à une variable (les chaînes peuvent s’additionner avec l’opérateur +)</td>
+								</tr>
+							</table>
+						</div>
+
+					</div>
+
+					<h3 class="soustitre" id="2.3">Commentaires</h3>
+					<div class="contenu">
+						<p><span class="script ">//Commentaire tenant sur une ligne</span></p>
+						<p><span class="script ">/*</span><span class="script "><br/>Commentaire pouvant être sur une ou plusieurs lignes</span><span class="script "><br/>*/</span></p>
+					</div>
+
+					<h3 class="soustitre" id="2.4">Les tableaux</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Instruction</th>
-								<th>Description</th>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">1 + 2</td>
-								<td>Renvoie 3</td>
-							</tr>
-							<tr>
-								<td class="script">3 - 1</td>
-								<td>Renvoie 2</td>
-							</tr>
-							<tr>
-								<td class="script">6 * 4</td>
-								<td>Renvoie 24</td>
-							</tr>
-							<tr>
-								<td class="script">5 / 2</td>
-								<td>Renvoie 2.5</td>
-							</tr>
-							<tr>
-								<td class="script">Math.floor(5 / 2)</td>
-								<td>Renvoie 2 (le quotient sans décimal)</td>
-							</tr>
-							<tr>
-								<td class="script">Math.trunc(5 / 2)</td>
-								<td>Renvoie 2 (le quotient sans décimal), utile si Math.floor() échoue (trop grand nombre)</td>
-							</tr>
-							<tr>
-								<td class="script">5 % 2</td>
-								<td>Renvoie 1 (le reste de la division)</td>
-							</tr>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
-						</table>
-					</div>
-					<h3 class="soustitre" id="I.6">Les variables</h3>
-					<div class="contenu">
-						<table>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
-							<tr>
-								<th>Instruction</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td class="script">let <span class="perso">variable</span> = <span class="perso">valeur</span>;</td>
-								<td>Déclare une nouvelle variable dont la portée est limitée à celle du bloc dans lequel elle est déclarée</td>
-							</tr>
-							<tr>
-								<td class="script">var <span class="perso">variable</span> = <span class="perso">valeur</span>;</td>
-								<td>Déclare une nouvelle variable globale ou locale à une fonction (sans distinction des blocs utilisés dans la fonction)</td>
-							</tr>
-							<tr>
-								<td class="script">var <span class="perso">a</span>;</td>
-								<td>Déclare la variable <span class="perso">a</span> sans affecter de valeur (contient null)</td>
-							</tr>
-							<tr>
-								<td class="script"><span class="perso">a</span> = 5;</td>
-								<td>Affecte 5 à une variable (si la variable n'est pas déclarée (ce qui est déconseillé de faire), alors elle est considérée comme globale, mais accessible même en dehors d'une fonction)</td>
-							</tr>
-							<tr>
-                                <td class="script"><span class="perso">a</span> += 1;</td>
-                                <td>Équivalent à <span class="perso">a</span> = <span class="perso">a</span> + 1;</td>
-                            </tr>
-                            <tr>
-                                <td class="script"><span class="perso">a</span> -= 1;</td>
-                                <td>Équivalent à <span class="perso">a</span> = <span class="perso">a</span> - 1;</td>
-                            </tr>
-							<tr>
-								<td class="script"><span class="perso">b</span> = <span class="perso">a</span>++;</td>
-								<td>Équivalent à <span class="perso">b</span> = <span class="perso">a</span>; <span class="perso">a</span> = <span class="perso">a</span> + 1;</td>
-							</tr>
-							<tr>
-								<td class="script"><span class="perso">b</span> = ++<span class="perso">a</span>;</td>
-								<td>Équivalent à <span class="perso">a</span> = <span class="perso">a</span> + 1; <span class="perso">b</span> = <span class="perso">a</span>;</td>
-							</tr>
-							<tr>
-								<td class="script"><span class="perso">b</span> = <span class="perso">a</span>--;</td>
-								<td>Équivalent à <span class="perso">b</span> = <span class="perso">a</span>; <span class="perso">a</span> = <span class="perso">a</span> - 1;</td>
-							</tr>
-							<tr>
-								<td class="script"><span class="perso">b</span> = --<span class="perso">a</span>;</td>
-								<td>Équivalent à <span class="perso">a</span> = <span class="perso">a</span> - 1; <span class="perso">b</span> = <span class="perso">a</span>;</td>
-							</tr>
-							<tr>
-								<td class="script">const <span class="perso">pi</span> = 3.14;</td>
-								<td>Crée une variable constante (non modifiable)</td>
-							</tr>
-						</table>
-					</div>
-					<h3 class="soustitre" id="I.7">Les tableaux</h3>
-					<div class="contenu">
-						<table>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
-							<tr>
-								<th>Instruction</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td class="script">var <span class="perso">tableau</span> = [];</td>
+								<td><span class="script ">var</span><span class="script "> </span><span class="script perso ">tableau</span><span class="script "> = [];</span></td>
 								<td>Crée un tableau vide</td>
 							</tr>
 							<tr>
-                                <td class="script">var <span class="perso">tableau</span> = ["Loric", "Informatique", 69];</td>
-                                <td>Crée un tableau avec des valeurs</td>
-                            </tr>
-							<tr>
-								<td>
-									<p class="script"><span class="perso">tableau</span>[<span class="perso">i</span>]</p>
-								</td>
-								<td>Renvoie la valeur du tableau à la position <span class="perso">i</span> (l'indice de la première valeur est 0)</td>
+								<td><span class="script ">var</span><span class="script "> </span><span class="script perso ">tableau</span><span class="script "> = ["Loric", "Informatique", 69];</span></td>
+								<td>Crée une liste avec des valeurs (le type de valeurs n’a pas d’importance)</td>
 							</tr>
 							<tr>
-                                <td class="script"><span class="perso">tableau</span>.push(<span class="perso">valeur</span>);</td>
-                                <td>Ajoute une valeur dans le tableau</td>
-                            </tr>
-                            <tr>
-                                <td class="script"><span class="perso">tableau</span>.shift();</td>
-                                <td>Enlève et renvoie la première valeur du tableau</td>
-                            </tr>
-                            <tr>
-                                <td class="script"><span class="perso">liste</span>.pop();</td>
-                                <td>Enlève et renvoie la dernière valeur du tableau</td>
-                            </tr>
-                            <tr>
-								<td class="script"><span class="perso">tableau</span>.length;</td>
+								<td><span class="script perso ">tableau</span><span class="script ">[</span><span class="script perso ">i</span><span class="script ">]</span></td>
+								<td>Renvoie la valeur du tableau à la position <span class="perso ">i</span> (l'indice de la première valeur est 0), et permet aussi l’écriture d’une autre valeur</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">tableau</span><span class="script ">.push</span><span class="script ">(</span><span class="script perso ">valeur</span><span class="script ">);</span></td>
+								<td>Ajoute une valeur dans le tableau</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">tableau</span><span class="script ">.shift</span><span class="script ">();</span></td>
+								<td>Enlève et renvoie la première valeur du tableau</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">tableau</span><span class="script ">.pop(</span><span class="script ">);</span></td>
+								<td>Enlève et renvoie la dernière valeur du tableau</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">tableau</span><span class="script ">.length</span></td>
 								<td>Renvoie la longueur du tableau</td>
 							</tr>
-                            <tr>
-                                <td class="script"><span class="perso">tableau</span>.includes(<span class="perso">valeur</span>);</td>
-                                <td>Recherche si la valeur est présente dans le tableau</td>
-                            </tr>
 							<tr>
-                                <td class="script"><span class="perso">tableau</span>.indexOf(<span class="perso">valeur</span>);</td>
-                                <td>Renvoie la position de la valeur recherchée ou -1 si elle n’est pas trouvée</td>
-                            </tr>
-						</table>
-					</div>
-					<h3 class="soustitre" id="I.8">Conditions</h3>
-					<div class="contenu">
-						<p>Les conditions renvoient true si elle est respectée et false sinon</p>
-						<h4 class="soustitre" id="I.8.1">Opérateurs de comparaison</h4>
-						<div class="contenu">
-							<table>
-								<!--
-								<tr>
-									<td class="script"></td>
-									<td></td>
-								</tr>
-								-->
-								<tr>
-									<th>Condition</th>
-									<th>Description de ce que vérifie la condition</th>
-								</tr>
-								<tr>
-									<td class="script"><span class="perso">a</span> == <span class="perso">b</span></td>
-									<td><span class="perso">a</span> égal à <span class="perso">b</span> (seulement en contenu : 1="1")</td>
-								</tr>
-								<tr>
-									<td class="script"><span class="perso">a</span> === <span class="perso">b</span></td>
-									<td><span class="perso">a</span> égal à <span class="perso">b</span> (en type et en contenu : 1≠"1")</td>
-								</tr>
-								<tr>
-									<td class="script"><span class="perso">a</span> &lt; <span class="perso">b</span></td>
-									<td><span class="perso">a</span> strictement inférieur à <span class="perso">b</span></td>
-								</tr>
-								<tr>
-									<td class="script"><span class="perso">a</span> &gt; <span class="perso">b</span></td>
-									<td><span class="perso">a</span> strictement supérieur à <span class="perso">b</span></td>
-								</tr>
-								<tr>
-									<td class="script"><span class="perso">a</span> &lt;= <span class="perso">b</span></td>
-									<td><span class="perso">a</span> inférieur ou égal à <span class="perso">b</span></td>
-								</tr>
-								<tr>
-									<td class="script"><span class="perso">a</span> &gt;= <span class="perso">b</span></td>
-									<td><span class="perso">a</span> supérieur ou égal à <span class="perso">b</span></td>
-								</tr>
-								<tr>
-									<td class="script"><span class="perso">a</span> != <span class="perso">b</span></td>
-									<td><span class="perso">a</span> n’est pas égal à <span class="perso">b</span> (seulement en contenu : 1="1")</td>
-								</tr>
-								<tr>
-									<td class="script"><span class="perso">a</span> !== <span class="perso">b</span></td>
-									<td><span class="perso">a</span> n’est pas égal à <span class="perso">b</span> (en type et en contenu : 1≠"1")</td>
-								</tr>
-								<tr>
-									<td class="script">||</td>
-									<td>À mettre entre deux conditions, permet d’avoir une des deux conditions qui doit être vraie</td>
-								</tr>
-								<tr>
-									<td class="script">&&</td>
-									<td>À mettre entre deux conditions, permet d’avoir deux conditions qui doivent être vraie</td>
-								</tr>
-								<tr>
-									<td class="script">!<span class="perso">condition</span></td>
-									<td>La condition doit être fausse</td>
-								</tr>
-							</table>
-						</div>
-						<h4 class="soustitre" id="I.8.2">Tests de conditions</h4>
-						<div class="contenu">
-							<table>
-								<!--
-								<tr>
-									<td class="script"></td>
-									<td></td>
-								</tr>
-								<a class="script_tabulation">
-								-->
-								<tr>
-									<th>Instruction</th>
-									<th>Description</th>
-								</tr>
-								<tr>
-									<td class="script">
-									if (<span class="perso">condition1</span>) {<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-									}
-									</td>
-									<td>Si <span class="perso">condition1</span> est vraie, alors on exécute <span class="perso">instruction1</span></td>
-								</tr>
-								<tr>
-									<td class="script">
-									if (<span class="perso">condition1</span>) {<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-									} else {<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
-									}
-									</td>
-									<td>Si <span class="perso">condition1</span> est vraie, alors on exécute <span class="perso">instruction1</span>, sinon, on exécute <span class="perso">instruction2</span></td>
-								</tr>
-								<tr>
-									<td class="script">
-									if (<span class="perso">condition1</span>) {<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-									} else if(<span class="perso">condition2</span>) {<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
-									} else {<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction3</span>;<br/>
-									}
-									</td>
-									<td>Si <span class="perso">condition1</span> est vraie, alors on exécute <span class="perso">instruction1</span>, sinon, si <span class="perso">condition2</span> est vraie, on exécute <span class="perso">instruction2</span>, sinon, on exécute <span class="perso">instruction3</span></td>
-								</tr>
-								<tr>
-									<td class="script">
-									switch (<span class="perso">nombre</span>) {<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;case <span class="perso">a</span>:<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;case <span class="perso">b</span>:<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;case <span class="perso">c</span>:<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;default:<br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction3</span>;<br/>
-									}
-									</td>
-									<td>Si <span class="perso">nombre</span> == <span class="perso">a</span>, alors on exécute <span class="perso">instruction1</span>, sinon, si <span class="perso">nombre</span> == <span class="perso">b</span> ou <span class="perso">c</span>, on exécute <span class="perso">instruction2</span>, sinon, on exécute <span class="perso">instruction3</span></td>
-								</tr>
-								<tr>
-									<td class="script"><span class="perso">a</span> = (<span class="perso">condition1</span>) ? 1 : 0;</td>
-									<td>Si <span class="perso">condition1</span> est vraie, <span class="perso">a</span> prend la valeur 1, sinon 0.</td>
-								</tr>
-								<tr>
-									<td class="script">
-									try {<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-									} catch(<span class="perso">erreur</span>) {<br/>
-										&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction2</span>;<br/>
-									}
-									</td>
-									<td>Si <span class="perso">instruction1</span> provoque une erreur, on exécute <span class="perso">instruction2</span> (si <span class="script">throw <span class="perso">message</span>;</span> est placé dans <span class="perso">instruction1</span>, alors <span class="perso">instruction2</span> est exécuté avec erreur = message)</td>
-								</tr>
-							</table>
-						</div>
-					</div>
-					<h3 class="soustitre" id="I.9">Boucles</h3>
-					<div class="contenu">
-						<table>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							<a class="script_tabulation">
-							-->
-							<tr>
-								<th>Instruction</th>
-								<th>Description</th>
+								<td><span class="script perso ">tableau</span><span class="script ">.includes</span><span class="script ">(</span><span class="script perso ">valeur</span><span class="script ">);</span></td>
+								<td>Recherche si la valeur est présente dans le tableau</td>
 							</tr>
 							<tr>
-								<td class="script">
-								for (let <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lt; <span class="perso">f</span>; <span class="perso">i</span>++) {<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								}
-								</td>
-								<td>On répète <span class="perso">f</span>-<span class="perso">d</span> fois <span class="perso">instruction1</span> pour <span class="perso">i</span> allant de <span class="perso">d</span> compris à <span class="perso">f</span> non compris</td>
+								<td><span class="script perso ">tableau</span><span class="script ">.indexOf</span><span class="script ">(</span><span class="script perso ">valeur</span><span class="script ">);</span></td>
+								<td>Renvoie la position de la valeur recherchée ou -1 si elle n’est pas trouvée</td>
 							</tr>
 							<tr>
-								<td class="script">
-								for (let <span class="perso">i</span> = <span class="perso">d</span>; <span class="perso">i</span> &lt; <span class="perso">f</span>; <span class="perso">i</span>+=<span class="perso">p</span>) {<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								}
-								</td>
-								<td>On répète (<span class="perso">f</span>-<span class="perso">d</span>)/<span class="perso">p</span> fois <span class="perso">instruction1</span> pour i allant de <span class="perso">d</span> compris à <span class="perso">f</span> non compris avec pour pas égal à <span class="perso">p</span></td>
-							</tr>
-							<tr>
-                                <td class="script">
-                                for (let <span class="perso">i</span> in <span class="perso">tableau</span>) {<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span><br/>
-								}
-                                </td>
-                                <td>On parcours le tableau (ou une chaîne de caractères) pour <span class="perso">i</span> allant de 0 à la longueur de <span class="perso">tableau</span></td>
-                            </tr>
-							<tr>
-                                <td class="script">
-                                for (let <span class="perso">elt</span> of <span class="perso">tableau</span>) {<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span><br/>
-								}
-                                </td>
-                                <td>On parcours le tableau (ou une chaîne de caractères) pour <span class="perso">elt</span> prenant toutes les valeurs de <span class="perso">tableau</span></td>
-                            </tr>
-							<tr>
-								<td class="script">
-								while (<span class="perso">condition</span>) {<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								}
-								</td>
-								<td>On répète jusqu’à ce que <span class="perso">condition</span> soit fausse (peut ne pas être répété)</td>
-							</tr>
-							<tr>
-								<td class="script">
-								do {<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instruction1</span>;<br/>
-								} while(<span class="perso">condition</span>);
-								</td>
-								<td>On répète jusqu’à ce que <span class="perso">condition</span> soit fausse (est forcément répété une fois)</td>
-							</tr>
-							<tr>
-								<td class="script">break;</td>
-								<td>Permet de sortir d’une boucle sans la terminer (fortement déconseillé)</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-				<h2 class="soustitre" id="II">Les fonctions et les classes</h2>
-				<div class="contenu">
-					<h3 class="soustitre" id="II.1">Les fonctions</h3>
-					<div class="contenu">
-						<h4 class="soustitre" id="II.1.1">Créer une fonction</h4>
-						<div class="contenu">
-							<p class="script">
-							function <span class="perso">maFonction</span>(<span class="perso">variable1</span>, <span class="perso">variable2</span>…) {<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
-							}<br/>
-							</p>
-						</div>
-						<h4 class="soustitre" id="II.1.2">Retourner une valeur de la fonction</h4>
-						<div class="contenu">
-							<p class="script">return <span class="perso">variable</span>;</p>
-						</div>
-						<h4 class="soustitre" id="II.1.3">Faire un appel à la fonction</h4>
-						<div class="contenu">
-							<p class="script"><span class="perso">variable</span> = <span class="perso">maFonction</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);</p>
-							<p>ou (s'il n'y a pas de variable de retour)</p>
-							<p class="script"><span class="perso">maFonction</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);</p>
-						</div>
-						<div class="attention">Si une valeur n'a pas de valeur renseignée, alors elle prend comme valeur <span class="script">undefined</span></div>
-						<!-- <div class="note">Remarque : il est possible de faire une surcharge de fonctions, c'est-à-dire qu’il est possible de créer deux fonctions identiques avec des paramètres de types différents, ce qui permet à l'interpréteur de choisir la fonction correspondant au type de variables saisies. Idem pour les constructeurs des classes.</div> -->
-					</div>
-					<h3 class="soustitre" id="II.2">Les classes</h3>
-					<div class="contenu">
-						<h4 class="soustitre" id="II.2.1">Créer une classe</h4>
-						<div class="contenu">
-							<p class="script">
-								class <span class="perso">MaClasse</span> {<br/>
-								<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;static <span class="perso">variables_statiques</span> = <span class="perso">valeurs</span>;<br/>
-								<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;constructor(<span class="perso">mVariable1</span>, <span class="perso">mVariable2</span>…) {<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable1</span> = <span class="perso">mVariable1</span>;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.<span class="perso">variable2</span> = <span class="perso">mVariable2</span>;<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-								}
-							</p>
-							<!--
-							<div class="note">
-								Note : Il est possible de surcharger le constructeur <span class="perso">MaClasse</span> et de créer une variable statique qui reste la même valeur pour tous les objets.
-							</div>
-							-->
-						</div>
-						<h4 class="soustitre" id="II.2.2">Définir la classe dans un objet</h4>
-						<div class="contenu">
-							<p class="script">var <span class="perso">monObjet</span> = new <span class="perso">MaClasse</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…);</p>
-						</div>
-						<h4 class="soustitre" id="II.2.3">Créer une méthode (dans une classe)</h4>
-						<div class="contenu">
-							<p class="script">
-								get <span class="perso">maMethode</span>(<span class="perso">variable1</span>, <span class="perso">variable2</span>…) {<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="perso">instructions</span>;<br/>
-								}
-							</p>
-							<div class="note">Vous pouvez également créer des méthodes statiques en remplaçant get par static.</div>
-						</div>
-						<h4 class="soustitre" id="II.2.4">Faire un appel d’une méthode autre que le constructeur ou d’une variable dans une classe</h4>
-						<div class="contenu">
-							<p class="script">this.<span class="perso">maMethode</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…)</p>
-							<p class="script">this.<span class="perso">variable1</span> = <span class="perso">valeur1</span></span>;</p>
-						</div>
-						<h4 class="soustitre" id="II.2.5">Faire un appel d’une méthode autre que le constructeur ou d’une variable en dehors d'une classe</h4>
-						<div class="contenu">
-							<p class="script"><span class="perso">monObjet</span>.<span class="perso">maMethode</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…)</p>
-							<p class="script"><span class="perso">monObjet</span>.<span class="perso">variable1</span> = <span class="perso">valeur1</span></span>;</p>
-							<div class="attention">Il est préférable d'utiliser des méthodes (appelées getter et setter) pour modifier les variables non statiques.</div>
-						</div>
-						<h4 class="soustitre" id="II.2.6">Faire un appel d’une méthode ou d’une variable statique en dehors d'une classe</h4>
-						<div class="contenu">
-							<p class="script"><span class="perso">MaClasse</span>.<span class="perso">maMethode</span>(<span class="perso">valeur1</span>, <span class="perso">valeur2</span>…)</p>
-							<p class="script"><span class="perso">MaClasse</span>.<span class="perso">variable1</span> = <span class="perso">valeur1</span></span>;</p>
-						</div>
-					</div>
-				</div>
-				<h2 class="soustitre" id="III">Les instructions</h2>
-				<div class="contenu">
-					<h3 class="soustitre" id="III.1">Instructions de bases</h3>
-					<div class="contenu">
-						<table>
-							<tr>
-								<th>Instruction</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td class="script">console.log("<span class="perso">texte</span>");</td>
-								<td>Affiche un texte dans la console avec un retour à la ligne (peut être remplacé par \n, placé directement dans la chaîne) (pour une tabulation, entrez \t; \b : retour en arriere ; \f : nouvelle page)</td>
-							</tr>
-							<tr>
-								<td class="script">
-									console.log(<span class="perso">variable</span>);<br/>
-									console.log("Valeur : " + <span class="perso">variable</span>);
-								</td>
-								<td>Affiche une variable (ici <span class="perso">variable</span>) dans la console</td>
-							</tr>
-							<tr>
-								<td class="script">
-									console.log(`Valeur : ${<span class="perso">variable</span>}`);
-								</td>
-								<td>Affiche une variable (ici <span class="perso">variable</span>) dans la console avec possibilité de faire un template string sur plusieurs lignes</td>
-							</tr>
-							<tr>
-								<td class="script">alert(<span class="perso">message</span>);<br/>System.out.println("Valeur : " + <span class="perso">variable</span>);</td>
-								<td>Affiche un message dans une boîte de dialogue</td>
-							</tr>
-							<tr>
-                                <td class="script"><span class="perso">variable</span> = prompt("Entrer une valeur :");</td>
-                                <td>Demande une valeur, renvoyée dans la variable</td>
-                            </tr>
-							<tr>
-                                <td class="script"><span class="perso">variable</span> = confirm("Voulez-vous confirmer ?");</td>
-                                <td>Demande une confirmation, renvoyée dans la variable sous forme d'un booléen</td>
-                            </tr>
-							<tr>
-								<td class="script"><span class="perso">variable</span> = <span class="perso">variable</span>.split(<span class="perso">separateur</span>);</td>
+								<td><span class="script perso ">tableau</span><span class="script "> = </span><span class="script perso ">chaine</span><span class="script ">.split(</span><span class="script perso ">separateur</span><span class="script ">);</span></td>
 								<td>Couper une chaîne de caractères en précisant le séparateur et renvoie un tableau</td>
 							</tr>
 							<tr>
-								<td class="script"><span class="perso">variable</span> = <span class="perso">variable</span>.join(<span class="perso">separateur</span>);</td>
+								<td><span class="script perso ">chaine</span><span class="script "> = </span><span class="script perso ">tableau</span><span class="script ">.join(</span><span class="script perso ">separateur</span><span class="script ">);</span></td>
 								<td>Convertir un tableau en chaîne de caractères en séparant par un séparateur</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
 						</table>
 					</div>
-					<h3 class="soustitre" id="III.2">Instructions sur les éléments HTML</h3>
-					<div class="contenu">
-						<div class="todo">Non fini</div>
-					</div>
-					<h3 class="soustitre" id="III.3">Math</h3>
+
+					<h3 class="soustitre" id="2.5">Les objets</h3>
 					<div class="contenu">
 						<table>
 							<tr>
-								<th>Instruction</th>
-								<th>Description</th>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td class="script">Math.random();</td>
+								<td><span class="script perso ">obj</span><span class="script "> = {}</span><span class="script ">;</span></td>
+								<td>Crée un objet vide</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">obj</span><span class="script "> = {</span><span class="script perso ">a</span><span class="script ">: "Loric", </span><span class="script perso ">b</span><span class="script ">: 2004}</span><span class="script ">;</span></td>
+								<td>Crée un objet avec des valeurs (le type de valeurs n’a pas d’importance)</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">obj</span><span class="script ">["</span><span class="script perso ">a</span><span class="script ">"]</span><span class="script ">;</span><span class="script "><br/></span>ou<span class="script "><br/></span><span class="script perso ">obj</span><span class="script ">.</span><span class="script perso ">a</span><span class="script ">;</span></td>
+								<td>Récupère la valeur contenue dans une clé</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">obj</span><span class="script ">["</span><span class="script perso ">c</span><span class="script ">"] = 3</span><span class="script ">;</span><span class="script "><br/>ou</span><span class="script "><br/></span><span class="script perso ">obj</span><span class="script ">.</span><span class="script perso ">c</span><span class="script "> = 3;</span></td>
+								<td>Ajoute 3 à l’objet</td>
+							</tr>
+							<tr>
+								<td><span class="script ">delete</span><span class="script "> </span><span class="script perso ">obj</span><span class="script ">.</span><span class="script perso ">c</span><span class="script ">;</span></td>
+								<td>Supprime une clé de l’objet</td>
+							</tr>
+						</table>
+						
+						
+					</div>
+
+					<h3 class="soustitre" id="2.6">Conditions</h3>
+					<div class="contenu">
+						<p>Une condition renvoie <span class="script ">true</span> si elle est respectée et <span class="script ">false</span> sinon</p>
+						<h4 class="soustitre" id="2.6.1">Opérateurs de comparaison</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th><span style="font-weight: bold; ">Condition</span></th>
+									<th><span style="font-weight: bold; ">Description de ce que vérifie la condition</span></th>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> == </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> égal à <span class="perso ">b</span> (seulement en contenu : 1="1")</td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> === </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> égal à <span class="perso ">b</span> (en type et en contenu : 1≠"1")</td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> &lt; </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> strictement inférieur à <span class="perso ">b</span></td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> &gt; </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> strictement supérieur à <span class="perso ">b</span></td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> &lt;= </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> supérieur ou égal à <span class="perso ">b</span></td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> != </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> n’est pas égal à <span class="perso ">b</span> (seulement en contenu : 1="1")</td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> !== </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> n’est pas égal à <span class="perso ">b</span> (en type et en contenu : 1≠"1")</td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> in </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> est présent dans <span class="perso ">b</span> (qui peut être un tableau)</td>
+								</tr>
+								<tr>
+									<td><span class="script ">||</span></td>
+									<td>À mettre entre deux conditions, permet d’avoir une des deux conditions qui doit être vraie</td>
+								</tr>
+								<tr>
+									<td><span class="script ">&&</span></td>
+									<td>À mettre entre deux conditions, permet d’avoir deux conditions qui doivent être vraie</td>
+								</tr>
+								<tr>
+									<td><span class="script ">!</span><span class="script perso ">condition</span></td>
+									<td>Ne doit pas respecter la condition</td>
+								</tr>
+							</table>
+						</div>
+
+						<h4 class="soustitre" id="2.6.2">Tests de conditions</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th><span style="font-weight: bold; ">Instruction</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+								</tr>
+								<tr>
+									<td><span class="script ">if</span><span class="script "> (</span><span class="script perso ">condition1</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+									<td>Si <span class="perso ">condition1</span> est vraie, alors on exécute <span class="perso ">instruction1</span></td>
+								</tr>
+								<tr>
+									<td><span class="script ">if</span><span class="script "> (</span><span class="script perso ">condition1</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} else {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+									<td>Si <span class="perso ">condition1</span> est vraie, alors on exécute <span class="perso ">instruction1</span>, sinon, on exécute <span class="perso ">instruction2</span></td>
+								</tr>
+								<tr>
+									<td><span class="script ">if</span><span class="script "> (</span><span class="script perso ">condition1</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} else if</span><span class="script "> </span><span class="script ">(</span><span class="script perso ">condition2</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} else {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction3</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+									<td>Si <span class="perso ">condition1</span> est vraie, alors on exécute <span class="perso ">instruction1</span>, sinon, si <span class="perso ">condition2</span> est vraie, on exécute <span class="perso ">instruction2</span>, sinon, on exécute <span class="perso ">instruction3</span></td>
+								</tr>
+								<tr>
+									<td><span class="script ">switch</span><span class="script "> (</span><span class="script perso ">nombre</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;case </span><span class="script perso ">a</span><span class="script ">:</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;case </span><span class="script perso ">b</span><span class="script ">:</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;case </span><span class="script perso ">c</span><span class="script ">:</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;default:</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction3</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+									<td>Si <span class="perso ">nombre</span> == <span class="perso ">a</span>, alors on exécute <span class="perso ">instruction1</span>, sinon, si <span class="perso ">nombre</span> == <span class="perso ">b</span> ou <span class="perso ">c</span>, on exécute <span class="perso ">instruction2</span>, sinon, on exécute <span class="perso ">instruction3</span></td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> = (</span><span class="script perso ">condition1</span><span class="script ">) ? 1 : </span><span class="script ">0;</span></td>
+									<td>Si <span class="perso ">condition1</span> est vraie, <span class="perso ">a</span> prend la valeur 1, sinon 0.</td>
+								</tr>
+								<tr>
+									<td><span class="script ">try</span><span class="script "> {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} catch(</span><span class="script perso ">erreur</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+									<td>Si <span class="perso ">instruction1</span> provoque une erreur, on exécute <span class="perso ">instruction2</span> (<span class="script ">si throw </span><span class="script perso ">message</span><span class="script ">;</span><span class="script "> </span>est placé dans <span class="perso ">instruction1</span>, alors <span class="perso ">instruction2</span> est exécuté avec <span class="script ">erreur = </span><span class="script perso ">message</span>)</td>
+								</tr>
+							</table>
+						</div>
+
+					</div>
+
+					<h3 class="soustitre" id="2.7">Boucles</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">for</span><span class="script "> (</span><span class="script ">let</span><span class="script "> </span><span class="script perso ">i</span><span class="script "> = </span><span class="script perso ">d</span><span class="script ">; </span><span class="script perso ">i</span><span class="script "> &lt; </span><span class="script perso ">f</span><span class="script ">; </span><span class="script perso ">i</span><span class="script ">++) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+								<td>On répète <span class="perso ">f</span>-<span class="perso ">d</span> fois l’instruction pour <span class="perso ">i</span> allant de <span class="perso ">d</span> compris à <span class="perso ">f</span> non compris</td>
+							</tr>
+							<tr>
+								<td><span class="script ">for</span><span class="script "> (</span><span class="script ">let</span><span class="script "> </span><span class="script perso ">i</span><span class="script "> = </span><span class="script perso ">d</span><span class="script ">; </span><span class="script perso ">i</span><span class="script "> &lt; </span><span class="script perso ">f</span><span class="script ">; </span><span class="script perso ">i</span><span class="script ">+=</span><span class="script perso ">p</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+								<td>On répète (<span class="perso ">f</span>-<span class="perso ">d</span>)/<span class="perso ">p</span> fois l’instruction pour i allant de <span class="perso ">d</span> compris à <span class="perso ">f</span> non compris avec pour pas égal à <span class="perso ">p</span></td>
+							</tr>
+							<tr>
+								<td><span class="script ">for</span><span class="script "> (</span><span class="script ">let</span><span class="script "> </span><span class="script perso ">i</span><span class="script "> </span><span class="script ">in</span><span class="script "> </span><span class="script perso ">tableau</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+								<td>On parcours le tableau (ou une chaîne de caractères) pour <span class="perso ">i</span> allant de 0 à la longueur de tableau</td>
+							</tr>
+							<tr>
+								<td><span class="script ">for</span><span class="script "> (</span><span class="script ">let</span><span class="script "> </span><span class="script perso ">elt</span><span class="script "> </span><span class="script ">of</span><span class="script "> </span><span class="script perso ">tableau</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+								<td>On parcourt le tableau (ou une chaîne de caractères) pour <span class="perso ">elt</span> prenant toutes les valeurs du tableau</td>
+							</tr>
+							<tr>
+								<td><span class="script ">while</span><span class="script "> (</span><span class="script perso ">condition</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+								<td>On répète jusqu’à ce que la condition soit fausse (peut ne pas être répété)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">do</span><span class="script "> {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} while(</span><span class="script perso ">condition</span><span class="script ">);</span></td>
+								<td>On répète jusqu’à ce que la condition soit fausse (est forcément répété une fois)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">break;</span></td>
+								<td>Permet de sortir d’une boucle sans la terminer (à éviter si possible)</td>
+							</tr>
+						</table>
+						
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="3">Les fonctions</h2>
+				<div class="contenu">
+					<p>Les fonctions doivent être écrites avant ou après la méthode main.</p>
+					<h3 class="soustitre" id="3.1">Créer une fonction</h3>
+					<div class="contenu">
+						<p><span class="script ">function</span><span class="script "> </span><span class="script perso ">maFonction</span><span class="script ">(</span><span class="script perso ">variable1</span><span class="script ">, </span><span class="script perso ">variable2</span><span class="script ">…) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></p>
+					</div>
+
+					<h3 class="soustitre" id="3.2">Retourner une valeur de la fonction</h3>
+					<div class="contenu">
+						<p><span class="script ">return</span><span class="script "> </span><span class="script perso ">variable</span><span class="script ">;</span></p>
+					</div>
+
+					<h3 class="soustitre" id="3.3">Faire un appel à la fonction</h3>
+					<div class="contenu">
+						<p><span class="script perso ">variable</span><span class="script "> = </span><span class="script perso ">maFonction</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…);</span></p>
+						<p>ou (s'il n'y a pas de variable de retour)</p>
+						<p><span class="script perso ">maFonction</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…);</span></p>
+						<div class="note ">Remarque : il est possible de faire une surcharge de fonctions, c'est-à-dire qu’il est possible de créer deux fonctions identiques avec des paramètres de types différents, ce qui permet à l'interpréteur de choisir la fonction correspondant au type de variables saisies. Idem pour les constructeurs des classes.<br/>Note : Si une valeur n'a pas de valeur renseignée, alors elle prend comme valeur <span class="script ">undefined</span></div>
+					</div>
+
+					<h3 class="soustitre" id="3.4">Créer une fonction anonyme</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="3.4.1">Manière simple</h4>
+						<div class="contenu">
+							<p><span class="script ">function</span><span class="script ">(</span><span class="script perso ">variable1</span><span class="script ">, </span><span class="script perso ">variable2</span><span class="script ">…) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></p>
+						</div>
+
+						<h4 class="soustitre" id="3.4.2">Syntaxe fléchée</h4>
+						<div class="contenu">
+							<p><span class="script ">(</span><span class="script perso ">variable</span><span class="script perso ">1</span><span class="script ">, </span><span class="script perso ">variable2</span><span class="script ">…)</span><span class="script "> =&gt;</span><span class="script "> {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></p>
+							<div class="note ">Une fonction anonyme peut être affectée comme une variable. Celle-ci devient donc une fonction.</div>
+						</div>
+
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="4">Les classes</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="4.1">Les classes de base</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="4.1.1">Créer une classe</h4>
+						<div class="contenu">
+							<p><span class="script ">public</span><span class="script "> class </span><span class="script perso ">MaClasse</span><span class="script "> {</span><span class="script "><br/></span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;static </span><span class="script perso ">type3</span><span class="script "> </span><span class="script perso ">variableStatique3</span><span class="script "> = </span><span class="script perso ">valeur3</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">constructor</span><span class="script ">(</span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">…) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable1</span><span class="script "> = </span><span class="script perso ">mVariable1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable2</span><span class="script "> = </span><span class="script perso ">mVariable2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="script "><br/></span><span class="script ">}</span></p>
+							<div class="note ">Note : Il est possible de surcharger le constructeur et de créer une variable statique qui reste la même valeur pour tous les objets.</div>
+						</div>
+
+						<h4 class="soustitre" id="4.1.2">Définir la classe dans un objet</h4>
+						<div class="contenu">
+							<p><span class="script ">var</span><span class="script "> </span><span class="script perso ">monObjet</span><span class="script "> = new </span><span class="script perso ">MaClasse</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…);</span></p>
+						</div>
+
+						<h4 class="soustitre" id="4.1.3">Ajouter un retour de la classe lors de la conversion en chaîne de caractères</h4>
+						<div class="contenu">
+							<p><span class="script ">toString(</span><span class="script ">) {</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;return "</span><span class="script perso ">message</span><span class="script ">";</span><br/><span class="script ">}</span></p>
+						</div>
+
+						<h4 class="soustitre" id="4.1.4">Créer une méthode (dans une classe)</h4>
+						<div class="contenu">
+							<p><span class="script perso ">maMethode</span><span class="script ">(</span><span class="script perso ">variable1</span><span class="script ">, </span><span class="script perso ">variable2</span><span class="script ">…) {</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instructions</span><span class="script ">;</span><br/><span class="script ">}</span></p>
+						</div>
+
+						<h4 class="soustitre" id="4.1.5">Créer une méthode statique (dans une classe)</h4>
+						<div class="contenu">
+							<p><span class="script ">static</span><span class="script "> </span><span class="script perso ">maMethode</span><span class="script perso ">Statique</span><span class="script ">(</span><span class="script perso ">variable1</span><span class="script ">, </span><span class="script perso ">variable2</span><span class="script ">…) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></p>
+						</div>
+
+						<h4 class="soustitre" id="4.1.6">Faire un appel d’une méthode autre que le constructeur et toString ou d’une variable dans une classe</h4>
+						<div class="contenu">
+							<p><span class="script ">this.</span><span class="script perso ">maMethode</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…)</span></p>
+							<p><span class="script ">this.</span><span class="script perso ">variable</span><span class="script perso ">1</span><span class="script "> = </span><span class="script perso ">valeur1</span><span class="script ">;</span></p>
+						</div>
+
+						<h4 class="soustitre" id="4.1.7">Faire un appel d’une méthode autre que le constructeur et toString ou d’une variable en dehors d'une classe</h4>
+						<div class="contenu">
+							<p><span class="script perso ">monObjet</span><span class="script ">.</span><span class="script perso ">maMethode</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…)</span></p>
+							<p><span class="script perso ">monObjet</span><span class="script ">.</span><span class="script perso ">variable1</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script perso ">1</span><span class="script ">;</span></p>
+							<div class="note ">Il est préférable d'utiliser des méthodes (appelées getter et setter) pour modifier les variables non statiques</div>
+						</div>
+
+						<h4 class="soustitre" id="4.1.8">Faire un appel d’une méthode ou d’une variable statique en dehors d'une classe</h4>
+						<div class="contenu">
+							<p><span class="script perso ">MaClasse</span><span class="script ">.</span><span class="script perso ">maMethodeStatique</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…)</span></p>
+							<p><span class="script perso ">MaClasse</span><span class="script ">.</span><span class="script perso ">variableStatique3</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script perso ">3</span><span class="script ">;</span></p>
+						</div>
+
+						<h4 class="soustitre" id="4.1.9">Créer un getter et un setter</h4>
+						<div class="contenu">
+							<p><span class="script ">get</span><span class="script perso "> variable1</span><span class="script ">() {</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">return </span><span class="script ">this.#</span><span class="script perso ">variable1</span><span class="script ">;</span><br/><span class="script ">}</span></p>
+							<p><span class="script ">set</span><span class="script perso "> variable1</span><span class="script ">(</span><span class="script ">value</span><span class="script ">) {</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">this.#</span><span class="script perso ">variable1</span><span class="script "> = value</span><span class="script ">;</span><br/><span class="script ">}</span></p>
+							
+							<div class="note ">Les getters et les setters peuvent avoir le même nom. Il est cependant préférable de nommer les variables avec au début un #. Les getters et les setters sont par suite appelés comme-ci c’était des variables.</div>
+						</div>
+
+					</div>
+
+					<h3 class="soustitre" id="4.2">Les classes internes</h3>
+					<div class="contenu">
+						<p>Les classes internes sont des classes présentes dans une autre classe.</p>
+						<p><span class="script ">class </span><span class="script perso ">MaClasse </span><span class="script ">{</span><br/><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;class </span><span class="script perso ">MaClasseInterne </span><span class="script ">{ </span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;…</span><br/><span class="script ">  </span><span class="script ">  }</span><br/><br/><span class="script ">}</span></p>
+						<div class="note ">La classe interne est accessible avec <span class="script perso ">MaClasse</span><span class="script ">.</span><span class="script perso ">MaClasseInterne</span></div>
+					</div>
+
+					<h3 class="soustitre" id="4.3">L'héritage</h3>
+					<div class="contenu">
+						<p>L'héritage permet à des classes filles de reprendre les mêmes caractéristiques que leur classe mère, et d’ajouter des nouveaux attributs et/ou méthodes qui leur sont propres.</p>
+						<p>Il est possible de faire un outrepassement d’une méthode de la classe mère, c'est-à-dire de créer une méthode du même nom qu’une méthode de la classe mère pour la remplacer.</p>
+						<p>Une classe ne peut hériter que d'une seule classe.</p>
+						<h4 class="soustitre" id="4.3.1">Créer une classe héritée d'une autre classe</h4>
+						<div class="contenu">
+							<p><span class="script ">class </span><span class="script perso ">MaClasseHeritee </span><span class="script ">extends </span><span class="script perso ">MaClasse </span><span class="script ">{ </span><br/><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;public static </span><span class="script perso ">type6</span><span class="script "> </span><span class="script perso ">variableStatique6</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script perso ">6</span><span class="script ">;</span><br/><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">constructor</span><span class="script ">(</span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">…, </span><span class="script perso ">mVariable4</span><span class="script ">, </span><span class="script perso ">mVariable5</span><span class="script ">…) {</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super(</span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">…);</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable4</span><span class="script "> = </span><span class="script perso ">mVariable4</span><span class="script ">;</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable5</span><span class="script "> = </span><span class="script perso ">mVariable5</span><span class="script ">;</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="script ">}</span></p>
+							<div class="note ">La méthode <span class="script ">super(</span><span class="script ">)</span> permet d’appeler le constructeur de la classe initiale.</div>
+						</div>
+
+						<h4 class="soustitre" id="4.3.2">Définir la classe dans un objet</h4>
+						<div class="contenu">
+							<p><span class="script perso ">monObjet</span><span class="script "> = new </span><span class="script perso ">MaClasseHeritee</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…, </span><span class="script perso ">valeur4</span><span class="script ">, </span><span class="script perso ">valeur5</span><span class="script ">…);</span></p>
+						</div>
+
+						<h4 class="soustitre" id="4.3.3">Ajouter un retour de la classe lors de la conversion en chaîne de caractères</h4>
+						<div class="contenu">
+							<p><span class="script ">toString(</span><span class="script ">) {</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;return (super.toString() + "</span><span class="script perso ">message</span><span class="script ">");</span><br/><span class="script ">}</span></p>
+						</div>
+
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="5">Le stockage local</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="5.1">Cookies</h3>
+					<div class="contenu">
+						<p>Cookies permet de stocker des variables localement sur l’ordinateur, accessible sur toutes les fenêtres, avec ou sans date d’expiration et avec communication avec un serveur. Sa capacité maximale est de 4 Ko par variables. Les cookies sont créées depuis le serveur web.</p>
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">Document.cookie</span></td>
+								<td>Récupérer la liste des cookies</td>
+							</tr>
+						</table>
+					</div>
+
+					<h3 class="soustitre" id="5.2">Session Storage</h3>
+					<div class="contenu">
+						<p>Session Storage permet de stocker des variables localement sur l’ordinateur, expirant à la fermeture de l’onglet et sans communication avec un serveur. Sa capacité maximale est de 5 Mo par variables.</p>
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">sessionStorage</span><span class="script ">.setItem(</span><span class="script ">"</span><span class="script perso ">clé</span><span class="script ">"</span><span class="script ">,</span><span class="script "> "</span><span class="script perso ">valeur</span><span class="script ">"</span><span class="script ">);</span></td>
+								<td>Créer une variable avec une valeur affectée</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">variable</span><span class="script "> = sessionStorage</span><span class="script ">.getItem(</span><span class="script ">"</span><span class="script perso ">clé</span><span class="script ">"</span><span class="script ">);</span></td>
+								<td>Récupérer le contenu d’une variable</td>
+							</tr>
+							<tr>
+								<td><span class="script ">sessionStorage</span><span class="script ">.removeItem("</span><span class="script perso ">clé</span><span class="script ">"</span><span class="script ">);</span></td>
+								<td>Supprimer une variable</td>
+							</tr>
+							<tr>
+								<td><span class="script ">sessionStorage</span><span class="script ">.clear(</span><span class="script ">);</span></td>
+								<td>Supprimer toutes les variables</td>
+							</tr>
+						</table>
+					</div>
+
+					<h3 class="soustitre" id="5.3">Local Storage</h3>
+					<div class="contenu">
+						<p>Local Storage permet de stocker des variables localement sur l’ordinateur, accessible sur toutes les fenêtres, sans date d’expiration et sans communication avec un serveur. Sa capacité maximale est de 10 Mo par variables.</p>
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">window.localStorage</span></td>
+								<td>Récupérer toutes les variables stockées dans l’ordinateur localement</td>
+							</tr>
+							<tr>
+								<td><span class="script ">localStorage.setItem(</span><span class="script ">"</span><span class="script perso ">clé</span><span class="script ">"</span><span class="script ">,</span><span class="script "> "</span><span class="script perso ">valeur</span><span class="script ">"</span><span class="script ">);</span></td>
+								<td>Créer une variable avec une valeur affectée</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">variable</span><span class="script "> = </span><span class="script ">localStorage.getItem(</span><span class="script ">"</span><span class="script perso ">clé</span><span class="script ">"</span><span class="script ">);</span></td>
+								<td>Récupérer le contenu d’une variable</td>
+							</tr>
+							<tr>
+								<td><span class="script ">localStorage.removeItem("</span><span class="script perso ">clé</span><span class="script ">"</span><span class="script ">);</span></td>
+								<td>Supprimer une variable</td>
+							</tr>
+							<tr>
+								<td><span class="script ">localStorage.clear(</span><span class="script ">);</span></td>
+								<td>Supprimer toutes les variables</td>
+							</tr>
+						</table>
+						
+						
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="6">Les instructions</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="6.1">Instructions de bases</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">console.log("</span><span class="script perso ">texte</span><span class="script ">"</span><span class="script ">);</span></td>
+								<td>Affiche un texte dans la console avec un retour à la ligne</td>
+							</tr>
+							<tr>
+								<td><span class="script ">console.log(</span><span class="script perso ">variable</span><span class="script ">);</span><span class="script "><br/></span><span class="script ">console.log("Valeur : " + </span><span class="script perso ">variable</span><span class="script ">);</span></td>
+								<td>Affiche une variable dans la console</td>
+							</tr>
+							<tr>
+								<td><span class="script ">alert</span><span class="script ">(</span><span class="script perso ">message</span><span class="script ">);</span></td>
+								<td>Affiche un message dans une boîte de dialogue</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">variable</span><span class="script "> = prompt("Entrer une valeur :");</span></td>
+								<td>Demande une valeur dans une boîte de dialogue avec le retour dans une variable</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">variable</span><span class="script "> = confirm("Voulez-vous confirmer ?");</span></td>
+								<td>Demande une confirmation dans une boîte de dialogue, renvoyée dans la variable sous forme d'un booléen</td>
+							</tr>
+						</table>
+					</div>
+
+					<h3 class="soustitre" id="6.2">Math</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">Math.random(</span><span class="script ">);</span></td>
 								<td>Créer un nombre aléatoire entre 0 compris et 1 exclu</td>
 							</tr>
 							<tr>
-								<td class="script">
-									Math.floor(Math.random() * <span class="perso">n</span>);
-								</td>
-								<td>Créer un nombre entier aléatoire entre 0 et <span class="perso">n</span> compris (si fonction importé ci-dessus)</td>
+								<td><span class="script ">Math.floor(Math.random() * </span><span class="script perso ">n</span><span class="script ">);</span></td>
+								<td>Créer un nombre entier aléatoire entre 0 et <span class="perso ">n</span> compris (si fonction importé ci-dessus)</td>
 							</tr>
-							<!--
-							<tr>
-								<td class="script"></td>
-								<td></td>
-							</tr>
-							-->
 						</table>
 					</div>
+
+					<h3 class="soustitre" id="6.3">JSON</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script perso ">monObjet</span><span class="script "> = JSON.parse(</span><span class="script perso ">objJSON</span><span class="script ">);</span></td>
+								<td>Convertir une chaîne JSON en objet</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">objJSON</span><span class="script "> = JSON.stringify(</span><span class="script perso ">monObjet</span><span class="script ">);</span></td>
+								<td>Convertir un objet en chaîne JSON</td>
+							</tr>
+						</table>
+					</div>
+
+					<h3 class="soustitre" id="6.4">Exécution asynchrone</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">setTimeout(</span><span class="script perso ">maFonction</span><span class="script ">, </span><span class="script perso ">temps</span><span class="script ">);</span></td>
+								<td>Exécuter en asynchrone une fonction après un certain nombre de millisecondes paramétré</td>
+							</tr>
+							<tr>
+								<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">idInterval</span><span class="script "> = </span><span class="script ">set</span><span class="script ">Interval</span><span class="script ">(</span><span class="script perso ">maFonction</span><span class="script ">, </span><span class="script perso ">temps</span><span class="script ">);</span></td>
+								<td>Exécuter en asynchrone une fonction de manière répétitive</td>
+							</tr>
+							<tr>
+								<td><span class="script ">clearInterval</span><span class="script ">(</span><span class="script perso ">idInterval</span><span class="script ">);</span></td>
+								<td>Arrêter la répétition de la fonction</td>
+							</tr>
+						</table>
+					</div>
+
 				</div>
-				<div class="todo">À venir : les importations et exportations</div>
-				<!-- <h2 class="soustitre" id="IV">Les bibliothèques</h2>
-				<div class="contenu"></div> -->
+				<h2 class="soustitre" id="7">Les importations et exportations</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="7.1">Exporter une classe (fonctionne aussi avec les fonctions et autres)</h3>
+					<div class="contenu">
+						<p><span class="script ">export</span><span class="script "> { </span><span class="script perso ">MaClasse1</span><span class="script ">, </span><span class="script perso ">MaClasse2</span><span class="script ">… };</span></p>
+						<p><span class="script ">ou</span></p>
+						<p><span class="script ">export</span><span class="script "> default </span><span class="script perso ">MaClasse1</span><span class="script ">;</span></p>
+						
+						<div class="note ">Il est possible de mettre le mot-clé export devant class pour exporter une classe.</div>
+					</div>
+
+					<h3 class="soustitre" id="7.2">Importer une classe exportée dans un autre fichier</h3>
+					<div class="contenu">
+						<p><span class="script ">import</span><span class="script "> { </span><span class="script perso ">MaClasse1</span><span class="script ">, </span><span class="script perso ">MaClasse2</span><span class="script ">… } from "./</span><span class="script perso ">fichier</span><span class="script ">";</span></p>
+						<p><span class="script ">ou</span><span class="script "> (si c’est une exportation par défaut) :</span></p>
+						<p><span class="script ">import</span><span class="script "> </span><span class="script perso ">MaClasse1</span><span class="script "> from </span><span class="script ">"./</span><span class="script perso ">fichier</span><span class="script ">";</span></p>
+						<div class="note ">Si c’est une exportation par défaut, il est possible de renommer l’objet.</div>
+						
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="8">Les éléments HTML (du DOM)</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="8.1">Récupérer un élément du DOM</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">element</span><span class="script "> = document.querySelector(</span><span class="script ">"</span><span class="script perso ">selecteurCSS</span><span class="script ">"</span><span class="script ">);</span></td>
+								<td>Récupérer le premier élément respectant le sélecteur CSS</td>
+							</tr>
+							<tr>
+								<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">liste</span><span class="script perso ">Elements</span><span class="script "> = document.querySelectorAll("</span><span class="script perso ">selecteurCSS</span><span class="script ">");</span></td>
+								<td>Récupérer les éléments respectant le sélecteur CSS</td>
+							</tr>
+							<tr>
+								<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">element</span><span class="script "> </span><span class="script ">= document.</span><span class="script ">getElementById</span><span class="script ">("</span><span class="script perso ">monId</span><span class="script ">");</span></td>
+								<td>Récupérer l'élément ayant pour <span class="script ">id = </span><span class="script perso ">monId</span></td>
+							</tr>
+							<tr>
+								<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">listeElements</span><span class="script "> </span><span class="script ">= document.</span><span class="script ">getElementsBy</span><span class="script ">ClassName("</span><span class="script perso ">maClasse</span><span class="script ">");</span></td>
+								<td>Récupérer les éléments ayant pour <span class="script perso ">class = maClasse</span></td>
+							</tr>
+							<tr>
+								<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">listeElements</span><span class="script "> </span><span class="script ">= document.</span><span class="script ">getElementsByTagName</span><span class="script ">(</span><span class="script ">"</span><span class="script perso ">balise</span><span class="script ">"</span><span class="script ">);</span></td>
+								<td>Récupérer les éléments définis par une balise</td>
+							</tr>
+							<tr>
+								<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">sousE</span><span class="script perso ">lement</span><span class="script "> = </span><span class="script perso ">element</span><span class="script ">.querySelector("</span><span class="script perso ">selecteurCSS</span><span class="script ">");</span></td>
+								<td>Récupérer le premier élément respectant le sélecteur CSS</td>
+							</tr>
+							<tr>
+								<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">liste</span><span class="script perso ">Sous</span><span class="script perso ">Elements</span><span class="script "> = </span><span class="script perso ">element</span><span class="script ">.querySelectorAll("</span><span class="script perso ">selecteurCSS</span><span class="script ">");</span></td>
+								<td>Récupérer les éléments depuis un autre élément respectant le sélecteur CSS</td>
+							</tr>
+							<tr>
+								<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">sousElement</span><span class="script "> = </span><span class="script perso ">element</span><span class="script ">.</span><span class="script ">getElementById</span><span class="script ">("</span><span class="script perso ">monId</span><span class="script ">");</span></td>
+								<td>Récupérer l'élément depuis un autre élément ayant pour <span class="script ">id = </span><span class="script perso ">monId</span></td>
+							</tr>
+							<tr>
+								<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">liste</span><span class="script perso ">Sous</span><span class="script perso ">Elements</span><span class="script "> = </span><span class="script perso ">element</span><span class="script ">.</span><span class="script ">getElementsBy</span><span class="script ">ClassName("</span><span class="script perso ">maClasse</span><span class="script ">");</span></td>
+								<td>Récupérer les éléments depuis un autre élément ayant pour <span class="script perso ">class = maClasse</span></td>
+							</tr>
+							<tr>
+								<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">liste</span><span class="script perso ">Sous</span><span class="script perso ">Elements</span><span class="script "> </span><span class="script ">= </span><span class="script perso ">element</span><span class="script ">.</span><span class="script ">getElementsByTagName</span><span class="script ">("</span><span class="script perso ">balise</span><span class="script ">");</span></td>
+								<td>Récupérer les éléments depuis un autre élément définis par une balise</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">element</span><span class="script ">.childNodes</span></td>
+								<td>Récupérer les nœud fils de l’élément</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">element</span><span class="script ">.</span><span class="script ">children</span></td>
+								<td>Récupérer tous les éléments descendants de celui-ci</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">element</span><span class="script ">.</span><span class="script ">parentNode</span></td>
+								<td>Récupérer le parent de l’élément</td>
+							</tr>
+						</table>
+					</div>
+
+					<h3 class="soustitre" id="8.2">Modifier un élément du DOM</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">nouvelElement</span><span class="script "> = document.</span><span class="script ">createElement</span><span class="script ">("</span><span class="script perso ">balise</span><span class="script ">");</span></td>
+								<td>Créer un nouvel élément</td>
+							</tr>
+							<tr>
+								<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">nouvelElement</span><span class="script "> = </span><span class="script perso ">element</span><span class="script ">.</span><span class="script ">cloneNode</span><span class="script ">(</span><span class="script perso ">deep</span><span class="script ">);</span></td>
+								<td>Créer un clone d’un élément (l’option <span class="perso ">deep</span> indique par un booléen si on clone également le contenu)</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">element</span><span class="script ">.</span><span class="script ">insertBefore</span><span class="script ">(</span><span class="script perso ">nouvelElement</span><span class="script ">);</span></td>
+								<td>Insérer avant un autre élément</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">element</span><span class="script ">.</span><span class="script ">replaceChild</span><span class="script ">(</span><span class="script perso ">nouvelElement</span><span class="script ">);</span></td>
+								<td>Remplacer un élément existant</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">element</span><span class="script ">.</span><span class="script ">appendChild</span><span class="script ">(</span><span class="script perso ">nouvelElement</span><span class="script ">);</span></td>
+								<td>Ajouter un élément existant à la fin des enfants d'un élément parent</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">element</span><span class="script ">.</span><span class="script ">removeChild</span><span class="script ">(</span><span class="script perso ">nouvelElement</span><span class="script ">);</span></td>
+								<td>Supprimer un élément existant</td>
+							</tr>
+						</table>
+					</div>
+
+					<h3 class="soustitre" id="8.3">Propriétés sur les éléments</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script perso ">element</span><span class="script ">.</span><span class="script ">textContent</span></td>
+								<td>Récupérer le texte contenu dans l’élément</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">element</span><span class="script ">.</span><span class="script ">classList</span><span class="script ">.add(</span><span class="script perso ">maClasse</span><span class="script ">)</span></td>
+								<td>Ajouter une classe dans l’élément</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">element</span><span class="script ">.classList.</span><span class="script ">remove</span><span class="script ">(</span><span class="script perso ">maClasse</span><span class="script ">)</span></td>
+								<td>Retirer une classe dans l’élément</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">element</span><span class="script ">.classList.</span><span class="script ">contains</span><span class="script ">(</span><span class="script perso ">maClasse</span><span class="script ">)</span></td>
+								<td>Vérifier si l’élément contient cette classe</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">element</span><span class="script ">.classList.</span><span class="script ">toogle</span><span class="script ">(</span><span class="script perso ">maClasse</span><span class="script ">)</span></td>
+								<td>Si l’élément contient la classe, elle est supprimée, sinon, elle est ajoutée</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">element</span><span class="script ">.</span><span class="script ">setAttribute</span><span class="script ">(</span><span class="script perso ">m</span><span class="script perso ">onAttribut</span><span class="script ">, </span><span class="script perso ">valeur</span><span class="script ">)</span></td>
+								<td>Affecter une valeur à un attribut de l’élément (s’il n’existe pas, l’attribut est alors ajouté)</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">element</span><span class="script ">.</span><span class="script ">remove</span><span class="script ">Attribute</span><span class="script ">(</span><span class="script perso ">m</span><span class="script perso ">onAttribut</span><span class="script ">)</span></td>
+								<td>Supprimer un attribut</td>
+							</tr>
+							<tr>
+								<td><span class="script perso ">element</span><span class="script ">.</span><span class="script ">tagName</span></td>
+								<td>Récupérer le nom de la balise</td>
+							</tr>
+						</table>
+					</div>
+
+					<h3 class="soustitre" id="8.4">Propriétés sur le style des éléments</h3>
+					<div class="contenu">
+						<p>Syntaxe : <span class="script ">element.style</span><span class="script ">.</span><span class="script perso ">monAttribut</span><span class="script "> = "</span><span class="script perso ">valeur</span><span class="script ">";</span></p>
+						<div class="note ">Remarque : Les attributs sous la forme <span class="script perso ">mon-attribut</span> en CSS doivent être écrits sous la forme <span class="script perso ">monAttribut</span> en JS.</div>
+					</div>
+
+					<h3 class="soustitre" id="8.5">Les événements</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="8.5.1">Les différents écouteurs d’événements</h4>
+						<div class="contenu">
+							<h5 class="soustitre" id="8.5.1.1">Écouteurs simples</h5>
+							<div class="contenu">
+								<p>Syntaxe : <span class="script perso ">element</span><span class="script ">.addEventListener</span><span class="script ">("</span><span class="script perso ">evenement</span><span class="script ">", </span><span class="script perso ">maFonction</span><span class="script ">);</span></p>
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Événement</span></th>
+										<th><span style="font-weight: bold; ">Exécution</span></th>
+									</tr>
+									<tr>
+										<td><span class="script ">"click"</span></td>
+										<td>Dès que le bouton de la souris a été cliqué sur l’élément</td>
+									</tr>
+									<tr>
+										<td><span class="script ">"</span><span class="script ">change</span><span class="script ">"</span></td>
+										<td>Dès que l’élément a changé</td>
+									</tr>
+									<tr>
+										<td><span class="script ">"mouseover"</span></td>
+										<td>Dès que le bouton de la souris est enfoncé</td>
+									</tr>
+									<tr>
+										<td><span class="script ">"</span><span class="script ">mouseout</span><span class="script ">"</span></td>
+										<td>Dès que le bouton de la souris est relâché</td>
+									</tr>
+									<tr>
+										<td><span class="script ">"</span><span class="script ">keydown</span><span class="script ">"</span></td>
+										<td>Dès qu’une touche du clavier a été enfoncée</td>
+									</tr>
+								</table>
+							</div>
+
+							<h5 class="soustitre" id="8.5.1.2">Écouteurs dans le code HTML</h5>
+							<div class="contenu">
+								<p>Syntaxe : <span class="script ">&lt;</span><span class="script perso ">balise</span><span class="script "> </span><span class="script perso ">on</span><span class="script perso ">e</span><span class="script perso ">venement</span><span class="script ">="</span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script ">"&gt;…</span></p>
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Événement</span></th>
+										<th><span style="font-weight: bold; ">Exécution</span></th>
+									</tr>
+									<tr>
+										<td><span class="script ">on</span><span class="script ">click</span></td>
+										<td>Dès que le bouton de la souris a été cliqué sur l’élément</td>
+									</tr>
+									<tr>
+										<td><span class="script ">on</span><span class="script ">change</span></td>
+										<td>Dès que l’élément a changé</td>
+									</tr>
+									<tr>
+										<td><span class="script ">on</span><span class="script ">mouseover</span></td>
+										<td>Dès que le bouton de la souris est enfoncé</td>
+									</tr>
+									<tr>
+										<td><span class="script ">on</span><span class="script ">mouseout</span></td>
+										<td>Dès que le bouton de la souris est relâché</td>
+									</tr>
+									<tr>
+										<td><span class="script ">on</span><span class="script ">keydown</span></td>
+										<td>Dès qu’une touche du clavier a été enfoncée</td>
+									</tr>
+								</table>
+								
+								<div class="note ">Note : Il est possible également d’ajouter l’événement directement dans le code JavaScript sous la forme : <span class="script perso ">element</span><span class="script ">.on</span><span class="script perso ">evenement</span><span class="script "> = </span><span class="script perso ">maFonction</span><span class="script ">;</span></div>
+							</div>
+
+						</div>
+
+						<h4 class="soustitre" id="8.5.2">Informations sur les événements</h4>
+						<div class="contenu">
+							<p>Les fonctions exécutées après un événement doivent obligatoirement avoir en paramètre « e ». Sur cette variable, des informations sur l’événement peuvent être récupérées.</p>
+							<table>
+								<tr>
+									<th><span style="font-weight: bold; ">Instruction</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+								</tr>
+								<tr>
+									<td><span class="script ">e.target</span></td>
+									<td>Récupérer l’élément cible</td>
+								</tr>
+								<tr>
+									<td><span class="script ">e.currentTarget</span></td>
+									<td>Récupérer l’élément qui est</td>
+								</tr>
+							</table>
+							
+						</div>
+
+					</div>
+
+				</div>
 			</article>
 		</main>
 		<footer>
 			<script src="../../scripts/footer.js"></script>
 			<a class="top" href="#"><img src="../../images/top.png"></a>
 		</footer>
+		<script src="../../scripts/script.js"></script>
+		<script src="../../scripts/tableDesMatieres.js"></script>
 	</body>
-	<script src="../../scripts/script.js"></script>
-	<script src="../../scripts/tableDesMatieres.js"></script>
 </html>
