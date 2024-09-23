@@ -298,8 +298,9 @@ main{
 	height: 50px;
 }
 
-.logoAstuce{
+.logoAstuce, .logoAide{
 	max-height: 200px;
+	max-width: 200px;
 }
 
 /* Page d'un language */
