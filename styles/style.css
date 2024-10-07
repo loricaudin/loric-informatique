@@ -304,7 +304,7 @@ main{
 }
 
 /* Page d'un language */
-.pageLangage .logoLangage{
+.pageMemento .logoMemento{
 	max-height: 200px;
 }
 
@@ -349,8 +349,8 @@ td{
 	text-align: left;
 }
 
-/* Langages */
-.langages{
+/* Mementos */
+.mementos{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -362,7 +362,7 @@ td{
 	border-radius: 20px; /* Arrondi des bords */
 }
 
-.langages .langage{
+.mementos .memento{
 	color: black;
 	padding: 0;
 	max-width: 160px;
@@ -373,7 +373,7 @@ td{
 	border-radius: 20px; /* Arrondi des bords */
 }
 
-.langages .langage a{
+.mementos .memento a{
 	display: flex;
 	flex-direction: column-reverse;
 	justify-content: center;
@@ -388,7 +388,7 @@ td{
 	border-radius: 20px; /* Arrondi des bords */
 }
 
-.langages .langage a div{
+.mementos .memento a div{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -396,12 +396,12 @@ td{
 	height: 100px;
 }
 
-.langages img{
+.mementos img{
 	max-width: 100px;
 	max-height: 100px;
 }
 
-.langages .langage:hover{
+.mementos .memento:hover{
 	background-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -461,15 +461,15 @@ td{
 	border : 1px solid white;
 }
 
-/* Langages */
-.modeSombre .langages{
+/* Mementos */
+.modeSombre .mementos{
 	background-color: rgba(200, 200, 200, 0.1);
 }
-.modeSombre .langages a{
+.modeSombre .mementos a{
 	color: white;
 }
 
-.modeSombre .langages .langage:hover{
+.modeSombre .mementos .memento:hover{
 	background-color: rgba(255, 255, 255, 0.05);
 }
 
@@ -636,7 +636,7 @@ td{
 	}
 
 	/* Page d'un language */
-	.pageLangage .logoLangage{
+	.pageMemento .logoMemento{
 		max-height: 200px;
 		max-width: 200px;
 	}
@@ -727,7 +727,7 @@ td{
 	}
 
 	/* Page d'un language */
-	.pageLangage .logoLangage{
+	.pageMemento .logoMemento{
 		max-width: 100px;
 		max-height: 100px;
 	}

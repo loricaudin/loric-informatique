@@ -1,7 +1,7 @@
-langages/__modele__
-langages/__outils__
-langages/*/todo
-langages/*/anciennes_versions
+mementos/__modele__
+mementos/__outils__
+mementos/*/todo
+mementos/*/anciennes_versions
 application
 ressources_local/
 *.docx
