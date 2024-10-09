@@ -299,8 +299,12 @@ main{
 }
 
 .logoAstuce, .logoAide{
-	max-height: 200px;
-	max-width: 200px;
+	max-height: 200px !important;
+	max-width: 200px !important;
+}
+
+.pageAstuce img, .pageAide img{
+	max-height: 500px;
 }
 
 /* Page d'un language */
