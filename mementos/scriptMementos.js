@@ -4,6 +4,7 @@ let listeMementos = [
     ["HTML", "html", "html", "rgba(241, 101, 41, .5)", "rgba(228, 77, 38, .5)"],
     ["CSS", "css", "css", "rgba(41, 101, 241, .5)", "rgba(38, 77, 228, .5)"],
     ["JavaScript", "js", "js", "rgba(247, 223, 30, .5)", "rgba(233, 206, 9, .5)"],
+    ["TypeScript", "js", "ts", "rgba(45, 121, 199, .5)", "rgba(36, 100, 164, .5)"],
     //["PHP", "php", "php", "rgba(122, 134, 184, .5)", ""],
     ["MySQL", "sql", "mysql", "rgba(228, 142, 0, .5)", "rgba(204, 126, 0, .5)"],
     ["Oracle Database (SQL)", "sql", "oracledatabase", "rgba(255, 0, 0, .5)", "rgba(200, 0, 0, .5)"],
