@@ -40,7 +40,7 @@
 							<li>Navigateur Internet à jour (ex : Firefox ou Chrome)</li>
 							<li>Un logiciel de codage (Visual Studio Code (recommandé) ou Notepad++)</li>
 							<li>Connaissances en HTML, CSS et JS</li>
-							<li>Validateur JS : <a href="https://jshint.com/" target="_blank">https://jshint.com/</a> (faire précéder son code par <span class="script ">// jshint browser:true, eqeqeq:true, undef:true, devel:true, esversion: 6</span>)</li>
+							<li>Validateur JS : <a href="https://jshint.com/" target="_blank">https://jshint.com/</a> (faire précéder son code par <span class="script ">// </span><span class="script ">jshint</span><span class="script "> </span><span class="script ">browser:true</span><span class="script ">, </span><span class="script ">eqeqeq:true</span><span class="script ">, </span><span class="script ">undef:true</span><span class="script ">, </span><span class="script ">devel:true</span><span class="script ">, </span><span class="script ">esversion</span><span class="script ">: 6</span>)</li>
 						</ul>
 						<div class="note "><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAMAAADWg4HyAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAABFUExURQAAAOZGIOJLI+NMJeRLJONLIuVMJeNMJgAAAORNJuRcOuVmRuVnR+VqSuZR
@@ -99,8 +99,8 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 
 					<h3 class="soustitre" id="1.2">Initialiser un projet TS</h3>
 					<div class="contenu">
-						<p>Installer TypeScript avec la commande : <span class="script ">npm install -g typescript</span></p>
-						<p>Créer un dossier typescript est y faire la commande : <span class="script ">tsc --init</span></p>
+						<p>Installer TypeScript avec la commande : <span class="script ">npm</span><span class="script "> </span><span class="script ">install</span><span class="script "> -g </span><span class="script ">typescript</span></p>
+						<p>Créer un dossier typescript est y faire la commande : <span class="script ">tsc</span><span class="script "> --init</span></p>
 						<div class="note ">Si la commande ci-dessus et la commande ci-dessous ne fonctionnent pas ou sont introuvables, essayer d’ajouter « <span class="script ">npx</span> » devant chaque commande « <span class="script ">tsc</span> ».</div>
 					</div>
 
@@ -111,7 +111,7 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 
 					<h3 class="soustitre" id="1.4">Premier code « Hello World! »</h3>
 					<div class="contenu">
-						<p><span class="script ">alert("Hello World!");</span></p>
+						<p><span class="script ">alert</span><span class="script ">(</span><span class="script ">"Hello World!");</span></p>
 					</div>
 
 				</div>
@@ -119,14 +119,14 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 				<div class="contenu">
 					<h3 class="soustitre" id="2.1">Syntaxe</h3>
 					<div class="contenu">
-						<p><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script perso ">instruction3</span><span class="script ">;</span></p>
+						<p><span class="script perso ">instruction</span><span class="script perso ">1</span><span class="script ">;</span><span class="script "><br/></span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script perso ">instruction3</span><span class="script ">;</span></p>
 					</div>
 
 					<h3 class="soustitre" id="2.2">Les variables</h3>
 					<div class="contenu">
 						<h4 class="soustitre" id="2.2.1">Types de variables</h4>
 						<div class="contenu">
-							<p>Fonction pour connaître le type : <span class="script ">typeof(</span><span class="script perso ">variable</span><span class="script ">)</span></p>
+							<p>Fonction pour connaître le type : <span class="script ">typeof</span><span class="script ">(</span><span class="script perso ">variable</span><span class="script ">)</span></p>
 							<h5 class="soustitre" id="2.2.1.1">Types de base</h5>
 							<div class="contenu">
 								<table>
@@ -136,19 +136,19 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 										<th><span style="font-weight: bold; ">Fonction pour le convertir</span></th>
 									</tr>
 									<tr>
-										<td><span class="script ">int </span>ou<span class="script "> number</span></td>
+										<td><span class="script ">int</span><span class="script "> </span>ou<span class="script "> </span><span class="script ">number</span></td>
 										<td>Nombre entier</td>
-										<td><span class="script ">parseInt(</span><span class="script perso ">variable</span><span class="script ">) </span>ou<span class="script "> parseInt(</span><span class="script perso ">variable</span><span class="script ">, </span><span class="script perso ">base</span><span class="script ">)</span></td>
+										<td><span class="script ">parseInt</span><span class="script ">(</span><span class="script perso ">variable</span><span class="script ">) </span>ou<span class="script "> </span><span class="script ">parseInt</span><span class="script ">(</span><span class="script perso ">variable</span><span class="script ">, </span><span class="script perso ">base</span><span class="script ">)</span></td>
 									</tr>
 									<tr>
-										<td><span class="script ">float</span> ou<span class="script "> number</span></td>
+										<td><span class="script ">float</span> ou<span class="script "> </span><span class="script ">number</span></td>
 										<td>Nombre décimal (ex : 0.1)</td>
-										<td><span class="script ">parseFloat(</span><span class="script perso ">variable</span><span class="script ">)</span></td>
+										<td><span class="script ">parseFloat</span><span class="script ">(</span><span class="script perso ">variable</span><span class="script ">)</span></td>
 									</tr>
 									<tr>
 										<td><span class="script ">string</span></td>
 										<td>Chaîne de caractères entre ' ' ou " " (caractère\n : retour à la ligne ; \t : tabulation ; \b : retour en arrière ; \f : nouvelle page)</td>
-										<td><span class="script perso ">variable</span><span class="script ">.toString()</span></td>
+										<td><span class="script perso ">variable</span><span class="script ">.toString</span><span class="script ">()</span></td>
 									</tr>
 								</table>
 								
@@ -200,11 +200,11 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 									<td>Renvoie 2.5</td>
 								</tr>
 								<tr>
-									<td><span class="script ">Math.floor(</span><span class="script ">5 / 2</span><span class="script ">)</span></td>
+									<td><span class="script ">Math.floor</span><span class="script ">(</span><span class="script ">5 / 2</span><span class="script ">)</span></td>
 									<td>Renvoie 2 (le quotient sans décimal)</td>
 								</tr>
 								<tr>
-									<td><span class="script ">Math.trunc(5 / 2)</span></td>
+									<td><span class="script ">Math.trunc</span><span class="script ">(5 / 2)</span></td>
 									<td>Renvoie 2 (le quotient sans décimal), utile si Math.floor() échoue (trop grand nombre)</td>
 								</tr>
 								<tr>
@@ -212,7 +212,7 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 									<td>Renvoie 1 (le reste de la division)</td>
 								</tr>
 								<tr>
-									<td><span class="script ">let </span><span class="script perso ">variable</span><span class="script ">: </span><span class="script perso ">type</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
+									<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">variable</span><span class="script ">: </span><span class="script perso ">type</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
 									<td>Déclare une nouvelle variable dont la portée est limitée à celle du bloc dans lequel elle est déclarée</td>
 								</tr>
 								<tr>
@@ -220,19 +220,23 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 									<td>Déclare une nouvelle variable globale ou locale à une fonction (sans distinction des blocs utilisés dans la fonction)</td>
 								</tr>
 								<tr>
-									<td><span class="script ">var </span><span class="script perso ">a</span><span class="script ">?: </span><span class="script perso ">type</span><span class="script ">;</span></td>
-									<td>Déclare la variable <span class="perso ">a</span> sans affecter de valeur (contient null)</td>
+									<td><span class="script ">var</span><span class="script "> </span><span class="script perso ">a</span><span class="script ">?: </span><span class="script perso ">type</span><span class="script ">;</span></td>
+									<td>Déclare la variable <span class="perso ">a</span> sans affecter de valeur (contient <span class="script ">null</span>)</td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script ">!</span></td>
+									<td>Ignorer les possibles valeurs <span class="script ">null</span> et <span class="script ">undefined</span></td>
 								</tr>
 								<tr>
 									<td><span class="script ">var</span><span class="script "> </span><span class="script perso ">a</span><span class="script ">: </span><span class="script ">unknown</span><span class="script ">;</span></td>
 									<td>Déclare la variable <span class="perso ">a</span> sans affecter de valeur (contient null) et sans déclaré de type (le type est choisi automatiquement)</td>
 								</tr>
 								<tr>
-									<td><span class="script ">var </span><span class="script perso ">b</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script "> | </span><span class="script perso ">type2</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
+									<td><span class="script ">var</span><span class="script "> </span><span class="script perso ">b</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script "> | </span><span class="script perso ">type2</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
 									<td>Déclare une nouvelle variable pouvant être de plusieurs types</td>
 								</tr>
 								<tr>
-									<td><span class="script ">var </span><span class="script perso ">c</span><span class="script ">: </span><span class="script perso ">valeur1</span><span class="script "> | </span><span class="script perso ">valeur2</span><span class="script ">… = </span><span class="script perso ">valeur1</span><span class="script ">;</span></td>
+									<td><span class="script ">var</span><span class="script "> </span><span class="script perso ">c</span><span class="script ">: </span><span class="script perso ">valeur1</span><span class="script "> | </span><span class="script perso ">valeur2</span><span class="script ">… = </span><span class="script perso ">valeur1</span><span class="script ">;</span></td>
 									<td>Déclarer une variable ne pouvant contenir qu’une des valeurs énumérées</td>
 								</tr>
 								<tr>
@@ -240,11 +244,11 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 									<td>Affecte 5 à une variable</td>
 								</tr>
 								<tr>
-									<td><span class="script perso ">a</span><span class="script "> = </span><span class="script perso ">a</span><span class="script "> + </span><span class="script ">3</span><span class="script ">;</span></td>
+									<td><span class="script perso ">a</span><span class="script "> = </span><span class="script perso ">a</span><span class="script "> + 3;</span></td>
 									<td>Ajoute 3 à une variable</td>
 								</tr>
 								<tr>
-									<td><span class="script perso ">a</span><span class="script "> += </span><span class="script ">3</span><span class="script ">;</span></td>
+									<td><span class="script perso ">a</span><span class="script "> += 3;</span></td>
 									<td>Ajoute 3 à une variable</td>
 								</tr>
 								<tr>
@@ -253,18 +257,18 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 								</tr>
 								<tr>
 									<td><span class="script perso ">b</span><span class="script "> = </span><span class="script perso ">a</span><span class="script ">++;</span></td>
-									<td>Équivalent à : <span class="script perso ">b</span><span class="script "> = </span><span class="script perso ">a</span><span class="script ">; </span><span class="script perso ">a</span><span class="script "> = </span><span class="script perso ">a</span><span class="script "> + 1;</span></td>
+									<td>Équivalent à : <span class="script perso ">b</span><span class="script "> = </span><span class="script perso ">a</span><span class="script ">;</span><span class="script "> </span><span class="script perso ">a</span><span class="script "> = </span><span class="script perso ">a</span><span class="script "> + 1;</span></td>
 								</tr>
 								<tr>
 									<td><span class="script perso ">b</span><span class="script "> = ++</span><span class="script perso ">a</span><span class="script ">;</span></td>
-									<td>Équivalent à : <span class="script perso ">a</span><span class="script "> = </span><span class="script perso ">a</span><span class="script "> + 1; </span><span class="script perso ">b</span><span class="script "> = </span><span class="script perso ">a</span><span class="script ">;</span></td>
+									<td>Équivalent à : <span class="script perso ">a</span><span class="script "> = </span><span class="script perso ">a</span><span class="script "> + </span><span class="script ">1;</span><span class="script "> </span><span class="script perso ">b</span><span class="script "> = </span><span class="script perso ">a</span><span class="script ">;</span></td>
 								</tr>
 								<tr>
 									<td><span class="script ">const</span><span class="script "> PI = 3.14;</span></td>
 									<td>Crée une variable constante (non modifiable)</td>
 								</tr>
 								<tr>
-									<td><span class="script ">static </span><span class="script perso ">variable</span><span class="script ">:</span><span class="script perso "> type</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
+									<td><span class="script ">static</span><span class="script "> </span><span class="script perso ">variable</span><span class="script ">:</span><span class="script perso "> type</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script ">;</span></td>
 									<td>Déclare une nouvelle variable qui n’est jamais détruite (si déjà exécuté, cette instruction est ignorée)</td>
 								</tr>
 								<tr>
@@ -272,11 +276,11 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 									<td>Crée variable avec une seule initialisation (utile dans les interfaces pour créer des constantes)</td>
 								</tr>
 								<tr>
-									<td><span class="script ">let </span><span class="script perso ">texte</span><span class="script ">: string</span><span class="script "> = '</span><span class="script perso ">chaine</span><span class="script ">';</span></td>
+									<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">texte</span><span class="script ">: string = '</span><span class="script perso ">chaine</span><span class="script ">';</span></td>
 									<td>Affecte une chaine de caractères à une variable (les chaînes peuvent s’additionner avec l’opérateur +)</td>
 								</tr>
 								<tr>
-									<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">texte</span><span class="script ">: string</span><span class="script "> = "</span><span class="script perso ">chaine</span><span class="script ">";</span></td>
+									<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">texte</span><span class="script ">: string = "</span><span class="script perso ">chaine</span><span class="script ">";</span></td>
 									<td>Affecte une chaine de caractères à une variable (les chaînes peuvent s’additionner avec l’opérateur +)</td>
 								</tr>
 							</table>
@@ -302,11 +306,11 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 								<td>Crée un tableau vide</td>
 							</tr>
 							<tr>
-								<td><span class="script ">var </span><span class="script perso ">tableau</span><span class="script ">: Array&lt;</span><span class="script perso ">type</span><span class="script ">&gt;;</span></td>
+								<td><span class="script ">var</span><span class="script "> </span><span class="script perso ">tableau</span><span class="script ">: </span><span class="script ">Array</span><span class="script ">&lt;</span><span class="script perso ">type</span><span class="script ">&gt;;</span></td>
 								<td>Crée un tableau vide de type <span class="script ">Array</span></td>
 							</tr>
 							<tr>
-								<td><span class="script ">var </span><span class="script perso ">tableau</span><span class="script ">: any[]</span><span class="script ">= ["Loric", "Informatique", 69];</span></td>
+								<td><span class="script ">var</span><span class="script "> </span><span class="script perso ">tableau</span><span class="script ">: </span><span class="script ">any</span><span class="script ">[]</span><span class="script ">= ["Loric", "Informatique", 69];</span></td>
 								<td>Crée une liste avec des valeurs (le type de valeurs n’a pas d’importance) (<span class="script ">any</span> est déconseillé)</td>
 							</tr>
 							<tr>
@@ -314,19 +318,19 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 								<td>Renvoie la valeur du tableau à la position <span class="perso ">i</span> (l'indice de la première valeur est 0), et permet aussi l’écriture d’une autre valeur</td>
 							</tr>
 							<tr>
-								<td><span class="script perso ">tableau</span><span class="script ">.push(</span><span class="script perso ">valeur</span><span class="script ">);</span></td>
+								<td><span class="script perso ">tableau</span><span class="script ">.push</span><span class="script ">(</span><span class="script perso ">valeur</span><span class="script ">);</span></td>
 								<td>Ajoute une valeur dans le tableau</td>
 							</tr>
 							<tr>
-								<td><span class="script perso ">tableau</span><span class="script ">.shift();</span></td>
+								<td><span class="script perso ">tableau</span><span class="script ">.shift</span><span class="script ">();</span></td>
 								<td>Enlève et renvoie la première valeur du tableau</td>
 							</tr>
 							<tr>
-								<td><span class="script perso ">tableau</span><span class="script ">.pop();</span></td>
+								<td><span class="script perso ">tableau</span><span class="script ">.pop</span><span class="script ">(</span><span class="script ">);</span></td>
 								<td>Enlève et renvoie la dernière valeur du tableau</td>
 							</tr>
 							<tr>
-								<td><span class="script perso ">tableau</span><span class="script ">.splice(</span><span class="script perso ">indice</span><span class="script ">, </span><span class="script perso ">n</span><span class="script ">);</span></td>
+								<td><span class="script perso ">tableau</span><span class="script ">.splice</span><span class="script ">(</span><span class="script perso ">indice</span><span class="script ">, </span><span class="script perso ">n</span><span class="script ">);</span></td>
 								<td>Enlève <span class="perso ">n</span> valeurs à partir de l’indice spécifié</td>
 							</tr>
 							<tr>
@@ -334,19 +338,19 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 								<td>Renvoie la longueur du tableau</td>
 							</tr>
 							<tr>
-								<td><span class="script perso ">tableau</span><span class="script ">.includes(</span><span class="script perso ">valeur</span><span class="script ">);</span></td>
+								<td><span class="script perso ">tableau</span><span class="script ">.includes</span><span class="script ">(</span><span class="script perso ">valeur</span><span class="script ">);</span></td>
 								<td>Recherche si la valeur est présente dans le tableau</td>
 							</tr>
 							<tr>
-								<td><span class="script perso ">tableau</span><span class="script ">.indexOf(</span><span class="script perso ">valeur</span><span class="script ">);</span></td>
+								<td><span class="script perso ">tableau</span><span class="script ">.indexOf</span><span class="script ">(</span><span class="script perso ">valeur</span><span class="script ">);</span></td>
 								<td>Renvoie la position de la valeur recherchée ou -1 si elle n’est pas trouvée</td>
 							</tr>
 							<tr>
-								<td><span class="script perso ">tableau</span><span class="script "> = </span><span class="script perso ">chaine</span><span class="script ">.split(</span><span class="script perso ">separateur</span><span class="script ">);</span></td>
+								<td><span class="script perso ">tableau</span><span class="script "> = </span><span class="script perso ">chaine</span><span class="script ">.split</span><span class="script ">(</span><span class="script perso ">separateur</span><span class="script ">);</span></td>
 								<td>Couper une chaîne de caractères en précisant le séparateur et renvoie un tableau</td>
 							</tr>
 							<tr>
-								<td><span class="script perso ">chaine</span><span class="script "> = </span><span class="script perso ">tableau</span><span class="script ">.join(</span><span class="script perso ">separateur</span><span class="script ">);</span></td>
+								<td><span class="script perso ">chaine</span><span class="script "> = </span><span class="script perso ">tableau</span><span class="script ">.join</span><span class="script ">(</span><span class="script perso ">separateur</span><span class="script ">);</span></td>
 								<td>Convertir un tableau en chaîne de caractères en séparant par un séparateur</td>
 							</tr>
 						</table>
@@ -376,7 +380,7 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 								<td>Ajoute 3 à l’objet</td>
 							</tr>
 							<tr>
-								<td><span class="script ">delete </span><span class="script perso ">obj</span><span class="script ">.</span><span class="script perso ">c</span><span class="script ">;</span></td>
+								<td><span class="script ">delete</span><span class="script "> </span><span class="script perso ">obj</span><span class="script ">.</span><span class="script perso ">c</span><span class="script ">;</span></td>
 								<td>Supprime une clé de l’objet</td>
 							</tr>
 						</table>
@@ -447,28 +451,28 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 									<th><span style="font-weight: bold; ">Description</span></th>
 								</tr>
 								<tr>
-									<td><span class="script ">if (</span><span class="script perso ">condition1</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+									<td><span class="script ">if</span><span class="script "> (</span><span class="script perso ">condition1</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
 									<td>Si <span class="perso ">condition1</span> est vraie, alors on exécute <span class="perso ">instruction1</span></td>
 								</tr>
 								<tr>
-									<td><span class="script ">if (</span><span class="script perso ">condition1</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} else {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+									<td><span class="script ">if</span><span class="script "> (</span><span class="script perso ">condition1</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} </span><span class="script ">else</span><span class="script "> {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
 									<td>Si <span class="perso ">condition1</span> est vraie, alors on exécute <span class="perso ">instruction1</span>, sinon, on exécute <span class="perso ">instruction2</span></td>
 								</tr>
 								<tr>
-									<td><span class="script ">if (</span><span class="script perso ">condition1</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} else if</span><span class="script "> </span><span class="script ">(</span><span class="script perso ">condition2</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} else {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction3</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+									<td><span class="script ">if</span><span class="script "> (</span><span class="script perso ">condition1</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} </span><span class="script ">else</span><span class="script "> if</span><span class="script "> </span><span class="script ">(</span><span class="script perso ">condition2</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} </span><span class="script ">else</span><span class="script "> {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction3</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
 									<td>Si <span class="perso ">condition1</span> est vraie, alors on exécute <span class="perso ">instruction1</span>, sinon, si <span class="perso ">condition2</span> est vraie, on exécute <span class="perso ">instruction2</span>, sinon, on exécute <span class="perso ">instruction3</span></td>
 								</tr>
 								<tr>
-									<td><span class="script ">switch (</span><span class="script perso ">nombre</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;case </span><span class="script perso ">a</span><span class="script ">:</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;case </span><span class="script perso ">b</span><span class="script ">:</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;case </span><span class="script perso ">c</span><span class="script ">:</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;default:</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction3</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+									<td><span class="script ">switch</span><span class="script "> (</span><span class="script perso ">nombre</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;case </span><span class="script perso ">a</span><span class="script ">:</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;case </span><span class="script perso ">b</span><span class="script ">:</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;case </span><span class="script perso ">c</span><span class="script ">:</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;default:</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction3</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
 									<td>Si <span class="perso ">nombre</span> == <span class="perso ">a</span>, alors on exécute <span class="perso ">instruction1</span>, sinon, si <span class="perso ">nombre</span> == <span class="perso ">b</span> ou <span class="perso ">c</span>, on exécute <span class="perso ">instruction2</span>, sinon, on exécute <span class="perso ">instruction3</span></td>
 								</tr>
 								<tr>
-									<td><span class="script perso ">a</span><span class="script "> = (</span><span class="script perso ">condition1</span><span class="script ">) ? 1 : 0;</span></td>
+									<td><span class="script perso ">a</span><span class="script "> = (</span><span class="script perso ">condition1</span><span class="script ">) ? 1 : </span><span class="script ">0;</span></td>
 									<td>Si <span class="perso ">condition1</span> est vraie, <span class="perso ">a</span> prend la valeur 1, sinon 0.</td>
 								</tr>
 								<tr>
-									<td><span class="script ">try {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/>} catch(</span><span class="script perso ">erreur</span><span class="script ">) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/>}</span></td>
-									<td>Si <span class="perso ">instruction1</span> provoque une erreur, on exécute <span class="perso ">instruction2</span> (<span class="script ">si throw </span><span class="script perso ">message</span><span class="script ">; </span>est placé dans <span class="perso ">instruction1</span>, alors <span class="perso ">instruction2</span> est exécuté avec <span class="script ">erreur = </span><span class="script perso ">message</span>)</td>
+									<td><span class="script ">try</span><span class="script "> {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/>} catch(</span><span class="script perso ">erreur</span><span class="script ">) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction2</span><span class="script ">;</span><span class="script "><br/>}</span></td>
+									<td>Si <span class="perso ">instruction1</span> provoque une erreur, on exécute <span class="perso ">instruction2</span> (<span class="script ">si </span><span class="script ">throw</span><span class="script "> </span><span class="script perso ">message</span><span class="script ">;</span><span class="script "> </span>est placé dans <span class="perso ">instruction1</span>, alors <span class="perso ">instruction2</span> est exécuté avec <span class="script ">erreur = </span><span class="script perso ">message</span>)</td>
 								</tr>
 							</table>
 						</div>
@@ -483,27 +487,27 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td><span class="script ">for (</span><span class="script ">let</span><span class="script "> </span><span class="script perso ">i</span><span class="script "> = </span><span class="script perso ">d</span><span class="script ">; </span><span class="script perso ">i</span><span class="script "> &lt; </span><span class="script perso ">f</span><span class="script ">; </span><span class="script perso ">i</span><span class="script ">++) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+								<td><span class="script ">for</span><span class="script "> (</span><span class="script ">let</span><span class="script "> </span><span class="script perso ">i</span><span class="script "> = </span><span class="script perso ">d</span><span class="script ">; </span><span class="script perso ">i</span><span class="script "> &lt; </span><span class="script perso ">f</span><span class="script ">; </span><span class="script perso ">i</span><span class="script ">++) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
 								<td>On répète <span class="perso ">f</span>-<span class="perso ">d</span> fois l’instruction pour <span class="perso ">i</span> allant de <span class="perso ">d</span> compris à <span class="perso ">f</span> non compris</td>
 							</tr>
 							<tr>
-								<td><span class="script ">for (</span><span class="script ">let</span><span class="script "> </span><span class="script perso ">i</span><span class="script "> = </span><span class="script perso ">d</span><span class="script ">; </span><span class="script perso ">i</span><span class="script "> &lt; </span><span class="script perso ">f</span><span class="script ">; </span><span class="script perso ">i</span><span class="script ">+=</span><span class="script perso ">p</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+								<td><span class="script ">for</span><span class="script "> (</span><span class="script ">let</span><span class="script "> </span><span class="script perso ">i</span><span class="script "> = </span><span class="script perso ">d</span><span class="script ">; </span><span class="script perso ">i</span><span class="script "> &lt; </span><span class="script perso ">f</span><span class="script ">; </span><span class="script perso ">i</span><span class="script ">+=</span><span class="script perso ">p</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
 								<td>On répète (<span class="perso ">f</span>-<span class="perso ">d</span>)/<span class="perso ">p</span> fois l’instruction pour i allant de <span class="perso ">d</span> compris à <span class="perso ">f</span> non compris avec pour pas égal à <span class="perso ">p</span></td>
 							</tr>
 							<tr>
-								<td><span class="script ">for (let </span><span class="script perso ">i</span><span class="script "> in </span><span class="script perso ">tableau</span><span class="script ">) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/>}</span></td>
+								<td><span class="script ">for</span><span class="script "> (let </span><span class="script perso ">i</span><span class="script "> in </span><span class="script perso ">tableau</span><span class="script ">) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/>}</span></td>
 								<td>On parcours le tableau (ou une chaîne de caractères) pour <span class="perso ">i</span> allant de 0 à la longueur de tableau</td>
 							</tr>
 							<tr>
-								<td><span class="script ">for (</span><span class="script ">let</span><span class="script "> </span><span class="script perso ">elt</span><span class="script "> </span><span class="script ">of</span><span class="script "> </span><span class="script perso ">tableau</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+								<td><span class="script ">for</span><span class="script "> (</span><span class="script ">let</span><span class="script "> </span><span class="script perso ">elt</span><span class="script "> </span><span class="script ">of</span><span class="script "> </span><span class="script perso ">tableau</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
 								<td>On parcourt le tableau (ou une chaîne de caractères) pour <span class="perso ">elt</span> prenant toutes les valeurs du tableau</td>
 							</tr>
 							<tr>
-								<td><span class="script ">while (</span><span class="script perso ">condition</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
+								<td><span class="script ">while</span><span class="script "> (</span><span class="script perso ">condition</span><span class="script ">) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></td>
 								<td>On répète jusqu’à ce que la condition soit fausse (peut ne pas être répété)</td>
 							</tr>
 							<tr>
-								<td><span class="script ">do {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} while(</span><span class="script perso ">condition</span><span class="script ">);</span></td>
+								<td><span class="script ">do</span><span class="script "> {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instruction1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">} </span><span class="script ">while</span><span class="script ">(</span><span class="script perso ">condition</span><span class="script ">);</span></td>
 								<td>On répète jusqu’à ce que la condition soit fausse (est forcément répété une fois)</td>
 							</tr>
 							<tr>
@@ -526,7 +530,7 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 
 					<h3 class="soustitre" id="3.2">Retourner une valeur de la fonction</h3>
 					<div class="contenu">
-						<p><span class="script ">return </span><span class="script perso ">variable</span><span class="script ">;</span></p>
+						<p><span class="script ">return</span><span class="script "> </span><span class="script perso ">variable</span><span class="script ">;</span></p>
 					</div>
 
 					<h3 class="soustitre" id="3.3">Faire un appel à la fonction</h3>
@@ -546,7 +550,7 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 
 						<h4 class="soustitre" id="3.4.2">Syntaxe fléchée</h4>
 						<div class="contenu">
-							<p><span class="script ">(</span><span class="script perso ">variable1</span><span class="script perso ">: type1</span><span class="script ">, </span><span class="script perso ">variable2</span><span class="script perso ">: type2</span><span class="script ">…)</span><span class="script ">: </span><span class="script perso ">type0</span><span class="script "> =&gt;</span><span class="script "> {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></p>
+							<p><span class="script ">(</span><span class="script perso ">variable</span><span class="script perso ">1</span><span class="script perso ">: type1</span><span class="script ">, </span><span class="script perso ">variable2</span><span class="script perso ">: type2</span><span class="script ">…)</span><span class="script ">: </span><span class="script perso ">type0</span><span class="script "> =&gt;</span><span class="script "> {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">}</span></p>
 							<div class="note ">Une fonction anonyme peut être affectée comme une variable. Celle-ci devient donc une fonction.</div>
 						</div>
 
@@ -568,7 +572,7 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 					<div class="contenu">
 						<h4 class="soustitre" id="4.2.1">Créer une classe</h4>
 						<div class="contenu">
-							<p><span class="script ">public class </span><span class="script perso ">MaClasse</span><span class="script "> {</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">; </span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;static </span><span class="script perso ">variableStatique3</span><span class="script ">: </span><span class="script perso ">type3</span><span class="script "> = </span><span class="script perso ">valeur3</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">constructor</span><span class="script ">(</span><span class="script perso ">mVariable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">…) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable1</span><span class="script "> = </span><span class="script perso ">mVariable1</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable2</span><span class="script "> = </span><span class="script perso ">mVariable2</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="script "><br/>}</span></p>
+							<p><span class="script ">public</span><span class="script "> class </span><span class="script perso ">MaClasse</span><span class="script "> {</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">; </span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">static</span><span class="script "> </span><span class="script perso ">variableStatique3</span><span class="script ">: </span><span class="script perso ">type3</span><span class="script "> = </span><span class="script perso ">valeur3</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">constructor</span><span class="script ">(</span><span class="script perso ">mVariable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">…) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable1</span><span class="script "> = </span><span class="script perso ">mVariable1</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable2</span><span class="script "> = </span><span class="script perso ">mVariable2</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="script "><br/>}</span></p>
 							<div class="note ">Note : Il est possible de surcharger le constructeur et de créer une variable statique qui reste la même valeur pour tous les objets.</div>
 						</div>
 
@@ -579,7 +583,7 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 
 						<h4 class="soustitre" id="4.2.3">Ajouter un retour de la classe lors de la conversion en chaîne de caractères</h4>
 						<div class="contenu">
-							<p><span class="script ">toString()</span><span class="script ">: string</span><span class="script "> {</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;return "</span><span class="script perso ">message</span><span class="script ">";</span><br/><span class="script ">}</span></p>
+							<p><span class="script ">toString</span><span class="script ">(</span><span class="script ">)</span><span class="script ">: string</span><span class="script "> {</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;return "</span><span class="script perso ">message</span><span class="script ">";</span><br/><span class="script ">}</span></p>
 						</div>
 
 						<h4 class="soustitre" id="4.2.4">Créer une méthode (dans une classe)</h4>
@@ -595,20 +599,20 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 						<h4 class="soustitre" id="4.2.6">Faire un appel d’une méthode autre que le constructeur et toString ou d’une variable dans une classe</h4>
 						<div class="contenu">
 							<p><span class="script ">this.</span><span class="script perso ">maMethode</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…)</span></p>
-							<p><span class="script ">this.</span><span class="script perso ">variable1</span><span class="script "> = </span><span class="script perso ">valeur1</span><span class="script ">;</span></p>
+							<p><span class="script ">this.</span><span class="script perso ">variable</span><span class="script perso ">1</span><span class="script "> = </span><span class="script perso ">valeur1</span><span class="script ">;</span></p>
 						</div>
 
 						<h4 class="soustitre" id="4.2.7">Faire un appel d’une méthode autre que le constructeur et toString ou d’une variable en dehors d'une classe</h4>
 						<div class="contenu">
 							<p><span class="script perso ">monObjet</span><span class="script ">.</span><span class="script perso ">maMethode</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…)</span></p>
-							<p><span class="script perso ">monObjet</span><span class="script ">.</span><span class="script perso ">variable1</span><span class="script "> = </span><span class="script perso ">valeur1</span><span class="script ">;</span></p>
+							<p><span class="script perso ">monObjet</span><span class="script ">.</span><span class="script perso ">variable1</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script perso ">1</span><span class="script ">;</span></p>
 							<div class="note ">Il est préférable d'utiliser des méthodes (appelées getter et setter) pour modifier les variables non statiques</div>
 						</div>
 
 						<h4 class="soustitre" id="4.2.8">Faire un appel d’une méthode ou d’une variable statique en dehors d'une classe</h4>
 						<div class="contenu">
 							<p><span class="script perso ">MaClasse</span><span class="script ">.</span><span class="script perso ">maMethodeStatique</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…)</span></p>
-							<p><span class="script perso ">MaClasse</span><span class="script ">.</span><span class="script perso ">variableStatique3</span><span class="script "> = </span><span class="script perso ">valeur3</span><span class="script ">;</span></p>
+							<p><span class="script perso ">MaClasse</span><span class="script ">.</span><span class="script perso ">variableStatique3</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script perso ">3</span><span class="script ">;</span></p>
 						</div>
 
 						<h4 class="soustitre" id="4.2.9">Créer un getter et un setter</h4>
@@ -623,7 +627,7 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 					<h3 class="soustitre" id="4.3">Les classes internes</h3>
 					<div class="contenu">
 						<p>Les classes internes sont des classes présentes dans une autre classe.</p>
-						<p><span class="script ">public </span><span class="script ">class </span><span class="script perso ">MaClasse </span><span class="script ">{</span><br/><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">public </span><span class="script ">class </span><span class="script perso ">MaClasseInterne </span><span class="script ">{ </span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;…</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><br/><span class="script ">}</span></p>
+						<p><span class="script ">public</span><span class="script "> </span><span class="script ">class </span><span class="script perso ">MaClasse</span><span class="script perso "> </span><span class="script ">{</span><br/><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">public </span><span class="script ">class </span><span class="script perso ">MaClasseInterne</span><span class="script perso "> </span><span class="script ">{ </span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;…</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><br/><span class="script ">}</span></p>
 						<div class="note ">Il est préférable de mettre la classe interne interne en privée ou en protégée. Si la classe interne est publique, elle est accessible avec <span class="script perso ">MaClasse</span><span class="script ">.</span><span class="script perso ">MaClasseInterne</span>, mais dans ce cas, il est déconseillé d'utiliser une classe interne.</div>
 					</div>
 
@@ -634,20 +638,20 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 						<p>Une classe ne peut hériter que d'une seule classe.</p>
 						<h4 class="soustitre" id="4.4.1">Créer une classe héritée d'une autre classe</h4>
 						<div class="contenu">
-							<p><span class="script ">class </span><span class="script perso ">MaClasseHeritee </span><span class="script ">extends </span><span class="script perso ">MaClasse </span><span class="script ">{ </span><br/><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable4</span><span class="script ">: </span><span class="script perso ">type4</span><span class="script ">; </span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable5</span><span class="script ">: </span><span class="script perso ">type5</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;static </span><span class="script perso ">variableStatique6</span><span class="script ">: </span><span class="script perso ">type6</span><span class="script "> = </span><span class="script perso ">valeur6</span><span class="script ">;</span><br/><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">constructor</span><span class="script ">(</span><span class="script perso ">mVariable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">…, </span><span class="script perso ">mVariable4</span><span class="script ">: </span><span class="script perso ">type4</span><span class="script ">, </span><span class="script perso ">mVariable5</span><span class="script perso ">: type5</span><span class="script ">…) {</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super(</span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">…);</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable4</span><span class="script "> = </span><span class="script perso ">mVariable4</span><span class="script ">;</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable5</span><span class="script "> = </span><span class="script perso ">mVariable5</span><span class="script ">;</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="script ">}</span></p>
-							<div class="note ">La méthode <span class="script ">super()</span> permet d’appeler le constructeur de la classe initiale.</div>
+							<p><span class="script ">class</span><span class="script "> </span><span class="script perso ">MaClasseHeritee</span><span class="script perso "> </span><span class="script ">extends</span><span class="script "> </span><span class="script perso ">MaClasse</span><span class="script perso "> </span><span class="script ">{ </span><br/><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable4</span><span class="script ">: </span><span class="script perso ">type4</span><span class="script ">; </span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable5</span><span class="script ">: </span><span class="script perso ">type5</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">static</span><span class="script "> </span><span class="script perso ">variableStatique6</span><span class="script ">: </span><span class="script perso ">type6</span><span class="script "> = </span><span class="script perso ">valeur6</span><span class="script ">;</span><br/><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">constructor</span><span class="script ">(</span><span class="script perso ">mVariable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">…, </span><span class="script perso ">mVariable4</span><span class="script ">: </span><span class="script perso ">type4</span><span class="script ">, </span><span class="script perso ">mVariable5</span><span class="script perso ">: type5</span><span class="script ">…) {</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super(</span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">…);</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable4</span><span class="script "> = </span><span class="script perso ">mVariable4</span><span class="script ">;</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable5</span><span class="script "> = </span><span class="script perso ">mVariable5</span><span class="script ">;</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/><span class="script ">}</span></p>
+							<div class="note ">La méthode <span class="script ">super(</span><span class="script ">)</span> permet d’appeler le constructeur de la classe initiale.</div>
 						</div>
 
 						<h4 class="soustitre" id="4.4.2">Définir la classe dans un objet</h4>
 						<div class="contenu">
-							<p><span class="script perso ">monObjet</span><span class="script ">: </span><span class="script perso ">MaClasse</span><span class="script "> </span><span class="script ">= new </span><span class="script perso ">MaClasseHeritee</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…, </span><span class="script perso ">valeur4</span><span class="script ">, </span><span class="script perso ">valeur5</span><span class="script ">…);</span></p>
+							<p><span class="script perso ">monObjet</span><span class="script ">:</span><span class="script "> </span><span class="script perso ">MaClasse</span><span class="script "> </span><span class="script ">= new </span><span class="script perso ">MaClasseHeritee</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…, </span><span class="script perso ">valeur4</span><span class="script ">, </span><span class="script perso ">valeur5</span><span class="script ">…);</span></p>
 							<p>ou</p>
-							<p><span class="script perso ">monObjet</span><span class="script ">: </span><span class="script perso ">MaClasseHeritee</span><span class="script "> = new </span><span class="script perso ">MaClasseHeritee</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…, </span><span class="script perso ">valeur4</span><span class="script ">, </span><span class="script perso ">valeur5</span><span class="script ">…);</span></p>
+							<p><span class="script perso ">monObjet</span><span class="script ">:</span><span class="script "> </span><span class="script perso ">MaClasseHeritee</span><span class="script "> = new </span><span class="script perso ">MaClasseHeritee</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…, </span><span class="script perso ">valeur4</span><span class="script ">, </span><span class="script perso ">valeur5</span><span class="script ">…);</span></p>
 						</div>
 
 						<h4 class="soustitre" id="4.4.3">Ajouter un retour de la classe lors de la conversion en chaîne de caractères</h4>
 						<div class="contenu">
-							<p><span class="script ">toString()</span><span class="script ">: string</span><span class="script "> {</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;return (super.toString() + "</span><span class="script perso ">message</span><span class="script ">");</span><br/><span class="script ">}</span></p>
+							<p><span class="script ">toString</span><span class="script ">(</span><span class="script ">)</span><span class="script ">: string</span><span class="script "> {</span><br/><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;return (</span><span class="script ">super.toString</span><span class="script ">() + "</span><span class="script perso ">message</span><span class="script ">");</span><br/><span class="script ">}</span></p>
 						</div>
 
 					</div>
@@ -659,7 +663,7 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 						<p>Les classes dérivées doivent implémenter toutes les méthodes abstraites de la classe abstraite parente.</p>
 						<h4 class="soustitre" id="4.5.1">Créer une classe abstraite</h4>
 						<div class="contenu">
-							<p><span class="script ">public abstract class </span><span class="script perso ">MaClasseAbstraite</span><span class="script "> {</span><span class="script "><br/></span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">; </span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;static </span><span class="script perso ">variableStatique3</span><span class="script ">: </span><span class="script perso ">type3</span><span class="script "> = </span><span class="script perso ">valeur3</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">constructor</span><span class="script ">(</span><span class="script perso ">mVariable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">…) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable1</span><span class="script "> = </span><span class="script perso ">mVariable1</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable2</span><span class="script "> = </span><span class="script perso ">mVariable2</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="script "><br/>}</span></p>
+							<p><span class="script ">public</span><span class="script "> abstract class </span><span class="script perso ">MaClasseAbstraite</span><span class="script "> {</span><span class="script "><br/></span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">; </span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">static</span><span class="script "> </span><span class="script perso ">variableStatique3</span><span class="script ">: </span><span class="script perso ">type3</span><span class="script "> = </span><span class="script perso ">valeur3</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">constructor</span><span class="script ">(</span><span class="script perso ">mVariable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">…) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable1</span><span class="script "> = </span><span class="script perso ">mVariable1</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable2</span><span class="script "> = </span><span class="script perso ">mVariable2</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="script "><br/>}</span></p>
 						</div>
 
 						<h4 class="soustitre" id="4.5.2">Créer une méthode abstraite</h4>
@@ -670,7 +674,7 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 
 						<h4 class="soustitre" id="4.5.3">Créer une classe héritant d'une classe abstraite</h4>
 						<div class="contenu">
-							<p><span class="script ">public class </span><span class="script perso ">MaClasseHeritee</span><span class="script "> extends </span><span class="script perso ">MaClasseAbstraite</span><span class="script "> {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable</span><span class="script perso ">4</span><span class="script ">: </span><span class="script perso ">type</span><span class="script perso ">4</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable5</span><span class="script ">: </span><span class="script perso ">type5</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;static </span><span class="script perso ">variableStatique</span><span class="script perso ">6</span><span class="script ">: </span><span class="script perso ">type</span><span class="script perso ">6</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script perso ">6</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">constructor</span><span class="script ">(</span><span class="script perso ">mVariable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">…, </span><span class="script perso ">mVariable4</span><span class="script ">: </span><span class="script perso ">type4</span><span class="script ">, </span><span class="script perso ">mVariable5</span><span class="script ">: </span><span class="script perso ">type5</span><span class="script ">…) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super(</span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">…);</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable4</span><span class="script "> = </span><span class="script perso ">mVariable4</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable5</span><span class="script "> = </span><span class="script perso ">mVariable5</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="script "><br/>}</span></p>
+							<p><span class="script ">public</span><span class="script "> class </span><span class="script perso ">MaClasseHeritee</span><span class="script "> </span><span class="script ">extends</span><span class="script "> </span><span class="script perso ">MaClasseAbstraite</span><span class="script "> {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable</span><span class="script perso ">4</span><span class="script ">: </span><span class="script perso ">type</span><span class="script perso ">4</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable5</span><span class="script ">: </span><span class="script perso ">type5</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">static</span><span class="script "> </span><span class="script perso ">variableStatique</span><span class="script perso ">6</span><span class="script ">: </span><span class="script perso ">type</span><span class="script perso ">6</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script perso ">6</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">constructor</span><span class="script ">(</span><span class="script perso ">mVariable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">…, </span><span class="script perso ">mVariable4</span><span class="script ">: </span><span class="script perso ">type4</span><span class="script ">, </span><span class="script perso ">mVariable5</span><span class="script ">: </span><span class="script perso ">type5</span><span class="script ">…) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super(</span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">…);</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable4</span><span class="script "> = </span><span class="script perso ">mVariable4</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable5</span><span class="script "> = </span><span class="script perso ">mVariable5</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="script "><br/>}</span></p>
 						</div>
 
 						<h4 class="soustitre" id="4.5.4">Implémenter une méthode abstraite (dans la classe fille)</h4>
@@ -680,9 +684,9 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 
 						<h4 class="soustitre" id="4.5.5">Définir la classe dans un objet</h4>
 						<div class="contenu">
-							<p><span class="script perso ">monObjet</span><span class="script ">: </span><span class="script perso ">MaClasseAbstraite</span><span class="script "> = new </span><span class="script perso ">MaClasseHeritee</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…</span><span class="script ">, </span><span class="script perso ">valeur4</span><span class="script ">, </span><span class="script perso ">valeur5</span><span class="script ">…</span><span class="script ">);</span></p>
+							<p><span class="script perso ">monObjet</span><span class="script ">:</span><span class="script "> </span><span class="script perso ">MaClasseAbstraite</span><span class="script "> = new </span><span class="script perso ">MaClasseHeritee</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…</span><span class="script ">, </span><span class="script perso ">valeur4</span><span class="script ">, </span><span class="script perso ">valeur5</span><span class="script ">…</span><span class="script ">);</span></p>
 							<p>ou</p>
-							<p><span class="script perso ">monObjet</span><span class="script ">: </span><span class="script perso ">MaClasseHeritee</span><span class="script "> = new </span><span class="script perso ">MaClasseHeritee</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…</span><span class="script ">, </span><span class="script perso ">valeur4</span><span class="script ">, </span><span class="script perso ">valeur5</span><span class="script ">…</span><span class="script ">);</span></p>
+							<p><span class="script perso ">monObjet</span><span class="script ">:</span><span class="script "> </span><span class="script perso ">MaClasseHeritee</span><span class="script "> = new </span><span class="script perso ">MaClasseHeritee</span><span class="script ">(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…</span><span class="script ">, </span><span class="script perso ">valeur4</span><span class="script ">, </span><span class="script perso ">valeur5</span><span class="script ">…</span><span class="script ">);</span></p>
 							<div class="note ">Il est possible de définir directement la classe abstraite dans un objet, sans faire d’héritage. Voir les classes anonymes.</div>
 						</div>
 
@@ -693,14 +697,14 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 						<p>Les interfaces sont des classes abstraites qui permettent de définir un ensemble de méthodes sans les implémenter. Elles sont très utiles pour réduire la dépendance entre classes. Les classes peuvent implémenter plusieurs interfaces et doivent fournir une implémentation pour chacune des méthodes annoncées.</p>
 						<h4 class="soustitre" id="4.6.1">Créer une interface</h4>
 						<div class="contenu">
-							<p><span class="script ">public interface </span><span class="script perso ">MonInterface</span><span class="script "> {</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">variable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">variable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">;</span></p>
+							<p><span class="script ">public</span><span class="script "> interface </span><span class="script perso ">MonInterface</span><span class="script "> {</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">variable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">variable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">;</span></p>
 							<p><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;…</span></p>
 							<p><span class="script ">}</span></p>
 						</div>
 
 						<h4 class="soustitre" id="4.6.2">Définir une interface dans un objet</h4>
 						<div class="contenu">
-							<p><span class="script perso ">monObjet</span><span class="script ">: </span><span class="script perso ">MonInterface</span><span class="script "> = {</span><span class="script perso ">variable1</span><span class="script ">: </span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">variable2</span><span class="script ">: </span><span class="script perso ">valeur2</span><span class="script ">…};</span></p>
+							<p><span class="script perso ">monObjet</span><span class="script ">:</span><span class="script "> </span><span class="script perso ">MonInterface</span><span class="script "> = {</span><span class="script perso ">variable1</span><span class="script ">: </span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">variable2</span><span class="script ">: </span><span class="script perso ">valeur2</span><span class="script ">…};</span></p>
 						</div>
 
 						<h4 class="soustitre" id="4.6.3">Créer une méthode abstraite</h4>
@@ -712,7 +716,7 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 
 						<h4 class="soustitre" id="4.6.4">Créer une classe implémentant une ou plusieurs interfaces</h4>
 						<div class="contenu">
-							<p><span class="script ">public class </span><span class="script perso ">MaClasseHeritee</span><span class="script "> extends </span><span class="script perso ">MaClasseAbstraite</span><span class="script "> implements </span><span class="script perso ">MonInterface1</span><span class="script ">, </span><span class="script perso ">MonInterface2</span><span class="script ">… {</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable</span><span class="script perso ">4</span><span class="script ">: </span><span class="script perso ">type</span><span class="script perso ">4</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable5</span><span class="script ">: </span><span class="script perso ">type5</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;static </span><span class="script perso ">variableStatique</span><span class="script perso ">6</span><span class="script ">: </span><span class="script perso ">type</span><span class="script perso ">6</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script perso ">6</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">constructor</span><span class="script ">(</span><span class="script perso ">mVariable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">…, </span><span class="script perso ">mVariable4</span><span class="script ">: </span><span class="script perso ">type4</span><span class="script ">, </span><span class="script perso ">mVariable5</span><span class="script ">: </span><span class="script perso ">type5</span><span class="script ">…</span><span class="script ">) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super(</span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">…);</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable4</span><span class="script "> = </span><span class="script perso ">mVariable4</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable5</span><span class="script "> = </span><span class="script perso ">mVariable5</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="script "><br/>}</span></p>
+							<p><span class="script ">public</span><span class="script "> class </span><span class="script perso ">MaClasseHeritee</span><span class="script "> </span><span class="script ">extends</span><span class="script "> </span><span class="script perso ">MaClasseAbstraite</span><span class="script "> </span><span class="script ">implements</span><span class="script "> </span><span class="script perso ">MonInterface1</span><span class="script ">, </span><span class="script perso ">MonInterface2</span><span class="script ">… {</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable</span><span class="script perso ">4</span><span class="script ">: </span><span class="script perso ">type</span><span class="script perso ">4</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable5</span><span class="script ">: </span><span class="script perso ">type5</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">static</span><span class="script "> </span><span class="script perso ">variableStatique</span><span class="script perso ">6</span><span class="script ">: </span><span class="script perso ">type</span><span class="script perso ">6</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script perso ">6</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">constructor</span><span class="script ">(</span><span class="script perso ">mVariable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">…, </span><span class="script perso ">mVariable4</span><span class="script ">: </span><span class="script perso ">type4</span><span class="script ">, </span><span class="script perso ">mVariable5</span><span class="script ">: </span><span class="script perso ">type5</span><span class="script ">…</span><span class="script ">) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super(</span><span class="script perso ">mVariable1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">…);</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable4</span><span class="script "> = </span><span class="script perso ">mVariable4</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable5</span><span class="script "> = </span><span class="script perso ">mVariable5</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="script "><br/>}</span></p>
 						</div>
 
 						<h4 class="soustitre" id="4.6.5">Implémenter une méthode abstraite (dans la classe fille)</h4>
@@ -755,12 +759,12 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 						<p>Les collections sont des classes qui peuvent avoir un ou plusieurs types de données personnalisables.</p>
 						<h4 class="soustitre" id="4.8.1">Créer une collection</h4>
 						<div class="contenu">
-							<p><span class="script ">public class </span><span class="script perso ">MaCollection</span><span class="script ">&lt;</span><span class="script perso ">T1</span><span class="script ">, </span><span class="script perso ">T2</span><span class="script ">…&gt; {</span><span class="script "><br/></span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">variable1</span><span class="script ">:</span><span class="script perso "> </span><span class="script perso ">type1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">variable2</span><span class="script ">:</span><span class="script perso "> </span><span class="script perso ">type2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable3</span><span class="script ">:</span><span class="script perso "> </span><span class="script perso ">T1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable4</span><span class="script ">:</span><span class="script perso "> </span><span class="script perso ">T2</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;public static </span><span class="script perso ">type3</span><span class="script "> </span><span class="script perso ">variableStatique3</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">MaClasse</span><span class="script ">(</span><span class="script perso ">mVariable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">…, </span><span class="script perso ">mVariable3</span><span class="script ">: </span><span class="script perso ">T1</span><span class="script ">, </span><span class="script perso ">mVariable4</span><span class="script ">: </span><span class="script perso ">T2</span><span class="script ">…) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable1</span><span class="script "> = </span><span class="script perso ">mVariable1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable2</span><span class="script "> = </span><span class="script perso ">mVariable2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable3</span><span class="script "> = </span><span class="script perso ">mVariable3</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable4</span><span class="script "> = </span><span class="script perso ">mVariable4</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="script "><br/></span><span class="script ">}</span></p>
+							<p><span class="script ">public</span><span class="script "> class </span><span class="script perso ">MaCollection</span><span class="script ">&lt;</span><span class="script perso ">T1</span><span class="script ">, </span><span class="script perso ">T2</span><span class="script ">…&gt; {</span><span class="script "><br/></span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">type1</span><span class="script "> </span><span class="script perso ">variable1</span><span class="script ">:</span><span class="script perso "> </span><span class="script perso ">type1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">type2</span><span class="script "> </span><span class="script perso ">variable2</span><span class="script ">:</span><span class="script perso "> </span><span class="script perso ">type2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable3</span><span class="script ">:</span><span class="script perso "> </span><span class="script perso ">T1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">variable4</span><span class="script ">:</span><span class="script perso "> </span><span class="script perso ">T2</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;public </span><span class="script ">static</span><span class="script "> </span><span class="script perso ">type3</span><span class="script "> </span><span class="script perso ">variableStatique3</span><span class="script "> = </span><span class="script perso ">valeur</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">visibilite</span><span class="script "> </span><span class="script perso ">MaClasse</span><span class="script ">(</span><span class="script perso ">mVariable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">, </span><span class="script perso ">mVariable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">…, </span><span class="script perso ">mVariable3</span><span class="script ">: </span><span class="script perso ">T1</span><span class="script ">, </span><span class="script perso ">mVariable4</span><span class="script ">: </span><span class="script perso ">T2</span><span class="script ">…) {</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable1</span><span class="script "> = </span><span class="script perso ">mVariable1</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable2</span><span class="script "> = </span><span class="script perso ">mVariable2</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable3</span><span class="script "> = </span><span class="script perso ">mVariable3</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.</span><span class="script perso ">variable4</span><span class="script "> = </span><span class="script perso ">mVariable4</span><span class="script ">;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="script "><br/></span><span class="script ">}</span></p>
 						</div>
 
 						<h4 class="soustitre" id="4.8.2">Définir la collection dans un objet</h4>
 						<div class="contenu">
-							<p><span class="script perso ">MaCollection</span><span class="script ">&lt;</span><span class="script perso ">TypeObjet1</span><span class="script ">, </span><span class="script perso ">TypeObjet2</span><span class="script ">…&gt; </span><span class="script perso ">monObjet</span><span class="script "> = new </span><span class="script perso ">MaCollection</span><span class="script ">&lt;&gt;(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…, </span><span class="script perso ">valeur4</span><span class="script ">, </span><span class="script perso ">valeur5</span><span class="script ">…);</span></p>
+							<p><span class="script perso ">MaCollection</span><span class="script ">&lt;</span><span class="script perso ">TypeObjet1</span><span class="script ">, </span><span class="script perso ">TypeObjet2</span><span class="script ">…&gt; </span><span class="script perso ">monObjet</span><span class="script "> = new </span><span class="script perso ">MaCollection</span><span class="script ">&lt;</span><span class="script ">&gt;(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…, </span><span class="script perso ">valeur4</span><span class="script ">, </span><span class="script perso ">valeur5</span><span class="script ">…);</span></p>
 							
 						</div>
 
@@ -793,19 +797,19 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td><span class="script ">sessionStorage.setItem("</span><span class="script perso ">clé</span><span class="script ">", "</span><span class="script perso ">valeur</span><span class="script ">");</span></td>
+								<td><span class="script ">sessionStorage.setItem</span><span class="script ">("</span><span class="script perso ">clé</span><span class="script ">", "</span><span class="script perso ">valeur</span><span class="script ">"</span><span class="script ">);</span></td>
 								<td>Créer une variable avec une valeur affectée</td>
 							</tr>
 							<tr>
-								<td><span class="script perso ">variable</span><span class="script "> = sessionStorage.getItem("</span><span class="script perso ">clé</span><span class="script ">");</span></td>
+								<td><span class="script perso ">variable</span><span class="script "> = </span><span class="script ">sessionStorage.getItem</span><span class="script ">("</span><span class="script perso ">clé</span><span class="script ">");</span></td>
 								<td>Récupérer le contenu d’une variable</td>
 							</tr>
 							<tr>
-								<td><span class="script ">sessionStorage.removeItem("</span><span class="script perso ">clé</span><span class="script ">");</span></td>
+								<td><span class="script ">sessionStorage.removeItem</span><span class="script ">("</span><span class="script perso ">clé</span><span class="script ">"</span><span class="script ">);</span></td>
 								<td>Supprimer une variable</td>
 							</tr>
 							<tr>
-								<td><span class="script ">sessionStorage.clear();</span></td>
+								<td><span class="script ">sessionStorage.clear</span><span class="script ">(</span><span class="script ">);</span></td>
 								<td>Supprimer toutes les variables</td>
 							</tr>
 						</table>
@@ -824,19 +828,19 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 								<td>Récupérer toutes les variables stockées dans l’ordinateur localement</td>
 							</tr>
 							<tr>
-								<td><span class="script ">localStorage.setItem("</span><span class="script perso ">clé</span><span class="script ">", "</span><span class="script perso ">valeur</span><span class="script ">");</span></td>
+								<td><span class="script ">localStorage.setItem</span><span class="script ">("</span><span class="script perso ">clé</span><span class="script ">", "</span><span class="script perso ">valeur</span><span class="script ">"</span><span class="script ">);</span></td>
 								<td>Créer une variable avec une valeur affectée</td>
 							</tr>
 							<tr>
-								<td><span class="script perso ">variable</span><span class="script "> = localStorage.getItem("</span><span class="script perso ">clé</span><span class="script ">");</span></td>
+								<td><span class="script perso ">variable</span><span class="script "> = </span><span class="script ">localStorage.getItem</span><span class="script ">("</span><span class="script perso ">clé</span><span class="script ">");</span></td>
 								<td>Récupérer le contenu d’une variable</td>
 							</tr>
 							<tr>
-								<td><span class="script ">localStorage.removeItem("</span><span class="script perso ">clé</span><span class="script ">");</span></td>
+								<td><span class="script ">localStorage.removeItem</span><span class="script ">("</span><span class="script perso ">clé</span><span class="script ">"</span><span class="script ">);</span></td>
 								<td>Supprimer une variable</td>
 							</tr>
 							<tr>
-								<td><span class="script ">localStorage.clear();</span></td>
+								<td><span class="script ">localStorage.clear</span><span class="script ">(</span><span class="script ">);</span></td>
 								<td>Supprimer toutes les variables</td>
 							</tr>
 						</table>
@@ -855,7 +859,7 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td><span class="script ">console.log("</span><span class="script perso ">texte</span><span class="script ">");</span></td>
+								<td><span class="script ">console.log("</span><span class="script perso ">texte</span><span class="script ">"</span><span class="script ">);</span></td>
 								<td>Affiche un texte dans la console avec un retour à la ligne</td>
 							</tr>
 							<tr>
@@ -863,7 +867,7 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 								<td>Affiche une variable dans la console</td>
 							</tr>
 							<tr>
-								<td><span class="script ">alert(</span><span class="script perso ">message</span><span class="script ">);</span></td>
+								<td><span class="script ">alert</span><span class="script ">(</span><span class="script perso ">message</span><span class="script ">);</span></td>
 								<td>Affiche un message dans une boîte de dialogue</td>
 							</tr>
 							<tr>
@@ -871,7 +875,7 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 								<td>Demande une valeur dans une boîte de dialogue avec le retour dans une variable</td>
 							</tr>
 							<tr>
-								<td><span class="script perso ">variable</span><span class="script "> = confirm("Voulez-vous confirmer ?");</span></td>
+								<td><span class="script perso ">variable</span><span class="script "> = </span><span class="script ">confirm</span><span class="script ">("Voulez-vous confirmer ?");</span></td>
 								<td>Demande une confirmation dans une boîte de dialogue, renvoyée dans la variable sous forme d'un booléen</td>
 							</tr>
 						</table>
@@ -885,11 +889,11 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td><span class="script ">Math.random();</span></td>
+								<td><span class="script ">Math.random</span><span class="script ">(</span><span class="script ">);</span></td>
 								<td>Créer un nombre aléatoire entre 0 compris et 1 exclu</td>
 							</tr>
 							<tr>
-								<td><span class="script ">Math.floor(Math.random() * </span><span class="script perso ">n</span><span class="script ">);</span></td>
+								<td><span class="script ">Math.floor</span><span class="script ">(</span><span class="script ">Math.random</span><span class="script ">() * </span><span class="script perso ">n</span><span class="script ">);</span></td>
 								<td>Créer un nombre entier aléatoire entre 0 et <span class="perso ">n</span> compris (si fonction importé ci-dessus)</td>
 							</tr>
 						</table>
@@ -903,11 +907,11 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td><span class="script perso ">monObjet</span><span class="script "> = JSON.parse(</span><span class="script perso ">objJSON</span><span class="script ">);</span></td>
+								<td><span class="script perso ">monObjet</span><span class="script "> = </span><span class="script ">JSON.parse</span><span class="script ">(</span><span class="script perso ">objJSON</span><span class="script ">);</span></td>
 								<td>Convertir une chaîne JSON en objet</td>
 							</tr>
 							<tr>
-								<td><span class="script perso ">objJSON</span><span class="script "> = JSON.stringify(</span><span class="script perso ">monObjet</span><span class="script ">);</span></td>
+								<td><span class="script perso ">objJSON</span><span class="script "> = </span><span class="script ">JSON.stringify</span><span class="script ">(</span><span class="script perso ">monObjet</span><span class="script ">);</span></td>
 								<td>Convertir un objet en chaîne JSON</td>
 							</tr>
 						</table>
@@ -921,15 +925,15 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 								<th><span style="font-weight: bold; ">Description</span></th>
 							</tr>
 							<tr>
-								<td><span class="script ">setTimeout(</span><span class="script perso ">maFonction</span><span class="script ">, </span><span class="script perso ">temps</span><span class="script ">);</span></td>
+								<td><span class="script ">setTimeout</span><span class="script ">(</span><span class="script perso ">maFonction</span><span class="script ">, </span><span class="script perso ">temps</span><span class="script ">);</span></td>
 								<td>Exécuter en asynchrone une fonction après un certain nombre de millisecondes paramétré</td>
 							</tr>
 							<tr>
-								<td><span class="script ">let </span><span class="script perso ">idInterval</span><span class="script "> = </span><span class="script ">setInterval(</span><span class="script perso ">maFonction</span><span class="script ">, </span><span class="script perso ">temps</span><span class="script ">);</span></td>
+								<td><span class="script ">let</span><span class="script "> </span><span class="script perso ">idInterval</span><span class="script "> = </span><span class="script ">setInterval</span><span class="script ">(</span><span class="script perso ">maFonction</span><span class="script ">, </span><span class="script perso ">temps</span><span class="script ">);</span></td>
 								<td>Exécuter en asynchrone une fonction de manière répétitive</td>
 							</tr>
 							<tr>
-								<td><span class="script ">clearInterval(</span><span class="script perso ">idInterval</span><span class="script ">);</span></td>
+								<td><span class="script ">clearInterval</span><span class="script ">(</span><span class="script perso ">idInterval</span><span class="script ">);</span></td>
 								<td>Arrêter la répétition de la fonction</td>
 							</tr>
 						</table>
@@ -942,18 +946,18 @@ AAAAgP8X/wAgtlS+S1NocAAAAABJRU5ErkJggg=="/> Le mémento JS est disponible en lig
 					<p>Les importations et exportations ne peuvent être effectuées uniquement si l’appel du script dans le HTML soit sous la forme : <span class="script ">&lt;script type="module" src="</span><span class="script perso ">script</span><span class="script ">.js</span><span class="script ">"&gt;&lt;/script&gt;</span></p>
 					<h3 class="soustitre" id="7.1">Exporter une classe (fonctionne aussi avec les fonctions et autres)</h3>
 					<div class="contenu">
-						<p><span class="script ">export { </span><span class="script perso ">MaClasse1</span><span class="script ">, </span><span class="script perso ">MaClasse2</span><span class="script ">… };</span></p>
+						<p><span class="script ">export</span><span class="script "> { </span><span class="script perso ">MaClasse1</span><span class="script ">, </span><span class="script perso ">MaClasse2</span><span class="script ">… };</span></p>
 						<p><span class="script ">ou</span></p>
-						<p><span class="script ">export default </span><span class="script perso ">MaClasse1</span><span class="script ">;</span></p>
+						<p><span class="script ">export</span><span class="script "> default </span><span class="script perso ">MaClasse1</span><span class="script ">;</span></p>
 						
 						<div class="note ">Il est possible de mettre le mot-clé export devant class pour exporter une classe.</div>
 					</div>
 
 					<h3 class="soustitre" id="7.2">Importer une classe exportée dans un autre fichier</h3>
 					<div class="contenu">
-						<p><span class="script ">import { </span><span class="script perso ">MaClasse1</span><span class="script ">, </span><span class="script perso ">MaClasse2</span><span class="script ">… } from "./</span><span class="script perso ">fichier</span><span class="script ">";</span></p>
-						<p><span class="script ">ou (si c’est une exportation par défaut) :</span></p>
-						<p><span class="script ">import </span><span class="script perso ">MaClasse1</span><span class="script "> from </span><span class="script ">"./</span><span class="script perso ">fichier</span><span class="script ">";</span></p>
+						<p><span class="script ">import</span><span class="script "> { </span><span class="script perso ">MaClasse1</span><span class="script ">, </span><span class="script perso ">MaClasse2</span><span class="script ">… } </span><span class="script ">from</span><span class="script "> "./</span><span class="script perso ">fichier</span><span class="script ">";</span></p>
+						<p><span class="script ">ou</span><span class="script "> (si c’est une exportation par défaut) :</span></p>
+						<p><span class="script ">import</span><span class="script "> </span><span class="script perso ">MaClasse1</span><span class="script "> </span><span class="script ">from</span><span class="script "> </span><span class="script ">"./</span><span class="script perso ">fichier</span><span class="script ">";</span></p>
 						<div class="note ">Si c’est une exportation par défaut, il est possible de renommer l’objet.</div>
 						
 					</div>
