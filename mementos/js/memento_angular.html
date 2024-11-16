@@ -1,0 +1,975 @@
+<!DOCTYPE html> <!-- Loric Informatique (page générée automatiquement à partir d'un document Word XML) -->
+<html lang="fr-FR">
+	<head>
+		<title>Loric Informatique - Angular</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="icon" href="../../images/icone.png">
+		<link rel="stylesheet" href ="../../styles/style.css">
+	</head>
+	<body>
+		<style>
+			html {
+				--couleur1: #dd0031;
+				--couleur2: #c3002f;
+			}
+		</style>
+		<header>
+			<script src="../../scripts/header.js"></script>
+		</header>
+		<main class="pageMemento">
+			<section class="presentation">
+				<div class="alignementVertical">
+					<div>
+						<h1>Mémento Angular</h1>
+						<p class="version">Version 0.1 (sortie de la version finale le 10/12/2024)</p>
+						<p>Angular est un Framework TypeScript open source développé et maintenu par l'entreprise Google. Il est orienté Composants et permet de faire des sites webs de type Single Page Application, Il intègre la possibilité d'utiliser un routeur, un gestionnaire d'états centralisé, des tests... sans avoir à gérer des librairies supplémentaires.</p>
+						<a href="Loric Informatique - Angular.pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
+						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de choisir le format A4, de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
+					</div>
+					<img src="icone_angular.png" class="logoMemento"/>
+				</div>
+			</section>
+			<section class="sommaire">
+				<h2>Table des matières :</h2>
+				<div class="tableDesMatieres">
+					<!-- Table des matières remplie par le JavaScript -->
+				</div>
+			</section>
+			<article>
+				<h2 class="soustitre" id="1">Prise en main</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="1.1">Outils nécessaires</h3>
+					<div class="contenu">
+						<ul>
+							<li>Un logiciel de codage (ex : Visual Studio Code avec l'extension Angular Language Service et l'option Auto Save activée)</li>
+							<li>Un navigateur internet avec extension Angular DevTools</li>
+							<li>NodeJS (LTS suffit)</li>
+							<li>Angular CLI (version 18 ou supérieure)</li>
+							<li>Connaissances en HTML, CSS et TypeScript</li>
+						</ul>
+						<div class="note "><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAMAAADWg4HyAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAABFUExURQAAAOZGIOJLI+NMJeRLJONLIuVMJeNMJgAAAORNJuRcOuVmRuVnR+VqSuZR
+JupYJ+vr6+x2Tu5gKPFlKfN+S/n5+f///8Z+zzoAAAAIdFJOUwAoLG+WnLj+OoIEzAAAAAlwSFlz
+AAAh1QAAIdUBBJy0nQAAANdJREFUSEvN0AkOgjAQQFFcwX33/kd1OvOnJViqJDbxJ8S28yBgE+s6
+vbpQ2jAcFMdm+WE4iLHN2fzGpssXdsd77nTIYsxWaVMOZXE2FspqOczXoohTOt16DR77R/bsPZ7e
+NCvnGK+61UX/22SL8ZRMsdvv7FyN2P1OutxJ7QwTc6vFb1OLSFW1nn7bdHssvcPAyg6RCqSqDTjY
+QEv2oDj9Z3JLzq4U5+wS0UstGBveOvNYtxI2wI9W0v/BqmFtw7yfDSyxV5ZZK62ZphZM8oFCnJTL
+uqZ5AYC1NFUias7yAAAAAElFTkSuQmCC"/> Le mémento HTML est disponible en ligne sur le site : <a href="https://loricaudin.github.io/loric-informatique/mementos/html/memento_html.html" target="_blank">https://loricaudin.github.io/loric-informatique/mementos/html/memento_html.html</a> </div>
+						<div class="note "><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAMAAADWg4HyAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAACTUExURQAAABpN5hxH4yFG4iVK4wAAACNK3yNK4CNM4SJM4yRK4SVL4wAAACJg7yRL
+4iRL4yVL4yVM4yVM5CVN4yZM4yZN5CZc6yZj8Cde7Sdk7ydk8Chh7ihi7ihj8Chk8Cll8StR4z5g
+5EN170N38pCw97K859Le+93m++nq6urp6urq6uvr6/v8/v39/f39/v7+/v///zI2TLQAAAAMdFJO
+UwAKEj51d6bR2O38/CDhHf8AAAAJcEhZcwAAIdUAACHVAQSctJ0AAAETSURBVEhLxdTbUsIwFIXh
+KigIKiej4qEFURQV9P2fzrV3VkzKxEDGjv4XnZB8U5pmoKh1KtnrkQ4Tqdrb2mvzVoBeG7WN109H
+ZTPJRlS2EWfjnVDZWpxld1WQMUQuIvYXtozbN9fm01VV1xn2PMNinsaVbb+zewPdZNhHsRMaV/2Q
+1ZawN2J7NK5jIeM5e1igZ31cWBKf3o9b83v7B+vSvVl7n2GHqWfYsvhE4RPyK7tO2BfYVxwhbPkB
+u4xbPeQnuTFay/ejK7FDCl9X7IDWvV88iTGHFEFizaxmz9RyPUyttFL7LtvbadEtIdpp9Z1p032t
+/QFwPUznGewlh1GLOlz1tbkS74Jq+1/3hw4AOQwqii9WrGuh7yOHkgAAAABJRU5ErkJggg=="/> Le mémento CSS est disponible en ligne sur le site : <a href="https://loricaudin.github.io/loric-informatique/langages/css/langage_css.html" target="_blank">https://loricaudin.github.io/loric-informatique/mementos/css/memento_css.html</a> </div>
+						<div class="note "><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAMAAADWg4HyAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAhUExURS15x////9bk873T7LfQ6vn7/S96xzh/yTqByjiAyQAAACd5Eo8AAAALdFJO
+U/////////////8ASk8B8gAAAAlwSFlzAAAh1QAAIdUBBJy0nQAAAItJREFUSEvtkDEOxCAQA7mc
+lP8/OWC8kU2WRHdNGqbBa09FWSwWb/Bx0G16CKyD2nwZK105YRuY+ujG20JXnJgjR+RrTNyU0b2T
+dUe+kXVGrvC8YCOOBu+BYcJZ4elcFhS5nAxJ1cmGVu3MysxlNNRl0MrQAZmwMnRA7rBxdEEGLB7Y
+sw+Y8IP6J6Uc5HoBNhGUNBMAAAAASUVORK5CYII="/> Le mémento TS est disponible en ligne sur le site : <a href="https://loricaudin.github.io/loric-informatique/mementos/js/memento_ts.html" target="_blank">https://loricaudin.github.io/loric-informatique/mementos/js/memento_ts.html</a> </div>
+					</div>
+
+					<h3 class="soustitre" id="1.2">Installer Angular</h3>
+					<div class="contenu">
+						<p>Dans le dossier où se trouvera le projet Angular, entrer la commande : <span class="script ">npm install -g @angular/cli@18.2.2</span></p>
+						<p>Puis dans le dossier du projet :</p>
+						<p><span class="script ">npm install</span></p>
+						<div class="note ">Si les prochaines commandes ne fonctionnent pas ou sont introuvables, essayez d’ajouter « <span class="script ">npx</span> » devant chaque commande « <span class="script ">ng</span> ».</div>
+					</div>
+
+					<h3 class="soustitre" id="1.3">Créer un projet Angular</h3>
+					<div class="contenu">
+						<p>Commande : <span class="script ">ng new </span><span class="script perso ">monPremierProjet</span><span class="script "> --skip-tests --defaults</span></p>
+					</div>
+
+					<h3 class="soustitre" id="1.4">Démarrer le serveur Angular</h3>
+					<div class="contenu">
+						<p>Commande : <span class="script ">ng serve</span></p>
+						
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="2">Bases du Framework</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="2.1">Les composants</h3>
+					<div class="contenu">
+						<p>Commande de création d’un composant :</p>
+						<p><span class="script ">npx ng generate component </span><span class="script ">components/</span><span class="script perso ">MonComposant</span></p>
+						<p>ou</p>
+						<p><span class="script ">npx ng g</span><span class="script "> </span><span class="script ">c </span><span class="script perso ">MonComposant</span></p>
+						<h4 class="soustitre" id="2.1.1">Syntaxe</h4>
+						<div class="contenu">
+							<p><span class="script ">import {Component} from '@angular/core';</span><span class="script "><br/>import {RouterOutlet} from '@angular/router';</span><span class="script "><br/></span><span class="script "><br/>@Component({</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;selector: '</span><span class="script ">app-</span><span class="script perso ">mon-composant</span><span class="script ">',</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;standalone: true,</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;imports: [RouterOutlet, …],</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;templateUrl: './app.component.html',</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;styleUrl: './app.component.css'</span><span class="script "><br/>})</span><span class="script "><br/>export class </span><span class="script perso ">MonComposant</span><span class="script "> {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;…</span><span class="script "><br/>}</span></p>
+						</div>
+
+						<h4 class="soustitre" id="2.1.2">Envoi des données du composant parent vers le composant fils</h4>
+						<div class="contenu">
+							<h5 class="soustitre" id="2.1.2.1">Récupérer des valeurs provenant du composant parent (côté script)</h5>
+							<div class="contenu">
+								<p>Dans la classe du composant fils, écrire les variables sous la forme :</p>
+								<p><span class="script ">@Input() </span><span class="script perso ">attribut</span><span class="script ">: </span><span class="script perso ">type</span><span class="script "> = </span><span class="script perso ">valeurParDefaut</span><span class="script ">;</span></p>
+								<p>ou (pour forcer le passage d’une valeur dans l’attribut) :</p>
+								<p><span class="script ">@Input(</span><span class="script ">{required: true}</span><span class="script ">) </span><span class="script perso ">attribut</span><span class="script ">!: </span><span class="script perso ">type</span><span class="script ">;</span></p>
+							</div>
+
+							<h5 class="soustitre" id="2.1.2.2">Écrire des valeurs dans le composant fils (côté HTML)</h5>
+							<div class="contenu">
+								<p><span class="script ">&lt;app-</span><span class="script perso ">composant-fils</span><span class="script "> </span><span class="script perso ">attribut</span><span class="script ">="</span><span class="script perso ">valeur</span><span class="script ">"/&gt;</span></p>
+							</div>
+
+						</div>
+
+						<h4 class="soustitre" id="2.1.3">Envoi des données du composant fils vers le composant parent</h4>
+						<div class="contenu">
+							<h5 class="soustitre" id="2.1.3.1">Émettre un événement au composant parent (côté script)</h5>
+							<div class="contenu">
+								<p>Dans la classe du composant fils, écrire les variables sous la forme :</p>
+								<p><span class="script ">@Output() </span><span class="script perso ">monEvenement</span><span class="script "> = new EventEmitter&lt;void&gt;();</span></p>
+								<p>ou</p>
+								<p><span class="script ">@Output() </span><span class="script perso ">monEvenement</span><span class="script "> = new EventEmitter&lt;</span><span class="script perso ">type</span><span class="script ">&gt;();</span></p>
+								
+								<p>Pour émettre l’événement :</p>
+								<p><span class="script ">this.</span><span class="script perso ">monEvenement</span><span class="script ">.emit()</span></p>
+								<p>ou</p>
+								<p><span class="script ">this.</span><span class="script perso ">monEvenement</span><span class="script ">.emit(</span><span class="script perso ">valeur</span><span class="script ">);</span></p>
+								
+							</div>
+
+							<h5 class="soustitre" id="2.1.3.2">Écouter un événement provenant du composant fils (côté HTML)</h5>
+							<div class="contenu">
+								<p><span class="script ">&lt;app</span><span class="script ">-</span><span class="script perso ">composant-fils</span><span class="script "> </span><span class="script ">(</span><span class="script perso ">monEvenement</span><span class="script ">)="</span><span class="script ">on</span><span class="script perso ">MaFonction</span><span class="script ">()" /&gt;</span></p>
+								<p>ou</p>
+								<p><span class="script ">&lt;app</span><span class="script ">-</span><span class="script perso ">composant-fils</span><span class="script "> </span><span class="script ">(</span><span class="script perso ">monEvenement</span><span class="script ">)="on</span><span class="script perso ">MaFonction</span><span class="script ">($event)" /&gt;</span></p>
+								
+							</div>
+
+						</div>
+
+					</div>
+
+					<h3 class="soustitre" id="2.2">Les classes</h3>
+					<div class="contenu">
+						<p>Commande de création d’une classe :</p>
+						<p><span class="script ">npx ng generate </span><span class="script ">class</span><span class="script "> </span><span class="script ">class</span><span class="script ">/</span><span class="script perso ">MaClasse</span></p>
+					</div>
+
+					<h3 class="soustitre" id="2.3">Les interfaces</h3>
+					<div class="contenu">
+						<p>Commande de création d’une interface :</p>
+						<p><span class="script ">npx ng generate interface models/</span><span class="script perso ">MonModele</span></p>
+						<h4 class="soustitre" id="2.3.1">Interfaces prédéfinis pour les composants</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th><span style="font-weight: bold; ">Interface</span></th>
+									<th><span style="font-weight: bold; ">Exécution</span></th>
+									<th><span style="font-weight: bold; ">Méthode à implémenter</span></th>
+								</tr>
+								<tr>
+									<td><span class="script ">OnInit</span></td>
+									<td>À l’initialisation du composant</td>
+									<td><span class="script ">ngOnInit</span></td>
+								</tr>
+								<tr>
+									<td><span class="script ">On</span><span class="script ">Destroy</span></td>
+									<td>À la destruction du composant</td>
+									<td><span class="script ">ngOnDestroy</span></td>
+								</tr>
+								<tr>
+									<td><span class="script ">OnChanges</span></td>
+									<td>Au changement d’une valeur de l’input</td>
+									<td><span class="script ">ngOnChanges</span></td>
+								</tr>
+								<tr>
+									<td><span class="script ">AfterViewInit</span></td>
+									<td>À fin de l’initialisation de la vue</td>
+									<td><span class="script ">ng</span><span class="script ">AfterViewInit</span></td>
+								</tr>
+							</table>
+						</div>
+
+					</div>
+
+					<h3 class="soustitre" id="2.4">Les énumérations</h3>
+					<div class="contenu">
+						<p>Commande de création d’une énumération :</p>
+						<p><span class="script ">npx ng generate </span><span class="script ">enum</span><span class="script "> </span><span class="script ">enum</span><span class="script ">/</span><span class="script perso ">Mon</span><span class="script perso ">Enumeration</span></p>
+						
+					</div>
+
+					<h3 class="soustitre" id="2.5">Les services</h3>
+					<div class="contenu">
+						<p>Un service est une classe qui permet de fournir des données aux composants et de faire des interactions avec des APIs.</p>
+						<p>Toutes les méthodes publiques de cette classe sont utilisables partout dans l’application.</p>
+						<p>Commande de création d’un service (pas besoin de mettre Service à la fin du nom) :</p>
+						<p><span class="script ">npx ng generate </span><span class="script ">service</span><span class="script "> </span><span class="script ">services/</span><span class="script perso ">mon</span><span class="script perso ">Service</span></p>
+						<p>ou</p>
+						<p><span class="script ">npx ng g s services/</span><span class="script perso ">monService</span></p>
+						<h4 class="soustitre" id="2.5.1">Syntaxe</h4>
+						<div class="contenu">
+							<p><span class="script ">import {Injectable} from '@angular/core';</span><span class="script "> </span><span class="script "><br/></span><span class="script "><br/>@Injectable({</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;providedIn: 'root'</span><span class="script "><br/>})</span><span class="script "><br/>export class </span><span class="script perso ">Mon</span><span class="script perso ">Service</span><span class="script "> {</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;constructor(</span><span class="script ">private </span><span class="script perso ">variable1</span><span class="script ">: </span><span class="script perso ">type1</span><span class="script ">, private </span><span class="script perso ">variable2</span><span class="script ">: </span><span class="script perso ">type2</span><span class="script ">…</span><span class="script ">) </span><span class="script ">{</span><span class="script "><br/></span><span class="script "> </span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">   </span><span class="script ">…</span><span class="script "><br/></span><span class="script "> </span><span class="script ">  </span><span class="script "> }</span><span class="script "><br/></span><span class="script ">}</span></p>
+						</div>
+
+						<h4 class="soustitre" id="2.5.2">Paramètre du service (dans @Injectable)</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th><span style="font-weight: bold; ">Paramètre</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+								</tr>
+								<tr>
+									<td><span class="script ">providedIn: 'root'</span></td>
+									<td>Ajouter le service au registre des composants injectables n’importe où dans l’application (le service démarrera automatiquement quand il est appelé, s’il n’est pas renseigné, il faudra ajouter la classe dans le tableau des providers dans app.config.ts)</td>
+								</tr>
+							</table>
+						</div>
+
+						<h4 class="soustitre" id="2.5.3">Les observers et observables</h4>
+						<div class="contenu">
+							<p>Importations : <span class="script ">import {Observable</span><span class="script ">, Subscription</span><span class="script ">} from 'rxjs';</span></p>
+							<h5 class="soustitre" id="2.5.3.1">Les observables</h5>
+							<div class="contenu">
+								<h6 class="soustitre" id="2.5.3.1.1">Créer un observable</h6>
+								<div class="contenu">
+									<p><span class="script perso ">monObservable</span><span class="script ">$ = </span><span class="script ">new Observable&lt;string&gt;((observer) =&gt; {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/>});</span></p>
+									<div class="note ">Par convention, le nom de l’observable doit toujours se terminer par $</div>
+								</div>
+
+								<h6 class="soustitre" id="2.5.3.1.2">Émettre une notification aux observers abonnés</h6>
+								<div class="contenu">
+									<table>
+										<tr>
+											<th><span style="font-weight: bold; ">Instruction</span></th>
+											<th><span style="font-weight: bold; ">Description</span></th>
+										</tr>
+										<tr>
+											<td><span class="script ">observer.next(</span><span class="script perso ">maChaine</span><span class="script ">);</span></td>
+											<td>Émettre une nouvelle valeur (peut se répéter plusieurs fois)</td>
+										</tr>
+										<tr>
+											<td><span class="script ">observer.error(</span><span class="script perso ">monErreur</span><span class="script ">);</span></td>
+											<td>Émettre une erreur</td>
+										</tr>
+										<tr>
+											<td><span class="script ">observer.complete();</span></td>
+											<td>Arrêter l’émission de nouvelles valeurs</td>
+										</tr>
+									</table>
+									
+									<div class="note ">Les instructions peuvent s’enchaîner et même se répéter plusieurs fois.</div>
+								</div>
+
+							</div>
+
+							<h5 class="soustitre" id="2.5.3.2">Les observers</h5>
+							<div class="contenu">
+								<h6 class="soustitre" id="2.5.3.2.1">Créer un observer</h6>
+								<div class="contenu">
+									<p><span class="script perso ">monObserver</span><span class="script "> = {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;next: (value: string)</span><span class="script "> =&gt;</span><span class="script "> {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;},</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;error: (error: Error)</span><span class="script "> =&gt;</span><span class="script "> {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;},</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;complete: () </span><span class="script ">=&gt; </span><span class="script ">{</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="script "><br/>};</span></p>
+									<div class="note ">Les événements <span class="script ">error</span> et <span class="script ">complete</span> sont facultatifs. Si seul le next est utilisé, il est possible de simplifier l’écriture de l’observer avec :<br/><span class="script perso ">monObserver</span><span class="script "> =</span><span class="script "> (value: string) =&gt; </span><span class="script perso ">instructions</span><span class="script ">;</span></div>
+								</div>
+
+								<h6 class="soustitre" id="2.5.3.2.2">Abonner un observer à un observable</h6>
+								<div class="contenu">
+									<p><span class="script perso ">maSouscription</span><span class="script ">: Subscription = </span><span class="script ">this.</span><span class="script perso ">monObservable</span><span class="script ">$</span><span class="script ">.subscribe(</span><span class="script perso ">monObserver</span><span class="script ">);</span></p>
+									<div class="note ">Il est conseillé de faire cette instruction dans une méthode <span class="script ">ngOnInit</span> afin de l’exécuter à l’initialisation du composant (nécessite d’implémenter <span class="script ">OnInit</span>)</div>
+								</div>
+
+								<h6 class="soustitre" id="2.5.3.2.3">Désabonner un observer d’un observable</h6>
+								<div class="contenu">
+									<p><span class="script perso ">maSouscription</span><span class="script ">.unsubscribe();</span></p>
+									<div class="note ">Il est conseillé de faire cette instruction dans une méthode <span class="script ">ngOn</span><span class="script ">Destroy</span> afin de l’exécuter à la suppression du composant (nécessite d’implémenter <span class="script ">On</span><span class="script ">Destroy</span>)</div>
+								</div>
+
+							</div>
+
+							<h5 class="soustitre" id="2.5.3.3">Opérateurs de RxJS</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Observable</span></th>
+										<th><span style="font-weight: bold; ">Description</span></th>
+									</tr>
+									<tr>
+										<td><span class="script ">interval(</span><span class="script perso ">n</span><span class="script ">);</span></td>
+										<td>Émettre une nouvelle valeur incrémentée tous les <span class="perso ">n</span> millisecondes (renvoie une valeur entière incrémentée à chaque appel de <span class="script ">next</span>)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">interval(</span><span class="script perso ">n</span><span class="script ">).pipe(map(x) =&gt; x * 10), filter(x) =&gt; x &lt; 100);</span></td>
+										<td>Émettre une nouvelle valeur incrémentée de 10 tous les <span class="perso ">n</span> millisecondes, tant que <span class="perso ">x</span> est inférieure à 100 (renvoie une valeur entière incrémentée à chaque appel de <span class="script ">next</span>)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">of(</span><span class="script perso ">valeur1</span><span class="script ">, </span><span class="script perso ">valeur2</span><span class="script ">…).</span><span class="script ">pipe(map(x) =&gt; x * 10);</span></td>
+										<td>Émettre une liste de valeurs et les transformer</td>
+									</tr>
+									<tr>
+										<td><span class="script perso ">monObservable</span><span class="script ">$.pipe(</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;takeUntilDestroyed()</span><span class="script "><br/>);</span></td>
+										<td>Permettre le désabonnement automatique quand le composant est détruit (l’abonnement pourra donc se faire dans le constructeur)</td>
+									</tr>
+									<tr>
+										<td><span class="script perso ">monObservable</span><span class="script ">$.pipe(</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;takeUntilDestroyed(this.</span><span class="script perso ">destroyRef</span><span class="script ">)</span><span class="script "><br/>);</span></td>
+										<td>Permettre le désabonnement automatique quand le composant est détruit (version avec abonnement dans <span class="script ">ngOnInit</span>, mais nécessitant d’écrire dans la classe du composant : <span class="script perso ">destroyRef</span><span class="script "> = inject(</span><span class="script ">DestroyRef</span><span class="script ">)</span>)</td>
+									</tr>
+									<tr>
+										<td><span class="script perso ">monObservable</span><span class="script ">$.pipe(</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;tap(console.log(</span><span class="script perso ">valeur</span><span class="script ">))</span><span class="script "><br/>);</span></td>
+										<td>Exécuter des instructions (ici affichage dans la console) en plus d’émettre la valeur</td>
+									</tr>
+								</table>
+							</div>
+
+						</div>
+
+						<h4 class="soustitre" id="2.5.4">Le service de connexion à une API</h4>
+						<div class="contenu">
+							<h5 class="soustitre" id="2.5.4.1">Enregistrer un provider au démarrage de l’application (pour utiliser le service HttpClient)</h5>
+							<div class="contenu">
+								<p>Dans le fichier app.config.ts, ajouter dans la liste des providers : <span class="script ">provideHttpClient()</span></p>
+								<p>Importation :</p>
+								<p><span class="script ">import {provideHttpClient} from '@angular/common/http';</span></p>
+							</div>
+
+							<h5 class="soustitre" id="2.5.4.2">Injecter le service HttpClient</h5>
+							<div class="contenu">
+								<p>Syntaxe :</p>
+								<p><span class="script ">import {Injectable} from '@angular/core';</span><span class="script "><br/>import {HttpClient} from '@angular/common/http';</span><span class="script "><br/></span><span class="script "><br/>@Injectable({</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;providedIn: 'root'</span><span class="script "><br/>})</span><span class="script "><br/>export class </span><span class="script perso ">MonService</span><span class="script "> {</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">donnees</span><span class="script ">?: </span><span class="script perso ">MonModele</span><span class="script ">[]</span><span class="script ">;</span><span class="script "><br/></span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;constructor(private http: HttpClient) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;…</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;}</span><span class="script "><br/></span><span class="script ">}</span></p>
+								<div class="note ">Note : Pour renforcer la sécurité des données en empêchant leur modification depuis les composants, il est possible de restreindre la modification en ajoutant les lignes suivantes dans le service :</div>
+								<div class="note "><span class="script ">private </span><span class="script perso ">monSujet</span><span class="script "> = new BehaviorSudject&lt;</span><span class="script perso ">donnees</span><span class="script ">[]&gt;([]);</span><span class="script "><br/>public </span><span class="script perso ">currentDonnees</span><span class="script "> = this.</span><span class="script perso ">monSujet</span><span class="script ">.asObservable();</span></div>
+								<div class="note ">Dans le service, il n’y aura juste à faire <span class="script ">this.monSujet.next(</span><span class="script perso ">donneeRecue</span><span class="script ">);</span> dans l’événement <span class="script ">next</span>, et à utiliser le pipe <span class="script ">async</span> sur <span class="script perso ">currentDonnees</span> dans le composant.</div>
+							</div>
+
+							<h5 class="soustitre" id="2.5.4.3">Échanger des données JSON avec une API</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Instruction</span><span style="font-weight: bold; "> (renvoyant un observable)</span></th>
+										<th><span style="font-weight: bold; ">Description</span></th>
+									</tr>
+									<tr>
+										<td><span class="script ">this.http.get&lt;</span><span class="script perso ">MonModele</span><span class="script ">&gt;("</span><span class="script perso ">url</span><span class="script perso ">API</span><span class="script ">");</span></td>
+										<td>Récupérer des données avec la méthode GET</td>
+									</tr>
+									<tr>
+										<td><span class="script ">this.http.</span><span class="script ">post</span><span class="script ">&lt;</span><span class="script perso ">MonModele</span><span class="script ">&gt;("</span><span class="script perso ">url</span><span class="script perso ">API</span><span class="script ">"</span><span class="script ">, </span><span class="script perso ">donnees</span><span class="script ">);</span></td>
+										<td>Envoyer des données avec la méthode POST</td>
+									</tr>
+									<tr>
+										<td><span class="script ">this.http.</span><span class="script ">head</span><span class="script ">&lt;</span><span class="script perso ">MonModele</span><span class="script ">&gt;("</span><span class="script perso ">url</span><span class="script perso ">API</span><span class="script ">"</span><span class="script ">, </span><span class="script perso ">donnees</span><span class="script ">);</span></td>
+										<td>Récupérer l’en-tête de la ressource avec la méthode HEAD</td>
+									</tr>
+									<tr>
+										<td><span class="script ">this.http.</span><span class="script ">put</span><span class="script ">&lt;</span><span class="script perso ">MonModele</span><span class="script ">&gt;("</span><span class="script perso ">url</span><span class="script perso ">API</span><span class="script ">"</span><span class="script ">, </span><span class="script perso ">donnees</span><span class="script ">);</span></td>
+										<td>Ajouter une donnée avec la méthode PUT</td>
+									</tr>
+									<tr>
+										<td><span class="script ">this.http.</span><span class="script ">patch</span><span class="script ">&lt;</span><span class="script perso ">MonModele</span><span class="script ">&gt;("</span><span class="script perso ">url</span><span class="script perso ">API</span><span class="script ">"</span><span class="script ">, </span><span class="script perso ">donnees</span><span class="script ">);</span></td>
+										<td>Modifier une donnée avec la méthode PATCH</td>
+									</tr>
+									<tr>
+										<td><span class="script ">this.http.</span><span class="script ">delete</span><span class="script ">&lt;</span><span class="script perso ">MonModele</span><span class="script ">&gt;("</span><span class="script perso ">url</span><span class="script perso ">API</span><span class="script ">");</span></td>
+										<td>Supprimer une donnée avec la méthode DELETE</td>
+									</tr>
+								</table>
+								
+							</div>
+
+						</div>
+
+					</div>
+
+					<h3 class="soustitre" id="2.6">Les pipes</h3>
+					<div class="contenu">
+						<p>Un pipe est un opérateur spécial dans les templates qui permet de formatter une donnée pour l’affichage sans la modifier.</p>
+						<p>Commande de création d’un pipe (pas besoin de mettre Pipe à la fin du nom) :</p>
+						<p><span class="script ">npx ng generate pipe </span><span class="script ">pipes/</span><span class="script perso ">monPipe</span></p>
+						<h4 class="soustitre" id="2.6.1">Syntaxe</h4>
+						<div class="contenu">
+							<p><span class="script ">import {Pipe, PipeTransform} from '@angular/core';</span><span class="script "><br/></span><span class="script "><br/>@Pipe({</span><span class="script "><br/>  </span><span class="script ">  </span><span class="script ">name: '</span><span class="script perso ">monPipe</span><span class="script ">',</span><span class="script "><br/>  </span><span class="script ">  </span><span class="script ">standalone: true</span><span class="script "><br/>})</span><span class="script "><br/>export class </span><span class="script perso ">MonPipe</span><span class="script "> implements PipeTransform {</span><span class="script "><br/></span><span class="script "><br/></span><span class="script ">  </span><span class="script ">  </span><span class="script ">transform(value: string): string {</span><span class="script "><br/>   </span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script "> </span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/>  </span><span class="script ">  </span><span class="script ">}</span><span class="script "><br/>}</span></p>
+						</div>
+
+						<h4 class="soustitre" id="2.6.2">Paramètres du pipe (dans @Pipe)</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th><span style="font-weight: bold; ">Paramètre</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+								</tr>
+								<tr>
+									<td><span class="script ">type: false;</span></td>
+									<td>Permettre au pipe de s’actualiser automatiquement, ce qui n’est pas le cas par défaut si la valeur ne change pas</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>
+						</div>
+
+						<h4 class="soustitre" id="2.6.3">Pipes prédéfinis</h4>
+						<div class="contenu">
+							<p>Importation : <span class="script ">import {</span><span class="script perso ">MaPipe</span><span class="script ">} from '@angular/common';</span></p>
+							<h5 class="soustitre" id="2.6.3.1">Les pipes pour les chaînes de caractères</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Pipe</span></th>
+										<th><span style="font-weight: bold; ">Appel du pipe dans le code HTML</span></th>
+										<th><span style="font-weight: bold; ">Description</span></th>
+									</tr>
+									<tr>
+										<td><span class="script ">UpperCasePipe</span></td>
+										<td><span class="script ">uppercase</span></td>
+										<td>Mettre une chaîne de caractères en majuscule</td>
+									</tr>
+									<tr>
+										<td><span class="script ">LowerCasePipe</span></td>
+										<td><span class="script ">lowercase</span></td>
+										<td>Mettre une chaîne de caractères en minuscule</td>
+									</tr>
+									<tr>
+										<td><span class="script ">TitleCasePipe</span></td>
+										<td><span class="script ">t</span><span class="script ">itlecase</span></td>
+										<td>Mettre les premières lettres de chaque mot dans une chaîne de caractères en majuscule</td>
+									</tr>
+								</table>
+							</div>
+
+							<h5 class="soustitre" id="2.6.3.2">Les pipes pour les nombres</h5>
+							<div class="contenu">
+								<p>Pipe à importer : <span class="script ">DecimalPipe</span></p>
+								<p>Appel du pipe dans le code HTML :</p>
+								<p><span class="script ">number : </span><span class="script ">'</span><span class="script ">{</span><span class="script perso ">nbChiffresMinAvV</span><span class="script ">}.{</span><span class="script perso ">nbChiffresMinApV</span><span class="script ">}-{</span><span class="script perso ">nbChiffresMaxApV</span><span class="script ">}</span><span class="script ">'</span></p>
+								<p>ou (pour écrire en français les nombres) :</p>
+								<p><span class="script ">number : </span><span class="script ">'</span><span class="script ">{</span><span class="script perso ">nbChiffresMinAvV</span><span class="script ">}.{</span><span class="script perso ">nbChiffresMinApV</span><span class="script ">}-{</span><span class="script perso ">nbChiffresMaxApV</span><span class="script ">}</span><span class="script ">' </span><span class="script ">: '</span><span class="script ">fr</span><span class="script ">'</span></p>
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Paramètre</span></th>
+										<th><span style="font-weight: bold; ">Description</span></th>
+									</tr>
+									<tr>
+										<td><span class="script perso ">nbChiffresMinAvV</span></td>
+										<td>Nombre minimal de chiffres entiers avant la virgule</td>
+									</tr>
+									<tr>
+										<td><span class="script perso ">nbChiffresMinApV</span></td>
+										<td>Nombre minimal de chiffres après la virgule</td>
+									</tr>
+									<tr>
+										<td><span class="script perso ">nbChiffresMaxApV</span></td>
+										<td>Nombre maximal de chiffres après la virgule</td>
+									</tr>
+								</table>
+							</div>
+
+							<h5 class="soustitre" id="2.6.3.3">Les pipes pour les dates</h5>
+							<div class="contenu">
+								<p>Pipe à importer : <span class="script ">DecimalPipe</span></p>
+								<p>Appel du pipe dans le code HTML : <span class="script ">date</span><span class="script "> : '</span><span class="script perso ">masque1caractere1masque2</span><span class="script ">…</span><span class="script ">'</span></p>
+								<div class="note ">Le caractère peut être inséré comme une chaîne de caractères dans la chaîne de caractère (également entre guillemets simples ou double)</div>
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Masque</span></th>
+										<th><span style="font-weight: bold; ">Description</span></th>
+									</tr>
+									<tr>
+										<td><span class="script ">'YYYY'</span> ou <span class="script ">'yyyy'</span> ou <span class="script ">'Y'</span> ou <span class="script ">'y'</span></td>
+										<td>Année (ex : 2024)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'</span><span class="script ">w</span><span class="script ">'</span></td>
+										<td>Numéro de la semaine dans l’année</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'M'</span> ou<span class="script "> 'L'</span></td>
+										<td>Numéro du mois (ex : 5)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'MM'</span> ou<span class="script "> 'LL'</span></td>
+										<td>Numéro du mois (ex : 05)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'</span><span class="script ">d</span><span class="script ">'</span></td>
+										<td>Numéro du jour dans le mois (ex : 8)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'</span><span class="script ">dd</span><span class="script ">'</span></td>
+										<td>Numéro du jour dans le mois (ex : 08)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'</span><span class="script ">h</span><span class="script ">'</span></td>
+										<td>Heure sur 12 heures (ex : 9)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'hh'</span></td>
+										<td>Heure sur 12 heures (ex : 09)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'H'</span></td>
+										<td>Heure sur 24 heures (ex : 9, 21)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'HH'</span></td>
+										<td>Heure sur 24 heures (ex : 09, 21)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'</span><span class="script ">m</span><span class="script ">'</span></td>
+										<td>Minutes (ex : 5)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'</span><span class="script ">mm</span><span class="script ">'</span></td>
+										<td>Minutes (ex : 05)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'</span><span class="script ">s</span><span class="script ">'</span></td>
+										<td>Secondes (ex : 3)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'</span><span class="script ">ss</span><span class="script ">'</span></td>
+										<td>Secondes (ex : 3)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'M</span><span class="script ">MMM</span><span class="script ">'</span> ou <span class="script ">'LLLL'</span></td>
+										<td>Mois en lettres</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'M</span><span class="script ">MM</span><span class="script ">'</span> ou <span class="script ">'LLL'</span></td>
+										<td>Mois abrégé (3 lettres)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'</span><span class="script ">EEEE</span><span class="script ">'</span> ou <span class="script ">'cccc'</span></td>
+										<td>Jour en lettres</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'</span><span class="script ">EEE</span><span class="script ">'</span> ou <span class="script ">'E'</span> ou <span class="script ">'ccc'</span></td>
+										<td>Jour abrégé (3 lettres)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'a'</span> ou <span class="script ">'aa'</span></td>
+										<td>AM ou PM</td>
+									</tr>
+									<tr>
+										<td><span class="script ">'short</span><span class="script ">'</span></td>
+										<td>Date sous la forme : <span class="script ">'M/d/yy, h:mm a'</span></td>
+									</tr>
+									<tr>
+										<td><span class="script ">'medium'</span></td>
+										<td>Date sous la forme : <span class="script ">'MMM d, y, h:mm:ss a'</span></td>
+									</tr>
+									<tr>
+										<td><span class="script ">'long'</span></td>
+										<td>Date sous la forme : <span class="script ">'MMMM d, y, h:mm:ss a z'</span></td>
+									</tr>
+									<tr>
+										<td><span class="script ">'full'</span></td>
+										<td>Date sous la forme : <span class="script ">'EEEE, MMMM d, y, h:mm:ss a zzzz'</span></td>
+									</tr>
+									<tr>
+										<td><span class="script ">'shortDate'</span></td>
+										<td>Date sous la forme : <span class="script ">'M/d/yy'</span></td>
+									</tr>
+									<tr>
+										<td><span class="script ">'mediumDate'</span></td>
+										<td>Date sous la forme : <span class="script ">'MMM d, y'</span></td>
+									</tr>
+									<tr>
+										<td><span class="script ">'longDate'</span></td>
+										<td>Date sous la forme : <span class="script ">'MMMM d, y'</span></td>
+									</tr>
+									<tr>
+										<td><span class="script ">'fullDate'</span></td>
+										<td>Date sous la forme : <span class="script ">'EEEE, MMMM d, y'</span></td>
+									</tr>
+									<tr>
+										<td><span class="script ">'shortTime'</span></td>
+										<td>Date sous la forme : <span class="script ">'h:mm a'</span></td>
+									</tr>
+									<tr>
+										<td><span class="script ">'mediumTime'</span></td>
+										<td>Date sous la forme : <span class="script ">'h:mm:ss a'</span></td>
+									</tr>
+									<tr>
+										<td><span class="script ">'longTime'</span></td>
+										<td>Date sous la forme : <span class="script ">'h:mm:ss a z'</span></td>
+									</tr>
+									<tr>
+										<td><span class="script ">'fullTime'</span></td>
+										<td>Date sous la forme : <span class="script ">'h:mm:ss a zzzz'</span></td>
+									</tr>
+								</table>
+							</div>
+
+						</div>
+
+						<h4 class="soustitre" id="2.6.4">Autres pipes</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th><span style="font-weight: bold; ">Pipe</span></th>
+									<th><span style="font-weight: bold; ">Appel du pipe dans le code HTML</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+								</tr>
+								<tr>
+									<td><span class="script ">AsyncPipe</span></td>
+									<td><span class="script ">async</span></td>
+									<td>Afficher les données d’un observable de manière asynchrone et gérer l’abonnement et le désabonnement à un observable</td>
+								</tr>
+							</table>
+						</div>
+
+						<h4 class="soustitre" id="2.6.5">Utiliser un pipe dans le HTML</h4>
+						<div class="contenu">
+							<p>Dans la classe où le pipe peut être utilisé, ajouter l’utilisation du pipe avec :</p>
+							<p><span class="script ">imports: [</span><span class="script perso ">MonPipe</span><span class="script ">]</span></p>
+							<p>Et dans le code HTML, faire le binding de variable sous la forme :</p>
+							<p><span class="script ">{{</span><span class="script perso ">maVariable</span><span class="script "> | </span><span class="script perso ">appeldupipe</span><span class="script ">}}</span></p>
+							<p>Ou avec des paramètres :</p>
+							<p><span class="script ">{{</span><span class="script perso ">maVariable</span><span class="script "> | </span><span class="script perso ">appeldupipe</span><span class="script perso "> </span><span class="script ">: </span><span class="script perso ">parametre1</span><span class="script "> : </span><span class="script perso ">parametre2</span><span class="script ">…</span><span class="script ">}}</span></p>
+						</div>
+
+					</div>
+
+					<h3 class="soustitre" id="2.7">Les routes</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="2.7.1">Créer un tableau de routes</h4>
+						<div class="contenu">
+							<p>Créer un fichier app.routes.ts et insérer un tableau de routes sous la forme :</p>
+							<p><span class="script ">import {Routes} from "@angular/router";</span><span class="script "><br/></span><span class="script ">export const routes: Routes = [</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">route1</span><span class="script ">,</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">route2</span><span class="script ">…</span><span class="script "><br/></span><span class="script ">]</span></p>
+							<div class="note ">Dans app.config.ts, <span class="script ">provideRouter(routes)</span> doit être ajouté dans la liste des providers pour utiliser les routes (avec <span class="script ">routes</span> correspondant au tableau de routes).</div>
+						</div>
+
+						<h4 class="soustitre" id="2.7.2">Associer des chemins à des composants avec des routes</h4>
+						<div class="contenu">
+							<p>Route simple :</p>
+							<p><span class="script ">{</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">path: '</span><span class="script perso ">mon</span><span class="script perso ">-c</span><span class="script perso ">hemin</span><span class="script ">',</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;component: </span><span class="script perso ">MonComposant</span><span class="script ">,</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;title: 'Titre de l’onglet'</span><span class="script "><br/>}</span></p>
+							<p>Route avec paramètres personnalisées :</p>
+							<p><span class="script ">{</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">path: '</span><span class="script perso ">mon</span><span class="script perso ">-c</span><span class="script perso ">hemin</span><span class="script ">/:</span><span class="script perso ">param-1</span><span class="script ">',</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;component: </span><span class="script perso ">MonComposant</span><span class="script ">,</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;title: 'Titre de l’onglet'</span><span class="script "><br/>}</span></p>
+						</div>
+
+						<h4 class="soustitre" id="2.7.3">Rediriger une route vers une autre route</h4>
+						<div class="contenu">
+							<p><span class="script ">{</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;path: '</span><span class="script perso ">mon</span><span class="script perso ">-c</span><span class="script perso ">hemin</span><span class="script ">',</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;redirectTo: '</span><span class="script perso ">chemin-a-rediriger</span><span class="script ">',</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;pathMatch: 'full'</span><span class="script "><br/></span><span class="script ">}</span></p>
+							<div class="note ">Si <span class="script ">pathMatch</span> est égal à <span class="script ">full</span>, alors les autres chemins commençant par le chemin configuré ne seront pas traités dans ce cas.</div>
+						</div>
+
+						<h4 class="soustitre" id="2.7.4">Afficher le composant dans la page HTML selon la route actuelle</h4>
+						<div class="contenu">
+							<p><span class="script ">&lt;router-outlet /&gt;</span></p>
+							<div class="note ">La directive RouterOutlet est à importer dans le tableau des imports du comosant qui l’utilise.</div>
+						</div>
+
+						<h4 class="soustitre" id="2.7.5">Créer un lien vers une autre route dans une page HTML</h4>
+						<div class="contenu">
+							<h5 class="soustitre" id="2.7.5.1">Navigation depuis une page HTML</h5>
+							<div class="contenu">
+								<p><span class="script ">&lt;</span><span class="script ">a routerLink="</span><span class="script perso ">mon-chemin</span><span class="script ">"&gt;</span><span class="script perso ">contenu</span><span class="script ">&lt;/a&gt;</span></p>
+								<p><span class="script ">ou</span></p>
+								<p><span class="script ">&lt;a [routerLink]=</span><span class="script ">"</span><span class="script ">[</span><span class="script ">'</span><span class="script perso ">partie1-du-chemin</span><span class="script ">'</span><span class="script ">, </span><span class="script ">'</span><span class="script perso ">partie2-du-chemin</span><span class="script ">'</span><span class="script ">]</span><span class="script ">"</span><span class="script ">&gt;</span></p>
+								<div class="note ">La directive RouterLink est à importer dans le tableau des imports du comosant qui l’utilise.</div>
+							</div>
+
+							<h5 class="soustitre" id="2.7.5.2">Navigation manuelle depuis le code TypeScript</h5>
+							<div class="contenu">
+								<p><span class="script ">this.router.navigateByUrl(</span><span class="script ">"</span><span class="script perso ">monChemin</span><span class="script ">"</span><span class="script ">);</span></p>
+								<p>ou</p>
+								<p><span class="script ">this.router.navigate(</span><span class="script ">[</span><span class="script ">"</span><span class="script perso ">partie1-du-chemin</span><span class="script ">"</span><span class="script ">, </span><span class="script ">"</span><span class="script perso ">partie2-du-chemin</span><span class="script ">"</span><span class="script ">]</span><span class="script ">);</span></p>
+								<div class="note ">Pour l’utiliser, injectez dans le constructeur : <span class="script ">private router</span><span class="script "> </span><span class="script ">: Router</span></div>
+							</div>
+
+						</div>
+
+						<h4 class="soustitre" id="2.7.6">Récupération du paramètre passé dans la route</h4>
+						<div class="contenu">
+							<h5 class="soustitre" id="2.7.6.1">Méthode simple</h5>
+							<div class="contenu">
+								<p><span class="script ">this.route.snapshot.params[</span><span class="script ">"</span><span class="script perso ">param-1</span><span class="script ">"</span><span class="script ">]</span><span class="script ">;</span></p>
+								<div class="note ">Pour l’utiliser, injectez dans le constructeur : <span class="script ">private route: </span><span class="script ">ActivatedRoute</span></div>
+							</div>
+
+							<h5 class="soustitre" id="2.7.6.2">Méthode avec un observable</h5>
+							<div class="contenu">
+								<p><span class="script ">this.route.paramMap.subscribe((</span><span class="script perso ">params</span><span class="script perso "> </span><span class="script ">: ParamMap) =&gt; {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">params</span><span class="script ">.get(</span><span class="script ">"</span><span class="script perso ">param-1</span><span class="script ">"</span><span class="script ">)</span><span class="script "> </span><span class="script ">;</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script perso ">instructions</span><span class="script ">;</span><span class="script "><br/>})</span><span class="script "> </span><span class="script ">;</span></p>
+							</div>
+
+							<h5 class="soustitre" id="2.7.6.3">Méthode avec un input relié (pour Angular 16 ou supérieur)</h5>
+							<div class="contenu">
+								<p><span class="script ">@Input({required: true})</span><span class="script "><br/></span><span class="script perso ">param-1</span><span class="script perso "> </span><span class="script ">!: string;</span></p>
+								<div class="note "><span class="script ">withComponentInputBinding(routes)</span> doit être ajouté dans la liste des providers pour utiliser les routes (avec routes correspondant au tableau de routes).</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<h3 class="soustitre" id="2.8">Les formulaires</h3>
+					<div class="contenu">
+						<div class="note "><span style="font-weight: bold; color: #FF0000; ">Bientôt disponible</span></div>
+						
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="3">Le Framework côté HTML</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="3.1">Le binding dans les balises</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">[</span><span class="script perso ">maPropriete</span><span class="script ">]="</span><span class="script perso ">maVariable</span><span class="script ">"</span></td>
+								<td>Faire un binding de propriétés (par exemple <span class="script ">class</span>, <span class="script ">href</span>…)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">(click)="</span><span class="script perso ">onClickMaFonction</span><span class="script ">()"</span></td>
+								<td>Faire un binding d’événements</td>
+							</tr>
+							<tr>
+								<td><span class="script ">[class.</span><span class="script perso ">maClasse</span><span class="script ">]="</span><span class="script perso ">condition</span><span class="script ">"</span></td>
+								<td>Faire un binding de classes (si <span class="perso ">condition</span> est vraie, alors la classe est appliquée)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">[class]=["</span><span class="script perso ">maClasse1</span><span class="script ">", "</span><span class="script perso ">maClasse2</span><span class="script ">"]</span></td>
+								<td>Faire un binding de classes sous forme de liste (facultatif)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">[class]={"</span><span class="script perso ">maClasse1</span><span class="script ">": </span><span class="script perso ">condition1</span><span class="script ">, "</span><span class="script perso ">maClasse2</span><span class="script ">": </span><span class="script perso ">condition2</span><span class="script ">}</span></td>
+								<td>Faire un binding de classes sous forme d’objet littéral (si <span class="perso ">condition</span> est vraie, alors la classe est appliquée)</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+
+					<h3 class="soustitre" id="3.2">Conditions</h3>
+					<div class="contenu">
+						<p>Une condition renvoie <span class="script ">true</span> si elle est respectée et <span class="script ">false</span> sinon.</p>
+						<h4 class="soustitre" id="3.2.1">Opérateurs de comparaison</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th><span style="font-weight: bold; ">Condition</span></th>
+									<th><span style="font-weight: bold; ">Description de ce que vérifie la condition</span></th>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> == </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> égal à <span class="perso ">b</span></td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> &lt; </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> strictement inférieur à <span class="perso ">b</span></td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> &gt; </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> strictement supérieur à <span class="perso ">b</span></td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> &lt;= </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> supérieur ou égal à <span class="perso ">b</span></td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> != </span><span class="script perso ">b</span></td>
+									<td><span class="perso ">a</span> n’est pas égal à <span class="perso ">b</span></td>
+								</tr>
+								<tr>
+									<td><span class="script perso ">a</span><span class="script "> == null</span></td>
+									<td>Tester si une variable est nulle</td>
+								</tr>
+								<tr>
+									<td><span class="script ">||</span></td>
+									<td>À mettre entre deux conditions, permet d’avoir une des deux conditions qui doit être vraie</td>
+								</tr>
+								<tr>
+									<td><span class="script ">&&</span></td>
+									<td>À mettre entre deux conditions, permet d’avoir deux conditions qui doivent être vraie</td>
+								</tr>
+								<tr>
+									<td><span class="script ">!</span><span class="script perso ">condition</span></td>
+									<td>Ne doit pas respecter la condition</td>
+								</tr>
+							</table>
+						</div>
+
+						<h4 class="soustitre" id="3.2.2">Tests de conditions</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th><span style="font-weight: bold; ">Instruction</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+								</tr>
+								<tr>
+									<td><span class="script ">@if (</span><span class="script perso ">condition1</span><span class="script ">) {</span><span class="script "><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">&lt;</span><span class="script perso ">balise1</span><span class="script ">&gt;</span><span class="script perso ">contenu1</span><span class="script ">&lt;/</span><span class="script perso ">balise1</span><span class="script ">&gt;</span><span class="script "><br/>}</span></td>
+									<td>Si <span class="perso ">condition1</span> est vraie, alors on affiche <span class="perso ">contenu1</span></td>
+								</tr>
+								<tr>
+									<td><span class="script ">}</span></td>
+									<td>Si <span class="perso ">condition1</span> est vraie, alors on affiche <span class="perso ">contenu1</span>, sinon, on affiche <span class="perso ">contenu2</span></td>
+								</tr>
+								<tr>
+									<td><span class="script ">}</span></td>
+									<td>Si <span class="perso ">condition1</span> est vraie, alors on affiche <span class="perso ">contenu1</span>, sinon, si <span class="perso ">condition2</span> est vraie, on affiche <span class="perso ">contenu2</span>, sinon, on affiche <span class="perso ">contenu3</span></td>
+								</tr>
+							</table>
+						</div>
+
+					</div>
+
+					<h3 class="soustitre" id="3.3">Boucles</h3>
+					<div class="contenu">
+						<h4 class="soustitre" id="3.3.1">Les différentes boucles</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th><span style="font-weight: bold; ">Instruction</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+								</tr>
+								<tr>
+									<td></td>
+									<td>On répète <span class="perso ">f</span>-<span class="perso ">d</span> fois la balise pour i allant de <span class="perso ">d</span> compris à <span class="perso ">f</span> compris avec pour pas égal à <span class="perso ">p</span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>On répète (<span class="perso ">f</span>-<span class="perso ">d</span>)/<span class="perso ">p</span> fois la balise pour i allant de <span class="perso ">d</span> compris à <span class="perso ">f</span> compris avec pour pas égal à <span class="perso ">p</span></td>
+								</tr>
+								<tr>
+									<td><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="script ">&lt;</span><span class="script perso ">balise1</span><span class="script ">&gt;</span><span class="script perso ">contenu1</span><span class="script ">&lt;/</span><span class="script perso ">balise1</span><span class="script ">&gt;</span><span class="script "><br/>}</span></td>
+									<td>On parcourt le tableau pour <span class="perso ">elt</span> prenant toutes les valeurs du tableau</td>
+								</tr>
+								<tr>
+									<td><span class="script ">}</span></td>
+									<td>On parcourt le tableau pour <span class="perso ">elt</span> prenant toutes les valeurs du tableau, ou on affiche <span class="perso ">contenu2</span> si le tableau est vide (<span class="script perso ">elt</span><span class="script ">.id</span> peut être remplacé par<span class="script "> $index</span>)</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>On parcourt la liste pour <span class="perso ">elt</span> prenant toutes les valeurs de la liste avec une récupération des informations avec les propriétés de <span class="perso ">statut</span> (<span class="script ">first</span>, <span class="script ">last</span>, <span class="script ">count</span>…)</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>On parcourt la chaîne de caractère pour <span class="perso ">elt</span> prenant toutes les valeurs de la chaîne selon le délimitateur (on récupère un caractère à la fois avec le délimitateur vide)</td>
+								</tr>
+							</table>
+						</div>
+
+						<h4 class="soustitre" id="3.3.2">Les variables contextuelles de la boucle for</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th><span style="font-weight: bold; ">Variable</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+								</tr>
+								<tr>
+									<td><span class="script ">$count</span></td>
+									<td>Nombre d'items</td>
+								</tr>
+								<tr>
+									<td><span class="script ">$index</span></td>
+									<td>Indice de l'item</td>
+								</tr>
+								<tr>
+									<td><span class="script ">$first</span></td>
+									<td>Si c’est le premier item</td>
+								</tr>
+								<tr>
+									<td><span class="script ">$last</span></td>
+									<td>Si c’est le dernier item</td>
+								</tr>
+								<tr>
+									<td><span class="script ">$odd</span></td>
+									<td>Si l'item a un indice impair</td>
+								</tr>
+								<tr>
+									<td><span class="script ">$even</span></td>
+									<td>Si l'item a un indice pair</td>
+								</tr>
+							</table>
+							
+							<div class="note ">L’appel par interpolation fonctionne également avec les variables contextuelles.</div>
+						</div>
+
+					</div>
+
+					<h3 class="soustitre" id="3.4">Les instructions de base</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Instruction</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">{{</span><span class="script perso ">maVariableTS</span><span class="script ">}}</span></td>
+								<td>Appeler une variable TypeScript (interpolation)</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+						
+						
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="4">Le Framework côté CSS</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="4.1"></h3>
+					<div class="contenu">
+						<p>p [_ngcontent-ng-cxxx]</p>
+						<div class="note "><span style="font-weight: bold; color: #FF0000; ">À finir</span></div>
+					</div>
+
+					<h3 class="soustitre" id="4.2">Angular Material</h3>
+					<div class="contenu">
+						<p>Angular Material permet d’implémenter des spécifications du <span class="perso ">Material Design de Google</span>. Celui-ci est un ensemble de règles de design pour l'interface graphique des applications web et mobiles, ayant pour but d'améliorer l'expérience utilisateur.</p>
+						<p>Plus d’info sur ce site : <a href="https://material.angular.io/" target="_blank">https://material.angular.io/</a></p>
+						
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="5">Les fichiers de configurations</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="5.1">Le fichier angular.json</h3>
+					<div class="contenu">
+						
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Champ</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">}</span></td>
+								<td>Configurer le site en français</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+						
+					</div>
+
+				</div>
+			</article>
+		</main>
+		<footer>
+			<script src="../../scripts/footer.js"></script>
+			<a class="top" href="#"><img src="../../images/top.png"></a>
+		</footer>
+		<script src="../../scripts/script.js"></script>
+		<script src="../../scripts/tableDesMatieres.js"></script>
+	</body>
+</html>

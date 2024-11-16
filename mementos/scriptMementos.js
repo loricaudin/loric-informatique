@@ -21,7 +21,7 @@ let listeMementos = [
     //["ReactJS", "js", "reactjs", "rgba(, , , .5)", "rgba(, , , .5)"],
     //["VueJS", "js", "vuejs", "rgba(, , , .5)", "rgba(, , , .5)"],
     //["ThreeJS", "js", "threejs", "rgba(, , , .5)", "rgba(, , , .5)"],
-    //["Angular", "js", "angular", "rgba(221, 0, 49, .5)", "rgba(195, , 47, .5)"],
+    ["Angular", "js", "angular", "rgba(221, 0, 49, .5)", "rgba(195, , 47, .5)"],
     //["Docker", "docker", "docker", "rgba(8, 109, 215, .5)", "rgba(7, 96, 193, .5)"],
     //["Git", "git", "git", "rgba(221, 75, 52, .5)", "rgba(183, 53, 31, .5)"]
 ];

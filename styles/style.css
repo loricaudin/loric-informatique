@@ -5,6 +5,9 @@ html {
 	--couleur-principale: rgb(80, 58, 192);
 	--couleur-principale-hover: rgb(110, 88, 222);
 	--couleur-principale-focus: rgb(130, 108, 242);
+
+	--couleur1: #503AC0;
+	--couleur2: #322377;
 }
 
 body{
