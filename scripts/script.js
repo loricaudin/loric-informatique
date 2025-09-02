@@ -1,10 +1,17 @@
 // Affichage mode clair/sombre
+function estEnModeSombre() {
+	return globalThis.matchMedia?.("(prefers-color-scheme:dark)").matches;
+	/*
+	var now = new Date();
+	var heure  = now.getHours();
+	//heure = 19;
+	estEnModeSombre()
+	return (heure>18 || heure<7);
+	*/
+	
+}
 
-var now = new Date();
-
-var heure  = now.getHours();
-//heure = 19;
-if(heure>18 || heure<7){
+if(estEnModeSombre()){
 	basculerClairSombre();
 };
 

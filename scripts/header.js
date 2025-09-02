@@ -38,8 +38,7 @@ header.innerHTML = /*html*/
 	<nav>
 		<ul>
 		    <li><a href="${emplacementRacine + 'index.html'}">Accueil</a></li>
-            <li><a href="${emplacementRacine + 'aides/aides.html'}">Aides</a></li>
-		    <li><a href="${emplacementRacine + 'astuces/astuces.html'}">Astuces</a></li>
+            <li><a href="${emplacementRacine + 'tutos/tutos.html'}">Tutoriels</a></li>
 		    <li><a href="${emplacementRacine + 'mementos/mementos.html'}">Mémentos</a></li>
 		    <li><a href="${emplacementRacine + 'apropos.html'}">À propos</a></li>
 		    

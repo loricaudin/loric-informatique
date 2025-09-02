@@ -1,0 +1,208 @@
+<!DOCTYPE html> <!-- Loric Informatique (page générée automatiquement à partir d'un document Word XML) -->
+<html lang="fr-FR">
+	<head>
+		<title>Loric Informatique - Git</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="icon" href="../../images/icone.png">
+		<link rel="stylesheet" href ="../../styles/style.css">
+	</head>
+	<body>
+		<style>
+			html {
+				--couleur1: #dd4b34;
+				--couleur2: #b7351f;
+			}
+		</style>
+		<header>
+			<script src="../../scripts/header.js"></script>
+		</header>
+		<main class="pageMemento">
+			<section class="presentation">
+				<div class="alignementVertical">
+					<div>
+						<h1>Mémento Git</h1>
+						<p class="version">Version 1.0 (créé le 10/12/2024, modifié le 10/12/2024)</p>
+						<p>Git est un outil de gestion de version de fichiers et de projets en ligne comme hors ligne.</p>
+						<a href="Loric Informatique - Git.pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
+						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de choisir le format A4, de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
+					</div>
+					<img src="icone_git.png" class="logoMemento"/>
+				</div>
+			</section>
+			<section class="sommaire">
+				<h2>Table des matières :</h2>
+				<div class="tableDesMatieres">
+					<!-- Table des matières remplie par le JavaScript -->
+				</div>
+			</section>
+			<article>
+				<h2 class="soustitre" id="1">Configurer Git</h2>
+				<div class="contenu">
+					<div class="note ">Pour vous assurer que git est bien installé, exécuter la commande <span class="script ">git -v</span></div>
+					<p>Configurer le nom d’utilisateur et l’adresse email :</p>
+					<p><span class="script ">git config </span><span class="script ">--</span><span class="script ">global user.name "Loric Audin"</span></p>
+					<p>et</p>
+					<p><span class="script ">git config --global user.email "loricaudin@yahoo.fr"</span></p>
+					<div class="note ">--global permet de le configurer pour tous les projets par défaut</div>
+				</div>
+				<h2 class="soustitre" id="2">Commandes hors ligne</h2>
+				<div class="contenu">
+					<div class="note ">Pour toute aide, exécuter la commande <span class="script ">git help</span></div>
+					<h3 class="soustitre" id="2.1">Initialiser un dépôt Git hors ligne</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Commande</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">git </span><span class="script ">init</span></td>
+								<td>Initialiser un dépôt git avec une branche main (ou master selon les versions de git)</td>
+							</tr>
+							<tr>
+								<td><span class="script ">git </span><span class="script ">init -b "</span><span class="script perso ">nom-de-la-branche</span><span class="script ">"</span></td>
+								<td>Initialiser un dépôt git avec une branche principale configurée</td>
+							</tr>
+						</table>
+					</div>
+
+					<h3 class="soustitre" id="2.2">Ajouter des fichiers à sauvegarder</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Commande</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">git add "</span><span class="script perso ">fichier</span><span class="script ">"</span></td>
+								<td>Ajouter un fichier modifié à sauvegarder</td>
+							</tr>
+							<tr>
+								<td><span class="script ">git add *</span></td>
+								<td>Ajouter tous les fichiers modifiés à sauvegarder</td>
+							</tr>
+						</table>
+					</div>
+
+					<h3 class="soustitre" id="2.3">Voir les modifications à sauvegarder</h3>
+					<div class="contenu">
+						<p><span class="script ">git status</span></p>
+					</div>
+
+					<h3 class="soustitre" id="2.4">Valider les modifications</h3>
+					<div class="contenu">
+						<p><span class="script ">git commit -m "</span><span class="script perso ">message</span><span class="script ">"</span></p>
+					</div>
+
+					<h3 class="soustitre" id="2.5">Afficher l’historique des commits</h3>
+					<div class="contenu">
+						<p><span class="script ">git log</span></p>
+					</div>
+
+					<h3 class="soustitre" id="2.6">Changer de commit</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Commande</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">git checkout </span><span class="script perso ">identifiant</span><span class="script perso ">-c</span><span class="script perso ">ommmit</span></td>
+								<td>Revenir à un ancien commit</td>
+							</tr>
+							<tr>
+								<td><span class="script ">git checkout </span><span class="script perso ">branche-principale</span></td>
+								<td>Afficher le dernier commit (peut être forcé par l’option -f)</td>
+							</tr>
+						</table>
+					</div>
+
+					<h3 class="soustitre" id="2.7">Les branches</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Commande</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">git branch</span></td>
+								<td>Lister les branches</td>
+							</tr>
+							<tr>
+								<td><span class="script ">git branch </span><span class="script perso ">ma-branche</span></td>
+								<td>Créer une nouvelle branche</td>
+							</tr>
+							<tr>
+								<td><span class="script ">git branch -d </span><span class="script perso ">ma-branche</span></td>
+								<td>Supprimer une branche</td>
+							</tr>
+							<tr>
+								<td><span class="script ">git branch -m </span><span class="script perso ">ma-</span><span class="script perso ">nouvelle-</span><span class="script perso ">branche</span></td>
+								<td>Renommer la branche actuelle</td>
+							</tr>
+							<tr>
+								<td><span class="script ">git checkout </span><span class="script perso ">ma-branche</span></td>
+								<td>Changer de branche</td>
+							</tr>
+						</table>
+					</div>
+
+					<h3 class="soustitre" id="2.8">Les fusions de branches</h3>
+					<div class="contenu">
+						<p>Sur la branche sur laquelle appliquer les modifications, exécuter la commande :</p>
+						<p><span class="script ">git merge </span><span class="script perso ">ma-branche</span></p>
+						<div class="note ">S’il y a les mêmes lignes modifiées pour les 2 branches, modifier les fichiers où il y a des conflits.</div>
+						<div class="note ">Ensuite, faire <span class="script ">git add *</span> et <span class="script ">git commit -m "résolution de conflits"</span></div>
+					</div>
+
+					<h3 class="soustitre" id="2.9">Annuler les modifications</h3>
+					<div class="contenu">
+						<p><span class="script ">git reset –hard HEAD</span></p>
+					</div>
+
+					<h3 class="soustitre" id="2.10">Revenir à un ancien commit et valider le changement</h3>
+					<div class="contenu">
+						<p><span class="script ">git revert </span><span class="script perso ">identifiantCommmit</span></p>
+					</div>
+
+				</div>
+				<h2 class="soustitre" id="3">Commandes en ligne</h2>
+				<div class="contenu">
+					<h3 class="soustitre" id="3.1">Récupérer un dépôt distant</h3>
+					<div class="contenu">
+						<table>
+							<tr>
+								<th><span style="font-weight: bold; ">Commande</span></th>
+								<th><span style="font-weight: bold; ">Description</span></th>
+							</tr>
+							<tr>
+								<td><span class="script ">git </span><span class="script ">clone "</span><span class="script perso ">lien-du-depot</span><span class="script ">"</span></td>
+								<td>Cloner un dépôt distant</td>
+							</tr>
+						</table>
+					</div>
+
+					<h3 class="soustitre" id="3.2">Récupérer les derniers commits du dépôt distant</h3>
+					<div class="contenu">
+						<p><span class="script ">git pull</span></p>
+					</div>
+
+					<h3 class="soustitre" id="3.3">Envoyer les derniers commits au dépôt distant</h3>
+					<div class="contenu">
+						<p><span class="script ">git push</span></p>
+						
+					</div>
+
+				</div>
+			</article>
+		</main>
+		<footer>
+			<script src="../../scripts/footer.js"></script>
+			<a class="top" href="#"><img src="../../images/top.png"></a>
+		</footer>
+		<script src="../../scripts/script.js"></script>
+		<script src="../../scripts/tableDesMatieres.js"></script>
+	</body>
+</html>

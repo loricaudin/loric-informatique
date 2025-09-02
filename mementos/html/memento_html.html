@@ -9,6 +9,12 @@
 		<link rel="stylesheet" href ="../../styles/style.css">
 	</head>
 	<body>
+		<style>
+			html {
+				--couleur1: #f16529;
+				--couleur2: #e44d26;
+			}
+		</style>
 		<header>
 			<script src="../../scripts/header.js"></script>
 		</header>
@@ -17,7 +23,7 @@
 				<div class="alignementVertical">
 					<div>
 						<h1>Mémento HTML</h1>
-						<p class="version">Version 2.0 (créé le 20/04/2024, modifié le 26/08/2024) </p>
+						<p class="version">Version 2.1 (créé le 20/04/2024, modifié le 16/07/2025)</p>
 						<p>HTML (HyperText Markup Language) est le langage utilisé pour structurer une page web et son contenu. On peut par exemple organiser le contenu en un ensemble de paragraphes, une liste d'éléments, utiliser des images ou des tableaux de données.</p>
 						<a href="Loric Informatique - HTML.pdf"><button onclick="window.location.href = ''" class="telecharger">Télécharger</button></a>
 						<a><button onclick="alert('Pour imprimer votre document, nous vous conseillons de choisir le format A4, de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button></a>
@@ -50,7 +56,7 @@
 
 					<h3 class="soustitre" id="1.3">Première page « Hello World! »</h3>
 					<div class="contenu">
-						<p><span class="script ">&lt;!DOCTYPE html&gt;</span><span class="script "><br/></span><span class="script ">&lt;html lang="fr-FR"&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Titre&lt;/title&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"/&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script ">h1</span><span class="script ">&gt;</span><span class="script ">Hello World!</span><span class="script ">&lt;/</span><span class="script ">h1</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;</span><span class="script "><br/></span><span class="script ">&lt;/html&gt;</span></p>
+						<p><span class="script ">&lt;!</span><span class="script ">DOCTYPE html&gt;</span><span class="script "><br/></span><span class="script ">&lt;html </span><span class="script ">lang</span><span class="script ">="</span><span class="script ">fr-FR</span><span class="script ">"&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script ">head</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script ">title</span><span class="script ">&gt;Titre&lt;/</span><span class="script ">title</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script ">meta</span><span class="script "> </span><span class="script ">charset</span><span class="script ">="utf-8"/&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script ">meta</span><span class="script "> </span><span class="script ">name</span><span class="script ">="</span><span class="script ">viewport</span><span class="script ">" content="</span><span class="script ">width</span><span class="script ">=</span><span class="script ">device-width</span><span class="script ">, initial-</span><span class="script ">scale</span><span class="script ">=1.0"/&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/</span><span class="script ">head</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script ">h1</span><span class="script ">&gt;</span><span class="script ">Hello World!</span><span class="script ">&lt;/</span><span class="script ">h1</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;</span><span class="script "><br/></span><span class="script ">&lt;/html&gt;</span></p>
 						
 					</div>
 
@@ -59,7 +65,7 @@
 				<div class="contenu">
 					<h3 class="soustitre" id="2.1">Syntaxe</h3>
 					<div class="contenu">
-						<p><span class="script ">&lt;!DOCTYPE html&gt;</span><span class="script "><br/></span><span class="script ">&lt;html lang="fr-FR"&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;</span><span class="script perso ">Titre</span><span class="script ">&lt;/title&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"/&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="icon" href="image</span><span class="script ">s</span><span class="script ">/</span><span class="script perso ">icone.png</span><span class="script ">"/&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script perso ">balise1</span><span class="script ">&gt;</span><span class="script perso ">contenu1</span><span class="script ">&lt;/</span><span class="script perso ">balise1</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script perso ">balise2</span><span class="script ">&gt;</span><span class="script perso ">contenu2</span><span class="script ">&lt;/</span><span class="script perso ">balise2</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script perso ">balise3</span><span class="script ">&gt;</span><span class="script perso ">contenu3</span><span class="script ">&lt;/</span><span class="script perso ">balise3</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;</span><span class="script "><br/></span><span class="script ">&lt;/html&gt;</span></p>
+						<p><span class="script ">&lt;!</span><span class="script ">DOCTYPE html&gt;</span><span class="script "><br/></span><span class="script ">&lt;html </span><span class="script ">lang</span><span class="script ">="</span><span class="script ">fr-FR</span><span class="script ">"&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script ">head</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script ">title</span><span class="script ">&gt;</span><span class="script perso ">Titre</span><span class="script ">&lt;/</span><span class="script ">title</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script ">meta</span><span class="script "> </span><span class="script ">charset</span><span class="script ">="utf-8"/&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script ">meta</span><span class="script "> </span><span class="script ">name</span><span class="script ">="</span><span class="script ">viewport</span><span class="script ">" content="</span><span class="script ">width</span><span class="script ">=</span><span class="script ">device-width</span><span class="script ">, initial-</span><span class="script ">scale</span><span class="script ">=1.0"/&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script ">link</span><span class="script "> rel="</span><span class="script ">icon</span><span class="script ">" href="image</span><span class="script ">s</span><span class="script ">/</span><span class="script perso ">icone.png</span><span class="script ">"/&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/</span><span class="script ">head</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script perso ">balise1</span><span class="script ">&gt;</span><span class="script perso ">contenu1</span><span class="script ">&lt;/</span><span class="script perso ">balise1</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script perso ">balise2</span><span class="script ">&gt;</span><span class="script perso ">contenu2</span><span class="script ">&lt;/</span><span class="script perso ">balise2</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span class="script perso ">balise3</span><span class="script ">&gt;</span><span class="script perso ">contenu3</span><span class="script ">&lt;/</span><span class="script perso ">balise3</span><span class="script ">&gt;</span><span class="script "><br/></span><span class="script ">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;</span><span class="script "><br/></span><span class="script ">&lt;/html&gt;</span></p>
 						<div class="note ">Certaines balises sont auto-fermantes comme &lt;link/&gt;. En HTML, le "/" n'est pas obligatoire, mais conseillé pour une meilleure lisibilité. Dans d'autres langages, il peut être obligatoire (notamment en XML et dans les frameworks JS).</div>
 						<div class="note ">Astuce : Sous certains outils de développement comme Visual Studio Code, vous pouvez utiliser Emet afin de générer automatiquement l'entête du fichier HTML. Il suffit d'entrer "!" et la structure de base se génère toute seule.</div>
 					</div>
@@ -79,27 +85,27 @@
 							<th><span style="font-weight: bold; ">Description</span></th>
 						</tr>
 						<tr>
-							<td><span class="script ">&lt;title&gt;Mon titre&lt;/title&gt;</span></td>
+							<td><span class="script ">&lt;</span><span class="script ">title</span><span class="script ">&gt;Mon titre&lt;/</span><span class="script ">title</span><span class="script ">&gt;</span></td>
 							<td>Changer le titre au niveau de l'onglet</td>
 						</tr>
 						<tr>
-							<td><span class="script ">&lt;meta charset="utf-8"/&gt;</span></td>
+							<td><span class="script ">&lt;</span><span class="script ">meta</span><span class="script "> </span><span class="script ">charset</span><span class="script ">="utf-8"/&gt;</span></td>
 							<td>Changer l'encodage</td>
 						</tr>
 						<tr>
-							<td><span class="script ">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</span></td>
+							<td><span class="script ">&lt;</span><span class="script ">meta</span><span class="script "> </span><span class="script ">name</span><span class="script ">="</span><span class="script ">viewport</span><span class="script ">" content="</span><span class="script ">width</span><span class="script ">=</span><span class="script ">device-width</span><span class="script ">, initial-</span><span class="script ">scale</span><span class="script ">=1.0"/&gt;</span></td>
 							<td>Adapter l'affichage pour les appareils mobiles</td>
 						</tr>
 						<tr>
-							<td><span class="script ">&lt;meta name="robots" content="noindex, nofollow"/&gt;</span></td>
+							<td><span class="script ">&lt;</span><span class="script ">meta</span><span class="script "> </span><span class="script ">name</span><span class="script ">="robots" content="</span><span class="script ">noindex</span><span class="script ">, </span><span class="script ">nofollow</span><span class="script ">"/&gt;</span></td>
 							<td>Ne pas indexer cette page par les moteurs de recherches (si le site est disponible en ligne)</td>
 						</tr>
 						<tr>
-							<td><span class="script ">&lt;link rel="icon" href="</span><span class="script perso ">icone.png</span><span class="script ">"/&gt;</span></td>
+							<td><span class="script ">&lt;</span><span class="script ">link</span><span class="script "> rel="</span><span class="script ">icon</span><span class="script ">" href="</span><span class="script perso ">icone.png</span><span class="script ">"/&gt;</span></td>
 							<td>Changer l'icône au niveau de l'onglet</td>
 						</tr>
 						<tr>
-							<td><span class="script ">&lt;link rel="stylesheet" href ="</span><span class="script perso ">style</span><span class="script ">.css"/&gt;</span></td>
+							<td><span class="script ">&lt;</span><span class="script ">link</span><span class="script "> rel="</span><span class="script ">stylesheet</span><span class="script ">" href ="</span><span class="script perso ">style</span><span class="script ">.css"/&gt;</span></td>
 							<td>Appliquer une feuille de style à la page HTML (un attribut <span class="script ">media</span> peut être renseigné)</td>
 						</tr>
 					</table>
@@ -108,18 +114,20 @@
 				<h2 class="soustitre" id="4">Le body</h2>
 				<div class="contenu">
 					<p>Le body est tout le contenu qui sera affiché dans la page web.</p>
-					<h3 class="soustitre" id="4.1">Les balises de base</h3>
+					<h3 class="soustitre" id="4.1">Les balises</h3>
 					<div class="contenu">
-						<table>
-							<tr>
-								<th><span style="font-weight: bold; ">Balise</span></th>
-								<th><span style="font-weight: bold; ">Description</span></th>
-								<th><span style="font-weight: bold; ">Résultat</span></th>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;p&gt;Mon paragraphe&lt;/p&gt;</span></td>
-								<td>Afficher un paragraphe avec un espace avant et après</td>
-								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAJYAAAAjCAYAAAB2BvMkAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+						<h4 class="soustitre" id="4.1.1">Les balises de base</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th><span style="font-weight: bold; ">Balise</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+									<th><span style="font-weight: bold; ">Résultat</span></th>
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">p</span><span class="script ">&gt;Mon paragraphe&lt;/p&gt;</span></td>
+									<td>Afficher un paragraphe avec un espace avant et après</td>
+									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAJYAAAAjCAYAAAB2BvMkAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUoSURBVHhe7ZwxbuM6EEBnt/A9VBkxDFc6hSoD
 wgaGKx9ClQsbTuHKh1AlGDEMpPIpVAmGg1S6hxr9IUVFJEXKdH74kY+dBxBrUzPikBzOjJRkf1VV
 VQNBfDO/xb8E8a2QYxFeIMcivECORXiBHIvwAjkW4QVyLMIL5FiEF8ixCC+QY/1FFOsxjEZzyMR3
@@ -145,11 +153,11 @@ Y7b/AHyMVQtA3ISntIKPb/cqtArvm8KqGwsdmPXJYy3fWD1UwiFsbdrBJHevsZz18WB95OhcF8me
 nP5TWEG+gvck/7bDxSJIeHhCJ/pa3eiLhyIW8S/xVF/+RMixPMCiSO/nnD7ryx8IOZYH2FMxFmJK
 beKzvvyJ0P/dQHiBIhbhBXIswgvkWIQXyLEIL5BjEV4gxyI8APAP55N/d0Gu/LUAAAAASUVORK5C
 YII="/></td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;h1&gt;Mon titre&lt;/h1&gt;</span></td>
-								<td>Afficher un titre de niveau 1 (niveaux possibles : de 1 à 6)</td>
-								<td><span style="font-weight: bold; "><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAKMAAAAzCAYAAAD7CrjDAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">h</span><span class="script ">1&gt;Mon titre&lt;/h1&gt;</span></td>
+									<td>Afficher un titre de niveau 1 (niveaux possibles : de 1 à 6)</td>
+									<td><span style="font-weight: bold; "><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAKMAAAAzCAYAAAD7CrjDAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAjrSURBVHhe7Z17UFNXHse/u1kzCziIDzJ0FSUd
 TBZLDaBscRaXbtGtpTxNKjEtLd2yrPqH7oPBHTqWVaG7deyUznSKw6hLdSewhodFy9BOtw6S3bXK
 I8uCFIaCSsGtzgAyGDtxM9mb5ITce0NCQmK9lvOZOcPv3nPuLzcn35xzfr9zJ3zPZDJZQKEIgO+T
@@ -191,11 +199,11 @@ ZCHRnIFBm4cor2YVEYKDFhE7MARMjNbs/IsZPDUmq7DTuw1Yt4hle9B8/SYunypCTsIaSNh7yKJg
 LFuTgJyiSlwYHkfXu1uEIUTC+t9dgKHpDWyLWWZ/ipsgDpUgJtHbvWkuD8KnEzFWqk5g4FYXThXl
 IGGNBJwte3EoJJIYbN5ViobLN/H5gRhSERjofzugCIbAjYwUip9QMVIEAxUjRTBQMVIEAxUjRTBQ
 MVIEAxUjRTBQMVIEAxUjRTBQMVIEAxUjRTBQMVIEAvB/gzJWq0+0O8AAAAAASUVORK5CYII="/></span></td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;i&gt;Mon texte en italique&lt;/i&gt;</span></td>
-								<td>Afficher un texte en italique (à éviter)</td>
-								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAALwAAAAnCAYAAAC16CIrAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">i</span><span class="script ">&gt;Mon texte en italique&lt;/i&gt;</span></td>
+									<td>Afficher un texte en italique (à éviter)</td>
+									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAALwAAAAnCAYAAAC16CIrAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAYySURBVHhe7Vy9buM4EJ67Iu+hKkhguEp5T6DK
 gJEgcOWHcOUih6RIlYdQZSyyWCCVn8KVYCTYyu/hxjckhxJ/hpK8spPd03zAwDFFzR9nRhwqyV/7
 /f4AAsFA8Dd9CgSDgAS8YFCQgBcMChLwgkFBAl4wKEjACwYFCXjBoCABLxgUJOAFg4IEvGBQkIAX
@@ -225,11 +233,11 @@ qobdROvir2OBjwh2c59snCJKH5VVjRxR1KS0NGde05kg0yiRDE8H0stec65bvUL+hperj8/Dm181
 T4nrDRT6xWsme/vE0bnim7bD00XP5455GZ6O/e7ciF9Cb2+eXheS0SGOPH8dSfKv9gTnharec4Ai
 Oiz4GrScwwsE/aC3u6292OdBAl5wRvDHoV8JCXjB+XDmX9v+FcgeXjAoSIUXDAoS8IJBQQJeMChI
 wAsGBQl4waAgAS8YFCTgBQMCwH8a2kRrpYEpuwAAAABJRU5ErkJggg=="/></td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;em&gt;Mon texte en italique&lt;/em&gt;</span></td>
-								<td>Afficher un texte en italique</td>
-								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAALwAAAAnCAYAAAC16CIrAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">em</span><span class="script ">&gt;Mon texte en italique&lt;/</span><span class="script ">em</span><span class="script ">&gt;</span></td>
+									<td>Afficher un texte en italique</td>
+									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAALwAAAAnCAYAAAC16CIrAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAYySURBVHhe7Vy9buM4EJ67Iu+hKkhguEp5T6DK
 gJEgcOWHcOUih6RIlYdQZSyyWCCVn8KVYCTYyu/hxjckhxJ/hpK8spPd03zAwDFFzR9nRhwqyV/7
 /f4AAsFA8Dd9CgSDgAS8YFCQgBcMChLwgkFBAl4wKEjACwYFCXjBoCABLxgUJOAFg4IEvGBQkIAX
@@ -259,11 +267,11 @@ qobdROvir2OBjwh2c59snCJKH5VVjRxR1KS0NGde05kg0yiRDE8H0stec65bvUL+hperj8/Dm181
 T4nrDRT6xWsme/vE0bnim7bD00XP5455GZ6O/e7ciF9Cb2+eXheS0SGOPH8dSfKv9gTnharec4Ai
 Oiz4GrScwwsE/aC3u6292OdBAl5wRvDHoV8JCXjB+XDmX9v+FcgeXjAoSIUXDAoS8IJBQQJeMChI
 wAsGBQl4waAgAS8YFCTgBQMCwH8a2kRrpYEpuwAAAABJRU5ErkJggg=="/></td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;b&gt;Mon texte en gras&lt;/b&gt;</span></td>
-								<td>Afficher un texte en gras (à éviter)</td>
-								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAKQAAAAiCAYAAADRXHKEAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">b</span><span class="script ">&gt;Mon texte en gras&lt;/b&gt;</span></td>
+									<td>Afficher un texte en gras (à éviter)</td>
+									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAKQAAAAiCAYAAADRXHKEAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUqSURBVHhe7Vw9buM6EJ7dIvdQZWxguPIpWAkI
 Nghc+RCqXCTYFKl8CFVCkIcArnwKV4aRRSrdw43ekKbI4Z/s3ThZIpkPGKxM8Wdm+JEzpIL9tt/v
 O2AwMsF3/S+DkQWYkIyswIRkZAUmJCMrMCEZWYEJycgKTEhGVmBCMrICE5KRFZiQjKzAhGRkBUPI
@@ -289,11 +297,11 @@ tNNDnbfDYp/oYP3DxWzlhiMLAXfH7E7kWRJFdf/2vN1Ahs4NuGrKufHLjmO28trI6JIM2T4OfPDT
 GP6PAhgHYFox6k/IklhnyVn/HEd2SMbnA+bzF35OimXkuuYQPf4NmJBfEmuY07tDct+JeWL6NuAD
 wIT8ckhdgAvAg8z5c/w/BOeQjKzAOyQjKzAhGVmBCcnICkxIRkYA+B9mkdXBghARiAAAAABJRU5E
 rkJggg=="/></td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;strong&gt;Mon texte en gras&lt;/strong&gt;</span></td>
-								<td>Afficher un texte en gras</td>
-								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAKQAAAAiCAYAAADRXHKEAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">strong</span><span class="script ">&gt;Mon texte en gras&lt;/</span><span class="script ">strong</span><span class="script ">&gt;</span></td>
+									<td>Afficher un texte en gras</td>
+									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAKQAAAAiCAYAAADRXHKEAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUqSURBVHhe7Vw9buM6EJ7dIvdQZWxguPIpWAkI
 Nghc+RCqXCTYFKl8CFVCkIcArnwKV4aRRSrdw43ekKbI4Z/s3ThZIpkPGKxM8Wdm+JEzpIL9tt/v
 O2AwMsF3/S+DkQWYkIyswIRkZAUmJCMrMCEZWYEJycgKTEhGVmBCMrICE5KRFZiQjKzAhGRkBUPI
@@ -319,11 +327,11 @@ tNNDnbfDYp/oYP3DxWzlhiMLAXfH7E7kWRJFdf/2vN1Ahs4NuGrKufHLjmO28trI6JIM2T4OfPDT
 GP6PAhgHYFox6k/IklhnyVn/HEd2SMbnA+bzF35OimXkuuYQPf4NmJBfEmuY07tDct+JeWL6NuAD
 wIT8ckhdgAvAg8z5c/w/BOeQjKzAOyQjKzAhGVmBCcnICkxIRkYA+B9mkdXBghARiAAAAABJRU5E
 rkJggg=="/></td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;u&gt;Mon texte souligné&lt;/u&gt;</span></td>
-								<td>Afficher un texte souligné (à éviter)</td>
-								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAALQAAAAeCAYAAACFSjS6AAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">u</span><span class="script ">&gt;Mon texte souligné&lt;/u&gt;</span></td>
+									<td>Afficher un texte souligné (à éviter)</td>
+									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAALQAAAAeCAYAAACFSjS6AAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAYHSURBVHhe7Vy9bupKEJ5zC97DFUqEqHgKKiQu
 EaLiIVxRJEoKKh6CyorCQUrFU1BZKCiV34OG8+2f7f2xsQ3cXPnsJ40OLGPv7sx45ttxdH6dTqcz
 eXi0BP/Ifz08WgEf0B6tgg9oj1bBB7RHq+AD2qNV8AHt0Sr4gPZoFXxAe7QKPqA9WgUf0B6tgg/o
@@ -352,16 +360,16 @@ OazqDHDAld+qA3bbiOSl2Y377shftjVDRX80ATiLs/2hxGoLKeGtGLudU67PWkCZ2G2ogpYYxG4x
 FYtoNTnmUK2mvKh2mfrNbJ85x1V7kYm+JtW6yotrP3nJr1eIq+3murdbL21/aXrN2nZcLLuxay60
 PDWpel9IWfuygvj/aMajIdgLF/Fi5FavrW+BZpTDw+Ne558rUZqhWV/Q4+8FYoNz2glt9CzMODQ4
 OcnsfI84YXM3gaccHuWQwWseKHE2ufpvl+8BH9AeLQLRH6GX+HUHQMPzAAAAAElFTkSuQmCC"/></td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;br/&gt;</span></td>
-								<td>Afficher retour à la ligne (à éviter)</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;dfn&gt;Définition&lt;/dfn&gt;</span></td>
-								<td>Afficher une définition en italique</td>
-								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFoAAAAhCAYAAABZTbwAAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">br</span><span class="script ">/&gt;</span></td>
+									<td>Afficher retour à la ligne (à éviter)</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">dfn</span><span class="script ">&gt;Définition&lt;/</span><span class="script ">dfn</span><span class="script ">&gt;</span></td>
+									<td>Afficher une définition en italique</td>
+									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFoAAAAhCAYAAABZTbwAAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQbSURBVGhD7Vo7buMwEJ3dIvdwZdgQXPkUqgx4
 NwhS+RCqXCTYFK58CFVGsN4AqXIKVYLgIJXvoUY7JIcUP0PbWMQsNnrAwA45Eh8fZ0YjI9/atu1g
 wNXxnT4HXBmD0IkwCJ0Ig9CJMAidCIPQiTAInQiD0IkwCJ0Ig9CJMAidCNcVul7D+OYGbhY7GrCg
@@ -382,11 +390,11 @@ PcayIOouimx1AjDbgHpI/3ReYIT/2BpgM8VLUYHT0WMfFInqYAYZ9y5P+3JgeD+glATxbBE/D9gP
 9jMZFg9KC7rPM+Y37o6d6qv7ftQY24f6r8Q0bvxjfnR//+XA4mv6YHsPln/Pj+u5ewt6Yt3T+y9v
 7DsBbwn/U0n8araCd+yzTQ/6hcC3d9fAJS3jf4xkQnPdwVfC8E+OiZCudHxxDEInwiB0EgD8BZXC
 8kg20UPHAAAAAElFTkSuQmCC"/></td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;cite&gt;Titre d'ouvrage&lt;/cite&gt;</span></td>
-								<td>Afficher un titre d'ouvrage en italique</td>
-								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAIUAAAAiCAYAAABxwxpqAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">cite</span><span class="script ">&gt;Titre d'ouvrage&lt;/cite&gt;</span></td>
+									<td>Afficher un titre d'ouvrage en italique</td>
+									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAIUAAAAiCAYAAABxwxpqAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATbSURBVHhe7Vq9bhs5EJ67wu+xlSBDcKWn2EpA
 kCBI5YfYSkUCp3Clh9hqYeQQwNU9haqFYMOV3kPN3pAcrsiZ4W6Uy51jYD5gYJDLn5nhR3KG8h+n
 02kAgyHBn/TXYBhhpDAIGCkMAkYKg4CRwiBgpDAIGCkMAkYKg8C/IkW/XcDV1RVsOqr4TRD0WsC2
@@ -410,11 +418,11 @@ NuM3HggWgr+pcdRI2Y1Tah9FCwqreqhngyklEKOx8n68XSjXTSHAJdsznUaZCvJ44OvKIXXP/avr
 OOrkddX0m7CTxinqldkfxlY3UqZP0Lm04TLfOFHaTIn9i/+bhXsBvYXnZj8ZlP8MjBRvFO6pfb1b
 Qht/nPyFmPntw/Dq8O8M9PtJRLfxbzk8y/lVsJPit4d70HOPT1T0cP/K8N8QwsFIYRCw68MgYKQw
 CBgpDAJGCoOAkcIgYKQwMAD8A81An9sn5FzsAAAAAElFTkSuQmCC"/></td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;q&gt;Citation&lt;/q&gt;</span></td>
-								<td>Afficher une citation entre guillemet</td>
-								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFkAAAApCAYAAABeKYVuAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">q</span><span class="script ">&gt;Citation&lt;/q&gt;</span></td>
+									<td>Afficher une citation entre guillemet</td>
+									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFkAAAApCAYAAABeKYVuAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAObSURBVGhD7Zq/buowFMa/e4e8RyZEhTLxFJmQ
 UKuKKQ+RieFW7cDEQ2RCqBUSU54iU4RATHmPLLnHJw4krgMlJb6Vrn+SS+PY2Pl8/kXtrzzPC1h6
 5bf8tPSIFdkAVmQDWJENYEU2gBXZAFZkA1iRDWBFNoAV2QBWZANYkQ1gRTaAFdkAvYq8mjhwnAlW
@@ -433,11 +441,11 @@ td4s77kFnSpf04E0a13RuG49j+FW1cB+dOora1exjjJWN7+lTub1tfObez/XybVx3C7U3ze0miV/
 FWHx53rzlKS4UfLUvfXWYW/I2EPEHC5/RLgqXeT0XeP9iz4m6+a3IF7rkxCnsdyka1+qr++N/YdD
 A3SwZMutWJENYEU2gBXZAFZkA1iRDWBFNoAV2QBWZANYkQ1gRe4d4C+8TZ2r+HW2ygAAAABJRU5E
 rkJggg=="/></td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;fieldset&gt;Mon contenu&lt;/fieldset&gt;</span></td>
-								<td>Afficher un cadre</td>
-								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAKkAAAA9CAYAAADWIkl6AAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">fieldset</span><span class="script ">&gt;Mon contenu&lt;/</span><span class="script ">fieldset</span><span class="script ">&gt;</span></td>
+									<td>Afficher un cadre</td>
+									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAKkAAAA9CAYAAADWIkl6AAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAU/SURBVHhe7Z0/bupKFMbPewVFduGKgBBFxCqo
 LCEQomIRriiCSEHFIqgsRIRExSpQCoRCUnkfNO+dGY+xPdiOk5uLz735fpKVMB6YGc93/sxJlPxz
 Pp//IwAE86/5CoBYIFIgHogUiAciBeKBSIF4IFIgHogUiKdUndT3ffMdAOW5v7+nh4cH8+rrlBap
@@ -463,11 +471,11 @@ E8UZhapr7skjFk50n6+wbvoLOaIxxmiNl5ouG46q0zq7cTwfvjqbXmEEKiIsl8U/OKjVZtTcK+OT
 Bf7MDvgt4M/sgB8FRArEA5EC8UCkQDwQKRAPRArEA5EC8UCkQDwQKRAPRArEA5EC8UCkQDwQKRAP
 RArEA5EC8ZT+fVL1fyLV/4sEoCzf9fukpUT68vKiRQrAZ7mZSAGoEuSkQDwQKRAPRArEA5EC8UCk
 QDhE/wOQIzRpGNwDkwAAAABJRU5ErkJggg=="/></td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;fieldset&gt;</span><span class="script "><br/>    &lt;legend&gt;Ma légende&lt;/legend&gt;</span><span class="script "><br/>    Mon contenu&lt;</span><span class="script "><br/>&lt;/fieldset&gt; </span></td>
-								<td>Afficher un cadre titré</td>
-								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAJwAAABPCAYAAAAeEqzMAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">fieldset</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;</span><span class="script ">legend</span><span class="script ">&gt;Ma légende&lt;/</span><span class="script ">legend</span><span class="script ">&gt;</span><span class="script "><br/>    Mon contenu&lt;</span><span class="script "><br/>&lt;/</span><span class="script ">fieldset</span><span class="script ">&gt; </span></td>
+									<td>Afficher un cadre titré</td>
+									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAJwAAABPCAYAAAAeEqzMAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAj/SURBVHhe7Z29bio7EMfn3oLivAUVASGKI56C
 CgkRRVQ8BFWKRKSg4iGoUJQIiYpnOAU6BYpCUu0rnJqGO+OPxev1epcNGHLP/CQrYTFr7+7fM2MH
 T/7Z7XZ7YJhA/Kt+MkwQWHBMUFhwTFBYcExQWHBMUFhwTFD+KsHNuxWo1O5ho16nmUO3klfniph3
@@ -510,11 +518,11 @@ wNLXGK8Z4iAQeYzN/HRY2oue1zP4kEs4h0XmSmUMjTUNpPPC+eGYk8P54ZirgQXHBIUFxwSFBccE
 hQXHBIUFxwSFBccEhQXHBIUFxwSFBccEhQXHBIUFxwSFBccEhQXHBIUFxwSFBccEpdAXMG9ubuDj
 40MdYZh8sr6AmSu4379/C8ExzLGUEhzDnBKO4ZigsOCYoLDgmKCw4JigsOCYoLDgmIAA/AcHi3Gy
 ieiPZAAAAABJRU5ErkJggg=="/></td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;code&gt;Mon code&lt;/code&gt;</span></td>
-								<td>Écrire du code</td>
-								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAAAeCAYAAAAxbADwAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">code</span><span class="script ">&gt;Mon code&lt;/code&gt;</span></td>
+									<td>Écrire du code</td>
+									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAGcAAAAeCAYAAAAxbADwAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM7SURBVGhD7VqxbuJAEH13hf/DFQpCrvgKV0jo
 LETFR1BRHEoKKj7ClRURRaLyV7iyrERU/g83vll7bNaLDdgQ3Rb7pFHsYdid2bf7dqLkV5ZlOQy0
 xG/+aaAhDDkaw5CjMQw5GsOQozEMORrDkKMxDDkaw5CjMQw5jyDeYGRZGG1idjwXvciJNyNYlIw1
@@ -531,101 +539,11 @@ iTK13n12UG8s30ANC92JSjsu5pfycXZbuplS7Kdy6yzaf7pL5TurGu91Uy96MLOwohixDc7oqHsg
 nk5OfdEvj6BuBna4Omsv/V7w4tPxrrXwp0CLdMpA09PCS9r/B/hozL3EMYto4UOsqhhriv2LTxJ0
 lBodMZ4PVyw6x72OSbqOHn8uQdSdUaxcd2U9CTP/GqUxfkjWDJ4BQ47GMORoDEOOxjDkaAxDjrYA
 /gG+ZofiVwwiJwAAAABJRU5ErkJggg=="/></td>
-							</tr>
-						</table>
-					</div>
-
-					<h3 class="soustitre" id="4.2">Les sections</h3>
-					<div class="contenu">
-						<table>
-							<tr>
-								<th><span style="font-weight: bold; ">Balise</span></th>
-								<th><span style="font-weight: bold; ">Description</span></th>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;section&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/section&gt;</span></td>
-								<td>Créer une section simple</td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;header&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/header&gt;</span></td>
-								<td>Créer un en-tête</td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;nav&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/nav&gt;</span></td>
-								<td>Créer une section contenant des liens de navigation</td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;article&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/article&gt;</span></td>
-								<td>Créer un contenu auto-suffisant</td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;aside&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/aside&gt;</span></td>
-								<td>Créer un encart</td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;footer&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/footer&gt;</span></td>
-								<td>Créer un pied de page</td>
-							</tr>
-						</table>
-					</div>
-
-					<h3 class="soustitre" id="4.3">Les liens</h3>
-					<div class="contenu">
-						<p>Syntaxe : <span class="script ">&lt;a href="</span><span class="script perso ">lien</span><span class="script ">"&gt;Cliquez ici&lt;/a&gt;</span></p>
-						<table>
-							<tr>
-								<th><span style="font-weight: bold; ">Attribut</span></th>
-								<th><span style="font-weight: bold; ">Description</span></th>
-							</tr>
-							<tr>
-								<td><span class="script ">href="</span><span class="script perso ">lien</span><span class="script ">"</span></td>
-								<td>Rediriger la page vers une autre page au clic sur le lien (chemin absolu ou relatif)</td>
-							</tr>
-							<tr>
-								<td><span class="script ">href="#</span><span class="script perso ">id</span><span class="script ">"</span></td>
-								<td>Rediriger la page vers une zone de la page HTML</td>
-							</tr>
-							<tr>
-								<td><span class="script ">target="_self"</span></td>
-								<td>Ouvrir la page dans le même onglet (option par défaut)</td>
-							</tr>
-							<tr>
-								<td><span class="script ">target="_blank"</span></td>
-								<td>Ouvrir la page dans un nouvel onglet</td>
-							</tr>
-							<tr>
-								<td><span class="script ">target="_parent"</span></td>
-								<td>Ouvrir la page dans la fenêtre principale</td>
-							</tr>
-							<tr>
-								<td><span class="script ">target="_top"</span></td>
-								<td>Ouvrir la page dans une fenêtre séparée</td>
-							</tr>
-						</table>
-					</div>
-
-					<h3 class="soustitre" id="4.4">Les images</h3>
-					<div class="contenu">
-						<h4 class="soustitre" id="4.4.1">Les images simples</h4>
-						<div class="contenu">
-							<p>Syntaxe : <span class="script ">&lt;img src="</span><span class="script perso ">lien</span><span class="script ">" alt="</span><span class="script perso ">texte-de-remplacement</span><span class="script ">"/&gt;</span></p>
-							<table>
-								<tr>
-									<th><span style="font-weight: bold; ">Attribut</span></th>
-									<th><span style="font-weight: bold; ">Description</span></th>
-								</tr>
-								<tr>
-									<td><span class="script ">src="</span><span class="script perso ">lien</span><span class="script ">"</span></td>
-									<td>Récupérer la source de l'image (chemin absolu ou relatif)</td>
-								</tr>
-								<tr>
-									<td><span class="script ">alt="</span><span class="script perso ">texte-de-remplacement</span><span class="script ">"</span></td>
-									<td>Remplacer l'image par du texte si le chargement a échoué</td>
 								</tr>
 							</table>
 						</div>
 
-						<h4 class="soustitre" id="4.4.2">Les images complexes</h4>
+						<h4 class="soustitre" id="4.1.2">Les sections</h4>
 						<div class="contenu">
 							<table>
 								<tr>
@@ -633,30 +551,120 @@ lBodMZ4PVyw6x72OSbqOHn8uQdSdUaxcd2U9CTP/GqUxfkjWDJ4BQ47GMORoDEOOxjDkaAxDjrYA
 									<th><span style="font-weight: bold; ">Description</span></th>
 								</tr>
 								<tr>
-									<td><span class="script ">&lt;picture&gt;</span><span class="script "><br/>    &lt;source srcset="</span><span class="script perso ">image</span><span class="script ">.avif" type="image/avif"/&gt;</span><span class="script "><br/>    &lt;source srcset="</span><span class="script perso ">image</span><span class="script ">.webp" type="image/webp"/&gt;</span><span class="script "><br/>    &lt;img src="</span><span class="script perso ">image</span><span class="script ">.jpg" alt="</span><span class="script perso ">description</span><span class="script ">"/&gt;</span><span class="script "><br/>&lt;/picture&gt;</span></td>
-									<td>Ajouter une image qui récupère la première source compatible</td>
+									<td><span class="script ">&lt;</span><span class="script ">section</span><span class="script ">&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/section&gt;</span></td>
+									<td>Créer une section simple</td>
 								</tr>
 								<tr>
-									<td><span class="script ">&lt;figure&gt;</span><span class="script "><br/>    &lt;picture&gt;</span><span class="script "><br/>        &lt;source srcset="</span><span class="script perso ">image</span><span class="script ">.avif" type="image/avif"/&gt;</span><span class="script "><br/>        &lt;source srcset="</span><span class="script perso ">image</span><span class="script ">.webp" type="image/webp"/&gt;</span><span class="script "><br/>        &lt;img src="</span><span class="script perso ">image</span><span class="script ">.jpg" alt="</span><span class="script ">description</span><span class="script ">"/&gt;</span><span class="script "><br/>    &lt;/picture&gt;</span><span class="script "><br/>    &lt;figcaption&gt;</span><span class="script "><br/>        Source : &lt;a href="</span><span class="script perso ">lienVersImageDOrigine</span><span class="script ">.jpg"&gt;</span><span class="script ">Nom de la source</span><span class="script ">&lt;/a&gt;</span><span class="script "><br/></span><span class="script ">    &lt;/figcaption&gt;</span><span class="script "><br/>&lt;/figure&gt; </span></td>
-									<td>Ajouter une image associée à une légende</td>
+									<td><span class="script ">&lt;</span><span class="script ">header</span><span class="script ">&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/header&gt;</span></td>
+									<td>Créer un en-tête</td>
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">nav</span><span class="script ">&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/</span><span class="script ">nav</span><span class="script ">&gt;</span></td>
+									<td>Créer une section contenant des liens de navigation</td>
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">article</span><span class="script ">&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/article&gt;</span></td>
+									<td>Créer un contenu auto-suffisant</td>
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">aside</span><span class="script ">&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/</span><span class="script ">aside</span><span class="script ">&gt;</span></td>
+									<td>Créer un encart</td>
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">footer</span><span class="script ">&gt;</span><span class="script perso ">c</span><span class="script perso ">ontenu</span><span class="script ">&lt;/</span><span class="script ">footer</span><span class="script ">&gt;</span></td>
+									<td>Créer un pied de page</td>
 								</tr>
 							</table>
 						</div>
 
-					</div>
+						<h4 class="soustitre" id="4.1.3">Les liens</h4>
+						<div class="contenu">
+							<p>Syntaxe : <span class="script ">&lt;a href="</span><span class="script perso ">lien</span><span class="script ">"&gt;Cliquez ici&lt;/a&gt;</span></p>
+							<table>
+								<tr>
+									<th><span style="font-weight: bold; ">Attribut</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+								</tr>
+								<tr>
+									<td><span class="script ">href</span><span class="script ">="</span><span class="script perso ">lien</span><span class="script ">"</span></td>
+									<td>Rediriger la page vers une autre page au clic sur le lien (chemin absolu ou relatif)</td>
+								</tr>
+								<tr>
+									<td><span class="script ">href</span><span class="script ">="#</span><span class="script perso ">id</span><span class="script ">"</span></td>
+									<td>Rediriger la page vers une zone de la page HTML</td>
+								</tr>
+								<tr>
+									<td><span class="script ">target</span><span class="script ">="_self"</span></td>
+									<td>Ouvrir la page dans le même onglet (option par défaut)</td>
+								</tr>
+								<tr>
+									<td><span class="script ">target</span><span class="script ">="_</span><span class="script ">blank</span><span class="script ">"</span></td>
+									<td>Ouvrir la page dans un nouvel onglet</td>
+								</tr>
+								<tr>
+									<td><span class="script ">target</span><span class="script ">="_parent"</span></td>
+									<td>Ouvrir la page dans la fenêtre principale</td>
+								</tr>
+								<tr>
+									<td><span class="script ">target</span><span class="script ">="_top"</span></td>
+									<td>Ouvrir la page dans une fenêtre séparée</td>
+								</tr>
+							</table>
+						</div>
 
-					<h3 class="soustitre" id="4.5">Les listes</h3>
-					<div class="contenu">
-						<table>
-							<tr>
-								<th><span style="font-weight: bold; ">Balise</span></th>
-								<th><span style="font-weight: bold; ">Description</span></th>
-								<th><span style="font-weight: bold; ">Résultat</span></th>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;ul&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 1&lt;/li&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 2&lt;/li&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 3&lt;/li&gt;</span><span class="script "><br/>&lt;/ul&gt; </span></td>
-								<td>Afficher une liste avec des points</td>
-								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAHUAAABUCAYAAAC89HgvAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+						<h4 class="soustitre" id="4.1.4">Les images</h4>
+						<div class="contenu">
+							<h5 class="soustitre" id="4.1.4.1">Les images simples</h5>
+							<div class="contenu">
+								<p>Syntaxe : <span class="script ">&lt;</span><span class="script ">img</span><span class="script "> src="</span><span class="script perso ">lien</span><span class="script ">" alt="</span><span class="script perso ">texte-de-remplacement</span><span class="script ">"/&gt;</span></p>
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Attribut</span></th>
+										<th><span style="font-weight: bold; ">Description</span></th>
+									</tr>
+									<tr>
+										<td><span class="script ">src</span><span class="script ">="</span><span class="script perso ">lien</span><span class="script ">"</span></td>
+										<td>Récupérer la source de l'image (chemin absolu ou relatif)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">alt</span><span class="script ">="</span><span class="script perso ">texte-de-remplacement</span><span class="script ">"</span></td>
+										<td>Remplacer l'image par du texte si le chargement a échoué</td>
+									</tr>
+								</table>
+							</div>
+
+							<h5 class="soustitre" id="4.1.4.2">Les images complexes</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Balise</span></th>
+										<th><span style="font-weight: bold; ">Description</span></th>
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">picture</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;source </span><span class="script ">srcset</span><span class="script ">="</span><span class="script perso ">image</span><span class="script ">.avif</span><span class="script ">" type="image/</span><span class="script ">avif</span><span class="script ">"/&gt;</span><span class="script "><br/>    &lt;source </span><span class="script ">srcset</span><span class="script ">="</span><span class="script perso ">image</span><span class="script ">.webp</span><span class="script ">" type="image/</span><span class="script ">webp</span><span class="script ">"/&gt;</span><span class="script "><br/>    &lt;</span><span class="script ">img</span><span class="script "> src="</span><span class="script perso ">image</span><span class="script ">.jpg" alt="</span><span class="script perso ">description</span><span class="script ">"/&gt;</span><span class="script "><br/>&lt;/</span><span class="script ">picture</span><span class="script ">&gt;</span></td>
+										<td>Ajouter une image qui récupère la première source compatible</td>
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">figure</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;</span><span class="script ">picture</span><span class="script ">&gt;</span><span class="script "><br/>        &lt;source </span><span class="script ">srcset</span><span class="script ">="</span><span class="script perso ">image</span><span class="script ">.avif</span><span class="script ">" type="image/</span><span class="script ">avif</span><span class="script ">"/&gt;</span><span class="script "><br/>        &lt;source </span><span class="script ">srcset</span><span class="script ">="</span><span class="script perso ">image</span><span class="script ">.webp</span><span class="script ">" type="image/</span><span class="script ">webp</span><span class="script ">"/&gt;</span><span class="script "><br/>        &lt;</span><span class="script ">img</span><span class="script "> src="</span><span class="script perso ">image</span><span class="script ">.jpg" alt="</span><span class="script ">description</span><span class="script ">"/&gt;</span><span class="script "><br/>    &lt;/</span><span class="script ">picture</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;</span><span class="script ">figcaption</span><span class="script ">&gt;</span><span class="script "><br/>        Source : &lt;a href="</span><span class="script perso ">lienVersImageDOrigine</span><span class="script ">.jpg"&gt;</span><span class="script ">Nom de la source</span><span class="script ">&lt;/a&gt;</span><span class="script "><br/></span><span class="script ">    &lt;/</span><span class="script ">figcaption</span><span class="script ">&gt;</span><span class="script "><br/>&lt;/figure&gt; </span></td>
+										<td>Ajouter une image associée à une légende</td>
+									</tr>
+								</table>
+							</div>
+
+						</div>
+
+						<h4 class="soustitre" id="4.1.5">Les listes</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th><span style="font-weight: bold; ">Balise</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+									<th><span style="font-weight: bold; ">Résultat</span></th>
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">ul</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 1&lt;/li&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 2&lt;/li&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 3&lt;/li&gt;</span><span class="script "><br/>&lt;/</span><span class="script ">ul</span><span class="script ">&gt; </span></td>
+									<td>Afficher une liste avec des points</td>
+									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAHUAAABUCAYAAAC89HgvAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAXfSURBVHhe7Zyxi+NGFMZfElCb+wM2hVLErGN0
 C+dAUqRKZ45gWHZZXLm8KhAQgfMVyx6JSeE016RI42pZ1uzhylybKuROXGGMnU1jAne5IlVaN8qb
 0dgryeORZEmz3sn7wWBLHumJ+TRvZuTPfm+xWPhAGMX74pUwCBLVQEhUAyFRDYRENRDtop43LbCs
@@ -685,11 +693,11 @@ zK3HzB1N/Tyz5HQVKkQlM3eccszcLRiG2mWAAwmLn3ZJJEMhKpm5tZm5Q/BxmY/VR1s/H1eISmbu
 WyPndSlnv2Tm3p5c/8zNhwUbth1VlKIyyMydlQz/zI1r3rWxk3+TxX6Gsf0TtERRi4HM3FIwzWLD
 ROJa7Rkf4/M8QSMzt4Fo6qmETkhUAyFRDYRENRAS1UBIVAMhUQ2ERDUQEtVASFTjAPgPh0Af51L1
 cDQAAAAASUVORK5CYII="/></td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;ol&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 1&lt;/li&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 2&lt;/li&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 3&lt;/li&gt;</span><span class="script "><br/>&lt;/ol&gt; </span></td>
-								<td>Afficher une liste avec des numéros</td>
-								<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAHsAAABVCAYAAABpYZs5AAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">ol</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 1&lt;/li&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 2&lt;/li&gt;</span><span class="script "><br/>    &lt;li&gt;Élément 3&lt;/li&gt;</span><span class="script "><br/>&lt;/</span><span class="script ">ol</span><span class="script ">&gt; </span></td>
+									<td>Afficher une liste avec des numéros</td>
+									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAHsAAABVCAYAAABpYZs5AAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAW4SURBVHhe7Z0xjuo8EMfn+4rcIxVahFJxCiqk
 1a5WVBwiFc3TbkHFIVKh1UNIVJwiFUKgrXIPGt7YDmwSErCTOAFmfpIFBBNn52+Px8Gz/Hc4HI7A
 kOD/+JEhAItNCBabECw2IVhsQtyF2POhA47TgckmPsBYof2l13wIzhggOKxgFB9i7NCy2HMYOp/Q
@@ -717,70 +725,70 @@ uzU5OirtfOQkgWLqtrXCQOwRrE6uCssCnaS4EN3lxCWcJFBM3bZWlJ6z5Vwk56e3Bu9pE0oSSFCX
 rSsEaEiTG+oJJQnkUsN1VRNbujwXynpMI6j/kkANttYTG9eRF/OF/LZKpKgk7mJxkkABBr8koGvr
 EuiJjS4EQ+dUsOKM93JeK38Xi5MEcrFiawUnCRCi2pzNPBQsNiFYbEKw2IRgsQnBYhOCxSYEi00I
 FpsQLDYhWGwyAPwDV442z/7o+9AAAAAASUVORK5CYII="/></td>
-							</tr>
-						</table>
-					</div>
-
-					<h3 class="soustitre" id="4.6">Les tableaux</h3>
-					<div class="contenu">
-						<table>
-							<tr>
-								<th><span style="font-weight: bold; ">Balise</span></th>
-								<th><span style="font-weight: bold; ">Description</span></th>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;table&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case1&lt;/td&gt;</span><span class="script "><br/>        &lt;td&gt;case2&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case3&lt;/td&gt;</span><span class="script "><br/>        &lt;td&gt;case4&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>&lt;/table&gt; </span></td>
-								<td>Créer un tableau simple</td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;table&gt;</span><span class="script "><br/>    &lt;caption&gt;</span><span class="script ">l</span><span class="script ">é</span><span class="script ">gende</span><span class="script ">&lt;/caption&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case1&lt;/td&gt;</span><span class="script "><br/>        &lt;td&gt;case2&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case3&lt;/td&gt;</span><span class="script "><br/>        &lt;td&gt;case4&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>&lt;/table&gt; </span></td>
-								<td>Créer un tableau simple avec une légende</td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;table&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case1&lt;/td&gt;</span><span class="script "><br/>        &lt;td rowspan="2"&gt;case2&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case3&lt;/td&gt;</span><span class="script "><br/></span><span class="script ">    &lt;/tr&gt;</span><span class="script "><br/>&lt;/table&gt; </span></td>
-								<td>Créer un tableau avec une case fusionnée avec une autre vers le bas</td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;table&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case1&lt;/td&gt;</span><span class="script "><br/>        &lt;td&gt;case2&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td colspan="2"&gt;case3&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>&lt;/table&gt; </span></td>
-								<td>Créer un tableau avec une case fusionnée avec une autre vers la droite</td>
-							</tr>
-						</table>
-					</div>
-
-					<h3 class="soustitre" id="4.7">Les formulaires</h3>
-					<div class="contenu">
-						<p>Un formulaire permet l'envoi de données vers un serveur, avec pour action le lien vers une page PHP (ne fonctionne pas avec pour action un fichier .html).</p>
-						<h4 class="soustitre" id="4.7.1">Créer un formulaire</h4>
-						<div class="contenu">
-							<p>Syntaxe : <span class="script ">&lt;form method="</span><span class="script perso ">methode</span><span class="script ">" action="</span><span class="script perso ">lien</span><span class="script ">"&gt;</span><span class="script perso ">champs</span><span class="script ">&lt;/form&gt;</span></p>
-							<table>
-								<tr>
-									<th><span style="font-weight: bold; ">Méthode</span></th>
-									<th><span style="font-weight: bold; ">Description</span></th>
-								</tr>
-								<tr>
-									<td><span class="script ">GET</span></td>
-									<td>Écrire les données saisies dans l'URL</td>
-								</tr>
-								<tr>
-									<td><span class="script ">POST</span></td>
-									<td>Envoyer les données dans une requête HTTP (sans écrire dans l'URL)</td>
 								</tr>
 							</table>
 						</div>
 
-						<h4 class="soustitre" id="4.7.2">Types de champs</h4>
+						<h4 class="soustitre" id="4.1.6">Les tableaux</h4>
 						<div class="contenu">
 							<table>
 								<tr>
-									<th><span style="font-weight: bold; ">Champ</span></th>
+									<th><span style="font-weight: bold; ">Balise</span></th>
 									<th><span style="font-weight: bold; ">Description</span></th>
-									<th><span style="font-weight: bold; ">Résultat</span></th>
 								</tr>
 								<tr>
-									<td><span class="script ">&lt;label for="id_input_text"&gt;Zone de texte&lt;/label&gt;</span><span class="script "><br/>&lt;input type="text" name="mon_input_text" id="id_input_text" placeholder="Entrer du texte"/&gt; </span></td>
-									<td>Créer une zone de texte sur une ligne</td>
-									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAUEAAAAmCAYAAABaiClnAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+									<td><span class="script ">&lt;</span><span class="script ">table</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case1&lt;/td&gt;</span><span class="script "><br/>        &lt;td&gt;case2&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case3&lt;/td&gt;</span><span class="script "><br/>        &lt;td&gt;case4&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>&lt;/table&gt; </span></td>
+									<td>Créer un tableau simple</td>
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">table</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;</span><span class="script ">caption</span><span class="script ">&gt;</span><span class="script ">l</span><span class="script ">é</span><span class="script ">gende</span><span class="script ">&lt;/</span><span class="script ">caption</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case1&lt;/td&gt;</span><span class="script "><br/>        &lt;td&gt;case2&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case3&lt;/td&gt;</span><span class="script "><br/>        &lt;td&gt;case4&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>&lt;/table&gt; </span></td>
+									<td>Créer un tableau simple avec une légende</td>
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">table</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case1&lt;/td&gt;</span><span class="script "><br/>        &lt;td </span><span class="script ">rowspan</span><span class="script ">="2"&gt;case2&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case3&lt;/td&gt;</span><span class="script "><br/></span><span class="script ">    &lt;/tr&gt;</span><span class="script "><br/>&lt;/table&gt; </span></td>
+									<td>Créer un tableau avec une case fusionnée avec une autre vers le bas</td>
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">table</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td&gt;case1&lt;/td&gt;</span><span class="script "><br/>        &lt;td&gt;case2&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>    &lt;tr&gt;</span><span class="script "><br/>        &lt;td </span><span class="script ">colspan</span><span class="script ">="2"&gt;case3&lt;/td&gt;</span><span class="script "><br/>    &lt;/tr&gt;</span><span class="script "><br/>&lt;/table&gt; </span></td>
+									<td>Créer un tableau avec une case fusionnée avec une autre vers la droite</td>
+								</tr>
+							</table>
+						</div>
+
+						<h4 class="soustitre" id="4.1.7">Les formulaires</h4>
+						<div class="contenu">
+							<p>Un formulaire permet l'envoi de données vers un serveur, avec pour action le lien vers une page PHP (ne fonctionne pas avec pour action un fichier .html).</p>
+							<h5 class="soustitre" id="4.1.7.1">Créer un formulaire</h5>
+							<div class="contenu">
+								<p>Syntaxe : <span class="script ">&lt;</span><span class="script ">form</span><span class="script "> </span><span class="script ">method</span><span class="script ">="</span><span class="script perso ">methode</span><span class="script ">" action="</span><span class="script perso ">lien</span><span class="script ">"&gt;</span><span class="script perso ">champs</span><span class="script ">&lt;/</span><span class="script ">form</span><span class="script ">&gt;</span></p>
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Méthode</span></th>
+										<th><span style="font-weight: bold; ">Description</span></th>
+									</tr>
+									<tr>
+										<td><span class="script ">GET</span></td>
+										<td>Écrire les données saisies dans l'URL</td>
+									</tr>
+									<tr>
+										<td><span class="script ">POST</span></td>
+										<td>Envoyer les données dans une requête HTTP (sans écrire dans l'URL)</td>
+									</tr>
+								</table>
+							</div>
+
+							<h5 class="soustitre" id="4.1.7.2">Types de champs</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Champ</span></th>
+										<th><span style="font-weight: bold; ">Description</span></th>
+										<th><span style="font-weight: bold; ">Résultat</span></th>
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">label</span><span class="script "> for="</span><span class="script ">id_input_text</span><span class="script ">"&gt;Zone de texte&lt;/label&gt;</span><span class="script "><br/>&lt;input type="</span><span class="script ">text</span><span class="script ">" </span><span class="script ">name</span><span class="script ">="</span><span class="script ">mon_input_text</span><span class="script ">" id="</span><span class="script ">id_input_text</span><span class="script ">" </span><span class="script ">placeholder</span><span class="script ">="Entrer du texte"/&gt; </span></td>
+										<td>Créer une zone de texte sur une ligne</td>
+										<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAUEAAAAmCAYAAABaiClnAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAi8SURBVHhe7Z1NSFtZFMfPdFGY1lVgWgOzCUNR
 iw0G7E7IbpC3EsQShBGdbTdZBAMuWupCDASaTZejwYEgFaEbQ+lOcFepJSNVFyXMMBh1kZV0kUUz
 57x738v7uO/lJTHt6Ds/eDXv5n6ce03+nnPvSfNDo9FoAsMwTEi5JX8yDMOEEhZBhmFCDYsgwzCh
@@ -822,11 +830,11 @@ Dp57bh55ggT1uwByLEtdQq5b3Sx35APqbam2O08w8Gl5yOg2T5D/e/2QoRRBhrkBdCuC7VNkGIZh
 bjAsggzDhBoWQYZhQg2LYMig72ilryhkmJsEvabptd0NLIIhg76kmr6jlWFuCsb3DtNruxv4dDhk
 XF5+gb29911/RyvD/N8gD5AEcGLiMQwM3JGlwWERZBgm1HA4zDBMiAH4D0Ru35Rx8CkLAAAAAElF
 TkSuQmCC"/></td>
-								</tr>
-								<tr>
-									<td><span class="script ">&lt;label for="id_textarea1"&gt;Zone de texte longue&lt;/label&gt;</span><span class="script "><br/>&lt;textarea type="text" name="mon_textarea1" id="id_textarea1" placeholder="Entrer un texte long"&gt;&lt;/textarea&gt; </span></td>
-									<td>Créer une zone de texte sur plusieurs lignes</td>
-									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAZIAAABYCAYAAADfhnGcAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">label</span><span class="script "> for="id_textarea1"&gt;Zone de texte longue&lt;/label&gt;</span><span class="script "><br/>&lt;</span><span class="script ">textarea</span><span class="script "> type="</span><span class="script ">text</span><span class="script ">" </span><span class="script ">name</span><span class="script ">="mon_textarea1" id="id_textarea1" </span><span class="script ">placeholder</span><span class="script ">="Entrer un texte long"&gt;&lt;/</span><span class="script ">textarea</span><span class="script ">&gt; </span></td>
+										<td>Créer une zone de texte sur plusieurs lignes</td>
+										<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAZIAAABYCAYAAADfhnGcAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAw8SURBVHhe7dxPaFtHHsDxX3IItM7JUNduehGh
 xA2OqcG9hfUtBJ0MWXeNYRdne9tswQd1BT60NIdQB0MN3d6ateiC8dYb6KErQi+pIYd2a3BwTOIc
 gmhKSROo99A0LYJEO/PePOn915PGz22q7wdeIo3emxnNk+anNzPPB+r1ekMAAOjSQfM/AABdIZAA
@@ -883,11 +891,11 @@ S3+9NL+05b8H9D/qSwjsK33X/uytkmzcTp5/22uVyr/l9df/0NFfNQV6lYodzcl2FWTk0qV/yezs
 753nYXyj8AtIvg8mT4ODz8mdO1+bZwDS+IOI/t7o708SrkiQHz3HMiWyFrjq0HMk47Io+3s1oj18
 +EiuXftKfSnumhQA7fT1PeMEkZMnX5XDh581qUEEEuTIBI3wSl99j02mOy8BPA0IJAAAK8yRAACs
 EEgAAFYIJAAAKwQSAIAVAgkAwAqBBABgQeT/KLrI8z3z7E0AAAAASUVORK5CYII="/></td>
-								</tr>
-								<tr>
-									<td><span class="script ">&lt;label for="id_textarea2"&gt;Zone de texte longue&lt;/label&gt;</span><span class="script "><br/>&lt;textarea type="text" name="mon_textarea2" id="id_textarea2" placeholder="Entrer un texte long" cols="20" rows="2" style="resize: none;"&gt;&lt;/textarea&gt; </span></td>
-									<td>Créer une zone de texte sur plusieurs lignes non redimensionnable (il n'est pas obligatoire de renseigner le nombre de lignes et de colonnes) (c'est avec du CSS qu'on bloque le redimensionnement)</td>
-									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAZYAAABjCAYAAAC40CaIAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">label</span><span class="script "> for="id_textarea2"&gt;Zone de texte longue&lt;/label&gt;</span><span class="script "><br/>&lt;</span><span class="script ">textarea</span><span class="script "> type="</span><span class="script ">text</span><span class="script ">" </span><span class="script ">name</span><span class="script ">="mon_textarea2" id="id_textarea2" </span><span class="script ">placeholder</span><span class="script ">="Entrer un texte long" cols="20" </span><span class="script ">rows</span><span class="script ">="2" style="</span><span class="script ">resize</span><span class="script ">: none;"&gt;&lt;/</span><span class="script ">textarea</span><span class="script ">&gt; </span></td>
+										<td>Créer une zone de texte sur plusieurs lignes non redimensionnable (il n'est pas obligatoire de renseigner le nombre de lignes et de colonnes) (c'est avec du CSS qu'on bloque le redimensionnement)</td>
+										<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAZYAAABjCAYAAAC40CaIAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAtnSURBVHhe7d1PaBtnHsbxX30ItMnJUMc+iqVY
 CY6Jwb0FcgtBJ0PWWWHYxdkee/FBIPChJTkYDIb60mNqkQXjjTfQkwi5GXKrwUExsXMIor04ycGn
 0IMO9r7vzDua/9JIesd2qu8HprXGM+87mrHeR/O+77RftFqtUwEAwJIR828AAKwgWAAAVhEsAACr
@@ -941,11 +949,11 @@ ZZo1042B/mWdbvyF/of6QAJnTv9XBRYPKrL7Nn38zrZa7X/y3Xf/kJGRbBMiAbhOTk7k8eP/yuLi
 /pSXL39TH5I/zBoA3Vy+/KUTKrdufStXrnxl1qYjWJAzEyLRmcX6GZ9MT4IC+NwQLAAAqxhjAQBY
 RbAAAKwiWAAAVhEsAACrCBYAgFUECwDAKoIFAGAVwQIAsIpgAQBYJPJ/MI0AOskWTJAAAAAASUVO
 RK5CYII="/></td>
-								</tr>
-								<tr>
-									<td><span class="script ">&lt;label for="id_input_number"&gt;Valeur numérique&lt;/label&gt;</span><span class="script "><br/>&lt;input type="number" name="mon_input_number" id="id_input_number" placeholder="Entrer un nombre" min="0" max="99"/&gt; </span></td>
-									<td>Créer une zone de saisie d'un nombre</td>
-									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAVYAAAAqCAYAAADoOHONAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">label</span><span class="script "> for="</span><span class="script ">id_input_number</span><span class="script ">"&gt;Valeur numérique&lt;/label&gt;</span><span class="script "><br/>&lt;input type="</span><span class="script ">number</span><span class="script ">" </span><span class="script ">name</span><span class="script ">="</span><span class="script ">mon_input_number</span><span class="script ">" id="</span><span class="script ">id_input_number</span><span class="script ">" </span><span class="script ">placeholder</span><span class="script ">="Entrer un nombre" min="0" max="99"/&gt; </span></td>
+										<td>Créer une zone de saisie d'un nombre</td>
+										<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAVYAAAAqCAYAAADoOHONAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAoKSURBVHhe7Z1NaFtXFsfPBMbQJjCpmdjW0Ayo
 pUgxtokbdWjA1JtSjFYCTzLCMEGZLrvxwmDwIsZZGARaaNNlxyYDQhOPwSsRAl24GFqmJg6KceRF
 KqYt49gMygyELjSQmXPuh3Tfh6Qn60q1nfODZ0v3vfv5fP7v3nOPrF9Uq9X/AcMwDGONc+o3wzAM
@@ -993,11 +1001,11 @@ Yjo4eMnaTFXDwsowDGMZFlaGYRjLsI+V6Qmrq3+DTz/9A5w7x89y5uxAX4H9xRd/hVTq9ypFwn/l
 TE8YGrokvoOdYc4KJKr0N01/2254xsr0hJcvf4KtrW/xD7HzjwsyzEng/Pk3hKhOTHwAFy68qVIl
 LKwMwzCWYVcAwzCMZVhYGYZhLMPCyjAMYxkWVoZhGKsA/B8s57k+pE04RAAAAABJRU5ErkJggg==
 "/></td>
-								</tr>
-								<tr>
-									<td><span class="script ">&lt;label for="id_input_email"&gt;Email&lt;/label&gt;</span><span class="script "><br/>&lt;input type="email" name="mon_input_email" id="id_input_email" placeholder="Entrer un email"/&gt; </span></td>
-									<td>Créer un champ pour une adresse mail</td>
-									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAPIAAAAtCAYAAACUADZeAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">label</span><span class="script "> for="</span><span class="script ">id_input_email</span><span class="script ">"&gt;Email&lt;/label&gt;</span><span class="script "><br/>&lt;input type="email" </span><span class="script ">name</span><span class="script ">="</span><span class="script ">mon_input_email</span><span class="script ">" id="</span><span class="script ">id_input_email</span><span class="script ">" </span><span class="script ">placeholder</span><span class="script ">="Entrer un email"/&gt; </span></td>
+										<td>Créer un champ pour une adresse mail</td>
+										<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAPIAAAAtCAYAAACUADZeAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAXOSURBVHhe7Z0/aBtXHMe/NcXQJpOhtjWaEiQb
 2UjgbgFtxmjSVESgwu6aRUPgwENDOgQOMtyStQ4pGBEIeBIhmyBbDTa2aZQhmHZR7EFT6KAh7fvd
 vbPenWVFf8519Pz9wJN0P793793xvvd+v98d5686nc6/IIRMNFP6mxAywVDIhFgAhUyIBVDIhFgA
@@ -1025,11 +1033,11 @@ eISlvauPkXtnrYd7RBOpIir+7Zawfb/bJykUHbk9E9x37vbp4Wi5MlKWOr9ZRkbEpvflna4lF2uq
 Y3PcKgro7t8v3hGWK+Pc25XzEB23f2uMMfJYWP2qn6dPf0e1+rPeIsQePO833L//k976ErLWhJCx
 oZAJsQAKmRALsFrI8g5geX0oITYhc1rmtonVQpYXecs7gAmxhfC91jK3TfifJgiZIG7kf5og5KbA
 ZBchFkAhE2IBFDIhFkAhE2IBFDIhFkAhE2IBFDIhEw/wH5z9ukC7E5g1AAAAAElFTkSuQmCC"/></td>
-								</tr>
-								<tr>
-									<td><span class="script ">&lt;label for="id_input_password"&gt;Mot de passe&lt;/label&gt;</span><span class="script "><br/>&lt;input type="password" </span><span class="script ">name="mon_input_password" id="id_input_password" placeholder="Entrer un mot de passe"/&gt; </span></td>
-									<td>Créer un champ pour un mot de passe</td>
-									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAATcAAAAnCAYAAABqgw8dAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">label</span><span class="script "> for="</span><span class="script ">id_input_password</span><span class="script ">"&gt;Mot de passe&lt;/label&gt;</span><span class="script "><br/>&lt;input type="</span><span class="script ">password</span><span class="script ">" </span><span class="script ">name</span><span class="script ">="</span><span class="script ">mon_input_password</span><span class="script ">" id="</span><span class="script ">id_input_password</span><span class="script ">" </span><span class="script ">placeholder</span><span class="script ">="Entrer un mot de passe"/&gt; </span></td>
+										<td>Créer un champ pour un mot de passe</td>
+										<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAATcAAAAnCAYAAABqgw8dAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAqzSURBVHhe7Z1NaBtJFoDfhsWwO3MSrG0dxTL4
 B8VY4L0N6GaCTgYTIwxr7L3OxQdhgQ8xzsFYYBhd5ri28YIQNgZfIkJugrmtiIxsxvYhiN3DKM7B
 p2EPPkT7XlV1d3V39Y+UZBJ33gcVq6te/ar76b1XpegP9/f3fWAYhkkYj9RfhmGYRMHKjWGYRMLK
@@ -1079,11 +1087,11 @@ ZpMaK7mTxVvtPaYm0e0EHDeZokhubR16FW0uhDYfb315n1TUDiztxuLYveuFpOis4pAeNf834wHI
 A7NxDxZ/uZgP8TKMhTpcS4d4hw1ufSaiDvHGd0sZhmEeEKzcGIZJJKzcGOarRsa7HppLGgdWbgGI
 DZEHHm8j6Dce6afQGCZJ0D1N93YYrNwSDv14Lf3GI8MkBet3S+neDoN3SxMO/+I8kzT4F+cZhvmq
 YbeUYZhEwsqNYZhEwsqNYZhEwsqNYZhEwsqNYZgEAvB/LIIt8SBeOZYAAAAASUVORK5CYII="/></td>
-								</tr>
-								<tr>
-									<td><span class="script ">&lt;input type="checkbox" name="mon_input_checkbox1" id="id_input_checkbox1" checked/&gt;</span><span class="script "><br/>&lt;label for="id_input_checkbox1"&gt;Cocher ici&lt;/label&gt;</span><span class="script "><br/></span><span class="script "><br/>&lt;input type="checkbox" name="mon_input_checkbox2" id="id_input_checkbox2"/&gt;</span><span class="script "><br/>&lt;label for="id_input_checkbox2"&gt;Cocher plutôt ici&lt;/label&gt; </span></td>
-									<td>Créer des cases à cocher (checked permet de pré-cocher la case)</td>
-									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAASAAAAAnCAYAAACv8ZWMAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">input</span><span class="script "> type="</span><span class="script ">checkbox</span><span class="script ">" </span><span class="script ">name</span><span class="script ">="mon_input_checkbox1" id="id_input_checkbox1" </span><span class="script ">checked</span><span class="script ">/&gt;</span><span class="script "><br/>&lt;label for="id_input_checkbox1"&gt;Cocher ici&lt;/label&gt;</span><span class="script "><br/></span><span class="script "><br/>&lt;input type="</span><span class="script ">checkbox</span><span class="script ">" </span><span class="script ">name</span><span class="script ">="mon_input_checkbox2" id="id_input_checkbox2"/&gt;</span><span class="script "><br/>&lt;label for="id_input_checkbox2"&gt;Cocher plutôt ici&lt;/label&gt; </span></td>
+										<td>Créer des cases à cocher (checked permet de pré-cocher la case)</td>
+										<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAASAAAAAnCAYAAACv8ZWMAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAlFSURBVHhe7ZtPiGNFHsd/K27biCzjKMteFLMe
 eroJmVFyGNg5zEE8BNzN0tvNbC4+/5wUYQ4BoQ/2dB/CHgKKgifFeAlN94aNu5CTosi6p7A6oelM
 BH2D7mGRRkeQcSbI6O9XVS95r1Lvpep1ul+P/j7w6PfSlapX/771+/2q8qvhcPgjMAzDZMAd6i/D
@@ -1127,11 +1135,11 @@ AhEQp54xj0i91LmgiXM+WB6JSJDWdTGNK8smMp34a/jH6vupfw/2xOl5aD1/n3pijgNXrnwG7733
 H/XkTql0HnK5B9QTEwdZK7fLr/GzJtEC+vtzJ4WQuELfefOpe9UTc1w4dephdGV/jyvUr9Un9hQK
 p1h8mJmTaAExDOMOW0D2pIoBMQzDzAK2gBiGyQy2gBiGyQwWIIZhMoMFiGGYzGABYhgmM1iAGIbJ
 DBYghmEyAuAnQ/PMuhyhQ5UAAAAASUVORK5CYII="/></td>
-								</tr>
-								<tr>
-									<td><span class="script ">&lt;input type="checkbox" name="mon_input_checkbox" value="checkbox1" id="id_input_checkbox3" checked/&gt;</span><span class="script "><br/>&lt;label for="id_input_checkbox3"&gt;Cocher ici&lt;/label&gt;</span><span class="script "><br/></span><span class="script "><br/>&lt;input type="checkbox" name="mon_input_checkbox" value="checkbox2" id="id_input_checkbox4"/&gt;</span><span class="script "><br/>&lt;label for="id_input_checkbo</span><span class="script ">x4"&gt;Cocher plutôt ici&lt;/label&gt; </span></td>
-									<td>Créer des cases à cocher (autre méthode) (checked permet de pré-cocher la case)</td>
-									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAASAAAAAnCAYAAACv8ZWMAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">input</span><span class="script "> type="</span><span class="script ">checkbox</span><span class="script ">" </span><span class="script ">name</span><span class="script ">="</span><span class="script ">mon_input_checkbox</span><span class="script ">" value="checkbox1" id="id_input_checkbox3" </span><span class="script ">checked</span><span class="script ">/&gt;</span><span class="script "><br/>&lt;label for="id_input_checkbox3"&gt;Cocher ici&lt;/label&gt;</span><span class="script "><br/></span><span class="script "><br/>&lt;input type="</span><span class="script ">checkbox</span><span class="script ">" </span><span class="script ">name</span><span class="script ">="</span><span class="script ">mon_input_checkbox</span><span class="script ">" value="checkbox2" id="id_input_checkbox4"/&gt;</span><span class="script "><br/>&lt;label for="id_input_checkbo</span><span class="script ">x4"&gt;Cocher plutôt ici&lt;/label&gt; </span></td>
+										<td>Créer des cases à cocher (autre méthode) (checked permet de pré-cocher la case)</td>
+										<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAASAAAAAnCAYAAACv8ZWMAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAlFSURBVHhe7ZtPiGNFHsd/K27biCzjKMteFLMe
 eroJmVFyGNg5zEE8BNzN0tvNbC4+/5wUYQ4BoQ/2dB/CHgKKgifFeAlN94aNu5CTosi6p7A6oelM
 BH2D7mGRRkeQcSbI6O9XVS95r1Lvpep1ul+P/j7w6PfSlapX/771+/2q8qvhcPgjMAzDZMAd6i/D
@@ -1175,11 +1183,11 @@ AhEQp54xj0i91LmgiXM+WB6JSJDWdTGNK8smMp34a/jH6vupfw/2xOl5aD1/n3pijgNXrnwG7733
 H/XkTql0HnK5B9QTEwdZK7fLr/GzJtEC+vtzJ4WQuELfefOpe9UTc1w4dephdGV/jyvUr9Un9hQK
 p1h8mJmTaAExDOMOW0D2pIoBMQzDzAK2gBiGyQy2gBiGyQwWIIZhMoMFiGGYzGABYhgmM1iAGIbJ
 DBYghmEyAuAnQ/PMuhyhQ5UAAAAASUVORK5CYII="/></td>
-								</tr>
-								<tr>
-									<td><span class="script ">&lt;input type="radio" name="mon_input_radio" value="radio1" id="id_input_radio1" checked/&gt;</span><span class="script "><br/>&lt;label for="id_input_radio1"&gt;Cocher ici&lt;/label&gt;</span><span class="script "><br/></span><span class="script "><br/>&lt;input type="radio" name="mon_input_radio" value="radio2" id="id_input_radio2"/&gt;</span><span class="script "><br/>&lt;label for="id_input_radio2"&gt;Cocher plutôt ici&lt;/label&gt; </span></td>
-									<td>Créer des radios à cocher (checked permet de pré-cocher la case)</td>
-									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAASwAAAAvCAYAAABZnvdvAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">input</span><span class="script "> type="radio" </span><span class="script ">name</span><span class="script ">="</span><span class="script ">mon_input_radio</span><span class="script ">" value="radio1" id="id_input_radio1" </span><span class="script ">checked</span><span class="script ">/&gt;</span><span class="script "><br/>&lt;label for="id_input_radio1"&gt;Cocher ici&lt;/label&gt;</span><span class="script "><br/></span><span class="script "><br/>&lt;input type="radio" </span><span class="script ">name</span><span class="script ">="</span><span class="script ">mon_input_radio</span><span class="script ">" value="radio2" id="id_input_radio2"/&gt;</span><span class="script "><br/>&lt;label for="id_input_radio2"&gt;Cocher plutôt ici&lt;/label&gt; </span></td>
+										<td>Créer des radios à cocher (checked permet de pré-cocher la case)</td>
+										<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAASwAAAAvCAYAAABZnvdvAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAoxSURBVHhe7Z1tiFxXGcefbXFCLZKIpk1KSTvV
 sjvbZWjDaAShVL85tWVkmO12Po0KBb9YCtt+WGjSpDAfdEAQgiKoC5bpuuvg0LWjX9RSEIwOaR2m
 2V2qHQ01SRtjE6TGjDTr+Z97z8x9n3PmZbPXPj+43LP3Pufcl+c5/3vehp3qdrvbxDAMEwNusvcM
@@ -1227,11 +1235,11 @@ rD7MYNFmiTaEOI11MoZx4RMsBX4biJ/bYAU7FoWqdVaYDcQAO8as0A00b1kxNxr83AYr2LEoVK2z
 wmwgBtgxZmXaDWQAC9ZOECpYDMOYwIK1E7jGsBiGYXYz3MJiGCY2cAuLYZjYwILFMExsYMFiGCY2
 sGAxDBMbWLAYhokNLFgMw8QGFiyGYWIDCxbDMLGBBYthmNjAgsUwTGxgwWIYJjawYDEMExtYsBiG
 iQ0sWAzDxAYWLIZhYgLR/wDkv9VYLjdnMwAAAABJRU5ErkJggg=="/></td>
-								</tr>
-								<tr>
-									<td><span class="script ">&lt;label for="id_select_options1"&gt;Choix d'un item&lt;/label&gt;</span><span class="script "><br/>&lt;select name="mon_select_options1" id="id_select_options1"&gt;</span><span class="script "><br/>    &lt;option value="option1_1"&gt;Valeur 1&lt;/option&gt;</span><span class="script "><br/>    &lt;option value="option1_2"&gt;Valeur 2&lt;/option&gt;</span><span class="script "><br/>    &lt;option value="option1_3"&gt;Valeur 3&lt;/option&gt;</span><span class="script "><br/>&lt;/select&gt; </span></td>
-									<td>Créer liste déroulante</td>
-									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAPoAAAAuCAYAAAABQwQEAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">label</span><span class="script "> for="id_select_options1"&gt;Choix d'un item&lt;/label&gt;</span><span class="script "><br/>&lt;select </span><span class="script ">name</span><span class="script ">="mon_select_options1" id="id_select_options1"&gt;</span><span class="script "><br/>    &lt;option value="option1_1"&gt;Valeur 1&lt;/option&gt;</span><span class="script "><br/>    &lt;option value="option1_2"&gt;Valeur 2&lt;/option&gt;</span><span class="script "><br/>    &lt;option value="option1_3"&gt;Valeur 3&lt;/option&gt;</span><span class="script "><br/>&lt;/select&gt; </span></td>
+										<td>Créer liste déroulante</td>
+										<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAPoAAAAuCAYAAAABQwQEAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAieSURBVHhe7Z1PaBtXHse/2YOvOSwlLRQcLTSK
 bVkQInLIUgIBB2pwd+p/dUUWtMfFpr2oKfWSGsfgktYnE7NXlRY1+E8jGlCKDYVS6CG4FGTZqtKD
 km2hDSWHXH3Jvt+8J2n+SDOa0Ui2PL8PjKX3NDNv5s37vvf7I+RTh4eHL8AwzInmL+qVYZgTDAud
@@ -1272,11 +1280,11 @@ FL5+3iso33A7rwvVL8yIc92hYMCTVVzVy73zNV7+hRnGF2trnyOZ1FSJ6TbZbA6zs/9UJXdaW9EZ
 hulpWOiML+hXSZmjw2v/s9AZX/j5OSMmGPz8jBcLnfEF/b743t7PqsR0E+p36n8vcDCO8Q3/rnt3
 4d91Z44M/k8t3YH/UwvDMK6wj84wIYCFzjAhgIXOMCGAhc4wIYCFzjAhgIXOMCGAhc4wIYCFzjAh
 gIXOMCGAhc4wJx7g/1HP4wJnCwYKAAAAAElFTkSuQmCC"/></td>
-								</tr>
-								<tr>
-									<td><span class="script ">&lt;label for="id_select_options2"&gt;Choix des items&lt;/label&gt;</span><span class="script "><br/>&lt;select name="mon_select_options2" id="id_select_options2" multiple&gt;</span><span class="script "><br/></span><span class="script ">    &lt;option value="option2_1"&gt;Valeur 1&lt;/option&gt;</span><span class="script "><br/>    &lt;option value="option2_2"&gt;Valeur 2&lt;/option&gt;</span><span class="script "><br/>    &lt;option value="option2_3"&gt;Valeur 3&lt;/option&gt;</span><span class="script "><br/>&lt;/select&gt; </span></td>
-									<td>Créer une liste à sélection multiple</td>
-									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAO4AAAB6CAYAAAC4GW93AAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">label</span><span class="script "> for="id_select_options2"&gt;Choix des items&lt;/label&gt;</span><span class="script "><br/>&lt;select </span><span class="script ">name</span><span class="script ">="mon_select_options2" id="id_select_options2" multiple&gt;</span><span class="script "><br/></span><span class="script ">    &lt;option value="option2_1"&gt;Valeur 1&lt;/option&gt;</span><span class="script "><br/>    &lt;option value="option2_2"&gt;Valeur 2&lt;/option&gt;</span><span class="script "><br/>    &lt;option value="option2_3"&gt;Valeur 3&lt;/option&gt;</span><span class="script "><br/>&lt;/select&gt; </span></td>
+										<td>Créer une liste à sélection multiple</td>
+										<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAO4AAAB6CAYAAAC4GW93AAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAvnSURBVHhe7d3PTxPpHwfwj784LjGeNxE4EFgo
 uOGgXvTgwQCH+gU3pAsJRg578cZCwiZLMJEEvtzWwx4wksA2RGTFBIgHE/ViPJANlF8hEfgHNMYr
 Ednn8zzPtDPTYdoy09pn9v1KajvDtDNt5z3PL3w4dXBwcEQAYJTT+h4ADILgAhgIwQUwEIILYCAE
@@ -1332,11 +1340,11 @@ DDm+R+IEcXWCVHCCToTHJ7NfU43r+rTNeNyS9+nqHU7cV0Mb/uOP4kTf0eOU6X220NbwAc116E18
 4EJeKiu/S48/Qmnw582fuxdUlSEvk5N/0eXLP9KlS//ZAfSS4tCmUpv07t0/1Nf3s16bgeBCXj59
 +kzz84u0trap10AxcUl78eL31NHRTufPV+q1GQgugIHQxgUwEIILYCAEF8BACC6AgRBcAOMQ/QtI
 gpMjDouzFgAAAABJRU5ErkJggg=="/></td>
-								</tr>
-								<tr>
-									<td><span class="script ">&lt;label for="id_input_file1"&gt;Déposer un fichier&lt;/label&gt;</span><span class="script "><br/>&lt;br/&gt;</span><span class="script "><br/>&lt;input type="file" name="mon_input_file1" id="id_input_file1" enctype="multipart/form-data"/&gt; </span></td>
-									<td>Créer une zone de dépôt de fichiers (1 seul fichier) (<span class="script ">enctype="multipart/form-data"</span> permet d'envoyer le contenu du fichier au serveur et non le nom du fichier)</td>
-									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAS4AAABGCAYAAABykHnAAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">label</span><span class="script "> for="id_input_file1"&gt;Déposer un fichier&lt;/label&gt;</span><span class="script "><br/>&lt;</span><span class="script ">br</span><span class="script ">/&gt;</span><span class="script "><br/>&lt;input type="file" </span><span class="script ">name</span><span class="script ">="mon_input_file1" id="id_input_file1" </span><span class="script ">enctype</span><span class="script ">="</span><span class="script ">multipart</span><span class="script ">/</span><span class="script ">form</span><span class="script ">-data"/&gt; </span></td>
+										<td>Créer une zone de dépôt de fichiers (1 seul fichier) (<span class="script ">enctype</span><span class="script ">="</span><span class="script ">multipart</span><span class="script ">/</span><span class="script ">form</span><span class="script ">-data"</span> permet d'envoyer le contenu du fichier au serveur et non le nom du fichier)</td>
+										<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAS4AAABGCAYAAABykHnAAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA1dSURBVHhe7Z3PaxxHFsef96B/YFmcQ0CeQ6zo
 R+biwYccNmCIDwIHrWUJZfCy46OxyWnwQWAL2aBAmJOR8dEKayZG8iTDGuawBsNecgjKZawfq+Qw
 FuQQs+QfmIu3XlX1dHV190z3dPd4Wvp+oPWju7q6+k3XV/Velfqd6Xa77wgAAHLEn/R3AADIDRAu
@@ -1398,11 +1406,11 @@ MrKlR4Tb57ER13MolxioqpSN1XIG41ryHswZPYMI7eO4mq9OcXxNVyizlvNyBH0saGmIvw69rCOT
 vKZD2CEmoa9ufvTon1QuL+jfQBbU6026devv+jcAQFRCR1yc2AFkC2wMwHCEChfe0JkteMMsAMMT
 KlycQouz0WBUkD5sU7Yt2xgAEB+kJxsxSE8GQHKQEHaEICEsAOkwULgAAGDcyGwdFwAAZAWECwCQ
 OyBcAIDcAeECAOQOCBcAIHdAuAAAuQPCBQDIGUT/B9aCHmLRAhQgAAAAAElFTkSuQmCC"/></td>
-								</tr>
-								<tr>
-									<td><span class="script ">&lt;label for="id_input_file2"&gt;Déposer un fichier&lt;/label&gt;</span><span class="script "><br/>&lt;br/&gt;</span><span class="script "><br/>&lt;input type="file" name="mon_input_file2" id="id_input_file2" enctype="multipart/form-data" multiple/&gt; </span></td>
-									<td>Créer une zone de dépôt de fichiers (plusieurs fichiers) (<span class="script ">enctype="multipart/form-data"</span> permet d'envoyer le contenu du fichier au serveur et non le nom du fichier)</td>
-									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAS4AAABGCAYAAABykHnAAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">label</span><span class="script "> for="id_input_file2"&gt;Déposer un fichier&lt;/label&gt;</span><span class="script "><br/>&lt;</span><span class="script ">br</span><span class="script ">/&gt;</span><span class="script "><br/>&lt;input type="file" </span><span class="script ">name</span><span class="script ">="mon_input_file2" id="id_input_file2" </span><span class="script ">enctype</span><span class="script ">="</span><span class="script ">multipart</span><span class="script ">/</span><span class="script ">form</span><span class="script ">-data" multiple/&gt; </span></td>
+										<td>Créer une zone de dépôt de fichiers (plusieurs fichiers) (<span class="script ">enctype</span><span class="script ">="</span><span class="script ">multipart</span><span class="script ">/</span><span class="script ">form</span><span class="script ">-data"</span> permet d'envoyer le contenu du fichier au serveur et non le nom du fichier)</td>
+										<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAS4AAABGCAYAAABykHnAAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA1dSURBVHhe7Z3PaxxHFsef96B/YFmcQ0CeQ6zo
 R+biwYccNmCIDwIHrWUJZfCy46OxyWnwQWAL2aBAmJOR8dEKayZG8iTDGuawBsNecgjKZawfq+Qw
 FuQQs+QfmIu3XlX1dHV190z3dPd4Wvp+oPWju7q6+k3XV/Velfqd6Xa77wgAAHLEn/R3AADIDRAu
@@ -1464,11 +1472,11 @@ MrKlR4Tb57ER13MolxioqpSN1XIG41ryHswZPYMI7eO4mq9OcXxNVyizlvNyBH0saGmIvw69rCOT
 vKZD2CEmoa9ufvTon1QuL+jfQBbU6026devv+jcAQFRCR1yc2AFkC2wMwHCEChfe0JkteMMsAMMT
 KlycQouz0WBUkD5sU7Yt2xgAEB+kJxsxSE8GQHKQEHaEICEsAOkwULgAAGDcyGwdFwAAZAWECwCQ
 OyBcAIDcAeECAOQOCBcAIHdAuAAAuQPCBQDIGUT/B9aCHmLRAhQgAAAAAElFTkSuQmCC"/></td>
-								</tr>
-								<tr>
-									<td><span class="script ">&lt;label for="id_input_color"&gt;Choix d'une couleur&lt;/label&gt;</span><span class="script "><br/>&lt;input type="color" name="mon_input_color" id="id_input_color"/&gt; </span></td>
-									<td>Créer un bouton de choix d'une couleur</td>
-									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAQsAAAAzCAYAAACACy0mAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">label</span><span class="script "> for="</span><span class="script ">id_input_color</span><span class="script ">"&gt;Choix d'une couleur&lt;/label&gt;</span><span class="script "><br/>&lt;input type="</span><span class="script ">color</span><span class="script ">" </span><span class="script ">name</span><span class="script ">="</span><span class="script ">mon_input_color</span><span class="script ">" id="</span><span class="script ">id_input_color</span><span class="script ">"/&gt; </span></td>
+										<td>Créer un bouton de choix d'une couleur</td>
+										<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAQsAAAAzCAYAAACACy0mAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAActSURBVHhe7Z2/axtZEMdHx6H/IMSFi6gwOhtZ
 zW0VuDKNKoFxMAsH24ZwnSoXseVClbojpBUcCGNhUKUm5UEqXSMLK8KFUqTwkf9AjW9m90nan2/f
 ynLOG38/sFi7fqt5O/vmuzPvLagwn8/vCAAAUvhJ/QUAAC0QCwCAERALAIAREAsAgBEQCwCAERAL
@@ -1503,11 +1511,11 @@ Hxvr8tR/N2TT4EeGQG7R/cgQ0IMfGQIAPBgQC5BbCoWC+gSyso7vIBYgt2xtPaPb229qD5giPhPf
 ZQViAXLL/n6Zrq4+qz1givhMfJcViAXILTs7L2h7+zl9/Pg3MgwDxEfiK/GZ+C4rWA0Buefm5gs/
 LaduMNzdYTjHIXMUUnpIRrGOUAgQCwCAEShDAABGQCwAAEZALAAABhD9B0uOWdhUPF4HAAAAAElF
 TkSuQmCC"/></td>
-								</tr>
-								<tr>
-									<td><span class="script ">&lt;label for="id_input_date"&gt;Choix d'une date&lt;/label&gt;</span><span class="script "><br/>&lt;input type="date" name="mon_input_date" id="id_input_date/"&gt; </span></td>
-									<td>Créer un bouton de choix d'une date</td>
-									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAATsAAAArCAYAAAAHfS/oAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">label</span><span class="script "> for="</span><span class="script ">id_input_date</span><span class="script ">"&gt;Choix d'une date&lt;/label&gt;</span><span class="script "><br/>&lt;input type="date" </span><span class="script ">name</span><span class="script ">="</span><span class="script ">mon_input_date</span><span class="script ">" id="</span><span class="script ">id_input_date</span><span class="script ">/"&gt; </span></td>
+										<td>Créer un bouton de choix d'une date</td>
+										<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAATsAAAArCAYAAAAHfS/oAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAoBSURBVHhe7Z09aBvZFsf/TmF42W0XtguSWbxO
 HNmFX7eQdpFcmNgbHGGDeJBqi2whZOJAhE3iYGPYbZYkxXuIyAgTW4sLW7hN2O6pkOUPrQtL5LVp
 NylUZN69d+6M5lMzoy8r1vnBjTRXZ+aeudb8555z70RD9XpdAUEQxBXnmnwlCIK40pDYEQQxEJDY
@@ -1554,11 +1562,11 @@ Gp5ix8Olx7cbyydk+DSWVdDQui1MjxzjmS5s/D8CWEQlVbIszTCiJvh355rZ9Ip+8qV78Odjz87O
 Aj36xQXuzp07vkZ2JHZEX+NnZGfNM8VMQieRs4UafNbwKgsHYacTYuedsyOILmJ9OsIxel3YN9mQ
 0BGtQGJHdA3+M3j816EIoh34d4h/l9qFxI7oGvz3PvnP4BFEq2g/pci/S+1COTuia9CPZBPtQj+S
 TRAEERAKYwmCGAhI7AiCGAhI7AiCGACA/wPly3O61aGHxQAAAABJRU5ErkJggg=="/></td>
-								</tr>
-								<tr>
-									<td><span class="script ">&lt;button type="submit"&gt;Valider&lt;/button&gt;</span></td>
-									<td>Créer un bouton de validation du formulaire</td>
-									<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFgAAAAtCAYAAAAqeqxGAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+									</tr>
+									<tr>
+										<td><span class="script ">&lt;</span><span class="script ">button</span><span class="script "> type="</span><span class="script ">submit</span><span class="script ">"&gt;Valider&lt;/</span><span class="script ">button</span><span class="script ">&gt;</span></td>
+										<td>Créer un bouton de validation du formulaire</td>
+										<td><img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFgAAAAtCAYAAAAqeqxGAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPFSURBVGhD7ZrPS6JBGMe/7r+wLHYI9NK6YZ0C
 D8ESCG83w0qCwj3sMZSOu3SQCFkW9xhJxw4bBWEmefMFIRY6BJ3Ufl4SOiRL/0CXdp7XefPVZHNe
 32k3nQ9M9s77OuPz9ZnvzPi+rvv7+wcopPGGvyokoQSWjBJYMkpgySiBJaMElowSWDJKYMnY2mhc
@@ -1577,95 +1585,113 @@ EFlegqe6hmDrzpFWIDZ2k90gQWBTSKJhDwb+FRyz5VJ1feLRF3NhMQ+mjUeR+TwtueptpOArsqUe
 P29A/dQOEQcTmfdjlOABQpsrL7qbFLonl07/xMJCmB/1D9vbOcRin/iRGEIZTHdb+5Fu4hYSuNvb
 J6+Rbm+TCQlMzwnQrex+guKluO0iJDA9hEHPCej6r57PZIqP4qR4u3n4RD3Z04Z/+mSPQgwp62BF
 AyWwZJTAklECS0YJLBklsGSUwJJRAksF+ANLUo/xS1cJJwAAAABJRU5ErkJggg=="/></td>
-								</tr>
-							</table>
-							
-							
-							
-							
-							<div class="note ">Chaque champ doit être précédé ou suivi par <span class="script ">&lt;label for="id_champ"&gt;</span><span class="script perso ">Mon champ</span><span class="script ">&lt;/label&gt;</span> pour une meilleure accessibilité. Il est également possible de placer le champ dans le label, dans ce cas l'attribut <span class="script ">for</span> n'est pas nécessaire.</div>
+									</tr>
+								</table>
+								
+								
+								
+								
+								<div class="note ">Chaque champ doit être précédé ou suivi par <span class="script ">&lt;label for="</span><span class="script ">id_champ</span><span class="script ">"&gt;</span><span class="script perso ">Mon champ</span><span class="script ">&lt;/label&gt;</span> pour une meilleure accessibilité. Il est également possible de placer le champ dans le label, dans ce cas l'attribut <span class="script ">for</span> n'est pas nécessaire.</div>
+							</div>
+
+							<h5 class="soustitre" id="4.1.7.3">Autres attributs pour les champs</h5>
+							<div class="contenu">
+								<table>
+									<tr>
+										<th><span style="font-weight: bold; ">Attribut</span></th>
+										<th><span style="font-weight: bold; ">Description</span></th>
+									</tr>
+									<tr>
+										<td><span class="script ">required</span></td>
+										<td>Forcer l'entrée d'une valeur dans le champ pour la validation du formulaire</td>
+									</tr>
+									<tr>
+										<td><span class="script ">value</span><span class="script ">="</span><span class="script perso ">valeur</span><span class="script ">"</span></td>
+										<td>Entrer une valeur par défaut (utile dans les inputs de saisie de valeurs)</td>
+									</tr>
+									<tr>
+										<td><span class="script ">minlength</span><span class="script ">="</span><span class="script perso ">valeur</span><span class="script ">"</span></td>
+										<td>Forcer une longueur minimale</td>
+									</tr>
+									<tr>
+										<td><span class="script ">maxlength</span><span class="script ">="</span><span class="script perso ">valeur</span><span class="script ">"</span></td>
+										<td>Forcer une longueur maximale</td>
+									</tr>
+								</table>
+							</div>
+
 						</div>
 
-						<h4 class="soustitre" id="4.7.3">Autres attributs pour les champs</h4>
+						<h4 class="soustitre" id="4.1.8">Les audios</h4>
 						<div class="contenu">
 							<table>
 								<tr>
-									<th><span style="font-weight: bold; ">Attribut</span></th>
+									<th><span style="font-weight: bold; ">Balise</span></th>
 									<th><span style="font-weight: bold; ">Description</span></th>
 								</tr>
 								<tr>
-									<td><span class="script ">required</span></td>
-									<td>Forcer l'entrée d'une valeur dans le champ pour la validation du formulaire</td>
+									<td><span class="script ">&lt;</span><span class="script ">audio</span><span class="script "> </span><span class="script ">controls</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.ogg" type="audio/</span><span class="script ">ogg</span><span class="script ">"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.mp3" type="audio/</span><span class="script ">mpeg</span><span class="script ">"/&gt;</span><span class="script "><br/>    Lecture impossible</span><span class="script "><br/>&lt;/audio&gt; </span></td>
+									<td>Ajouter un audio qui récupère la première source compatible (<span class="script ">controls</span> permet d'afficher les éléments de contrôle de l'audio)</td>
 								</tr>
 								<tr>
-									<td><span class="script ">value="</span><span class="script perso ">valeur</span><span class="script ">"</span></td>
-									<td>Entrer une valeur par défaut (utile dans les inputs de saisie de valeurs)</td>
+									<td><span class="script ">&lt;</span><span class="script ">audio</span><span class="script "> </span><span class="script ">autoplay</span><span class="script "> </span><span class="script ">controls</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.ogg" type="audio/</span><span class="script ">ogg</span><span class="script ">"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.mp3" type="audio/</span><span class="script ">mpeg</span><span class="script ">"/&gt;</span><span class="script "><br/>&lt;/audio&gt; </span></td>
+									<td>Ajouter un audio qui démarre automatiquement (peut être bloqué par certains navigateurs)</td>
 								</tr>
 								<tr>
-									<td><span class="script ">minlength="</span><span class="script perso ">valeur</span><span class="script ">"</span></td>
-									<td>Forcer une longueur minimale</td>
+									<td><span class="script ">&lt;</span><span class="script ">audio</span><span class="script "> </span><span class="script ">loop</span><span class="script "> </span><span class="script ">controls</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.ogg" type="audio/</span><span class="script ">ogg</span><span class="script ">"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.mp3" type="audio/</span><span class="script ">mpeg</span><span class="script ">"/&gt;</span><span class="script "><br/>&lt;/audio&gt; </span></td>
+									<td>Ajouter un audio répété en boucle</td>
 								</tr>
 								<tr>
-									<td><span class="script ">maxlength="</span><span class="script perso ">valeur</span><span class="script ">"</span></td>
-									<td>Forcer une longueur maximale</td>
+									<td><span class="script ">&lt;</span><span class="script ">audio</span><span class="script "> </span><span class="script ">muted</span><span class="script "> </span><span class="script ">controls</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.ogg" type="audio/</span><span class="script ">ogg</span><span class="script ">"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.mp3" type="audio/</span><span class="script ">mpeg</span><span class="script ">"/&gt;</span><span class="script "><br/>&lt;/audio&gt; </span></td>
+									<td>Ajouter un audio avec un son coupé par défaut</td>
 								</tr>
 							</table>
 						</div>
 
+						<h4 class="soustitre" id="4.1.9">Les vidéos</h4>
+						<div class="contenu">
+							<table>
+								<tr>
+									<th><span style="font-weight: bold; ">Balise</span></th>
+									<th><span style="font-weight: bold; ">Description</span></th>
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">video</span><span class="script "> </span><span class="script ">width</span><span class="script ">="100px" </span><span class="script ">height</span><span class="script ">="100px" </span><span class="script ">controls</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.ogg" type="</span><span class="script ">video</span><span class="script ">/</span><span class="script ">ogg</span><span class="script ">"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.mp4" type="</span><span class="script ">video</span><span class="script ">/mp4"/&gt;</span><span class="script "><br/>    Lecture impossible</span><span class="script "><br/>&lt;/audio&gt; </span></td>
+									<td>Ajouter une vidéo qui récupère la première source compatible (<span class="script ">controls</span> permet d'afficher les éléments de contrôle de la vidéo)</td>
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">video</span><span class="script "> </span><span class="script ">autoplay</span><span class="script "> </span><span class="script ">controls</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.ogg" type="</span><span class="script ">video</span><span class="script ">/</span><span class="script ">ogg</span><span class="script ">"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.mp4" type="</span><span class="script ">video</span><span class="script ">/mp4"/&gt;</span><span class="script "><br/>&lt;/</span><span class="script ">video</span><span class="script ">&gt; </span></td>
+									<td>Ajouter une vidéo qui démarre automatiquement (peut être bloquée par certains navigateurs)</td>
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">video</span><span class="script "> </span><span class="script ">loop</span><span class="script "> </span><span class="script ">controls</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.ogg" type="</span><span class="script ">video</span><span class="script ">/</span><span class="script ">ogg</span><span class="script ">"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.mp4" type="</span><span class="script ">video</span><span class="script ">/mp4"/&gt;</span><span class="script "><br/>&lt;/</span><span class="script ">video</span><span class="script ">&gt; </span></td>
+									<td>Ajouter une vidéo répétée en boucle</td>
+								</tr>
+								<tr>
+									<td><span class="script ">&lt;</span><span class="script ">video</span><span class="script "> </span><span class="script ">muted</span><span class="script "> </span><span class="script ">controls</span><span class="script ">&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.ogg" type="</span><span class="script ">video</span><span class="script ">/</span><span class="script ">ogg</span><span class="script ">"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.mp4" type="</span><span class="script ">video</span><span class="script ">/mp4"/&gt;</span><span class="script "><br/>&lt;/</span><span class="script ">video</span><span class="script ">&gt; </span></td>
+									<td>Ajouter une vidéo avec un son coupé par défaut</td>
+								</tr>
+							</table>
+							
+						</div>
+
 					</div>
 
-					<h3 class="soustitre" id="4.8">Les audios</h3>
+					<h3 class="soustitre" id="4.2">Les attributs</h3>
 					<div class="contenu">
-						<table>
-							<tr>
-								<th><span style="font-weight: bold; ">Balise</span></th>
-								<th><span style="font-weight: bold; ">Description</span></th>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;audio controls&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.ogg" type="audio/ogg"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.mp3" type="audio/mpeg"/&gt;</span><span class="script "><br/>    Lecture impossible</span><span class="script "><br/>&lt;/audio&gt; </span></td>
-								<td>Ajouter un audio qui récupère la première source compatible (<span class="script ">controls</span> permet d'afficher les éléments de contrôle de l'audio)</td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;audio autoplay controls&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.ogg" type="audio/ogg"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.mp3" type="audio/mpeg"/&gt;</span><span class="script "><br/>&lt;/audio&gt; </span></td>
-								<td>Ajouter un audio qui démarre automatiquement (peut être bloqué par certains navigateurs)</td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;audio loop controls&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.ogg" type="audio/ogg"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.mp3" type="audio/mpeg"/&gt;</span><span class="script "><br/>&lt;/audio&gt; </span></td>
-								<td>Ajouter un audio répété en boucle</td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;audio muted controls&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.ogg" type="audio/ogg"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">musique</span><span class="script ">.mp3" type="audio/mpeg"/&gt;</span><span class="script "><br/>&lt;/audio&gt; </span></td>
-								<td>Ajouter un audio avec un son coupé par défaut</td>
-							</tr>
-						</table>
-					</div>
+						<h4 class="soustitre" id="4.2.1">Les classes</h4>
+						<div class="contenu">
+							<p>Les classes permettent de manipuler les éléments, via CSS ou JavaScript.</p>
+							<p>Syntaxe : <span class="script ">&lt;</span><span class="script perso ">balise</span><span class="script "> class="</span><span class="script perso ">classe1</span><span class="script "> </span><span class="script perso ">classe2</span><span class="script ">…"&gt;</span></p>
+						</div>
 
-					<h3 class="soustitre" id="4.9">Les vidéos</h3>
-					<div class="contenu">
-						<table>
-							<tr>
-								<th><span style="font-weight: bold; ">Balise</span></th>
-								<th><span style="font-weight: bold; ">Description</span></th>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;video width="100px" height="100px" controls&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.ogg" type="video/ogg"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.mp4" type="video/mp4"/&gt;</span><span class="script "><br/>    Lecture impossible</span><span class="script "><br/>&lt;/audio&gt; </span></td>
-								<td>Ajouter une vidéo qui récupère la première source compatible (<span class="script ">controls</span> permet d'afficher les éléments de contrôle de la vidéo)</td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;video autoplay controls&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.ogg" type="video/ogg"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.mp4" type="video/mp4"/&gt;</span><span class="script "><br/>&lt;/video&gt; </span></td>
-								<td>Ajouter une vidéo qui démarre automatiquement (peut être bloquée par certains navigateurs)</td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;video loop controls&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.ogg" type="video/ogg"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.mp4" type="video/mp4"/&gt;</span><span class="script "><br/>&lt;/video&gt; </span></td>
-								<td>Ajouter une vidéo répétée en boucle</td>
-							</tr>
-							<tr>
-								<td><span class="script ">&lt;video muted controls&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.ogg" type="video/ogg"/&gt;</span><span class="script "><br/>    &lt;source src="</span><span class="script perso ">video</span><span class="script ">.mp4" type="video/mp4"/&gt;</span><span class="script "><br/>&lt;/video&gt; </span></td>
-								<td>Ajouter une vidéo avec un son coupé par défaut</td>
-							</tr>
-						</table>
-						
-						
+						<h4 class="soustitre" id="4.2.2">Les identifiants</h4>
+						<div class="contenu">
+							<p>Les identifiants permettent d’identifier un élément lorsqu'on crée un lien, avec un fragment et qu'on souhaite le manipuler avec un script ou qu'on le met en forme avec CSS.</p>
+							<p>Syntaxe : <span class="script ">&lt;</span><span class="script perso ">balise</span><span class="script "> id="</span><span class="script perso ">identifiant</span><span class="script ">"&gt;</span></p>
+							<div class="note ">Attention ! Contrairement aux classes, les identifiants ne peuvent être attribués qu’à une seule balise.</div>
+						</div>
+
 					</div>
 
 				</div>

@@ -11,19 +11,20 @@ let listeMementos = [
     //["SQL Server", "sql", "sqlserver", "rgba(, , , .5)", "rgba(, , , .5)"],
     //["SQLite", "sql", "sqlite", "rgba(55, 181, 237, .5)", "rgba(15, 128, 204, .5)"],
     ["MongoDB (NoSQL)", "nosql", "mongodb", "rgba(108, 172, 72, .5)", "rgba(89, 150, 54, .5)"],
+    ["Neo4J (NoSQL)", "nosql", "neo4j", "rgba(1, 139, 255, .5)", "rgba(0, 117, 214, .5)"],
     ["C", "c", "c", "rgba(0, 89, 157, .5)", "rgba(0, 68, 129, .5)"],
     ["C++", "cpp", "cpp", "rgba(0, 89, 157, .5)", "rgba(0, 68, 129, .5)"],
     //["C#", "cs", "cs", "", ""],
     ["Java", "java", "java", "rgba(245, 131, 25, .5)", "rgba(217, 108, 9, .5)"],
-    //["Spring (et Spring Boot)", "java", "spring", "rgba(102, 178, 41, .5)", "rgba(86, 150, 34, .5)"],
+    ["Spring (et Spring Boot)", "java", "spring", "rgba(102, 178, 41, .5)", "rgba(86, 150, 34, .5)"],
     //["Android", "android", "android", "rgba(, , , .5)", "rgba(, , , .5)"],
     //["Kotlin", "android", "kotlin", "rgba(, , , .5)", "rgba(, , , .5)"],
     //["ReactJS", "js", "reactjs", "rgba(, , , .5)", "rgba(, , , .5)"],
     //["VueJS", "js", "vuejs", "rgba(, , , .5)", "rgba(, , , .5)"],
     //["ThreeJS", "js", "threejs", "rgba(, , , .5)", "rgba(, , , .5)"],
     ["Angular", "js", "angular", "rgba(221, 0, 49, .5)", "rgba(195, , 47, .5)"],
-    //["Docker", "docker", "docker", "rgba(8, 109, 215, .5)", "rgba(7, 96, 193, .5)"],
-    //["Git", "git", "git", "rgba(221, 75, 52, .5)", "rgba(183, 53, 31, .5)"]
+    ["Docker", "docker", "docker", "rgba(8, 109, 215, .5)", "rgba(7, 96, 193, .5)"],
+    ["Git", "git", "git", "rgba(221, 75, 52, .5)", "rgba(183, 53, 31, .5)"]
 ];
 
 
