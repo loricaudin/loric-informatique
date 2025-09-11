@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+	<head>
+		<title>Loric Informatique - Nettoyer son PC</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="icon" href="../../images/icone.png">
+		<link rel="stylesheet" href ="../../styles/style.css">
+	</head>
+	<body>
+		<header>
+			<script src="../../scripts/header.js"></script>
+		</header>
+		<main class="pageTuto">
+			<section class="presentation">
+				<div class="alignementVertical">
+					<div>
+						<h1>Conseils pour libérer de la place sur son PC</h1>
+						<p class="version">Version 1.0 (créé le 27/05/2022, modifié le 30/01/2024)</p>
+						<p class="compatibilite">Fonctionne sur : Windows</p>
+						<button class="imprimer" onclick="alert('Pour imprimer votre document, nous vous conseillons de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button>
+						<p>Le stockage de votre PC est insuffisant ? Vos êtes au bon endroit pour faire du ménage sur votre PC. Voici tous nos conseils pour faire un peu de place sur votre PC :</p>
+					</div>
+					<img src="images/icone_windows.png" class="logoTuto">
+				</div>
+			</section>
+            <section>
+				<h2>Sommaire :</h2>
+				<ul>
+					<li><a href="#Conseil_1" class="sommaire">Conseil 1 : Outils de nettoyage de Disque (de 1 Go à 16 Go selon les PC)</a></li>
+					<li><a href="#Conseil_2" class="sommaire">Conseil 2 : Vider le dossier Temp (de 100 Mo à 2 Go selon les PC)</a></li>
+					<li><a href="#Conseil_3" class="sommaire">Conseil 3 : Vider la cache du Windows Store (300 Mo à 500 Mo selon les PC)</a></li>
+					<li><a href="#Conseil_4" class="sommaire">Conseil 4 : Supprimer le cache du navigateur (de 1 Go à 8 Go selon les PC)</a></li>
+					<li><a href="#Conseil_5" class="sommaire">Conseil 5 : Supprimer des applications préinstallées du Microsoft Store (de 100 Mo à 2 Go selon les PC)</a></li>
+					<li><a href="#Conseil_6" class="sommaire">Conseil 6 : Supprimer les données d'applications désinstallés (de 100 Mo à 4 Go selon les PC)</a></li>
+					<li><a href="#Conseil_7" class="sommaire">Conseil 7 : Supprimer tous les points de restauration Windows (de 10 Mo à 50 Go selon les PC)</a></li>
+				</ul>
+			</section>
+            <article>
+                <h3 id="Conseil_1">Conseil 1 : Outils de nettoyage de Disque (de 1 Go à 16 Go selon les PC)</h3>
+				<h4>Pour Windows XP et supérieur</h4>
+				<p>Le nettoyage du disque peut être utile pour vider le cache de votre ordinateur, pour cela, ouvrez l’explorateur de fichiers, clic droit sur le disque (C:) (disque par défaut avec le logo Windows), puis Propriété.</p>
+				<img src="images/nettoyer_son_PC_IMG0020.jpg">
+				<p>Cliquez ensuite sur nettoyage du disque et vous gérez ce que vous voulez supprimer. Vous pouvez également nettoyer des fichiers système si vous voulez pour gagner plus d'espace de stockage.</p>
+				<img src="images/nettoyer_son_PC_IMG0021.jpg">
+				<p>Pour info : Vous pouvez supprimer les fichiers de mise en veille prolongée (déconseillé) si vous n'utilisez pas ce mode.</p>
+				<p>Enfin valider sur OK.</p>
+				<p>Et voilà <span class="important">1 Go</span> libérés dans mon cas</p>
+				<p>Vous voulez en libérer plus ??? Ok, voici d'autres conseils.</p>
+				<h3 id="Conseil_2">Conseil 2 : Vider le dossier Temp (de 100 Mo à 2 Go selon les PC)</h3>
+				<h4>Pour Windows 2000 et supérieur</h4>
+				<p>Tous vos fichiers téléchargés sur internet ou autres sont stockés dans le dossier Temp. Tous les fichiers de ce dossier devraient disparaitre tout seul, mais ce n'est pas toujours le cas.</p>
+				<p>Ouvrez l'explorateur, tapez dans la barre de chemin <span class="important">%USERPROFILE%\AppData\Local\Temp</span> (ou dans Démarrer, puis dans la barre de recherche) et supprimer tous les fichiers qui peuvent être supprimé.</p>
+				<img src="images/nettoyer_son_PC_IMG0103.jpg">
+				<p>Et voilà <span class="important">200 Mo</span> libérés dans mon cas</p>
+				<h3 id="Conseil_3">Conseil 3 : Vider la cache du Windows Store (300 Mo à 500 Mo selon les PC)</h3>
+				<h4>Pour Windows 8.1 et supérieur</h4>
+				<p>Le Windows Store enregistre toutes les images et autres fichiers dans un dossier cache afin d'avoir un affichage plus rapide. De temps en temps, il est bie de vider le cache.</p>
+				<p>Pour le faire, faire Windows + R et taper WSReset.exe</p>
+				<img src="images/nettoyer_son_PC_IMG0104.jpg">
+				<p>Tout se fait tout seul, une fois fini, l'invite de commande se ferme tout seul et le Windows Store peut s'ouvrir tout seul.</p>
+				<p>Et voilà <span class="important">300 Mo</span> libérés dans mon cas</p>
+				<h3 id="Conseil_4">Conseil 4 : Supprimer le cache du navigateur (de 1 Go à 8 Go selon les PC)</h3>
+				<h4>Pour Windows 95 et supérieur</h4>
+				<p>La source principale qui prend de la place sur votre PC est le navigateur internet, pourquoi ? parce que toutes les images, tous les cookies, toutes les informations d'identification, tous les téléchargement... bref, TOUT ! Tout est stocké sur votre ordinateur et rien ne se supprime automatiquement. Voici notre solution :</p>
+				<h4>Pour Firefox</h4>
+				<p>Ouvrez Firefox, puis allez dans les paramètres :</p>
+				<img src="images/nettoyer_son_PC_IMG0105.jpg">
+				<p>Allez dans Vie privée et sécurité, et dans Cookies et données de sites, cliquez sur Effacer les données</p>
+				<img src="images/nettoyer_son_PC_IMG0106.jpg">
+				<p>Supprimer le contenu web en cache, et si vous voulez les cookies et données de sites (qui vous déconnectera de tous vos comptes).</p>
+				<img src="images/nettoyer_son_PC_IMG0107.jpg">
+				<h4>Pour Google Chrome</h4>
+				<p>Ouvrez Chrome, puis allez dans les paramètres :</p>
+				<img src="images/nettoyer_son_PC_IMG0108.jpg">
+				<p>Allez dans Sécurité et confidentialité, et cliquez sur Effacer les données de navigation</p>
+				<img src="images/nettoyer_son_PC_IMG0109.jpg">
+				<p>Supprimer les images et fichiers en cache, et si vous voulez l'historique de navigation et les cookies et autres données de sites (qui vous déconnectera de tous vos comptes).</p>
+				<img src="images/nettoyer_son_PC_IMG0110.jpg">
+				<p>Et voilà <span class="important">2 Go</span> libérés dans mon cas (si votre PC est plus âgé et que vous surfer beaucoup sur le net, vous pourrez libérer jusqu'à 8 Go. Incroyable !)</p>
+				<br/>
+				<h3 id="Conseil_5">Conseil 5 : Supprimer des applications préinstallées du Microsoft Store (de 100 Mo à 2 Go selon les PC)</h3>
+				<h4>Uniquement pour Windows 10</h4>
+				<p>Des applications préinstallées ne vous intéressent pas du tout ? Nous pouvons les retirer. Cela concerne :</p>
+				<p>Pour y remédier, cliquer sur le bouton Démarrer et tapez <span class="important">PowerShell</span> (pas forcément dans la barre de recherche si vous l'avez retirée)</p>
+				<img src="images/nettoyer_son_PC_IMG0121.jpg">
+				<p>Ouvrez PowerShell et tapez votre commande selon l'application que vous souhaitez retirer. Par exemple pour Messages, tapez Get-AppxPackage *messaging* | Remove-AppxPackage et appuyez sur Entrée.</p>
+				<img src="images/nettoyer_son_PC_IMG0122.jpg">
+				<p>Normalement, l'application ne devrait plus apparaître dans le menu Démarrer.</p>
+				<p>La liste des programmes que vous pouvez enlever sont :</p>
+				<ul>
+					<li>3D Builder : tapez <span class="important">Get-AppxPackage *3dbuilder* | Remove-AppxPackage</span></li>
+					<li>Actualités : tapez <span class="important">Get-AppxPackage *bingnews* | Remove-AppxPackage</span></li>
+					<li>Alarmes et Horloge : tapez <span class="important">Get-AppxPackage *windowsalarms* | Remove-AppxPackage</span></li>
+					<li>Tutos (ou Get Started) : tapez <span class="important">Get-AppxPackage *getstarted* | Remove-AppxPackage</span></li>
+					<li>Calculatrice : tapez <span class="important">Get-AppxPackage *windowscalculator* | Remove-AppxPackage</span></li>
+					<li>Caméra : tapez <span class="important">Get-AppxPackage *windowscamera* | Remove-AppxPackage</span></li>
+					<li>Cartes : tapez <span class="important">Get-AppxPackage *windowsmaps* | Remove-AppxPackage</span></li>
+					<li>Contacter le support : tapez <span class="important">dism /online /remove-package /PackageName:Microsoft-Windows-ContactSupport-Package~31bf3856ad364e35~amd64~~10.0.14393.0</span> pour le 64-bit et <span class="important">dism /online /remove-package /PackageName:Microsoft-Windows-ContactSupport-Package~31bf3856ad364e35~x86~~10.0.14393.0</span> pour le 32-bit (si besoin, ajustez la dernière ligne pour corriger votre version de Windows)</li>
+					<li>Contacts : tapez <span class="important">Get-AppxPackage *people* | Remove-AppxPackage</span></li>
+					<li>Cortana : tapez <span class="important">Get-appxpackage -allusers *Microsoft.549981C3F5F10* | Remove-AppxPackage</span></li>
+					<li>Enregistreur vocal : tapez <span class="important">Get-AppxPackage *soundrecorder* | Remove-AppxPackage</span></li>
+					<li>Films et TV : tapez <span class="important">Get-AppxPackage *zunevideo* | Remove-AppxPackage</span></li>
+					<li>Finance : tapez <span class="important">Get-AppxPackage *bingfinance* | Remove-AppxPackage</span></li>
+					<li>Groove Musique : tapez <span class="important">Get-AppxPackage *zunemusic* | Remove-AppxPackage</span></li>
+					<li>Mail et Calendrier : tapez <span class="important">Get-AppxPackage *windowscommunicationsapps* | Remove-AppxPackage</span></li>
+					<li>Messages : tapez <span class="important">Get-AppxPackage *messaging* | Remove-AppxPackage</span></li>
+					<li>Météo : tapez <span class="important">Get-AppxPackage *bingweather* | Remove-AppxPackage</span></li>
+					<li>Microsoft Solitaire Collection : tapez <span class="important">Get-AppxPackage *solitairecollection* | Remove-AppxPackage</span></li>
+					<li>Obtenir de l'aide : tapez <span class="important">Get-AppxPackage *GetHelp* | Remove-AppxPackage</span></li>
+					<li>Office : tapez <span class="important">Get-AppxPackage *officehub* | Remove-AppxPackage</span></li>
+					<li>OneNote : tapez <span class="important">Get-AppxPackage *onenote* | Remove-AppxPackage</span></li>
+					<li>Phone Companion : tapez <span class="important">Get-AppxPackage *windowsphone* | Remove-AppxPackage</span></li>
+					<li>Photos : tapez <span class="important">Get-AppxPackage *photos* | Remove-AppxPackage</span></li>
+					<li>Skype : tapez <span class="important">Get-AppxPackage *skypeapp* | Remove-AppxPackage</span></li>
+					<li>Sport : tapez <span class="important">Get-AppxPackage *bingsports* | Remove-AppxPackage</span></li>
+					<li>Votre téléphone (ou Mobile connecté) : tapez <span class="important">Get-AppxPackage Microsoft.YourPhone -AllUsers | Remove-AppxPackage</span></li>
+					<li>Windows Store (ou Microsoft Store) : tapez <span class="important">Get-AppxPackage *windowsstore* | Remove-AppxPackage</span></li>
+					<li>Xbox : tapez <span class="important">Get-AppxPackage *xboxapp* | Remove-AppxPackage</span></li>
+					
+					<!--<li> : tapez <span class="important"></span></li>-->
+				</ul>
+				<p>Et voilà <span class="important">100 Mo</span> libérés dans mon cas (en retirant 1 seule application)</p>
+				<br/>
+				<h3 id="Conseil_6">Conseil 6 : Supprimer les données d'applications désinstallés (de 100 Mo à 4 Go selon les PC)</h3>
+				<h4>Pour Windows 3.1 ou supérieur</h4>
+				<p>Certains programmes que vous désinstallez peuvent ne pas supprimer tous leurs données au cas où on souhaiterait la réinstaller afin de ne pas devoir tout reconfigurer ces logiciels.</p>
+				<p>Ces données peuvent être stockées dans :</p>
+				<ul>
+					<li>AppData\Local</li>
+					<li>AppData\Roaming</li>
+					<li>ProgramData</li>
+				</ul>
+				<span class="important">Attention à ne pas supprimer n'importe quoi ! Cela peut rendre inutilisable votre ordinateur.</span>
+				<p>Dans les dossiers <span class="important">%USERPROFILE%\AppData\Local</span>, <span class="important">%USERPROFILE%\AppData\Roaming</span> et <span class="important">C:\ProgramData</span>, supprimer les dossiers des applications que vous vous souvenez avoir désinstallées (sauf le dossier Microsoft et les dossiers de vos pilotes)</p>
+				<p>Et voilà <span class="important">2 Go</span> libérés dans mon cas</p>
+				<br/>
+				<h3 id="Conseil_7">Conseil 7 : Supprimer tous les points de restauration Windows (de 10 Mo à 50 Go selon les PC)</h3>
+				<h4>Pour Windows 10 et supérieur</h4>
+				<p>Vous n'avez pas besoin de points de restauration système ? Vous pouvez les supprimer si vous voulez.</p>
+				<p>Allez dans le menu Démarrer, puis dans les paramètres</p>
+				<img src="images/nettoyer_son_PC_IMG0227.jpg">
+				<p>Cliquez sur Système</p>
+				<img src="images/nettoyer_son_PC_IMG0228.jpg">
+				<p>Dans la rubrique À propos de, cliquez sur Paramètres avancés du système</p>
+				<img src="images/nettoyer_son_PC_IMG0229.jpg">
+				<p>Dans Protection du système, sélectionnez Configurer</p>
+				<img src="images/nettoyer_son_PC_IMG0230.jpg">
+				<p>Réglez comme vous le voulez l'utilisation maximale utilisée pour la protection système, et si vous voulez, supprimez tous les points de restauration, pour cela, cliquez sur supprimer.</p>
+				<img src="images/nettoyer_son_PC_IMG0231.jpg">
+				<p>Enfin, cliquez sur Continuer</p>
+				<img src="images/nettoyer_son_PC_IMG0232.jpg">
+				<p>Et voilà <span class="important">40 Go</span> libérés dans mon cas (en supprimant tous les points de restauration)</p>
+				<br/>
+				<p>Conclusion : nous avons réussi à libérer 45,5 Go de stockage. Et vous ?</p>
+			</article>
+		</main>
+		<footer>
+			<script src="../../scripts/footer.js"></script>
+			<a class="top" href="#"><img src="../../images/top.png"></a>
+		</footer>
+	</body>
+	<script src="../../scripts/script.js"></script>
+	<script src="../../scripts/tableDesMatieres.js"></script>
+</html>
