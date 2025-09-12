@@ -301,12 +301,12 @@ main{
 	height: 50px;
 }
 
-.logoTuto, .logoAide{
+.logoTuto{
 	max-height: 200px !important;
 	max-width: 200px !important;
 }
 
-.pageTuto img, .pageAide img{
+.pageTuto img{
 	max-height: 500px;
 }
 
