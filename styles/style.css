@@ -229,7 +229,7 @@ main{
 	color : red;
 }
 
-.note{
+.note, .style-Note{
 	padding: 10px;
 	background-color: rgba(100, 100, 100, 0.1);
 }
@@ -315,29 +315,29 @@ main{
 	max-height: 200px;
 }
 
-.script{
+.pageMemento .script{
 	font-family: Consolas, monospace;
 }
 
-.console{
+.pageMemento .console{
 	font-family: Courier New, monospace;
 }
 
-.perso{
+.pageMemento .perso{
 	color: black;
 	font-style: italic;
 }
 
-.version{
+.pageMemento .version{
 	font-weight: bold;
 }
 
-.contenu{
+.pageMemento .contenu{
 	margin-left: 8px;
 	margin-bottom: 32px;
 }
 
-table{
+.pageMemento table{
 	table-layout: fixed; /* Toutes les cases de même longueur */
 	border-collapse: collapse;
 	width: 90%;
@@ -346,13 +346,17 @@ table{
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-td, tr, th{
+.pageMemento td, .pageMemento tr, .pageMemento th{
 	border : 1px solid black;
 	width: auto;
 	padding : 10px;
 }
 
-td{
+.pageMemento table p {
+	margin: 0;
+}
+
+.pageMemento td{
 	text-align: left;
 }
 
@@ -723,7 +727,7 @@ td{
 		display: none;
 	}
 
-	.note{
+	.note, .style-Note{
 		padding: 10px;
 		background-color: rgb(100, 100, 100, 0.1);
 	}
