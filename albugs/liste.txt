@@ -1,0 +1,4 @@
+0001 : 12/09 Sur PC personnel, je n'ai toujours pas compris pourquoi ça le fais quelque fois
+0002 : 13/09 Sur VM
+0003 : 13/09 Sur VM chgt thème clair en sombre
+0004 : 13/09 Bug depuis Windows 10 1803, corrigé sur Windows 11
