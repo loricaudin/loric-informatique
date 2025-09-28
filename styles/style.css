@@ -245,7 +245,7 @@ main{
 }
 
 /* Page d'accueil */
-.mainIndex{
+.mainIndex section{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -257,7 +257,7 @@ main{
 	margin: 0;
 }
 
-.mainIndex aside img{
+.mainIndex section img{
 	width: 500px;
 }
 
