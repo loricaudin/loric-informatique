@@ -40,10 +40,11 @@ header.innerHTML = /*html*/
 		    <li><a href="${emplacementRacine + 'index.html'}">Accueil</a></li>
             <li><a href="${emplacementRacine + 'tutos/tutos.html'}">Tutoriels</a></li>
 		    <li><a href="${emplacementRacine + 'mementos/mementos.html'}">Mémentos</a></li>
-            <li><a href="${emplacementRacine + 'albugs/livre-bugs.html'}">Albugs</a></li>
+            
 		    <li><a href="${emplacementRacine + 'apropos.html'}">À propos</a></li>
 		    
 		</ul>
 	</nav>
 `;
 //<li><a href="${emplacementRacine + ''}"></a></li>
+// <li><a href="${emplacementRacine + 'albugs/livre-bugs.html'}">Albugs</a></li>
