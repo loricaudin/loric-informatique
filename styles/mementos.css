@@ -1,0 +1,3 @@
+.pageMemento h1, .pageMemento h2, .pageMemento h3, .pageMemento h4, .pageMemento h5 {
+    scroll-margin-top: 100px; /* Parce que quand on clique sur un elt du sommaire, le titre passe derrière le header */
+}
