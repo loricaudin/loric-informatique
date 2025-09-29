@@ -76,6 +76,7 @@ header nav ul li a:focus{
 /* Mode sombre */
 .modeSombre header{
 	background: #252525;
+	box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .modeSombre header .titre{

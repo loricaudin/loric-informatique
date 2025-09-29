@@ -10,8 +10,7 @@ html {
 	--couleur-principale-hover: rgb(110, 88, 222);
 	--couleur-principale-focus: rgb(130, 108, 242);
 
-	--couleur1: #503AC0;
-	--couleur2: #322377;
+	/* TODO : Permettre personnalisation couleurs selon page via --couleur-dominante par exemple */
 }
 
 @font-face {
@@ -129,7 +128,7 @@ img{
 	position:fixed;
 	bottom:30px;
 	right:30px;
-	border-radius: 5px; /* Arrondi des bords */
+	border-radius: 5px;
 	transition: all 0.2s;
 }
 
