@@ -53,7 +53,12 @@ function ajouterMemento(nouveauMemento){
     mementos.append(memento);
 
     memento.addEventListener('mousedown', function(){
-        lien.style.background = nouveauMemento[3];
+        if (!estEnModeSombre()) {
+            lien.style.background = nouveauMemento[3];
+        } else {
+            lien.style.background = nouveauMemento[4];
+        }
+        
         setTimeout(function(){lien.style.background = "none"}, 1000);
     });
 }
