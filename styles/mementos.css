@@ -1,3 +1,157 @@
+/* Mementos */
+.mementos{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	padding: 20px;
+
+	background-color: rgba(200, 200, 200, 0.1);
+
+	border-radius: 20px; /* Arrondi des bords */
+}
+
+.mementos .memento{
+	color: black;
+	padding: 0;
+	max-width: 160px;
+	height: 210px;
+	transition: all 0.5s;
+	text-align: center;
+
+	border-radius: 20px; /* Arrondi des bords */
+}
+
+.mementos .memento a{
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	text-decoration: none;
+	color: black;
+	padding: 30px;
+	max-width: 100px;
+	height: 150px;
+	transition: all 0.5s;
+	text-align: center;
+
+	border-radius: 20px; /* Arrondi des bords */
+}
+
+.mementos .memento a div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+}
+
+.mementos img{
+	max-width: 100px;
+	max-height: 100px;
+}
+
+.mementos .memento:hover{
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Mode sombre */
+.modeSombre .mementos{
+	background-color: rgba(200, 200, 200, 0.1);
+}
+.modeSombre .mementos a{
+	color: white;
+}
+
+.modeSombre .mementos .memento:hover{
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+
+/* Page d'un language */
 .pageMemento h1, .pageMemento h2, .pageMemento h3, .pageMemento h4, .pageMemento h5 {
     scroll-margin-top: 100px; /* Parce que quand on clique sur un elt du sommaire, le titre passe derrière le header */
+}
+
+.pageMemento .logoMemento{
+	max-height: 200px;
+}
+
+.pageMemento .script{ /* Bientôt plus utile (ou pas) */
+	font-family: Consolas, monospace;
+}
+
+.pageMemento .console{ /* Utilisé peut-être dans tutos */
+	font-family: Courier New, monospace;
+}
+
+.pageMemento .perso{ /* Bientôt plus utile (ou pas) */
+	font-style: italic;
+}
+
+.pageMemento .version{
+	font-weight: bold;
+}
+
+.pageMemento .contenu{ /* Bientôt plus utile (ou pas) */
+	margin-left: 8px;
+	margin-bottom: 32px;
+}
+
+.pageMemento table{
+	table-layout: fixed; /* Toutes les cases de même longueur */
+	border-collapse: collapse;
+	width: 90%;
+	height: 50%;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.pageMemento td, .pageMemento tr, .pageMemento th{
+	border : 1px solid black;
+	width: auto;
+	padding : 10px;
+}
+
+.pageMemento table p {
+	margin: 0;
+}
+
+.pageMemento td{
+	text-align: left;
+}
+
+
+
+/* ---------- Affichage mobile ---------- */
+@media screen and (max-width: 1200px){
+    .pageMemento table tr{
+		display:flex;
+		flex-direction:column;
+		width:100%;
+		padding:10px;
+	}
+	
+	.pageMemento table tr td, .pageMemento table tr th, .pageMemento .modeSombre table tr th, .pageMemento .modeSombre table tr td{
+		width: 100%;
+		border: none;
+		padding: 5px;
+		text-align: left;
+	}
+
+	.pageMemento .logoMemento{
+		max-height: 200px;
+		max-width: 200px;
+	}
+}
+
+
+
+/* ---------- Affichage PDF (clic sur Imprimer) ---------- */
+@media print {
+    /* Page d'un language */
+	.pageMemento .logoMemento{
+		max-width: 100px;
+		max-height: 100px;
+	}
 }

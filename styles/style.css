@@ -1,6 +1,7 @@
 @import url("header.css");
 @import url("footer.css");
 @import url("mementos.css");
+@import url("tutos.css");
 
 /* ---------- Mode clair ---------- */
 /* Commun à toutes les pages */
@@ -78,10 +79,6 @@ tr > td > ul{
 
 img{
 	max-width: 100%;
-}
-
-.important{
-	font-weight: bold;
 }
 
 .telecharger, .imprimer{
@@ -162,23 +159,23 @@ main{
 	margin: 5px;
 }
 
-.todo{
+.todo{ /* À enlever quand mémento Java MAJ */
 	padding: 10px;
 	background-color: rgba(100, 100, 100, 0.1);
 	font-weight: bold;
 	color : red;
 }
 
-.note, .style-Note{
+.note{
 	padding: 10px;
 	background-color: rgba(100, 100, 100, 0.1);
 }
 
-.note img{
+.note img{ /* À enlever quand tous mémentos MAJ */
 	max-height: 16px;
 }
 
-.attention{
+.attention{ /* À enlever quand mémento Java MAJ */
 	padding: 10px;
 	background-color: rgba(100, 100, 100, 0.1);
 	font-weight: bold;
@@ -201,160 +198,8 @@ main{
 	width: 500px;
 }
 
-/* Tutos */
-.recherche{
-	display: flex;
-	flex-direction: column;
-}
 
-.outils{
-	margin-bottom: 50px;
-}
 
-.tuto{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 30px;
-	padding-right: 30px;
-	min-height: 50px;
-	font-weight: bold;
-	text-decoration: none;
-	background-color: rgba(0, 0, 0, 0.01);
-	color: black;
-	border-radius: 5px; /* Arrondi des bords */
-	transition: all 0.5s;
-}
-
-.tuto:hover{
-	background-color: rgba(0, 0, 0, 0.05);
-}
-
-.tuto:focus{
-	background-color: rgba(58, 58, 255, 0.5);
-}
-
-.tuto img{
-	height: 50px;
-}
-
-.logoTuto{
-	max-height: 200px !important;
-	max-width: 200px !important;
-}
-
-.pageTuto img{
-	max-height: 500px;
-}
-
-/* Page d'un language */
-.pageMemento .logoMemento{
-	max-height: 200px;
-}
-
-.pageMemento .script{
-	font-family: Consolas, monospace;
-}
-
-.pageMemento .console{
-	font-family: Courier New, monospace;
-}
-
-.pageMemento .perso{
-	color: black;
-	font-style: italic;
-}
-
-.pageMemento .version{
-	font-weight: bold;
-}
-
-.pageMemento .contenu{
-	margin-left: 8px;
-	margin-bottom: 32px;
-}
-
-.pageMemento table{
-	table-layout: fixed; /* Toutes les cases de même longueur */
-	border-collapse: collapse;
-	width: 90%;
-	height: 50%;
-	text-align: center;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-.pageMemento td, .pageMemento tr, .pageMemento th{
-	border : 1px solid black;
-	width: auto;
-	padding : 10px;
-}
-
-.pageMemento table p {
-	margin: 0;
-}
-
-.pageMemento td{
-	text-align: left;
-}
-
-/* Mementos */
-.mementos{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-
-	padding: 20px;
-
-	background-color: rgba(200, 200, 200, 0.1);
-
-	border-radius: 20px; /* Arrondi des bords */
-}
-
-.mementos .memento{
-	color: black;
-	padding: 0;
-	max-width: 160px;
-	height: 210px;
-	transition: all 0.5s;
-	text-align: center;
-
-	border-radius: 20px; /* Arrondi des bords */
-}
-
-.mementos .memento a{
-	display: flex;
-	flex-direction: column-reverse;
-	justify-content: center;
-	text-decoration: none;
-	color: black;
-	padding: 30px;
-	max-width: 100px;
-	height: 150px;
-	transition: all 0.5s;
-	text-align: center;
-
-	border-radius: 20px; /* Arrondi des bords */
-}
-
-.mementos .memento a div{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100px;
-	height: 100px;
-}
-
-.mementos img{
-	max-width: 100px;
-	max-height: 100px;
-}
-
-.mementos .memento:hover{
-	background-color: rgba(0, 0, 0, 0.05);
-}
 
 /* ---------- Mode sombre ---------- */
 .modeSombre{
@@ -384,32 +229,9 @@ main{
 	border : 1px solid white;
 }
 
-/* Mementos */
-.modeSombre .mementos{
-	background-color: rgba(200, 200, 200, 0.1);
-}
-.modeSombre .mementos a{
-	color: white;
-}
 
-.modeSombre .mementos .memento:hover{
-	background-color: rgba(255, 255, 255, 0.05);
-}
 
-/* Tutos */
-.modeSombre .tuto{
-	color: white;
-	border-radius: 5px; /* Arrondi des bords */
-	transition: all 0.5s;
-}
 
-.modeSombre .tuto:hover{
-	background-color: rgba(255, 255, 255, 0.05);
-}
-
-.modeSombre .tuto:focus{
-	background-color: rgba(58, 58, 255, 0.5);
-}
 
 /* A propos */
 .mainAPropos section{
@@ -432,26 +254,6 @@ main{
 
 	.imprimer{
 		display: none;
-	}
-
-	table tr{
-		display:flex;
-		flex-direction:column;
-		width:100%;
-		padding:10px;
-	}
-	
-	table tr td, table tr th, .modeSombre table tr th, .modeSombre table tr td{
-		width: 100%;
-		border: none;
-		padding: 5px;
-		text-align: left;
-	}
-
-	/* Page d'un language */
-	.pageMemento .logoMemento{
-		max-height: 200px;
-		max-width: 200px;
 	}
 
 }
@@ -530,7 +332,7 @@ main{
 		display: none;
 	}
 
-	.note, .style-Note{
+	.note{
 		padding: 10px;
 		background-color: rgb(100, 100, 100, 0.1);
 	}
@@ -540,14 +342,8 @@ main{
 		background-color: rgb(100, 100, 100, 0.1);
 	}
 
-	/* Page d'un language */
-	.pageMemento .logoMemento{
-		max-width: 100px;
-		max-height: 100px;
-	}
-
 	/* Footer */
 	footer{
 		display: none;
 	}
-  }
+}
