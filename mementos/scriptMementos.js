@@ -3,19 +3,31 @@
 
 let listeMementos = [
 // DEBUT_LISTE_MEMENTOS \\
-["Python", "python", "python", "#FFDD65", "#CCA000"],
-["C", "c", "c", "#65BCFF", "#006BCC"],
-["C++", "cpp", "cpp", "#65BCFF", "#006BCC"],
-["Java", "java", "java", "#F8AF6C", "#C36108"],
-["HTML", "html", "html", "#F5976F", "#B53716"],
-["CSS", "css", "css", "#6F97F5", "#1637B5"],
-["JavaScript", "js", "js", "#F9E96B", "#C4AD07"],
-["TypeScript", "js", "ts", "#82B1E2", "#2465A7"],
-["MySQL", "sql", "mysql", "#FFC565", "#CC7E00"],
-["Oracle Database (SQL)", "sql", "oracledatabase", "#FF6565", "#CC0000"],
-["MongoDB (NoSQL)", "nosql", "mongodb", "#A9D193", "#589636"],
-["Angular", "js", "angular", "#FF6587", "#CC0031"],
-["Git", "git", "git", "#E98A7B", "#AE321D"],
+["Python", "python", "python", "rgba(255, 214, 66, .5)", "rgba(226, 178, 0, .5)"],
+["HTML", "html", "html", "rgba(241, 101, 41, .5)", "rgba(228, 77, 38, .5)"],
+["CSS", "css", "css", "rgba(41, 101, 241, .5)", "rgba(38, 77, 228, .5)"],
+["JavaScript", "js", "js", "rgba(247, 223, 30, .5)", "rgba(233, 206, 9, .5)"],
+["TypeScript", "js", "ts", "rgba(45, 121, 199, .5)", "rgba(36, 100, 164, .5)"],
+//["PHP", "php", "php", "rgba(122, 134, 184, .5)", ""],
+["MySQL", "sql", "mysql", "rgba(228, 142, 0, .5)", "rgba(204, 126, 0, .5)"],
+["Oracle Database (SQL)", "sql", "oracledatabase", "rgba(255, 0, 0, .5)", "rgba(200, 0, 0, .5)"],
+//["SQL Server", "sql", "sqlserver", "rgba(, , , .5)", "rgba(, , , .5)"],
+//["SQLite", "sql", "sqlite", "rgba(55, 181, 237, .5)", "rgba(15, 128, 204, .5)"],
+["MongoDB (NoSQL)", "nosql", "mongodb", "rgba(108, 172, 72, .5)", "rgba(89, 150, 54, .5)"],
+["Neo4J (NoSQL)", "nosql", "neo4j", "rgba(1, 139, 255, .5)", "rgba(0, 117, 214, .5)"],
+["C", "c", "c", "rgba(0, 89, 157, .5)", "rgba(0, 68, 129, .5)"],
+["C++", "cpp", "cpp", "rgba(0, 89, 157, .5)", "rgba(0, 68, 129, .5)"],
+//["C#", "cs", "cs", "", ""],
+["Java", "java", "java", "rgba(245, 131, 25, .5)", "rgba(217, 108, 9, .5)"],
+["Spring (et Spring Boot)", "java", "spring", "rgba(102, 178, 41, .5)", "rgba(86, 150, 34, .5)"],
+//["Android", "android", "android", "rgba(, , , .5)", "rgba(, , , .5)"],
+//["Kotlin", "android", "kotlin", "rgba(, , , .5)", "rgba(, , , .5)"],
+//["ReactJS", "js", "reactjs", "rgba(, , , .5)", "rgba(, , , .5)"],
+//["VueJS", "js", "vuejs", "rgba(, , , .5)", "rgba(, , , .5)"],
+//["ThreeJS", "js", "threejs", "rgba(, , , .5)", "rgba(, , , .5)"],
+["Angular", "js", "angular", "rgba(221, 0, 49, .5)", "rgba(195, , 47, .5)"],
+["Docker", "docker", "docker", "rgba(8, 109, 215, .5)", "rgba(7, 96, 193, .5)"],
+["Git", "git", "git", "rgba(221, 75, 52, .5)", "rgba(183, 53, 31, .5)"]
 // FIN_LISTE_MEMENTOS \\
 ];
 
@@ -41,7 +53,12 @@ function ajouterMemento(nouveauMemento){
     mementos.append(memento);
 
     memento.addEventListener('mousedown', function(){
-        lien.style.background = nouveauMemento[3];
+        if (!estEnModeSombre()) {
+            lien.style.background = nouveauMemento[3];
+        } else {
+            lien.style.background = nouveauMemento[4];
+        }
+        
         setTimeout(function(){lien.style.background = "none"}, 1000);
     });
 }

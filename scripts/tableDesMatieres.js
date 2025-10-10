@@ -18,7 +18,7 @@ function ajouterNumero(soustitre){
     soustitre.innerHTML = soustitre.id + ". " + soustitre.innerHTML
 }
 
-let soustitres = document.querySelectorAll(".soustitre");
+let soustitres = document.querySelectorAll("article h1, article h2, article h3, article h4, article h5");
 for(let i = 0; i < soustitres.length; i++){
     ajouterNumero(soustitres[i]);
     ajoutersoustitre(soustitres[i].textContent, soustitres[i].id, soustitres[i].tagName[1] - 1);

@@ -1,24 +1,71 @@
 // Affichage mode clair/sombre
-function estEnModeSombre() {
+function estEnModeSombreParDefaut() {
 	return globalThis.matchMedia?.("(prefers-color-scheme:dark)").matches;
-	/*
-	var now = new Date();
-	var heure  = now.getHours();
-	//heure = 19;
-	estEnModeSombre()
-	return (heure>18 || heure<7);
-	*/
-	
 }
 
-if(estEnModeSombre()){
-	basculerClairSombre();
-};
+function estEnModeSombre() {
+	let body=document.querySelector("body");
+    return body.classList.contains("modeSombre");
+}
 
-function basculerClairSombre(){
+function majComboBoxTheme(valeur) {
+    let themeSite = document.querySelector("#theme-site");
+    themeSite.value = valeur;
+}
+
+function appliquerStyleParDafaut() {
     let body=document.querySelector("body");
-    body.classList.toggle("modeSombre");
+    if (estEnModeSombreParDefaut()) {
+        body.classList.add("modeSombre");
+        document.querySelectorAll("#theme-site option")[0].innerHTML = "Thème système (actuel : sombre)";
+    } else {
+        body.classList.remove("modeSombre");
+        document.querySelectorAll("#theme-site option")[0].innerHTML = "Thème système (actuel : clair)";
+    }
 }
+
+function changerMode(e) {
+    let body=document.querySelector("body");
+    switch (e.target.value) {
+        case "clair":
+            body.classList.remove("modeSombre");
+            localStorage.setItem("li_theme", "clair");
+            break;
+        case "sombre":
+            body.classList.add("modeSombre");
+            localStorage.setItem("li_theme", "sombre");
+            break;
+        default:
+            appliquerStyleParDafaut();
+            localStorage.removeItem("li_theme", "clair");
+            break;
+
+    }
+}
+
+function recupererThemeSauvegarde() {
+    let body=document.querySelector("body");
+    if(localStorage.getItem("li_theme")){
+        let theme_enregistre = localStorage.getItem("li_theme");
+        if (theme_enregistre == "sombre") {
+            body.classList.add("modeSombre");
+            document.querySelectorAll("#theme-site option")[0].innerHTML = "Thème système (actuel : sombre)";
+        } else {
+            body.classList.remove("modeSombre");
+            document.querySelectorAll("#theme-site option")[0].innerHTML = "Thème système (actuel : clair)";
+        }
+
+        majComboBoxTheme(theme_enregistre);
+    } else {
+        appliquerStyleParDafaut();
+    }
+}
+
+recupererThemeSauvegarde();
+
+let themeSite = document.querySelector("#theme-site");
+themeSite.addEventListener("change", changerMode);
+
 
 
 //Bouton de navigation

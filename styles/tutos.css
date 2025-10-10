@@ -1,0 +1,71 @@
+/* Tutos */
+.mainTuto .recherche{
+	display: flex;
+	flex-direction: column;
+}
+
+.mainTuto .tuto{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	min-height: 50px;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: rgba(0, 0, 0, 0.01);
+	color: black;
+	border-radius: 5px; /* Arrondi des bords */
+	transition: all 0.5s;
+}
+
+.mainTuto .tuto:hover{
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.mainTuto .tuto:focus{
+	background-color: rgba(58, 58, 255, 0.5);
+}
+
+.mainTuto .tuto img{
+	height: 50px;
+}
+
+/* Mode sombre */
+.modeSombre .mainTuto .tuto{
+	color: white;
+	border-radius: 5px; /* Arrondi des bords */
+	transition: all 0.5s;
+}
+
+.modeSombre .mainTuto .tuto:hover{
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+.modeSombre .mainTuto .tuto:focus{
+	background-color: rgba(58, 58, 255, 0.5);
+}
+
+
+
+/* Page d'un tuto */
+
+.pageTuto .logoTuto{
+	max-height: 200px !important;
+	max-width: 200px !important;
+}
+
+.pageTuto img{
+	max-height: 500px;
+}
+
+.pageTuto .important{ /* À voir pour le changer */
+	font-weight: bold;
+}
+
+.pageTuto .outils{
+	margin-bottom: 50px;
+}

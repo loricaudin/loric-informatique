@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+	<head>
+		<title>Loric Informatique - Flèches bleues</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="icon" href="../../images/icone.png">
+		<link rel="stylesheet" href ="../../styles/style.css">
+	</head>
+	<body>
+		<header>
+			<script src="../../scripts/header.js"></script>
+		</header>
+		<main class="pageTuto">
+			<section class="presentation">
+				<div class="alignementVertical">
+					<div>
+						<h1>Supprimer les deux flèches bleues sur les icônes</h1>
+						<p class="version">Version 1.0 (créé le 04/02/2022, modifié le 04/02/2022)</p>
+						<p class="compatibilite">Fonctionne sur : Windows XP et supérieur</p>
+						<button class="imprimer" onclick="alert('Pour imprimer votre document, nous vous conseillons de cocher Imprimer les arrière-plans et de décocher Imprimer les en-têtes et pieds de page.');print()" class="imprimer">Imprimer</button>
+						<p>Vous souhaitez supprimer ces flèches bleues qui sont arrivées par hasard ? Je vous comprend.</p>
+					</div>
+					<img src="images/icone_windows.png" class="logoTuto">
+				</div>
+			</section>
+            <article>
+                <p>Qu'est-ce qu'elles signifient et comment les enlever ?</p>
+				<p>Ces flèches bleues signifie que des fichiers ou dossiers ont été compressés (sur les versions Windows 8.1 et inférieur, un fichier ou dossier compressé aurait un nom en bleu)</p>
+				<img src="images/fleches_bleues_IMG0064.jpg">
+                <p>Une solution est possible ? Oui, et pour commencer, si votre disque dur a de la place, pour chaque dossiers à la racine du disque dur, faites clic-droit, puis Propriétés et cliquez sur Avancé</p>
+				<p>Vous obtenez ceci :</p>
+				<img src="images/fleches_bleues_IMG0065.jpg">
+				<p>Décochez Compresser le contenu pour libérer de l'espace disque, puis valider en appuyant sur OK, puis Appliquer, et à tous les dossiers et sous-dossiers.</p>
+				<p>L'étape peut prendre énormément de temps et d'espace disque, c'est normal.</p>
+				<p>Ensuite, pour éviter la réapparition de ces "flèches bleues", allez dans le menu Démarrer et tapez (pas forcément dans la barre de recherche si il n'y en a pas) cmd. Faites clic-droit sur Invite de commande, puis Exécuter en tant qu'Administrateur (un mot de passe ou une confirmation peut être demandé).</p>
+				<img src="images/fleches_bleues_IMG0066.jpg">
+				<p>Dans l'invite de commande, tapez : <span class="console">fsutil behavior set disablecompression 1</span></p>
+				<img src="images/fleches_bleues_IMG0067.jpg">
+				<p>Redémarrer votre PC et vous avez réussi à vous débarrasser une bonne fois pour toute les flèches bleues !</p>
+			</article>
+		</main>
+		<footer>
+			<script src="../../scripts/footer.js"></script>
+			<a class="top" href="#"><img src="../../images/top.png"></a>
+		</footer>
+	</body>
+	<script src="../../scripts/script.js"></script>
+	<script src="../../scripts/tableDesMatieres.js"></script>
+</html>
