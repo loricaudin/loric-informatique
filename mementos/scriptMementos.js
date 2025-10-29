@@ -14,6 +14,7 @@ let listeMementos = [
 ["MySQL", "sql", "mysql", "#FFC565", "#CC7E00"],
 ["Oracle Database (SQL)", "sql", "oracledatabase", "#FF6565", "#CC0000"],
 ["MongoDB (NoSQL)", "nosql", "mongodb", "#A9D193", "#589636"],
+["Django", "python", "django", "#7EE6BE", "#21AA76"],
 ["Angular", "js", "angular", "#FF6587", "#CC0031"],
 ["Git", "git", "git", "#E98A7B", "#AE321D"],
 // FIN_LISTE_MEMENTOS \\
